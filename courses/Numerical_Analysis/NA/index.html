@@ -14,7 +14,7 @@
         <link rel="prev" href="../../">
       
       
-        <link rel="next" href="../../../friends/">
+        <link rel="next" href="../../Intro_to_Robotics/Intro_Rob/">
       
       
       <link rel="icon" href="../../../img/web_icon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>May Day Holiday - MapleBlog</title>
+        <title>Numerical Analysis - MapleBlog</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#小长假出游" class="md-skip">
+        <a href="#numerical-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              May Day Holiday
+              Numerical Analysis
             
           </span>
         </div>
@@ -188,11 +188,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../courses/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   courses
@@ -206,13 +208,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -303,25 +303,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -332,7 +335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             courses
@@ -346,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../courses/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -364,10 +367,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../courses/Numerical_Analysis/NA/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Numerical Analysis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -376,6 +399,134 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-ideas-for-solving-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic ideas for Solving Equation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminary-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preliminary: Errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preliminary: Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t-significant-digits" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(t\) significant digits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solutions-of-equations-in-one-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solutions of Equations in One Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solutions of Equations in One Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-besection-method二分法" class="md-nav__link">
+    <span class="md-ellipsis">
+      the Besection Method（二分法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed-point-iteration不动点法" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed-Point Iteration（不动点法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newtons-method牛顿法" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton's Method（牛顿法）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direct-methods-for-solving-linear-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct Methods for Solving Linear Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Direct Methods for Solving Linear Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gasussion-elimination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gasussion elimination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lu-matrix-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      LU Matrix Factorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -388,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../courses/Intro_to_Robotics/Intro_Rob/" class="md-nav__link">
+      <a href="../../Intro_to_Robotics/Intro_Rob/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -413,28 +564,25 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -445,7 +593,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -461,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,8 +627,6 @@
                 
   
   
-    
-  
   
   
     
@@ -490,11 +636,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -508,7 +656,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Travel
@@ -519,30 +667,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    May Day Holiday
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../blog/Travel/5th_May_24/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -551,77 +679,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#430-52" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.30-5.2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4.30-5.2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#430" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.30
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#53-55" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3-5.5
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -710,37 +767,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#430-52" class="md-nav__link">
+  <a href="#basic-ideas-for-solving-equation" class="md-nav__link">
     <span class="md-ellipsis">
-      4.30-5.2
+      Basic ideas for Solving Equation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4.30-5.2">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminary-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preliminary: Errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preliminary: Errors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#430" class="md-nav__link">
+  <a href="#t-significant-digits" class="md-nav__link">
     <span class="md-ellipsis">
-      4.30
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2
+      \(t\) significant digits
     </span>
   </a>
   
@@ -752,11 +800,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#53-55" class="md-nav__link">
+  <a href="#solutions-of-equations-in-one-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      5.3-5.5
+      Solutions of Equations in One Variables
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Solutions of Equations in One Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-besection-method二分法" class="md-nav__link">
+    <span class="md-ellipsis">
+      the Besection Method（二分法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed-point-iteration不动点法" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed-Point Iteration（不动点法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newtons-method牛顿法" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton's Method（牛顿法）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#direct-methods-for-solving-linear-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direct Methods for Solving Linear Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Direct Methods for Solving Linear Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gasussion-elimination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gasussion elimination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lu-matrix-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      LU Matrix Factorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -775,41 +889,73 @@
                   
 
 
-<h1 id="小长假出游">小长假出游<a class="headerlink" href="#小长假出游" title="Permanent link"></a></h1>
-<p>假期目标：从各类事项中解放出来，思考总结前半个学期的生存状态。</p>
-<p>行动原则：慢下来，慢下来。</p>
-<h2 id="430-52">4.30-5.2<a class="headerlink" href="#430-52" title="Permanent link"></a></h2>
-<p>首先感谢夜宵组伙伴的安排，特别感谢小🐟的统筹，小🍃的景德镇计划，让我们的整个行程都非常顺利。</p>
-<p>一大早就开始翘课出行，我们先坐高铁到达婺源，启动自驾模式，三天去了篁岭、三清山和景德镇。</p>
-<h3 id="430">4.30<a class="headerlink" href="#430" title="Permanent link"></a></h3>
-<p>第一天的篁岭着实让人眼前一亮，很多照片，无论是风景还是人物，都很上镜。从玻璃栈道（垒心桥）到傍山小镇（花溪水街），从杜鹃园到飘雪民国馆，绝美的山间风光、纯净的山间空气，让一个长期生活在闭塞校园里的人感到既陌生又亲切。</p>
-<h3 id="51">5.1<a class="headerlink" href="#51" title="Permanent link"></a></h3>
-<p>早晨醒来，刚发生的广东梅大高速塌陷让我吃了一大惊。后面从三清山回来开高速的时候，其实有一点寒颤。</p>
-<p>三清山我曾经去过一次，记忆中印象非常不错，云雾缭绕，人们傍山而行，如临仙境。然而，这次非常的不行，云雾过于浓重，大部分的山间美景都无法清新用眼看见（或许可以试试其他波段的光hh）。</p>
-<p>在能见度不到10m的山间，拍照几乎是一件吃力不讨好的事情。好在我们最后也找到了许多的拍照点，赋予浓雾里的山和我们一点特别的意义。</p>
-<p>另外，五一人数过多，下山排队等候超过一个半小时，也是一个减分项。</p>
-<h3 id="52">5.2<a class="headerlink" href="#52" title="Permanent link"></a></h3>
-<p>我们去到了景德镇，体会了一下中国瓷都的韵味。我本人对于瓷器并无太大感受，瓷器及其介绍也只是走马观花匆匆而过。但是，细细走来，发现其制作流程的精细、繁杂，得到的瓷器质量上乘、价值高昂，内含大家对匠心的追求。</p>
-<p>晚上回来，参与了大表哥的婚礼。不知为何，我一边为他们感到很开心，一边感受到时光飞逝，每个人都在往前走。我对未来有期待，也有焦虑。</p>
-<h2 id="53-55">5.3-5.5<a class="headerlink" href="#53-55" title="Permanent link"></a></h2>
-<p>回到温州，除了久违的海鲜不断满足我自己之外，我还将自己的生活慢了下来。我和家里人都相处了一下，我明白之后可能没有很多的时间陪伴家人。</p>
-<p>我刷了一下老友记，其实这个是可以上瘾的！看剧上瘾的机制，源自于剧情对人的兴趣的不断挑逗，人看剧时能够有的松弛感和忘我感。</p>
-<p>实际上，这个东西是可以调控的，因为很多积极的事情，都在努力中，变得上瘾。</p>
-<p>麻将当然也是一次聚会的好时机。大家都能够聊聊各自的生活，不同的人不同的地方，有着相似的情感。</p>
-<p>最重要的是，我能够为我的家庭把把脉，看看有没有什么毛病，接下来离家后，我是不是要做一些调整。最重要的是我和爸妈的距离变得更加遥远，我发现之前日常的中餐并不能很好地解决问题。我需要多发一些照片，关于我的生活，我的周末，让他们多看看我到底是怎么做的。</p>
-<p>假期结尾我竟然能够读到一句好文：
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>不要试图寻找一种“不焦虑”的状态，因为焦虑与人的选择和生存相伴随，不如学会一些小的技巧，让自己能和焦虑共处。
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>——三联生活周刊
-</code></pre></div></td></tr></table></div>
-安慰了曾经努力的自己，清晰了对未来的努力。</p>
-<p>以前探索的各种有益的方式，都能够和焦虑串联起来，驾驭焦虑，为我所用。</p>
-<p>感觉自己的很多发言都有功利实用主义的色彩，日渐长大的自己往往都是对理想失去耐心和信心，走一步看一步，而总是要回头看看，自己为什么出发。</p>
-<p>我觉得对我来说，我需要不断打开自己。我能够放下很多以前所认为的禁忌，去做很多实际上都能够做的事情。</p>
-<p>其实很多东西都是会上瘾的。</p>
-<p>学会把不断的上瘾变成自己最喜欢的模样。</p>
+<h1 id="numerical-analysis">Numerical Analysis<a class="headerlink" href="#numerical-analysis" title="Permanent link"></a></h1>
+<h2 id="basic-ideas-for-solving-equation">Basic ideas for Solving Equation<a class="headerlink" href="#basic-ideas-for-solving-equation" title="Permanent link"></a></h2>
+<p>To find the solution of an equation, we hope to have an iteration method which takes good advantage of Computer resources like</p>
+<p>$$
+\pmb{x}^{k} = f(\pmb{x}^{k-1})
+$$
+for <span class="arithmatex">\(k = 1, 2, \cdots\)</span>. We use <span class="arithmatex">\(\pmb{x}\)</span> instead of <span class="arithmatex">\(x\)</span> because the above iteration method also applies to solving linear system.</p>
+<p>Hopefully, if the above equation <strong>converges</strong>, that is, for <span class="arithmatex">\(k \rightarrow \infty, \pmb{x}^{k-1}\rightarrow \pmb{x}^*, \pmb{x}^{k}\rightarrow \pmb{x}^*\)</span>, and the equation becomes </p>
+<div class="arithmatex">\[
+\pmb{x^*} = f(\pmb{x}^*)
+\]</div>
+<p>where <span class="arithmatex">\(\pmb{x^*}\)</span> is the sulution of the equation to be solved.</p>
+<p>If the above thought gets right, then we can consider the <strong>converging speed</strong> of the iterative process, which makes great sense in practical applications. That is, </p>
+<div class="arithmatex">\[
+\frac{|\pmb{x}^{k+1} - \pmb{x}^*|}{|\pmb{x}^{k}-\pmb{x}^*|^\alpha} 
+\]</div>
+<p>to be small as much as possible for each <span class="arithmatex">\(k\)</span>. </p>
+<h2 id="preliminary-errors">Preliminary: Errors<a class="headerlink" href="#preliminary-errors" title="Permanent link"></a></h2>
+<p>If a real number <span class="arithmatex">\(x\)</span> is denoted as <span class="arithmatex">\(0.d_1d_2d_3\cdots \times 10^{n}\)</span>, then</p>
+<ul>
+<li>Truncation(截断) Error </li>
+</ul>
+<p>is induced when $$ \hat{x}=0.d_1d_2d_3\cdots d_k \times 10^{n} $$ for some definite <span class="arithmatex">\(k&lt;\infty\)</span></p>
+<ul>
+<li>Roundoff（舍入） Error</li>
+</ul>
+<p>is induced when $$ \hat{x}=0. \delta_1 \delta_2 \delta_3 \cdots \delta_k \times 10^{n} $$ for some definite <span class="arithmatex">\(k&lt;\infty\)</span></p>
+<p>where <span class="arithmatex">\(\delta_k &gt;d_k\)</span> if <span class="arithmatex">\(d_{k+1}&gt;=5\)</span>.</p>
+<h3 id="t-significant-digits"><span class="arithmatex">\(t\)</span> significant digits<a class="headerlink" href="#t-significant-digits" title="Permanent link"></a></h3>
+<p>The number <span class="arithmatex">\(p^*\)</span> is said to approximate <span class="arithmatex">\(p\)</span> to <span class="arithmatex">\(t\)</span> significant digits(or figures) if t is the largest nonnegative integer for which the <strong>relative error</strong>
+$$
+e = \frac{\Delta p}{p}=\frac{|p-p^*|}{|p|}&lt;5\times 10^{-t}
+$$
+where <span class="arithmatex">\(p^*\)</span> is the approximate number of the exact number <span class="arithmatex">\(p\)</span>.</p>
+<ul>
+<li>for Chopping:</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+e &amp;= \left|\frac{0.d_{k+1}d_{k+2}\cdots}{0.d_1d_2\cdots}\right| \times 10^{-k}\\ &amp;\leq \frac{1}{0.1} \times 10^{-k} \quad \text{"=" for } d_{k+1}d_{k+2}\cdots\rightarrow\overline{9}\text{ and }d_{1}d_{2}\cdots\rightarrow 0\\ &amp;=10^{-k+1}  
+\end{align}
+\]</div>
+<ul>
+<li>for rounding:</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+e &amp;\leq \frac{0.5}{0.1} \times 10^{-k} \quad \text{"=" for } d_{k+1}d_{k+2}\cdots\rightarrow 5\overline{0}\text{ and }d_{1}d_{2}\cdots\rightarrow 0\\ &amp;=0.5\times 10^{-k+1}  
+\end{align}
+\]</div>
+<h2 id="solutions-of-equations-in-one-variables">Solutions of Equations in One Variables<a class="headerlink" href="#solutions-of-equations-in-one-variables" title="Permanent link"></a></h2>
+<h3 id="the-besection-method二分法">the Besection Method（二分法）<a class="headerlink" href="#the-besection-method二分法" title="Permanent link"></a></h3>
+<h3 id="fixed-point-iteration不动点法">Fixed-Point Iteration（不动点法）<a class="headerlink" href="#fixed-point-iteration不动点法" title="Permanent link"></a></h3>
+<h3 id="newtons-method牛顿法">Newton's Method（牛顿法）<a class="headerlink" href="#newtons-method牛顿法" title="Permanent link"></a></h3>
+<p>This method is also a fixed-point method but it makes use of the <strong>Taylor's expansion(or the derivatives)</strong> of the function to be solved.</p>
+<h2 id="direct-methods-for-solving-linear-systems">Direct Methods for Solving Linear Systems<a class="headerlink" href="#direct-methods-for-solving-linear-systems" title="Permanent link"></a></h2>
+<p>We focus on solving linear system
+$$
+A\vec{x} = \vec{b}
+$$</p>
+<h3 id="gasussion-elimination">Gasussion elimination<a class="headerlink" href="#gasussion-elimination" title="Permanent link"></a></h3>
+<p>Reduce A into an <strong>upper-triangular matrix</strong>, and then solve for the unknowns by a <strong>backward-substitution</strong> process</p>
+<ul>
+<li>time cost:</li>
+</ul>
+<p><span class="arithmatex">\(O(n^3)\)</span></p>
+<h3 id="lu-matrix-factorization">LU Matrix Factorization<a class="headerlink" href="#lu-matrix-factorization" title="Permanent link"></a></h3>
 
 
 
