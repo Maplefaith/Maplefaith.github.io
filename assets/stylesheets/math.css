@@ -1,0 +1,26 @@
+.theorem {
+    border-left: 5px solid #4CAF50 !important;
+    background-color: #f9f9f9 !important;
+    padding: 10px !important;
+    margin: 20px 0 !important;
+    border-radius: 5px !important;
+    /* font-style: italic; */
+}
+
+.theorem-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+  
+.theorem-title:before {
+content: "Theorem ";
+}
+
+.theorem-body {
+    font-size: 1em;
+}
+
+.theorem-body strong {
+    font-weight: bold;
+} 
