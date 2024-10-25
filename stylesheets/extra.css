@@ -16,3 +16,10 @@ button.md-top {
 }
 
 
+.question {
+  background-color: #f9f9f9;
+  border-left: 4px solid #117d3c;
+  padding: 10px;
+  margin: 20px 0;
+  /* font-style: italic; */
+}
