@@ -17,18 +17,32 @@ window.MathJax = {
     }
   };
   
-  document$.subscribe(() => { 
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
+  // document$.subscribe(() => { 
+  //   MathJax.startup.output.clearCache()
+  //   MathJax.typesetClear()
+  //   MathJax.texReset()
+  //   MathJax.typesetPromise()
+  // })
 
-  (function () {
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';  // MathJax CDN
-    script.async = true;
-    document.head.appendChild(script);
-  })();
+  // (function () {
+  //   var script = document.createElement('script');
+  //   script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';  // MathJax CDN
+  //   script.async = true;
+  //   document.head.appendChild(script);
+  // })();
 
+  // MkDocs中的MathJax初始化逻辑
+document.addEventListener('DOMContentLoaded', () => {
+  MathJax.startup.output.clearCache();
+  MathJax.typesetClear();
+  MathJax.texReset();
+  MathJax.typesetPromise();
+});
+
+(function () {
+  var script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';  // MathJax CDN
+  script.async = true;
+  document.head.appendChild(script);
+})();
   

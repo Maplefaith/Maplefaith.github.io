@@ -146,3 +146,70 @@ window.addEventListener('keydown', e => {
 
 requestFrame();
 //雪花
+
+document.addEventListener("DOMContentLoaded", function () {
+  // 查找所有具有 'fade-in-container' 类的元素
+  const fadeInElements = document.querySelectorAll(".fade-in-container");
+
+  fadeInElements.forEach((element) => {
+    const text = element.getAttribute("data-text"); // 获取动态文字
+    const color = element.getAttribute("data-color") || "#000000"; // 默认黑色
+    const size = element.getAttribute("data-size") || "24px"; // 默认大小
+
+    // 清空容器内容，避免重复
+    element.innerHTML = '';
+
+    // 设置容器样式
+    element.style.color = color;
+    element.style.fontSize = size;
+    element.style.textAlign = 'center'; // 水平居中
+
+    // 拆分文本并逐个创建 span
+    text.split('').forEach((char, index) => {
+      const span = document.createElement("span");
+      span.textContent = char; // 设置字符内容
+      span.style.opacity = 0; // 初始透明度为 0
+      span.style.display = 'inline-block'; // 使每个字符在同一行
+      span.style.transition = `opacity 0.5s ease ${index * 0.25}s`; // 每个字符的淡入延迟
+      element.appendChild(span); // 添加到容器
+    });
+
+    // 设置字符在 DOM 中的淡入效果
+    setTimeout(() => {
+      const spans = element.querySelectorAll("span");
+      spans.forEach((span) => {
+        span.style.opacity = 1; // 逐个设置透明度为 1
+      });
+    }, 500); // 初始延迟，确保所有字符都准备好
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // 查找所有具有 'typing-container' 类的元素
+  const typingElements = document.querySelectorAll(".typing-container");
+
+  typingElements.forEach((element) => {
+    const text = element.getAttribute("data-text"); // 获取动态文字
+    const color = element.getAttribute("color") || "#000000"; // 默认黑色
+    const size = element.getAttribute("size") || "24px"; // 默认大小 24px
+
+    let index = 0;
+
+    // 设置文字颜色和大小
+    element.style.color = color;
+    element.style.fontSize = size;
+    
+    element.textContent = text;
+    // function typeCharacter() {
+    //   if (index < text.length) {
+    //     element.textContent += text.charAt(index); // 逐字显示
+    //     index++;
+    //     setTimeout(typeCharacter, 200); // 每个字符显示间隔 200ms
+    //   }
+    // }
+
+    // typeCharacter();
+  });
+});
+

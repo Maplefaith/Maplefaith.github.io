@@ -1168,22 +1168,26 @@ which takes good advantage of Computer resources like</p>
 <ul>
 <li>Truncation（截断） Error</li>
 </ul>
-<p>is induced when 
-$$ \hat{x}=0.d_1d_2d_3\cdots d_k \times 10^{n} $$
-for some definite <span class="arithmatex">\(k&lt;\infty\)</span></p>
+<p>is induced when </p>
+<div class="arithmatex">\[
+\hat{x}=0.d_1d_2d_3\cdots d_k \times 10^{n} 
+\]</div>
+<p>for some definite <span class="arithmatex">\(k&lt;\infty\)</span></p>
 <ul>
 <li>Roundoff（舍入） Error</li>
 </ul>
-<p>is induced when 
-$$
+<p>is induced when </p>
+<div class="arithmatex">\[
 \hat{x}=0. \delta_1 \delta_2 \delta_3 \cdots \delta_k \times 10^{n} 
-$$
-for some definite <span class="arithmatex">\(k&lt;\infty\)</span> </p>
+\]</div>
+<p>for some definite <span class="arithmatex">\(k&lt;\infty\)</span> </p>
 <p>where <span class="arithmatex">\(\delta_k &gt;d_k\)</span> if <span class="arithmatex">\(d_{k+1}&gt;=5\)</span>.</p>
 <h3 id="t-significant-digits">t significant digits</h3>
-<p>The number <span class="arithmatex">\(p^*\)</span> is said to approximate p to <span class="arithmatex">\(t\)</span> significant digits(or figures) if <span class="arithmatex">\(t\)</span> is the largest nonnegative integer for which the <strong>relative error</strong> $$
-e = \frac{\Delta p}{p}=\frac{|p-p^*|}{|p|}&lt;5\times 10^{-t} $$
-where <span class="arithmatex">\(p^*\)</span> is the approximate number of the exact number <span class="arithmatex">\(p\)</span>.</p>
+<p>The number <span class="arithmatex">\(p^*\)</span> is said to approximate p to <span class="arithmatex">\(t\)</span> significant digits(or figures) if <span class="arithmatex">\(t\)</span> is the largest nonnegative integer for which the <strong>relative error</strong> </p>
+<div class="arithmatex">\[
+e = \frac{\Delta p}{p}=\frac{\|p-p^*\|}{\|p\|}&lt;5\times 10^{-t} 
+\]</div>
+<p>where <span class="arithmatex">\(p^*\)</span> is the approximate number of the exact number <span class="arithmatex">\(p\)</span>.</p>
 <ul>
 <li>for Chopping:</li>
 </ul>
@@ -1427,13 +1431,7 @@ a_0 \\ a_1 \\ \vdots \\ a_n
       
         <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js"></script>
       
     
   <script src="../../../assets/javascripts/custom.4e50d00f.min.js"></script>

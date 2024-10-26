@@ -15,11 +15,69 @@ button.md-top {
     color: #518FC1; /* 修改字体颜色 */
 }
 
-
+/* for question module */
 .question {
   background-color: #f9f9f9;
-  border-left: 4px solid #117d3c;
+  border-left: 4px solid #006494;
+  /* #95e6eb; */
   padding: 10px;
   margin: 20px 0;
-  /* font-style: italic; */
+}
+
+body[data-md-color-media="(prefers-color-scheme: dark)"] .question {
+  background-color: #333; /* 夜间背景色 */
+  border-left: 4px solid #256e28; /* 夜间边框色 */
+  color: rgb(206, 199, 199); /* 夜间文字颜色 */
+}
+
+.typing-container {
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: 2px solid currentColor; /*光标颜色与文字颜色一致*/
+  animation: typing 4s steps(20, end) forwards, blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.fade-in-container {
+  opacity: 0; /* 初始透明度为 0 */
+  animation: fadeIn 2s forwards; 
+  text-align: center; /* 水平居中 */
+  margin: 0 auto; /* 自动左右边距 */
+}
+
+.fade-in-container span {
+  display: inline-block; /* 确保每个字符在同一行 */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* 最终透明度为 1 */
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0; /* 开始时透明 */
+    transform: translateX(-100%); /* 从左侧外部进入 */
+  }
+  to {
+    opacity: 1; /* 最终透明 */
+    transform: translateX(0); /* 移动到原始位置 */
+  }
 }
