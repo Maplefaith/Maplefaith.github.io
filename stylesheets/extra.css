@@ -1,26 +1,16 @@
-body {
-    font-family: "LXGW WenKai", sans-serif;
-    /* Lite version */
-    /* font-family: "LXGW WenKai Lite", sans-serif; */
-    /* TC version */
-    /* font-family: "LXGW WenKai TC", sans-serif; */
-    /* Screen version */
-    /* font-family: "LXGW WenKai Screen", sans-serif; */
-  }
 
-button.md-top {
-    font-family: LXGW WenKai; /* 修改字体 */
-    font-size: 16px; /* 修改字体大小 */
-    font-weight: bold; /* 修改字体粗细 */
-    color: #518FC1; /* 修改字体颜色 */
-}
 
 /* for question module */
 .question {
   background-color: #f9f9f9;
-  border-left: 4px solid #006494;
+  border-left: 4px solid #4d8b31;
+  /* #95b8d1; */
   /* #95e6eb; */
   padding: 10px;
+  color: #585941;
+  /* #26547c; */
+  /* #473144; */
+  /* #4a5859; */
   margin: 20px 0;
 }
 
@@ -29,6 +19,27 @@ body[data-md-color-media="(prefers-color-scheme: dark)"] .question {
   border-left: 4px solid #256e28; /* 夜间边框色 */
   color: rgb(206, 199, 199); /* 夜间文字颜色 */
 }
+
+/* for theorem module*/
+.theorem {
+  background-color: #f9f9f9;
+  border-left: 4px solid #4d8b31;
+  /* #95b8d1; */
+  /* #95e6eb; */
+  padding: 10px;
+  color: #585941;
+  /* #26547c; */
+  /* #473144; */
+  /* #4a5859; */
+  margin: 20px 0;
+}
+
+body[data-md-color-media="(prefers-color-scheme: dark)"] .theorem {
+  background-color: #333; /* 夜间背景色 */
+  border-left: 4px solid #256e28; /* 夜间边框色 */
+  color: rgb(206, 199, 199); /* 夜间文字颜色 */
+}
+
 
 .typing-container {
   font-size: 24px;

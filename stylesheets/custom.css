@@ -3,14 +3,15 @@ h1 {
     /* font-size: 2.5em !important; */
     color: #034732 !important;
     /* #22b5af !important;  */
-    font-weight: bold !important;
+    /* font-weight: bold !important; */
+    letter-spacing: 0.07em !important;
     border-bottom: 2px solid #169b96;
+    font-family:  "Gagalin", "FangZhengSuXinShiLiuKaiJianTi", "LXGW WenKai", sans-serif;
     padding-bottom: 10px;
 }
 
 body[data-md-color-media="(prefers-color-scheme: dark)"] h1 {
     color: #235D3A !important; 
-    
     border-bottom: 2px solid #397D54;
 }
 
@@ -64,4 +65,65 @@ body[data-md-color-media="(prefers-color-scheme: dark)"] h4 {
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+
+
+/* Fonts */
+
+/* 欧体楷书 for cherish */
+@font-face {
+    font-family: 'A-OTF Outai Kaisho Std';
+    src: url('../fonts/A-OTF-OutaiKaiStd-Light.otf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+/* Gagalin for title*/
+@font-face {
+    font-family: 'Gagalin';
+    src: url('../fonts/Gagalin-Regular-2.otf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+/* 苏新诗柳楷体 for title */
+@font-face {
+    font-family: 'FangZhengSuXinShiLiuKaiJianTi';
+    src: url('../fonts/FangZhengSuXinShiLiuKaiJianTi-1.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+/* for context */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Book.otf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+  button.md-top {
+    font-family: "LXGW WenKai"; /* 修改字体 */
+    font-size: 16px; /* 修改字体大小 */
+    font-weight: bold; /* 修改字体粗细 */
+    color: #518FC1; /* 修改字体颜色 */
+}
+
+/* using the needed fonts*/
+body {
+    /* letter-spacing: 0.05em; */
+    font-family:   "Gotham", "LXGW WenKai", sans-serif;  /* 混合字体 */
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF;
+}
+
+.admonition {
+    font-size: 16px !important;  /* 根据需要调整字号 */
+}
+
+.admonition-title {
+    font-size: 16px;  /* 标题的字号 */
+}
+
+.tabbed-content {
+    font-size: 14px ; /* 根据需求调整 */
 }

@@ -1,4 +1,5 @@
 //雪花
+/*
 const fps = 30;
 const mspf = Math.floor(1000 / fps) ; 
 
@@ -143,8 +144,8 @@ window.addEventListener('keydown', e => {
     }
   }
 });
-
-requestFrame();
+*/
+// requestFrame();
 //雪花
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -155,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const text = element.getAttribute("data-text"); // 获取动态文字
     const color = element.getAttribute("data-color") || "#000000"; // 默认黑色
     const size = element.getAttribute("data-size") || "24px"; // 默认大小
-
+    const fontFamily = element.getAttribute("data-fontFamily") || "FangZhengSuXinShiLiuKaiJianTi";
     // 清空容器内容，避免重复
     element.innerHTML = '';
 
@@ -163,12 +164,12 @@ document.addEventListener("DOMContentLoaded", function () {
     element.style.color = color;
     element.style.fontSize = size;
     element.style.textAlign = 'center'; // 水平居中
-
     // 拆分文本并逐个创建 span
     text.split('').forEach((char, index) => {
       const span = document.createElement("span");
       span.textContent = char; // 设置字符内容
       span.style.opacity = 0; // 初始透明度为 0
+      span.style.fontFamily = fontFamily;
       span.style.display = 'inline-block'; // 使每个字符在同一行
       span.style.transition = `opacity 0.5s ease ${index * 0.25}s`; // 每个字符的淡入延迟
       element.appendChild(span); // 添加到容器

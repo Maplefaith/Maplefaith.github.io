@@ -1,0 +1,36 @@
+/* 定义根级别计数器 */
+body {
+    counter-reset: h1_section; /* 页面初始化时，设置 h1 的计数器 */
+    counter-reset: h2_section; /* 页面初始化时，设置 h1 的计数器 */
+    counter-reset: h3_section; /* 页面初始化时，设置 h1 的计数器 */
+    counter-reset: h4_section;
+}
+
+/* h1：一级标题 */
+h2 {
+    counter-increment: h1_section; /* 每遇到一个新的 h1，h1_section 自增 */
+    counter-reset: h2_section; /* 重置 h2 的计数，只在首次出现的 h1 下进行 */
+}
+
+h2::before{
+    content: counter(h1_section) " "; /* 输出格式：1、2、3 */
+}
+/* h2：二级标题 */
+h3 {
+    counter-increment: h2_section; /* h2 计数器自增 */
+    counter-reset: h3_section; /* 重置 h3 的计数，只在首次出现的 h2 下进行 */
+}
+
+h3::before{
+    content: counter(h1_section) "." counter(h2_section) " "; /* 输出格式：1.1、1.2 */
+}
+
+/* h3：三级标题 */
+h4 {
+    counter-increment: h3_section; /* h3 计数器自增 */
+    counter-reset: h4_section;
+}
+
+h4::before{
+    content: counter(h1_section) "." counter(h2_section) "." counter(h3_section) " "; /* 输出格式：1.1.1 */
+}
