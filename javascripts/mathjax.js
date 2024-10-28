@@ -46,3 +46,38 @@ document.addEventListener('DOMContentLoaded', () => {
   document.head.appendChild(script);
 })();
   
+document.addEventListener("DOMContentLoaded", function () {
+  // 找到最外层的目录容器
+  const tocElement = document.querySelector('[data-md-type="toc"]');
+
+  if (tocElement) {
+    console.log("TOC element found.");
+
+    if (typeof MathJax !== 'undefined') {
+      console.log("MathJax detected. Rendering...");
+
+      // 查找所有的叶子节点（不再包含子元素的标签）
+      const leafNodes = getLeafNodes(tocElement);
+
+      // 使用 MathJax 渲染所有叶子节点
+      MathJax.typesetPromise(leafNodes)
+        .then(() => console.log("TOC MathJax rendering complete!"))
+        .catch((err) => console.error("MathJax rendering error:", err));
+    } else {
+      console.warn("MathJax is not loaded.");
+    }
+  } else {
+    console.warn("TOC element not found.");
+  }
+
+  // 递归查找所有叶子节点的函数
+  function getLeafNodes(element) {
+    const leaves = [];
+    element.querySelectorAll('*').forEach((node) => {
+      if (!node.children.length) {
+        leaves.push(node);
+      }
+    });
+    return leaves;
+  }
+});

@@ -430,6 +430,8 @@
       
         
       
+        
+      
     
     
       
@@ -595,6 +597,21 @@
       Newton's Method（牛顿法）
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Newton's Method（牛顿法）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secant-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secant Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -804,6 +821,27 @@
   
   <span class="md-ellipsis">
     Sensing & Detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C Plus Plus
   </span>
   
 
@@ -1133,6 +1171,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Newton's Method（牛顿法）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secant-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secant Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1449,9 +1502,9 @@ x = g(x)
 <p>for iterative method?</p>
 <p>The answer is, of course, YES!</p>
 <p>One of the easist way to transform is adding <span class="arithmatex">\(x\)</span> to both sides of equation <span class="arithmatex">\(\ref{zero-equation}\)</span>, but in most cases this does not work. Because we rely on <span class="arithmatex">\(f(x)\)</span> ifself for the convergence! </p>
-<p>Thus, it is necessary to find the condition for <span class="arithmatex">\(x = g(x)\)</span> to converge. The following theorem gives a Sufficient condition.</p>
+<p>Thus, it is necessary to find the condition for <span class="arithmatex">\(x = g(x)\)</span> to converge. The following theorem <p id="fixed"></p> gives a Sufficient condition.</p>
 <div class="admonition success">
-<p class="admonition-title">不动点存在定理 | Fixed-Point Theorom </p>
+<p class="admonition-title">不动点存在定理 | Fixed-Point Theorom</p>
 <p>Let <span class="arithmatex">\(g \in C[a, b]\)</span> be such that <span class="arithmatex">\(g(x) \in [a, b]\)</span>, for all <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\([a, b]\)</span>. Suppose, in addition, that <span class="arithmatex">\(g'\)</span> exists on <span class="arithmatex">\((a, b)\)</span> and that a constant <span class="arithmatex">\(0 &lt; k &lt; 1\)</span> exists with</p>
 <div class="arithmatex">\[
 |g'(x)|\leq k \quad \forall x \in (a, b)
@@ -1546,17 +1599,40 @@ x_n = x_{n-1} - \frac{f(x_{n-1})}{f'(x_{n-1})}
 </ul>
 </div>
 <div class="tabbed-block">
-<p>for <span class="arithmatex">\(x \in (a, b)\)</span>, we find a narrower interval <span class="arithmatex">\((x^*-\delta, x^*+\delta)\)</span> to have</p>
+<p>for <span class="arithmatex">\(x \in (a, b)\)</span>, we aim to find a narrower interval <span class="arithmatex">\((x^*-\delta, x^*+\delta)\)</span> to have
+<span class="arithmatex">\(g(x)\)</span> map into itself. That is, </p>
+<div class="arithmatex">\[
+g(x)\leq k, \forall k\in (0,1)
+\]</div>
+<p>Firstly, <span class="arithmatex">\(f'(p)\neq 0\)</span> implies that <span class="arithmatex">\(\exists \delta_1 &gt;0\)</span> such that <span class="arithmatex">\(f'(x)\neq 0, \forall x \in [x^* - \delta, x^*+\delta]\subset [a, b]\)</span>.</p>
+<p>THus, we have</p>
 <div class="arithmatex">\[
 g'(x) = \frac{f(x)f''(x)}{(f'^2(x))}
 \]</div>
-<p>for the exact solution <span class="arithmatex">\(x^*\)</span>, we have <span class="arithmatex">\(f(x^*)=0\)</span>, so </p>
+<p>capable of dividing non-zero numbers.</p>
+<p>Since <span class="arithmatex">\(f\in C^2[a,b]\)</span>, we have <span class="arithmatex">\(g' \in C^1[x^*-\delta_1, x^*+\delta_1]\)</span><br />
+for the exact solution <span class="arithmatex">\(x^*\)</span>, we have <span class="arithmatex">\(f(x^*)=0\)</span>, so </p>
 <div class="arithmatex">\[
 g'(x^*) = 0
 \]</div>
+<p>which implies that <span class="arithmatex">\(\exists 0&lt;\delta &lt; \delta_1\)</span>, such that </p>
+<div class="arithmatex">\[
+g'(x)\leq k, \forall k \in [x^*-delta, x^*+\delta]
+\]</div>
+<p>By differential Mean Value Theorem, for <span class="arithmatex">\(x \in [x^*-delta, x^*+\delta], \exists \zeta \in [x, x^*]\)</span> such that </p>
+<div class="arithmatex">\[
+|g(x)-g(x^*)|=g'(\zeta)|x - x^*|\leq k|x-x^*|&lt;|x-x^*|
+\]</div>
+<p>which means that <span class="arithmatex">\(g\)</span> maps into itself. By Fixed-Point Theorom, the sequence defined by Newton's method converges. </p>
 </div>
 </div>
 </div>
+<h4 id="secant-method">Secant Method<a class="headerlink" href="#secant-method" title="Permanent link">&para;</a></h4>
+<p>It may not be easy to find derivarive of function <span class="arithmatex">\(f\)</span>, so we can use difference instead. That is, we have to store two adjacent points for calculating differnce</p>
+<div class="arithmatex">\[
+f'(x^{k}) \approx \frac{f(x^{k}) - f(x^{k-1})}{x^{k}-x^{k-1}}
+\]</div>
+<p>generate <span class="arithmatex">\(p_{k+1}\)</span> using the above approximation and iterate.</p>
 <h3 id="order-of-convergence">Order of Convergence<a class="headerlink" href="#order-of-convergence" title="Permanent link">&para;</a></h3>
 <p>So how to identify the speed of convergence? The following definition gives a glimpse.</p>
 <p>Suppose <span class="arithmatex">\(\{p_n\}_{n=1}^{\infty}\)</span> is a sequence that converges to <span class="arithmatex">\(p\)</span>, with <span class="arithmatex">\(p_n \neq p (\forall n)\)</span>. If positive constants <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\alpha\)</span> exist with</p>
