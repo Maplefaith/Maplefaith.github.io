@@ -183,16 +183,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const data = JSON.parse(document.getElementById('pdf-data').textContent);
     const url = data.url;
     const startPage = data.start || 1;
-    const customResolutionScale = data.ResolutionScale || 3;
+
+    // 根据设备类型调整分辨率倍率
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    const customResolutionScale = isMobile ? 1.5 : (data.ResolutionScale || 2);
 
     const pdfjsLib = window['pdfjsLib'] || window['pdfjs-dist/build/pdf'];
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
 
-    
     const loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then(pdf => {
         console.log('PDF loaded');
 
+        // 设置结束页，如果没有指定，默认为 PDF 的最后一页
         const endPage = data.end || pdf.numPages;
         const pdfContainer = document.getElementById('pdf-container');
         const containerWidth = pdfContainer.clientWidth;
@@ -201,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
             pdf.getPage(i).then(page => {
                 console.log('Page loaded: ' + i);
 
-                // 计算适合容器宽度的缩放比例
                 const initialViewport = page.getViewport({ scale: 1 });
                 const scale = containerWidth / initialViewport.width;
                 const viewport = page.getViewport({ scale: scale });
@@ -211,27 +213,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const context = canvas.getContext('2d');
 
-                // 使用自定义分辨率倍率，提高渲染清晰度
+                // 使用自定义分辨率倍率
                 canvas.style.width = `${viewport.width}px`;
                 canvas.style.height = `${viewport.height}px`;
                 canvas.width = viewport.width * window.devicePixelRatio * customResolutionScale;
                 canvas.height = viewport.height * window.devicePixelRatio * customResolutionScale;
 
-                // 应用自定义倍率，确保高分辨率渲染
                 context.scale(window.devicePixelRatio * customResolutionScale, window.devicePixelRatio * customResolutionScale);
 
                 const renderContext = {
                     canvasContext: context,
                     viewport: viewport
                 };
-                
+
                 // 渲染页面
                 page.render(renderContext).promise.then(() => {
                     console.log(`Page ${i} rendered.`);
                 });
+            }).catch(error => {
+                console.error(`Error rendering page ${i}:`, error);
             });
         }
     }).catch(reason => {
-        console.error('Error: ' + reason);
+        console.error('Error loading PDF:', reason);
     });
 });
