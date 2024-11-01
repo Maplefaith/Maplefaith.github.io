@@ -92,3 +92,10 @@ body[data-md-color-media="(prefers-color-scheme: dark)"] .theorem {
     transform: translateX(0); /* 移动到原始位置 */
   }
 }
+
+#pdf-container {
+  display: flex;
+  justify-content: space-between; /* 页面之间的间距 */
+  flex-wrap: wrap; /* 自动换行以适应屏幕大小 */
+  width: 100%; /* 确保容器占满可用宽度 */
+}
