@@ -82,48 +82,156 @@
 //     });
 //   });
   
+// document.addEventListener('DOMContentLoaded', function () {
+//     const data = JSON.parse(document.getElementById('pdf-data').textContent); // 解析 JSON 数据
+//     const url = data.url; // 获取 PDF 文件路径
+//     const startPage = data.start; // 获取开始页
+//     const endPage = data.end; // 获取结束页
+  
+//     const pdfjsLib = window['pdfjs-dist/build/pdf'];
+//     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@latest/build/pdf.worker.min.js';
+  
+//     const loadingTask = pdfjsLib.getDocument(url);
+//     loadingTask.promise.then(pdf => {
+//       console.log('PDF loaded');
+  
+//       const pdfContainer = document.getElementById('pdf-container');
+//       const containerWidth = pdfContainer.clientWidth; // 获取容器宽度
+  
+//       for (let i = startPage; i <= endPage; i++) {
+//         pdf.getPage(i).then(page => {
+//           console.log('Page loaded: ' + i);
+  
+//           const scale = containerWidth / page.getViewport({ scale: 1 }).width; 
+//           const viewport = page.getViewport({ scale: scale });
+  
+//           const canvas = document.createElement('canvas');
+//           pdfContainer.appendChild(canvas);
+        
+//           const pixelRatio = window.devicePixelRatio > 1 ? window.devicePixelRatio * 1.5 : 1.5;
+
+//           const context = canvas.getContext('2d');
+//           canvas.style.width = `${viewport.width}px`;
+//           canvas.style.height = `${viewport.height}px`;
+//           canvas.width = viewport.width * pixelRatio;
+//           canvas.height = viewport.height * pixelRatio;
+//           context.scale(pixelRatio, pixelRatio);
+  
+//           const renderContext = {
+//             canvasContext: context,
+//             viewport: viewport
+//           };
+//           page.render(renderContext);
+//         });
+//       }
+//     }, reason => {
+//       console.error('Error: ' + reason);
+//     });
+//   });
+  
+// document.addEventListener('DOMContentLoaded', function () {
+//     const data = JSON.parse(document.getElementById('pdf-data').textContent); // 解析 JSON 数据
+//     const url = data.url; // 获取 PDF 文件路径
+//     const startPage = data.start; // 获取开始页
+//     const endPage = data.end; // 获取结束页
+
+//     const pdfjsLib = window['pdfjs-dist/build/pdf'];
+//     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+
+//     const loadingTask = pdfjsLib.getDocument(url);
+//     loadingTask.promise.then(pdf => {
+//         console.log('PDF loaded');
+
+//         const pdfContainer = document.getElementById('pdf-container');
+//         const containerWidth = pdfContainer.clientWidth; // 获取容器宽度
+
+//         for (let i = startPage; i <= endPage; i++) {
+//             pdf.getPage(i).then(page => {
+//                 console.log('Page loaded: ' + i);
+
+//                 // 提高缩放比例，提升渲染清晰度
+//                 const pixelRatio = window.devicePixelRatio > 1 ? window.devicePixelRatio * 1.5 : 1.5;
+//                 const scale = (containerWidth / page.getViewport({ scale: 1 }).width) * pixelRatio;
+//                 const viewport = page.getViewport({ scale: scale });
+
+//                 const canvas = document.createElement('canvas');
+//                 pdfContainer.appendChild(canvas);
+
+//                 const context = canvas.getContext('2d');
+//                 canvas.style.width = `${viewport.width / pixelRatio}px`; // 实际显示宽度
+//                 canvas.style.height = `${viewport.height / pixelRatio}px`; // 实际显示高度
+//                 canvas.width = viewport.width; // canvas实际像素宽度
+//                 canvas.height = viewport.height; // canvas实际像素高度
+
+//                 context.scale(pixelRatio, pixelRatio);
+
+//                 const renderContext = {
+//                     canvasContext: context,
+//                     viewport: viewport
+//                 };
+//                 page.render(renderContext).promise.then(() => {
+//                     console.log(`Page ${i} rendered.`);
+//                 });
+//             });
+//         }
+//     }).catch(reason => {
+//         console.error('Error: ' + reason);
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
-    const data = JSON.parse(document.getElementById('pdf-data').textContent); // 解析 JSON 数据
-    const url = data.url; // 获取 PDF 文件路径
-    const startPage = data.start; // 获取开始页
-    const endPage = data.end; // 获取结束页
-  
-    const pdfjsLib = window['pdfjs-dist/build/pdf'];
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
-  
+    const data = JSON.parse(document.getElementById('pdf-data').textContent);
+    const url = data.url;
+    const startPage = data.start || 1;
+    const customResolutionScale = data.ResolutionScale || 3;
+
+    const pdfjsLib = window['pdfjsLib'] || window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+
+    
     const loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then(pdf => {
-      console.log('PDF loaded');
-  
-      const pdfContainer = document.getElementById('pdf-container');
-      const containerWidth = pdfContainer.clientWidth; // 获取容器宽度
-  
-      for (let i = startPage; i <= endPage; i++) {
-        pdf.getPage(i).then(page => {
-          console.log('Page loaded: ' + i);
-  
-          const scale = containerWidth / page.getViewport({ scale: 1 }).width; 
-          const viewport = page.getViewport({ scale: scale });
-  
-          const canvas = document.createElement('canvas');
-          pdfContainer.appendChild(canvas);
-  
-          const context = canvas.getContext('2d');
-          canvas.style.width = `${viewport.width}px`;
-          canvas.style.height = `${viewport.height}px`;
-          canvas.width = viewport.width * window.devicePixelRatio;
-          canvas.height = viewport.height * window.devicePixelRatio;
-          context.scale(window.devicePixelRatio, window.devicePixelRatio);
-  
-          const renderContext = {
-            canvasContext: context,
-            viewport: viewport
-          };
-          page.render(renderContext);
-        });
-      }
-    }, reason => {
-      console.error('Error: ' + reason);
+        console.log('PDF loaded');
+
+        const endPage = data.end || pdf.numPages;
+        const pdfContainer = document.getElementById('pdf-container');
+        const containerWidth = pdfContainer.clientWidth;
+
+        for (let i = startPage; i <= endPage; i++) {
+            pdf.getPage(i).then(page => {
+                console.log('Page loaded: ' + i);
+
+                // 计算适合容器宽度的缩放比例
+                const initialViewport = page.getViewport({ scale: 1 });
+                const scale = containerWidth / initialViewport.width;
+                const viewport = page.getViewport({ scale: scale });
+
+                const canvas = document.createElement('canvas');
+                pdfContainer.appendChild(canvas);
+
+                const context = canvas.getContext('2d');
+
+                // 使用自定义分辨率倍率，提高渲染清晰度
+                canvas.style.width = `${viewport.width}px`;
+                canvas.style.height = `${viewport.height}px`;
+                canvas.width = viewport.width * window.devicePixelRatio * customResolutionScale;
+                canvas.height = viewport.height * window.devicePixelRatio * customResolutionScale;
+
+                // 应用自定义倍率，确保高分辨率渲染
+                context.scale(window.devicePixelRatio * customResolutionScale, window.devicePixelRatio * customResolutionScale);
+
+                const renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                
+                // 渲染页面
+                page.render(renderContext).promise.then(() => {
+                    console.log(`Page ${i} rendered.`);
+                });
+            });
+        }
+    }).catch(reason => {
+        console.error('Error: ' + reason);
     });
-  });
-  
+});
