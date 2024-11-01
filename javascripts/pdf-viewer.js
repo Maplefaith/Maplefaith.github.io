@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const startPage = data.start; // 获取开始页
     const endPage = data.end; // 获取结束页
   
-    // const pdfjsLib = window['pdfjs-dist/build/pdf'];
-    // pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
   
     const loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then(pdf => {
