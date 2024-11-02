@@ -814,6 +814,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Approximating Eigenvalues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-power-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverse-power-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Power Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1456,6 +1480,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Approximating Eigenvalues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-power-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverse-power-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Power Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1941,6 +1989,52 @@ then solve <span class="arithmatex">\(U \vec{x} = \vec{y}\)</span>.</p>
 <p>then</p>
 <div class="arithmatex">\[ \pmb{x}^{k} = (D-L)^{-1}U\pmb{x}^{k-1} + (D-L)^{-1}\pmb{b} \]</div>
 <h2 id="approximating-eigenvalues">Approximating Eigenvalues<a class="headerlink" href="#approximating-eigenvalues" title="Permanent link">&para;</a></h2>
+<h3 id="the-power-method">The Power Method<a class="headerlink" href="#the-power-method" title="Permanent link">&para;</a></h3>
+<p>Assume that <span class="arithmatex">\(A\)</span> has eigenvalues <span class="arithmatex">\(|\lambda_1|&gt;|\lambda_2|\geq |\lambda_3|\geq \cdots \geq |\lambda_n|\geq 0\)</span>, we can use the following method to make the largest <span class="arithmatex">\(lambda_1\)</span> stand out.</p>
+<div class="admonition success">
+<p class="admonition-title">幂法 | The Power Method</p>
+<p>Initialize randomly <span class="arithmatex">\(\vec{x}\)</span>, which can be represented by <span class="arithmatex">\(n\)</span> linearly irrelevant eigenvectors <span class="arithmatex">\(\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\)</span>, with parameters <span class="arithmatex">\(\beta_1, \beta_@, \cdots, \beta_n\)</span>, such that</p>
+<div class="arithmatex">\[
+\vec{x} = \sum_{i=1}^{n}\beta_i\vec{v_i}
+\]</div>
+<p>multiply both sides by <span class="arithmatex">\(A\)</span>, according to <span class="arithmatex">\(A\vec{v_i}=\lambda_i \vec{v_i}\)</span>, we get</p>
+<div class="arithmatex">\[
+A\vec{x} = \sum_{i=1}^{n}\beta_i \lambda_i \vec{v_i}
+\]</div>
+<p>repeat this process for <span class="arithmatex">\(n\)</span> times we get </p>
+<div class="arithmatex">\[
+A^n\vec{x} = \sum_{i=1}^{n}\beta_i \lambda_i^n \vec{v_i} = \lambda_1^n\sum_{i=1}^{n}\beta_i (\frac{\lambda_i}{\lambda_1})^n \vec{v_i}\rightarrow \lambda_1^n \beta_1 \vec{v_1} \quad (n\rightarrow \infty)
+\]</div>
+<p>That is, we can neglect eigenvalues that are smaller than <span class="arithmatex">\(\lambda_1\)</span> through multiplying <span class="arithmatex">\(A\)</span> and "extract" the biggest one.</p>
+</div>
+<p>To avoid divengence caused by <span class="arithmatex">\(\lambda_1&gt;0\)</span>, we need to normalize <span class="arithmatex">\(\vec{x}^{k} = A\vec{x}^{k-1}\)</span> each step after multiplying. Usually we choose <span class="arithmatex">\(\Vert\  \Vert_\infty\)</span>.</p>
+<p>To get the <span class="arithmatex">\(\lambda_1\)</span> out, we can use </p>
+<div class="arithmatex">\[
+\frac{\Vert\vec{x}^{k}\Vert}{\Vert\vec{x}^{k-1}\Vert} \approx \lambda_1 \quad (n\rightarrow \infty)
+\]</div>
+<p>to get <span class="arithmatex">\(\lambda_1\)</span>.</p>
+<p>The next question is, naively, how about the speed of converging? Luckily, the question is easy to answer:</p>
+<p>rely on ratio <span class="arithmatex">\(\left|\frac{\lambda_2}{\lambda_1}\right|\)</span>.</p>
+<h3 id="inverse-power-method">Inverse Power Method<a class="headerlink" href="#inverse-power-method" title="Permanent link">&para;</a></h3>
+<p>This is a trick from the Power method. It comes from a question: what if we want to calculate the smallest eigenvalue of a matrix <span class="arithmatex">\(A\)</span>?</p>
+<p>The answer is, by taking use of metrix inverse.</p>
+<div class="admonition success">
+<p class="admonition-title">反幂法 | Inverse Power Method</p>
+<p>Matrix <span class="arithmatex">\(A\)</span> has eigenvalues <span class="arithmatex">\(|\lambda_1| &lt; |\lambda_2| \leq \cdots \leq |\lambda_n|\)</span>, then matrix <span class="arithmatex">\(A^{-1}\)</span> has eigenvalues </p>
+<div class="arithmatex">\[
+\left|\frac{1}{\lambda_1}\right| &gt; \left|\frac{1}{\lambda_2}\right| \geq \cdots \geq \left|\frac{1}{\lambda_n}\right|
+\]</div>
+<p>Then use the power method to get <span class="arithmatex">\(\left|\frac{1}{\lambda_1}\right|\)</span> out.</p>
+</div>
+<p>Actually, the above method is more often being used in situation where we have known an eigenvalue <span class="arithmatex">\(\lambda_1\)</span> (not neecssarily the largest or smallest) of <span class="arithmatex">\(A\)</span> is close to a constant <span class="arithmatex">\(q\)</span>. That is, we can formulate matrix </p>
+<div class="arithmatex">\[
+(A-qI)
+\]</div>
+<p>which has eigenvalues </p>
+<div class="arithmatex">\[
+|\lambda_1 - q| &lt; |\lambda_2 - q| \leq \cdots \leq \left|\lambda_n - q\right|
+\]</div>
+<p>Then we can use the above method to get <span class="arithmatex">\(\lambda_1\)</span> out.</p>
 <h2 id="interpolation-and-polynomial-approximation">Interpolation and Polynomial Approximation<a class="headerlink" href="#interpolation-and-polynomial-approximation" title="Permanent link">&para;</a></h2>
 <h3 id="lagrange-interpolating-polynomial">Lagrange Interpolating Polynomial<a class="headerlink" href="#lagrange-interpolating-polynomial" title="Permanent link">&para;</a></h3>
 <p>Inspired by 加权平均.</p>
