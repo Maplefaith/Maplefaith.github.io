@@ -6,6 +6,7 @@
   border-left: 4px solid #4d8b31;
   /* #95b8d1; */
   /* #95e6eb; */
+  font-size: var(--font-size, 18px);
   padding: 10px;
   color: #585941;
   /* #26547c; */
