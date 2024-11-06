@@ -1963,16 +1963,23 @@ x_j &lt; x\leq x_{j+1}
 \]</div>
 <p>Here closed interval <span class="arithmatex">\([x_0, x_0+\alpha]\)</span> is of great importance, for it can guarantee the condition for <strong>Ascoli-Arzel&agrave; Theorem</strong> to be true.</p>
 <ul>
-<li>
-<p><strong>一致有界 | Uniform Bound</strong></p>
-</li>
-<li>
-<p><strong>等度连续 | Equicontinuous</strong></p>
-</li>
-<li>
-<p>Using <strong>Ascoli-Arzel&agrave; Theorem</strong></p>
-</li>
+<li><strong>一致有界 | Uniform Bound</strong></li>
 </ul>
+<p>By definition, it is easy to prove that </p>
+<div class="arithmatex">\[
+|y_n(x)-y_0| \leq b, \quad \forall n, \forall x \in [x_0,x_0+\alpha]
+\]</div>
+<ul>
+<li><strong>等度连续 | Equicontinuous</strong></li>
+</ul>
+<p>By definition, it is easy to see that <span class="arithmatex">\(\forall \epsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta = \epsilon/M\)</span>, s.t. <span class="arithmatex">\(\forall x_1, x_2 \in [x_0,x_0+\alpha]\)</span> and <span class="arithmatex">\(|x_1-x_2|&lt;\delta\)</span>, we have</p>
+<div class="arithmatex">\[
+|y_n(x_1)-y_n(x_2)|\leq \max_{(x,y)\in R}|f(x,y)| |x_1-x_2| &lt; M \cdot \frac{\epsilon}{M} = \epsilon
+\]</div>
+<ul>
+<li>Using <strong>Ascoli-Arzel&agrave; Theorem</strong></li>
+</ul>
+<p>So the function sequence <span class="arithmatex">\(\{y_n(x)\}\)</span> has a uniformly convergent subsequence.</p>
 </div>
 </div>
 </div>
