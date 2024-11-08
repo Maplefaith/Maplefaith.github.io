@@ -1382,7 +1382,7 @@ y &amp;= \pm e^{C}\cdot e^{-\int_{x_0}^{x}p(t)dt} \nonumber \\
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="linear-first-order-differential-equation-version-1" name="__tabbed_2" type="radio" /><input id="linear-first-order-differential-equation-version-2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="linear-first-order-differential-equation-version-1">Version 1</label><label for="linear-first-order-differential-equation-version-2">Version 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Makeing use of <strong>Integral Factors</strong>.</p>
+<p>Making use of <strong>Integral Factors</strong>.</p>
 <p>To begin with, we convert equation <span class="arithmatex">\(\ref{eq-LFODE}\)</span> into symmetrical form:</p>
 <div class="arithmatex">\[
 \begin{equation}
@@ -1722,9 +1722,9 @@ u(x) &amp;\leq \left[ C + \int_{a}^{x}Ke^{-\int_{a}^{s}\alpha(t)dt}ds\right]e^{\
 <p>The above definition means that functions in <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> are all bounded by some constant <span class="arithmatex">\(M\)</span>.</p>
 <div class="admonition info">
 <p class="admonition-title">等度连续的定义 | Definition of Equicontinuous</p>
-<p>Assume <span class="arithmatex">\(\Lambda\)</span> is an infinite set, set <span class="arithmatex">\(I\)</span>(or interval <span class="arithmatex">\([x, b]\)</span>) <span class="arithmatex">\(\subset \mathbb{R}\)</span>. A family of function <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> defined on <span class="arithmatex">\(I\)</span> is <strong>Equicontinuous</strong>, if <span class="arithmatex">\(\forall \epsilon&gt;0, \exists \delta&gt;0\)</span>, s.t. <span class="arithmatex">\(\forall x_1, x_2\in I\)</span> and <span class="arithmatex">\(|x_1-x_2|&lt;\delta\)</span></p>
+<p>Assume <span class="arithmatex">\(\Lambda\)</span> is an infinite set, set <span class="arithmatex">\(I\)</span>(or interval <span class="arithmatex">\([x, b]\)</span>) <span class="arithmatex">\(\subset \mathbb{R}\)</span>. A family of function <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> defined on <span class="arithmatex">\(I\)</span> is <strong>Equicontinuous</strong>, if <span class="arithmatex">\(\forall \varepsilon&gt;0, \exists \delta&gt;0\)</span>, s.t. <span class="arithmatex">\(\forall x_1, x_2\in I\)</span> and <span class="arithmatex">\(|x_1-x_2|&lt;\delta\)</span></p>
 <div class="arithmatex">\[
-|f_\lambda(x_1)-f_\lambda(x_2)|&lt; \epsilon
+|f_\lambda(x_1)-f_\lambda(x_2)|&lt; \varepsilon
 \]</div>
 </div>
 <p>The above definition means that functions in <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> are continuous equally. Usually <span class="arithmatex">\(\delta&gt;0\)</span> depends on <span class="arithmatex">\(f_\lambda\)</span>, but here we mean the degree of continuouity of these functions is similar.</p>
@@ -1856,7 +1856,7 @@ y_n(x) &amp;= y_0 + \int_{x_0}^{x} f(s, y_{n-1}(s))ds\\
 |y_n(x)-y_{n-1}(x)| \leq \frac{ML^{n-1}}{n!}|x-x_0|^n
 \]</div>
 <p>and prove it by induction(to be proved by readers).</p>
-<p>With the above condition, we can use <strong>Weierstrass test</strong> to prove Picard sequence converges. To be specific, we can see that the Picard Sequence is controlled by a Series of constant terms, which satisfies Cauchy Convergence Theorem. That is, <span class="arithmatex">\(\forall \epsilon&gt;0, \exists N&gt;0, \forall n&gt;m&gt;N\)</span>, s.t.</p>
+<p>With the above condition, we can use <strong>Weierstrass test</strong> to prove Picard sequence converges. To be specific, we can see that the Picard Sequence is controlled by a Series of constant terms, which satisfies Cauchy Convergence Theorem. That is, <span class="arithmatex">\(\forall \varepsilon&gt;0, \exists N&gt;0, \forall n&gt;m&gt;N\)</span>, s.t.</p>
 <div class="arithmatex">\[
 \begin{align*}
 |y_n(x)-y_{m}(x)| &amp;\leq \sum_{k=m+1}^{n}\frac{ML^{k-1}}{k!}|x-x_0|^k \\
@@ -1955,7 +1955,9 @@ E_n = \bigcup_{s=1}^{n}l_s
 \]</div>
 <p>and its function expresstion is </p>
 <div class="arithmatex">\[
-y_n(x) = y_0 + \sum_{k=0}^{j-1}f(x_k, y_k)(x_{k+1} - x_{k}) + f(x_j, y_j)(x - x_j)
+\begin{equation}
+y_n(x) = y_0 + \sum_{i=0}^{j-1}f(x_i, y_i)(x_{i+1} - x_{i}) + f(x_j, y_j)(x - x_j) \label{eq-eular}
+\end{equation}
 \]</div>
 <p>where <span class="arithmatex">\(\forall x \in (x_0, x_0 +\alpha], \exists j\)</span> s.t. </p>
 <div class="arithmatex">\[
@@ -1972,14 +1974,100 @@ x_j &lt; x\leq x_{j+1}
 <ul>
 <li><strong>等度连续 | Equicontinuous</strong></li>
 </ul>
-<p>By definition, it is easy to see that <span class="arithmatex">\(\forall \epsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta = \epsilon/M\)</span>, s.t. <span class="arithmatex">\(\forall x_1, x_2 \in [x_0,x_0+\alpha]\)</span> and <span class="arithmatex">\(|x_1-x_2|&lt;\delta\)</span>, we have</p>
+<p>By definition, it is easy to see that <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta = \varepsilon/M\)</span>, s.t. <span class="arithmatex">\(\forall x_1, x_2 \in [x_0,x_0+\alpha]\)</span> and <span class="arithmatex">\(|x_1-x_2|&lt;\delta\)</span>, we have</p>
 <div class="arithmatex">\[
-|y_n(x_1)-y_n(x_2)|\leq \max_{(x,y)\in R}|f(x,y)| |x_1-x_2| &lt; M \cdot \frac{\epsilon}{M} = \epsilon
+|y_n(x_1)-y_n(x_2)|\leq \max_{(x,y)\in R}|f(x,y)| |x_1-x_2| &lt; M \cdot \frac{\varepsilon}{M} = \varepsilon
 \]</div>
 <ul>
 <li>Using <strong>Ascoli-Arzel&agrave; Theorem</strong></li>
 </ul>
-<p>So the function sequence <span class="arithmatex">\(\{y_n(x)\}\)</span> has a uniformly convergent subsequence.</p>
+<p>So the function sequence <span class="arithmatex">\(\{y_n(x)\}\)</span> has a uniformly convergent subsequence <span class="arithmatex">\(\{y_{n_j}(x)\}\)</span>.</p>
+<ul>
+<li>Prove Eular's Arc converges to the solution of ODE.</li>
+</ul>
+<p>This means that we have to consider the error of <span class="arithmatex">\(y_{n_j}(x)\)</span> and <span class="arithmatex">\(y(x)\)</span>. Firstly, we rewrite the formula of Eular's Arc <span class="arithmatex">\(\ref{eq-eular}\)</span>.</p>
+<p>Note that</p>
+<div class="arithmatex">\[
+\begin{align*}
+f(x_i,y_i)(x_{i+1}-x_i)&amp;=\int_{x_i}^{x_{i+1}}f(x_i,y_i)dx\\
+&amp;=\int_{x_i}^{x_{i+1}}f(x,y_n(x)) + f(x_i,y_i) - f(x,y_n(x))dx\\
+\end{align*}
+\]</div>
+<p>Define</p>
+<div class="arithmatex">\[
+d_n(i) \overset{\Delta}{=} \int_{x_i}^{x_{i+1}}[f(x_i,y_i) - f(x,y_n(x))]dx
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x_i,y_i)(x_{i+1}-x_i) = \int_{x_i}^{x_{i+1}}f(x,y_n(x))dx + d_n(i) \label{eq-front}
+\end{equation}
+\]</div>
+<p>Similarly, we have <span class="arithmatex">\(x_j&lt;x\leq x_{j+1}\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+f(x_j,y_j)(x-x_j)&amp;=\int_{x_j}^{x_{j+1}}f(x_j,y_j)dx\\
+&amp;=\int_{x_j}^{x_{j+1}}f(x,y_n(x)) + f(x_j,y_j) - f(x,y_n(x))dx\\
+\end{align*}
+\]</div>
+<p>Define</p>
+<div class="arithmatex">\[
+d^*_n(x) \overset{\Delta}{=} \int_{x_j}^{x}[f(x_j,y_j) - f(x,y_n(x))]dx 
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x_j,y_j)(x-x_j) = \int_{x_j}^{x_{j+1}}f(x,y_n(x))dx +d_n^*(x) \label{eq-back}
+\end{equation}
+\]</div>
+<p>So with the above two transformation <span class="arithmatex">\(\ref{eq-front}\)</span>, <span class="arithmatex">\(\ref{eq-back}\)</span>, the formula of Eular's Arc <span class="arithmatex">\(\ref{eq-eular}\)</span>(summation of linear expresstions) becomes an <strong>integral-like</strong> expression:</p>
+<div class="arithmatex">\[
+\begin{align*}
+y_n(x) &amp;= y_0 + \sum_{i=0}^{j-1}f(x_k, y_k)(x_{i+1} - x_{i}) + f(x_j, y_j)(x - x_j)\\
+&amp; = y_0 + \int_{x_0}^{x}f(x,y_n(x))dx + \delta_n(x)
+\end{align*}
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+\begin{equation}
+\delta_n(x) = \sum_{i=0}^{j-1}d_n(i) + d^*_n(x) \label{eq-residue}
+\end{equation}
+\]</div>
+<p>we know that for each <span class="arithmatex">\(y_n\)</span>, we can have variables <span class="arithmatex">\(x, y\)</span> bounded by</p>
+<div class="arithmatex">\[
+|x-x_j|\leq \frac{\alpha}{n}, \quad |y-y_j|\leq M \frac{\alpha}{n}
+\]</div>
+<p>So <span class="arithmatex">\(\forall \varepsilon &gt;0\)</span>, <span class="arithmatex">\(\exists N(\varepsilon) = \frac{\alpha}{\varepsilon}\)</span>, s.t. <span class="arithmatex">\(n&gt;N\)</span>, </p>
+<div class="arithmatex">\[
+|x-x_j|\leq \frac{\alpha}{N} = \varepsilon, \quad |y-y_j|\leq M \frac{\alpha}{N} = M\varepsilon
+\]</div>
+<p>which means the region of each integral interal can be as small as possible so long as <span class="arithmatex">\(n\rightarrow \infty\)</span>.</p>
+<p>So in this case, for each item in residue <span class="arithmatex">\(\ref{eq-residue}\)</span>, we can bound it into small value corresponding to <span class="arithmatex">\(\varepsilon\)</span> by making use of the continuity of <span class="arithmatex">\(f(x,y)\)</span>, which means <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, s.t. <span class="arithmatex">\(\forall (x,y) \in O[(x_j,y_j),\delta]\)</span>, </p>
+<div class="arithmatex">\[
+|f(x,y)-f(x_j,y_j)| &lt;\varepsilon
+\]</div>
+<p>The above one is easy to accomplish because we can let <span class="arithmatex">\(n\)</span> be large enough, so all <span class="arithmatex">\(x \in [x_j,x_{j+1}]\)</span> with its <span class="arithmatex">\(y_n(x)\)</span> can fall in <span class="arithmatex">\(O[(x_j,y_j),\delta]\)</span>.</p>
+<p>So the whole residue <span class="arithmatex">\(\ref{eq-residue}\)</span> can be bounded:</p>
+<div class="arithmatex">\[
+\delta_n(x) \leq \varepsilon \frac{\alpha}{n} + j \varepsilon \frac{\alpha}{n} &lt; \alpha \varepsilon
+\]</div>
+<p>So we can say <span class="arithmatex">\(y_{n_j}(x)\)</span> defined as</p>
+<div class="arithmatex">\[
+y_{n_j}(x) = y_0 + \int_{x_0}^{x}f(s, y_{n_j}(s))ds + \delta_{n_j}(x), \quad x \in [x_0,x_0+\alpha]
+\]</div>
+<p>where <span class="arithmatex">\(\delta_{n_j}(x)\)</span> satisfies</p>
+<div class="arithmatex">\[
+\delta_{n_j}(x)\rightrightarrows 0
+\]</div>
+<p>Which also means, if we denote </p>
+<div class="arithmatex">\[
+\phi(x) \overset{\Delta}{=} \lim_{n_j\rightarrow \infty}y_{n_j}(x)
+\]</div>
+<p>and let <span class="arithmatex">\(n_j \rightarrow \infty\)</span>, we get</p>
+<div class="arithmatex">\[
+\phi(x) = y_0 + \int_{x_0}^{x}f(s, \phi(s))ds
+\]</div>
+<p>which means function subsequence <span class="arithmatex">\(\{y_{n_j}(x)\}\)</span> converges to the solution of integral form <span class="arithmatex">\(\ref{eq-integral}\)</span> of ODE <span class="arithmatex">\(\ref{eq-cauchy}\)</span>.</p>
 </div>
 </div>
 </div>
