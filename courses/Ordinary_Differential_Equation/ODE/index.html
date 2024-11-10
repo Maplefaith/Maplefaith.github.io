@@ -1475,7 +1475,7 @@ F(x,y,p) = 0 \label{eq-para-p}
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="existence-and-uniqueness-of-lodes-hints" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="existence-and-uniqueness-of-lodes-hints">Hints</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>We have to measure the distance in matrix. Now we need to give a definition of norm of vectors and matrixes</p>
+<p>We have to measure the distance in matrix. Now we need to give a definition of norm of vectors and matrixes(to see more details in <a href="../../Numerical_Analysis/NA/#preliminary-knowledge-norm-of-vectors-and-matrixes">Norm of vectors and matrixes</a>) in <em>Numerical Analysis</em>.</p>
 <div class="arithmatex">\[
 \Vert\mathbfit{X} \Vert = \sum_{i=1}^{n}|x_i|, \quad \Vert\mathbfit{A} \Vert = \sum_{i=1}^{n}\sum_{j=1}^{n}|{a_{ij}}|
 \]</div>
@@ -1736,26 +1736,63 @@ f_n(x) = (-1)^{n} + x^n
 <p>is uniformly bounded and equicontinuous on region <span class="arithmatex">\(\{x: |x|\leq 1/2\}\)</span>, is uniformly bounded but not equicontinuous on region <span class="arithmatex">\(\{x: |x|\leq 1\}\)</span>, and is either not uniformly bounded and equicontinuous on region <span class="arithmatex">\(\{x: |x|\leq 2\}\)</span>.</p>
 </div>
 <p>The condition of the following theorem can be narrowed down to denumerable sets <span class="arithmatex">\(\Lambda\)</span> and interval <span class="arithmatex">\(R \subset \mathbb{R}\)</span>.</p>
+<p><a id="Peano-lemma1"></a></p>
 <div class="admonition success">
-<p class="admonition-title">引理1: 一致有界的函数列有收敛函数子列 | Lemma1: Uniformly Bounded Function Sequence has convergent Function Subsequence</p>
-<p>Assume set <span class="arithmatex">\(\Lambda\)</span> is denumerable. If a family of function <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> defined on <span class="arithmatex">\(I \subset \mathbb{R}\)</span> is <strong>uniformly bounded</strong>, then <span class="arithmatex">\(\forall A = \{x_m\} \subset I\)</span>, <span class="arithmatex">\(\exists \{f_{\lambda_k}\}_{k=1}^\infty\)</span>, a function subsequence of <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span>, such that </p>
+<p class="admonition-title">引理1: 一致有界的函数列有收敛函数子列(点态) | Lemma 1: Uniformly Bounded Function Sequence has convergent Function Subsequence</p>
+<p>Assume set <span class="arithmatex">\(\Lambda\)</span> is denumerable. If a family of function <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> defined on <span class="arithmatex">\(I \subset \mathbb{R}\)</span> is <strong>uniformly bounded</strong>, then <span class="arithmatex">\(\forall A = \{x_m\}_{m=1}^{\infty} \subset I\)</span>, <span class="arithmatex">\(\exists \{f_{\lambda_k}\}_{k=1}^\infty\)</span>, a function subsequence of <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span>, such that </p>
 <div class="arithmatex">\[
 \{f_{\lambda_k}(x)\}, \forall x \in A
 \]</div>
 <p>is convergent.</p>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="preliminary-knowledge-hints_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="preliminary-knowledge-hints_1">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="preliminary-knowledge-hints_1" name="__tabbed_8" type="radio" /><input id="preliminary-knowledge-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="preliminary-knowledge-hints_1">Hints</label><label for="preliminary-knowledge-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Using diagonal methods.</p>
+<p>Using <strong>diagonal methods</strong>. </p>
+</div>
+<div class="tabbed-block">
+<p>Note that <span class="arithmatex">\(\{f_\lambda(x_1)\}_{\lambda \in \Lambda}\)</span> is obviously bounded. So by Weierstrass Balzano Theorem, we get a convergent subsequence </p>
+<div class="arithmatex">\[
+f_{11}(x_1), f_{12}(x_1), \cdots, f_{1n}(x_1) \cdots
+\]</div>
+<p>which converges to <span class="arithmatex">\(y_1\)</span>.</p>
+<p>Now consider substitute <span class="arithmatex">\(x_1\)</span> by <span class="arithmatex">\(x_2\)</span>, which becomes</p>
+<div class="arithmatex">\[
+f_{11}(x_2), f_{12}(x_2), \cdots, f_{1n}(x_2) \cdots
+\]</div>
+<p>According to the condition "Uniformly Bounded", the above sequence is also bounded, so we can find another convergent subsequence from it</p>
+<div class="arithmatex">\[
+f_{21}(x_2), f_{22}(x_2), \cdots, f_{2n}(x_2) \cdots
+\]</div>
+<p>which converges to <span class="arithmatex">\(y_2\)</span>.</p>
+<p>So we can say function subsequence of <span class="arithmatex">\(\{f_\lambda(x_1)\}_{\lambda \in \Lambda}\)</span></p>
+<div class="arithmatex">\[
+f_{21}(x), f_{22}(x), \cdots, f_{2n}(x) \cdots
+\]</div>
+<p>is convergent on <span class="arithmatex">\(x\in \{x_1,x_2\}\)</span>. That is, <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f_{2n}(x_1) = y_1\)</span>, <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f_{2n}(x_2) = y_2\)</span>.</p>
+<p>Continue the above procedure, we can get another function subsequnce</p>
+<div class="arithmatex">\[
+f_{31}(x), f_{32}(x), \cdots, f_{3n}(x) \cdots
+\]</div>
+<p>which is convergent on <span class="arithmatex">\(x \in \{x_1,x_2,x_3\}\)</span>. That is, <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f_{3n}(x_1) = y_1\)</span>, <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f_{3n}(x_2) = y_2\)</span>, <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f_{3n}(x_3) = y_3\)</span>.</p>
+<p>Continue, it is not hard to imagine we get a function subsequence <span class="arithmatex">\(\{f_{nn}(x)\}\)</span> which converges to <span class="arithmatex">\(y(x)\)</span> on <span class="arithmatex">\(x \in \{x_1,x_2,\cdots, x_n\}\)</span>, with <span class="arithmatex">\(y(x)\)</span> defined as </p>
+<div class="arithmatex">\[
+y(x_m) = y_m,\quad  m=1,2,\cdots
+\]</div>
+<p>So to express the subsequence more specificly, we can define <span class="arithmatex">\(\tilde{f}_n(x) = f_{nn}(x)\)</span>, and get a subsequence <span class="arithmatex">\(\{\tilde{f}_n(x)\}_{n=1}^{\infty}\)</span> such that </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\tilde{f}_n(x) = y(x), \forall x\in I.
+\]</div>
+<p>And we are done.</p>
 </div>
 </div>
 </div>
 <p>The above theorem offers that we can find a function sequence convergent on denumerable set <span class="arithmatex">\(A\)</span>, which is <strong>pointwise convergence</strong>.</p>
-<p>Now if we let the above function subsequence <span class="arithmatex">\(\{f_{\lambda_k}(x)\}\)</span> to be <strong>Equicontinuous</strong>, then it can be uniformly convergent on the whole interval <span class="arithmatex">\(I\)</span>. This exactly the following theorem.</p>
+<p>Now if we let the above function subsequence <span class="arithmatex">\(\{f_{\lambda_k}(x)\}\)</span> to be <strong>Equicontinuous</strong>, then it can be <strong>uniformly convergent</strong> on the whole interval <span class="arithmatex">\(I\)</span>. This is exactly the following theorem(in which <span class="arithmatex">\(I\)</span> is a general region, not just an interval). Note that the above denumerable set can be said as "dense sat".</p>
+<p><a id="Peano-lemma2"></a></p>
 <div class="admonition success">
-<p class="admonition-title">引理2: 点态收敛的等度连续的函数列一致收敛 | Lemma2: Equicontinuous Function Sequence is Uniformly Convergent given Pointwise Convergence on Denumerable Sets</p>
+<p class="admonition-title">引理2: 点态收敛、等度连续的函数列在紧集上一致收敛 | Lemma 2: Equicontinuous Function Sequence is Uniformly Convergent given Pointwise Convergence on Denumerable Sets</p>
 <p>Assume <span class="arithmatex">\(\{f_n\}_{n=1}^\infty\)</span> defined on compact set <span class="arithmatex">\(I \subset \mathbb{R}\)</span> is <strong>Equicontinuous</strong>, and there exists a dense subset <span class="arithmatex">\(R \subset I\)</span>, such that <span class="arithmatex">\(\{f_n\}_{n=1}^\infty\)</span> is convergent on <span class="arithmatex">\(R\)</span>, then <span class="arithmatex">\(\{f_n\}_{n=1}^\infty\)</span> is <strong>uniformly convergent</strong> on <span class="arithmatex">\(I\)</span>. And denote</p>
 <div class="arithmatex">\[
 f_n(x) \rightrightarrows f(x), \quad n\rightarrow \infty
@@ -1763,10 +1800,70 @@ f_n(x) \rightrightarrows f(x), \quad n\rightarrow \infty
 <p>where the convergent function <span class="arithmatex">\(f(x)\)</span> is continuous on <span class="arithmatex">\(I\)</span>. </p>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="preliminary-knowledge-hints_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="preliminary-knowledge-hints_2">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="preliminary-knowledge-hints_2" name="__tabbed_9" type="radio" /><input id="preliminary-knowledge-proof_1" name="__tabbed_9" type="radio" /><input id="preliminary-knowledge-if-iab" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="preliminary-knowledge-hints_2">Hints</label><label for="preliminary-knowledge-proof_1">Proof</label><label for="preliminary-knowledge-if-iab">If <span class="arithmatex">\(I=[a,b]\)</span></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using <strong>Equicontinuity</strong> and <strong>compact characteristic</strong> of set <span class="arithmatex">\(I\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p>We hope to prove that <span class="arithmatex">\(\forall \varepsilon, \exists N&gt;0\)</span>, s.t. <span class="arithmatex">\(\forall n&gt;m&gt;N\)</span>, <span class="arithmatex">\(\forall x \in I\)</span>, we have </p>
+<div class="arithmatex">\[
+|f_n(x)-f_m(x)| &lt; \varepsilon
+\]</div>
+<ul>
+<li>use the <strong>Equicontinuity</strong>. </li>
+</ul>
+<p>That is, <span class="arithmatex">\(\forall \varepsilon\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall x_1,x_2\in I\)</span> and <span class="arithmatex">\(|x_1-x_2|&lt;\delta\)</span>, <span class="arithmatex">\(\forall n\)</span>, we have</p>
+<div class="arithmatex">\[
+|f(x_1)-f(x_2)| &lt; \frac{\varepsilon}{9}
+\]</div>
+<ul>
+<li>use the characteristic of <strong>compact set</strong>.</li>
+</ul>
+<p>Note that there exists <strong>open coverings</strong> of finite number for compact set <span class="arithmatex">\(I\)</span>. That is, we have <span class="arithmatex">\(x_j\in I\)</span>, <span class="arithmatex">\(j=1,2,\cdots, k_0\)</span>, and <span class="arithmatex">\(\{O_{\delta'}(x_j)\}_{j=1}^{k_0}\)</span> s.t. </p>
+<div class="arithmatex">\[
+I \subset \bigcup_{j=1}^{k_0}O_{\delta'}(x_j)
+\]</div>
+<p>To let it help us prove, we can let <span class="arithmatex">\(\delta'&lt;\delta\)</span> and we can still have a valid corresponding <span class="arithmatex">\(k_0\)</span> which is finite.</p>
+<p>Because <span class="arithmatex">\(R\)</span> is a dense set on <span class="arithmatex">\(I\)</span>, so <span class="arithmatex">\(\forall O(x_j)\)</span>, <span class="arithmatex">\(\exists y_j\in R\)</span> such that <span class="arithmatex">\(y_j \in O(x_j)\)</span>.</p>
+<ul>
+<li>use the hypothesis of <strong>pointwise convergence</strong>.</li>
+</ul>
+<p>Because <span class="arithmatex">\(\{f_n\}_{n=1}^{\infty}\)</span> is convergent on dense set <span class="arithmatex">\(R\)</span>, we can have <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>(choose the same one as the above one), <span class="arithmatex">\(\exists N&gt;0\)</span>, <span class="arithmatex">\(\forall n&gt;m&gt;N\)</span>, <span class="arithmatex">\(\forall y_j \in R\)</span>, we have</p>
+<div class="arithmatex">\[
+|f_n(y_j)-f_m(y_j)|&lt;\frac{\varepsilon}{9}
+\]</div>
+<p>That is, as long as <span class="arithmatex">\(n&gt;m&gt;N\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+|f_n(x_j)-f_m(x_j)| &amp;\leq |f_n(x_j)-f_n(y_j)| + |f_n(y_j)-f_m(y_j)| + |f_m(y_j)-f_m(x_j)| \nonumber\\
+&amp;&lt; |f_n(x_j)-f_n(y_j)| + \frac{\varepsilon}{9} + |f_m(y_j)-f_m(x_j)|\quad \text{by pointwise-convergence}\nonumber\\
+&amp;&lt;\frac{\varepsilon}{3} \quad \text{the 1st and 3rd hold for equicontinuity} \label{bound-open-covering}
+\end{align}
+\]</div>
+<p>Note that <span class="arithmatex">\(\forall x \in I\)</span>, <span class="arithmatex">\(\exists j\in {1,2,\cdots, k_0}\)</span>, such that <span class="arithmatex">\(x\in O_{\delta'}(x_j)\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+|f_n(x)-f_m(x)| &amp;\leq |f_n(x)-f_n(x_j)| + |f_n(x_j)-f_m(x_j)| + |f_m(x_j)-f_m(x)|\\
+&amp;&lt; |f_n(x)-f_n(x_j)| + \frac{\varepsilon}{3} + |f_m(x_j)-f_m(x)|\quad \text{by the above condition }\ref{bound-open-covering} \\
+&amp;&lt;\varepsilon \quad \text{the 1st and 3rd hold for equicontinuity}
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>In this case, we do not have to find a <strong>open covering</strong> of <span class="arithmatex">\([a,b]\)</span> but just partition the closed interval <span class="arithmatex">\([a,b]\)</span> into <span class="arithmatex">\(k_0\)</span> distinct closed intervals whose length are less then <span class="arithmatex">\(\delta\)</span>. Denote these intervals as <span class="arithmatex">\(I_j\)</span>, <span class="arithmatex">\(j=1,2\cdots, k_0\)</span>.</p>
+<p>Then <span class="arithmatex">\(\forall x \in [a, b]\)</span>, <span class="arithmatex">\(\exists j\in {1,2,\cdots, k_0}\)</span> such that <span class="arithmatex">\(x\in I_j\)</span>. Because <span class="arithmatex">\(R\)</span> is dense on <span class="arithmatex">\([a,b]\)</span>, then we are able to find an element <span class="arithmatex">\(x_j \in I_j\)</span>, which means </p>
+<div class="arithmatex">\[
+|x-x_j|&lt; \text{length of }I_q &lt;\delta
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+\begin{align*}
+|f_n(x)-f_m(x)| &amp;\leq |f_n(x)-f_n(x_j)| + |f_n(x_j)-f_m(x_j)| + |f_m(x_j)-f_m(x)|\\
+&amp;&lt; |f_n(x)-f_n(x_j)| + \frac{\varepsilon}{9} + |f_m(x_j)-f_m(x)|\quad \text{by pointwise-convergence} \\
+&amp;&lt;\frac{\varepsilon}{3}&lt;\varepsilon \quad \text{the 1st and 3rd hold for equicontinuity}
+\end{align*}
+\]</div>
 </div>
 </div>
 </div>
@@ -1776,13 +1873,21 @@ f_n(x) \rightrightarrows f(x), \quad n\rightarrow \infty
 <p>Assume <span class="arithmatex">\(\Lambda\)</span> is denumerable. If a family of sequence <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> is uniformly bounded and equicontinuous on closed interval <span class="arithmatex">\([a, b]\)</span>, then there exists a function subsequence <span class="arithmatex">\(\{f_{\lambda_k}\}_{k=1}^{\infty}\)</span> of <span class="arithmatex">\(\{f_\lambda\}_{\lambda\in\Lambda}\)</span> which is <strong>uniformly convergent</strong> on <span class="arithmatex">\([a, b]\)</span>.</p>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="preliminary-knowledge-hints_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="preliminary-knowledge-hints_3">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="preliminary-knowledge-hints_3" name="__tabbed_10" type="radio" /><input id="preliminary-knowledge-proof_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="preliminary-knowledge-hints_3">Hints</label><label for="preliminary-knowledge-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Making use of the above two lemmas.</p>
 </div>
+<div class="tabbed-block">
+<p>Firstly, we have to find a <strong>dense set</strong> <span class="arithmatex">\(R\)</span>. Naively, we can choose rational numbers on <span class="arithmatex">\([a,b]\)</span>. That is,</p>
+<div class="arithmatex">\[
+R \overset{\Delta}{=}\mathbb{Q}\cap [a,b].
+\]</div>
+<p>Then by <a href="#Peano-lemma1">lemma 1</a>, using its <strong>uniformly bounded</strong>,  we can find a function subsequence of <span class="arithmatex">\(\{f_\lambda(x)\}_{\lambda\in\Lambda}\)</span>, denoted as <span class="arithmatex">\(\{f_{n}\}_{n=1}^{\infty}\)</span>, which is convergent on <span class="arithmatex">\(R\)</span>. Finally, by <a href="#Peano-lemma2">lemma 2</a>, using its <strong>equicontinous</strong>, the subsequence is uniformly convergent on <span class="arithmatex">\([a,b]\)</span>.</p>
 </div>
 </div>
+</div>
+<p>And by property of uniformly convergent function sequence, we can see that the convergent funtion is continuous on <span class="arithmatex">\(I\)</span>.</p>
 <h3 id="Picard-Theorem">Picard存在唯一性定理 | Picard Theorem of Existence and Uniqueness<a class="headerlink" href="#Picard-Theorem" title="Permanent link">&para;</a></h3>
 <p>Picard uses the following condition to prove his theorem.</p>
 <div class="admonition success">
@@ -1807,11 +1912,15 @@ R = \{(x,y): |x-x_0| \leq a, |y-y_0|\leq b\} \label{region}
 \]</div>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="Picard-Theorem-hints" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="Picard-Theorem-hints">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="Picard-Theorem-hints" name="__tabbed_11" type="radio" /><input id="Picard-Theorem-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="Picard-Theorem-hints">Hints</label><label for="Picard-Theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>There typically 4 steps. </p>
+<p>Firstly, <strong>Convert</strong> the differential problem into an equivalent integral problem. Then, formulate the so-called <strong>Picard sequence</strong> and prove it convergent. Furthermore, we have to prove that Picard sequence converges to the <strong>solution</strong> of integral equation. Finally, we prove the uniqueness by <strong>Gronwall Inequation</strong>.</p>
+</div>
+<div class="tabbed-block">
 <ul>
-<li><strong>Convert</strong> the differential problem into an interal problem. That is, solving equation <span class="arithmatex">\(\ref{eq-cauchy}\)</span> equals to solving <strong>integral equation</strong></li>
+<li><strong>Convert</strong> the differential problem into an integral problem. That is, solving equation <span class="arithmatex">\(\ref{eq-cauchy}\)</span> equals to solving <strong>integral equation</strong></li>
 </ul>
 <div class="arithmatex">\[
 \begin{align}
@@ -1924,8 +2033,11 @@ K = \max_{x\in J}\{|\phi_1(x)-\phi_2(x)|\}
 \]</div>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="peano-peano-theorem-hints" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="peano-peano-theorem-hints">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="peano-peano-theorem-hints" name="__tabbed_12" type="radio" /><input id="peano-peano-theorem-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="peano-peano-theorem-hints">Hints</label><label for="peano-peano-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
+<div class="tabbed-block">
+<p>There are several methosd to prove Peano Theorem, like <strong>Euler's Arc</strong> method, Tonelli(托内利) Sequence method, fixed-point method in functional analysis, while <strong>Euler's Arc</strong> method is thought to be the dawm to calculating ODE numerically, so we will prove it this way. </p>
+</div>
 <div class="tabbed-block">
 <p>The idea is to <strong>construct approximation solution which converges to the real solution</strong>. In fact, Picard Sequence is also an approximation solution.</p>
 <ul>
@@ -1949,14 +2061,17 @@ l_2: y &amp;= y_1 + f(x_1, y_1)(x- x_1), \quad x_1 \leq x\leq x_2\\
 l_n: y &amp;= y_{n-1} + f(x_{n-1}, y_{n-1})(x - x_{n-1}), \quad x_{n-1} \leq x \leq x_n
 \end{align*}
 \]</div>
-<p>we can formulate a polygonal arc on <span class="arithmatex">\([x_0, x_0+\alpha]\)</span>:</p>
+<p><p align="center">
+<img src="../Eular-Arc.png" width="30%" />
+</p>
+we can formulate a polygonal arc on <span class="arithmatex">\([x_0, x_0+\alpha]\)</span>:</p>
 <div class="arithmatex">\[
 E_n = \bigcup_{s=1}^{n}l_s
 \]</div>
 <p>and its function expresstion is </p>
 <div class="arithmatex">\[
 \begin{equation}
-y_n(x) = y_0 + \sum_{i=0}^{j-1}f(x_i, y_i)(x_{i+1} - x_{i}) + f(x_j, y_j)(x - x_j) \label{eq-eular}
+y_n(x) = y_0 + \sum_{i=0}^{j-1}f(x_i, y_i)(x_{i+1} - x_{i}) + f(x_j, y_j)(x - x_j) \label{eq-euler}
 \end{equation}
 \]</div>
 <p>where <span class="arithmatex">\(\forall x \in (x_0, x_0 +\alpha], \exists j\)</span> s.t. </p>
@@ -1983,9 +2098,9 @@ x_j &lt; x\leq x_{j+1}
 </ul>
 <p>So the function sequence <span class="arithmatex">\(\{y_n(x)\}\)</span> has a uniformly convergent subsequence <span class="arithmatex">\(\{y_{n_j}(x)\}\)</span>.</p>
 <ul>
-<li>Prove Eular's Arc converges to the solution of ODE.</li>
+<li>Prove Euler's Arc converges to the solution of ODE.</li>
 </ul>
-<p>This means that we have to consider the error of <span class="arithmatex">\(y_{n_j}(x)\)</span> and <span class="arithmatex">\(y(x)\)</span>. Firstly, we rewrite the formula of Eular's Arc <span class="arithmatex">\(\ref{eq-eular}\)</span>.</p>
+<p>This means that we have to consider the error of <span class="arithmatex">\(y_{n_j}(x)\)</span> and <span class="arithmatex">\(y(x)\)</span>. Firstly, we rewrite the formula of Euler's Arc <span class="arithmatex">\(\ref{eq-euler}\)</span>.</p>
 <p>Note that</p>
 <div class="arithmatex">\[
 \begin{align*}
@@ -2020,7 +2135,7 @@ d^*_n(x) \overset{\Delta}{=} \int_{x_j}^{x}[f(x_j,y_j) - f(x,y_n(x))]dx
 f(x_j,y_j)(x-x_j) = \int_{x_j}^{x_{j+1}}f(x,y_n(x))dx +d_n^*(x) \label{eq-back}
 \end{equation}
 \]</div>
-<p>So with the above two transformation <span class="arithmatex">\(\ref{eq-front}\)</span>, <span class="arithmatex">\(\ref{eq-back}\)</span>, the formula of Eular's Arc <span class="arithmatex">\(\ref{eq-eular}\)</span>(summation of linear expresstions) becomes an <strong>integral-like</strong> expression:</p>
+<p>So with the above two transformation <span class="arithmatex">\(\ref{eq-front}\)</span>, <span class="arithmatex">\(\ref{eq-back}\)</span>, the formula of Euler's Arc <span class="arithmatex">\(\ref{eq-euler}\)</span>(summation of linear expresstions) becomes an <strong>integral-like</strong> expression:</p>
 <div class="arithmatex">\[
 \begin{align*}
 y_n(x) &amp;= y_0 + \sum_{i=0}^{j-1}f(x_k, y_k)(x_{i+1} - x_{i}) + f(x_j, y_j)(x - x_j)\\
@@ -2041,7 +2156,7 @@ y_n(x) &amp;= y_0 + \sum_{i=0}^{j-1}f(x_k, y_k)(x_{i+1} - x_{i}) + f(x_j, y_j)(x
 <div class="arithmatex">\[
 |x-x_j|\leq \frac{\alpha}{N} = \varepsilon, \quad |y-y_j|\leq M \frac{\alpha}{N} = M\varepsilon
 \]</div>
-<p>which means the region of each integral interal can be as small as possible so long as <span class="arithmatex">\(n\rightarrow \infty\)</span>.</p>
+<p>which means the region of each integral interval can be as small as possible so long as <span class="arithmatex">\(n\rightarrow \infty\)</span>.</p>
 <p>So in this case, for each item in residue <span class="arithmatex">\(\ref{eq-residue}\)</span>, we can bound it into small value corresponding to <span class="arithmatex">\(\varepsilon\)</span> by making use of the continuity of <span class="arithmatex">\(f(x,y)\)</span>, which means <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, s.t. <span class="arithmatex">\(\forall (x,y) \in O[(x_j,y_j),\delta]\)</span>, </p>
 <div class="arithmatex">\[
 |f(x,y)-f(x_j,y_j)| &lt;\varepsilon
