@@ -752,12 +752,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Picard存在唯一性定理 | Picard Theorem of Existence and Uniqueness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof-using-contraction-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      压缩映射法 | Proof using Contraction Mapping
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#peano-peano-theorem" class="md-nav__link">
+  <a href="#osgood-osgood-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Osgood 条件 | Osgood Condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Peano-Theorem" class="md-nav__link">
     <span class="md-ellipsis">
       Peano定理 | Peano Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments-on-previous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments on Previous
     </span>
   </a>
   
@@ -1163,12 +1196,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Picard存在唯一性定理 | Picard Theorem of Existence and Uniqueness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proof-using-contraction-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      压缩映射法 | Proof using Contraction Mapping
+    </span>
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#peano-peano-theorem" class="md-nav__link">
+  <a href="#osgood-osgood-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Osgood 条件 | Osgood Condition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Peano-Theorem" class="md-nav__link">
     <span class="md-ellipsis">
       Peano定理 | Peano Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments-on-previous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments on Previous
     </span>
   </a>
   
@@ -1214,16 +1280,16 @@ M(x,y)dx + N(x,y)dy = 0 \label{eq-exact}
 <p>This can bring us great convenience for digging into one-order ODE because it can gives us both the relation <span class="arithmatex">\(y=f(x)\)</span> or <span class="arithmatex">\(x=g(y)\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">全微分方程、恰当方程的定义 | Definition of Exact Equation</p>
-<p>If there exists a <span class="arithmatex">\(\mathit{\Phi}(x, y) \in C^{1}(D)\)</span> such that </p>
+<p>If there exists a <span class="arithmatex">\(\mathit{\varphi}(x, y) \in C^{1}(D)\)</span> such that </p>
 <div class="arithmatex">\[
-d\mathit{\Phi}(x, y) = M(x,y)dx + N(x,y)dy
+d\mathit{\varphi}(x, y) = M(x,y)dx + N(x,y)dy
 \]</div>
 <p>then equation <span class="arithmatex">\(\ref{eq-exact}\)</span> is called <strong>Exact Equation</strong>.</p>
 </div>
 <p>There are some questions to answer:</p>
 <ul>
 <li>How to judge an equation to be exact Equation?</li>
-<li>If so, how to find original function <span class="arithmatex">\(\Phi(x, y)\)</span>?</li>
+<li>If so, how to find original function <span class="arithmatex">\(\varphi(x, y)\)</span>?</li>
 <li>If not, how to transform it into one exact Equation?</li>
 </ul>
 <p>In this pattern, we answer the first two equation and leave the third one after learning LFODE.</p>
@@ -1238,14 +1304,14 @@ d\mathit{\Phi}(x, y) = M(x,y)dx + N(x,y)dy
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="exact-equation-hints" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="exact-equation-hints">Hints</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><span class="arithmatex">\(\Rightarrow\)</span> is easy, by using second-order mixed partial derivatives of <span class="arithmatex">\(\mathit{\Phi}\)</span>.</p>
+<p><span class="arithmatex">\(\Rightarrow\)</span> is easy, by using second-order mixed partial derivatives of <span class="arithmatex">\(\mathit{\varphi}\)</span>.</p>
 <p><span class="arithmatex">\(\Leftarrow\)</span>. Using Green Formula/Theorem. </p>
 <div class="arithmatex">\[
 \begin{align*}
 &amp;\frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \\
 \Leftrightarrow \ &amp;\int_{\gamma}P(x, y)dx+Q(x,y)dy = 0 \quad \forall\text{closed loop } \gamma\\
 \Leftrightarrow \ &amp;\int_{\gamma}P(x, y)dx+Q(x,y)dy = C \quad \forall\text{curve } \gamma \text{ connecting } (x_0, y_0), (x, y) \\
-\Leftrightarrow \ &amp;\exists \mathit{\Phi}(x,y) \in C^{1}(D) \text{ s.t } d\mathit{\Phi}(x, y) = P(x, y)dx+Q(x,y)dy
+\Leftrightarrow \ &amp;\exists \mathit{\varphi}(x,y) \in C^{1}(D) \text{ s.t } d\mathit{\varphi}(x, y) = P(x, y)dx+Q(x,y)dy
 \end{align*}
 \]</div>
 </div>
@@ -1256,13 +1322,13 @@ d\mathit{\Phi}(x, y) = M(x,y)dx + N(x,y)dy
 <div class="arithmatex">\[
 \mu(x,y)M(x,y)dx + \mu(x,y)N(x,y)dy = 0 
 \]</div>
-<p>there exists <span class="arithmatex">\(\mathit{\Phi}(x, y)\)</span> such that</p>
+<p>there exists <span class="arithmatex">\(\mathit{\varphi}(x, y)\)</span> such that</p>
 <div class="arithmatex">\[
-d\mathit{\Phi}(x,y) = \mu(x,y)M(x,y)dx + \mu(x,y)N(x,y)dy 
+d\mathit{\varphi}(x,y) = \mu(x,y)M(x,y)dx + \mu(x,y)N(x,y)dy 
 \]</div>
-<p>Naively, if <span class="arithmatex">\(\mathit{\Phi}(x,y)\in C^2\)</span>, then </p>
+<p>Naively, if <span class="arithmatex">\(\mathit{\varphi}(x,y)\in C^2\)</span>, then </p>
 <div class="arithmatex">\[
-\frac{\partial (\mu M)}{\partial y} = \frac{\partial^2 \mathit{\Phi}}{\partial x\partial y}=\frac{\partial (\mu N)}{\partial x} 
+\frac{\partial (\mu M)}{\partial y} = \frac{\partial^2 \mathit{\varphi}}{\partial x\partial y}=\frac{\partial (\mu N)}{\partial x} 
 \]</div>
 <p>Theoretically speaking, we have to solve a PDE</p>
 <div class="arithmatex">\[
@@ -1282,9 +1348,9 @@ M(x,y)\frac{\partial \mu}{\partial y} - N(x,y)\frac{\partial \mu}{\partial x} = 
 <div class="arithmatex">\[
 \mu(x) = e^{\int_{x_0}^{x}G(t)dt}
 \]</div>
-<p>More generally, equation <span class="arithmatex">\(\ref{eq-pde}\)</span> has solution <span class="arithmatex">\(\mu(\phi(x,y))\)</span>, if and only if</p>
+<p>More generally, equation <span class="arithmatex">\(\ref{eq-pde}\)</span> has solution <span class="arithmatex">\(\mu(\varphi(x,y))\)</span>, if and only if</p>
 <div class="arithmatex">\[
-\frac{\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}}{N\frac{\partial \phi}{\partial x}-M\frac{\partial \phi}{\partial y}} \overset{\Delta}{=} f(\phi(x,y))
+\frac{\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}}{N\frac{\partial \varphi}{\partial x}-M\frac{\partial \varphi}{\partial y}} \overset{\Delta}{=} f(\varphi(x,y))
 \]</div>
 </div>
 <h3 id="variable-separation-equation">变量分离方程 | Variable Separation Equation<a class="headerlink" href="#variable-separation-equation" title="Permanent link">&para;</a></h3>
@@ -1789,7 +1855,7 @@ y(x_m) = y_m,\quad  m=1,2,\cdots
 </div>
 </div>
 <p>The above theorem offers that we can find a function sequence convergent on denumerable set <span class="arithmatex">\(A\)</span>, which is <strong>pointwise convergence</strong>.</p>
-<p>Now if we let the above function subsequence <span class="arithmatex">\(\{f_{\lambda_k}(x)\}\)</span> to be <strong>Equicontinuous</strong>, then it can be <strong>uniformly convergent</strong> on the whole interval <span class="arithmatex">\(I\)</span>. This is exactly the following theorem(in which <span class="arithmatex">\(I\)</span> is a general region, not just an interval). Note that the above denumerable set can be said as "dense sat".</p>
+<p>Now if we let the above function subsequence <span class="arithmatex">\(\{f_{\lambda_k}(x)\}\)</span> to be <strong>Equicontinuous</strong>, then it can be <strong>uniformly convergent</strong> on the whole interval <span class="arithmatex">\(I\)</span>. This is exactly the following theorem(in which <span class="arithmatex">\(I\)</span> is a general region, not just an interval). Note that the above denumerable set can be said as "dense set".</p>
 <p><a id="Peano-lemma2"></a></p>
 <div class="admonition success">
 <p class="admonition-title">引理2: 点态收敛、等度连续的函数列在紧集上一致收敛 | Lemma 2: Equicontinuous Function Sequence is Uniformly Convergent given Pointwise Convergence on Denumerable Sets</p>
@@ -1912,7 +1978,7 @@ R = \{(x,y): |x-x_0| \leq a, |y-y_0|\leq b\} \label{region}
 \]</div>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="Picard-Theorem-hints" name="__tabbed_11" type="radio" /><input id="Picard-Theorem-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="Picard-Theorem-hints">Hints</label><label for="Picard-Theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="Picard-Theorem-hints" name="__tabbed_11" type="radio" /><input id="Picard-Theorem-classical-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="Picard-Theorem-hints">Hints</label><label for="Picard-Theorem-classical-proof">Classical Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>There typically 4 steps. </p>
@@ -1946,7 +2012,7 @@ y_n(x) &amp;= y_0 + \int_{x_0}^{x} f(s, y_{n-1}(s))ds\\
 <div class="arithmatex">\[
 |y_n(x)-y(x)| \leq b \quad \&amp; \quad y_n(x)\in C(R)
 \]</div>
-<p>The above conition enables <span class="arithmatex">\(f(x, y_{n-1}(x))\)</span> still falls on <span class="arithmatex">\(R\)</span> and can be interated(readers can prove that above two condition by <strong>induction</strong>).</p>
+<p>The above conition enables <span class="arithmatex">\(f(x, y_{n-1}(x))\)</span> still falls on <span class="arithmatex">\(R\)</span> and can be integrated(readers can prove that above two condition by <strong>induction</strong>).</p>
 <ul>
 <li>Prove Picard Sequence <strong>convergent</strong>.</li>
 </ul>
@@ -1986,44 +2052,193 @@ y_n(x) &amp;= y_0 + \int_{x_0}^{x} f(s, y_{n-1}(s))ds\\
 <li><strong>Prove uniqueness</strong>.</li>
 </ul>
 <p>Follow the traditional logic: <strong>contradiction</strong>.</p>
-<p>Assume there are <span class="arithmatex">\(\phi_1(x), \phi_2(x)\)</span> two distinct solutions to equation <span class="arithmatex">\(\ref{eq-cauchy}\)</span>, then subtract one from the other:</p>
+<p>Assume there are <span class="arithmatex">\(\varphi_1(x), \varphi_2(x)\)</span> two distinct solutions to equation <span class="arithmatex">\(\ref{eq-cauchy}\)</span>, then subtract one from the other:</p>
 <div class="arithmatex">\[
 \begin{align}
-|\phi_1(x) - \phi_2(x)| &amp;=\left| \int_{x_0}^{x} \left[ f(s, \phi_1(s)) - f(s, \phi_2(s))\right]ds \right| \nonumber\\
-&amp;\leq L \int_{x_0}^{x} \left|\phi_1(s) - \phi_2(s)\right|ds  \quad \text{(Using Lipschitz Condition)} \label{eq-same}
+|\varphi_1(x) - \varphi_2(x)| &amp;=\left| \int_{x_0}^{x} \left[ f(s, \varphi_1(s)) - f(s, \varphi_2(s))\right]ds \right| \nonumber\\
+&amp;\leq L \int_{x_0}^{x} \left|\varphi_1(s) - \varphi_2(s)\right|ds  \quad \text{(Using Lipschitz Condition)} \label{eq-same}
 \end{align}
 \]</div>
 <p>And by using <strong>Gronwall inequation</strong>, we can get </p>
 <div class="arithmatex">\[
-|\phi_1(x) - \phi_2(x)| \leq 0
+|\varphi_1(x) - \varphi_2(x)| \leq 0
 \]</div>
-<p>So <span class="arithmatex">\(\phi_1(x) = \phi_2(x)\)</span>, that is, there exists only one solution for equation <span class="arithmatex">\(\ref{eq-cauchy}\)</span>.</p>
-<p>In another way, if we don't want to use Gronwall Inequation, we can still say that the two solutions are the same. Assume that <span class="arithmatex">\(\phi_1(x), \phi_2(x)\)</span> have a common region <span class="arithmatex">\(J = [x_0-d,x_0+d]\)</span>, where <span class="arithmatex">\(0&lt;d\leq \alpha\)</span>. Then <span class="arithmatex">\(|\phi_1(x)-\phi_2(x)|\)</span> is continuous and bounded on region <span class="arithmatex">\(J\)</span> and denote</p>
+<p>So <span class="arithmatex">\(\varphi_1(x) = \varphi_2(x)\)</span>, that is, there exists only one solution for equation <span class="arithmatex">\(\ref{eq-cauchy}\)</span>.</p>
+<p>In another way, if we don't want to use Gronwall Inequation, we can still say that the two solutions are the same. Assume that <span class="arithmatex">\(\varphi_1(x), \varphi_2(x)\)</span> have a common region <span class="arithmatex">\(J = [x_0-d,x_0+d]\)</span>, where <span class="arithmatex">\(0&lt;d\leq \alpha\)</span>. Then <span class="arithmatex">\(|\varphi_1(x)-\varphi_2(x)|\)</span> is continuous and bounded on region <span class="arithmatex">\(J\)</span> and denote</p>
 <div class="arithmatex">\[
-K = \max_{x\in J}\{|\phi_1(x)-\phi_2(x)|\}
+K = \max_{x\in J}\{|\varphi_1(x)-\varphi_2(x)|\}
 \]</div>
 <p>So the right side of inequation <span class="arithmatex">\(\ref{eq-same}\)</span> can be bounded:</p>
 <div class="arithmatex">\[
 \begin{align}
-|\phi_1(x) - \phi_2(x)| &amp;\leq L \int_{x_0}^{x} \left|\phi_1(s) - \phi_2(s)\right|ds  \nonumber\\
+|\varphi_1(x) - \varphi_2(x)| &amp;\leq L \int_{x_0}^{x} \left|\varphi_1(s) - \varphi_2(s)\right|ds  \nonumber\\
 &amp;\leq LK |x-x_0| \label{eq-same1}
 \end{align}
 \]</div>
 <p>Substitute inequation <span class="arithmatex">\(\ref{eq-same1}\)</span> again into the right side of inequation <span class="arithmatex">\(\ref{eq-same}\)</span> and get</p>
 <div class="arithmatex">\[
 \begin{align*}
-|\phi_1(x) - \phi_2(x)| \leq KL^2 \frac{|x-x_0|^2}{2}
+|\varphi_1(x) - \varphi_2(x)| \leq KL^2 \frac{|x-x_0|^2}{2}
 \end{align*}
 \]</div>
 <p>repeat the above method iteratively and we can prove the following by induction:</p>
 <div class="arithmatex">\[
-|\phi_1(x) - \phi_2(x)| \leq K \frac{(L|x-x_0|)^n}{n!}
+|\varphi_1(x) - \varphi_2(x)| \leq K \frac{(L|x-x_0|)^n}{n!}
 \]</div>
-<p>Let <span class="arithmatex">\(n \rightarrow \infty\)</span>, we get <span class="arithmatex">\(|\phi_1(x) - \phi_2(x)| \rightarrow 0\)</span>.</p>
+<p>Let <span class="arithmatex">\(n \rightarrow \infty\)</span>, we get <span class="arithmatex">\(|\varphi_1(x) - \varphi_2(x)| \rightarrow 0\)</span>.</p>
 </div>
 </div>
 </div>
-<h3 id="peano-peano-theorem">Peano定理 | Peano Theorem<a class="headerlink" href="#peano-peano-theorem" title="Permanent link">&para;</a></h3>
+<h4 id="proof-using-contraction-mapping">压缩映射法 | Proof using Contraction Mapping<a class="headerlink" href="#proof-using-contraction-mapping" title="Permanent link">&para;</a></h4>
+<p>This part we want to prove Picard Theorem from another perspective. And this method is also universal on multi-dimensional Cauchy Problem <span class="arithmatex">\(\ref{eq-LODEs}\)</span>. So to simplify the notation, we change the problem equivalently to </p>
+<div class="arithmatex">\[
+\begin{equation}
+\dot{\mathbfit{x}} = \mathbfit{f}(t, \mathbfit{x}),\quad  \mathbfit{x}(t_0) = \mathbfit{x}_0 \label{eq-vector-cauchy}
+\end{equation}
+\]</div>
+<p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field).</p>
+<p>Firstly, let us recall the definition of metric space(度量空间).</p>
+<div class="admonition info">
+<p class="admonition-title">度量空间的定义 | Definition of Metric Space</p>
+<p>Assume M is a set. If there is a function <span class="arithmatex">\(\rho: M\times M\mapsto \mathbb{R}\)</span> defined on it, satisfies that, <span class="arithmatex">\(\forall x,y,z \in M\)</span></p>
+<ul>
+<li>Positive</li>
+</ul>
+<div class="arithmatex">\[
+\rho(x,y)&gt;0,\quad x\neq y
+\]</div>
+<ul>
+<li>Definite</li>
+</ul>
+<div class="arithmatex">\[
+\rho(x, y)=0 \Leftrightarrow x=y
+\]</div>
+<ul>
+<li>Symmetry</li>
+</ul>
+<div class="arithmatex">\[
+\rho(x,y) = \rho(y,x)
+\]</div>
+<ul>
+<li>Triangle inequality</li>
+</ul>
+<div class="arithmatex">\[
+\rho(x,z) \leq \rho(x,y) +\rho(y,z)
+\]</div>
+<p>then <span class="arithmatex">\(M\)</span> is called <strong>metric space</strong> with metrc <span class="arithmatex">\(\rho\)</span>.</p>
+</div>
+<p>Now we can rewrite the Lipschitz Condition with terms of metric space.</p>
+<div class="admonition success">
+<p class="admonition-title">Lipschitz 条件 | Lipschitz Condition</p>
+<p>Assume <span class="arithmatex">\(A: M_1 \mapsto M_2\)</span> is a mapping from a metric space <span class="arithmatex">\(M_1\)</span> (with metric <span class="arithmatex">\(\rho_1\)</span>) to another matric space <span class="arithmatex">\(M_2\)</span> (with metric <span class="arithmatex">\(\rho_1\)</span>). If there exists a constant <span class="arithmatex">\(L&gt;0\)</span>, s.t.</p>
+<div class="arithmatex">\[
+\rho_2(Ax,Ay)\leq L\rho_1(x,y),\quad \forall x,y \in M_1
+\]</div>
+<p>then we say mapping <span class="arithmatex">\(A\)</span> satisfies Lipschitz Condition.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">压缩映射的定义 | Definition of Contraction mapping</p>
+<p>Assume <span class="arithmatex">\(A: M \mapsto M\)</span> is a mapping from complete metric space with metric <span class="arithmatex">\(\rho\)</span> to itself. If there exists a constant <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(0&lt;k&lt;1\)</span>, s.t. </p>
+<div class="arithmatex">\[
+\rho(Ax,Ay)\leq k\rho(x, y),\quad \forall x, y\in M.
+\]</div>
+<p>then <span class="arithmatex">\(A\)</span> is called a <strong>Contraction mapping</strong>.</p>
+</div>
+<p>If <span class="arithmatex">\(Ax =x \in M\)</span>, we call <span class="arithmatex">\(x\)</span> is a fixed point of mapping <span class="arithmatex">\(A\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">不动点定理 | Fixed-Point Theorem</p>
+<p>Assume <span class="arithmatex">\(A: M\mapsto M\)</span> is a contraction mapping, then <span class="arithmatex">\(A\)</span> has a unique fixed-point.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="proof-using-contraction-mapping-hints" name="__tabbed_12" type="radio" /><input id="proof-using-contraction-mapping-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="proof-using-contraction-mapping-hints">Hints</label><label for="proof-using-contraction-mapping-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We prove by showing that <span class="arithmatex">\(A^nx\)</span> is a Cauchy Sequence and its limit <span class="arithmatex">\(X\)</span> falls in <span class="arithmatex">\(M\)</span>. Then use the property of <strong>limits</strong> to show it is fixed-point of <span class="arithmatex">\(A\)</span>. Then prove the uniqueness by using property of metric <span class="arithmatex">\(\rho\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(d = \rho(x,Ax)\)</span>, then </p>
+<div class="arithmatex">\[
+\rho(A^nx,A^{n+1}x)\leq k^n\rho(x,Ax) = k^nd
+\]</div>
+<p>By Weierstrass test, sequence <span class="arithmatex">\(A^nx\)</span>, <span class="arithmatex">\(n=1,2,\cdots\)</span> is a cauchy sequence. So its limit exists and let <span class="arithmatex">\(X \overset{\Delta}{=} \lim\limits_{n\rightarrow \infty}A^nx\)</span>.</p>
+<p>So </p>
+<div class="arithmatex">\[
+AX = A \lim\limits_{n\rightarrow \infty}A^nx = \lim\limits_{n\rightarrow \infty}A^{n+1}x = X
+\]</div>
+<p>which means <span class="arithmatex">\(X\)</span> is a fixed-point of <span class="arithmatex">\(A\)</span>. Then we prove the uniqueness of fixed point. Assume there are two fixed points of <span class="arithmatex">\(A\)</span>, denoted as <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(y\)</span>. See that</p>
+<div class="arithmatex">\[
+\rho(X, Y)  =\rho(AX, AY) \leq k\rho(X,Y)
+\]</div>
+<p>Because <span class="arithmatex">\(0&lt;k&lt;1\)</span>, so <span class="arithmatex">\(\rho(X,Y)=0\)</span> <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(X=Y\)</span>.</p>
+</div>
+</div>
+</div>
+<p>Readers can compare this theorem to <a href="../../Numerical_Analysis/NA/#Fixed-Point-Iteration">Fixed-Point Theorem</a> in <em>Numerical Analysis</em>. </p>
+<p>Now we consider <strong>Picard mapping</strong> <span class="arithmatex">\(A\)</span> is a mapping from a mapping to another mapping</p>
+<div class="arithmatex">\[
+(\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
+\]</div>
+<p>defined by</p>
+<div class="arithmatex">\[
+(A\pmb{\varphi})(t) = \pmb{x}_0 + \int_{t_0}^{t}\pmb{f}(\tau, \pmb{\varphi}(\tau))d\tau
+\]</div>
+<p>Note that <span class="arithmatex">\(\pmb{\varphi}\)</span> is a solution of Cauchy Problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> if and only if <span class="arithmatex">\(\pmb{\varphi} = A \pmb{\varphi}\)</span>.</p>
+<h4 id="osgood-osgood-condition">Osgood 条件 | Osgood Condition<a class="headerlink" href="#osgood-osgood-condition" title="Permanent link">&para;</a></h4>
+<p>We consider a condition which is slightly weaker than Lipschitz condition but still can guarrantee the convergence of Picard Sequence and its uniqueness.</p>
+<div class="admonition success">
+<p class="admonition-title">Osgood 条件 | Osgood Condition</p>
+<p>Assume <span class="arithmatex">\(D\)</span> is a region on <span class="arithmatex">\(\mathbb{R}^2\)</span>, and function <span class="arithmatex">\(f(x,y)\in C(D)\)</span>. If <span class="arithmatex">\(\forall (x,y_1), (x,y_2)\in D\)</span>, s.t.</p>
+<div class="arithmatex">\[
+|f(x,y_1)-f(x,y_2)|\leq F(|y_1-y_2|)
+\]</div>
+<p>where <span class="arithmatex">\(F(r)&gt;0 \in C(\mathbb{R})\)</span> satisfies </p>
+<div class="arithmatex">\[
+\int_{0}^{\varepsilon}\frac{1}{F(r)}dr = +\infty, \quad \forall \varepsilon &gt;0
+\]</div>
+<p>then we say that <span class="arithmatex">\(f(x,y)\)</span> satisfies Osgood condition with respect to <span class="arithmatex">\(y\)</span>.</p>
+</div>
+<p>Obviously, if <span class="arithmatex">\(f(x,y)\)</span> satisfies Lipschitz condition, it satisfies Osgood condition. In fact, we can choose <span class="arithmatex">\(F(r) = Lr\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Osgood 定理 | Osgood Theorem</p>
+<p>If  <span class="arithmatex">\(f(x,y) \in C(D)\)</span> satisfies Osgood condition with respect to <span class="arithmatex">\(y\)</span>, then <span class="arithmatex">\(\forall (x_0,y_0)\in D\)</span>, th solution to Cauchy problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span> exists uniquely.</p>
+</div>
+<p>Prove it.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="osgood-osgood-condition-hints" name="__tabbed_13" type="radio" /><input id="osgood-osgood-condition-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="osgood-osgood-condition-hints">Hints</label><label for="osgood-osgood-condition-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The existence is guarranteed by <a href="#Peano-Theorem">Peano Theorem</a> in the following part. You only need to prove the uniqueness, which is proved by contradiction, which is similar to prove the uniqueness of <span class="arithmatex">\(f(x, y)\)</span> that decrease monotonically with respect to <span class="arithmatex">\(y\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p>Assume we have two distinct solution <span class="arithmatex">\(y_1(x)\)</span>, <span class="arithmatex">\(y_2(x)\)</span>, then there exists <span class="arithmatex">\(x_2\)</span> such that <span class="arithmatex">\(y_1(x_2)\neq y_2(x_2)\)</span>. Let <span class="arithmatex">\(y_1(x) &gt; y_2(x)\)</span>. </p>
+<p>Then by <strong>feature of guarantee code</strong>(保号性), there must exist a region such that <span class="arithmatex">\(y_1(x) &gt; y_2(x)\)</span>, so let <span class="arithmatex">\(x_1 = \max\{x\in [x_0,x_2] : y_1(x) = y_2(x)\}\)</span>.</p>
+<p><p align="center">
+<img src="../osgood.png" width="25%" />
+</p></p>
+<p>So we have </p>
+<div class="arithmatex">\[
+y_1(x) &gt; y_2(x), \quad \forall x\in (x_1,x_2]
+\]</div>
+<p>define <span class="arithmatex">\(r(x) = y_1(x) - y_2(x) \in (0, m]\)</span>, where m is determined by <span class="arithmatex">\(m = \max\limits_{x\in (x_1,x_2]}\{y_1(x) - y_2(x)\}\)</span></p>
+<p>So by condition of the proposition, we have</p>
+<div class="arithmatex">\[
+|r'(x)| = |y_1'(x) - y_2'(x)| = |f(x,y_1(x))- f(x,y_2(x))| \leq F(|y_1(x) - y_2(x)|)
+\]</div>
+<p>because <span class="arithmatex">\(y_1(x) &gt; y_2(x)\)</span>, so we take "<span class="arithmatex">\(\vert \cdot \vert\)</span>" out and get</p>
+<div class="arithmatex">\[
+r'(x) = y_1'(x) - y_2'(x) = f(x,y_1(x))- f(x,y_2(x)) \leq F(y_1(x) - y_2(x))
+\]</div>
+<p>divide both sides <span class="arithmatex">\(F(y_1(x) - y_2(x))\)</span> and integrate on <span class="arithmatex">\((x_1, x_2]\)</span>, which is an improper integral on the left</p>
+<div class="arithmatex">\[
+\int_{x_1}^{x_2}\frac{r'(x)}{F(r(x))}dx\leq \int_{x_1}^{x_2}dx = x_2-x_1 
+\]</div>
+<p>so the left item can be <span class="arithmatex">\(+\infty\)</span> by condition while the right item is less than <span class="arithmatex">\(+\infty\)</span>, i.e.</p>
+<div class="arithmatex">\[
++\infty=\int_{0}^{r(x_2)}\frac{1}{F(r)}dr=\int_{r(x_1)}^{r(x_2)}\frac{1}{F(r)}dr\leq x_2-x_1 &lt;+\infty
+\]</div>
+<p>which contradicts!</p>
+</div>
+</div>
+</div>
+<h3 id="Peano-Theorem">Peano定理 | Peano Theorem<a class="headerlink" href="#Peano-Theorem" title="Permanent link">&para;</a></h3>
 <p>When <span class="arithmatex">\(f(x,y)\)</span> does not satisfy Lipschitz Condition with respect to <span class="arithmatex">\(y\)</span>, we cannot guarantee the existence and uniqueness of the solution to Cauchy Problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span>. However, when <span class="arithmatex">\(f(x,y)\)</span> is continuous, Peano proved that Cauchy Problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span> has solution.</p>
 <div class="admonition success">
 <p class="admonition-title">Peano定理 | Peano Theorem</p>
@@ -2033,7 +2248,7 @@ K = \max_{x\in J}\{|\phi_1(x)-\phi_2(x)|\}
 \]</div>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="peano-peano-theorem-hints" name="__tabbed_12" type="radio" /><input id="peano-peano-theorem-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="peano-peano-theorem-hints">Hints</label><label for="peano-peano-theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="Peano-Theorem-hints" name="__tabbed_14" type="radio" /><input id="Peano-Theorem-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="Peano-Theorem-hints">Hints</label><label for="Peano-Theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>There are several methosd to prove Peano Theorem, like <strong>Euler's Arc</strong> method, Tonelli(托内利) Sequence method, fixed-point method in functional analysis, while <strong>Euler's Arc</strong> method is thought to be the dawm to calculating ODE numerically, so we will prove it this way. </p>
@@ -2062,7 +2277,7 @@ l_n: y &amp;= y_{n-1} + f(x_{n-1}, y_{n-1})(x - x_{n-1}), \quad x_{n-1} \leq x \
 \end{align*}
 \]</div>
 <p><p align="center">
-<img src="../Eular-Arc.png" width="30%" />
+<img src="../Euler_Arc.png" width="30%" />
 </p>
 we can formulate a polygonal arc on <span class="arithmatex">\([x_0, x_0+\alpha]\)</span>:</p>
 <div class="arithmatex">\[
@@ -2176,13 +2391,89 @@ y_{n_j}(x) = y_0 + \int_{x_0}^{x}f(s, y_{n_j}(s))ds + \delta_{n_j}(x), \quad x \
 \]</div>
 <p>Which also means, if we denote </p>
 <div class="arithmatex">\[
-\phi(x) \overset{\Delta}{=} \lim_{n_j\rightarrow \infty}y_{n_j}(x)
+\varphi(x) \overset{\Delta}{=} \lim_{n_j\rightarrow \infty}y_{n_j}(x)
 \]</div>
 <p>and let <span class="arithmatex">\(n_j \rightarrow \infty\)</span>, we get</p>
 <div class="arithmatex">\[
-\phi(x) = y_0 + \int_{x_0}^{x}f(s, \phi(s))ds
+\varphi(x) = y_0 + \int_{x_0}^{x}f(s, \varphi(s))ds
 \]</div>
 <p>which means function subsequence <span class="arithmatex">\(\{y_{n_j}(x)\}\)</span> converges to the solution of integral form <span class="arithmatex">\(\ref{eq-integral}\)</span> of ODE <span class="arithmatex">\(\ref{eq-cauchy}\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="comments-on-previous">Comments on Previous<a class="headerlink" href="#comments-on-previous" title="Permanent link">&para;</a></h3>
+<p>Here we list the difference between Picard Theorem and Peano Theorem.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Theorem</th>
+<th style="text-align: center;">Picard Theorem</th>
+<th style="text-align: center;">Peano Theorem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Condition</td>
+<td style="text-align: center;"><span class="arithmatex">\(f\in C(R)\)</span>, Lipschitz Condition with respect to <span class="arithmatex">\(y\)</span></td>
+<td style="text-align: center;">only <span class="arithmatex">\(f\in C(R)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Sequence</td>
+<td style="text-align: center;">the whole Picard Sequence <span class="arithmatex">\(\{y_n(x)\}\)</span> converges</td>
+<td style="text-align: center;"><strong>subsequence</strong> of Euler's Arc <span class="arithmatex">\(\{\varphi_n(x)\}\)</span> converges</td>
+</tr>
+<tr>
+<td style="text-align: center;">Solution</td>
+<td style="text-align: center;">exists uniquely</td>
+<td style="text-align: center;">exists only, might have a lot of solutions</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Note 1: Uniqueness can help bound Euler's Arc. See the following theorem.</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">有唯一解的柯西问题，其欧拉折线全序列收敛 | Euler's Arc converges given uniqueness</p>
+<p>If Cauchy problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span> has unique solution, then the whole sequence of Euler's Arc <span class="arithmatex">\(\{\varphi_n(x)\}\)</span> converges.</p>
+</div>
+<p>Prove it.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="comments-on-previous-hints" name="__tabbed_15" type="radio" /><input id="comments-on-previous-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="comments-on-previous-hints">Hints</label><label for="comments-on-previous-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use contradiction.</p>
+</div>
+<div class="tabbed-block">
+<p>Assume that the conclusion does not hold, then by definition of negative proposition, we have</p>
+<div class="arithmatex">\[
+\exists \varepsilon_0&gt;0, \exists \overline{x} \in I, \forall N_0&gt;0, \exists n_0,m_0&gt;N_0, |\varphi_{n_0}(\overline{x})-\varphi_{m_0}(\overline{x})|\geq\varepsilon_0
+\]</div>
+<p>which is the negative proposition of the Cauchy Convergence form</p>
+<div class="arithmatex">\[
+\forall \varepsilon&gt;o, \forall x\in I, \exists N&gt;0, \forall n&gt;m&gt;N, |\varphi_{n}(x)-\varphi_{m}(x)|&lt;\varepsilon.
+\]</div>
+<p>In order to help us prove, we can take two sequence from the above negative proposition. That is, let <span class="arithmatex">\(N_0=j\)</span>, <span class="arithmatex">\(j=1,2,\cdots\)</span>, we can take the corresponding <span class="arithmatex">\(n_j\)</span>, <span class="arithmatex">\(m_j\)</span> out to compose a subsequence of Euler's arc <span class="arithmatex">\(\{\varphi_n(x)\}\)</span>, i.e.</p>
+<div class="arithmatex">\[
+\begin{equation}
+\exists \varepsilon_0&gt;0, \exists \overline{x} \in I, \forall j=1,2,\cdots, \exists n_j,m_j&gt;j, |\varphi_{n_j}(\overline{x})-\varphi_{m_j}(\overline{x})|\geq\varepsilon_0 \label{con-non-convergent}
+\end{equation}
+\]</div>
+<p>See that <span class="arithmatex">\(\{\varphi_{n_j}(x)\}\)</span> is still uniformly bounded and equicontinous on <span class="arithmatex">\(I\)</span>, so there exists its subsequence <span class="arithmatex">\(\{\tilde{\varphi}_{n_j}(x)\}\)</span> such that</p>
+<div class="arithmatex">\[
+\{\tilde{\varphi}_{n_j}(x)\} \rightrightarrows \varphi_1(x), \quad \forall x\in I
+\]</div>
+<p>and also <span class="arithmatex">\(\varphi_1(x)\)</span> is still the solution of Cauchy problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span>. Similarly, we can have  </p>
+<div class="arithmatex">\[
+\{\tilde{\varphi}_{m_j}(x)\} \rightrightarrows \varphi_2(x), \quad \forall x\in I
+\]</div>
+<p>where <span class="arithmatex">\(\{\tilde{\varphi}_{m_j}(x)\}\)</span> is a subsequence of <span class="arithmatex">\(\{\varphi_{m_j}(x)\}\)</span>. According to the condition of the theorem, we have </p>
+<div class="arithmatex">\[
+\varphi_1(x) = \varphi_2(x), \quad \forall x \in I
+\]</div>
+<p>while in <span class="arithmatex">\(\ref{con-non-convergent}\)</span> we also take the subsequence of <span class="arithmatex">\(\{\varphi_{n_j}(x)\}\)</span> and <span class="arithmatex">\(\{\varphi_{m_j}(x)\}\)</span></p>
+<div class="arithmatex">\[
+|\tilde{\varphi}_{n_j}(\overline{x})-\tilde{\varphi}_{m_j}(\overline{x})|\geq\varepsilon_0
+\]</div>
+<p>which means <span class="arithmatex">\(\varphi_1(x)\)</span> and <span class="arithmatex">\(\varphi_2(x)\)</span> must have distance on some <span class="arithmatex">\(\overline{x}\)</span>, which contradicts with <span class="arithmatex">\(\varphi_1(x) = \varphi_2(x)\)</span> on all <span class="arithmatex">\(x\in I\)</span>!</p>
 </div>
 </div>
 </div>
