@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../Modern_Control_Theory/MCT/">
+        <link rel="prev" href="../../Numerical_Analysis/NA/">
       
       
-        <link rel="next" href="../../../blog/">
+        <link rel="next" href="../../Sensing%26Detection/Midterm/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -510,53 +510,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical_Analysis/NA/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Numerical Analysis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Sensing%26Detection/Midterm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sensing & Detection
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Modern_Control_Theory/MCT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Modern Control Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numerical Analysis
   </span>
   
 
@@ -805,6 +784,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sensing%26Detection/Midterm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sensing & Detection
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2097,10 +2097,107 @@ K = \max_{x\in J}\{|\varphi_1(x)-\varphi_2(x)|\}
 \end{equation}
 \]</div>
 <p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field).</p>
-<p>Firstly, let us recall the definition of metric space(度量空间).</p>
+<p>Firstly, let us define basic ideas about <strong>phase</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">单参数变换群 | One-Parameter Group of Transformation</p>
+<p><span class="arithmatex">\(M\)</span> is a set. A family of mapping <span class="arithmatex">\(\{g^t\}_{t\in \mathbb{R}}\)</span> which maps set <span class="arithmatex">\(M\)</span> into itself is called <strong>One-Parameter Group of Transformation</strong> of set <span class="arithmatex">\(M\)</span>, if </p>
+<div class="arithmatex">\[
+g^{t+s} = g^tg^s, \quad \forall t,s\in \mathbb{R}
+\]</div>
+<p>and <span class="arithmatex">\(g^0\)</span> is identity mapping(恒等映射).</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">相流、相空间、运动、相曲线的定义 | Definition of Phase Flow</p>
+<p>A <strong>couple</strong> composed of set <span class="arithmatex">\(M\)</span> and its one-parameter group of transformation <span class="arithmatex">\(\{g^t\}\)</span>, denoted as <span class="arithmatex">\((M, \{g^t\})\)</span>, is called <strong>Phase Flow</strong>. And here <span class="arithmatex">\(M\)</span> is called the <strong>phase space</strong> of the phase flow. The element of <span class="arithmatex">\(M\)</span> is called <strong>Phase Point</strong>.</p>
+<p>Consider a mapping </p>
+<div class="arithmatex">\[
+\begin{equation}
+\varphi: \mathbb{R}\mapsto M, \quad \varphi(t) = g^tx,\quad x\in M \label{map-motion}
+\end{equation}
+\]</div>
+<p>which maps a real straight line into phase space. Then it is called a <strong>motion</strong> of phase point <span class="arithmatex">\(x\)</span> under the action of phase flow. </p>
+<p>The image of <span class="arithmatex">\(\mathbb{R}\)</span> under mapping <span class="arithmatex">\(\varphi\)</span> is called the <strong>phase curve</strong> of phase flow <span class="arithmatex">\((M,\{g^t\})\)</span>.</p>
+<ul>
+<li>Fixed Point</li>
+</ul>
+<p>If the phase curve of a phase point <span class="arithmatex">\(x\in M\)</span> is itself, i.e.</p>
+<div class="arithmatex">\[
+g^tx=x,\quad \forall t\in \mathbb{R}
+\]</div>
+<p>then <span class="arithmatex">\(x\)</span> is called the fixed point of the phase flow <span class="arithmatex">\((M, \{g^t\})\)</span>.</p>
+</div>
+<p>In fact one-parameter group of transformation is exchangeable(<span class="arithmatex">\(g^tg^s=g^{t+s}=g^{s+t}=g^sg^t\)</span>). And it is also a bijection. This is easy to prove. </p>
+<p>Firstly we prove it is surjection. <span class="arithmatex">\(\forall x\in M\)</span>, <span class="arithmatex">\(\exists g^{-t}x \in M\)</span>, such that <span class="arithmatex">\(g^t(g^{-t}x)=x\)</span>. Then we prove it is a injective mapping. <span class="arithmatex">\(g^tx=g^ty\)</span>, then <span class="arithmatex">\(x=g^0x=g^{-t}g^tx=g^{-t}g^ty=g^0y=y\)</span>.</p>
+<p>With the above property we can easily see the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">相空间中的点仅有一条相曲线</p>
+<p>For all <span class="arithmatex">\(x\in M\)</span>, there only exists one phase curve.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="proof-using-contraction-mapping-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="proof-using-contraction-mapping-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Because <span class="arithmatex">\(g^t\)</span> is a bijection.</p>
+</div>
+</div>
+</div>
+<p>Now we introduce two important conceptions.</p>
+<div class="admonition success">
+<p class="admonition-title">映射的图形 | Graph of a mapping</p>
+<p>The graph of a mapping <span class="arithmatex">\(f : A\mapsto B\)</span> is a subset of the <strong>direct product</strong>(直积) <span class="arithmatex">\(A\times B\)</span>:</p>
+<div class="arithmatex">\[
+\{(a,f(a))| a\in A\}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">扩张相空间、积分曲线 | Expanded Phase Space, Integral Curve</p>
+<p>The <strong>Expanded Phase Space</strong> of phase flow <span class="arithmatex">\((M, \{g^t\})\)</span> is the direct product <span class="arithmatex">\(\mathbb{R} \times M\)</span>.</p>
+<p>The <strong>Integral Curve</strong> of phase flow <span class="arithmatex">\((M, \{g^t\})\)</span> is the graph of the motion <span class="arithmatex">\(\ref{map-motion}\)</span>.</p>
+</div>
+<p>Now we have to make use of <strong>DIfferential</strong> in Euclid Space.</p>
+<div class="admonition success">
+<p class="admonition-title">可微函数、可微映射、微分同胚 | Differantiable Function, Differantiable Mapping, Diffeomorphism</p>
+<p>Assume <span class="arithmatex">\(U \subset\mathbb{R}^n, V \subset\mathbb{R}^m\)</span>. Then</p>
+<p>A <strong>Differantiable Function</strong> is a function <span class="arithmatex">\(f: U\mapsto \mathbb{R}\)</span> which is <span class="arithmatex">\(r\)</span> times differentiable.</p>
+<p>A <strong>Differantiable Mapping</strong> is a mapping <span class="arithmatex">\(f:U\mapsto V\)</span> defined by </p>
+<div class="arithmatex">\[
+y_i = f_i(x_1,x_2,\cdots,x_n), \quad i=1,2\cdots, m
+\]</div>
+<p>where <span class="arithmatex">\(f_i: U\mapsto \mathbb{R}\)</span> is a differantiable function. If <span class="arithmatex">\(y_i: V\mapsto \mathbb{R}\)</span> is a coordinate of <span class="arithmatex">\(\pmb{y}\in \mathbb{R}^m\)</span>, then <span class="arithmatex">\(y_i\circ f: U\mapsto \mathbb{R}\)</span> is a differantiable function in <span class="arithmatex">\(U\)</span>.</p>
+<p>A <strong>Diffeomorphism</strong> is a bijection <span class="arithmatex">\(f:U\mapsto V\)</span>, such that <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f^{-1}\)</span> are both differantiable mapping.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">相速度、向量场 | Phase Speed, Vector Field</p>
+<p>The <strong>Phase Speed</strong> <span class="arithmatex">\(\pmb{v}(x)\)</span> of phase flow <span class="arithmatex">\(g^t\)</span> at point <span class="arithmatex">\(x\in M\)</span> is </p>
+<div class="arithmatex">\[
+\pmb{v}(x) = \frac{d}{dt}|_{t=0}g^tx
+\]</div>
+<p>And at time <span class="arithmatex">\(\tau\)</span>, we have phase speed </p>
+<div class="arithmatex">\[
+\pmb{v}(g^\tau x) = \frac{d}{dt}|_{t=\tau}g^tx.
+\]</div>
+<p>Now we let <span class="arithmatex">\(M\)</span> to be a region in Euclid Space <span class="arithmatex">\(\mathbb{R}^n\)</span> with coordinates <span class="arithmatex">\(x_1,x_2,\cdots,x_n\)</span>. And if <span class="arithmatex">\(x_i:M\mapsto \mathbb{R}\)</span> is the coordinate of <span class="arithmatex">\(\pmb{x}\in M\)</span>, then the vector <span class="arithmatex">\(\pmb{v}(x)\)</span> is defined by <span class="arithmatex">\(v_i: M\mapsto \mathbb{R}, i=1,2\cdots, n\)</span>:</p>
+<div class="arithmatex">\[
+v_i(\pmb{x}) = \frac{d}{dt}|_{t=0}x_i(g^t\pmb{x})
+\]</div>
+<p>So we define a <strong>Vector Field</strong> <span class="arithmatex">\(\pmb{v}\)</span> on <span class="arithmatex">\(M\)</span> when neglecting <span class="arithmatex">\(t\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">切向量、切空间 | Tangent Vector, Tangent Space</p>
+<p>Assume <span class="arithmatex">\(U\in \mathbb{R}^n\)</span> with coordinates <span class="arithmatex">\(x_1,x_2,\cdots, n\)</span> and map <span class="arithmatex">\(\varphi:I\mapsto U\)</span> maps an interval on <span class="arithmatex">\(\mmathbb{R}\)</span> to <span class="arithmatex">\(U\)</span> such that <span class="arithmatex">\(\carphi(0)=\pmb{x}\in U\)</span>. and also its velocity is determined by </p>
+<p>$$
+v_i = \frac{d}{dt}|_{t=0}(x_i\circ \varphi), i=1,2,\cdots, n
+$$.</p>
+<p>Two curves <span class="arithmatex">\(\varphi_1, \varphi_2:I\mapsto U\)</span> pass the same point <span class="arithmatex">\(\pmb{x}\)</span> are <strong>tangent with each other</strong> if <span class="arithmatex">\(t\rightarrow 0\)</span>, <span class="arithmatex">\(\rho(\varphi_1, \varphi_2)\rightarrow 0\)</span>.</p>
+<p><p align="center">
+<img src="../tangent_curve.png" width="30%" />
+</p></p>
+<p>A set composed by all tangent vectors of the curves passing <span class="arithmatex">\(\pmb{x}\)</span> is a linear space with dimension <span class="arithmatex">\(n\)</span>, which is called <strong>Tangent Space</strong>.</p>
+<p>Now we want to give a space without coordinates.</p>
+</div>
+<p>Then, let us recall the definition of metric space(度量空间).</p>
 <div class="admonition info">
 <p class="admonition-title">度量空间的定义 | Definition of Metric Space</p>
-<p>Assume M is a set. If there is a function <span class="arithmatex">\(\rho: M\times M\mapsto \mathbb{R}\)</span> defined on it, satisfies that, <span class="arithmatex">\(\forall x,y,z \in M\)</span></p>
+<p>Assume <span class="arithmatex">\(M\)</span> is a set. If there is a function <span class="arithmatex">\(\rho: M\times M\mapsto \mathbb{R}\)</span> defined on it, satisfies that, <span class="arithmatex">\(\forall x,y,z \in M\)</span></p>
 <ul>
 <li>Positive</li>
 </ul>
@@ -2149,7 +2246,7 @@ K = \max_{x\in J}\{|\varphi_1(x)-\varphi_2(x)|\}
 <p class="admonition-title">不动点定理 | Fixed-Point Theorem</p>
 <p>Assume <span class="arithmatex">\(A: M\mapsto M\)</span> is a contraction mapping, then <span class="arithmatex">\(A\)</span> has a unique fixed-point.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="proof-using-contraction-mapping-hints" name="__tabbed_12" type="radio" /><input id="proof-using-contraction-mapping-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="proof-using-contraction-mapping-hints">Hints</label><label for="proof-using-contraction-mapping-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="proof-using-contraction-mapping-hints" name="__tabbed_13" type="radio" /><input id="proof-using-contraction-mapping-proof_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="proof-using-contraction-mapping-hints">Hints</label><label for="proof-using-contraction-mapping-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We prove by showing that <span class="arithmatex">\(A^nx\)</span> is a Cauchy Sequence and its limit <span class="arithmatex">\(X\)</span> falls in <span class="arithmatex">\(M\)</span>. Then use the property of <strong>limits</strong> to show it is fixed-point of <span class="arithmatex">\(A\)</span>. Then prove the uniqueness by using property of metric <span class="arithmatex">\(\rho\)</span>.</p>
@@ -2173,14 +2270,34 @@ AX = A \lim\limits_{n\rightarrow \infty}A^nx = \lim\limits_{n\rightarrow \infty}
 </div>
 </div>
 <p>Readers can compare this theorem to <a href="../../Numerical_Analysis/NA/#Fixed-Point-Iteration">Fixed-Point Theorem</a> in <em>Numerical Analysis</em>. </p>
+<p>In the following part, we will choose metric </p>
+<div class="arithmatex">\[
+\rho(\pmb{x}, \pmb{y}) = |\pmb{x}-\pmb{y}| = \sqrt{(\pmb{x}-\pmb{y},\pmb{x}-\pmb{y})}
+\]</div>
+<p>so space <span class="arithmatex">\(\mathbb{R}^n\)</span> with the above metric is a complete metric space.</p>
+<p>So in this case, we have a parallel theorem for smoothness and Lipschitz condition in <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">连续可微映射满足Lipschitz条件 | Continuously Differentiable mapping satisfies Lipschitz condition</p>
+<p>Assume <span class="arithmatex">\(V\subset U \subset\mathbb{R}^m\)</span> is a corvex and contract set, and continuously differentiable mapping <span class="arithmatex">\(\pmb{f}\)</span> which maps <span class="arithmatex">\(U\)</span> to <span class="arithmatex">\(\mathbb{R}^n\)</span> satisfies Lipschitz condition, and the constant </p>
+<div class="arithmatex">\[
+L = \sup_{\pmb{x}\in V} |\pmb{f}_{\pmb{x}}| 
+\]</div>
+</div>
+<p>Prove it.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="proof-using-contraction-mapping-hints_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="proof-using-contraction-mapping-hints_1">Hints</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <p>Now we consider <strong>Picard mapping</strong> <span class="arithmatex">\(A\)</span> is a mapping from a mapping to another mapping</p>
 <div class="arithmatex">\[
-(\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
+A: (\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
 \]</div>
 <p>defined by</p>
 <div class="arithmatex">\[
 (A\pmb{\varphi})(t) = \pmb{x}_0 + \int_{t_0}^{t}\pmb{f}(\tau, \pmb{\varphi}(\tau))d\tau
 \]</div>
+<p>Geometrically speaking, tangent line of each point on <span class="arithmatex">\(A\pmb{\varphi}\)</span>, i.e. <span class="arithmatex">\((A\pmb{\varphi})'(t)\)</span>, equals to the vector field determined by <span class="arithmatex">\(\pmb{\varphi}(t)\)</span>, i.e. <span class="arithmatex">\(f(t, \pmb{\varphi}(t))\)</span>.</p>
 <p>Note that <span class="arithmatex">\(\pmb{\varphi}\)</span> is a solution of Cauchy Problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> if and only if <span class="arithmatex">\(\pmb{\varphi} = A \pmb{\varphi}\)</span>.</p>
 <h4 id="osgood-osgood-condition">Osgood 条件 | Osgood Condition<a class="headerlink" href="#osgood-osgood-condition" title="Permanent link">&para;</a></h4>
 <p>We consider a condition which is slightly weaker than Lipschitz condition but still can guarrantee the convergence of Picard Sequence and its uniqueness.</p>
@@ -2202,7 +2319,7 @@ AX = A \lim\limits_{n\rightarrow \infty}A^nx = \lim\limits_{n\rightarrow \infty}
 <p>If  <span class="arithmatex">\(f(x,y) \in C(D)\)</span> satisfies Osgood condition with respect to <span class="arithmatex">\(y\)</span>, then <span class="arithmatex">\(\forall (x_0,y_0)\in D\)</span>, th solution to Cauchy problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span> exists uniquely.</p>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="osgood-osgood-condition-hints" name="__tabbed_13" type="radio" /><input id="osgood-osgood-condition-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="osgood-osgood-condition-hints">Hints</label><label for="osgood-osgood-condition-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="osgood-osgood-condition-hints" name="__tabbed_15" type="radio" /><input id="osgood-osgood-condition-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="osgood-osgood-condition-hints">Hints</label><label for="osgood-osgood-condition-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The existence is guarranteed by <a href="#Peano-Theorem">Peano Theorem</a> in the following part. You only need to prove the uniqueness, which is proved by contradiction, which is similar to prove the uniqueness of <span class="arithmatex">\(f(x, y)\)</span> that decrease monotonically with respect to <span class="arithmatex">\(y\)</span>.</p>
@@ -2248,7 +2365,7 @@ r'(x) = y_1'(x) - y_2'(x) = f(x,y_1(x))- f(x,y_2(x)) \leq F(y_1(x) - y_2(x))
 \]</div>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="Peano-Theorem-hints" name="__tabbed_14" type="radio" /><input id="Peano-Theorem-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="Peano-Theorem-hints">Hints</label><label for="Peano-Theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="Peano-Theorem-hints" name="__tabbed_16" type="radio" /><input id="Peano-Theorem-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="Peano-Theorem-hints">Hints</label><label for="Peano-Theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>There are several methosd to prove Peano Theorem, like <strong>Euler's Arc</strong> method, Tonelli(托内利) Sequence method, fixed-point method in functional analysis, while <strong>Euler's Arc</strong> method is thought to be the dawm to calculating ODE numerically, so we will prove it this way. </p>
@@ -2437,7 +2554,7 @@ y_{n_j}(x) = y_0 + \int_{x_0}^{x}f(s, y_{n_j}(s))ds + \delta_{n_j}(x), \quad x \
 <p>If Cauchy problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span> has unique solution, then the whole sequence of Euler's Arc <span class="arithmatex">\(\{\varphi_n(x)\}\)</span> converges.</p>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="comments-on-previous-hints" name="__tabbed_15" type="radio" /><input id="comments-on-previous-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="comments-on-previous-hints">Hints</label><label for="comments-on-previous-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="comments-on-previous-hints" name="__tabbed_17" type="radio" /><input id="comments-on-previous-proof" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="comments-on-previous-hints">Hints</label><label for="comments-on-previous-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use contradiction.</p>
@@ -2516,7 +2633,7 @@ y_{n_j}(x) = y_0 + \int_{x_0}^{x}f(s, y_{n_j}(s))ds + \delta_{n_j}(x), \quad x \
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../Modern_Control_Theory/MCT/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modern Control Theory">
+          <a href="../../Numerical_Analysis/NA/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Numerical Analysis">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2526,20 +2643,20 @@ y_{n_j}(x) = y_0 + \int_{x_0}^{x}f(s, y_{n_j}(s))ds + \delta_{n_j}(x), \quad x \
                 Previous
               </span>
               <div class="md-ellipsis">
-                Modern Control Theory
+                Numerical Analysis
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../blog/" class="md-footer__link md-footer__link--next" aria-label="Next: Blog">
+          <a href="../../Sensing%26Detection/Midterm/" class="md-footer__link md-footer__link--next" aria-label="Next: Sensing &amp; Detection">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Blog
+                Sensing & Detection
               </div>
             </div>
             <div class="md-footer__button md-icon">
