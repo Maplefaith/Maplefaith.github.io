@@ -800,9 +800,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contraction-mapping" class="md-nav__link">
+  <a href="#contraction-mapping-in-metric-space" class="md-nav__link">
     <span class="md-ellipsis">
-      压缩映射 | Contraction Mapping
+      度量空间下的压缩映射 | Contraction Mapping in Metric Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些变量的定义 | Constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明 | Begin Proof
     </span>
   </a>
   
@@ -1138,9 +1156,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#contraction-mapping" class="md-nav__link">
+  <a href="#contraction-mapping-in-metric-space" class="md-nav__link">
     <span class="md-ellipsis">
-      压缩映射 | Contraction Mapping
+      度量空间下的压缩映射 | Contraction Mapping in Metric Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些变量的定义 | Constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#begin-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明 | Begin Proof
     </span>
   </a>
   
@@ -1175,7 +1211,7 @@
 \dot{\mathbfit{x}} = \mathbfit{f}(t, \mathbfit{x}),\quad  \mathbfit{x}(t_0) = \mathbfit{x}_0 \label{eq-vector-cauchy}
 \end{equation}
 \]</div>
-<p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field).</p>
+<p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field). To simplify the problem, we assume <span class="arithmatex">\(\pmb{f} \in C^r(D)\)</span>, where <span class="arithmatex">\(r\geq 1\)</span>.</p>
 <h3 id="group-basis">群论基础 | Group Basis<a class="headerlink" href="#group-basis" title="Permanent link">&para;</a></h3>
 <p>Firstly, let us introduce some basic ideas about groups.</p>
 <div class="admonition info">
@@ -1401,7 +1437,7 @@ f_*|_{\pmb{x}}\left(\frac{d\varphi}{dt}\Bigg|_{t=0} \right) = \frac{d}{dt}\Bigg|
 \]</div>
 <p>which defines a linear mapping from <span class="arithmatex">\(TU_{\pmb{x}}\)</span> to <span class="arithmatex">\(TV_{f(\pmb{x})}\)</span>.</p>
 </div>
-<h3 id="contraction-mapping">压缩映射 | Contraction Mapping<a class="headerlink" href="#contraction-mapping" title="Permanent link">&para;</a></h3>
+<h3 id="contraction-mapping-in-metric-space">度量空间下的压缩映射 | Contraction Mapping in Metric Space<a class="headerlink" href="#contraction-mapping-in-metric-space" title="Permanent link">&para;</a></h3>
 <p>Then, let us recall the definition of metric space(度量空间).</p>
 <div class="admonition info">
 <p class="admonition-title">度量空间的定义 | Definition of Metric Space</p>
@@ -1454,7 +1490,7 @@ f_*|_{\pmb{x}}\left(\frac{d\varphi}{dt}\Bigg|_{t=0} \right) = \frac{d}{dt}\Bigg|
 <p class="admonition-title">不动点定理 | Fixed-Point Theorem</p>
 <p>Assume <span class="arithmatex">\(A: M\mapsto M\)</span> is a contraction mapping, then <span class="arithmatex">\(A\)</span> has a unique fixed-point.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="contraction-mapping-hints" name="__tabbed_4" type="radio" /><input id="contraction-mapping-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-hints">Hints</label><label for="contraction-mapping-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="contraction-mapping-in-metric-space-hints" name="__tabbed_4" type="radio" /><input id="contraction-mapping-in-metric-space-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-in-metric-space-hints">Hints</label><label for="contraction-mapping-in-metric-space-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We prove by showing that <span class="arithmatex">\(A^nx\)</span> is a Cauchy Sequence and its limit <span class="arithmatex">\(X\)</span> falls in <span class="arithmatex">\(M\)</span>. Then use the property of <strong>limits</strong> to show it is fixed-point of <span class="arithmatex">\(A\)</span>. Then prove the uniqueness by using property of metric <span class="arithmatex">\(\rho\)</span>.</p>
@@ -1480,21 +1516,43 @@ AX = A \lim\limits_{n\rightarrow \infty}A^nx = \lim\limits_{n\rightarrow \infty}
 <p>Readers can compare this theorem to <a href="../../Numerical_Analysis/NA/#Fixed-Point-Iteration">Fixed-Point Theorem</a> in <em>Numerical Analysis</em>. </p>
 <p>In the following part, we will choose metric </p>
 <div class="arithmatex">\[
-\rho(\pmb{x}, \pmb{y}) = |\pmb{x}-\pmb{y}| = \sqrt{(\pmb{x}-\pmb{y},\pmb{x}-\pmb{y})}
+\rho(\pmb{x}, \pmb{y}) = \|\pmb{x}-\pmb{y}\| = \sqrt{(\pmb{x}-\pmb{y},\pmb{x}-\pmb{y})}
 \]</div>
 <p>so space <span class="arithmatex">\(\mathbb{R}^n\)</span> with the above metric is a complete metric space.</p>
 <p>So in this case, we have a parallel theorem for smoothness and Lipschitz condition in <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">连续可微映射满足Lipschitz条件 | Continuously Differentiable mapping satisfies Lipschitz condition</p>
-<p>Assume <span class="arithmatex">\(V\subset U \subset\mathbb{R}^m\)</span> is a corvex and contract set, and continuously differentiable mapping <span class="arithmatex">\(\pmb{f}\)</span> which maps <span class="arithmatex">\(U\)</span> to <span class="arithmatex">\(\mathbb{R}^n\)</span> satisfies Lipschitz condition, and the constant </p>
+<p>Assume <span class="arithmatex">\(V\subset U \subset\mathbb{R}^m\)</span> is a convex and contract set, and continuously differentiable mapping <span class="arithmatex">\(\pmb{f}\)</span> which maps <span class="arithmatex">\(U\)</span> to <span class="arithmatex">\(\mathbb{R}^n\)</span> satisfies Lipschitz condition, and the constant </p>
 <div class="arithmatex">\[
-L = \sup_{\pmb{x}\in V} |\pmb{f}_{\pmb{x}}| 
+L = \sup_{\pmb{x}\in V} \|\pmb{f}_{*\pmb{x}}\| 
 \]</div>
+<p>where <span class="arithmatex">\(\pmb{f}_*|_{\pmb{x}}=\pmb{f}_{*\pmb{x}}:T\mathbb{R}^m_{\pmb{x}}\mapsto T\mathbb{R}^n_{\pmb{x}}\)</span></p>
+<p><p align="center">
+<img src="../Derivative_f.png" width="30%" />
+</p></p>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="contraction-mapping-hints_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-hints_1">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="contraction-mapping-in-metric-space-hints_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-in-metric-space-hints_1">Hints</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(\pmb{z}(t)=\pmb{x}+t(\pmb{y}-\pmb{x})\)</span>, <span class="arithmatex">\(0\leq t\leq 1\)</span>. Then</p>
+<div class="arithmatex">\[
+\begin{align*}
+\pmb{f}(\pmb{y})-\pmb{f}(\pmb{x})&amp;=\int_{0}^1\frac{d}{dt}\pmb{f}(\pmb{z}(\tau))d\tau\\
+&amp;=\int_0^1\pmb{f}_{*\pmb{z}(\tau)}[\pmb{\dot{z}}(\tau)]d\tau \\
+&amp;=\int_0^1 \pmb{f}_{*\pmb{z}(\tau)} (\pmb{y}-\pmb{x})d\tau
+\end{align*}\\
+\]</div>
+<p>where <span class="arithmatex">\(\pmb{y}-\pmb{x}\)</span> is a constant, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+\left\| \pmb{f}(\pmb{y})-\pmb{f}(\pmb{x}) \right\| &amp;=\left\|\int_0^1 \pmb{f}_{*\pmb{z}(\tau)} (\pmb{y}-\pmb{x})(\tau)d\tau\right\|\\
+&amp;\leq \int_0^1 \|\pmb{f}_{*\pmb{x}}\| \|\pmb{y}-\pmb{x}\|d\tau\\
+&amp;\leq L\|\pmb{y}-\pmb{x}\|
+\end{align*}
+\]</div>
+<p>and we are done.</p>
+</div>
 </div>
 </div>
 <p>Now we consider <strong>Picard mapping</strong> <span class="arithmatex">\(A\)</span> is a mapping from a mapping to another mapping</p>
@@ -1507,6 +1565,38 @@ A: (\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
 \]</div>
 <p>Geometrically speaking, tangent line of each point on <span class="arithmatex">\(A\pmb{\varphi}\)</span>, i.e. <span class="arithmatex">\((A\pmb{\varphi})'(t)\)</span>, equals to the vector field determined by <span class="arithmatex">\(\pmb{\varphi}(t)\)</span>, i.e. <span class="arithmatex">\(f(t, \pmb{\varphi}(t))\)</span>.</p>
 <p>Note that <span class="arithmatex">\(\pmb{\varphi}\)</span> is a solution of Cauchy Problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> if and only if <span class="arithmatex">\(\pmb{\varphi} = A \pmb{\varphi}\)</span>.</p>
+<h3 id="constants">一些变量的定义 | Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h3>
+<p>Assume we give a Euvlid Structrue in region <span class="arithmatex">\(D\in \mathbb{R}^{n+1}\)</span>, so <span class="arithmatex">\(T\mathbb{R}^n_{\pmb{x}}\)</span> also has a Euclid Structrue. For all <span class="arithmatex">\((t_0,\pmb{x}_0)\in D\)</span>, we consider a <strong>cylinder</strong>(柱体) with sufficiently small parameters <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span></p>
+<div class="arithmatex">\[
+\Gamma= \{(t, \pmb{x}): |t-t_0|\leq a, \|\pmb{x}-\pmb{x}_0\|\leq b\}
+\]</div>
+<p>which is still a subset of <span class="arithmatex">\(D\)</span>.</p>
+<p>Let </p>
+<div class="arithmatex">\[
+C=\max_{\pmb{x}\in \Gamma}\|\pmb{f}\|, \quad L= \max_{\pmb{x}\in \Gamma}\|\pmb{f}_*\|
+\]</div>
+<p>which can be obtained because <span class="arithmatex">\(\Gamma\)</span> is a compact set.</p>
+<p align="center">
+    <img src="../Gamma.png" width="30%" />
+</p>
+
+<p>Now consider a <strong>Cone</strong>(锥体) with opening <span class="arithmatex">\(C\)</span> and sufficient small height <span class="arithmatex">\(a'\)</span> at point <span class="arithmatex">\((t_0,\pmb{x}_0)\)</span></p>
+<div class="arithmatex">\[
+K_0 = \{(t,\pmb{x}): |t-t_0|\leq a', \|\pmb{x}-\pmb{x}_0\|\leq C|t-t_0|\}
+\]</div>
+<p>Consider all the possible continuous mapping <span class="arithmatex">\(\pmb{h}\)</span> which maps a cylinder into <span class="arithmatex">\(\mathbb{R}^n\)</span>. Assume <span class="arithmatex">\(M\)</span> is a set composed of these mappings with additional condition</p>
+<div class="arithmatex">\[
+\|\pmb{h}(t, \pmb{x})\| \leq C|t-t_0|
+\]</div>
+<p>Specially, we let <span class="arithmatex">\(\pmb{h}(t_0,\pmb{x})=0\)</span>. We introduce a metric </p>
+<div class="arithmatex">\[
+\rho(\pmb{h}_1,\pmb{h}_2)=\|\pmb{h}_1-\pmb{h}_2\|=\max_{\|\pmb{x}-\pmb{x}_0\|\leq b' \atop |t-t_0|\leq a' }\|\pmb{h}_1(t,\pmb{x})-\pmb{h}_2(t,\pmb{x})\|
+\]</div>
+<h3 id="begin-proof">证明 | Begin Proof<a class="headerlink" href="#begin-proof" title="Permanent link">&para;</a></h3>
+<p>Now we really have to consider a mapping </p>
+<div class="arithmatex">\[
+A: M\mapsto M
+\]</div>
 
 
 
