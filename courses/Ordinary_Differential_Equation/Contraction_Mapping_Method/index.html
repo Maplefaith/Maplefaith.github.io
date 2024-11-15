@@ -809,9 +809,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#constants" class="md-nav__link">
+  <a href="#some-constants-a-b-c" class="md-nav__link">
     <span class="md-ellipsis">
-      一些变量的定义 | Constants
+      一些变量的定义 | Some Constants \(a'\), \(b'\), \(c'\)
     </span>
   </a>
   
@@ -1165,9 +1165,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#constants" class="md-nav__link">
+  <a href="#some-constants-a-b-c" class="md-nav__link">
     <span class="md-ellipsis">
-      一些变量的定义 | Constants
+      一些变量的定义 | Some Constants \(a'\), \(b'\), \(c'\)
     </span>
   </a>
   
@@ -1204,6 +1204,10 @@
 
   <h1>Contraction Mapping Method</h1>
 
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p><em>Ordinary Differential Equation</em>, Vladimir Igorevich Arnold</p>
+</div>
 <h2 id="proof-using-contraction-mapping">压缩映射法 | Proof using Contraction Mapping<a class="headerlink" href="#proof-using-contraction-mapping" title="Permanent link">&para;</a></h2>
 <p>This part we want to prove <a href="../General_Theory/#Picard-Theorem">Picard Theorem</a> from another perspective. And this method is also universal on multi-dimensional Cauchy Problem. So to simplify the notation, we change the problem equivalently to </p>
 <div class="arithmatex">\[
@@ -1565,7 +1569,7 @@ A: (\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
 \]</div>
 <p>Geometrically speaking, tangent line of each point on <span class="arithmatex">\(A\pmb{\varphi}\)</span>, i.e. <span class="arithmatex">\((A\pmb{\varphi})'(t)\)</span>, equals to the vector field determined by <span class="arithmatex">\(\pmb{\varphi}(t)\)</span>, i.e. <span class="arithmatex">\(f(t, \pmb{\varphi}(t))\)</span>.</p>
 <p>Note that <span class="arithmatex">\(\pmb{\varphi}\)</span> is a solution of Cauchy Problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> if and only if <span class="arithmatex">\(\pmb{\varphi} = A \pmb{\varphi}\)</span>.</p>
-<h3 id="constants">一些变量的定义 | Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h3>
+<h3 id="some-constants-a-b-c">一些变量的定义 | Some Constants <span class="arithmatex">\(a'\)</span>, <span class="arithmatex">\(b'\)</span>, <span class="arithmatex">\(c'\)</span><a class="headerlink" href="#some-constants-a-b-c" title="Permanent link">&para;</a></h3>
 <p>Assume we give a Euvlid Structrue in region <span class="arithmatex">\(D\in \mathbb{R}^{n+1}\)</span>, so <span class="arithmatex">\(T\mathbb{R}^n_{\pmb{x}}\)</span> also has a Euclid Structrue. For all <span class="arithmatex">\((t_0,\pmb{x}_0)\in D\)</span>, we consider a <strong>cylinder</strong>(柱体) with sufficiently small parameters <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span></p>
 <div class="arithmatex">\[
 \Gamma= \{(t, \pmb{x}): |t-t_0|\leq a, \|\pmb{x}-\pmb{x}_0\|\leq b\}
@@ -1584,19 +1588,71 @@ C=\max_{\pmb{x}\in \Gamma}\|\pmb{f}\|, \quad L= \max_{\pmb{x}\in \Gamma}\|\pmb{f
 <div class="arithmatex">\[
 K_0 = \{(t,\pmb{x}): |t-t_0|\leq a', \|\pmb{x}-\pmb{x}_0\|\leq C|t-t_0|\}
 \]</div>
-<p>Consider all the possible continuous mapping <span class="arithmatex">\(\pmb{h}\)</span> which maps a cylinder into <span class="arithmatex">\(\mathbb{R}^n\)</span>. Assume <span class="arithmatex">\(M\)</span> is a set composed of these mappings with additional condition</p>
+<p>In order to let all the possible cone to be in the cylinder, we have to shrink the region to make the region is well defined. That is, there exsits sufficiently small parameters <span class="arithmatex">\(b'&lt;b\)</span> such that <span class="arithmatex">\(\|\pmb{x}-pmb{x}_0\|&lt;b'\)</span>. So now we get a smaller region (a smaller cylinder)</p>
+<div class="arithmatex">\[
+\Gamma' = \{(t, \pmb{x}): |t-t_0|&lt;a', \|\pmb{x}-\pmb{x}_0\|&lt;b'\}
+\]</div>
+<p>Consider all the possible continuous mapping <span class="arithmatex">\(\pmb{h}\)</span> which maps the above cylinder into <span class="arithmatex">\(\mathbb{R}^n\)</span>, which is a solution of original ODE problem. Assume <span class="arithmatex">\(M\)</span> is a set composed of these mappings with additional condition</p>
 <div class="arithmatex">\[
 \|\pmb{h}(t, \pmb{x})\| \leq C|t-t_0|
 \]</div>
 <p>Specially, we let <span class="arithmatex">\(\pmb{h}(t_0,\pmb{x})=0\)</span>. We introduce a metric </p>
 <div class="arithmatex">\[
-\rho(\pmb{h}_1,\pmb{h}_2)=\|\pmb{h}_1-\pmb{h}_2\|=\max_{\|\pmb{x}-\pmb{x}_0\|\leq b' \atop |t-t_0|\leq a' }\|\pmb{h}_1(t,\pmb{x})-\pmb{h}_2(t,\pmb{x})\|
+\rho(\pmb{h}_1,\pmb{h}_2)=\|\pmb{h}_1-\pmb{h}_2\|=\max_{(t,\pmb{x})\in \Gamma' }\|\pmb{h}_1(t,\pmb{x})-\pmb{h}_2(t,\pmb{x})\|
 \]</div>
+<p><p align="center">
+    <img src="../h(t,x).png" width="30%" />
+    </p></p>
+<p>Note: Space <span class="arithmatex">\(M\)</span> is dependent on <span class="arithmatex">\(a'\)</span>, <span class="arithmatex">\(b'\)</span> and <span class="arithmatex">\(C\)</span>.</p>
 <h3 id="begin-proof">证明 | Begin Proof<a class="headerlink" href="#begin-proof" title="Permanent link">&para;</a></h3>
 <p>Now we really have to consider a mapping </p>
 <div class="arithmatex">\[
 A: M\mapsto M
 \]</div>
+<p>defined by</p>
+<div class="arithmatex">\[
+(A\pmb{h})(t, \pmb{x}) = \int_{t_0}^t\pmb{f}(\tau, \pmb{x}+\pmb{h}(\tau, \pmb{x}))d\tau
+\]</div>
+<div class="admonition success">
+<p class="admonition-title"><span class="arithmatex">\(A\)</span> 是压缩映射 | <span class="arithmatex">\(A\)</span> is a contraction mapping</p>
+<p><span class="arithmatex">\(A\)</span> is a contraction mapping from <span class="arithmatex">\(M\)</span> to <span class="arithmatex">\(M\)</span>, if <span class="arithmatex">\(a'\)</span> is sufficiently small.</p>
+</div>
+<p>Prove it. The following proof are set to find how small <span class="arithmatex">\(a'\)</span> shoulc be.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="begin-proof-hints" name="__tabbed_6" type="radio" /><input id="begin-proof-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="begin-proof-hints">Hints</label><label for="begin-proof-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Firstly, prove <span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(M\)</span> to itself. Then Prove if is a constraction mapping.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(M\)</span> to itself.</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+\|(A\pmb{h}(t, \pmb(x)))\| &amp;\leq \|\int_{t_0}^t\pmb{f}(\tau, \pmb{x}+\pmb{h}(\tau,\pmb{x}))d\tau\| \\
+&amp;\leq |\int_{t_0}^tCd\tau| \leq C|t-t_0|
+\end{align*}
+\]</div>
+<p>so <span class="arithmatex">\(AM\subset M\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span> is a constraction mapping.</li>
+</ul>
+<p>Estimate <span class="arithmatex">\(A\pmb{h}_1- A\pmb{h}_2\)</span>:</p>
+<div class="arithmatex">\[
+(A\pmb{h}_1-A\pmb{h}_2)(t,\pmb{x}) = \int_{t_0}^t[\pmb{f}(\tau, \pmb{x}+\pmb{h}_1(\tau,\pmb{x}))-\pmb{f}(\tau, \pmb{x}+\pmb{h}_2(\tau,\pmb{x}))]d\tau
+\]</div>
+<p>Denote <span class="arithmatex">\(\pmb{f}_i(\tau) = \pmb{f}(\tau, \pmb{x}+\pmb{h}_i(\tau,\pmb{x}))\)</span>, <span class="arithmatex">\(i=1,2\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+\|\pmb{f}_1(\tau)- \pmb{f}_2(\tau)\| &amp;\leq L\|\pmb{h}_1(\tau)-\pmb{h}_2(\tau)\| \text{using Lipschitz condition}\\ 
+&amp;\leq \|\pmb{h}_1-\pmb{h}_2\| = \rho(\pmb{h}_1, \pmb{h}_2) (by definition of metric)
+\end{align*}
+\]</div>
+<p>So if <span class="arithmatex">\(La'&lt;1\)</span>, then <span class="arithmatex">\(A\)</span> is a contraction mapping.</p>
+</div>
+</div>
+</div>
+<p>Now we can finally give the proof of Picard Theorem.</p>
 
 
 
