@@ -809,18 +809,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#some-constants-a-b-c" class="md-nav__link">
+  <a href="#Proof-1" class="md-nav__link">
     <span class="md-ellipsis">
-      一些变量的定义 | Some Constants \(a'\), \(b'\), \(c'\)
+      证明1 | Proof 1
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#begin-proof" class="md-nav__link">
+  <a href="#2-proof-2" class="md-nav__link">
     <span class="md-ellipsis">
-      证明 | Begin Proof
+      证明2 | Proof 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录：连续可微到Lipschitz连续 | Appendix: from Continuity &amp; Differentiability to Lipschitz Condition
     </span>
   </a>
   
@@ -1165,18 +1174,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#some-constants-a-b-c" class="md-nav__link">
+  <a href="#Proof-1" class="md-nav__link">
     <span class="md-ellipsis">
-      一些变量的定义 | Some Constants \(a'\), \(b'\), \(c'\)
+      证明1 | Proof 1
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#begin-proof" class="md-nav__link">
+  <a href="#2-proof-2" class="md-nav__link">
     <span class="md-ellipsis">
-      证明 | Begin Proof
+      证明2 | Proof 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录：连续可微到Lipschitz连续 | Appendix: from Continuity &amp; Differentiability to Lipschitz Condition
     </span>
   </a>
   
@@ -1216,6 +1234,25 @@
 \end{equation}
 \]</div>
 <p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field). To simplify the problem, we assume <span class="arithmatex">\(\pmb{f} \in C^r(D)\)</span>, where <span class="arithmatex">\(r\geq 1\)</span>.</p>
+<p>Assume we give a Euvlid Structure in region <span class="arithmatex">\(D\in \mathbb{R}^{n+1}\)</span>. For all <span class="arithmatex">\((t_0,\pmb{x}_0)\in D\)</span>, we consider a <strong>cylinder</strong>(柱体) with sufficiently small parameters <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span></p>
+<div class="arithmatex">\[
+\Gamma= \{(t, \pmb{x}): |t-t_0|\leq a, \|\pmb{x}-\pmb{x}_0\|\leq b\}
+\]</div>
+<p>which is still a subset of <span class="arithmatex">\(D\)</span>.</p>
+<p>Then the Picard Theorem becomes:</p>
+<div class="admonition success">
+<p class="admonition-title">Picard Theorem</p>
+<p>Assume <span class="arithmatex">\(\pmb{f}\)</span> of problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> is continous and differentiable(or Lipschitz condition) on region <span class="arithmatex">\(\Gamma\)</span>, then for all given <span class="arithmatex">\(\pmb{x}\)</span> which is sufficiently close to <span class="arithmatex">\(\pmb{x}_0\)</span>, there exsits a neighberhood of <span class="arithmatex">\(t_0\)</span>, such that there exists a unique solution <span class="arithmatex">\(\pmb{\varphi}(t)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="proof-using-contraction-mapping-hints" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="proof-using-contraction-mapping-hints">Hints</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Using the <strong>fixed point theorem</strong> (existence and uniqueness).</li>
+</ul>
+</div>
+</div>
+</div>
 <h3 id="group-basis">群论基础 | Group Basis<a class="headerlink" href="#group-basis" title="Permanent link">&para;</a></h3>
 <p>Firstly, let us introduce some basic ideas about groups.</p>
 <div class="admonition info">
@@ -1261,7 +1298,7 @@ ab=ac \text{ or } ba = ca \Rightarrow b=c.
 ab=a \text{ or } ba =a \Rightarrow b=1.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="group-basis-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="group-basis-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="group-basis-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="group-basis-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Multiply both sides of the above equation on the left by <span class="arithmatex">\(a^{-1}\)</span>.</p>
@@ -1304,7 +1341,7 @@ GL_{n} =\{n\times n \text{ invertible matrices } A\}.
 \varphi(a^{-1}) = \varphi(a)^{-1}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="group-basis-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="group-basis-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="group-basis-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="group-basis-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) by induction(Strong induction).</p>
@@ -1350,7 +1387,7 @@ g^tx=x,\quad \forall t\in \mathbb{R}
 <p class="admonition-title">相空间中的点仅有一条相曲线</p>
 <p>For all <span class="arithmatex">\(x\in M\)</span>, there only exists one phase curve.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="phase-space-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="phase-space-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="phase-space-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="phase-space-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Because <span class="arithmatex">\(g^t\)</span> is a bijection.</p>
@@ -1372,15 +1409,15 @@ g^tx=x,\quad \forall t\in \mathbb{R}
 </div>
 <p>Now we have to make use of <strong>DIfferential</strong> in Euclid Space.</p>
 <div class="admonition success">
-<p class="admonition-title">可微函数、可微映射、微分同胚 | Differantiable Function, Differantiable Mapping, Diffeomorphism</p>
+<p class="admonition-title">可微函数、可微映射、微分同胚 | Differentiable Function, Differentiable Mapping, Diffeomorphism</p>
 <p>Assume <span class="arithmatex">\(U \subset\mathbb{R}^n, V \subset\mathbb{R}^m\)</span>. Then</p>
-<p>A <strong>Differantiable Function</strong> is a function <span class="arithmatex">\(f: U\mapsto \mathbb{R}\)</span> which is <span class="arithmatex">\(r\)</span> times differentiable.</p>
-<p>A <strong>Differantiable Mapping</strong> is a mapping <span class="arithmatex">\(f:U\mapsto V\)</span> defined by </p>
+<p>A <strong>Differentiable Function</strong> is a function <span class="arithmatex">\(f: U\mapsto \mathbb{R}\)</span> which is <span class="arithmatex">\(r\)</span> times differentiable.</p>
+<p>A <strong>Differentiable Mapping</strong> is a mapping <span class="arithmatex">\(f:U\mapsto V\)</span> defined by </p>
 <div class="arithmatex">\[
 y_i = f_i(x_1,x_2,\cdots,x_n), \quad i=1,2\cdots, m
 \]</div>
-<p>where <span class="arithmatex">\(f_i: U\mapsto \mathbb{R}\)</span> is a differantiable function. If <span class="arithmatex">\(y_i: V\mapsto \mathbb{R}\)</span> is a coordinate of <span class="arithmatex">\(\pmb{y}\in \mathbb{R}^m\)</span>, then <span class="arithmatex">\(y_i\circ f: U\mapsto \mathbb{R}\)</span> is a differantiable function in <span class="arithmatex">\(U\)</span>.</p>
-<p>A <strong>Diffeomorphism</strong> is a bijection <span class="arithmatex">\(f:U\mapsto V\)</span>, such that <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f^{-1}\)</span> are both differantiable mappings.</p>
+<p>where <span class="arithmatex">\(f_i: U\mapsto \mathbb{R}\)</span> is a Differentiable function. If <span class="arithmatex">\(y_i: V\mapsto \mathbb{R}\)</span> is a coordinate of <span class="arithmatex">\(\pmb{y}\in \mathbb{R}^m\)</span>, then <span class="arithmatex">\(y_i\circ f: U\mapsto \mathbb{R}\)</span> is a Differentiable function in <span class="arithmatex">\(U\)</span>.</p>
+<p>A <strong>Diffeomorphism</strong> is a bijection <span class="arithmatex">\(f:U\mapsto V\)</span>, such that <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f^{-1}\)</span> are both Differentiable mappings.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">与坐标轴有关的相速度、向量场 | Phase Speed, Vector Field</p>
@@ -1481,7 +1518,9 @@ f_*|_{\pmb{x}}\left(\frac{d\varphi}{dt}\Bigg|_{t=0} \right) = \frac{d}{dt}\Bigg|
 \]</div>
 <p>then we say mapping <span class="arithmatex">\(A\)</span> satisfies Lipschitz Condition.</p>
 </div>
-<div class="admonition success">
+<p>In <a href="#Proof-1">Proof 1</a> we will show how to use Lipschitz condition to shrink the region of <span class="arithmatex">\((t, \pmb{x})\)</span>(Expanded Phase Space) such that the contraction mapping maps the metric space into itself.</p>
+<p>Usually, a mapping that maps a space <span class="arithmatex">\(M\)</span> into itself would be of great use for us, so here comes the following definition.</p>
+<div class="admonition info">
 <p class="admonition-title">压缩映射的定义 | Definition of Contraction mapping</p>
 <p>Assume <span class="arithmatex">\(A: M \mapsto M\)</span> is a mapping from complete metric space with metric <span class="arithmatex">\(\rho\)</span> to itself. If there exists a constant <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(0&lt;k&lt;1\)</span>, s.t. </p>
 <div class="arithmatex">\[
@@ -1489,12 +1528,13 @@ f_*|_{\pmb{x}}\left(\frac{d\varphi}{dt}\Bigg|_{t=0} \right) = \frac{d}{dt}\Bigg|
 \]</div>
 <p>then <span class="arithmatex">\(A\)</span> is called a <strong>Contraction mapping</strong>.</p>
 </div>
-<p>If <span class="arithmatex">\(Ax =x \in M\)</span>, we call <span class="arithmatex">\(x\)</span> is a fixed point of mapping <span class="arithmatex">\(A\)</span>.</p>
+<p>If <span class="arithmatex">\(Ax =x \in M\)</span>, we call <span class="arithmatex">\(x\)</span> is a fixed point of mapping <span class="arithmatex">\(A\)</span>. Then the following theorem is quite useful in our future proof.</p>
 <div class="admonition success">
-<p class="admonition-title">不动点定理 | Fixed-Point Theorem</p>
+<p class="admonition-title">Banach不动点定理 | Banach Fixed-Point Theorem</p>
+<p>(This also known as contraction mapping theorem.)</p>
 <p>Assume <span class="arithmatex">\(A: M\mapsto M\)</span> is a contraction mapping, then <span class="arithmatex">\(A\)</span> has a unique fixed-point.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="contraction-mapping-in-metric-space-hints" name="__tabbed_4" type="radio" /><input id="contraction-mapping-in-metric-space-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-in-metric-space-hints">Hints</label><label for="contraction-mapping-in-metric-space-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="contraction-mapping-in-metric-space-hints" name="__tabbed_5" type="radio" /><input id="contraction-mapping-in-metric-space-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-in-metric-space-hints">Hints</label><label for="contraction-mapping-in-metric-space-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We prove by showing that <span class="arithmatex">\(A^nx\)</span> is a Cauchy Sequence and its limit <span class="arithmatex">\(X\)</span> falls in <span class="arithmatex">\(M\)</span>. Then use the property of <strong>limits</strong> to show it is fixed-point of <span class="arithmatex">\(A\)</span>. Then prove the uniqueness by using property of metric <span class="arithmatex">\(\rho\)</span>.</p>
@@ -1504,12 +1544,12 @@ f_*|_{\pmb{x}}\left(\frac{d\varphi}{dt}\Bigg|_{t=0} \right) = \frac{d}{dt}\Bigg|
 <div class="arithmatex">\[
 \rho(A^nx,A^{n+1}x)\leq k^n\rho(x,Ax) = k^nd
 \]</div>
-<p>By Weierstrass test, sequence <span class="arithmatex">\(A^nx\)</span>, <span class="arithmatex">\(n=1,2,\cdots\)</span> is a cauchy sequence. So its limit exists and let <span class="arithmatex">\(X \overset{\Delta}{=} \lim\limits_{n\rightarrow \infty}A^nx\)</span>.</p>
+<p>Sequence <span class="arithmatex">\(A^nx\)</span>, <span class="arithmatex">\(n=1,2,\cdots\)</span> is convergent. So its limit exists and let <span class="arithmatex">\(X \overset{\Delta}{=} \lim\limits_{n\rightarrow \infty}A^nx\)</span>.</p>
 <p>So </p>
 <div class="arithmatex">\[
 AX = A \lim\limits_{n\rightarrow \infty}A^nx = \lim\limits_{n\rightarrow \infty}A^{n+1}x = X
 \]</div>
-<p>which means <span class="arithmatex">\(X\)</span> is a fixed-point of <span class="arithmatex">\(A\)</span>. Then we prove the uniqueness of fixed point. Assume there are two fixed points of <span class="arithmatex">\(A\)</span>, denoted as <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(y\)</span>. See that</p>
+<p>which means <span class="arithmatex">\(X\)</span> is a fixed-point of <span class="arithmatex">\(A\)</span>. Then we prove the uniqueness of fixed point. Assume there are two fixed points of <span class="arithmatex">\(A\)</span>, denoted as <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span>. See that</p>
 <div class="arithmatex">\[
 \rho(X, Y)  =\rho(AX, AY) \leq k\rho(X,Y)
 \]</div>
@@ -1518,7 +1558,155 @@ AX = A \lim\limits_{n\rightarrow \infty}A^nx = \lim\limits_{n\rightarrow \infty}
 </div>
 </div>
 <p>Readers can compare this theorem to <a href="../../Numerical_Analysis/NA/#Fixed-Point-Iteration">Fixed-Point Theorem</a> in <em>Numerical Analysis</em>. </p>
-<p>In the following part, we will choose metric </p>
+<p>Note that we have an abstract set <span class="arithmatex">\(M\)</span> with abstract metric <span class="arithmatex">\(\rho\)</span>. In the next part, we will let <span class="arithmatex">\(M\)</span> to be a set of mappings and <span class="arithmatex">\(\rho\)</span> to be natural norm of vectors. </p>
+<h3 id="Proof-1">证明1 | Proof 1<a class="headerlink" href="#Proof-1" title="Permanent link">&para;</a></h3>
+<p>Now we consider <strong>Picard mapping</strong> <span class="arithmatex">\(A\)</span> is a mapping from a mapping to another mapping</p>
+<div class="arithmatex">\[
+A: (\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
+\]</div>
+<p>defined by</p>
+<div class="arithmatex">\[
+(A\pmb{\varphi})(t) = \pmb{x}_0 + \int_{t_0}^{t}\pmb{f}(\tau, \pmb{\varphi}(\tau))d\tau
+\]</div>
+<p>Geometrically speaking, tangent line of each point on <span class="arithmatex">\(A\pmb{\varphi}\)</span>, i.e. <span class="arithmatex">\((A\pmb{\varphi})'(t)\)</span>, equals to the vector field determined by <span class="arithmatex">\(\pmb{\varphi}(t)\)</span>, i.e. <span class="arithmatex">\(f(t, \pmb{\varphi}(t))\)</span>. This can help us find a smaller region for <span class="arithmatex">\(A\pmb{\varphi}\)</span> to be well-defined.</p>
+<p>And note that <span class="arithmatex">\(\pmb{\varphi}\)</span> is a solution of Cauchy Problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> if and only if <span class="arithmatex">\(\pmb{\varphi} = A \pmb{\varphi}\)</span>. So we have to prove <span class="arithmatex">\(A\)</span> is a contraction mapping in a complete metric space.</p>
+<ul>
+<li>Prove <span class="arithmatex">\(\pmb{\varphi}\)</span> compose a complete metric space.</li>
+</ul>
+<p>We define a Space composed of <span class="arithmatex">\(\pmb{\varphi}: \mathbb{R}\mapsto \mathbb{R}^n\)</span> defined by <span class="arithmatex">\(\pmb{\varphi}(t)=\pmb{x}\)</span>.</p>
+<p>Define a metric <span class="arithmatex">\(\rho\)</span> to be</p>
+<div class="arithmatex">\[
+\rho(\pmb{\varphi_1}, \pmb{\varphi_2}) = \|\pmb{\varphi_1}-\pmb{\varphi_2}\| = \max_{}
+\]</div>
+<ul>
+<li>定义域<span class="arithmatex">\((t, \pmb{x})\)</span> | Some Constants <span class="arithmatex">\(a'\)</span>, <span class="arithmatex">\(b'\)</span>, <span class="arithmatex">\(c'\)</span></li>
+</ul>
+<p>Let </p>
+<div class="arithmatex">\[
+C=\max_{\pmb{x}\in \Gamma}\|\pmb{f}\|, \quad L= \max_{\pmb{x}\in \Gamma}\|\pmb{f}_*\| \text{(or by Lipschitz condition)}
+\]</div>
+<p>which can be obtained because <span class="arithmatex">\(\Gamma\)</span> is a compact set.</p>
+<p><p align="center">
+    <img src="../Picard_mapping.png" width="40%" />
+</p></p>
+<p>Now consider a <strong>Cone</strong>(锥体) with opening <span class="arithmatex">\(C\)</span> and sufficient small height <span class="arithmatex">\(a'\)</span> at point <span class="arithmatex">\((t_0,\pmb{x}_0)\)</span></p>
+<div class="arithmatex">\[
+K_0 = \{(t,\pmb{x}): |t-t_0|\leq a', \|\pmb{x}-\pmb{x}_0\|\leq C|t-t_0|\}
+\]</div>
+<p>Which means our mapping <span class="arithmatex">\(\pmb{\varphi}\)</span> after contraction mapping <span class="arithmatex">\(A\)</span> is still well-defined. See details in the following proof.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="Proof-1-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="Proof-1-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\|A\pmb{\varphi}(t) - \pmb{x}_0\| &amp;=\left\|\int_{t_0}^t\pmb{f}(\tau,\pmb{\varphi}(\tau))d\tau\right\| \\
+&amp;\leq \left\|\int_{t_0}^t|\pmb{f}(\tau,\pmb{\varphi}(\tau))|d\tau\right\|\\
+&amp;\leq C |t-t_0|
+\end{align*}
+\]</div>
+<p>So <span class="arithmatex">\(a'&lt;\frac{b'}{C}\)</span> such that <span class="arithmatex">\(\|A\pmb{\varphi}(t)-\pmb{x}_0\|\leq b'\)</span>.</p>
+</div>
+</div>
+</div>
+<ul>
+<li>Prove <span class="arithmatex">\(A\)</span> is a contraction mapping.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="Proof-1-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="Proof-1-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>That is, <span class="arithmatex">\(\forall \pmb{\varphi}_1, \pmb{\varphi}_2\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+\|A\pmb{\varphi}_1- A\pmb{\varphi}_2\| &amp;\leq \left\|\int_{t_0}^t[\pmb{f}(\tau, \pmb{\varphi}_1)-\pmb{f}(\tau, \pmb{\varphi}_2)]d\tau\right\|\\
+&amp;\leq \left\|\int_{t_0}^t\|\pmb{f}(\tau, \pmb{\varphi}_1)-\pmb{f}(\tau, \pmb{\varphi}_2)\|d\tau \right\|\\
+&amp;\leq L \int_{t_0}^t \|\pmb{\varphi}_1 - \pmb{\varphi}_2\|d\tau
+\end{align*}
+\]</div>
+<p>So <span class="arithmatex">\(a'&lt;\frac{1}{L}\)</span> such that <span class="arithmatex">\(A\)</span> is a contraction mapping.</p>
+<p>By fixed point theorem, there exists only one soluion of ODE.</p>
+</div>
+</div>
+</div>
+<h3 id="2-proof-2">证明2 | Proof 2<a class="headerlink" href="#2-proof-2" title="Permanent link">&para;</a></h3>
+<p>In this part, we consider a different mapping.</p>
+<ul>
+<li>定义域<span class="arithmatex">\((t, \pmb{x})\)</span></li>
+</ul>
+<p>In order to let all the possible cone to be in the cylinder, we have to shrink the region to make the region is well defined. That is, there exsits sufficiently small parameters <span class="arithmatex">\(b'&lt;b\)</span> such that <span class="arithmatex">\(\|\pmb{x}-\pmb{x}_0\|&lt;b'\)</span>. So now we get a smaller region (a smaller cylinder)</p>
+<div class="arithmatex">\[
+\Gamma' = \{(t, \pmb{x}): |t-t_0|&lt;a', \|\pmb{x}-\pmb{x}_0\|&lt;b'\}
+\]</div>
+<p><p align="center">
+    <img src="../Gamma.png" width="30%" />
+</p></p>
+<p>We also have to prove that <span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(M\)</span> into itself. That is, <span class="arithmatex">\(\|\varphi(t)-\pmb{x}_0\|\leq b'\)</span>. Here we have to make <span class="arithmatex">\(a'\)</span> to satisfy some condition.</p>
+<p>Consider all the possible continuous mapping <span class="arithmatex">\(\pmb{h}\)</span> which maps the above cylinder into <span class="arithmatex">\(\mathbb{R}^n\)</span>, which is a solution of original ODE problem. Assume <span class="arithmatex">\(M\)</span> is a set composed of these mappings with additional condition</p>
+<div class="arithmatex">\[
+\|\pmb{h}(t, \pmb{x})\| \leq C|t-t_0|
+\]</div>
+<p>Specially, we let <span class="arithmatex">\(\pmb{h}(t_0,\pmb{x})=0\)</span>. We introduce a metric </p>
+<div class="arithmatex">\[
+\rho(\pmb{h}_1,\pmb{h}_2)=\|\pmb{h}_1-\pmb{h}_2\|=\max_{(t,\pmb{x})\in \Gamma' }\|\pmb{h}_1(t,\pmb{x})-\pmb{h}_2(t,\pmb{x})\|
+\]</div>
+<p align="center">
+    <img src="../h(t,x).png" width="30%" />
+    </p>
+
+<p>Note: Space <span class="arithmatex">\(M\)</span> is dependent on <span class="arithmatex">\(a'\)</span>, <span class="arithmatex">\(b'\)</span> and <span class="arithmatex">\(C\)</span>.</p>
+<p>Now we really have to consider a mapping </p>
+<div class="arithmatex">\[
+A: M\mapsto M
+\]</div>
+<p>defined by</p>
+<div class="arithmatex">\[
+(A\pmb{h})(t, \pmb{x}) = \int_{t_0}^t\pmb{f}(\tau, \pmb{x}+\pmb{h}(\tau, \pmb{x}))d\tau
+\]</div>
+<div class="admonition success">
+<p class="admonition-title"><span class="arithmatex">\(A\)</span> 是压缩映射 | <span class="arithmatex">\(A\)</span> is a contraction mapping</p>
+<p><span class="arithmatex">\(A\)</span> is a contraction mapping from <span class="arithmatex">\(M\)</span> to <span class="arithmatex">\(M\)</span>, if <span class="arithmatex">\(a'\)</span> is sufficiently small.</p>
+</div>
+<p>Prove it. The following proof are set to find how small <span class="arithmatex">\(a'\)</span> shoulc be.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="2-proof-2-hints" name="__tabbed_8" type="radio" /><input id="2-proof-2-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="2-proof-2-hints">Hints</label><label for="2-proof-2-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Firstly, prove <span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(M\)</span> to itself. Then Prove if is a constraction mapping.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(M\)</span> to itself.</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+\|(A\pmb{h}(t, \pmb{x}))\| &amp;\leq \|\int_{t_0}^t\pmb{f}(\tau, \pmb{x}+\pmb{h}(\tau,\pmb{x}))d\tau\| \\
+&amp;\leq |\int_{t_0}^tCd\tau| \leq C|t-t_0|
+\end{align*}
+\]</div>
+<p>so <span class="arithmatex">\(AM\subset M\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span> is a constraction mapping.</li>
+</ul>
+<p>Estimate <span class="arithmatex">\(A\pmb{h}_1- A\pmb{h}_2\)</span>:</p>
+<div class="arithmatex">\[
+(A\pmb{h}_1-A\pmb{h}_2)(t,\pmb{x}) = \int_{t_0}^t[\pmb{f}(\tau, \pmb{x}+\pmb{h}_1(\tau,\pmb{x}))-\pmb{f}(\tau, \pmb{x}+\pmb{h}_2(\tau,\pmb{x}))]d\tau
+\]</div>
+<p>Denote <span class="arithmatex">\(\pmb{f}_i(\tau) = \pmb{f}(\tau, \pmb{x}+\pmb{h}_i(\tau,\pmb{x}))\)</span>, <span class="arithmatex">\(i=1,2\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+\|\pmb{f}_1(\tau)- \pmb{f}_2(\tau)\| &amp;\leq L\|\pmb{h}_1(\tau)-\pmb{h}_2(\tau)\| \quad\text{(using Lipschitz condition)}\\ 
+&amp;\leq L\|\pmb{h}_1-\pmb{h}_2\| = L\rho(\pmb{h}_1, \pmb{h}_2) \quad \text{(by definition of metric)}
+\end{align*}
+\]</div>
+<p>And </p>
+<div class="arithmatex">\[
+\|(A\pmb{h}_1-A\pmb{h}_2)(t,\pmb{x})\| \leq L a'\rho(\pmb{h}_1, \pmb{h}_2)
+\]</div>
+<p>So if <span class="arithmatex">\(La'&lt;1\)</span>, then <span class="arithmatex">\(A\)</span> is a contraction mapping.</p>
+</div>
+</div>
+</div>
+<p>Now we can finally give the proof of Picard Theorem.</p>
+<h3 id="lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition">附录：连续可微到Lipschitz连续 | Appendix: from Continuity &amp; Differentiability to Lipschitz Condition<a class="headerlink" href="#lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition" title="Permanent link">&para;</a></h3>
+<p>we will choose natural metric </p>
 <div class="arithmatex">\[
 \rho(\pmb{x}, \pmb{y}) = \|\pmb{x}-\pmb{y}\| = \sqrt{(\pmb{x}-\pmb{y},\pmb{x}-\pmb{y})}
 \]</div>
@@ -1536,7 +1724,7 @@ L = \sup_{\pmb{x}\in V} \|\pmb{f}_{*\pmb{x}}\|
 </p></p>
 </div>
 <p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="contraction-mapping-in-metric-space-hints_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-in-metric-space-hints_1">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition-hints" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition-hints">Hints</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let <span class="arithmatex">\(\pmb{z}(t)=\pmb{x}+t(\pmb{y}-\pmb{x})\)</span>, <span class="arithmatex">\(0\leq t\leq 1\)</span>. Then</p>
@@ -1559,100 +1747,6 @@ L = \sup_{\pmb{x}\in V} \|\pmb{f}_{*\pmb{x}}\|
 </div>
 </div>
 </div>
-<p>Now we consider <strong>Picard mapping</strong> <span class="arithmatex">\(A\)</span> is a mapping from a mapping to another mapping</p>
-<div class="arithmatex">\[
-A: (\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
-\]</div>
-<p>defined by</p>
-<div class="arithmatex">\[
-(A\pmb{\varphi})(t) = \pmb{x}_0 + \int_{t_0}^{t}\pmb{f}(\tau, \pmb{\varphi}(\tau))d\tau
-\]</div>
-<p>Geometrically speaking, tangent line of each point on <span class="arithmatex">\(A\pmb{\varphi}\)</span>, i.e. <span class="arithmatex">\((A\pmb{\varphi})'(t)\)</span>, equals to the vector field determined by <span class="arithmatex">\(\pmb{\varphi}(t)\)</span>, i.e. <span class="arithmatex">\(f(t, \pmb{\varphi}(t))\)</span>.</p>
-<p>Note that <span class="arithmatex">\(\pmb{\varphi}\)</span> is a solution of Cauchy Problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> if and only if <span class="arithmatex">\(\pmb{\varphi} = A \pmb{\varphi}\)</span>.</p>
-<h3 id="some-constants-a-b-c">一些变量的定义 | Some Constants <span class="arithmatex">\(a'\)</span>, <span class="arithmatex">\(b'\)</span>, <span class="arithmatex">\(c'\)</span><a class="headerlink" href="#some-constants-a-b-c" title="Permanent link">&para;</a></h3>
-<p>Assume we give a Euvlid Structrue in region <span class="arithmatex">\(D\in \mathbb{R}^{n+1}\)</span>, so <span class="arithmatex">\(T\mathbb{R}^n_{\pmb{x}}\)</span> also has a Euclid Structrue. For all <span class="arithmatex">\((t_0,\pmb{x}_0)\in D\)</span>, we consider a <strong>cylinder</strong>(柱体) with sufficiently small parameters <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span></p>
-<div class="arithmatex">\[
-\Gamma= \{(t, \pmb{x}): |t-t_0|\leq a, \|\pmb{x}-\pmb{x}_0\|\leq b\}
-\]</div>
-<p>which is still a subset of <span class="arithmatex">\(D\)</span>.</p>
-<p>Let </p>
-<div class="arithmatex">\[
-C=\max_{\pmb{x}\in \Gamma}\|\pmb{f}\|, \quad L= \max_{\pmb{x}\in \Gamma}\|\pmb{f}_*\|
-\]</div>
-<p>which can be obtained because <span class="arithmatex">\(\Gamma\)</span> is a compact set.</p>
-<p align="center">
-    <img src="../Gamma.png" width="30%" />
-</p>
-
-<p>Now consider a <strong>Cone</strong>(锥体) with opening <span class="arithmatex">\(C\)</span> and sufficient small height <span class="arithmatex">\(a'\)</span> at point <span class="arithmatex">\((t_0,\pmb{x}_0)\)</span></p>
-<div class="arithmatex">\[
-K_0 = \{(t,\pmb{x}): |t-t_0|\leq a', \|\pmb{x}-\pmb{x}_0\|\leq C|t-t_0|\}
-\]</div>
-<p>In order to let all the possible cone to be in the cylinder, we have to shrink the region to make the region is well defined. That is, there exsits sufficiently small parameters <span class="arithmatex">\(b'&lt;b\)</span> such that <span class="arithmatex">\(\|\pmb{x}-pmb{x}_0\|&lt;b'\)</span>. So now we get a smaller region (a smaller cylinder)</p>
-<div class="arithmatex">\[
-\Gamma' = \{(t, \pmb{x}): |t-t_0|&lt;a', \|\pmb{x}-\pmb{x}_0\|&lt;b'\}
-\]</div>
-<p>Consider all the possible continuous mapping <span class="arithmatex">\(\pmb{h}\)</span> which maps the above cylinder into <span class="arithmatex">\(\mathbb{R}^n\)</span>, which is a solution of original ODE problem. Assume <span class="arithmatex">\(M\)</span> is a set composed of these mappings with additional condition</p>
-<div class="arithmatex">\[
-\|\pmb{h}(t, \pmb{x})\| \leq C|t-t_0|
-\]</div>
-<p>Specially, we let <span class="arithmatex">\(\pmb{h}(t_0,\pmb{x})=0\)</span>. We introduce a metric </p>
-<div class="arithmatex">\[
-\rho(\pmb{h}_1,\pmb{h}_2)=\|\pmb{h}_1-\pmb{h}_2\|=\max_{(t,\pmb{x})\in \Gamma' }\|\pmb{h}_1(t,\pmb{x})-\pmb{h}_2(t,\pmb{x})\|
-\]</div>
-<p><p align="center">
-    <img src="../h(t,x).png" width="30%" />
-    </p></p>
-<p>Note: Space <span class="arithmatex">\(M\)</span> is dependent on <span class="arithmatex">\(a'\)</span>, <span class="arithmatex">\(b'\)</span> and <span class="arithmatex">\(C\)</span>.</p>
-<h3 id="begin-proof">证明 | Begin Proof<a class="headerlink" href="#begin-proof" title="Permanent link">&para;</a></h3>
-<p>Now we really have to consider a mapping </p>
-<div class="arithmatex">\[
-A: M\mapsto M
-\]</div>
-<p>defined by</p>
-<div class="arithmatex">\[
-(A\pmb{h})(t, \pmb{x}) = \int_{t_0}^t\pmb{f}(\tau, \pmb{x}+\pmb{h}(\tau, \pmb{x}))d\tau
-\]</div>
-<div class="admonition success">
-<p class="admonition-title"><span class="arithmatex">\(A\)</span> 是压缩映射 | <span class="arithmatex">\(A\)</span> is a contraction mapping</p>
-<p><span class="arithmatex">\(A\)</span> is a contraction mapping from <span class="arithmatex">\(M\)</span> to <span class="arithmatex">\(M\)</span>, if <span class="arithmatex">\(a'\)</span> is sufficiently small.</p>
-</div>
-<p>Prove it. The following proof are set to find how small <span class="arithmatex">\(a'\)</span> shoulc be.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="begin-proof-hints" name="__tabbed_6" type="radio" /><input id="begin-proof-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="begin-proof-hints">Hints</label><label for="begin-proof-proof">Proof</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Firstly, prove <span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(M\)</span> to itself. Then Prove if is a constraction mapping.</p>
-</div>
-<div class="tabbed-block">
-<ul>
-<li><span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(M\)</span> to itself.</li>
-</ul>
-<div class="arithmatex">\[
-\begin{align*}
-\|(A\pmb{h}(t, \pmb(x)))\| &amp;\leq \|\int_{t_0}^t\pmb{f}(\tau, \pmb{x}+\pmb{h}(\tau,\pmb{x}))d\tau\| \\
-&amp;\leq |\int_{t_0}^tCd\tau| \leq C|t-t_0|
-\end{align*}
-\]</div>
-<p>so <span class="arithmatex">\(AM\subset M\)</span>.</p>
-<ul>
-<li><span class="arithmatex">\(A\)</span> is a constraction mapping.</li>
-</ul>
-<p>Estimate <span class="arithmatex">\(A\pmb{h}_1- A\pmb{h}_2\)</span>:</p>
-<div class="arithmatex">\[
-(A\pmb{h}_1-A\pmb{h}_2)(t,\pmb{x}) = \int_{t_0}^t[\pmb{f}(\tau, \pmb{x}+\pmb{h}_1(\tau,\pmb{x}))-\pmb{f}(\tau, \pmb{x}+\pmb{h}_2(\tau,\pmb{x}))]d\tau
-\]</div>
-<p>Denote <span class="arithmatex">\(\pmb{f}_i(\tau) = \pmb{f}(\tau, \pmb{x}+\pmb{h}_i(\tau,\pmb{x}))\)</span>, <span class="arithmatex">\(i=1,2\)</span>, so</p>
-<div class="arithmatex">\[
-\begin{align*}
-\|\pmb{f}_1(\tau)- \pmb{f}_2(\tau)\| &amp;\leq L\|\pmb{h}_1(\tau)-\pmb{h}_2(\tau)\| \text{using Lipschitz condition}\\ 
-&amp;\leq \|\pmb{h}_1-\pmb{h}_2\| = \rho(\pmb{h}_1, \pmb{h}_2) (by definition of metric)
-\end{align*}
-\]</div>
-<p>So if <span class="arithmatex">\(La'&lt;1\)</span>, then <span class="arithmatex">\(A\)</span> is a contraction mapping.</p>
-</div>
-</div>
-</div>
-<p>Now we can finally give the proof of Picard Theorem.</p>
 
 
 
