@@ -1225,6 +1225,7 @@
 <div class="admonition reference">
 <p class="admonition-title">Reference</p>
 <p><em>Ordinary Differential Equation</em>, Vladimir Igorevich Arnold</p>
+<p>《常微分方程》 Л.С.庞特里亚金</p>
 </div>
 <h2 id="proof-using-contraction-mapping">压缩映射法 | Proof using Contraction Mapping<a class="headerlink" href="#proof-using-contraction-mapping" title="Permanent link">&para;</a></h2>
 <p>This part we want to prove <a href="../General_Theory/#Picard-Theorem">Picard Theorem</a> from another perspective. And this method is also universal on multi-dimensional Cauchy Problem. So to simplify the notation, we change the problem equivalently to </p>
@@ -1528,7 +1529,8 @@ f_*|_{\pmb{x}}\left(\frac{d\varphi}{dt}\Bigg|_{t=0} \right) = \frac{d}{dt}\Bigg|
 \]</div>
 <p>then <span class="arithmatex">\(A\)</span> is called a <strong>Contraction mapping</strong>.</p>
 </div>
-<p>If <span class="arithmatex">\(Ax =x \in M\)</span>, we call <span class="arithmatex">\(x\)</span> is a fixed point of mapping <span class="arithmatex">\(A\)</span>. Then the following theorem is quite useful in our future proof.</p>
+<p>If <span class="arithmatex">\(Ax =x \in M\)</span>, we call <span class="arithmatex">\(x\)</span> is a fixed point of mapping <span class="arithmatex">\(A\)</span>. Then the following theorem is quite useful in our future proof.
+<a id="Banach Fixed-Point Theorem"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Banach不动点定理 | Banach Fixed-Point Theorem</p>
 <p>(This also known as contraction mapping theorem.)</p>
@@ -1558,7 +1560,7 @@ AX = A \lim\limits_{n\rightarrow \infty}A^nx = \lim\limits_{n\rightarrow \infty}
 </div>
 </div>
 <p>Readers can compare this theorem to <a href="../../Numerical_Analysis/NA/#Fixed-Point-Iteration">Fixed-Point Theorem</a> in <em>Numerical Analysis</em>. </p>
-<p>Note that we have an abstract set <span class="arithmatex">\(M\)</span> with abstract metric <span class="arithmatex">\(\rho\)</span>. In the next part, we will let <span class="arithmatex">\(M\)</span> to be a set of mappings and <span class="arithmatex">\(\rho\)</span> to be natural norm of vectors. </p>
+<p>Note that we have an abstract set <span class="arithmatex">\(M\)</span> with abstract metric <span class="arithmatex">\(\rho\)</span>. In the next two parts, we will let <span class="arithmatex">\(M\)</span> to be a set of mappings and <span class="arithmatex">\(\rho\)</span> to be defined based on natural norm of vectors. </p>
 <h3 id="Proof-1">证明1 | Proof 1<a class="headerlink" href="#Proof-1" title="Permanent link">&para;</a></h3>
 <p>Now we consider <strong>Picard mapping</strong> <span class="arithmatex">\(A\)</span> is a mapping from a mapping to another mapping</p>
 <div class="arithmatex">\[
@@ -1571,27 +1573,23 @@ A: (\pmb{\varphi}: t\mapsto \pmb{x}) \mapsto (A\pmb{\varphi}: t\mapsto \pmb{x})
 <p>Geometrically speaking, tangent line of each point on <span class="arithmatex">\(A\pmb{\varphi}\)</span>, i.e. <span class="arithmatex">\((A\pmb{\varphi})'(t)\)</span>, equals to the vector field determined by <span class="arithmatex">\(\pmb{\varphi}(t)\)</span>, i.e. <span class="arithmatex">\(f(t, \pmb{\varphi}(t))\)</span>. This can help us find a smaller region for <span class="arithmatex">\(A\pmb{\varphi}\)</span> to be well-defined.</p>
 <p>And note that <span class="arithmatex">\(\pmb{\varphi}\)</span> is a solution of Cauchy Problem <span class="arithmatex">\(\ref{eq-vector-cauchy}\)</span> if and only if <span class="arithmatex">\(\pmb{\varphi} = A \pmb{\varphi}\)</span>. So we have to prove <span class="arithmatex">\(A\)</span> is a contraction mapping in a complete metric space.</p>
 <ul>
-<li>Prove <span class="arithmatex">\(\pmb{\varphi}\)</span> compose a complete metric space.</li>
-</ul>
-<p>We define a Space composed of <span class="arithmatex">\(\pmb{\varphi}: \mathbb{R}\mapsto \mathbb{R}^n\)</span> defined by <span class="arithmatex">\(\pmb{\varphi}(t)=\pmb{x}\)</span>.</p>
-<p>Define a metric <span class="arithmatex">\(\rho\)</span> to be</p>
-<div class="arithmatex">\[
-\rho(\pmb{\varphi_1}, \pmb{\varphi_2}) = \|\pmb{\varphi_1}-\pmb{\varphi_2}\| = \max_{}
-\]</div>
-<ul>
-<li>定义域<span class="arithmatex">\((t, \pmb{x})\)</span> | Some Constants <span class="arithmatex">\(a'\)</span>, <span class="arithmatex">\(b'\)</span>, <span class="arithmatex">\(c'\)</span></li>
+<li>定义域<span class="arithmatex">\((t, \pmb{x})\)</span> | Some Constants <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(M\)</span></li>
 </ul>
 <p>Let </p>
 <div class="arithmatex">\[
-C=\max_{\pmb{x}\in \Gamma}\|\pmb{f}\|, \quad L= \max_{\pmb{x}\in \Gamma}\|\pmb{f}_*\| \text{(or by Lipschitz condition)}
+M=\max_{\pmb{x}\in \Gamma}\|\pmb{f}\|, \quad L= \max_{\pmb{x}\in \Gamma}\|\pmb{f}_*\| \text{(or by Lipschitz condition)}
 \]</div>
-<p>which can be obtained because <span class="arithmatex">\(\Gamma\)</span> is a compact set.</p>
+<p>which can be obtained because <span class="arithmatex">\(\Gamma\)</span> is a compact set.
+Firstly, we consider a <strong>Cylinder</strong></p>
+<div class="arithmatex">\[
+\Gamma = \{(t,\pmb{x}): |t-t_0|\leq a, \|\pmb{x}-\pmb{x}_0\|\leq b\}
+\]</div>
 <p><p align="center">
     <img src="../Picard_mapping.png" width="40%" />
 </p></p>
-<p>Now consider a <strong>Cone</strong>(锥体) with opening <span class="arithmatex">\(C\)</span> and sufficient small height <span class="arithmatex">\(a'\)</span> at point <span class="arithmatex">\((t_0,\pmb{x}_0)\)</span></p>
+<p>Now consider a <strong>Cone</strong>(锥体) with opening <span class="arithmatex">\(M\)</span> and sufficient small height <span class="arithmatex">\(a\)</span> at point <span class="arithmatex">\((t_0,\pmb{x}_0)\)</span></p>
 <div class="arithmatex">\[
-K_0 = \{(t,\pmb{x}): |t-t_0|\leq a', \|\pmb{x}-\pmb{x}_0\|\leq C|t-t_0|\}
+K_0 = \{(t,\pmb{x}): |t-t_0|\leq a, \|\pmb{x}-\pmb{x}_0\|\leq M|t-t_0|\}
 \]</div>
 <p>Which means our mapping <span class="arithmatex">\(\pmb{\varphi}\)</span> after contraction mapping <span class="arithmatex">\(A\)</span> is still well-defined. See details in the following proof.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="Proof-1-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="Proof-1-proof">Proof</label></div>
@@ -1600,33 +1598,43 @@ K_0 = \{(t,\pmb{x}): |t-t_0|\leq a', \|\pmb{x}-\pmb{x}_0\|\leq C|t-t_0|\}
 <div class="arithmatex">\[
 \begin{align*}
 \|A\pmb{\varphi}(t) - \pmb{x}_0\| &amp;=\left\|\int_{t_0}^t\pmb{f}(\tau,\pmb{\varphi}(\tau))d\tau\right\| \\
-&amp;\leq \left\|\int_{t_0}^t|\pmb{f}(\tau,\pmb{\varphi}(\tau))|d\tau\right\|\\
-&amp;\leq C |t-t_0|
+&amp;\leq \left|\int_{t_0}^t\|\pmb{f}(\tau,\pmb{\varphi}(\tau))\|d\tau\right|\\
+&amp;\leq M |t-t_0|
 \end{align*}
 \]</div>
-<p>So <span class="arithmatex">\(a'&lt;\frac{b'}{C}\)</span> such that <span class="arithmatex">\(\|A\pmb{\varphi}(t)-\pmb{x}_0\|\leq b'\)</span>.</p>
+<p>So as long as <span class="arithmatex">\(a&lt;b/M\)</span>, <span class="arithmatex">\(\|A\pmb{\varphi}(t)-\pmb{x}_0\|\leq b\)</span>.</p>
 </div>
 </div>
 </div>
+<ul>
+<li>Prove <span class="arithmatex">\(\pmb{\varphi}\)</span> compose a <strong>complete metric space</strong>.</li>
+</ul>
+<p>We define a Space <span class="arithmatex">\(M\)</span> composed of mappings <span class="arithmatex">\(\pmb{\varphi}: \mathbb{R}\mapsto \mathbb{R}^n\)</span> defined by <span class="arithmatex">\(\pmb{\varphi}(t)=\pmb{x}\)</span>.</p>
+<p>Define a metric <span class="arithmatex">\(\rho\)</span> to be</p>
+<div class="arithmatex">\[
+\rho(\pmb{\varphi}_1, \pmb{\varphi}_2) = \|\pmb{\varphi}_1-\pmb{\varphi}_2\| = \max_{|t-t_0|\leq a}|\pmb{\varphi}_1(t)-\pmb{\varphi}_2(t)|
+\]</div>
+<p>Then <span class="arithmatex">\(\{M, \rho\}\)</span> is a complete metric space.</p>
 <ul>
 <li>Prove <span class="arithmatex">\(A\)</span> is a contraction mapping.</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="Proof-1-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="Proof-1-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>That is, <span class="arithmatex">\(\forall \pmb{\varphi}_1, \pmb{\varphi}_2\)</span></p>
+<p>That is, <span class="arithmatex">\(\forall \pmb{\varphi}_1, \pmb{\varphi}_2 \in M\)</span></p>
 <div class="arithmatex">\[
 \begin{align*}
-\|A\pmb{\varphi}_1- A\pmb{\varphi}_2\| &amp;\leq \left\|\int_{t_0}^t[\pmb{f}(\tau, \pmb{\varphi}_1)-\pmb{f}(\tau, \pmb{\varphi}_2)]d\tau\right\|\\
-&amp;\leq \left\|\int_{t_0}^t\|\pmb{f}(\tau, \pmb{\varphi}_1)-\pmb{f}(\tau, \pmb{\varphi}_2)\|d\tau \right\|\\
-&amp;\leq L \int_{t_0}^t \|\pmb{\varphi}_1 - \pmb{\varphi}_2\|d\tau
+\|A\pmb{\varphi}_1- A\pmb{\varphi}_2\| &amp;= \left\|\int_{t_0}^t[\pmb{f}(\tau, \pmb{\varphi}_1(\tau))-\pmb{f}(\tau, \pmb{\varphi}_2(\tau))]d\tau\right\|\\
+&amp;\leq \left|\int_{t_0}^t\|\pmb{f}(\tau, \pmb{\varphi}_1(\tau))-\pmb{f}(\tau, \pmb{\varphi}_2(\tau))\|d\tau \right|\\
+&amp;\leq L \int_{t_0}^t \|\pmb{\varphi}_1(\tau) - \pmb{\varphi}_2(\tau)\|d\tau \\
+&amp;\leq L \|\pmb{\varphi}_1 - \pmb{\varphi}_2\| \int_{t_0}^t d\tau = L |t-t_0| \|\pmb{\varphi}_1 - \pmb{\varphi}_2\| 
 \end{align*}
 \]</div>
-<p>So <span class="arithmatex">\(a'&lt;\frac{1}{L}\)</span> such that <span class="arithmatex">\(A\)</span> is a contraction mapping.</p>
-<p>By fixed point theorem, there exists only one soluion of ODE.</p>
+<p>So as long as <span class="arithmatex">\(a&lt;1/L\)</span>, <span class="arithmatex">\(A\)</span> is a contraction mapping.</p>
 </div>
 </div>
 </div>
+<p>By <a href="#Banach Fixed-Point Theorem">Banach Fixed Point Theorem</a>, there exists only one soluion of ODE.</p>
 <h3 id="2-proof-2">证明2 | Proof 2<a class="headerlink" href="#2-proof-2" title="Permanent link">&para;</a></h3>
 <p>In this part, we consider a different mapping.</p>
 <ul>
@@ -1704,7 +1712,6 @@ A: M\mapsto M
 </div>
 </div>
 </div>
-<p>Now we can finally give the proof of Picard Theorem.</p>
 <h3 id="lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition">附录：连续可微到Lipschitz连续 | Appendix: from Continuity &amp; Differentiability to Lipschitz Condition<a class="headerlink" href="#lipschitz-appendix-from-continuity-differentiability-to-lipschitz-condition" title="Permanent link">&para;</a></h3>
 <p>we will choose natural metric </p>
 <div class="arithmatex">\[
