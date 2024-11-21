@@ -530,6 +530,92 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Numerical_Analysis/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Numerical Analysis
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Numerical Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Numerical_Analysis/MC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix Calculation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../Numerical_Analysis/NA/" class="md-nav__link">
         
@@ -540,6 +626,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -839,6 +933,24 @@
   <a href="#excellent-series" class="md-nav__link">
     <span class="md-ellipsis">
       Excellent Series
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明 | Proof
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录 | Appendix: Relation between \(c\) and \(a\)
     </span>
   </a>
   
@@ -1151,6 +1263,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      证明 | Proof
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Appendix" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录 | Appendix: Relation between \(c\) and \(a\)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1212,12 +1342,13 @@
 <div class="arithmatex">\[
 |a_{i\pmb{j}}|&lt;A_{i\pmb{j}}, \quad \forall i,\pmb{j}
 \]</div>
-<p>Then we call series <span class="arithmatex">\(\ref{series2}\)</span> is an excellent series of series <span class="arithmatex">\(\ref{series1}\)</span>. If series <span class="arithmatex">\(\ref{series2}\)</span> can conveges on closed region</p>
+<p>Then we call series <span class="arithmatex">\(\ref{series2}\)</span> is an excellent series of series <span class="arithmatex">\(\ref{series1}\)</span>. If series <span class="arithmatex">\(\ref{series2}\)</span> converges on closed region</p>
 <div class="arithmatex">\[
 \{(x,y): |x-x_0|\leq \alpha,|\pmb{y}-\pmb{y}_0|\leq\beta\}
 \]</div>
 <p>then we call its summing function <span class="arithmatex">\(\pmb{f}(x,\pmb{y})\)</span> is an Excellent function of series <span class="arithmatex">\(\ref{series1}\)</span>.(note that in this case, series <span class="arithmatex">\(\ref{series1}\)</span> also converges)</p>
 </div>
+<p><a id="lemma1"></a></p>
 <div class="admonition success">
 <p class="admonition-title">引理1: 解析函数有定义域收缩的优函数 | Lemma 1: A analytic function has an excellent function within smaller region</p>
 <p>If <span class="arithmatex">\(f(x,\pmb{y})\)</span> is analytic on region</p>
@@ -1226,7 +1357,7 @@ R: \{(x,y): |x-x_0|&lt;\alpha, |\pmb{y}-\pmb{y}_0|&lt;\beta\}
 \]</div>
 <p>then <span class="arithmatex">\(\exists M&gt;0\)</span>, s.t.</p>
 <div class="arithmatex">\[
-F(x,\pmb{y})=\frac{M}{(1-\frac{x-x_0}{a})(1-\frac{y_1-y_{10}}{b})\cdots(1-\frac{y_n-y_{n0}}{b})}
+F(x,\pmb{y})=\frac{M}{\left(1-\frac{x-x_0}{a}\right)\left(1-\frac{y_1-y_{10}}{b}\right)\cdots\left(1-\frac{y_n-y_{n0}}{b}\right)}
 \]</div>
 <p>is an Excellent function of <span class="arithmatex">\(f(x,\pmb{y})\)</span> on a smaller region </p>
 <div class="arithmatex">\[
@@ -1236,36 +1367,43 @@ R_0:\{(x,y): |x-x_0|&lt;a,|\pmb{y}-\pmb{y}_0|&lt;b\}.
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="excellent-series-hints" name="__tabbed_1" type="radio" /><input id="excellent-series-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="excellent-series-hints">Hints</label><label for="excellent-series-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Use Abel Second Theorem.</p>
+<p>Use Abel Second Theorem. Note that we can not guarrantee the convergence on boundaries, so we choose open intervals.</p>
 </div>
 <div class="tabbed-block">
 <p>We can represent <span class="arithmatex">\(f(x,\pmb{y})\)</span> in terms of power series</p>
 <div class="arithmatex">\[
-f(x,\pmb{y})=\sum_{i=0.\pmb{j}=0}^\infty c_{i\pmb{j}}(x-x_0)^i(\pmb{y}-\pmb{y}_0)^{\pmb{j}}
+f(x,\pmb{y})=\sum_{i=0.\pmb{j}=0}^\infty a_{i\pmb{j}}(x-x_0)^i(\pmb{y}-\pmb{y}_0)^{\pmb{j}}
 \]</div>
 <p>in region <span class="arithmatex">\(R\)</span>. Then by Abel Second Theorem, <span class="arithmatex">\(\exists a\in(0,\alpha), b\in(0,\beta)\)</span> s.t.</p>
 <div class="arithmatex">\[
-\sum_{i=0.\pmb{j}=0}^\infty c_{i\pmb{j}}a^i b^{j_1+j_2+\cdots+j_n}
+\sum_{i=0.\pmb{j}=0}^\infty a_{i\pmb{j}}a^i b^{j_1+j_2+\cdots+j_n}
 \]</div>
 <p>is convergent, so each item of the above series can be bounded by a number <span class="arithmatex">\(M&gt;0\)</span>:</p>
 <div class="arithmatex">\[
-|c_{i\pmb{j}}|a^i b^{j_1+j_2+\cdots+j_n}\leq M \Rightarrow |c_{i\pmb{j}}|\leq \frac{M}{a^i b^{j_1+j_2+\cdots+j_n}}
+|a_{i\pmb{j}}|a^i b^{j_1+j_2+\cdots+j_n}\leq M \Rightarrow |a_{i\pmb{j}}|\leq \frac{M}{a^i b^{j_1+j_2+\cdots+j_n}}
 \]</div>
-<p>Now, the following thing is a little tricky. Consider a power of series </p>
+<p>Now, the following thing is a little tricky. Define </p>
 <div class="arithmatex">\[
-\sum_{i=0.\pmb{j}=0}^\infty \frac{M}{a^i b^{j_1+j_2+\cdots+j_n}}(x-x_0)^i(\pmb{y}-\pmb{y}_0)^{\pmb{j}}
+A_{i\pmb{j}}=\frac{M}{a^i b^{j_1+j_2+\cdots+j_n}}
+\]</div>
+<p>Consider a power of series </p>
+<div class="arithmatex">\[
+\begin{equation}
+\sum_{i=0.\pmb{j}=0}^\infty A_{i\pmb{j}}(x-x_0)^i(\pmb{y}-\pmb{y}_0)^{\pmb{j}} \label{series-exce}
+\end{equation}
 \]</div>
 <p>which is convergent because it can add up to:</p>
 <div class="arithmatex">\[
-F(x,\pmb{y})=\frac{M}{(1-\frac{x-x_0}{a})(1-\frac{y_1-y_{10}}{b})\cdots(1-\frac{y_n-y_{n0}}{b})}
+F(x,\pmb{y})=\frac{M}{\left(1-\frac{x-x_0}{a}\right)\left(1-\frac{y_1-y_{10}}{b}\right)\cdots\left(1-\frac{y_n-y_{n0}}{b}\right)}
 \]</div>
 <p>with its range of definition <span class="arithmatex">\(R_0\)</span>. By definition, it is an excellent function of <span class="arithmatex">\(f(x,\pmb{y})\)</span>.</p>
 </div>
 </div>
 </div>
 <p>With the definition of Excellent function, we have to use it to formulate an excellent series of the original series. This is the following theorem.</p>
+<p><a id="lemma2"></a></p>
 <div class="admonition success">
-<p class="admonition-title">Lemma2: </p>
+<p class="admonition-title">引理2: 用上述优函数建立的微分方程有解析解 | Lemma2: ODE combined with The above Excellent Function has a solution that can be represented by Power Series</p>
 <p>Cauchy problem </p>
 <div class="arithmatex">\[
 \frac{d \pmb{y}}{dx}=\pmb{F}(x,\pmb{y}), \quad \pmb{y}(x_0)=\pmb{y}_0 \label{eq-cauchy-prime}
@@ -1287,27 +1425,160 @@ F(x,\pmb{y})=\frac{M}{(1-\frac{x-x_0}{a})(1-\frac{y_1-y_{10}}{b})\cdots(1-\frac{
 \]</div>
 <p>where </p>
 <div class="arithmatex">\[
-F(x,u) = \frac{M}{(1-\frac{x-x_0}{a})(1-\frac{u_1-u_{0}}{b})^n}
+F(x,u) = \frac{M}{\left(1-\frac{x-x_0}{a}\right)\left(1-\frac{u-u_{0}}{b}\right)^n}
 \]</div>
+<p>(Here readers can see that <span class="arithmatex">\(u-u_0=y_i-y_{i0}\)</span>.)</p>
+<p>The above ODE is a variable separation equation. So change the form and integrate on <span class="arithmatex">\([x_0,x]\)</span></p>
+<div class="arithmatex">\[
+\frac{-b}{n+1}\left(1-\frac{u-u_0}{b}\right)^{n+1} +\frac{b}{n+1}= -aM\ln\left(1-\frac{x-x_0}{a}\right)
+\]</div>
+<p>get <span class="arithmatex">\(u\)</span> out:</p>
+<div class="arithmatex">\[
+u = u_0 + b- b\left[\frac{aM(n+1)}{b} \ln\left(1-\frac{x-x_0}{a}\right) + 1\right]^{\frac{1}{n+1}}
+\]</div>
+<p>That is,</p>
+<div class="arithmatex">\[
+y_i(x) = y_{i0} + b- b\left[\frac{aM(n+1)}{b} \ln\left(1-\frac{x-x_0}{a}\right) + 1\right]^{\frac{1}{n+1}}, \quad \forall i=1,2\cdots,n
+\]</div>
+<p>We want to use this form to get a power series. See that <span class="arithmatex">\(\ln{\left(1-\frac{x-x_0}{a}\right)}\)</span> can be represented by power series of <span class="arithmatex">\((x-x_0)\)</span> once <span class="arithmatex">\(|x-x_0|&lt;a\)</span>. And also <span class="arithmatex">\((1+s)^{\frac{1}{n+1}}\)</span> can be represented by power series of <span class="arithmatex">\(s\)</span> when <span class="arithmatex">\(|s|&lt;1\)</span>. So by combine the above two, we know <span class="arithmatex">\(y_i(x)\)</span> can be represented by <span class="arithmatex">\((x-x_0)\)</span> once <span class="arithmatex">\(|x-x_0|&lt;a\)</span>. To be more specific, We have to let the radius of converence to satisfy</p>
+<div class="arithmatex">\[
+\begin{cases}
+\displaystyle 1-\frac{\rho}{a} \geq 0 \\
+\displaystyle \frac{aM(n+1)}{b}\ln\left(1-\frac{\rho}{a}\right)\leq 1 
+\end{cases}
+\Rightarrow
+\begin{cases}
+\rho\leq a \\
+\rho\leq a\{1-e^{b/[(n+1)aM]}\}
+\end{cases}
+\]</div>
+<p>choose</p>
+<div class="arithmatex">\[
+\rho=a\{1-e^{b/[(n+1)aM]}\}
+\]</div>
+<p>So solution of the above ODE</p>
+<div class="arithmatex">\[
+\pmb{y}(x)=(y_1(x),y_2(x),\cdots, y_n(x))
+\]</div>
+<p>can be represented by power series of <span class="arithmatex">\((x-x_0)\)</span> when <span class="arithmatex">\(|x-x_0|&lt;\rho\)</span>.</p>
 </div>
 </div>
 </div>
+<h2 id="proof">证明 | Proof<a class="headerlink" href="#proof" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Cauchy 定理 | Cauchy Theorem</p>
-<p>Assume <span class="arithmatex">\(\pmb{f}(x,\pmb{y})=[f_1(x,\pmb{y}), f_2(x,\pmb{y}),\cdots, f_n(x,\pmb{y})]\)</span> is an <strong>analytic</strong> function on region <span class="arithmatex">\(R\)</span>. So problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span> has a unique analytic solution <span class="arithmatex">\(\pmb{y} = \pmb{y}(x)\)</span> on the neighborhood of <span class="arithmatex">\(x_0\)</span> <span class="arithmatex">\(|x-x_0|&lt;\rho\)</span>, where <span class="arithmatex">\(\rho\)</span> is given in the above lemmas.</p>
+<p>Assume <span class="arithmatex">\(\pmb{f}(x,\pmb{y})=[f_1(x,\pmb{y}), f_2(x,\pmb{y}),\cdots, f_n(x,\pmb{y})]\)</span> is an <strong>analytic</strong> function on region <span class="arithmatex">\(R\)</span>. So problem <span class="arithmatex">\(\ref{eq-cauchy}\)</span> has a unique analytic solution <span class="arithmatex">\(\pmb{y} = \pmb{y}(x)\)</span> on <span class="arithmatex">\(O_\rho(x)\)</span>, where <span class="arithmatex">\(\rho\)</span> is given in <a href="#lemma2">Lemma 2</a>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="excellent-series-hints_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="excellent-series-hints_2">Hints</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="proof-hints" name="__tabbed_3" type="radio" /><input id="proof-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="proof-hints">Hints</label><label for="proof-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
 <li>
-<p>Using Abel theorem.</p>
+<p>Represent solution with power series. Show that it is unique.</p>
 </li>
 <li>
-<p>Using an excellent series.</p>
+<p>Use an excellent series to prove the above power series convergent.</p>
 </li>
 </ul>
 </div>
+<div class="tabbed-block">
+<ul>
+<li>Represent <span class="arithmatex">\(f_k(x,\pmb{y})\)</span> with power series</li>
+</ul>
+<div class="arithmatex">\[
+\begin{equation}
+f_k(x,\pmb{y})=\sum_{i=0,\pmb{j}=0}^\infty a_{i\pmb{j}}^k (x-x_0)^i(\pmb{y}-\pmb{y}_0)^{\pmb{j}} \label{eq-f}
+\end{equation}
+\]</div>
+<p>And represent solution with power series</p>
+<div class="arithmatex">\[
+\begin{equation}
+y_k(x) = y_{k0} + \sum_{i=1}^\infty c_i^k(x-x_0)^i,\quad k=1,2,\cdots,n \label{eq-y}
+\end{equation}
+\]</div>
+<p>substitute <span class="arithmatex">\(\ref{eq-f}\)</span> and <span class="arithmatex">\(\ref{eq-y}\)</span> into ODE</p>
+<div class="arithmatex">\[
+\frac{d y_k}{dx} = f_k(x,\pmb{y}),\quad k=1,2\cdots,n
+\]</div>
+<p>and get</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{i=0}^\infty (i +1) c_{i+1}^k(x-x_0)^i = \sum_{i,j_1,j_2,\cdots,j_n=0}^\infty \Bigg\{ &amp; a^k_{i{j_1}{j_2}\cdots{j_n}}(x-x_0)^i \times \\ 
+&amp;\left[\sum_{i=1}^\infty c_i^1(x-x_0)^i\right]^{j_1} \times \\
+&amp;\left[\sum_{i=1}^\infty c_i^2(x-x_0)^i \right]^{j_2} \times \\
+&amp;\cdots \\
+&amp; \left[\sum_{i=1}^\infty c_i^n(x-x_0)^i \right]^{j_n}\Bigg\},\quad k=1,2\cdots,n.
+\end{align*}
+\]</div>
+<p>Denote <span class="arithmatex">\(X = x-x_0\)</span>, and we have</p>
+<div class="arithmatex">\[
+\sum_{i=0}^\infty (i +1) c_{i+1}^kX^i = \sum_{i,j_1,j_2,\cdots,j_n=0}^\infty a^k_{i{j_1}{j_2}\cdots{j_n}}X^i \left(\sum_{i=1}^\infty c_i^1X^i\right)^{j_1} \left(\sum_{i=1}^\infty c_i^2X^i\right)^{j_2} \cdots
+\left(\sum_{i=1}^\infty c_i^nX^i\right)^{j_n}
+\]</div>
+<p>and get <span class="arithmatex">\(c_i^k\)</span> out in terms of <span class="arithmatex">\(a^k_{i\pmb{j}}\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+c_1^k &amp;= a^k_{00\cdots 0}\\
+c_2^k &amp;= \frac{1}{2!} (a^k_{10\cdots 0}+a^k_{010\cdots 0}c^1_1 + a^k_{0010\cdots 0}c^2_1+\cdots a^k_{00\cdots01}c^n_1) \\ &amp;= \frac{1}{2!} (a^k_{10\cdots 0} + a^k_{010\cdots 0}a^1_{00\cdots 0} + a^k_{0010\cdots 0}a^2_{00\cdots 0}+\cdots a^k_{00\cdots01}a^n_{00\cdots 0})
+\end{align*}
+\]</div>
+<p>Generally, we have </p>
+<div class="arithmatex">\[
+c^k_m=P_m^k(a^l_{00\cdots 0}, a^l_{01\cdots 0},\cdots,a^l_{i{j_1}\cdots{j_n}})
+\]</div>
+<p>where <span class="arithmatex">\(i+j_1+j_2+\cdots+j_n\leq m-1\)</span>, <span class="arithmatex">\(1\leq l\leq n\)</span>. Thus, <span class="arithmatex">\(P_m^k\)</span> is a polynomial represented by <span class="arithmatex">\(a^l_{00\cdots 0}\)</span>, <span class="arithmatex">\(a^l_{01\cdots 0}\)</span>, <span class="arithmatex">\(\cdots\)</span>, <span class="arithmatex">\(a^l_{i{j_1}\cdots{j_n}}\)</span> with positve operator "+". Theoretically, we can represent the solution by definite power series.</p>
+<p>We leave the proof of this part as an additional work in <a href="#Appendix">Appendix</a> at the end of the doc.</p>
+<ul>
+<li>Prove the above series converges.</li>
+</ul>
+<p>Here we formulate another ODE and use Excellent function to bound the above power series.</p>
+<p>Since <span class="arithmatex">\(f_k(x,\pmb{y})\)</span> is analytic on region <span class="arithmatex">\(R\)</span>, by <a href="#lemma1">Lemma 1</a>, there exists an excellent function of <span class="arithmatex">\(f_k(x,\pmb{y})\)</span> on a smaller region <span class="arithmatex">\(R_0\)</span>:</p>
+<div class="arithmatex">\[
+F_k(x,\pmb{y}) = \frac{M}{\left(1-\frac{x-x_0}{a}\right)\left(1-\frac{y_1-y_{10}}{b}\right)\cdots\left(1-\frac{y_n-y_{n0}}{b}\right)}, \quad k=1,2\cdots n
+\]</div>
+<p>If we represent both of them in terms of power series</p>
+<div class="arithmatex">\[
+\begin{align*}
+f_k(x,\pmb{y})&amp;=\sum_{i=0.\pmb{j}=0}^\infty a_{i\pmb{j}}(x-x_0)^i(\pmb{y}-\pmb{y}_0)^{\pmb{j}} \\
+F_k(x,\pmb{y})&amp;=\sum_{i=0.\pmb{j}=0}^\infty A_{i\pmb{j}}(x-x_0)^i(\pmb{y}-\pmb{y}_0)^{\pmb{j}}
+\end{align*}
+\]</div>
+<p>then we have a relation <span class="arithmatex">\(|a_{i\pmb{j}}|&lt;A_{i\pmb{j}}\)</span>, which matters in the following proof.</p>
+<p>Now consider an ODE</p>
+<div class="arithmatex">\[
+\frac{d y_k}{dx} = F_k(x,\pmb{y}),\quad y_k(x_0)=y_k,\quad  k=1,2,\cdots,n,\quad  
+\]</div>
+<p>by <a href="#lemma2">Lemma 2</a>, the above ODE has an analytic solution <span class="arithmatex">\(\pmb{y}=\pmb{y}(x)\)</span>, represented by power series</p>
+<div class="arithmatex">\[
+y_k(x) = y_{k0} + \sum_{i=1}^\infty C_i^k(x-x_0)^i,\quad k=1,2,\cdots,n
+\]</div>
+<p>Similarly, we have </p>
+<div class="arithmatex">\[
+\begin{align*}
+C^k_m&amp;=P_m^k(A^l_{00\cdots 0}, A^l_{01\cdots 0},\cdots,A^l_{i{j_1}\cdots{j_n}})\\
+&amp;=P_m^k(|A^l_{00\cdots 0}|, |A^l_{01\cdots 0}|,\cdots,|A^l_{i{j_1}\cdots{j_n}}|)\\
+&amp;\geq P_m^k(|a^l_{00\cdots 0}|, |a^l_{01\cdots 0}|,\cdots,|a^l_{i{j_1}\cdots{j_n}}|)\\
+&amp;\geq |c_m^k|
+\end{align*}
+\]</div>
+<p>So power series <span class="arithmatex">\(\sum\limits_{i=1}^\infty C_i^k(x-x_0)^i\)</span> is en excellent series of <span class="arithmatex">\(\sum\limits_{i=1}^\infty c_i^k(x-x_0)^i\)</span>. Since the former is convergent by <a href="#lemma2">Lemma 2</a>, so the latter also converges.</p>
+</div>
+</div>
+</div>
+<h2 id="Appendix">附录 | Appendix: Relation between <span class="arithmatex">\(c\)</span> and <span class="arithmatex">\(a\)</span><a class="headerlink" href="#Appendix" title="Permanent link">&para;</a></h2>
+<p><div class="question" markdown>
+<strong>Theorem</strong>. Prove </p>
+<div class="arithmatex">\[
+c^k_m=P_m^k(a^l_{00\cdots 0}, a^l_{01\cdots 0},\cdots,a^l_{i{j_1}\cdots{j_n}})
+\]</div>
+<p>where <span class="arithmatex">\(i+j_1+j_2+\cdots+j_n\leq m-1\)</span>, <span class="arithmatex">\(1\leq l\leq n\)</span>. Thus, <span class="arithmatex">\(P_m^k\)</span> is a polynomial represented by <span class="arithmatex">\(a^l_{00\cdots 0}\)</span>, <span class="arithmatex">\(a^l_{01\cdots 0}\)</span>, <span class="arithmatex">\(\cdots\)</span>, <span class="arithmatex">\(a^l_{i{j_1}\cdots{j_n}}\)</span> with positve operator "+". 
+</div></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="Appendix-hints" name="__tabbed_4" type="radio" /><input id="Appendix-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="Appendix-hints">Hints</label><label for="Appendix-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use induction.</p>
+</div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 
