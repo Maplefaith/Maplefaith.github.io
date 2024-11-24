@@ -1347,6 +1347,8 @@
       
         
       
+        
+      
     
     
       
@@ -1398,6 +1400,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../blog/1124/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    M1124
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1421,7 +1444,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
           
@@ -1437,14 +1460,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Travel
           </label>
@@ -2796,20 +2819,90 @@ Ctor can only be called once.</p>
 </span></code></pre></div>
 <p>All the content of template should be put in <code>.h</code> file for they are only <strong>declarations</strong>. Remember we also have to put <strong>inline</strong> function and <strong>static member variables</strong> in <code>.h</code> file.</p>
 <h2 id="exception">Exception<a class="headerlink" href="#exception" title="Permanent link">&para;</a></h2>
-<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1"></a><a href="#__codelineno-67-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">throw</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">something</span><span class="o">&gt;&gt;</span>
+<ul>
+<li>Exception type</li>
+</ul>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1"></a><a href="#__codelineno-67-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">VectorIndexError</span>
+</span><span id="__span-67-2"><a id="__codelineno-67-2" name="__codelineno-67-2"></a><a href="#__codelineno-67-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="p">{</span>
+</span><span id="__span-67-3"><a id="__codelineno-67-3" name="__codelineno-67-3"></a><a href="#__codelineno-67-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-67-4"><a id="__codelineno-67-4" name="__codelineno-67-4"></a><a href="#__codelineno-67-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">  </span><span class="n">VectorIndexError</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="o">:</span><span class="n">m_badValue</span><span class="p">(</span><span class="n">v</span><span class="p">){}</span>
+</span><span id="__span-67-5"><a id="__codelineno-67-5" name="__codelineno-67-5"></a><a href="#__codelineno-67-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">  </span><span class="n">VectorIndexError</span><span class="p">({}</span>
+</span><span id="__span-67-6"><a id="__codelineno-67-6" name="__codelineno-67-6"></a><a href="#__codelineno-67-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">diagnostic</span><span class="p">(){</span>
+</span><span id="__span-67-7"><a id="__codelineno-67-7" name="__codelineno-67-7"></a><a href="#__codelineno-67-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;index&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m_badValue</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot;out of range!&quot;</span><span class="p">;</span>
+</span><span id="__span-67-8"><a id="__codelineno-67-8" name="__codelineno-67-8"></a><a href="#__codelineno-67-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-67-9"><a id="__codelineno-67-9" name="__codelineno-67-9"></a><a href="#__codelineno-67-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-67-10"><a id="__codelineno-67-10" name="__codelineno-67-10"></a><a href="#__codelineno-67-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">m_badValue</span><span class="p">;</span>
+</span><span id="__span-67-11"><a id="__codelineno-67-11" name="__codelineno-67-11"></a><a href="#__codelineno-67-11"><span class="linenos" data-linenos="11 "></span></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a><a href="#__codelineno-68-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">VectorIndexError</span>
-</span><span id="__span-68-2"><a id="__codelineno-68-2" name="__codelineno-68-2"></a><a href="#__codelineno-68-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="p">{</span>
-</span><span id="__span-68-3"><a id="__codelineno-68-3" name="__codelineno-68-3"></a><a href="#__codelineno-68-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-68-4"><a id="__codelineno-68-4" name="__codelineno-68-4"></a><a href="#__codelineno-68-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">  </span><span class="n">VectorIndexError</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="o">:</span><span class="n">m_badValue</span><span class="p">(</span><span class="n">v</span><span class="p">){}</span>
-</span><span id="__span-68-5"><a id="__codelineno-68-5" name="__codelineno-68-5"></a><a href="#__codelineno-68-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">  </span><span class="n">VectorIndexError</span><span class="p">({}</span>
-</span><span id="__span-68-6"><a id="__codelineno-68-6" name="__codelineno-68-6"></a><a href="#__codelineno-68-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">diagnostic</span><span class="p">(){</span>
-</span><span id="__span-68-7"><a id="__codelineno-68-7" name="__codelineno-68-7"></a><a href="#__codelineno-68-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;index&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m_badValue</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot;out of range!&quot;</span><span class="p">;</span>
-</span><span id="__span-68-8"><a id="__codelineno-68-8" name="__codelineno-68-8"></a><a href="#__codelineno-68-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-68-9"><a id="__codelineno-68-9" name="__codelineno-68-9"></a><a href="#__codelineno-68-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-68-10"><a id="__codelineno-68-10" name="__codelineno-68-10"></a><a href="#__codelineno-68-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">m_badValue</span><span class="p">;</span>
-</span><span id="__span-68-11"><a id="__codelineno-68-11" name="__codelineno-68-11"></a><a href="#__codelineno-68-11"><span class="linenos" data-linenos="11 "></span></a><span class="p">}</span>
+<p><div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1"></a><a href="#__codelineno-68-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">throw</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">something</span><span class="o">&gt;&gt;</span>
 </span></code></pre></div>
+<code>throw</code> raises exception.</p>
+<ul>
+<li>Try blocks can select type of exceptions</li>
+</ul>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1"></a><a href="#__codelineno-69-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">try</span><span class="w"> </span><span class="p">{...}</span>
+</span><span id="__span-69-2"><a id="__codelineno-69-2" name="__codelineno-69-2"></a><a href="#__codelineno-69-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="k">catch</span><span class="w"> </span><span class="p">{...}</span>
+</span></code></pre></div>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1"></a><a href="#__codelineno-70-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">try</span><span class="p">{</span>
+</span><span id="__span-70-2"><a id="__codelineno-70-2" name="__codelineno-70-2"></a><a href="#__codelineno-70-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="n">func</span><span class="p">();</span>
+</span><span id="__span-70-3"><a id="__codelineno-70-3" name="__codelineno-70-3"></a><a href="#__codelineno-70-3"><span class="linenos" data-linenos="3 "></span></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">VIE</span><span class="w"> </span><span class="n">v</span><span class="p">){</span><span class="w"> </span><span class="c1">// take a single argument</span>
+</span><span id="__span-70-4"><a id="__codelineno-70-4" name="__codelineno-70-4"></a><a href="#__codelineno-70-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;8</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-70-5"><a id="__codelineno-70-5" name="__codelineno-70-5"></a><a href="#__codelineno-70-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(...){</span><span class="w"> </span><span class="c1">// others</span>
+</span><span id="__span-70-6"><a id="__codelineno-70-6" name="__codelineno-70-6"></a><a href="#__codelineno-70-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;7</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-70-7"><a id="__codelineno-70-7" name="__codelineno-70-7"></a><a href="#__codelineno-70-7"><span class="linenos" data-linenos="7 "></span></a><span class="p">}</span>
+</span></code></pre></div>
+<p>it can re-raise exceptions</p>
+<ul>
+<li>Hierarchy of exception types</li>
+</ul>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1"></a><a href="#__codelineno-71-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">MathErr</span><span class="p">{</span>
+</span><span id="__span-71-2"><a id="__codelineno-71-2" name="__codelineno-71-2"></a><a href="#__codelineno-71-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="p">...</span>
+</span><span id="__span-71-3"><a id="__codelineno-71-3" name="__codelineno-71-3"></a><a href="#__codelineno-71-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">diagnostic</span><span class="p">();</span>
+</span><span id="__span-71-4"><a id="__codelineno-71-4" name="__codelineno-71-4"></a><a href="#__codelineno-71-4"><span class="linenos" data-linenos="4 "></span></a><span class="p">};</span>
+</span><span id="__span-71-5"><a id="__codelineno-71-5" name="__codelineno-71-5"></a><a href="#__codelineno-71-5"><span class="linenos" data-linenos="5 "></span></a>
+</span><span id="__span-71-6"><a id="__codelineno-71-6" name="__codelineno-71-6"></a><a href="#__codelineno-71-6"><span class="linenos" data-linenos="6 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">OverflowErr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">MathErr</span><span class="w"> </span><span class="p">{...}</span>
+</span><span id="__span-71-7"><a id="__codelineno-71-7" name="__codelineno-71-7"></a><a href="#__codelineno-71-7"><span class="linenos" data-linenos="7 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">UnderflowErr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">MathErr</span><span class="w"> </span><span class="p">{...}</span>
+</span></code></pre></div>
+<p>a catch of parent Exception Type can catch its child type.</p>
+<div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1"></a><a href="#__codelineno-72-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">try</span><span class="p">{</span>
+</span><span id="__span-72-2"><a id="__codelineno-72-2" name="__codelineno-72-2"></a><a href="#__codelineno-72-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="n">VIEE</span><span class="p">(</span><span class="n">idx</span><span class="p">);</span>
+</span><span id="__span-72-3"><a id="__codelineno-72-3" name="__codelineno-72-3"></a><a href="#__codelineno-72-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">VIE</span><span class="w"> </span><span class="n">v</span><span class="p">){</span>
+</span><span id="__span-72-4"><a id="__codelineno-72-4" name="__codelineno-72-4"></a><a href="#__codelineno-72-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;7</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-5"><a id="__codelineno-72-5" name="__codelineno-72-5"></a><a href="#__codelineno-72-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(...){</span>
+</span><span id="__span-72-6"><a id="__codelineno-72-6" name="__codelineno-72-6"></a><a href="#__codelineno-72-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;6</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-7"><a id="__codelineno-72-7" name="__codelineno-72-7"></a><a href="#__codelineno-72-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="p">}</span>
+</span><span id="__span-72-8"><a id="__codelineno-72-8" name="__codelineno-72-8"></a><a href="#__codelineno-72-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="c1">// output 7</span>
+</span><span id="__span-72-9"><a id="__codelineno-72-9" name="__codelineno-72-9"></a><a href="#__codelineno-72-9"><span class="linenos" data-linenos=" 9 "></span></a>
+</span><span id="__span-72-10"><a id="__codelineno-72-10" name="__codelineno-72-10"></a><a href="#__codelineno-72-10"><span class="linenos" data-linenos="10 "></span></a><span class="k">try</span><span class="p">{</span>
+</span><span id="__span-72-11"><a id="__codelineno-72-11" name="__codelineno-72-11"></a><a href="#__codelineno-72-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="n">VIEE</span><span class="p">(</span><span class="n">idx</span><span class="p">);</span>
+</span><span id="__span-72-12"><a id="__codelineno-72-12" name="__codelineno-72-12"></a><a href="#__codelineno-72-12"><span class="linenos" data-linenos="12 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">VIEE</span><span class="w"> </span><span class="n">v</span><span class="p">){</span>
+</span><span id="__span-72-13"><a id="__codelineno-72-13" name="__codelineno-72-13"></a><a href="#__codelineno-72-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;8</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-14"><a id="__codelineno-72-14" name="__codelineno-72-14"></a><a href="#__codelineno-72-14"><span class="linenos" data-linenos="14 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">VIE</span><span class="w"> </span><span class="n">v</span><span class="p">){</span>
+</span><span id="__span-72-15"><a id="__codelineno-72-15" name="__codelineno-72-15"></a><a href="#__codelineno-72-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;7</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-16"><a id="__codelineno-72-16" name="__codelineno-72-16"></a><a href="#__codelineno-72-16"><span class="linenos" data-linenos="16 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(...){</span>
+</span><span id="__span-72-17"><a id="__codelineno-72-17" name="__codelineno-72-17"></a><a href="#__codelineno-72-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;6</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-18"><a id="__codelineno-72-18" name="__codelineno-72-18"></a><a href="#__codelineno-72-18"><span class="linenos" data-linenos="18 "></span></a><span class="p">}</span>
+</span><span id="__span-72-19"><a id="__codelineno-72-19" name="__codelineno-72-19"></a><a href="#__codelineno-72-19"><span class="linenos" data-linenos="19 "></span></a><span class="c1">// output 8</span>
+</span><span id="__span-72-20"><a id="__codelineno-72-20" name="__codelineno-72-20"></a><a href="#__codelineno-72-20"><span class="linenos" data-linenos="20 "></span></a>
+</span><span id="__span-72-21"><a id="__codelineno-72-21" name="__codelineno-72-21"></a><a href="#__codelineno-72-21"><span class="linenos" data-linenos="21 "></span></a><span class="k">try</span><span class="p">{</span>
+</span><span id="__span-72-22"><a id="__codelineno-72-22" name="__codelineno-72-22"></a><a href="#__codelineno-72-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="n">VIEE</span><span class="p">(</span><span class="n">idx</span><span class="p">);</span>
+</span><span id="__span-72-23"><a id="__codelineno-72-23" name="__codelineno-72-23"></a><a href="#__codelineno-72-23"><span class="linenos" data-linenos="23 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">VIE</span><span class="w"> </span><span class="n">v</span><span class="p">){</span>
+</span><span id="__span-72-24"><a id="__codelineno-72-24" name="__codelineno-72-24"></a><a href="#__codelineno-72-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;8</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-25"><a id="__codelineno-72-25" name="__codelineno-72-25"></a><a href="#__codelineno-72-25"><span class="linenos" data-linenos="25 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">VIEE</span><span class="w"> </span><span class="n">v</span><span class="p">){</span><span class="w"> </span><span class="c1">// this expression is useless</span>
+</span><span id="__span-72-26"><a id="__codelineno-72-26" name="__codelineno-72-26"></a><a href="#__codelineno-72-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;7</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-27"><a id="__codelineno-72-27" name="__codelineno-72-27"></a><a href="#__codelineno-72-27"><span class="linenos" data-linenos="27 "></span></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(...){</span>
+</span><span id="__span-72-28"><a id="__codelineno-72-28" name="__codelineno-72-28"></a><a href="#__codelineno-72-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;6</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+</span><span id="__span-72-29"><a id="__codelineno-72-29" name="__codelineno-72-29"></a><a href="#__codelineno-72-29"><span class="linenos" data-linenos="29 "></span></a><span class="p">}</span>
+</span><span id="__span-72-30"><a id="__codelineno-72-30" name="__codelineno-72-30"></a><a href="#__codelineno-72-30"><span class="linenos" data-linenos="30 "></span></a><span class="c1">// output 8</span>
+</span></code></pre></div>
+<ul>
+<li>
+<p>Standard Library Exception</p>
+</li>
+<li>
+<p>Failure in C'tor</p>
+</li>
+</ul>
 
 
 
