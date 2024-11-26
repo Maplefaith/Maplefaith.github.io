@@ -127,3 +127,10 @@ body {
 .tabbed-content {
     font-size: 14px ; /* 根据需求调整 */
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
