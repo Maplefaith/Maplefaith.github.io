@@ -914,6 +914,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Chebyshev Polynomials and Economization of Power series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lead-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lead-in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics-of-best-uniform-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics of Best Uniform Approximation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reducing-the-degree-of-approximating-polynomials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reducing the Degree of Approximating Polynomials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1579,6 +1612,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Chebyshev Polynomials and Economization of Power series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lead-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lead-in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics-of-best-uniform-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics of Best Uniform Approximation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reducing-the-degree-of-approximating-polynomials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reducing the Degree of Approximating Polynomials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1608,28 +1674,102 @@ E = (P-y,P-y)=\|P-y\|^2
 \sum_{j=0}^n(\varphi_k, \varphi_j)a_j=(\varphi_k,f),\quad k=0,1,\cdots,n
 \]</div>
 <h2 id="chebyshev-polynomials-and-economization-of-power-series">Chebyshev Polynomials and Economization of Power series<a class="headerlink" href="#chebyshev-polynomials-and-economization-of-power-series" title="Permanent link">&para;</a></h2>
-<p>Coonsider <span class="arithmatex">\(n+1\)</span> extreme points of <span class="arithmatex">\(cosn\theta\)</span> on <span class="arithmatex">\([0,\pi]\)</span>.</p>
+<h3 id="lead-in">Lead-in<a class="headerlink" href="#lead-in" title="Permanent link">&para;</a></h3>
+<p>All the continuous function defined on <span class="arithmatex">\([a,b]\)</span> compose a infinite-dimensional linear space, denoted by <span class="arithmatex">\(C_{[a,b]}\)</span>. To simplify our discription, we introduce norm <span class="arithmatex">\(\|\cdot\|_\infty\)</span> to denote Chebyshev Norm</p>
+<div class="arithmatex">\[
+\|\cdot\|_\infty = \max_{[a,b]}|f(x)|, \quad \forall f\in C_{[a,b]}.
+\]</div>
+<p>With the following theorem explored by Weierstrass, we can find an algebraic polynomial to sufficiently approximate function <span class="arithmatex">\(f\)</span> <span class="arithmatex">\(\in C_{[a,b]}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Weierstrass First Approximation Theorem</p>
+<p>For all given function <span class="arithmatex">\(f(x)\in C_{[a,b]}\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists p(x)\)</span> which is an algebraic function, s.t.</p>
+<div class="arithmatex">\[
+\|f(x)-p(x)\|&lt; \varepsilon
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="lead-in-hints" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lead-in-hints">Hints</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Prove it by Bernstein Polynomials.</p>
+</div>
+</div>
+</div>
+<p>But what we care more about is whether we can find a polynomial of degree no more than <span class="arithmatex">\(n\)</span> to approximate function <span class="arithmatex">\(f(x)\)</span>?</p>
+<p>The answer to the above question results in <strong>Chebyshev Approximation</strong>.</p>
+<p>Consider set</p>
+<div class="arithmatex">\[
+P_n(x)=\text{span}\{1,x,\cdots, x^n\}
+\]</div>
+<p>It is not hard to see that <span class="arithmatex">\(P_n\)</span> is a subspace of $C_{[a,b]} with <span class="arithmatex">\(n+1\)</span> dimension. And the goal is to get</p>
+<div class="arithmatex">\[
+\Delta(f,P_n)=\min_{p\in P_n}\|f(x)-p_(x)\|_\infty
+\]</div>
+<p>which is called the <strong>best uniform approximation</strong> of <span class="arithmatex">\(f(x)\)</span>.</p>
+<h3 id="characteristics-of-best-uniform-approximation">Characteristics of Best Uniform Approximation<a class="headerlink" href="#characteristics-of-best-uniform-approximation" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem of best uniform approximation on <span class="arithmatex">\(C_{[a,b]}\)</span></p>
+<p>Assume <span class="arithmatex">\(f\in C_{[a,b]}\)</span> and <span class="arithmatex">\(f\notin P_n\)</span></p>
+</div>
+<p>Coonsider <span class="arithmatex">\(n+1\)</span> extreme points of <span class="arithmatex">\(cosn\theta\)</span> on <span class="arithmatex">\([0,\pi]\)</span>. If <span class="arithmatex">\(p(x)\)</span> is the polynomial of best uniform  approximation of <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f-p\)</span> has at least <span class="arithmatex">\(n-2\)</span> alternating points.</p>
 <p>We still have <span class="arithmatex">\(cos(n \theta)=\sum\limits_{k=1}^n a_kcos(\theta)^i\)</span>.</p>
 <p>Define <span class="arithmatex">\(T_0(x)=1\)</span>, <span class="arithmatex">\(T_1(x)=x\)</span>, <span class="arithmatex">\(T_{n+1}(x)=2xT_n(x)-T_{n-1}(x)\)</span>, <span class="arithmatex">\(n=1,2,\cdots,n-1\)</span></p>
+<p>By definition, we have properties for Chebyshev Polynomials.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of Chebyshev Polynomials</p>
+</div>
+<p>Use <span class="arithmatex">\(n\)</span> Polynomial <span class="arithmatex">\(P_n(x)\)</span> to approximate function <span class="arithmatex">\(f\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+|P_n(x)-f(x)|=|R_n(x)|&amp;=\left|\frac{f^{(n+1)}(\xi)}{(n+1)!}\prod_{i=0}^n(x-x_i)\right|\\
+&amp;\leq \max\limits_{x\in [-1,1]}\left|f^{(n+1)}(x)\right|\frac{1}{(n+1)!} \left| \prod_{i=0}^n(x-x_i)\right|\\
+&amp;\leq \max\limits_{x\in [-1,1]}\left|f^{(n+1)}(x)\right|\frac{1}{(n+1)!}\left| \frac{T_{n+1}(x)}{2^{n}} \right|\\
+&amp;\leq \frac{1}{(n+1)!} \frac{1}{2^{n}}\max\limits_{x\in [-1,1]}\left|f^{(n+1)}(x)\right| 
+\end{align*}
+\]</div>
 <ul>
 <li>Minimizing Approximation Error on Arbitrary Intervals</li>
 </ul>
 <p>The technique for choosing points to minimize the interpolating error is extended to a
 general closed interval <span class="arithmatex">\([a, b]\)</span> by using the change of variables</p>
 <div class="arithmatex">\[
-\tilde{x} = \frac{1}{2}((b-a)x+a+b)
+\tilde{x} = \frac{1}{2}[(b-a)x+a+b]
 \]</div>
-<ul>
-<li>Reducing the Degree of Approximating Polynomials</li>
-</ul>
-<p>Consider approximating an arbitrary nth-degree polynomial</p>
+<div class="question">
+<p>Q. Find the best approximating polynomial of  <span class="arithmatex">\(f (x) = e^x\)</span> on <span class="arithmatex">\([0, 1]\)</span> such that the absolute error is no larger than <span class="arithmatex">\(0.5\times 10^4\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="characteristics-of-best-uniform-approximation-answer" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="characteristics-of-best-uniform-approximation-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(a=0\)</span>, <span class="arithmatex">\(b=1\)</span>, so </p>
 <div class="arithmatex">\[
-P_n(x) = a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+x=\frac{a+b}{2}+\frac{b-a}{2}t = \frac{1}{2}(t+1), \quad t\in [-1,1]
 \]</div>
-<p>on <span class="arithmatex">\([−1, 1]\)</span> with a polynomial of degree at most <span class="arithmatex">\(n − 1\)</span>.</p>
+<p>So the actual function to be approximated is </p>
+<div class="arithmatex">\[
+g(t) = f\left[\frac{1}{2}(t+1)\right] = e^{\frac{1}{2}(t+1)}, \quad t\in [-1,1]
+\]</div>
+<div class="arithmatex">\[
+\max\limits_{x\in [-1,1]}\left|g^{(n+1)}(x)\right| = \max\limits_{x\in [-1,1]}\left|\frac{1}{2^{n+1}}e^{\frac{1}{2}(t+1)}\right|=\frac{e}{2^{n+1}}
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+\begin{align*}
+|P_n(x)-f(x)|&amp;\leq \frac{1}{(n+1)!} \frac{1}{2^{n}}\max\limits_{x\in [-1,1]}\left|g^{(n+1)}(x)\right| \\
+&amp;= \frac{1}{(n+1)!} \frac{1}{2^{n}}\frac{e}{2^{n+1}}
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h3 id="reducing-the-degree-of-approximating-polynomials">Reducing the Degree of Approximating Polynomials<a class="headerlink" href="#reducing-the-degree-of-approximating-polynomials" title="Permanent link">&para;</a></h3>
+<p>Consider approximating an arbitrary <span class="arithmatex">\(n\)</span>th-degree polynomial</p>
+<div class="arithmatex">\[
+P_n(x) = a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0, \quad x\in [−1, 1]
+\]</div>
+<p>with a polynomial of degree at most <span class="arithmatex">\(n − 1\)</span>.</p>
 <p>To let <span class="arithmatex">\(\max\limits_{x\in [-1,1]}|P_n(x)-P_{n-1}(x)|\)</span> to be mininal, equals to let it be</p>
 <div class="arithmatex">\[
-a_n\tilde{T}_n(x) = a_n T_n(x)/a^{n-1}
+a_n\tilde{T}_n(x) = a_n T_n(x)/2^{n-1}
 \]</div>
 
 
