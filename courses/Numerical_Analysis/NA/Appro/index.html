@@ -936,6 +936,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#chebyshev-polynomials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chebyshev Polynomials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reducing-the-degree-of-approximating-polynomials" class="md-nav__link">
     <span class="md-ellipsis">
       Reducing the Degree of Approximating Polynomials
@@ -1634,6 +1643,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#chebyshev-polynomials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chebyshev Polynomials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#reducing-the-degree-of-approximating-polynomials" class="md-nav__link">
     <span class="md-ellipsis">
       Reducing the Degree of Approximating Polynomials
@@ -1700,24 +1718,179 @@ E = (P-y,P-y)=\|P-y\|^2
 <div class="arithmatex">\[
 P_n(x)=\text{span}\{1,x,\cdots, x^n\}
 \]</div>
-<p>It is not hard to see that <span class="arithmatex">\(P_n\)</span> is a subspace of $C_{[a,b]} with <span class="arithmatex">\(n+1\)</span> dimension. And the goal is to get</p>
+<p>It is not hard to see that <span class="arithmatex">\(P_n\)</span> is a subspace of <span class="arithmatex">\(C_{[a,b]}\)</span> with <span class="arithmatex">\(n+1\)</span> dimension. And the goal is to get</p>
 <div class="arithmatex">\[
-\Delta(f,P_n)=\min_{p\in P_n}\|f(x)-p_(x)\|_\infty
+\Delta(f,P_n)=\min_{p\in P_n}\|f(x)-p(x)\|_\infty
 \]</div>
 <p>which is called the <strong>best uniform approximation</strong> of <span class="arithmatex">\(f(x)\)</span>.</p>
 <h3 id="characteristics-of-best-uniform-approximation">Characteristics of Best Uniform Approximation<a class="headerlink" href="#characteristics-of-best-uniform-approximation" title="Permanent link">&para;</a></h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem of best uniform approximation on <span class="arithmatex">\(C_{[a,b]}\)</span></p>
-<p>Assume <span class="arithmatex">\(f\in C_{[a,b]}\)</span> and <span class="arithmatex">\(f\notin P_n\)</span></p>
+<p>We can represent the best uniform approximation with the introduction of <strong>deviation points</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Deviation Point Set</p>
+<p>we define</p>
+<div class="arithmatex">\[
+\begin{cases}
+E^+(f)=\{x\in [a,b]: f(x)=\|f\|_\infty\} \\
+E^-(f)=\{x\in [a,b]: f(x)=-\|f\|_\infty\}
+\end{cases}
+\]</div>
+<p>to be positive and negative deviation point set, and define <span class="arithmatex">\(E(f)=E^+(f)\cup E^-(f)\)</span> to be deviation point set.</p>
 </div>
-<p>Coonsider <span class="arithmatex">\(n+1\)</span> extreme points of <span class="arithmatex">\(cosn\theta\)</span> on <span class="arithmatex">\([0,\pi]\)</span>. If <span class="arithmatex">\(p(x)\)</span> is the polynomial of best uniform  approximation of <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f-p\)</span> has at least <span class="arithmatex">\(n-2\)</span> alternating points.</p>
-<p>We still have <span class="arithmatex">\(cos(n \theta)=\sum\limits_{k=1}^n a_kcos(\theta)^i\)</span>.</p>
-<p>Define <span class="arithmatex">\(T_0(x)=1\)</span>, <span class="arithmatex">\(T_1(x)=x\)</span>, <span class="arithmatex">\(T_{n+1}(x)=2xT_n(x)-T_{n-1}(x)\)</span>, <span class="arithmatex">\(n=1,2,\cdots,n-1\)</span></p>
-<p>By definition, we have properties for Chebyshev Polynomials.</p>
-<div class="admonition success">
-<p class="admonition-title">Properties of Chebyshev Polynomials</p>
+<p>Recall that <span class="arithmatex">\(f(x)\in C_{[a,b]}\)</span>, so <span class="arithmatex">\(E^+(f)\)</span> and <span class="arithmatex">\(E^-(f)\)</span> are both bounded closed set. </p>
+<div class="admonition info">
+<p class="admonition-title">Alternating Point Set</p>
+<p>If set <span class="arithmatex">\(\{x_1,x_2,\cdots,x_k\}\)</span> <span class="arithmatex">\(\subset E(f)\)</span> satisfies</p>
+<div class="arithmatex">\[
+\begin{cases}
+a\leq x_1&lt;x_2&lt;\cdots &lt;x_k\leq b  \\
+f(x_j)=-f(x_{j+1}), \quad j=1,2\cdots,k-1
+\end{cases}
+\]</div>
+<p>then we call the above set <strong>Alternating Point Set</strong>. We call them them <strong>maximal</strong> alternating point set, if there does not exist an alternating point set of size larger than <span class="arithmatex">\(k\)</span>.</p>
 </div>
-<p>Use <span class="arithmatex">\(n\)</span> Polynomial <span class="arithmatex">\(P_n(x)\)</span> to approximate function <span class="arithmatex">\(f\)</span></p>
+<p>We can construct maximal alternating point set by the following way.</p>
+<div class="admonition success">
+<p class="admonition-title">Construction of Maximal Alternating Point Set</p>
+<p>Let <span class="arithmatex">\(S_1=\inf E^+(f)\cup E^-(f)\)</span>, construct <span class="arithmatex">\(x_k\)</span> recursively</p>
+<div class="arithmatex">\[
+x_k=\inf S_k
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+S_{k+1}=\begin{cases}
+E^-(f)\cap [x_k,b],\quad x_k\in E^+(f)\\
+E^+(f)\cap [x_k,b],\quad x_k\in E^-(f)
+\end{cases}
+,\quad k=1,2 \cdots
+\]</div>
+</div>
+<p>We assure <span class="arithmatex">\(x_k\in S_k\)</span> when we let <span class="arithmatex">\(x_k=\inf S_k\)</span> because <span class="arithmatex">\(S_k\)</span> is bounded closed set. The recursion assures <span class="arithmatex">\(x_{k+1}\)</span> is the minimal deviation point with opposite sign to <span class="arithmatex">\(x_k\)</span>, which of course assures <span class="arithmatex">\(\{x_i\}\)</span> is monotonically increasing. We can prove that, if <span class="arithmatex">\(f\neq 0\)</span>, the above constructed set is maximal and finite(to be proved by readers).</p>
+<div class="admonition success">
+<p class="admonition-title">Property of best uniform approximation on <span class="arithmatex">\(C_{[a,b]}\)</span></p>
+<p>Assume <span class="arithmatex">\(f\in C_{[a,b]}\)</span> and <span class="arithmatex">\(f\notin P_n\)</span>. If <span class="arithmatex">\(p(x)\)</span> is the best uniform approximation polynomial of <span class="arithmatex">\(f(x)\)</span> on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f-p\)</span> has at least <span class="arithmatex">\(n+2\)</span> <strong>alternating points</strong>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="characteristics-of-best-uniform-approximation-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="characteristics-of-best-uniform-approximation-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By contradiction.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Vall&eacute;e-Poisson Theorem</p>
+<p>Assume <span class="arithmatex">\(f\in C_{[a,b]}\)</span>, if there exists polynomial <span class="arithmatex">\(p\in P_n\)</span>, such that <span class="arithmatex">\(f-p\)</span> has at least <span class="arithmatex">\(n+2\)</span> points <span class="arithmatex">\(x_1,x_2,\cdots,x_{n+2} \in [a,b]\)</span> alternated with positive and negative, then </p>
+<div class="arithmatex">\[
+\Delta(f,P_n)\geq \mu=\min_{1\leq i\leq n+2}|f(x_i)-g(x_i)|
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="characteristics-of-best-uniform-approximation-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="characteristics-of-best-uniform-approximation-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By contradiction.</p>
+</div>
+</div>
+</div>
+<p><a id="Chebyshev-Theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Chebyshev Theorem</p>
+<p>For all <span class="arithmatex">\(f\in C_{[a,b]}\)</span>, <span class="arithmatex">\(f\notin P_n\)</span>, <span class="arithmatex">\(p\in P_n\)</span> is the best uniform approximation of <span class="arithmatex">\(f\)</span> if and only if, <span class="arithmatex">\(f-p\)</span> has at least <span class="arithmatex">\(n+2\)</span> alternating points on <span class="arithmatex">\([a,b]\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="characteristics-of-best-uniform-approximation-proof_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="characteristics-of-best-uniform-approximation-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By Sequence Theorem.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Uniqueness of best uniform approximation</p>
+<p>If <span class="arithmatex">\(f\in C_{[a,b]}\)</span>, then there exists a unique polynomial <span class="arithmatex">\(p\in P_n\)</span> that is the best uniform approximation of <span class="arithmatex">\(f\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="characteristics-of-best-uniform-approximation-hints" name="__tabbed_5" type="radio" /><input id="characteristics-of-best-uniform-approximation-proof_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="characteristics-of-best-uniform-approximation-hints">Hints</label><label for="characteristics-of-best-uniform-approximation-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By prove two best uniform approximation polynomials <span class="arithmatex">\(p_1,p_2\)</span> are the same.</p>
+</div>
+<div class="tabbed-block">
+<p>Prove Uniqueness.</p>
+<p>Assume <span class="arithmatex">\(p_1,p_2\in P_n\)</span> are both the best uniform approximation polynomials of <span class="arithmatex">\(f\)</span>,i.e. </p>
+<div class="arithmatex">\[  
+\|f-p_1\|_\infty = \|f-p_2\|_\infty = \min_{p\in P_n}\|f-p\|_\infty = \Delta(f,P_n)
+\]</div>
+<p>then define <span class="arithmatex">\(p_0=(p_1+p_2)/2\)</span>, then</p>
+<div class="arithmatex">\[
+\|f-p_0\|_\infty\leq \frac{1}{2}(\|f-p_1\|_\infty+ \|f-p_2\|_\infty) =\Delta(f,P_n)
+\]</div>
+<p>which means <span class="arithmatex">\(p_0\)</span> is also the best uniform approximation polynomial of <span class="arithmatex">\(f\)</span>. By <a href="#Chebyshev-Theorem">Chebyshev Theorem</a>, there exists <span class="arithmatex">\(n+2\)</span> alternating points <span class="arithmatex">\(x_0,x_1,\cdots,x_{n+1}\)</span>.</p>
+<p>Note that </p>
+<div class="arithmatex">\[
+\Delta(f,P_n)=|f(x_k)-p_0(x_k)|\leq \frac{1}{2}(|f(x_k)-p_1(x_k)|+|f(x_k)-p_2(x_k)|)\leq \Delta(f,P_n),\quad k=0,1,\cdots,n+1
+\]</div>
+<p>which means "=" must holds, i.e.</p>
+<div class="arithmatex">\[
+|f(x_k)-p_1(x_k)| = |f(x_k)-p_2(x_k)| = \Delta(f,P_n),\quad k=0,1,\cdots,n+1
+\]</div>
+<p>and </p>
+<div class="arithmatex">\[
+f(x_k)-p_1(x_k) = f(x_k)-p_2(x_k),\quad k=0,1,\cdots,n+1 \quad \text{(by Triangular inequation)}
+\]</div>
+<p>which means <span class="arithmatex">\(p_1(x_k)=p_2(x_k)\)</span>, that is, <span class="arithmatex">\(p_1-p_2\)</span> has <span class="arithmatex">\(n+2\)</span> roots, so <span class="arithmatex">\(p_1=p_2\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="chebyshev-polynomials">Chebyshev Polynomials<a class="headerlink" href="#chebyshev-polynomials" title="Permanent link">&para;</a></h3>
+<p>Coonsider <span class="arithmatex">\(n+1\)</span> extreme points of <span class="arithmatex">\(cosn\theta\)</span> on <span class="arithmatex">\([0,\pi]\)</span>. If <span class="arithmatex">\(p(x)\)</span> is the polynomial of best uniform  approximation of <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f-p\)</span> has at least <span class="arithmatex">\(n+2\)</span> alternating points.</p>
+<p>We define <span class="arithmatex">\(x = \cos\theta\)</span> and </p>
+<div class="arithmatex">\[
+\begin{align*}
+T_n(x)&amp;=\cos (n\cos^{-1}x)\\
+&amp;=\cos(n \theta)\\
+&amp;=\sum\limits_{k=1}^n a_k(\cos\theta)^i\\
+&amp;=\sum\limits_{k=1}^n a_k x^i
+\end{align*}
+\]</div>
+<p>is a polynomial of degree <span class="arithmatex">\(n\)</span>, i.e. <span class="arithmatex">\(T_n(x)\in P_n\)</span>. It is easy to see the resursive definition</p>
+<div class="arithmatex">\[
+\begin{cases}
+T_0(x)=1, T_1(x)=x,\\ 
+\displaystyle T_{n+1}(x)=2xT_n(x)-T_{n-1}(x),\quad n=1,2,\cdots,n-1
+\end{cases}
+\]</div>
+<p>By definition, we have properties for first class Chebyshev Polynomials.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of First Class Chebyshev Polynomials</p>
+<p>(1) Prove the recursive form of definition.</p>
+<p>(2) the coefficient of item with the highest degree of <span class="arithmatex">\(T_n(x)\)</span> is <span class="arithmatex">\(1/2^{n-1}\)</span>.</p>
+<p>(3) <span class="arithmatex">\(|T_n(x)|\leq 1\)</span>, <span class="arithmatex">\(\forall |x|\leq 1\)</span>.</p>
+<p>(4) <span class="arithmatex">\(T_n(x)\)</span> has <span class="arithmatex">\(n\)</span> different real roots </p>
+<div class="arithmatex">\[
+\cos\left[\frac{(2k-1)\pi}{2n}\right],\quad k=1,2,\cdots,n
+\]</div>
+<p>(5) <span class="arithmatex">\(\{\cos(k\pi/n)\)</span>, <span class="arithmatex">\(k=0,1,\cdots,n\}\)</span> are a maximal alternating point set of <span class="arithmatex">\(T_n(x)\)</span> on <span class="arithmatex">\([-1,1]\)</span>.</p>
+<p>(6) <span class="arithmatex">\(T_n(x)=(-1)^nT_n(-x)\)</span>.</p>
+<p>(7)</p>
+<div class="arithmatex">\[
+\int_{-1}^1\frac{T_m(x)T_n(x)}{\sqrt{1-x^2}}dx=\begin{cases}\pi, \quad &amp;m=n=0;\\ \pi/2, \quad &amp;m=n\neq 0;\\ 0,\quad &amp;m\neq n.\end{cases}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="chebyshev-polynomials-hints" name="__tabbed_6" type="radio" /><input id="chebyshev-polynomials-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="chebyshev-polynomials-hints">Hints</label><label for="chebyshev-polynomials-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(1) by combination property of triangular functions.</p>
+<p>(7) by the orthogonal property of triangular functions.</p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>With the above property, we can see the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title"><span class="arithmatex">\(T_n(x)\)</span> is the is the best uniform approximation of 0</p>
+<p><span class="arithmatex">\(T_n(x)\)</span> is the best uniform approximation of function <span class="arithmatex">\(f\equiv 0\)</span>, that is, <span class="arithmatex">\(\forall\)</span> Monicpolynomial <span class="arithmatex">\(p\in P_n\)</span></p>
+<div class="arithmatex">\[
+\|p\|\geq |T_n|/2^{n-1} = 2^{1-n}
+\]</div>
+</div>
+<p>Use <span class="arithmatex">\(n\)</span> Polynomial <span class="arithmatex">\(P_n(x)\)</span> to approximate function <span class="arithmatex">\(f\)</span> on region <span class="arithmatex">\([-1,1]\)</span>, its remainder </p>
 <div class="arithmatex">\[
 \begin{align*}
 |P_n(x)-f(x)|=|R_n(x)|&amp;=\left|\frac{f^{(n+1)}(\xi)}{(n+1)!}\prod_{i=0}^n(x-x_i)\right|\\
@@ -1737,7 +1910,7 @@ general closed interval <span class="arithmatex">\([a, b]\)</span> by using the 
 <div class="question">
 <p>Q. Find the best approximating polynomial of  <span class="arithmatex">\(f (x) = e^x\)</span> on <span class="arithmatex">\([0, 1]\)</span> such that the absolute error is no larger than <span class="arithmatex">\(0.5\times 10^4\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="characteristics-of-best-uniform-approximation-answer" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="characteristics-of-best-uniform-approximation-answer">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="chebyshev-polynomials-answer" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="chebyshev-polynomials-answer">Answer</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(a=0\)</span>, <span class="arithmatex">\(b=1\)</span>, so </p>

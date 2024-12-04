@@ -869,19 +869,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#interpolating-polynomial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpolating Polynomial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpolating Polynomial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#lagrange-interpolating-polynomial" class="md-nav__link">
     <span class="md-ellipsis">
       Lagrange Interpolating Polynomial
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lagrange Interpolating Polynomial">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#error" class="md-nav__link">
+  <a href="#nevilles-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Error
+      Neville's Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newtons-divided-difference-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton's Divided Difference Formula
     </span>
   </a>
   
@@ -893,18 +911,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nevilles-method" class="md-nav__link">
+  <a href="#error-analysis-of-interpolation" class="md-nav__link">
     <span class="md-ellipsis">
-      Neville's Method
+      Error Analysis of Interpolation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#divided-differences" class="md-nav__link">
+  <a href="#interpolation-of-equidistant-points" class="md-nav__link">
     <span class="md-ellipsis">
-      Divided Differences
+      Interpolation of Equidistant Points
     </span>
   </a>
   
@@ -1588,19 +1606,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#interpolating-polynomial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpolating Polynomial
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interpolating Polynomial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#lagrange-interpolating-polynomial" class="md-nav__link">
     <span class="md-ellipsis">
       Lagrange Interpolating Polynomial
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lagrange Interpolating Polynomial">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#error" class="md-nav__link">
+  <a href="#nevilles-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Error
+      Neville's Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newtons-divided-difference-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton's Divided Difference Formula
     </span>
   </a>
   
@@ -1612,18 +1648,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nevilles-method" class="md-nav__link">
+  <a href="#error-analysis-of-interpolation" class="md-nav__link">
     <span class="md-ellipsis">
-      Neville's Method
+      Error Analysis of Interpolation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#divided-differences" class="md-nav__link">
+  <a href="#interpolation-of-equidistant-points" class="md-nav__link">
     <span class="md-ellipsis">
-      Divided Differences
+      Interpolation of Equidistant Points
     </span>
   </a>
   
@@ -1663,7 +1699,8 @@
 
 
 <h1 id="interpolation-and-polynomial-approximation">Interpolation and Polynomial Approximation<a class="headerlink" href="#interpolation-and-polynomial-approximation" title="Permanent link">&para;</a></h1>
-<h2 id="lagrange-interpolating-polynomial">Lagrange Interpolating Polynomial<a class="headerlink" href="#lagrange-interpolating-polynomial" title="Permanent link">&para;</a></h2>
+<h2 id="interpolating-polynomial">Interpolating Polynomial<a class="headerlink" href="#interpolating-polynomial" title="Permanent link">&para;</a></h2>
+<h3 id="lagrange-interpolating-polynomial">Lagrange Interpolating Polynomial<a class="headerlink" href="#lagrange-interpolating-polynomial" title="Permanent link">&para;</a></h3>
 <p>Inspired by 加权平均.</p>
 <p>There exists and only exists a <span class="arithmatex">\(n\)</span>th <strong>Lagrange interpolating polynomial</strong> (拉格朗日基函数) </p>
 <div class="arithmatex">\[ 
@@ -1678,6 +1715,62 @@ L_n(x) = \sum_{i=0}^{n}l_i(x)y_i = \begin{bmatrix} l_0(x) &amp; l_1(x) &amp;l_2(
 l_i(x) = \prod_{j=0 \atop j \neq i }^{n}\frac{(x - x_i)}{(x_i-x_j)} \quad i=0,1,\cdots n 
 \]</div>
 <p>readers can prove the above <span class="arithmatex">\(n+1\)</span> polynomials are linearly irrelevant.</p>
+<div class="admonition info">
+<p class="admonition-title">Another form of <span class="arithmatex">\(l_i(x)\)</span></p>
+<p>If we denote <span class="arithmatex">\(\omega(x)=\prod\limits_{k=0}^{n}(x-x_k)\)</span>, so the numerator of <span class="arithmatex">\(l_i(x)\)</span> is </p>
+<div class="arithmatex">\[
+\frac{\omega(x)}{x-x_i}
+\]</div>
+<p>and its demunerator is </p>
+<div class="arithmatex">\[
+\omega'(x)|_{x=x_i}=\sum_{j=0}^{n}\prod_{k=0 \atop k\neq j}^{n}(x-x_k)|_{x=x_i}=\prod_{k=0\atop k\neq i}^{n}(x_i-x_k)
+\]</div>
+<p>so </p>
+<div class="arithmatex">\[
+l_i(x)=\frac{\omega(x)}{(x-x_i)\omega'(x_i)}
+\]</div>
+<p>which satisfies </p>
+<div class="arithmatex">\[
+l_i(x_j)=\begin{cases}1,\quad &amp;j=i,\\ 0,\quad &amp;j\neq i.\end{cases}
+\]</div>
+</div>
+<p><a id="q1"></a></p>
+<div class="question">
+<p>Q1. Calculate the Lagrange polynomial that interpolates the following 3 points.</p>
+<div style="text-align: center;">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x_i\)</span></th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(f(x_i)\)</span></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="lagrange-interpolating-polynomial-answer" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lagrange-interpolating-polynomial-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+p_2(x) &amp;= \frac{(x-2)(x-4)}{(1-2)(1-4)}\times 8 + \frac{(x-1)(x-4)}{(2-1)(2-4)}\times 1 + \frac{(x-1)(x-2)}{(4-1)(4-2)}\times 5\\
+&amp;=\frac{8}{3}(x^2-6x+8)-\frac{1}{2}(x^2-5x+4)+\frac{5}{6}(x^2-3x+2)\\
+&amp;=3x^2-16x+21
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
 <p>In fact, if we assume <span class="arithmatex">\(P_n(x) = \sum\limits_{i=0}^{n}a_ix^i\)</span>(natural base), and to get the parameters <span class="arithmatex">\(\{a_i\}\)</span> such that <span class="arithmatex">\(P_n(x_i) = y_i\)</span>, we have to solve the following linear system</p>
 <div class="arithmatex">\[
 \begin{bmatrix} 1 &amp; x_0 &amp; x_0^2 &amp;\cdots &amp; x_0^n \\ 
@@ -1692,51 +1785,119 @@ a_0 \\ a_1 \\ \vdots \\ a_n
 \end{bmatrix} 
 \]</div>
 <p>which is a little tedious.</p>
-<h3 id="error">Error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h3>
-<p>The following theorem gives the error bound.</p>
-<div class="admonition success">
-<p class="admonition-title">拉格朗日基函数的余项 | The remainder of Lagrange interpolating polynomial</p>
-<p>Suppose <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span> are distinct numbers in the interval <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(f \in C^{n+1{[a, b]\)</span>. Then, for each <span class="arithmatex">\(x \in [a, b]\)</span>, a number <span class="arithmatex">\(\xi(x)\)</span> (generally unknown) between <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span>, and hence in <span class="arithmatex">\((a, b)\)</span>, exists with</p>
-<div class="arithmatex">\[
-f(x) = P(x) + \frac{f^{n+1}(\xi(x))}{(n+1)!}\prod_{i=0}^{n}(x - x_i)
-\]</div>
-<p>where <span class="arithmatex">\(P(x)\)</span> is the Lagrange interpolating polynomial.</p>
-</div>
-<p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="error-hints" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="error-hints">Hints</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>Using a function </li>
-</ul>
-<div class="arithmatex">\[
-g(t) = f(t) - P(t) - [f(t)-g(t)]\prod_{i=0}^{n}\frac{(t-x_i)}{x-x_i}
-\]</div>
-<p>which is <span class="arithmatex">\(C^{n+1}[a, b]\)</span>. Note that <span class="arithmatex">\(f(x_k)=0\)</span> and <span class="arithmatex">\(f(x)=0\)</span> for <span class="arithmatex">\(x \in [a, b]\)</span>. We can see that <span class="arithmatex">\(n+1+1=+\)</span> zero points here. </p>
-<ul>
-<li>Using generalized Rolle's Theorem: There exists <span class="arithmatex">\(\xi(x) \in [a, b]\)</span> such that <span class="arithmatex">\(g^{n+1}(\xi(x))=0\)</span></li>
-</ul>
-<p>And make <span class="arithmatex">\(n+1\)</span> derivatives to <span class="arithmatex">\(g(t)\)</span>(corresponding to <span class="arithmatex">\(t\)</span>), and we can get the result. </p>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Compared to the remainder of Taylor's extension</p>
-<div class="arithmatex">\[
-R_n(x) = \frac{f^{n+1}(\xi(x))}{(n+1)!}(x-x_0)^{n+1}
-\]</div>
-</div>
-<p>Because <span class="arithmatex">\(\xi(x)\)</span> is usually unknown, so we often use a number <span class="arithmatex">\(x' \in  [a, b]\)</span> such that </p>
-<div class="arithmatex">\[
-|f^{n+1}(\xi(x))|\leq |f^{n+1}(x')|
-\]</div>
-<h2 id="nevilles-method">Neville's Method<a class="headerlink" href="#nevilles-method" title="Permanent link">&para;</a></h2>
+<h3 id="nevilles-method">Neville's Method<a class="headerlink" href="#nevilles-method" title="Permanent link">&para;</a></h3>
+<p>There is another way to express polynomial, which is also a weighted average.</p>
 <p>An interpolation polynomial for a set of points <span class="arithmatex">\(A =\{x_0, x_1, \cdots x_n \}\)</span> can be expressed by two polynomials that interpolate <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_i\}\)</span> and <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_j\}\)</span>. That is,</p>
 <div class="arithmatex">\[
-P_n(x) = \frac{(x-x_i)P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)-(x-x_j)P_{0,1,\cdots,j-1,j+1,\cdots,n}(x)}{(x_j-x_i)}
+\begin{align*}
+P_{0,1,\cdots,n}(x) &amp;= \frac{(x-x_i)P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)-(x-x_j)P_{0,1,\cdots,j-1,j+1,\cdots,n}(x)}{(x_j-x_i)}\\
+&amp;=\frac{1}{(x_j-x_i)}\left|\begin{array}{cc}
+(x-x_i) &amp; P_{0,1,\cdots,j-1,j+1,\cdots,n}(x) \\
+(x-x_j) &amp; P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)
+\end{array}\right|
+\end{align*}
 \]</div>
-<p>where <span class="arithmatex">\(P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)\)</span> and <span class="arithmatex">\((x-x_j)P_{0,1,\cdots,j-1,j+1,\cdots,n}(x)\)</span> denotes the polynomial that interpolates <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_i\}\)</span> and <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_j\}\)</span> respectively.</p>
-<h2 id="divided-differences">Divided Differences<a class="headerlink" href="#divided-differences" title="Permanent link">&para;</a></h2>
+<p>where <span class="arithmatex">\(P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)\)</span> and <span class="arithmatex">\(P_{0,1,\cdots,j-1,j+1,\cdots,n}(x)\)</span> denotes the polynomial that interpolates <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_i\}\)</span> and <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_j\}\)</span> respectively.</p>
+<p>For the first item, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+P_{0,1}(x) &amp;= \frac{(x-x_0)\times f(x_1)-(x-x_1)\times f(x_0)}{(x_1-x_0)}\\
+&amp;=\frac{1}{(x_1-x_0)}\left|\begin{array}{cc}
+(x-x_0) &amp; f(x_0) \\
+(x-x_1) &amp; f(x_1)
+\end{array}\right|
+\end{align*}
+\]</div>
+<div class="question">
+<p>Q2. Get the polynomial <span class="arithmatex">\(p_3(x)\)</span> that interpolates the following 4 points and estimate <span class="arithmatex">\(f(5)\)</span> by calculate <span class="arithmatex">\(p_3(5)\)</span>.</p>
+<div style="text-align: center;">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(x_i\)</span></th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(f(x_i)\)</span></td>
+<td style="text-align: center;">-8</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">64</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="nevilles-method-answer" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="nevilles-method-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>It is a little tedious if we write the form of the polynomial and then substitute <span class="arithmatex">\(5\)</span> in. It is more suitable to list a table.</p>
+<p><div style="text-align: center;">
+<table style="font-size:12px;" >
+<tr align="center" valign="middle">
+    <th align="center"><span class="arithmatex">\(x\)</span></th>
+    <th align="center"><span class="arithmatex">\(f(x)\)</span></th>
+    <th align="center"><span class="arithmatex">\(p_1(5)\)</span></th>
+    <th align="center"><span class="arithmatex">\(p_2(5)\)</span></th>
+    <th align="center"><span class="arithmatex">\(p_3(5)\)</span></th>
+</tr>
+<tr >
+    <td align="center">2</td>
+    <td align="center">-8</td>
+    <td align="center"></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td align="center">4</td>
+    <td align="center">0</td>
+    <td align="center"><span class="arithmatex">\(\frac{1}{(4-2)}\left|\begin{array}{cc}
+    (5-2) &amp; -8 \\
+    (5-4) &amp; 0
+    \end{array}\right|=4\)</span></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td align="center">6</td>
+    <td align="center">8</td>
+    <td align="center"><span class="arithmatex">\(\frac{1}{(6-4)}\left|\begin{array}{cc}
+    (5-4) &amp; 0 \\
+    (5-6) &amp; 8
+    \end{array}\right|=4\)</span></td>
+    <td align="center"><span class="arithmatex">\(\frac{1}{(6-2)}\left|\begin{array}{cc}
+    (5-2) &amp; 4 \\
+    (5-6) &amp; 4
+    \end{array}\right|=4\)</span></td>
+    <td></td>
+</tr>
+<tr>
+    <td align="center">8</td>
+    <td align="center">64</td>
+    <td align="center"><span class="arithmatex">\(\frac{1}{(8-6)}\left|\begin{array}{cc}
+    (5-6) &amp; -8 \\
+    (5-8) &amp; 64
+    \end{array}\right|=-20\)</span></td>
+    <td align="center"><span class="arithmatex">\(\frac{1}{(8-4)}\left|\begin{array}{cc}
+    (5-4) &amp; 4 \\
+    (5-8) &amp; -20
+    \end{array}\right|=-2\)</span></td>
+    <td align="center"><span class="arithmatex">\(\frac{1}{(8-2)}\left|\begin{array}{cc}
+    (5-2) &amp; 4 \\
+    (5-8) &amp; -2
+    \end{array}\right|=1\)</span></td>
+</tr>
+</table>
+</div></p>
+</div>
+</div>
+</div>
+<h3 id="newtons-divided-difference-formula">Newton's Divided Difference Formula<a class="headerlink" href="#newtons-divided-difference-formula" title="Permanent link">&para;</a></h3>
 <p>If we rewrite the <span class="arithmatex">\(n\)</span>th Lagrange polynomial <span class="arithmatex">\(P_n(x)\)</span> into another form:</p>
 <div class="arithmatex">\[
 P_n(x) = a_0+a_1(x-x_0)+a_2(x-x_0)(x-x_1)+\cdots+a_n(x-x_0)\cdots(x-x_n)
@@ -1744,11 +1905,12 @@ P_n(x) = a_0+a_1(x-x_0)+a_2(x-x_0)(x-x_1)+\cdots+a_n(x-x_0)\cdots(x-x_n)
 <p>By letting <span class="arithmatex">\(x =x_0, x_1,\cdots, x_n\)</span>, we get</p>
 <div class="arithmatex">\[
 \begin{align*}
-P_n(x_0) &amp;= a_0\\
-P_n(x_1) &amp;= a_0 + a_1(x_1-x_0)\\
-P_n(x_2) &amp;= a_0+a_1(x_2-x_0)+a_2(x_2-x_0)(x_2-x_1)\\
+P_n(x_0) = &amp; a_0\\
+P_n(x_1) = &amp; a_0 + a_1(x_1-x_0)\\
+P_n(x_2) = &amp; a_0+a_1(x_2-x_0)+a_2(x_2-x_0)(x_2-x_1)\\
 &amp;\vdots\\
-P_n(x_2) &amp;= a_0+a_1(x_2-x_0)+a_2(x_2-x_0)(x_2-x_1)+\cdots+a_n(x_2-x_0)\cdots(x_2-x_n)
+P_n(x_n) = &amp; a_0+a_1(x_n-x_0)+a_2(x_n-x_0)(x_n-x_1)+\\
+&amp;\cdots+a_n(x_n-x_0)\cdots(x_n-x_{n-1})
 \end{align*}
 \]</div>
 <p>Then we can define:</p>
@@ -1764,27 +1926,15 @@ f_n[x_0, x_1, x_2] &amp;\overset{\Delta}{=} \frac{f[x_1,x_2]-f[x_0,x_1]}{x_2-x_0
 f[x_1,x_2,\cdots, x_n] &amp;\overset{\Delta}{=} \frac{f[x_1,x_2,\cdots,x_n] - f[x_0,x_1,\cdots,x_{n-1}]}{x_n-x_0} = a_n
 \end{align*}
 \]</div>
-<p>We can prove the above definition <span class="arithmatex">\(f[x_0,x_1\cdots,x_n]\)</span>, which is called divided difference, to be equal to <span class="arithmatex">\(a_n\)</span> by induction.</p>
+<p>We can prove the above definition <span class="arithmatex">\(f[x_0,x_1\cdots,x_n]\)</span>, which is called <strong>divided difference</strong>, to be equal to <span class="arithmatex">\(a_n\)</span> by induction.</p>
+<p>We can also show that <span class="arithmatex">\(a_1\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(1\)</span> that interpolats <span class="arithmatex">\(x_0,x_1\)</span>, <span class="arithmatex">\(a_2\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(2\)</span> that interpolates <span class="arithmatex">\(x_0,x_1,x_2\)</span> ...</p>
 <p>This <strong>iterative method</strong> is quite useful in determining the parameters of <span class="arithmatex">\(n\)</span>th Lagrange polynomial.</p>
 <div class="arithmatex">\[
 P_n(x) = f[x_0] + \sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(x-x_j)\right)
 \]</div>
-<p>Some properties are the followings.</p>
-<div class="admonition success">
-<p class="admonition-title">差分与微分均值的关系 | Relationship of DD &amp; Maen Value Differentials</p>
-<p>Suppose that <span class="arithmatex">\(f \in C^n[a, b]\)</span> and <span class="arithmatex">\(x_0, x_1, \cdots, x_n\)</span> are distinct numbers in <span class="arithmatex">\([a, b]\)</span>. Then a number <span class="arithmatex">\(\xi\)</span> exists in <span class="arithmatex">\((a, b)\)</span> with</p>
-<div class="arithmatex">\[
-f[x_0,x_1\cdots,x_n] = \frac{f^{(n)}(\xi)}{n!}
-\]</div>
-</div>
-<p>It is like </p>
-<div class="arithmatex">\[
-f[x_0,x_1] = \frac{f(x_1)-f(x_0)}{x_1-x_0} = f'(\xi)
-\]</div>
-<p>but add <span class="arithmatex">\(n!\)</span> to the denominator.</p>
 <p>The following relation gives a slightly quicker way to compute <span class="arithmatex">\(f[x_0,x_1,\cdots,x_n]\)</span>:</p>
 <div class="admonition success">
-<p class="admonition-title">Another expression of calculating divided difference</p>
+<p class="admonition-title">计算差商 | Calculating divided difference</p>
 <div class="arithmatex">\[
 f[x_0,x_1,\cdots,x_n] = \sum_{k=0}^{n}\frac{f(x_k)}{\omega'_{n+1}(x_k)}
 \]</div>
@@ -1792,6 +1942,153 @@ f[x_0,x_1,\cdots,x_n] = \sum_{k=0}^{n}\frac{f(x_k)}{\omega'_{n+1}(x_k)}
 <div class="arithmatex">\[
 \omega_{n+1}(x) = \prod_{i=0}^{n}(x-x_i),\quad \omega'_{n+1}(x_j) = \prod_{i=0 \atop i \neq j}^{n}(x_j-x_i)
 \]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="newtons-divided-difference-formula-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="newtons-divided-difference-formula-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We know from Lagrange polynomial of degree <span class="arithmatex">\(n\)</span></p>
+<div class="arithmatex">\[
+P_n(x) = \sum_{i=0}^{n}f(x_i)\frac{\omega(x)}{(x-x_i)\omega'(x_i)}
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+\omega(x) = \prod_{j=0}^n(x-x_j), \quad \omega'(x_i) = \prod_{j=0\atop j\neq i}^n(x_i-x_j)
+\]</div>
+<p>So the divided difference equals to the coefficient of the highest item of <span class="arithmatex">\(P_n(x)\)</span>, and we are done.</p>
+</div>
+</div>
+</div>
+<p>Now solve <a href="#q1">Question 1</a> in the above part of the article.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="newtons-divided-difference-formula-answer" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="newtons-divided-difference-formula-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div style="text-align: center;">
+<table>
+    <tr align="center" valign="middle">
+        <th align="center"><span class="arithmatex">\(x_i\)</span></th>
+        <th align="center"><span class="arithmatex">\(f(x_i)\)</span></th>
+        <th align="center"><span class="arithmatex">\(f[x_i,x_j]\)</span></th>
+        <th align="center"><span class="arithmatex">\(f[x_i,x_j,x_k]\)</span></th>
+    </tr>
+    <tr>
+        <td style="text-align: center; vertical-align: middle;">1 <br> 2 <br> 4</td>
+        <td style="text-align: center; vertical-align: middle;">8 <br> 1 <br> 5</td>
+        <td style="text-align: center; vertical-align: middle;">-7 <br> 2</td>
+        <td style="text-align: center; vertical-align: middle;">3</td>
+    </tr>
+</table>
+</div></p>
+<p>So the interpolating polynomial is </p>
+<div class="arithmatex">\[
+P_2(x) = 8-7(x-1)+ 3(x-1)(x-2)
+\]</div>
+</div>
+</div>
+</div>
+<p>Some properties are the followings.</p>
+<div class="admonition success">
+<p class="admonition-title">差商与微分均值的关系 | Relationship of DD &amp; Mean Value Differentials</p>
+<p>Suppose that <span class="arithmatex">\(f \in C^n[a, b]\)</span> and <span class="arithmatex">\(x_0, x_1, \cdots, x_n\)</span> are distinct numbers in <span class="arithmatex">\([a, b]\)</span>. Then a number <span class="arithmatex">\(\xi\)</span> exists in <span class="arithmatex">\((a, b)\)</span> with</p>
+<div class="arithmatex">\[
+f[x_0,x_1\cdots,x_n] = \frac{f^{(n)}(\xi)}{n!}
+\]</div>
+<p>Specifically, we denote <span class="arithmatex">\(a=\min\{x_i:i=0,1\cdots,n\}\)</span> and <span class="arithmatex">\(b=\max\{x_i:i=0,1\cdots,n\}\)</span></p>
+</div>
+<p>It is like </p>
+<div class="arithmatex">\[
+f[x_0,x_1] = \frac{f(x_1)-f(x_0)}{x_1-x_0} = f'(\xi)
+\]</div>
+<p>but add <span class="arithmatex">\(n!\)</span> to the denominator.</p>
+<p>The collary can be quite simple.</p>
+<div class="admonition success">
+<p class="admonition-title">Collary of the above</p>
+<p>If <span class="arithmatex">\(f(x)\)</span> is a polynomial of degree <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(k&lt;n\)</span>, so the <span class="arithmatex">\(n\)</span>th divided difference is <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<h2 id="error-analysis-of-interpolation">Error Analysis of Interpolation<a class="headerlink" href="#error-analysis-of-interpolation" title="Permanent link">&para;</a></h2>
+<p>The following theorem gives the error bound.</p>
+<div class="admonition success">
+<p class="admonition-title">拉格朗日基函数的余项 | The remainder of Lagrange interpolating polynomial</p>
+<p>Suppose <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span> are distinct numbers in the interval <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(f \in C^{n+1{[a, b]\)</span>. Then, for each <span class="arithmatex">\(x \in [a, b]\)</span>, a number <span class="arithmatex">\(\xi(x)\)</span> (generally unknown) between <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span>, and hence in <span class="arithmatex">\((a, b)\)</span>, exists with</p>
+<div class="arithmatex">\[
+f(x) = P(x) + \frac{f^{n+1}(\xi(x))}{(n+1)!}\prod_{i=0}^{n}(x - x_i)
+\]</div>
+<p>where <span class="arithmatex">\(P(x)\)</span> is the Lagrange interpolating polynomial.</p>
+</div>
+<p>Prove it.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="error-analysis-of-interpolation-hints" name="__tabbed_5" type="radio" /><input id="error-analysis-of-interpolation-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="error-analysis-of-interpolation-hints">Hints</label><label for="error-analysis-of-interpolation-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Using a function </li>
+</ul>
+<div class="arithmatex">\[
+g(t) = f(t) - P(t) - [f(t)-g(t)]\prod_{i=0}^{n}\frac{(t-x_i)}{x-x_i}
+\]</div>
+<p>which is <span class="arithmatex">\(C^{n+1}[a, b]\)</span>. Note that <span class="arithmatex">\(f(x_k)=0\)</span> and <span class="arithmatex">\(f(x)=0\)</span> for <span class="arithmatex">\(x \in [a, b]\)</span>. We can see that <span class="arithmatex">\(n+1+1=+\)</span> zero points here. </p>
+<ul>
+<li>Using generalized Rolle's Theorem: There exists <span class="arithmatex">\(\xi(x) \in [a, b]\)</span> such that <span class="arithmatex">\(g^{n+1}(\xi(x))=0\)</span></li>
+</ul>
+<p>And make <span class="arithmatex">\(n+1\)</span> derivatives to <span class="arithmatex">\(g(t)\)</span>(corresponding to <span class="arithmatex">\(t\)</span>), and we can get the result. </p>
+</div>
+<div class="tabbed-block">
+<p>Or by using the relationship between divided difference and mean value differentials.</p>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Compared to the remainder of Taylor's extension</p>
+<div class="arithmatex">\[
+R_n(x) = \frac{f^{n+1}(\xi(x))}{(n+1)!}(x-x_0)^{n+1}
+\]</div>
+</div>
+<p>Because <span class="arithmatex">\(\xi(x)\)</span> is usually unknown, so we often use a number <span class="arithmatex">\(x' \in  [a, b]\)</span> such that </p>
+<div class="arithmatex">\[
+|f^{n+1}(\xi(x))|\leq |f^{n+1}(x')|
+\]</div>
+<h2 id="interpolation-of-equidistant-points">Interpolation of Equidistant Points<a class="headerlink" href="#interpolation-of-equidistant-points" title="Permanent link">&para;</a></h2>
+<p>In actual calculation in computer, we use difference to replace divided difference when we interpolate points with equal distance.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Difference on Equidistant Points</p>
+<p>Difference of first order is defined by</p>
+<div class="arithmatex">\[
+\Delta f(x_i)=f(x_{i+1})-f(x_i)
+\]</div>
+<p>Difference of second order is defined by</p>
+<div class="arithmatex">\[
+\begin{align*}
+\Delta^2 f(x_i)&amp;=\Delta f(x_{i+1})-\Delta f(x_i)\\
+&amp;=f(x_{i+2})-2f(x_{i+1})+f(x_i)
+\end{align*}
+\]</div>
+<p>By recursion, we define Difference of <span class="arithmatex">\(n\)</span>th order</p>
+<div class="arithmatex">\[
+\Delta^n f(x_i)=\Delta^{n-1}f(x_{i+1})-\Delta^{n-1}f(x_i)
+\]</div>
+</div>
+<p>By induction, it is easy to see that</p>
+<div class="arithmatex">\[
+\begin{align*}
+\Delta^{n}f(x_i) = &amp;f(x_{i+n})-nf(x_{i+n-1})+C^1_{n}f(x_{i+n-2})\\
++&amp;\cdots+(-1)^{n-1}nf(x_{i+1})+(-1)^nf(x_i)\\
+=&amp;\sum_{k=0}^n(-1)^k C_n^kf(x_{i+k}).
+\end{align*}
+\]</div>
+<p>We usually use the recursive method for computing.</p>
+<p>In situation where points are equally distant, we have a relationship between divided difference and difference.</p>
+<div class="admonition success">
+<p class="admonition-title">relationship between divided difference and difference</p>
+<p>Under equidistant points, we have </p>
+<div class="arithmatex">\[
+f[x_0,x_1,\cdots,x_n]=\frac{\Delta^{n}f(x_0)}{h^n n!}
+\]</div>
+<p>where <span class="arithmatex">\(h\)</span> is the distance between two adjacent points.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="interpolation-of-equidistant-points-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="interpolation-of-equidistant-points-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By induction.</p>
+</div>
+</div>
 </div>
 <h2 id="hermite-polynomials">Hermite Polynomials<a class="headerlink" href="#hermite-polynomials" title="Permanent link">&para;</a></h2>
 <p>We want to consider the smoothness of interpolating polynomials, so we need to consider its derivatives, especially the first order derivative. </p>
@@ -1815,17 +2112,30 @@ H_{2n+1}(x) = \sum_{j=0}^{n}f(x_j)H_{n,j}(x) + \sum_{j=0}^{n}f'(x_j)\hat{H}_{n,j
 H_{n,j}(x) = [1-2(x-x_j)L'_{n,j}(x_j)]L^2_{n,j}(x),\quad \hat{H}_{n,j}(x) = (x-x_j)L^2_{n,j}(x)
 \]</div>
 </div>
-<p>The composition is usually a little tidious.</p>
+<p>The composition is usually a little tedious.</p>
 <h2 id="cubic-spline-interpolation">Cubic Spline Interpolation<a class="headerlink" href="#cubic-spline-interpolation" title="Permanent link">&para;</a></h2>
-<p>We change <span class="arithmatex">\(\frac{d^kP(x_i)}{dx^k} = \frac{d^kf(x_i)}{dx^k}\)</span> into equations between adjacent curves. Because we ofte do not know the derivatives of the point.</p>
-<ul>
-<li>Natural Spline</li>
-</ul>
-<p>Let <span class="arithmatex">\(S''(a) = 0\)</span> and <span class="arithmatex">\(S''(b) = 0\)</span>.</p>
-<ul>
-<li>Clamped Cubic Spline</li>
-</ul>
-<p>Let <span class="arithmatex">\(S'(x_0) = f'(x_0)\)</span> and <span class="arithmatex">\(S'(x_n) = f'(x_n)\)</span>.</p>
+<p>We change <span class="arithmatex">\(\frac{d^kP(x_i)}{dx^k} = \frac{d^kf(x_i)}{dx^k}\)</span> into equations between adjacent curves. Because we often do not know the derivatives of the point.</p>
+<p>Define <span class="arithmatex">\(s(x)\)</span> piece-wisely with <span class="arithmatex">\(s_i(x)\in [x_i,x_{i+1}]\)</span></p>
+<div class="arithmatex">\[
+s_i(x)=a_i+b_ix+c_ix^2+d_ix^3
+\]</div>
+<p>which has 4 parameters to be determined. So the overall number of parameters to be determined is <span class="arithmatex">\(4(n-1)\)</span>. The condition they have to satisfy</p>
+<div class="arithmatex">\[
+s_i(x_i)=f(x_i), s_i(x_{i+1})=f(x_{i+1}), i=0,1,\cdots,n-1 \quad \text{[$2(n-1)$ equations]}
+\]</div>
+<div class="arithmatex">\[
+s'_i(x_{i})=s'_{i+1}(x_{i}),i=1,2,\cdots, n-2\quad \text{[$n-2$ equations]}
+\]</div>
+<div class="arithmatex">\[
+s''_i(x_{i})=s''_{i+1}(x_{i}),i=1,2,\cdots, n-2\quad \text{[$n-2$ equations]}
+\]</div>
+<p>So the above necessary condition gives <span class="arithmatex">\(4n-6\)</span> equations while we have <span class="arithmatex">\(4(n-1)\)</span> parameters to be determined. So we need to add another two equations for computing. There are many ways while the followings are usually seen.</p>
+<div class="admonition success">
+<p class="admonition-title">Three possible dealings</p>
+<p>(i) provide the derivatives of <span class="arithmatex">\(2\)</span> endpoints, i.e. <span class="arithmatex">\(s'(a)=f'(a)\)</span>, <span class="arithmatex">\(s'(b)=f'(b)\)</span>, which is called <strong>D1 cubic spline</strong> or <strong>Clamped Cubic Spline</strong>.</p>
+<p>(ii) provide the second derivatives of <span class="arithmatex">\(2\)</span> endpoints, i.e. <span class="arithmatex">\(s''(a)=f''(a)\)</span>, <span class="arithmatex">\(s''(b)=f''(b)\)</span>, which is called <strong>D1 cubic spline</strong>. Specially, if <span class="arithmatex">\(s''(a)=s''(b)=0\)</span>, it is called <strong>Natural Spline</strong>.</p>
+<p>(iii) take <span class="arithmatex">\(s(a)=f(a)\)</span> or <span class="arithmatex">\(s(b)=f(b)\)</span> out and provide extra <span class="arithmatex">\(3\)</span> equations <span class="arithmatex">\(s(a)=s(b)\)</span>, <span class="arithmatex">\(s'(a)=s'(b)\)</span>, <span class="arithmatex">\(s''(a)=s''(b)\)</span>, which is called <strong>periodical cubic spline</strong>.</p>
+</div>
 
 
 
