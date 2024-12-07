@@ -1893,9 +1893,9 @@ g(x)= x - \frac{f(x)f'(x)}{f'^2(x)-f(x)f''(x)}
 \]</div>
 <h2 id="accelerating-convergence">加速收敛 | Accelerating convergence<a class="headerlink" href="#accelerating-convergence" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Aitken's <span class="arithmatex">\(\Delta^2\)</span> Method
-Suppose <span class="arithmatex">\(\{p_n\}_{n=0}^{\infty}\)</span> is a linearly convergent sequence with limit <span class="arithmatex">\(p\)</span>. To motivate the construction of a sequence <span class="arithmatex">\(\{\hat{p}_n\}_{n=1}^{\infty}\)</span> that converges more rapidly to <span class="arithmatex">\(p\)</span> than does <span class="arithmatex">\(\{p_n\}_{n=0}^{\infty}\)</span>, let us first assume that the signs of <span class="arithmatex">\(p_n-p\)</span>, <span class="arithmatex">\(p_{n+1}-p\)</span> and <span class="arithmatex">\(p_{n+2}-p\)</span> agree and that <span class="arithmatex">\(n\)</span> is sufficiently large that </li>
+<li>Aitken's <span class="arithmatex">\(\Delta^2\)</span> Method</li>
 </ul>
+<p>Suppose <span class="arithmatex">\(\{p_n\}_{n=0}^{\infty}\)</span> is a linearly convergent sequence with limit <span class="arithmatex">\(p\)</span>. To motivate the construction of a sequence <span class="arithmatex">\(\{\hat{p}_n\}_{n=1}^{\infty}\)</span> that converges more rapidly to <span class="arithmatex">\(p\)</span> than does <span class="arithmatex">\(\{p_n\}_{n=0}^{\infty}\)</span>, let us first assume that the signs of <span class="arithmatex">\(p_n-p\)</span>, <span class="arithmatex">\(p_{n+1}-p\)</span> and <span class="arithmatex">\(p_{n+2}-p\)</span> agree and that <span class="arithmatex">\(n\)</span> is sufficiently large that </p>
 <div class="arithmatex">\[
 \frac{p_{n+1}-p}{p_n-p} \approx \frac{p_{n+2}-p}{p_{n+1}-p}
 \]</div>
@@ -1912,9 +1912,9 @@ p &amp;\approx p_n - \frac{(p_{n+1}-p_n)^2}{p_{n+2} - 2p_{n+1} + p_n}\\
 \end{align*} 
 \]</div>
 <ul>
-<li>Steffensen's Method
-The following thought is based on that the generated sequence <span class="arithmatex">\(\hat{p}\)</span> is a better approximation to true <span class="arithmatex">\(p^*\)</span>. We make use of the constructed sequence <span class="arithmatex">\(\{\hat{p}_n\}\)</span> to update the original sequence <span class="arithmatex">\(\{p_n\}\)</span>. That is, after generating a new <span class="arithmatex">\(\hat{p}\)</span>, we can update <span class="arithmatex">\(p_0 \leftarrow p\)</span>.</li>
+<li>Steffensen's Method</li>
 </ul>
+<p>The following thought is based on that the generated sequence <span class="arithmatex">\(\hat{p}\)</span> is a better approximation to true <span class="arithmatex">\(p^*\)</span>. We make use of the constructed sequence <span class="arithmatex">\(\{\hat{p}_n\}\)</span> to update the original sequence <span class="arithmatex">\(\{p_n\}\)</span>. That is, after generating a new <span class="arithmatex">\(\hat{p}\)</span>, we can update <span class="arithmatex">\(p_0 \leftarrow p\)</span>.</p>
 
 
 

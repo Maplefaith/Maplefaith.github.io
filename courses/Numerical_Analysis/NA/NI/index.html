@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elements-of-numerical-integration" class="md-skip">
+        <a href="#algebraic-precision" class="md-skip">
           Skip to content
         </a>
       
@@ -907,27 +907,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#elements-of-numerical-integration" class="md-nav__link">
+  <a href="#algebraic-precision" class="md-nav__link">
     <span class="md-ellipsis">
-      Elements of Numerical Integration
+      代数精度 | Algebraic Precision
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newton-cotes-newton-cotes-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Cotes 公式 | Newton-Cotes Formulas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Newton-Cotes 公式 | Newton-Cotes Formulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      推导 | Deduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差分析 | Error analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#composite-numerical-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Composite Numerical Integration
+      混合积分 | Composite Numerical Integration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#romberg-integration" class="md-nav__link">
+  <a href="#romberg-romberg-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Romberg Integration
+      Romberg 积分 | Romberg Integration
     </span>
   </a>
   
@@ -936,16 +969,16 @@
         <li class="md-nav__item">
   <a href="#adaptive-quadrature-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Adaptive Quadrature Methods
+      自适应求积方法 | Adaptive Quadrature Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gaussian-quadrature" class="md-nav__link">
+  <a href="#gaussian-gaussian-quadrature" class="md-nav__link">
     <span class="md-ellipsis">
-      Gaussian Quadrature
+      Gaussian 求积公式 | Gaussian Quadrature
     </span>
   </a>
   
@@ -1567,27 +1600,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#elements-of-numerical-integration" class="md-nav__link">
+  <a href="#algebraic-precision" class="md-nav__link">
     <span class="md-ellipsis">
-      Elements of Numerical Integration
+      代数精度 | Algebraic Precision
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newton-cotes-newton-cotes-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Cotes 公式 | Newton-Cotes Formulas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Newton-Cotes 公式 | Newton-Cotes Formulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      推导 | Deduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      误差分析 | Error analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#composite-numerical-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Composite Numerical Integration
+      混合积分 | Composite Numerical Integration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#romberg-integration" class="md-nav__link">
+  <a href="#romberg-romberg-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Romberg Integration
+      Romberg 积分 | Romberg Integration
     </span>
   </a>
   
@@ -1596,16 +1662,16 @@
         <li class="md-nav__item">
   <a href="#adaptive-quadrature-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Adaptive Quadrature Methods
+      自适应求积方法 | Adaptive Quadrature Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gaussian-quadrature" class="md-nav__link">
+  <a href="#gaussian-gaussian-quadrature" class="md-nav__link">
     <span class="md-ellipsis">
-      Gaussian Quadrature
+      Gaussian 求积公式 | Gaussian Quadrature
     </span>
   </a>
   
@@ -1628,18 +1694,86 @@
 
   <h1>Numerical Integration</h1>
 
-<h2 id="elements-of-numerical-integration">Elements of Numerical Integration<a class="headerlink" href="#elements-of-numerical-integration" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Precision</li>
-</ul>
-<p>The degree of accuracy, or precision, of a quadrature formula is the largest positive integer
-n such that the formula is exact for <span class="arithmatex">\(x^k\)</span> , for each <span class="arithmatex">\(k = 0, 1, . . . , n\)</span>.</p>
-<ul>
-<li>Simpson’s Rule(Commonly used)
-interpolate 3 points</li>
-</ul>
-<h2 id="composite-numerical-integration">Composite Numerical Integration<a class="headerlink" href="#composite-numerical-integration" title="Permanent link">&para;</a></h2>
-<h2 id="romberg-integration">Romberg Integration<a class="headerlink" href="#romberg-integration" title="Permanent link">&para;</a></h2>
+<p>Generally speaking, we encounter an integration problem </p>
+<div class="arithmatex">\[
+I(f) =\int_a^b\rho(x)f(x)dx
+\]</div>
+<p>which cannot be solved by indefinite integral, so we have to define a numerical formula to approximate the integration. Typecal <strong>quadrature formula</strong> (求积公式) can be written as</p>
+<div class="arithmatex">\[
+I_n(f)=\sum_{k=1}^nA_kf(x_k)
+\]</div>
+<p>where <span class="arithmatex">\(x_k\)</span> are nodes on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\(A_k\)</span> are coefficients, whose value are only related with <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(\rho(x)\)</span> and the sampling points, rather than the formula of <span class="arithmatex">\(f\)</span> itself.</p>
+<p>Naively, we get error</p>
+<div class="arithmatex">\[
+E_n(f)= I(f)-I_n(f)
+\]</div>
+<p>which is obviously hard to get because we do not know the exact integration value. So we transfer to a concept called  <strong>Algebraic Precision</strong>.</p>
+<h2 id="algebraic-precision">代数精度 | Algebraic Precision<a class="headerlink" href="#algebraic-precision" title="Permanent link">&para;</a></h2>
+<p>The degree of accuracy, or precision, of a quadrature formula is the largest positive integer <span class="arithmatex">\(m\)</span> such that the formula is exact for <span class="arithmatex">\(x^k\)</span> , for each <span class="arithmatex">\(k = 0, 1,\cdots, m\)</span>. That is, we call a formula has <span class="arithmatex">\(m\)</span> algebraic precision if there exists <span class="arithmatex">\(m\in \mathbb{N}^+\)</span>, s.t.</p>
+<div class="arithmatex">\[
+E_n(x^k)=0, k=0,1,\cdots,m,\quad E_n(x^{m+1})\neq 0.
+\]</div>
+<p>It is easy to see that for all polynomial <span class="arithmatex">\(p(x)\)</span> of degree no more than <span class="arithmatex">\(m\)</span>, we have <span class="arithmatex">\(E_n(p)=0\)</span>.</p>
+<p>If we find a simpler function <span class="arithmatex">\(p(x)\)</span> that approximates <span class="arithmatex">\(f(x)\)</span> on <span class="arithmatex">\([a,b]\)</span>, and <span class="arithmatex">\(I(p)\)</span> is easy to get, then we can use <span class="arithmatex">\(I(p)\)</span> to approximate <span class="arithmatex">\(I(f)\)</span>. That is, if </p>
+<div class="arithmatex">\[
+\|f-p\|=\max_{x\in [a,b]}|f(x)-p(x)| &lt;\varepsilon
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+|I(f)-I(p)|=\left|\int_a^b\rho(x)[f(x)-p(x)]dx\right| &lt;\varepsilon (b-a)
+\]</div>
+<p>which is also small enough.</p>
+<h2 id="newton-cotes-newton-cotes-formulas">Newton-Cotes 公式 | Newton-Cotes Formulas<a class="headerlink" href="#newton-cotes-newton-cotes-formulas" title="Permanent link">&para;</a></h2>
+<p>The simplest function is polynomials. So we try to find a polynomial <span class="arithmatex">\(p(x)\)</span> to approximate <span class="arithmatex">\(f(x)\)</span> and then use <span class="arithmatex">\(I(p)\)</span> to approximate <span class="arithmatex">\(I(f)\)</span>. The following formulas are really natural if readers have been familiar with <a href="../IntPo_Poly/">Interpolating Polynomial</a>.</p>
+<p>Given <span class="arithmatex">\(n+1\)</span> points <span class="arithmatex">\(x_0&lt;x_1&lt;\cdots&lt;x_n\)</span>, we have a Lagrange Polynomial</p>
+<div class="arithmatex">\[
+p_n(x)=\sum_{i=0}^n\prod_{j=0\atop j\neq i}^n\frac{(x-x_j)}{x_i-x_j}f(x_i)
+\]</div>
+<p>use the above polynomial as an approximation for integration. That is, </p>
+<div class="arithmatex">\[
+\begin{equation}
+\begin{cases}
+\displaystyle I_{n+1}(p)=I(p_n)=\sum\limits_{i=0}^nA^n_if(x_i)\\
+\displaystyle A_i^n=\int_a^b\prod\limits_{j=0\atop j\neq i}^n \frac{(x-x_j)}{(x_i-x_j)}dx, i=0,1,\cdots, n.
+\end{cases}\label{quadrature}
+\end{equation}
+\]</div>
+<h3 id="deduction">推导 | Deduction<a class="headerlink" href="#deduction" title="Permanent link">&para;</a></h3>
+<p>In equation <span class="arithmatex">\(\ref{quadrature}\)</span>, if we let <span class="arithmatex">\(\rho(x)\equiv1\)</span> and choose equidistant points:</p>
+<div class="arithmatex">\[
+x_k=a+kh, \quad h=\frac{b-a}{n},\quad  k=0,1,\cdots,n
+\]</div>
+<p>then the corresponding quadrature formula is called Newton-Cotes Formula. In fact, if we let <span class="arithmatex">\(x=a+th\)</span>, <span class="arithmatex">\(t\in [0,n]\)</span>, then we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+A_i^n&amp;=\int_0^n\prod_{j=0\atop j\neq i}^n \frac{(th-jh)}{(ih-jh)}d(a+th)\\
+&amp;=h\int_0^n\prod_{j=0\atop j\neq i}^n\frac{(t-j)}{(i-j)}dt
+\end{align*}
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">common rule of quadrature formula</p>
+<p>(i) <strong>Trapezoidal Rule</strong></p>
+<p>If we let <span class="arithmatex">\(n=1\)</span> and get Trapezoidal Rule of quadrature</p>
+<div class="arithmatex">\[
+I_2(f)=I(p_1)=\frac{b-a}{2}[f(a)+f(b)]
+\]</div>
+<p><span class="arithmatex">\(f\)</span> is approximated by a linear expression.</p>
+<p>(ii) <strong>Simpson’s Rule</strong>(Commonly used)</p>
+<p>If we let <span class="arithmatex">\(n=2\)</span> and get Simpson’s Rule of quadrature</p>
+<div class="arithmatex">\[
+I_3(f)=I(p_2)=\frac{b-a}{6}\left[f(a)+4f\left(\frac{a+b}{2}\right)+f(b)\right]
+\]</div>
+<p><span class="arithmatex">\(f\)</span> is approximated by a parabola expression.</p>
+<p>(iii) <strong>Cotes' Rule</strong></p>
+<p>If we let <span class="arithmatex">\(n=4\)</span> and get Cotes' rule of quadrature</p>
+<div class="arithmatex">\[
+I_5(f)=I(p_4)=\frac{b-a}{90}\left[7f(x_0)+32f(x_1)+12f(x_2)+32f(x_3)+7f(x_4)\right]
+\]</div>
+<p>where <span class="arithmatex">\(x_i=a+(b-a)/4\cdot i\)</span>, <span class="arithmatex">\((i=0,1,2,3,4)\)</span>.</p>
+</div>
+<h3 id="error-analysis">误差分析 | Error analysis<a class="headerlink" href="#error-analysis" title="Permanent link">&para;</a></h3>
+<h2 id="composite-numerical-integration">混合积分 | Composite Numerical Integration<a class="headerlink" href="#composite-numerical-integration" title="Permanent link">&para;</a></h2>
+<h2 id="romberg-romberg-integration">Romberg 积分 | Romberg Integration<a class="headerlink" href="#romberg-romberg-integration" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Richardson's Extrapolation</li>
 </ul>
@@ -1667,8 +1801,8 @@ T_2(h) &amp;= \frac{2^2T_1(h/2)-T_1(h)}{2^2-1} = I + \gamma_1 h^3 +\cdots \\
 T_n(h) &amp;= \frac{2^nT_{n-1}(h)-T_{n-1}(h)}{2^n-1} = I + \xi_1 h^{n+1} +\cdots 
 \end{align*}
 \]</div>
-<h2 id="adaptive-quadrature-methods">Adaptive Quadrature Methods<a class="headerlink" href="#adaptive-quadrature-methods" title="Permanent link">&para;</a></h2>
-<h2 id="gaussian-quadrature">Gaussian Quadrature<a class="headerlink" href="#gaussian-quadrature" title="Permanent link">&para;</a></h2>
+<h2 id="adaptive-quadrature-methods">自适应求积方法 | Adaptive Quadrature Methods<a class="headerlink" href="#adaptive-quadrature-methods" title="Permanent link">&para;</a></h2>
+<h2 id="gaussian-gaussian-quadrature">Gaussian 求积公式 | Gaussian Quadrature<a class="headerlink" href="#gaussian-gaussian-quadrature" title="Permanent link">&para;</a></h2>
 
 
 
