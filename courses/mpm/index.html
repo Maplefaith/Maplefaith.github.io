@@ -1833,6 +1833,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#conservation-of-momentum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conservation of Momentum
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2042,7 +2051,7 @@ a_i(\pmb{x},t)&amp;=A_i(\phi^{-1}(\pmb{x},t), t)\\
 <div class="arithmatex">\[
 \frac{D}{Dt}f(\pmb{x},t)=\frac{\partial f}{\partial t}(\pmb{x}, t)+\sum_{j=1}^d\frac{\partial f}{\partial x_j}(\pmb{x},t)v_j(\pmb{x},t)
 \]</div>
-<p>which is the push forward of <span class="arithmatex">\(\partial F/\partial t\)</span> where <span class="arithmatex">\(F\)</span> is a Lagrangian function with <span class="arithmatex">\(F(\cdot,t):\Omega^0\rightarrow \mathbb{R}\)</span>.</p>
+<p>which is called <strong>material derivative</strong>, and the first item of derivative is called <strong>local rate of change</strong>. The above one is also the push forward of <span class="arithmatex">\(\partial F/\partial t\)</span> where <span class="arithmatex">\(F\)</span> is a Lagrangian function with <span class="arithmatex">\(F(\cdot,t):\Omega^0\rightarrow \mathbb{R}\)</span>.</p>
 <h3 id="relationship-between-two-deformation-gradients">Relationship between two Deformation Gradients<a class="headerlink" href="#relationship-between-two-deformation-gradients" title="Permanent link">&para;</a></h3>
 <p>For deformation gradient, most of the time in the physics of a material, the Lagrangian view is the dominant one. There is however a useful evolution of the Eulerian (push forward) of <span class="arithmatex">\(\pmb{F}(\cdot,t):\Omega^0\rightarrow \mathbb{R}^{d\times d}\)</span>. If we denote <span class="arithmatex">\(\pmb{f}(\cdot, t):\Omega^t\rightarrow \mathbb{R}^{d\times d}\)</span> be the push forward of <span class="arithmatex">\(\pmb{F}\)</span>, then</p>
 <div class="arithmatex">\[
@@ -2199,8 +2208,15 @@ d\pmb{f}=\pmb{P}\pmb{N}dS
 \]</div>
 <h3 id="conservation-of-mass">Conservation of Mass<a class="headerlink" href="#conservation-of-mass" title="Permanent link">&para;</a></h3>
 <p>To be more specific, we have two ways to get the Continuity Equation.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="conservation-of-mass-from-global-view" name="__tabbed_1" type="radio" /><input id="conservation-of-mass-hints" name="__tabbed_1" type="radio" /><input id="conservation-of-mass-proof-of-mass" name="__tabbed_1" type="radio" /><input id="conservation-of-mass-proof-of-momentum" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="conservation-of-mass-from-global-view">From global view</label><label for="conservation-of-mass-hints">Hints</label><label for="conservation-of-mass-proof-of-mass">Proof of Mass</label><label for="conservation-of-mass-proof-of-momentum">Proof of Momentum</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="conservation-of-mass-hints" name="__tabbed_1" type="radio" /><input id="conservation-of-mass-from-global-view" name="__tabbed_1" type="radio" /><input id="conservation-of-mass-from-material-view" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="conservation-of-mass-hints">Hints</label><label for="conservation-of-mass-from-global-view">From global view</label><label for="conservation-of-mass-from-material-view">From material view</label></div>
 <div class="tabbed-content">
+<div class="tabbed-block">
+<p>By using multiple integral for density.</p>
+<p>Notice that </p>
+<div class="arithmatex">\[
+\rho(\pmb{x},t)=\lim_{\varepsilon\rightarrow 0^+}\frac{\text{mass}(B_{\varepsilon}^t)}{\int_{B_{\varepsilon}^t}d\pmb{x}}
+\]</div>
+</div>
 <div class="tabbed-block">
 <p>We choose a fixed volume, in which the rate of increase of mass must equal the rate at which mass is flowing into the volume through its bounding surface.</p>
 <p>The rate of increase mass in a fixed volume <span class="arithmatex">\(v\)</span> is</p>
@@ -2227,23 +2243,15 @@ d\pmb{f}=\pmb{P}\pmb{N}dS
 \]</div>
 </div>
 <div class="tabbed-block">
-<p>By using multiple integral for density.</p>
-</div>
-<div class="tabbed-block">
-<p>Firstly we prove the conservation of mass.</p>
-<p>Notice that </p>
-<div class="arithmatex">\[
-\rho(\pmb{x},t)=\lim_{\varepsilon\rightarrow 0^+}\frac{\text{mass}(B_{\varepsilon}^t)}{\int_{B_{\varepsilon}^t}d\pmb{x}}
-\]</div>
-<p>So conservation of mass can expressed as</p>
+<p>We check the fixed volume in terms of material point. Note <span class="arithmatex">\(R(\pmb{X},t)=\rho(\phi(\pmb{X},t),t)\)</span>, then we see the mass from initial time to time <span class="arithmatex">\(t\)</span> must be the same:</p>
 <div class="arithmatex">\[
 \begin{align*}
-\text{mass}(B_{\varepsilon}^t)&amp;=\text{mass}B_{\varepsilon}^0\\
-\int_{B_{\varepsilon}^t}\rho(\pmb{x},t)d\pmb{x}&amp;=\int_{B_{\varepsilon}^0}R(\pmb{X},0)d\pmb{X}\\
-\Rightarrow \int_{B_{\varepsilon}^0}R(\pmb{X},t)J(\pmb{X},t)d\pmb{X}&amp;=\int_{B_{\varepsilon}^0}R(\pmb{X},0)d\pmb{X}
+\text{mass}(v)&amp;=\text{mass}V_0\\
+\int_{v}\rho(\pmb{x},t)d\pmb{x}&amp;=\int_{V}R(\pmb{X},0)d\pmb{X}\\
+\Rightarrow \int_{V}R(\pmb{X},t)J(\pmb{X},t)d\pmb{X}&amp;=\int_{V}R(\pmb{X},0)d\pmb{X}
 \end{align*}
 \]</div>
-<p>for all <span class="arithmatex">\(B_\varepsilon^t\subset \Omega^t\)</span> with <span class="arithmatex">\(B_{\varepsilon}^0\)</span> being the pre-image of <span class="arithmatex">\(B_\varepsilon^t\)</span> under <span class="arithmatex">\(\phi(\cdot,t)\)</span>. So </p>
+<p>So </p>
 <div class="arithmatex">\[
 R(\pmb{X},t)J(\pmb{X},t)=R(\pmb{X},0), \quad \forall \pmb{X}\in \Omega^0, t\geq 0
 \]</div>
@@ -2252,15 +2260,27 @@ R(\pmb{X},t)J(\pmb{X},t)=R(\pmb{X},0), \quad \forall \pmb{X}\in \Omega^0, t\geq 
 \frac{\partial }{\partial t}[R(\pmb{X},t)J(\pmb{X},t)]=0.
 \]</div>
 </div>
+</div>
+</div>
+<h3 id="conservation-of-momentum">Conservation of Momentum<a class="headerlink" href="#conservation-of-momentum" title="Permanent link">&para;</a></h3>
+<p>Also, we have two ways to consider.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="conservation-of-momentum-hints" name="__tabbed_2" type="radio" /><input id="conservation-of-momentum-from-glabal-view" name="__tabbed_2" type="radio" /><input id="conservation-of-momentum-from-material-view" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="conservation-of-momentum-hints">Hints</label><label for="conservation-of-momentum-from-glabal-view">From glabal view</label><label for="conservation-of-momentum-from-material-view">From material view</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
+<p>Use the similar logic in proof of mass conservation.</p>
+</div>
+<div class="tabbed-block">
+<p>This is also the spatial form.</p>
 <p>We know that</p>
 <div class="arithmatex">\[
 \pmb{t}(\pmb{x},\pmb{n},t)=\pmb{\sigma}(\pmb{x},t)\pmb{n}
 \]</div>
+<p>We consider a fixed mass, so the space occupied by this matter may change over time.</p>
 <p>If <span class="arithmatex">\(\pmb{v}\)</span> denotes the Eulerian velocity, then the linear momentum of Euler can be denoted as</p>
 <div class="arithmatex">\[
 \pmb{L}(t)=\int_{B_{\varepsilon}^t} \rho\pmb{v}d\pmb{x},
 \]</div>
+<p>where </p>
 <p>then by <span class="arithmatex">\(\pmb{f}^{ext}=\frac{d(m\pmb{v})}{dt}\)</span> formulated by Euler,</p>
 <div class="arithmatex">\[
 \begin{align*}
@@ -2270,10 +2290,21 @@ R(\pmb{X},t)J(\pmb{X},t)=R(\pmb{X},0), \quad \forall \pmb{X}\in \Omega^0, t\geq 
 &amp;=\int_{B_{\varepsilon}^t}\rho\pmb{a}d\pmb{x}
 \end{align*}
 \]</div>
-<p>$$</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&amp;=\int_{B_{\varepsilon}^t}
-</code></pre></div>
-<p>$$</p>
+</div>
+<div class="tabbed-block">
+<p>Note <span class="arithmatex">\(\pmb{V}(\pmb{X},t)=\pmb{v}(\phi(\pmb{X},t),t)\)</span>, so we have a fixed volume <span class="arithmatex">\(V\)</span> with momentum </p>
+<div class="arithmatex">\[
+\pmb{L}(t) = \int_V R(\pmb{X},t)V(\pmb{X},t)dV
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\partial}{\partial t}\int_V R(\pmb{X},t)V(\pmb{X},t)dV &amp;=\int_S\pmb{T}dS +\int_V \pmb{F}dV\\
+\int_V R(\pmb{X},t)\frac{\partial}{\partial t}V(\pmb{X},t)dV&amp;= \int_S \pmb{P}\cdot\pmb{N}dS+\int_V\pmb{F} dV\\
+\int_V R(\pmb{X},t)\frac{\partial}{\partial t}V(\pmb{X},t)dV&amp;= \int_V \nabla^{\pmb{X}}\cdot \pmb{P}+\pmb{F} dV\\
+\Rightarrow R(\pmb{X},t)\frac{\partial}{\partial t}V(\pmb{X},t) &amp;=\nabla^{\pmb{X}}\cdot \pmb{P}+\pmb{F}
+\end{align*}
+\]</div>
 </div>
 </div>
 </div>

@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#eulers-method" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1130,6 +1135,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Numerical Solution of Differential Equations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1139,6 +1155,56 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eulers-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Euler's Method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Euler's Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taylor-method-of-order-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor method of order n
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runge-kutta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runge-Kutta Method
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1716,6 +1782,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eulers-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Euler's Method
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Euler's Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taylor-method-of-order-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor method of order n
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runge-kutta-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runge-Kutta Method
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1731,7 +1838,68 @@
 
   <h1>Numerical Solution of Differential Equations</h1>
 
-
+<h2 id="eulers-method">Euler's Method<a class="headerlink" href="#eulers-method" title="Permanent link">&para;</a></h2>
+<p>error accumulates.</p>
+<div class="arithmatex">\[
+\begin{cases}
+\omega_0=\alpha,\\ \omega_{i+1}=\omega_i+hf(t_i,\omega_i),\quad i=0,1,\cdots,n-1
+\end{cases}
+\]</div>
+<ul>
+<li>local trucation error.</li>
+</ul>
+<p>we consider error, the difference between true value and estimated value divided by <span class="arithmatex">\(h\)</span> with assuming <span class="arithmatex">\(\omega_i=y_i\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\tau_{i+1}&amp;=\frac{y_i-\omega_i}{h}\\
+&amp;=\frac{[y_i+hy'(t_i)+h^2/2\times h''(\xi_i)]-[y_i+hy'(t_i)]}{h}\\
+&amp;=h/2\times h''(\xi_i)
+\end{align*}
+\]</div>
+<p>So we can choose higher order items.</p>
+<h3 id="taylor-method-of-order-n">Taylor method of order n<a class="headerlink" href="#taylor-method-of-order-n" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{cases}
+\omega_0=\alpha, \\
+\omega_{i+1}=\omega_i+hT^{(n)}(t_i,\omega_i),\quad i=0,1,\cdots,N-1
+\end{cases}
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+T^{(n)}(t_i,\omega_i)=f(t_i,\omega_i)+\frac{h}{2}f'(t_i,\omega_i)+\cdots+\frac{h^{n-1}}{n!}f^{(n-1)}(t_i,\omega_i)
+\]</div>
+<p>Euler's method is Tarlor's method of order one.</p>
+<ul>
+<li>Implicite Euler's method</li>
+</ul>
+<div class="arithmatex">\[
+\begin{cases}
+\omega_0=\alpha, \\
+\omega_{i+1}=\omega_i+hf(t_i,\omega_{i+1}),\quad i=0,1,\cdots,n-1
+\end{cases}
+\]</div>
+<p>which is more stable.</p>
+<ul>
+<li>
+<p>Trapezoidal Method</p>
+</li>
+<li>
+<p>Double-step Method</p>
+</li>
+</ul>
+<p>use the mid point of the two points. According to numerical differential</p>
+<div class="arithmatex">\[
+y'(t_0)=\frac{1}{2h}[y(t_0+h)-y(t_0-h)]-\frac{h^3}{6}y'''(\xi)
+\]</div>
+<p>So we have</p>
+<div class="arithmatex">\[
+\begin{cases}
+\omega_0=\alpha,\\
+\omega_1=\omega_0+hf(t_0,\omega_0), \\
+\omega_{i+1}=\omega_{i-1}+2hf(t_i,\omega_i), \quad i=1,2,\cdots,N-1
+\end{cases}
+\]</div>
+<h2 id="runge-kutta-method">Runge-Kutta Method<a class="headerlink" href="#runge-kutta-method" title="Permanent link">&para;</a></h2>
 
 
 
