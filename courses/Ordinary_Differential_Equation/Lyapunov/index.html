@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../Power_Series/">
+        <link rel="prev" href="../General_Theory/Continuous_Dependence/">
       
       
-        <link rel="next" href="../../Lyapunov/">
+        <link rel="next" href="../../Sensing%26Detection/Midterm/">
       
       
-      <link rel="icon" href="../../../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>Continuous Dependence of Solution on Initial Value - MapleBlog</title>
+        <title>Stability Theory - MapleBlog</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,17 +48,17 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/customize.css">
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
     
       <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,7 +75,7 @@
     
     
     
-  <link rel="stylesheet" href="../../../../assets/stylesheets/custom.7c86dd97.min.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.7c86dd97.min.css">
 
   </head>
   
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#continuous-dependence-of-solution-on-initial-value" class="md-skip">
+        <a href="#stability-theory-of-ode" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Continuous Dependence of Solution on Initial Value
+              Stability Theory
             
           </span>
         </div>
@@ -265,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -286,7 +286,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -306,7 +306,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
     
@@ -324,7 +324,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../friends/" class="md-tabs__link">
+      <a href="../../../friends/" class="md-tabs__link">
         
   
     
@@ -341,7 +341,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../tag/" class="md-tabs__link">
+      <a href="../../../tag/" class="md-tabs__link">
         
   
     
@@ -375,7 +375,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -398,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +462,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -495,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cpp/cpp/" class="md-nav__link">
+      <a href="../../cpp/cpp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +552,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Data_Structure%26Algorithm/" class="md-nav__link ">
+            <a href="../../Data_Structure%26Algorithm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -585,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/sorting/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/Graph/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/Graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -707,7 +707,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Intro2Visualization/" class="md-nav__link ">
+            <a href="../../Intro2Visualization/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -740,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Intro2Visualization/midterm/" class="md-nav__link">
+      <a href="../../Intro2Visualization/midterm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +799,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../mpm/" class="md-nav__link ">
+            <a href="../../mpm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -832,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mpm/preliminary/" class="md-nav__link">
+      <a href="../../mpm/preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -861,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Modern_Control_Theory/MCT/" class="md-nav__link">
+      <a href="../../Modern_Control_Theory/MCT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +916,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Numerical_Analysis/" class="md-nav__link ">
+            <a href="../../Numerical_Analysis/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -949,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Numerical_Analysis/MC/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/MC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +1003,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Numerical_Analysis/NA/" class="md-nav__link ">
+            <a href="../../Numerical_Analysis/NA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1036,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Numerical_Analysis/NA/NI/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/NI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Numerical_Analysis/DE/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/DE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,7 +1193,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1226,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../EIM/" class="md-nav__link">
+      <a href="../EIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1247,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../LODEs/" class="md-nav__link">
+      <a href="../LODEs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,8 +1265,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1294,16 +1292,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../General_Theory/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1320,7 +1320,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_8_4">
             <span class="md-nav__icon md-icon"></span>
             General Theory
@@ -1336,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Existence_Uniqueness_Theorem/" class="md-nav__link">
+      <a href="../General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Contraction_Mapping_Method/" class="md-nav__link">
+      <a href="../General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Extension_of_Solution/" class="md-nav__link">
+      <a href="../General_Theory/Extension_of_Solution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1399,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Power_Series/" class="md-nav__link">
+      <a href="../General_Theory/Power_Series/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1408,6 +1408,35 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../General_Theory/Continuous_Dependence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Dependence of Solution on Initial Value
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1429,37 +1458,18 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   <span class="md-ellipsis">
-    Continuous Dependence of Solution on Initial Value
+    Stability Theory
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Lyapunov/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1468,6 +1478,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lyapunov-stability-lyapunov" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyapunov Stability | Lyapunov 稳定性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-approximate-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Approximate Method | 线性近似判别法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Approximate Method | 线性近似判别法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyapunov-stability-of-lodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyapunov Stability of LODEs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyapunov-stability-of-non-linear-odes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyapunov Stability of Non-linear ODEs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-method-of-lyapunov" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Method of Lyapunov
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1488,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Sensing%26Detection/Midterm/" class="md-nav__link">
+      <a href="../../Sensing%26Detection/Midterm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1545,7 +1626,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../blog/" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1605,7 +1686,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../blog/Travel/" class="md-nav__link ">
+            <a href="../../../blog/Travel/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1638,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/Travel/5th_05_24/" class="md-nav__link">
+      <a href="../../../blog/Travel/5th_05_24/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1695,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../friends/" class="md-nav__link">
+      <a href="../../../friends/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1715,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tag/" class="md-nav__link">
+      <a href="../../../tag/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1748,6 +1829,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lyapunov-stability-lyapunov" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyapunov Stability | Lyapunov 稳定性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-approximate-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Approximate Method | 线性近似判别法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear Approximate Method | 线性近似判别法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lyapunov-stability-of-lodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyapunov Stability of LODEs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lyapunov-stability-of-non-linear-odes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lyapunov Stability of Non-linear ODEs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-method-of-lyapunov" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Method of Lyapunov
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1761,14 +1901,106 @@
                   
 
 
-<h1 id="continuous-dependence-of-solution-on-initial-value">Continuous Dependence of Solution on Initial Value<a class="headerlink" href="#continuous-dependence-of-solution-on-initial-value" title="Permanent link">&para;</a></h1>
-<p>Here we focus on </p>
+<h1 id="stability-theory-of-ode">Stability Theory of ODE<a class="headerlink" href="#stability-theory-of-ode" title="Permanent link">&para;</a></h1>
+<p>This chapter we focus on </p>
 <div class="arithmatex">\[
 \begin{equation}
-\dot{\mathbfit{x}} = \mathbfit{f}(t, \mathbfit{x}),\quad  \mathbfit{x}(t_0) = \mathbfit{x}_0 \label{eq-vector-cauchy}
+\dot{\mathbfit{x}} = \mathbfit{f}(t, \mathbfit{x})\label{eq1}
 \end{equation}
 \]</div>
-<p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field). To simplify the problem, we assume <span class="arithmatex">\(\pmb{f} \in C^r(D)\)</span>, where <span class="arithmatex">\(r\geq 1\)</span>.</p>
+<p>We consider continuous dependence of the solutions on initial condition on a larger interval, i.e. <span class="arithmatex">\((\beta,\infty)\)</span>, for we have show the dependency holds on finite intervals. However, this is not always as expected. So we have to introduce some basic ideas.</p>
+<h2 id="lyapunov-stability-lyapunov">Lyapunov Stability | Lyapunov 稳定性<a class="headerlink" href="#lyapunov-stability-lyapunov" title="Permanent link">&para;</a></h2>
+<p>We assume that <span class="arithmatex">\(\pmb{x}=\pmb{\varphi}(t)\)</span> is a special solution of the ODE <span class="arithmatex">\(\ref{eq1}\)</span>. </p>
+<div class="admonition info">
+<p class="admonition-title">Lyapunov Stability</p>
+<p>(i) <strong>Lyapunov Stable</strong></p>
+<p>If <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\forall t_0&gt;\beta\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall \pmb{x}_0\)</span>, s.t. <span class="arithmatex">\(\|\pmb{x}_0-\pmb{\varphi}(t_0)\|&lt;\delta\)</span>, ODE <span class="arithmatex">\(\ref{eq1}\)</span> with initial value <span class="arithmatex">\(\pmb{x}(t_0)=\pmb{x}_0\)</span> has a solution <span class="arithmatex">\(\pmb{x}(t;t_0,\pmb{x}_0)\)</span> which exists on <span class="arithmatex">\([t_0,+\infty)\)</span> and satisfies</p>
+<div class="arithmatex">\[
+\|\pmb{x}(t;t_0,\pmb{x}_0)-\varphi(t)\|&lt;\varepsilon, \quad \forall t\in [t_0,+\infty)
+\]</div>
+<p>then we call the special solution <span class="arithmatex">\(\pmb{x}=\pmb{\varphi}(t)\)</span> is Lyapunov stable, or stable for short.</p>
+<p>(ii) <strong>Lyapunov Unstable</strong></p>
+<p>If <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>, <span class="arithmatex">\(\exists t_0&gt;\beta\)</span>, <span class="arithmatex">\(\forall \delta&gt;0\)</span>, <span class="arithmatex">\(\exists \pmb{x}_0\)</span>, s.t. <span class="arithmatex">\(\|\pmb{x}_0-\pmb{\varphi}(t_0)\|&lt;\delta\)</span>, ODE <span class="arithmatex">\(\ref{eq1}\)</span> with initial value <span class="arithmatex">\(\pmb{x}(t_0)=\pmb{x}_0\)</span> has a solution <span class="arithmatex">\(\pmb{x}(t;t_0,\pmb{x}_0)\)</span> which exists on <span class="arithmatex">\([t_0, \alpha)\)</span>(<span class="arithmatex">\(\alpha&lt;+\infty\)</span>) or there exists <span class="arithmatex">\(t_1&gt;t_0\)</span>, and it satisfies </p>
+<div class="arithmatex">\[
+\|\pmb{x}(t_1;t_0,\pmb{x}_0)-\varphi(t)\|\geq\varepsilon_0
+\]</div>
+<p>then the special solution is Lyapunov Unstable.</p>
+<p>(iii) <strong>Attractive</strong></p>
+<p>If <span class="arithmatex">\(\exists t_0&gt;\beta\)</span>, <span class="arithmatex">\(\exists \zeta&gt;0\)</span>, <span class="arithmatex">\(\forall \pmb{x}_0\)</span>, s.t. <span class="arithmatex">\(\|\pmb{x}_0-\pmb{\varphi}(t_0)\|&lt;\zeta\)</span>, solution of ODE <span class="arithmatex">\(\ref{eq1}\)</span> with initial value <span class="arithmatex">\(\pmb{x}(t_0)=\pmb{x}_0\)</span> satisfies</p>
+<div class="arithmatex">\[
+\lim_{t\rightarrow +\infty}\|\pmb{x}(t;t_0,\pmb{x}_0)-\pmb{\varphi}(t)\|=0
+\]</div>
+<p>then the special solution is Attractive.</p>
+<p>(iv) <strong>Asymptotic stable</strong></p>
+<p>If a special solution is Lyapunov stable and attractive, then we call it Asymptotic stable.</p>
+</div>
+<p>To simplify the analysis, we choose to make a translation. That is, if we let </p>
+<div class="arithmatex">\[
+\pmb{y}=\pmb{x}-\pmb{\varphi}(t), \pmb{F}(t,\pmb{y})=\pmb{f}(t,\pmb{y}+\pmb{\varphi}(t))-\pmb{f}(t,\pmb{\varphi}(t))
+\]</div>
+<p>then we only need to discuss </p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{d\pmb{y}}{dt}&amp;=\frac{d\pmb{x}}{dt}-\frac{d\pmb{\varphi}(t)}{dt}\\
+&amp;=\pmb{f}(t,\pmb{x})-\pmb{f}(t,\pmb{\varphi}(t))\\
+&amp;=\pmb{f}(t,\pmb{y}+\pmb{\varphi}(t))-\pmb{f}(t,\pmb{\varphi}(t))\\
+&amp;=\pmb{F}(t,\pmb{y})
+\end{align*}
+\]</div>
+<p>with special solution <span class="arithmatex">\(\pmb{y}=0\)</span>, i.e. <span class="arithmatex">\(\pmb{f}(t,\pmb{0})=\pmb{0}\)</span>. We call solution <span class="arithmatex">\(\pmb{y}\equiv 0\)</span> zero solution.</p>
+<h2 id="linear-approximate-method">Linear Approximate Method | 线性近似判别法<a class="headerlink" href="#linear-approximate-method" title="Permanent link">&para;</a></h2>
+<p>If we represent ODE <span class="arithmatex">\(\ref{eq1}\)</span> as </p>
+<div class="arithmatex">\[
+\frac{d\pmb{x}}{dt}=\pmb{A}(t)\pmb{x}+\pmb{R}(t,\pmb{x})
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+\pmb{A}(t)=\frac{\partial \pmb{f}}{\partial \pmb{x}}\Bigg|_{\pmb{x}=\pmb{0}}
+\]</div>
+<p>and <span class="arithmatex">\(\pmb{R}(t,\pmb{x})\)</span> is the summation of higher order items, i.e.</p>
+<div class="arithmatex">\[
+\lim_{\|\pmb{x}\|\rightarrow 0}\frac{\|\pmb{R}(t,\pmb{x})\|}{\|\pmb{x}\|}=0.
+\]</div>
+<h3 id="lyapunov-stability-of-lodes">Lyapunov Stability of LODEs<a class="headerlink" href="#lyapunov-stability-of-lodes" title="Permanent link">&para;</a></h3>
+<p>Firstly, we discuss the Lyapunov stability of LODEs</p>
+<div class="arithmatex">\[
+\begin{equation}
+\frac{d\pmb{x}}{dt}=\pmb{A}(t)\pmb{x}. \label{eq2}
+\end{equation}
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Lyapunov Stability of LODEs</p>
+<p>Assume <span class="arithmatex">\(\pmb{\varPhi}(t)\)</span> is a basic solution matrix of LODEs <span class="arithmatex">\(\ref{eq2}\)</span>, then its zero solution is </p>
+<p>(i) <strong>stable</strong> iff <span class="arithmatex">\(\forall t_0&gt;\beta\)</span>, <span class="arithmatex">\(\exists K(t_0)&gt;0\)</span>, s.t.</p>
+<div class="arithmatex">\[
+\|\pmb{\varPhi}(t)\| \leq K,\quad, t\geq t_0
+\]</div>
+<p>(ii) <strong>asymptotic stable</strong> iff </p>
+<div class="arithmatex">\[
+\lim_{t\rightarrow +\infty}\|\pmb{\varPhi}(t)\|=0
+\]</div>
+</div>
+<p>For time-varying system, it is hard to solve a basic solution matrix. But for time-invariant system, we can not only solve the basic solution matrix, but also deduce a better result.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for Lyapunov Stability of time-invariant System</p>
+<p>Consider const-coeffient system</p>
+<div class="arithmatex">\[
+\frac{d\pmb{x}}{dt}=\pmb{A}\pmb{x}
+\]</div>
+<p>its zero solution is </p>
+<p>(i) <strong>asymptotic stable</strong> iff all the eigenbalues of <span class="arithmatex">\(\pmb{A}\)</span> are negative.</p>
+<p>(ii) <strong>stable</strong> iff all the eigenvalues of <span class="arithmatex">\(\pmb{A}\)</span> are not positive, and for eigenvalue whose real part is zero, its corresponding Jordan block is one roder (or can be diagonalized).</p>
+<p>(iii) <strong>unstable</strong> iff there exists one positive eigenvalue or for eigenvalue whose real part is zero, its corresponding Jordan block is one roder(or cannot be diagonalized).</p>
+</div>
+<h3 id="lyapunov-stability-of-non-linear-odes">Lyapunov Stability of Non-linear ODEs<a class="headerlink" href="#lyapunov-stability-of-non-linear-odes" title="Permanent link">&para;</a></h3>
+<p>For non-linear system, we can have some results that is similar to the above.</p>
+<h2 id="second-method-of-lyapunov">Second Method of Lyapunov<a class="headerlink" href="#second-method-of-lyapunov" title="Permanent link">&para;</a></h2>
+<p>The first method does not carry on because it makes use of power series. But his second method did gain ground, which employs an energy function which characterizes the solution.</p>
+<p>Here, we only consider <strong>autonomous</strong> ODEs, that is,</p>
+<div class="arithmatex">\[
+\frac{d\pmb{x}}{dt}=\pmb{f}(\pmb{x})
+\]</div>
+<p>with the right side of ODE not containing variable <span class="arithmatex">\(t\)</span>.</p>
 
 
 
@@ -1808,7 +2040,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Power_Series/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Method of Power Series">
+          <a href="../General_Theory/Continuous_Dependence/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Continuous Dependence of Solution on Initial Value">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1818,20 +2050,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Method of Power Series
+                Continuous Dependence of Solution on Initial Value
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../Lyapunov/" class="md-footer__link md-footer__link--next" aria-label="Next: Stability Theory">
+          <a href="../../Sensing%26Detection/Midterm/" class="md-footer__link md-footer__link--next" aria-label="Next: Sensing &amp; Detection">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Stability Theory
+                Sensing & Detection
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1887,26 +2119,26 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="../../../../javascripts/apply-numbering.js"></script>
+        <script src="../../../javascripts/apply-numbering.js"></script>
       
-        <script src="../../../../javascripts/pdf-viewer.js"></script>
+        <script src="../../../javascripts/pdf-viewer.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
       
     
-  <script src="../../../../assets/javascripts/custom.4e50d00f.min.js"></script>
+  <script src="../../../assets/javascripts/custom.4e50d00f.min.js"></script>
 
   </body>
 </html>
