@@ -1495,9 +1495,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lyapunov-stability-lyapunov" class="md-nav__link">
+  <a href="#lyapunov-lyapunov-stability" class="md-nav__link">
     <span class="md-ellipsis">
-      Lyapunov Stability | Lyapunov 稳定性
+      Lyapunov 稳定性 | Lyapunov Stability
     </span>
   </a>
   
@@ -1506,11 +1506,11 @@
         <li class="md-nav__item">
   <a href="#linear-approximate-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Linear Approximate Method | 线性近似判别法
+      线性近似判别法 | Linear Approximate Method
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Linear Approximate Method | 线性近似判别法">
+    <nav class="md-nav" aria-label="线性近似判别法 | Linear Approximate Method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1539,7 +1539,7 @@
         <li class="md-nav__item">
   <a href="#second-method-of-lyapunov" class="md-nav__link">
     <span class="md-ellipsis">
-      Second Method of Lyapunov
+      第二法 | Second Method of Lyapunov
     </span>
   </a>
   
@@ -1836,9 +1836,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lyapunov-stability-lyapunov" class="md-nav__link">
+  <a href="#lyapunov-lyapunov-stability" class="md-nav__link">
     <span class="md-ellipsis">
-      Lyapunov Stability | Lyapunov 稳定性
+      Lyapunov 稳定性 | Lyapunov Stability
     </span>
   </a>
   
@@ -1847,11 +1847,11 @@
         <li class="md-nav__item">
   <a href="#linear-approximate-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Linear Approximate Method | 线性近似判别法
+      线性近似判别法 | Linear Approximate Method
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Linear Approximate Method | 线性近似判别法">
+    <nav class="md-nav" aria-label="线性近似判别法 | Linear Approximate Method">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1880,7 +1880,7 @@
         <li class="md-nav__item">
   <a href="#second-method-of-lyapunov" class="md-nav__link">
     <span class="md-ellipsis">
-      Second Method of Lyapunov
+      第二法 | Second Method of Lyapunov
     </span>
   </a>
   
@@ -1909,7 +1909,7 @@
 \end{equation}
 \]</div>
 <p>We consider continuous dependence of the solutions on initial condition on a larger interval, i.e. <span class="arithmatex">\((\beta,\infty)\)</span>, for we have show the dependency holds on finite intervals. However, this is not always as expected. So we have to introduce some basic ideas.</p>
-<h2 id="lyapunov-stability-lyapunov">Lyapunov Stability | Lyapunov 稳定性<a class="headerlink" href="#lyapunov-stability-lyapunov" title="Permanent link">&para;</a></h2>
+<h2 id="lyapunov-lyapunov-stability">Lyapunov 稳定性 | Lyapunov Stability<a class="headerlink" href="#lyapunov-lyapunov-stability" title="Permanent link">&para;</a></h2>
 <p>We assume that <span class="arithmatex">\(\pmb{x}=\pmb{\varphi}(t)\)</span> is a special solution of the ODE <span class="arithmatex">\(\ref{eq1}\)</span>. </p>
 <div class="admonition info">
 <p class="admonition-title">Lyapunov Stability</p>
@@ -1948,10 +1948,12 @@
 \end{align*}
 \]</div>
 <p>with special solution <span class="arithmatex">\(\pmb{y}=0\)</span>, i.e. <span class="arithmatex">\(\pmb{f}(t,\pmb{0})=\pmb{0}\)</span>. We call solution <span class="arithmatex">\(\pmb{y}\equiv 0\)</span> zero solution.</p>
-<h2 id="linear-approximate-method">Linear Approximate Method | 线性近似判别法<a class="headerlink" href="#linear-approximate-method" title="Permanent link">&para;</a></h2>
+<h2 id="linear-approximate-method">线性近似判别法 | Linear Approximate Method<a class="headerlink" href="#linear-approximate-method" title="Permanent link">&para;</a></h2>
 <p>If we represent ODE <span class="arithmatex">\(\ref{eq1}\)</span> as </p>
 <div class="arithmatex">\[
-\frac{d\pmb{x}}{dt}=\pmb{A}(t)\pmb{x}+\pmb{R}(t,\pmb{x})
+\begin{equation}
+\frac{d\pmb{x}}{dt}=\pmb{A}(t)\pmb{x}+\pmb{R}(t,\pmb{x})\label{eq3}
+\end{equation}
 \]</div>
 <p>where </p>
 <div class="arithmatex">\[
@@ -1993,14 +1995,100 @@
 <p>(iii) <strong>unstable</strong> iff there exists one positive eigenvalue or for eigenvalue whose real part is zero, its corresponding Jordan block is one roder(or cannot be diagonalized).</p>
 </div>
 <h3 id="lyapunov-stability-of-non-linear-odes">Lyapunov Stability of Non-linear ODEs<a class="headerlink" href="#lyapunov-stability-of-non-linear-odes" title="Permanent link">&para;</a></h3>
-<p>For non-linear system, we can have some results that is similar to the above.</p>
-<h2 id="second-method-of-lyapunov">Second Method of Lyapunov<a class="headerlink" href="#second-method-of-lyapunov" title="Permanent link">&para;</a></h2>
-<p>The first method does not carry on because it makes use of power series. But his second method did gain ground, which employs an energy function which characterizes the solution.</p>
+<p>For non-linear system, we can have some results that is similar to the above. To simplify the problem, we let the linear part <span class="arithmatex">\(\pmb{A}(t)\equiv \pmb{A}\)</span> in ODE <span class="arithmatex">\(\ref{eq3}\)</span> be a constant matrix. Then, we can have the following Theorem</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for non-linear system using Linear Approximatie Method</p>
+<p>(i) If all the eigenvalues of <span class="arithmatex">\(\pmb{A}\)</span> are negative, then the zero solution of ODE <span class="arithmatex">\(\ref{eq3}\)</span> is asymptotic stable.</p>
+<p>(ii) If there exists an eigenvalue of <span class="arithmatex">\(\pmb{A}\)</span> which is positive, then the zero solution of ODE <span class="arithmatex">\(\ref{eq3}\)</span> is unstable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="lyapunov-stability-of-non-linear-odes-hints" name="__tabbed_1" type="radio" /><input id="lyapunov-stability-of-non-linear-odes-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lyapunov-stability-of-non-linear-odes-hints">Hints</label><label for="lyapunov-stability-of-non-linear-odes-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use Picard theorem and extension theorem to get a solution on <span class="arithmatex">\([0,t*)\)</span>, then show that solution can tend to <span class="arithmatex">\(0\)</span> by using Gronwall inequation.</p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="second-method-of-lyapunov">第二法 | Second Method of Lyapunov<a class="headerlink" href="#second-method-of-lyapunov" title="Permanent link">&para;</a></h2>
+<p>The first method does not carry on because it makes use of power series. But his second method did gain ground, which employs an energy function which characterizes the solution. So this method is also called <strong>Direct Method</strong>.</p>
 <p>Here, we only consider <strong>autonomous</strong> ODEs, that is,</p>
 <div class="arithmatex">\[
-\frac{d\pmb{x}}{dt}=\pmb{f}(\pmb{x})
+\begin{equation}
+\frac{d\pmb{x}}{dt}=\pmb{f}(\pmb{x})\label{eq4}
+\end{equation}
 \]</div>
 <p>with the right side of ODE not containing variable <span class="arithmatex">\(t\)</span>.</p>
+<p>The basic idea can be shown in the following diagram.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\|\pmb{x}_0\|&amp;\ll 1\\
+&amp;\Downarrow \quad \text{(by continuity of $V$)} \\
+V(\pmb{x}_0)&amp;\ll 1\\ 
+&amp;\Downarrow \quad \text{(by $\frac{d V}{dt}&lt; 0$)}\\
+V[\pmb{x}(t)]&amp;\leq V[\pmb{x}(0)]\ll 1\\
+&amp;\Downarrow \quad \text{(by monotony)}\\
+\|\pmb{x}(t)\|&amp;\leq\|\pmb{x}(0)\|\ll 1
+\end{align*}
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Definite Sign Function</p>
+<p>Assume <span class="arithmatex">\(h&gt;0\)</span>, function <span class="arithmatex">\(V(\pmb{x})\in C^1(\|\pmb{x}\|\leq h)\)</span>, if <span class="arithmatex">\(V(\pmb{0})=0\)</span> and </p>
+<p>(i) <span class="arithmatex">\(V(\pmb{x})&gt;0\)</span>(or <span class="arithmatex">\(&lt;0\)</span>) on <span class="arithmatex">\(0&lt;\|\pmb{x}\|\leq h\)</span>, then we call <span class="arithmatex">\(V(\pmb{x})\)</span> is a <strong>definite positive</strong>(or <strong>negative</strong>) function.</p>
+<p>(ii) <span class="arithmatex">\(V(\pmb{x})\geq0\)</span>(or <span class="arithmatex">\(\leq0\)</span>) on <span class="arithmatex">\(0&lt;\|\pmb{x}\|\leq h\)</span>, then we call <span class="arithmatex">\(V(\pmb{x})\)</span> is a <strong>constant positive</strong>(or <strong>negative</strong>) function.</p>
+</div>
+<p>Denifite positive function has a property.</p>
+<div class="admonition success">
+<p class="admonition-title">Property of Definite Positive Function</p>
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall \pmb{x}\)</span>, s.t. <span class="arithmatex">\(V(\pmb{x})&lt;\delta\)</span>, then <span class="arithmatex">\(\|\pmb{x}\|&lt;\varepsilon\)</span>. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="second-method-of-lyapunov-hints" name="__tabbed_2" type="radio" /><input id="second-method-of-lyapunov-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="second-method-of-lyapunov-hints">Hints</label><label for="second-method-of-lyapunov-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pay attention to the positive definite function.</p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, let </p>
+<div class="arithmatex">\[
+\delta=\min_{\varepsilon\leq\|\pmb{x}\|\leq h}V(\pmb{x})
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+\|\pmb{x}\|\geq \delta \Rightarrow V(\pmb{x})\geq \min_{\varepsilon\leq\|\pmb{x}\|\leq h}V(\pmb{x}) = \delta.
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+V(\pmb{x})&lt;\delta\Rightarrow \|\pmb{x}\|&lt;\varepsilon
+\]</div>
+</div>
+</div>
+</div>
+<p><a id="Lyapunov-test"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Stability test</p>
+<p>In ODE <span class="arithmatex">\(\ref{eq4}\)</span>, assume <span class="arithmatex">\(h&gt;0\)</span>. If there exists a definite positive function <span class="arithmatex">\(V(\pmb{x})\)</span> on <span class="arithmatex">\(\|\pmb{x}\|\leq h\)</span>, whose total derivative </p>
+<div class="arithmatex">\[
+\frac{dV}{dt}=\nabla^{\pmb{x}}V(\pmb{x})\cdot \frac{d\pmb{x}}{dt}=\sum_{i=1}^n\frac{\partial V}{\partial x_i}\frac{d x_i}{dt}=\sum_{i=1}^n\frac{\partial V}{\partial x_i}f_i
+\]</div>
+<p>(i) is a constant negative function, then the zero solution to ODE <span class="arithmatex">\(\ref{eq4}\)</span> is Lyapunov stable.</p>
+<p>(ii) is a definite negative function, then the zero solution to ODE <span class="arithmatex">\(\ref{eq4}\)</span> is Lyapunov asymptotic stable.</p>
+<p>(iii) is a definite positive function, then the zero solution to ODE <span class="arithmatex">\(\ref{eq4}\)</span> is Lyapunov unstable.</p>
+</div>
+<p>For (iii) in <a href="#Lyapunov-test">Theorem of Stability Test</a>, we can have a weaker theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for Lyapunov Unstable</p>
+<p>For ODE <span class="arithmatex">\(\ref{eq4}\)</span>, if there exists a open region <span class="arithmatex">\(\mathcal{N}\subset B_h(\pmb{0})\)</span>, satisfies</p>
+<p>(i) <span class="arithmatex">\(V(\pmb{x})\in C^1(\mathcal{N})\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(\pmb{0}\in \partial \mathcal{N}\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall \pmb{x}\in \partial \mathcal{N}\cap B_\delta(\pmb{0})\)</span>, such that</p>
+<div class="arithmatex">\[
+V(\pmb{x})=0
+\]</div>
+<p>(iii) <span class="arithmatex">\(\forall \pmb{x}\in \mathcal{N}\cap B_\delta(\pmb{0})\)</span>, <span class="arithmatex">\(V(\pmb{x})\)</span> and <span class="arithmatex">\(\frac{dV}{dt}\)</span> are both definite positive function.</p>
+</div>
+<p>For a specific problem, we can choose first quadrant of the plane </p>
+<div class="arithmatex">\[
+\mathcal{N}=\{(x,y): x&gt;0,y&gt;0\}
+\]</div>
+<p>with a typical <span class="arithmatex">\(V(\pmb{x})=xy\)</span>, then test if <span class="arithmatex">\(\frac{dV}{dt}\)</span> is definite positive on <span class="arithmatex">\(\mathcal{N}\)</span>.</p>
 
 
 
