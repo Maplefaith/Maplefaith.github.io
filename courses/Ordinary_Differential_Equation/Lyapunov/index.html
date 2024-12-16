@@ -14,7 +14,7 @@
         <link rel="prev" href="../General_Theory/Continuous_Dependence/">
       
       
-        <link rel="next" href="../../Sensing%26Detection/Midterm/">
+        <link rel="next" href="../Qualitative_Theory/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -1173,6 +1173,8 @@
       
         
       
+        
+      
     
     
       
@@ -1549,6 +1551,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Qualitative_Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qualitative Theory
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2073,6 +2096,11 @@ V(\pmb{x})&lt;\delta\Rightarrow \|\pmb{x}\|&lt;\varepsilon
 <p>(ii) is a definite negative function, then the zero solution to ODE <span class="arithmatex">\(\ref{eq4}\)</span> is Lyapunov asymptotic stable.</p>
 <p>(iii) is a definite positive function, then the zero solution to ODE <span class="arithmatex">\(\ref{eq4}\)</span> is Lyapunov unstable.</p>
 </div>
+<p>For (i) in <a href="#Lyapunov-test">Theorem of Stability Test</a>, if we find another condition, then the system can also be asymptotic stable, and this is exactly the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">LaSalle's invariance principle</p>
+<p>If ODE <span class="arithmatex">\(\ref{eq4}\)</span> satisfies </p>
+</div>
 <p>For (iii) in <a href="#Lyapunov-test">Theorem of Stability Test</a>, we can have a weaker theorem.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for Lyapunov Unstable</p>
@@ -2089,6 +2117,42 @@ V(\pmb{x})=0
 \mathcal{N}=\{(x,y): x&gt;0,y&gt;0\}
 \]</div>
 <p>with a typical <span class="arithmatex">\(V(\pmb{x})=xy\)</span>, then test if <span class="arithmatex">\(\frac{dV}{dt}\)</span> is definite positive on <span class="arithmatex">\(\mathcal{N}\)</span>.</p>
+<div class="question">
+<p><strong>Example1</strong>. Determine the Lyapunov stability of the following system.</p>
+<div class="arithmatex">\[
+\begin{cases}
+x'=x^5+\sin{x^5}+2y+6y^5\\
+y'=-e^x+8x^3+e^{y^3}
+\end{cases}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="second-method-of-lyapunov-answer" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="second-method-of-lyapunov-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>use Hamilton system approximation.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example2</strong>. Determine the Lyapunov stability of the following system.</p>
+<div class="arithmatex">\[
+\begin{cases}
+x'=-3x^3y^4\\
+y'=x^4y^3
+\end{cases}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="second-method-of-lyapunov-answer_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="second-method-of-lyapunov-answer_1">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The above one cannot use Hamilton system approximation for it only has one item. But we can divide one by two, and get</p>
+<div class="arithmatex">\[
+\frac{dy}{dx}=-\frac{x}{3y}
+\]</div>
+<p>which is a homogeneous equation. So the solution is <span class="arithmatex">\(x^2+3y^2=C\)</span>. We can choose Lyapunov function $V=0.5x<sup>2+1.5y</sup>3, then <span class="arithmatex">\(dV/dt\equiv 0\)</span>, which is       Lyapunov stable but not asymptotic stable.</p>
+</div>
+</div>
+</div>
 
 
 
@@ -2145,13 +2209,13 @@ V(\pmb{x})=0
         
         
           
-          <a href="../../Sensing%26Detection/Midterm/" class="md-footer__link md-footer__link--next" aria-label="Next: Sensing &amp; Detection">
+          <a href="../Qualitative_Theory/" class="md-footer__link md-footer__link--next" aria-label="Next: Qualitative Theory">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Sensing & Detection
+                Qualitative Theory
               </div>
             </div>
             <div class="md-footer__button md-icon">
