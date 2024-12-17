@@ -694,26 +694,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preliminary" class="md-nav__link">
+  <a href="#preliminary-dynamic-programming" class="md-nav__link">
     <span class="md-ellipsis">
-      Preliminary
+      Preliminary: Dynamic Programming
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Preliminary">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dynamic-programming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dynamic Programming
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -740,6 +725,57 @@
   <a href="#representation-of-graph" class="md-nav__link">
     <span class="md-ellipsis">
       Representation of Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topological-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topological Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortest-path-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest-Path Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest-Path Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unweighted-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unweighted graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weighted Graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-pair-shortest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      All-pair shortest path
     </span>
   </a>
   
@@ -1865,26 +1901,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preliminary" class="md-nav__link">
+  <a href="#preliminary-dynamic-programming" class="md-nav__link">
     <span class="md-ellipsis">
-      Preliminary
+      Preliminary: Dynamic Programming
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Preliminary">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dynamic-programming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dynamic Programming
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1916,6 +1937,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#topological-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topological Sort
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortest-path-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest-Path Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest-Path Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unweighted-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unweighted graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weighted Graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-pair-shortest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      All-pair shortest path
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1937,30 +2009,37 @@
 
 
 <h1 id="graph-algorithm">Graph Algorithm<a class="headerlink" href="#graph-algorithm" title="Permanent link">&para;</a></h1>
-<h2 id="preliminary">Preliminary<a class="headerlink" href="#preliminary" title="Permanent link">&para;</a></h2>
-<h3 id="dynamic-programming">Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permanent link">&para;</a></h3>
-<p>(Different from dynamic programming in combination optimization)</p>
+<h2 id="preliminary-dynamic-programming">Preliminary: Dynamic Programming<a class="headerlink" href="#preliminary-dynamic-programming" title="Permanent link">&para;</a></h2>
+<p>(Note: content of this part is different from dynamic programming in <strong>combination optimization</strong>)</p>
 <ul>
 <li>Longest common subsequence, LCS</li>
 </ul>
 <p>input: <span class="arithmatex">\(x=\{x_i\}_{i=1}^m\)</span>, <span class="arithmatex">\(y=\{y_i\}_{i=1}^n\)</span>,</p>
 <p>output: their LCS.</p>
-<p>LCS=<span class="arithmatex">\(\{\}\)</span></p>
-<p><span class="arithmatex">\(x=\{A,B,C,B,D,A,B\}\)</span>, <span class="arithmatex">\(y=\{B,D,C,A,B,A\}\)</span></p>
-<p>Then </p>
-<p>LCS<span class="arithmatex">\((x,y)=\{BDAB,BCAB,BCBA\}\)</span>.</p>
+<p>For example, if we have two sequences </p>
+<div class="arithmatex">\[
+\begin{cases}
+x=\{A,B,C,B,D,A,B\}\\
+y=\{B,D,C,A,B,A\}
+\end{cases}
+\]</div>
+<p>then LCS<span class="arithmatex">\((x,y)=\{BDAB,BCAB,BCBA\}\)</span>.</p>
 <ul>
 <li>solve the length of LCS.</li>
 </ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="dynamic-programming-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="dynamic-programming-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="preliminary-dynamic-programming-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="preliminary-dynamic-programming-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li><span class="arithmatex">\(x[i]=y[j]\)</span>, if <span class="arithmatex">\(C[i,j]=k\)</span>, denote one element <span class="arithmatex">\(z[1,\cdotd,k]\in <span class="arithmatex">\(LCS\)</span>[i,j]\)</span>. then z[k]=x[i]=y[j]. So z[1,\cdots,k-1]\in LCS[i-1.j-1].</li>
+<li><span class="arithmatex">\(x[i]=y[j]\)</span>, if <span class="arithmatex">\(C[i,j]=k\)</span>, denote one element <span class="arithmatex">\(z[1,\cdots,k]\in\)</span> LCS<span class="arithmatex">\([i,j]\)</span>. then <span class="arithmatex">\(z[k]=x[i]=y[j]\)</span>. So <span class="arithmatex">\(z[1,\cdots,k-1]\in LCS[i-1,j-1]\)</span>.</li>
 </ul>
-<p>Assume w\in LCS[i-1.j-1] and |w|&gt;k-1, then connect w and z[k], w+z[k] satisfies</p>
-<p>w+z[k]\in LCS[i,j]
-|w+z[k]|&gt;k</p>
+<p>Assume <span class="arithmatex">\(w\in\)</span> LCS<span class="arithmatex">\([i-1.j-1]\)</span> and <span class="arithmatex">\(|w|&gt;k-1\)</span>, then connect <span class="arithmatex">\(w\)</span> and <span class="arithmatex">\(z[k]\)</span>, <span class="arithmatex">\(w+z[k]\)</span> satisfies</p>
+<div class="arithmatex">\[
+\begin{cases}
+w+z[k]\in \text{LCS}[i,j]\\
+\left|w+z[k]\right|&gt;k
+\end{cases}
+\]</div>
 <p>contradicts!</p>
 </div>
 </div>
@@ -1968,54 +2047,201 @@
 <ul>
 <li>optimal substructure</li>
 </ul>
-<p>\forall z[1,\cdots,k]\in LCS[m,n], then z[1,\cdots,s], s&lt; k musst be LCS of their prefix.</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>LCS(x,y,i,j)
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a>    if(i==-1||j==-1)
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a>        return 0
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a>    else if (x[i]==y[j])
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a>        c[i,j]=LCS(x,y,i-1.j-1)+1
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a>    else 
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a>        c[i,j]=max(LCS(x,y,i,j-1),LCS(x,y,i-1.j))
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos="8 "></span></a>    return c[i,j]
+<p><span class="arithmatex">\(\forall z[1,\cdots,k]\in\)</span> LCS<span class="arithmatex">\([m,n]\)</span>, then <span class="arithmatex">\(z[1,\cdots,s]\)</span>, <span class="arithmatex">\(s&lt; k\)</span> must be LCS of their prefix.</p>
+<div class="language-c++ highlight"><span class="filename">Natural Version for LCS</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">-1</span><span class="o">||</span><span class="n">j</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">y</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">        </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="mf">-1.</span><span class="n">j</span><span class="mi">-1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">    </span><span class="k">else</span><span class="w"> </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">        </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="mi">-1</span><span class="p">),</span><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="mf">-1.</span><span class="n">j</span><span class="p">))</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos="8 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
 </span></code></pre></div>
 <ul>
 <li>cut off </li>
 </ul>
 <p>write a note of LCS that has been calculated. So next time we encounter a same item, directly use it. In fact we use a 2 dimension array.</p>
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>LCS(x,y,i,j)
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>    if (c[i,j]==nil)
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a>        if (x[i]==y[j])
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos="4 "></span></a>            c[i,j]=LCS(x,y,i-1.j-1)+1
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos="5 "></span></a>        else 
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos="6 "></span></a>            c[i,j]=max(LCS(x,y,i,j-1),LCS(x,y,i-1.j))
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><a href="#__codelineno-1-7"><span class="linenos" data-linenos="7 "></span></a>    return c[i,j]
+<div class="language-c++ highlight"><span class="filename">Better Version for LCS</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">nil</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">y</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">            </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="mf">-1.</span><span class="n">j</span><span class="mi">-1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">        </span><span class="k">else</span><span class="w"> </span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">            </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="mi">-1</span><span class="p">),</span><span class="n">LCS</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">i</span><span class="mf">-1.</span><span class="n">j</span><span class="p">))</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><a href="#__codelineno-1-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
 </span></code></pre></div>
 <p>time cost <span class="arithmatex">\(O(mn)\)</span>.</p>
 <p>自顶向下 top down.</p>
 <p>自底向上 bottom up.</p>
 <h2 id="gragh-theory">Gragh theory<a class="headerlink" href="#gragh-theory" title="Permanent link">&para;</a></h2>
 <h3 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h3>
-<p>A graph <span class="arithmatex">\(G=(V,E)\)</span> consists a set of vertices, <span class="arithmatex">\(V\)</span> and a set of edges <span class="arithmatex">\(E\)</span>. for <span class="arithmatex">\(u,w\in V\)</span>, <span class="arithmatex">\((u,w)\in E\)</span>.</p>
-<p>If <span class="arithmatex">\((u,w)\neq(w,u)\)</span>, then we call the graph is directed, or digraph. Otherwise we call the graph undirected.</p>
+<p>A graph <span class="arithmatex">\(G=(V,E)\)</span> consists a set of <strong>vertices</strong>, <span class="arithmatex">\(V\)</span> and a set of <strong>edges</strong> <span class="arithmatex">\(E\)</span>. for <span class="arithmatex">\(u,w\in V\)</span>, <span class="arithmatex">\((u,w)\in E\)</span>.</p>
+<p>If <span class="arithmatex">\((u,w)\neq(w,u)\)</span>, then we call the graph is <strong>directed</strong>, or digraph. Otherwise we call the graph undirected.</p>
 <p>We call <span class="arithmatex">\(u,w\in V\)</span> are <strong>adjacent</strong> iff <span class="arithmatex">\((u,w)\in E\)</span>. A map from <span class="arithmatex">\(E\)</span> to <span class="arithmatex">\(\mathbb{R}\)</span> is called weight, or cost.</p>
-<p>A path is a sequence of vertices <span class="arithmatex">\(\{w_1,w_2,\cdots,w_N\}\)</span>, such that <span class="arithmatex">\((w_i,w_{i+1})\in E\)</span>, <span class="arithmatex">\(\forall i\in [1,N-1]\)</span>. When there is not weight defined, the length of the path is <span class="arithmatex">\(N-1\)</span>.</p>
+<p>A <strong>path</strong> is a sequence of vertices <span class="arithmatex">\(\{w_1,w_2,\cdots,w_N\}\)</span>, such that <span class="arithmatex">\((w_i,w_{i+1})\in E\)</span>, <span class="arithmatex">\(\forall i\in [1,N-1]\)</span>. When there is not weight defined, the length of the path is <span class="arithmatex">\(N-1\)</span>.</p>
 <p>自环路径(Loop). </p>
-<p>A simple path is a path such that all vertices are <strong>distinct</strong>, except that the first and the last could be the same.</p>
-<p>A cycle path(循环路径) in a directed graph is a path of length at least 1 such that <span class="arithmatex">\(w_1=w_N\)</span>.  </p>
-<p>A directed graph is aciclic if it has no cycles.</p>
+<p>A <strong>simple path</strong> is a path such that all vertices are <strong>distinct</strong>, except that the first and the last could be the same.</p>
+<p>A <strong>cycle path</strong>(循环路径) in a directed graph is a path of length at least 1 such that <span class="arithmatex">\(w_1=w_N\)</span>.  </p>
+<p>A directed graph is <strong>acyclic</strong> if it has no cycles.</p>
 <p>Directed Acyclic Graph(有向无环图). </p>
 <p>An undirected graph is connected, if <span class="arithmatex">\(\forall u,w\in V\)</span>, <span class="arithmatex">\((u,w)\in E\)</span>. A directed graph with this property is called strongly connected. </p>
 <h3 id="representation-of-graph">Representation of Graph<a class="headerlink" href="#representation-of-graph" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Use 2 dimension array. Adjacency matrix.</li>
+<li>Use 2 dimension array. <strong>Adjacency matrix</strong>.</li>
 </ul>
 <p>If <span class="arithmatex">\(|E|= \Theta(|V|^2)\)</span>, then the graph is dense.</p>
 <p>If <span class="arithmatex">\(|E|= \Theta(|V|)\)</span>, then the graph is sparse.</p>
 <ul>
-<li>Use linked-list. Adjacency list.</li>
+<li>Use linked-list. <strong>Adjacency list</strong>.</li>
 </ul>
 <p>For each vertex, we keep a list of all adjacent vertices. </p>
 <p>Space cost <span class="arithmatex">\(O(|V|+|E|)\)</span>.</p>
+<h3 id="topological-sort">Topological Sort<a class="headerlink" href="#topological-sort" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Topological Sort</p>
+<ul>
+<li><strong>拓扑序 | Topological Sort</strong></li>
+</ul>
+<p><span class="arithmatex">\(\forall v_i,v_j\in V\)</span>, we say <span class="arithmatex">\(v_i\leq v_j\)</span>, if there exists </p>
+<p>(i) a path from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span></p>
+<p>(ii) <span class="arithmatex">\(v_i\)</span> is before <span class="arithmatex">\(v_j\)</span></p>
+<ul>
+<li><strong>拓扑排序 | Topological Sorting</strong></li>
+</ul>
+<p>list <span class="arithmatex">\(\{v_i\}_{i-1}^n\)</span> into a queue</p>
+<div class="arithmatex">\[
+v'_1, v'_2,\cdots, v'_n
+\]</div>
+<p>such that, <span class="arithmatex">\(\forall v'_i\neq v'_j\)</span>, we have</p>
+<p>(i) <span class="arithmatex">\(v_i\leq v_j\)</span></p>
+<p>(ii) there exists no path from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span>.</p>
+</div>
+<ul>
+<li>入度 | indegree</li>
+</ul>
+<p>there must exist a node with indegree = 0.</p>
+<div class="language-c++ highlight"><span class="filename">Version 1 for topological sort</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="n">topsort</span><span class="p">()</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n_vertex</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindNextVertexIndegreeZero</span><span class="p">()</span><span class="w"> </span><span class="c1">// actually we could only do this for the first time.</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">tp</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">v</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">            </span><span class="n">w</span><span class="p">.</span><span class="n">indegree</span><span class="w"> </span><span class="o">--</span><span class="p">;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos="8 "></span></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-c++ highlight"><span class="filename">Better version for topological sort</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">void</span><span class="w"> </span><span class="nf">Graph::topsort</span><span class="p">()</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">vertex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">makeEmpty</span><span class="p">();</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><a href="#__codelineno-3-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">vertex</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">V</span><span class="o">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><a href="#__codelineno-3-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">indegree</span><span class="o">==</span><span class="mi">0</span><span class="o">:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><a href="#__codelineno-3-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">            </span><span class="n">q</span><span class="p">.</span><span class="n">enqueue</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="c1">// O(|V|)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><a href="#__codelineno-3-9"><span class="linenos" data-linenos=" 9 "></span></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><a href="#__codelineno-3-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><a href="#__codelineno-3-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">        </span><span class="n">vertex</span><span class="w"> </span><span class="n">v</span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">dequeue</span><span class="p">();</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><a href="#__codelineno-3-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">tp</span><span class="o">=++</span><span class="n">counter</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><a href="#__codelineno-3-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">vertex</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">v</span><span class="o">:</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><a href="#__codelineno-3-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="o">--</span><span class="n">w</span><span class="p">.</span><span class="n">indegree</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">:</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><a href="#__codelineno-3-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">                </span><span class="n">q</span><span class="p">.</span><span class="n">enqueue</span><span class="p">(</span><span class="n">w</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><a href="#__codelineno-3-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// O(|E|+|V|)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><a href="#__codelineno-3-17"><span class="linenos" data-linenos="17 "></span></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><a href="#__codelineno-3-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">counter</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">NUM_VERTICES</span><span class="p">)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><a href="#__codelineno-3-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">CYclwFoundException</span><span class="p">();</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><a href="#__codelineno-3-20"><span class="linenos" data-linenos="20 "></span></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="shortest-path-algorithm">Shortest-Path Algorithm<a class="headerlink" href="#shortest-path-algorithm" title="Permanent link">&para;</a></h3>
+<p>Input is a weighted Graph.</p>
+<p>Assume weight is positive.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem</p>
+<p>If <span class="arithmatex">\(P_{(u,v)}\)</span> is the shortest path between u and v, then <span class="arithmatex">\(\forall x,y\in P_{(u,v)}\)</span>, <span class="arithmatex">\(P_{(x,y)}\subset P_{(u,v)}\)</span> is the shortest path bwtween x and y.</p>
+<p>Or triangle inequality. forall <span class="arithmatex">\(x,y,z \in V\)</span></p>
+<div class="arithmatex">\[
+\delta(x,y)\leq \delta(x,z)+\delta(z,y)
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="shortest-path-algorithm-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="shortest-path-algorithm-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By contradiction. If there exists another path <span class="arithmatex">\(P'_{(x,y)}\neq P_{(x,y)}\)</span> and </p>
+<div class="arithmatex">\[
+w(P'_{(x,y)})&lt; w(P_{(x,y)})
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+\begin{align*}
+w{(P'_{(u,v)})} &amp;= w{(P_{(u,x)})} + w{(P'_{(x,y)})} + w{(P_{(y,v)})}\\
+&amp;&lt; w{(P_{(u,x)})} + w{(P_{(x,y)})} + w{(P_{(y,v)})}\\
+&amp;=w{(P_{(u,v)})}
+\end{align*}
+\]</div>
+<p>that is, we find a path that is smaller than the shortest path, which contradicts!</p>
+</div>
+</div>
+</div>
+<p>We also call the above problem <strong>Single-Source shortest path</strong>.</p>
+<p>The method is known as Dijlstra's Algorithm.</p>
+<h4 id="unweighted-graph">Unweighted graph<a class="headerlink" href="#unweighted-graph" title="Permanent link">&para;</a></h4>
+<p>This is actually BFS.
+<div class="language-c++ highlight"><span class="filename">Unweighted graph</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">void</span><span class="w"> </span><span class="nf">Graph::unweighted</span><span class="p">(</span><span class="n">Vertex</span><span class="w"> </span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="p">{</span><span class="w">   </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">Vertex</span><span class="w"> </span><span class="n">v</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INFTY</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><a href="#__codelineno-4-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">known</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><a href="#__codelineno-4-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><a href="#__codelineno-4-9"><span class="linenos" data-linenos=" 9 "></span></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">dist</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">enqueue</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><a href="#__codelineno-4-12"><span class="linenos" data-linenos="12 "></span></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><a href="#__codelineno-4-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><a href="#__codelineno-4-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><a href="#__codelineno-4-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">        </span><span class="n">Vertex</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">dequeue</span><span class="p">();</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><a href="#__codelineno-4-16"><span class="linenos" data-linenos="16 "></span></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><a href="#__codelineno-4-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">Vertex</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">v</span><span class="o">:</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><a href="#__codelineno-4-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">w</span><span class="p">.</span><span class="n">dist</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INFTY</span><span class="p">)</span><span class="o">:</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><a href="#__codelineno-4-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><a href="#__codelineno-4-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">                </span><span class="n">w</span><span class="p">.</span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">dist</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a><a href="#__codelineno-4-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">                </span><span class="n">w</span><span class="p">.</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><a href="#__codelineno-4-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">                </span><span class="n">q</span><span class="p">.</span><span class="n">enqueue</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><a href="#__codelineno-4-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><a href="#__codelineno-4-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a><a href="#__codelineno-4-25"><span class="linenos" data-linenos="25 "></span></a><span class="p">}</span>
+</span></code></pre></div></p>
+<!-- 
+    for(int currDist=0;currDist<NUM_VERTICES;currDist++){
+        for(each Vertex v){
+            if !v.known && v.dist == currDist:
+                v.known = true;
+                for each Vertex w adjacent to v:
+                    if(w.dist == INFTY)
+                    {
+                        w.dist = currDist+1;
+                        w.path = v;
+                    }
+        }
+    }
+} -->
+
+<p>Cost: <span class="arithmatex">\(O(|E|+|V|)\)</span></p>
+<h4 id="weighted-graph">Weighted Graph<a class="headerlink" href="#weighted-graph" title="Permanent link">&para;</a></h4>
+<p>This time, we cannot say that the neighberhood is the shortest, which may be longer than some path with more vertices but less weight cost.</p>
+<div class="language-c++ highlight"><span class="filename">Weighted Graph</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="n">s</span><span class="p">.</span><span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">V</span><span class="o">-</span><span class="p">{</span><span class="n">s</span><span class="p">}</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="n">v</span><span class="p">.</span><span class="n">d</span><span class="o">=</span><span class="n">INFTY</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="n">Queue</span><span class="o">=</span><span class="n">V</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><a href="#__codelineno-5-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">()){</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><a href="#__codelineno-5-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop_min</span><span class="p">();</span><span class="w"> </span><span class="c1">// smallest heap</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="n">adjacent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">u</span><span class="o">:</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><a href="#__codelineno-5-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">d</span><span class="o">&gt;</span><span class="n">u</span><span class="p">.</span><span class="n">d</span><span class="o">+</span><span class="n">w</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)</span><span class="o">:</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><a href="#__codelineno-5-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">d</span><span class="o">+</span><span class="n">w</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">);</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a><a href="#__codelineno-5-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">            </span><span class="n">v</span><span class="p">.</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a><a href="#__codelineno-5-11"><span class="linenos" data-linenos="11 "></span></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="all-pair-shortest-path">All-pair shortest path<a class="headerlink" href="#all-pair-shortest-path" title="Permanent link">&para;</a></h3>
+<p>use adjacent matrix <span class="arithmatex">\(A=(a_{ij})_{n\times n}\)</span>, with <span class="arithmatex">\(a_{ij}\)</span> denotes the weight from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span> and <span class="arithmatex">\(a_{ii}=0\)</span>.</p>
+<p>use <span class="arithmatex">\(d_{ij}^{(m)}\)</span> to denote the shortest path weight from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span> with passing <span class="arithmatex">\(m\)</span> edges.</p>
 
 
 
