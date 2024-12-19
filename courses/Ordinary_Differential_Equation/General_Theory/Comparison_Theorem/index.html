@@ -1412,6 +1412,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Comparison Theorem
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1421,6 +1432,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-comparison-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Comparison Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upper-and-lower-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upper and Lower Solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximum-and-minimum-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum and Minimum solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-comparison-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Comparison Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-for-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result for estimation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1794,6 +1869,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-comparison-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Comparison Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upper-and-lower-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upper and Lower Solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximum-and-minimum-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum and Minimum solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#second-comparison-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Comparison Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-for-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Result for estimation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1825,6 +1953,7 @@ x\rightarrow \infty, y\rightarrow \beta &lt;\infty
 \frac{dy}{dx}=f(x,y),\quad y(x_0)=y_0 \label{eq1}
 \end{equation}
 \]</div>
+<h2 id="first-comparison-theorem">First Comparison Theorem<a class="headerlink" href="#first-comparison-theorem" title="Permanent link">&para;</a></h2>
 <p><a id="First-CT"></a></p>
 <div class="admonition success">
 <p class="admonition-title">First Comparison Theorem</p>
@@ -1832,7 +1961,7 @@ x\rightarrow \infty, y\rightarrow \beta &lt;\infty
 <div class="arithmatex">\[
 f(x,y) &lt;F(x,y),\quad \forall(x,y)\in G
 \]</div>
-<p>And we assume <span class="arithmatex">\(y=\phi(x)\)</span> and <span class="arithmatex">\(y=\Phi(x)\)</span> on <span class="arithmatex">\((a,b)\)</span> are solution to ODE</p>
+<p>And we assume <span class="arithmatex">\(y=\phi(x)\)</span> and <span class="arithmatex">\(y=\varPhi(x)\)</span> on <span class="arithmatex">\((a,b)\)</span> are solution to ODE</p>
 <div class="arithmatex">\[
 \begin{cases}
 y'=f(x,y)\\
@@ -1846,22 +1975,59 @@ y(x_0)=y_0
 \]</div>
 <p>respectively, where <span class="arithmatex">\((x_0,y_0)\in G\)</span>. Then </p>
 <div class="arithmatex">\[
-\phi(x)&lt;\Phi(x), \quad x_0&lt;x&lt;b
+\phi(x)&lt;\varPhi(x), \quad x_0&lt;x&lt;b
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="comparison-theorem-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="comparison-theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="first-comparison-theorem-hints" name="__tabbed_1" type="radio" /><input id="first-comparison-theorem-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="first-comparison-theorem-hints">Hints</label><label for="first-comparison-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ul>
-<li>Formulate a function </li>
-</ul>
+<p>Formulate a function </p>
 <div class="arithmatex">\[
-\psi(x)=\Phi(x)-\phi(x)
+\psi(x)=\varPhi(x)-\phi(x)
 \]</div>
 <p>then prove by contradiction.</p>
 </div>
+<div class="tabbed-block">
+<p>Let</p>
+<div class="arithmatex">\[
+\psi(x)=\varPhi(x)-\phi(x)
+\]</div>
+<p>then by initial condition</p>
+<div class="arithmatex">\[
+\psi(x_0)=0,\quad \psi'(x_0)=F(x_0,y_0)-f(x_0,y_0)&gt;0
+\]</div>
+<p>So we can see that there exists <span class="arithmatex">\(\delta&gt;0\)</span>, such that</p>
+<div class="arithmatex">\[
+\psi(x)=\varPhi(x)-\phi(x)&gt;0,\quad x_0&lt;x\leq x_0+\delta
+\]</div>
+<p>If proposition </p>
+<div class="arithmatex">\[
+\varPhi(x)&gt;\phi(x),\quad \forall x\in[x_0,b)
+\]</div>
+<p>does not hold, then <span class="arithmatex">\(\exists x_0+\delta&lt;x_1&lt;b\)</span> such that</p>
+<div class="arithmatex">\[
+\varPhi(x_1)&lt;\phi(x_1)
+\]</div>
+<p>Let</p>
+<div class="arithmatex">\[
+\alpha=\min\{x\in (x_0+\delta,b): \psi(x)=0\}
+\]</div>
+<p><p align="center">
+<img src="../../images/comparison.png" width="45%" />
+</p></p>
+<p>so we can deduce that </p>
+<div class="arithmatex">\[
+\psi(\alpha)=0,\quad \psi(x)&gt;0,\quad \forall x\in (x_0,\alpha)
+\]</div>
+<p>easy to see that <span class="arithmatex">\(\psi(\alpha)\leq 0\)</span>. But</p>
+<div class="arithmatex">\[
+\psi'(\alpha)= F(\alpha,\varPhi(\alpha))-f(\alpha,\phi(\alpha))&gt;0
+\]</div>
+<p>which contradicts!</p>
 </div>
 </div>
+</div>
+<h2 id="upper-and-lower-solution">Upper and Lower Solution<a class="headerlink" href="#upper-and-lower-solution" title="Permanent link">&para;</a></h2>
 <p>To simplify the notation, we have to introduce <strong>upper and lower solution</strong> on the right side.</p>
 <div class="admonition info">
 <p class="admonition-title">Definition of upper and lower solution</p>
@@ -1882,17 +2048,166 @@ y(x_0)=y_0
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem for upper and lower solution</p>
-<p>Assume <span class="arithmatex">\(v(x)\)</span> and <span class="arithmatex">\(w(x)\)</span> are defined in the above, then </p>
+<p>Assume <span class="arithmatex">\(v(x)\)</span> and <span class="arithmatex">\(w(x)\)</span> are defined in the above definition, then </p>
 <div class="arithmatex">\[
 v(x)&lt;\phi(x)&lt;w(x),\quad \forall x\in [x_0,b)
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="comparison-theorem-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="comparison-theorem-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="upper-and-lower-solution-hints" name="__tabbed_2" type="radio" /><input id="upper-and-lower-solution-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="upper-and-lower-solution-hints">Hints</label><label for="upper-and-lower-solution-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Just by <a href="#First-CT">First Comparison Theorem</a></p>
+<ul>
+<li>Define an assistant function</li>
+</ul>
+<div class="arithmatex">\[
+g(x)=\frac{dw(x)}{dx}-f(x,w(x)),\quad F(x,y)=f(x,y)+g(x)
+\]</div>
+<p>which is larger than zero on the line <span class="arithmatex">\(y=w(x)\)</span>, then can deduce the result just by <a href="#First-CT">First Comparison Theorem</a></p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(w(x)\)</span> satisfies ODE</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{dy}{dx}&amp;=F(x,y)\\
+&amp;=f(x,y)+g(x)\\
+&amp;=f(x,y)+\frac{dw(x)}{dx}-f(x,w(x))\\
+&amp;&gt;f(x,y)
+\end{align*}
+\]</div>
+<p>So by <a href="#First-CT">First Comparison Theorem</a> we have <span class="arithmatex">\(w(x)&gt;\phi(x)\)</span> on interval <span class="arithmatex">\([x_0,b)\)</span>.</p>
+<p>It is similar to prove <span class="arithmatex">\(v(x)&lt;\phi(x)\)</span>.</p>
 </div>
 </div>
+</div>
+<h2 id="maximum-and-minimum-solution">Maximum and Minimum solution<a class="headerlink" href="#maximum-and-minimum-solution" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Maximum and Minimum solution</p>
+<p>If there are two solution <span class="arithmatex">\(\varPsi(x)\)</span>, <span class="arithmatex">\(\varPhi(x)\)</span> to the ODE <span class="arithmatex">\(\ref{eq1}\)</span>, such that for all solution <span class="arithmatex">\(y(x)\)</span> to the same ODE, </p>
+<div class="arithmatex">\[
+\varPsi(x)\leq y(x)\leq \varPhi(x),\quad \forall x\in[x_0,b)
+\]</div>
+<p>then we call <span class="arithmatex">\(\varPsi(x)\)</span>, <span class="arithmatex">\(\varPhi(x)\)</span> the <strong>minimum</strong> and <strong>maximum</strong> solution of ODE on interval <span class="arithmatex">\([x_0,b)\)</span> respectively.</p>
+</div>
+<p>Apparently, the minimum and maximum solution are unique. Here we prove their existence.</p>
+<p><a id="MaxMin"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of existence for minimum and maximum solution</p>
+<p>Assume <span class="arithmatex">\(f(x,y)\in C(R)\)</span> where</p>
+<div class="arithmatex">\[
+R=\{(x,y):x_0\leq x\leq x_0+a, |y-y_0|\leq b\}
+\]</div>
+<p>Then initial problem <span class="arithmatex">\(\ref{eq1}\)</span> has maximum and minimum solution on <span class="arithmatex">\([x_0,x_0+h)\)</span>, where</p>
+<div class="arithmatex">\[
+h&lt;\alpha=\min\{a,b/M\}, \quad  M=\max_{(x,y)\in R}{|f(x,y)|}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="maximum-and-minimum-solution-hints" name="__tabbed_3" type="radio" /><input id="maximum-and-minimum-solution-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="maximum-and-minimum-solution-hints">Hints</label><label for="maximum-and-minimum-solution-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Formulate assistant initial problems</p>
+<div class="arithmatex">\[
+\frac{dy}{dx}=f(x,y)+\varepsilon_n, \quad y(x_0)=y_0
+\]</div>
+<p>where <span class="arithmatex">\(\varepsilon_n&gt;0\)</span>, <span class="arithmatex">\((n=1,2,\cdots)\)</span> which is monotonically decreasing to <span class="arithmatex">\(0\)</span>, e.g. <span class="arithmatex">\(\varepsilon_n=1/n\)</span>. Then show its limit of solution sequence is the maxmimum solution.</p>
+<p>It is similar to use <span class="arithmatex">\(-\varepsilon_n\)</span> to prove the existence of minimum solution.</p>
+</div>
+<div class="tabbed-block">
+<p>Formulate assistant initial problems</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{dy}{dx}=f(x,y)+\varepsilon_n, \quad y(x_0)=y_0 \label{eq2}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(\varepsilon_n&gt;0\)</span>, <span class="arithmatex">\((n=1,2,\cdots)\)</span> which is monotonically decreasing to <span class="arithmatex">\(0\)</span>, e.g. <span class="arithmatex">\(\varepsilon_n=1/n\)</span>. </p>
+<p>By Peano Theorem, ODE <span class="arithmatex">\(\ref{eq2}\)</span> has solution on interval <span class="arithmatex">\(|x-x_0|\leq \alpha_n\)</span>, where</p>
+<div class="arithmatex">\[
+\alpha_n=\min\{a,b/M_n\},\quad M_n=\max_{(x,y)\in D}\{|f(x,y)+\varepsilon_n|\}
+\]</div>
+<p>Notice that</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\alpha_n = \alpha = \min\{a,b/M\} 
+\]</div>
+<p>so we choose <span class="arithmatex">\(h&lt;\alpha\)</span> such that all ODE <span class="arithmatex">\(\ref{eq2}\)</span> can have a solution <span class="arithmatex">\(y=\phi_n(x)\)</span> on interval <span class="arithmatex">\(|x-x_0|\leq h\)</span>.</p>
+<ul>
+<li>Show that <span class="arithmatex">\(\{\phi_n(x)\}\)</span> has a subsequence that converges to the solution of the original ODE <span class="arithmatex">\(\ref{eq1}\)</span>.</li>
+</ul>
+<p>This is similar as we prove in <a href="../Existence_Uniqueness_Theorem/#Peano-Theorem">Peano Theorem</a>.</p>
+<ul>
+<li>Show that the limit function <span class="arithmatex">\(y=\varPhi(x)\)</span> is the maximum solution of ODE <span class="arithmatex">\(\ref{eq1}\)</span>. </li>
+</ul>
+<p>By <a href="#First-CT">First Comparison Theorem</a> we have <span class="arithmatex">\(\phi_n(x)&gt;y(x)\)</span>, for all solution <span class="arithmatex">\(y(x)\)</span> of the original ODE <span class="arithmatex">\(\ref{eq1}\)</span>. Then replace <span class="arithmatex">\(n\)</span> with <span class="arithmatex">\(n_j\)</span> and let <span class="arithmatex">\(n\rightarrow \infty\)</span> we have</p>
+<div class="arithmatex">\[
+\varPhi(x)\geq y(x),\quad \forall x\in [x_0,h]
+\]</div>
+<p>which shows that <span class="arithmatex">\(\varPhi(x)\)</span> is the maximum solution of ODE <span class="arithmatex">\(\ref{eq1}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>Initial problem <span class="arithmatex">\(\ref{eq1}\)</span> has unique solution iff its maximum solution equals to minimum solution for all independent variable <span class="arithmatex">\(x\)</span> on a given interval.</p>
+</div>
+<h2 id="second-comparison-theorem">Second Comparison Theorem<a class="headerlink" href="#second-comparison-theorem" title="Permanent link">&para;</a></h2>
+<p>In <a href="#First-CT">First Comparison Theorem</a>, we need to find <span class="arithmatex">\(F(x,y)\)</span> which is strictly larger than <span class="arithmatex">\(f(x,y)\)</span>. What if we happen to find <span class="arithmatex">\(F(x,y)\)</span> also <strong>equals</strong> <span class="arithmatex">\(f(x,y)\)</span>?</p>
+<p>Apparently, we need to strengthen our condition to get a corresponding answer. This gives us the <strong>Second Comparison Theorem</strong> as below.</p>
+<div class="admonition success">
+<p class="admonition-title">Second Comparison Theorem</p>
+<p>Assume <span class="arithmatex">\(f(x,y), F(x,y)\in C(G)\)</span>, where <span class="arithmatex">\(G\)</span> is an open set, and </p>
+<div class="arithmatex">\[
+f(x,y) \leq F(x,y),\quad \forall(x,y)\in G
+\]</div>
+<p>And we assume <span class="arithmatex">\(y=\phi(x)\)</span> and <span class="arithmatex">\(y=\varPhi(x)\)</span> on <span class="arithmatex">\((a,b)\)</span> are solution to ODE</p>
+<div class="arithmatex">\[
+\begin{cases}
+y'=f(x,y)\\
+y(x_0)=y_0
+\end{cases},
+\quad
+\begin{cases}
+y'=F(x,y)\\
+y(x_0)=y_0
+\end{cases}
+\]</div>
+<p>respectively, where <span class="arithmatex">\((x_0,y_0)\in G\)</span>. And <span class="arithmatex">\(y=\phi(x)\)</span> is the minimum solution on the right side. Then </p>
+<div class="arithmatex">\[
+\phi(x)\leq \varPhi(x), \quad x_0&lt;x&lt;b
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="second-comparison-theorem-hints" name="__tabbed_4" type="radio" /><input id="second-comparison-theorem-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="second-comparison-theorem-hints">Hints</label><label for="second-comparison-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Also by formulating assistant initial problems.</p>
+</div>
+<div class="tabbed-block">
+<p>We still consider assistant problems</p>
+<div class="arithmatex">\[
+\frac{dy}{dx}=f(x,y)-\varepsilon_n,\quad y(x_0)=y_0
+\]</div>
+<p>So by the proof of <a href="#MaxMin">Theorem for Maximum and Minimum Solution</a>, we can have function subsequence </p>
+<div class="arithmatex">\[
+\phi_{n_j}\rightrightarrows \phi
+\]</div>
+<p>which satisfies</p>
+<div class="arithmatex">\[
+\phi(x)\leq \varPhi(x)
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="result-for-estimation">Result for estimation<a class="headerlink" href="#result-for-estimation" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Application for Comparison Theorem</p>
+<p>Assume <span class="arithmatex">\(f(x,y)\in C(G)\)</span> where</p>
+<div class="arithmatex">\[
+G=\{(x,y): x_0&lt;x&lt;b,-\infty&lt;y&lt;+\infty\}
+\]</div>
+<p>We have <span class="arithmatex">\((x_0,y_0)\in G\)</span>, denote <span class="arithmatex">\([x_0,\alpha)\)</span> is the maximum existence interval on the right side for solution to ODE <span class="arithmatex">\(\ref{eq1}\)</span>.</p>
+<p>(i) If ODE <span class="arithmatex">\(\ref{eq1}\)</span> has upper and lower solution <span class="arithmatex">\(w(x)\)</span>, <span class="arithmatex">\(v(x)\)</span> with their public existing interval <span class="arithmatex">\([x_0,\beta)\)</span>, then <span class="arithmatex">\(\beta\leq \alpha\)</span>.</p>
+<p>(ii) If ODE <span class="arithmatex">\(\ref{eq1}\)</span> has upper solution <span class="arithmatex">\(w(x)\)</span> (or lower solution <span class="arithmatex">\(v(x)\)</span>) with its maximum existing interval <span class="arithmatex">\([x_0,\beta)\)</span>, and satisfies</p>
+<div class="arithmatex">\[
+\lim_{x\rightarrow \beta^-}w(x)=-\infty (\text{or } \lim_{x\rightarrow \beta^-}v(x)=+\infty )
+\]</div>
+<p>then <span class="arithmatex">\(\alpha\leq \beta\)</span>.</p>
 </div>
 
 

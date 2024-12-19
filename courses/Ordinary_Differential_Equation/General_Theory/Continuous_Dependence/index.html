@@ -1433,6 +1433,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Continuous Dependence of Solution on Initial Value
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1442,6 +1453,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Dependency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-differentiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Differentiability
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1794,6 +1842,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Dependency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-differentiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Differentiability
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1811,10 +1885,123 @@
 <p>Here we focus on </p>
 <div class="arithmatex">\[
 \begin{equation}
-\dot{\mathbfit{x}} = \mathbfit{f}(t, \mathbfit{x}),\quad  \mathbfit{x}(t_0) = \mathbfit{x}_0 \label{eq-vector-cauchy}
+\dot{\mathbfit{y}} = \mathbfit{f}(x, \mathbfit{y},\pmb{\lambda}),\quad  \mathbfit{y}(x_0) = \mathbfit{y}_0 \label{eq1}
 \end{equation}
 \]</div>
-<p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field). To simplify the problem, we assume <span class="arithmatex">\(\pmb{f} \in C^r(D)\)</span>, where <span class="arithmatex">\(r\geq 1\)</span>.</p>
+<p>where <span class="arithmatex">\(\mathbfit{x}\in \mathbb{R}^n\)</span> and <span class="arithmatex">\(\mathbfit{f}: \mathbb{R}^{n+1} \mapsto \mathbb{R}^n \in C(D)\)</span> is a vector function(or vector field).</p>
+<h2 id="continuous-dependency">Continuous Dependency<a class="headerlink" href="#continuous-dependency" title="Permanent link">&para;</a></h2>
+<p>Continuous Dependency means that the solution of ODE with initial values would not differ very much from real solution when the errors of parameters are small enough.</p>
+<p>Now we consider making a transformation. Let </p>
+<div class="arithmatex">\[
+t=x-x_0,\quad \pmb{u}=\pmb{y}-\pmb{y}_0
+\]</div>
+<p>then</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{d \pmb{u}(t)}{dt} &amp;= \frac{d\pmb{y}}{d x} \\
+&amp;=\pmb{f}(x,\pmb{y},\pmb{\lambda})\\
+&amp;=\pmb{f}(t+x_0,\pmb{u}+\pmb{y_0},\pmb{\lambda})
+\end{align*}
+\]</div>
+<p>and initial value becomes</p>
+<div class="arithmatex">\[
+\pmb{u}(0)=\pmb{0}
+\]</div>
+<p>So we only consider dependency on parameters <span class="arithmatex">\(\pmb{\lambda}\)</span> of ODE</p>
+<div class="arithmatex">\[
+\begin{equation}
+\frac{d\pmb{y}}{dx}=\pmb{f}(x,\pmb{y},\pmb{\lambda}),\quad \pmb{y}(0)=\pmb{0}  \label{eq2}
+\end{equation}
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for ODE with parameters</p>
+<p>Consider a region</p>
+<div class="arithmatex">\[
+G=\{(x,\pmb{y},\pmb{\lambda}):|x|\leq a,|\pmb{y}|\leq b, |\pmb{\lambda}|\leq c\}
+\]</div>
+<p>and <span class="arithmatex">\(\pmb{f}(x,\pmb{y},\pmb{\lambda})\in C(G)\)</span> and satisfies Lypschitz condition with respect to <span class="arithmatex">\(\pmb{y}\)</span>, i.e. <span class="arithmatex">\(\forall (x,\pmb{y}_1,\pmb{\lambda})\)</span>, <span class="arithmatex">\((x,\pmb{y}_2,\pmb{\lambda})\)</span> we have</p>
+<div class="arithmatex">\[
+|\pmb{f}(x,\pmb{y}_1,\pmb{\lambda})-\pmb{f}(x,\pmb{y}_2,\pmb{\lambda})|\leq L|\pmb{y}_1-\pmb{y}_2|
+\]</div>
+<p>where <span class="arithmatex">\(L\)</span> is Lypschitz constant. If we let </p>
+<div class="arithmatex">\[
+M=\max_{|(x,\pmb{y},\pmb{\lambda}\in G)|}\{\pmb{f}(x,\pmb{y},\pmb{\lambda})\}, \quad \alpha = \min\{a,b/M\}
+\]</div>
+<p>then the solution <span class="arithmatex">\(\pmb{y}=\pmb{\phi}(x,\pmb{\lambda})\)</span> of ODE <span class="arithmatex">\(\ref{eq2}\)</span> is continuous on region</p>
+<div class="arithmatex">\[
+D=\{|x|\leq \alpha, |\pmb{\lambda}|\leq c\}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="continuous-dependency-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="continuous-dependency-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Similar to <a href="../Existence_Uniqueness_Theorem/#Picard-Theorem">Picard Theorem</a></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>Assume region </p>
+<div class="arithmatex">\[
+R=\{|x-x_0|\leq a, |\pmb{y}-\pmb{y}_0|\leq b\}
+\]</div>
+<p>If <span class="arithmatex">\(\pmb{f}(x,\pmb{y})\in C(R)\)</span> and satisfies Lypschitz condition with respect to <span class="arithmatex">\(\pmb{y}\)</span>. Then initial problem</p>
+<div class="arithmatex">\[
+\frac{d \pmb{y}}{dx}=\pmb{f}(x,\pmb{y}),\quad \pmb{y}(x_0)=\pmb{\eta}
+\]</div>
+<p>has a solution <span class="arithmatex">\(\pmb{y}=\pmb{\phi}(x,\pmb{\eta})\)</span> is continuous on region</p>
+<div class="arithmatex">\[
+Q=\left\{(x,\pmb{y}): |x-x_0|\leq \frac{\alpha}{2}, |\pmb{y}-\pmb{y}_0|\leq \frac{b}{2}\right\}
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+M=\max_{|(x,\pmb{y},\pmb{\lambda}\in G)|}\{\pmb{f}(x,\pmb{y},\pmb{\lambda})\}, \quad \alpha = \min\{a,b/M\}.
+\]</div>
+</div>
+<p>Actually, we do not need Lypschitz condition but solution of ODE <span class="arithmatex">\(\ref{eq1}\)</span> exists uniquely. Here comes the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for dependency on initial value</p>
+<p>Consider ODE</p>
+<div class="arithmatex">\[
+\frac{d\pmb{y}}{dx}=\pmb{f}(x,\pmb{y},\pmb{\lambda})
+\]</div>
+<p>where <span class="arithmatex">\(\pmb{f}\)</span> is bounded and continuous on region <span class="arithmatex">\(G\subset \mathbb{R}\times \mathbb{R}^n \times \mathbb{R}^m\)</span>. Assume for all initial points <span class="arithmatex">\((x_0,\pmb{y}_0)\)</span>, the solution <span class="arithmatex">\(y=\phi(x;x_0,\pmb{y}_0,\pmb{\lambda})\)</span> to the ODE exists uniquely on interval <span class="arithmatex">\(I_0\)</span>, where <span class="arithmatex">\(I_0\subset \mathbb{R}\)</span> is finite. Then <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall (\xi, \pmb{\eta}, \pmb{\lambda}')\in G\)</span> s.t.</p>
+<div class="arithmatex">\[
+|(\xi, \pmb{\eta}, \pmb{\lambda}')- (x_0, \pmb{y}_0, \pmb{\lambda})|&lt;\delta
+\]</div>
+<p>we have </p>
+<div class="arithmatex">\[
+|\phi(x;\xi,\pmb{\eta},\pmb{\lambda}')-\phi(x;x_0,\pmb{y}_0,\pmb{\lambda})|&lt;\varepsilon,\quad \forall x\in I_0
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="continuous-dependency-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="continuous-dependency-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By contradiction.</p>
+</div>
+</div>
+</div>
+<p>Here interval <span class="arithmatex">\(I_0\)</span> is finite is necessary because in the proof we make use of the finite length of the interval. If a solution can satisfy the property on an infinite interval like <span class="arithmatex">\((\beta,\infty)\)</span>, then we call it <a href="../../Lyapunov/#Lyapunov-Stable">Lyapunov stable</a>.</p>
+<h2 id="continuous-differentiability">Continuous Differentiability<a class="headerlink" href="#continuous-differentiability" title="Permanent link">&para;</a></h2>
+<p>Similar to the above part, if <span class="arithmatex">\(\pmb{f}(x,\pmb{y},\pmb{\lambda})\in C^1(G)\)</span> in ODE <span class="arithmatex">\(\ref{eq1}\)</span>, then we can say the solution is continuous differential on a region. To be more specific, we have the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for Continuous Differentiability</p>
+<p>Assume <span class="arithmatex">\(\pmb{f}(x,\pmb{y},\pmb{\lambda})\in C(G)\)</span> where</p>
+<div class="arithmatex">\[
+G=\{(x,\pmb{y},\pmb{\lambda}):|x|\leq a,|\pmb{y}|\leq b, |\pmb{\lambda}|\leq c\}
+\]</div>
+<p>and has continuous partial derivatives with respect to <span class="arithmatex">\(\pmb{y}\)</span> and <span class="arithmatex">\(\pmb{\lambda}\)</span>. Then the solution <span class="arithmatex">\(\pmb{y}=\pmb{\phi}(x,\pmb{\lambda})\)</span> to ODE <span class="arithmatex">\(\ref{eq1}\)</span> is continuous differential on region <span class="arithmatex">\(D\)</span>, where </p>
+<div class="arithmatex">\[
+D=\{|x|\leq \alpha, |\pmb{\lambda}|\leq c\}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="continuous-differentiability-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="continuous-differentiability-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Show that the partial derivatives can be the limit of divided difference.</p>
+</div>
+</div>
+</div>
 
 
 

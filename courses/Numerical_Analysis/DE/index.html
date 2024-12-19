@@ -1202,6 +1202,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#multistep-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multistep Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODEs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1890,6 +1908,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#multistep-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multistep Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#odes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ODEs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1969,6 +2005,33 @@ y'(t_0)=\frac{1}{2h}[y(t_0+h)-y(t_0-h)]-\frac{h^3}{6}y'''(\xi)
 \end{cases}
 \]</div>
 <h2 id="runge-kutta-method">Runge-Kutta Method<a class="headerlink" href="#runge-kutta-method" title="Permanent link">&para;</a></h2>
+<p>Runge-Kutta method with order 4.</p>
+<div class="arithmatex">\[
+\begin{cases}
+w_{i+1}=w_i+\frac{1}{6}(k_1+2K_2+2k_3+k_4)
+w_0=\alpha
+\end{cases}
+\]</div>
+<h2 id="multistep-methods">Multistep Methods<a class="headerlink" href="#multistep-methods" title="Permanent link">&para;</a></h2>
+<p>Derive from integration</p>
+<div class="arithmatex">\[
+y(t_{i+1})-y(t_i)=\int_{t_i}^{t_{i+1}}f(t,y)dt
+\]</div>
+<p>use interpolation polynomial to replace f(t,y).</p>
+<ul>
+<li>Adams-Bashforth Four-step Explicit Method</li>
+</ul>
+<div class="arithmatex">\[
+w_{i+1}=w_i + \frac{h}{24}(55f_i-59f_{i-1}+37f_{i-2}-9f_{i -3})
+\]</div>
+<ul>
+<li>Adams-Bashforth Three-step Implicit Method</li>
+</ul>
+<div class="arithmatex">\[
+w_{i+1}=w_i +\frac{h}{24}(9f_{i+1}+19f_{i}-5f_{i-1}+f_{i-2})
+\]</div>
+<p>Or we derive from Taylar expansion.</p>
+<h2 id="odes">ODEs<a class="headerlink" href="#odes" title="Permanent link">&para;</a></h2>
 
 
 
