@@ -1485,6 +1485,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Continuous Differentiability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solve-for-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solve for Derivatives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1864,6 +1879,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Continuous Differentiability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solve-for-derivatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solve for Derivatives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2001,6 +2031,70 @@ D=\{|x|\leq \alpha, |\pmb{\lambda}|\leq c\}
 <p>Show that the partial derivatives can be the limit of divided difference.</p>
 </div>
 </div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 1</p>
+<p>Assume <span class="arithmatex">\(\pmb{f}(x,\pmb{y})\in C(R)\)</span> where</p>
+<div class="arithmatex">\[
+R=\{(x,y): |x-x_0|\leq a, |\pmb{y}-\pmb{y}_0|\leq b\}
+\]</div>
+<p>and has partial derivative with respect to <span class="arithmatex">\(\pmb{y}\)</span>, i.e. <span class="arithmatex">\(\pmb{f}'_{\pmb{y}}(x,\pmb{y})\)</span>. Then for all <span class="arithmatex">\(\pmb{\eta}\)</span>, s.t. <span class="arithmatex">\(|\pmb{\eta}-\pmb{y}_0|&lt;\frac{b}{2}\)</span>, initial problem </p>
+<div class="arithmatex">\[
+\frac{d\pmb{y}}{dx}=\pmb{f}(x,\pmb{y}), \quad \pmb{y}(x_0)=\pmb{\eta}
+\]</div>
+<p>has solution <span class="arithmatex">\(\pmb{y}=\pmb{\phi}(x,\pmb{\eta})\)</span> is conntinuous onn region </p>
+<div class="arithmatex">\[
+D=\left\{(x,y): |x-x_0|\leq \frac{h}{2}, |\pmb{\eta}-\pmb{y}_0|\leq \frac{b}{2}\right\}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2</p>
+<p>Assume <span class="arithmatex">\(\pmb{f}(x,\pmb{y})\in C(G)\)</span> were</p>
+<div class="arithmatex">\[
+G=\{(x,y): |x-x_0|\leq a, |\pmb{y}-\pmb{y}_0|\leq b,|\pmb{\lambda}|\leq c\}
+\]</div>
+<p>and has partial derivative with respect to <span class="arithmatex">\(\pmb{y}\)</span> and <span class="arithmatex">\(\pmb{\lambda}\)</span>. Then initial problem</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{d\pmb{y}}{dx}=\pmb{f}(x,\pmb{y},\pmb{\lambda}), \quad \pmb{y}(x_0)=\pmb{y}_0\label{eq3}
+\end{align}
+\]</div>
+<p>has unique solution <span class="arithmatex">\(\pmb{y}=\pmb{\phi}(x;x_0;\pmb{y}_0,\pmb{\lambda})\)</span> which is differentiable for <span class="arithmatex">\((x_0,\pmb{y}_0,\pmb{\lambda})\)</span> on region</p>
+<div class="arithmatex">\[
+R=\{|x-x_0|\leq, |\pmb{\lambda}|\leq c\}
+\]</div>
+</div>
+<h3 id="solve-for-derivatives">Solve for Derivatives<a class="headerlink" href="#solve-for-derivatives" title="Permanent link">&para;</a></h3>
+<p>Assume <span class="arithmatex">\(\pmb{y}=\pmb{\phi}(x;x_0,\pmb{y}_0,\pmb{\lambda})\)</span> is the solution to ODE <span class="arithmatex">\(\ref{eq3}\)</span>, then it satisfies the <strong>integral equation</strong></p>
+<div class="arithmatex">\[
+\begin{equation}
+\pmb{\phi}(x;x_0,\pmb{y}_0,\pmb{\lambda})=\pmb{y}_0+\int_{x_0}^x \pmb{f}(s,\pmb{\phi}(x;x_0,\pmb{y}_0,\pmb{\lambda}),\pmb{\lambda})ds \label{eq4}
+\end{equation}
+\]</div>
+<p>Take partial derivative on both sides with respect to <span class="arithmatex">\(x_0\)</span>, <span class="arithmatex">\(\pmb{y}_0\)</span>, <span class="arithmatex">\(\pmb{\lambda}\)</span>, we get</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\partial \pmb{\phi}}{\partial x_0}&amp;= -\pmb{f}(x_0,\pmb{y}_0,\pmb{\lambda}) + \int_{x_0}^x \frac{\partial }{\partial \pmb{y}}\pmb{f}(s,\pmb{\phi}(x;x_0,\pmb{y}_0,\pmb{\lambda}),\pmb{\lambda}) \frac{\partial \pmb{\phi}}{\partial x_0}ds\\
+\frac{\partial \pmb{\phi}}{\partial \pmb{y}_0}&amp;=\pmb{E}_n+ \int_{x_0}^x \frac{\partial }{\partial \pmb{y}}\pmb{f}(s,\pmb{\phi}(x;x_0,\pmb{y}_0,\pmb{\lambda}),\pmb{\lambda}) \frac{\partial \pmb{\phi}}{\partial \pmb{y}_0}ds\\
+\frac{\partial \pmb{\phi}}{\partial \pmb{\lambda}}&amp;=\int_{x_0}^x \left(\frac{\partial }{\partial \pmb{y}}\pmb{f}(s,\pmb{\phi}(x;x_0,\pmb{y}_0,\pmb{\lambda}),\pmb{\lambda}) \frac{\partial \pmb{\phi}}{\partial \pmb{\lambda}}+\frac{\partial }{\partial \pmb{\lambda}}\pmb{f}(s,\pmb{\phi}(x;x_0,\pmb{y}_0,\pmb{\lambda}),\pmb{\lambda}) \right)ds
+\end{align*}
+\]</div>
+<p>Or to be more precise:</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\partial \pmb{\phi}}{\partial x_0}&amp;= -\pmb{f}(x_0,\pmb{y}_0,\pmb{\lambda}) + \int_{x_0}^x \frac{\partial \pmb{f}}{\partial \pmb{y}}\frac{\partial \pmb{\phi}}{\partial x_0}ds\\
+\frac{\partial \pmb{\phi}}{\partial \pmb{y}_0}&amp;=\pmb{E}_n+ \int_{x_0}^x \frac{\partial \pmb{f}}{\partial \pmb{y}} \frac{\partial \pmb{\phi}}{\partial \pmb{y}_0}ds\\
+\frac{\partial \pmb{\phi}}{\partial \pmb{\lambda}}&amp;=\int_{x_0}^x \left(\frac{\partial \pmb{f}}{\partial \pmb{y}} \frac{\partial \pmb{\phi}}{\partial \pmb{\lambda}}+\frac{\partial }{\partial \pmb{\lambda}}\pmb{f} \right)ds
+\end{align*}
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">ODE for Derivatives</p>
+<p>If we let</p>
+<div class="arithmatex">\[
+\begin{align*}
+\pmb{u}(x;x_0,\pmb{y}_0,\pmb{\lambda}) = \frac{\partial \pmb{\phi}}{\partial x_0}
+\end{align*}
+\]</div>
 </div>
 
 
