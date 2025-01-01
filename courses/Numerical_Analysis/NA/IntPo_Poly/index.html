@@ -509,6 +509,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -564,11 +568,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../AIML/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../AIML/Agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIML/ProblemSolving/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problem Solving
   </span>
   
 
@@ -2434,11 +2480,11 @@ f_n[x_0, x_1, x_2] &amp;\overset{\Delta}{=} \frac{f[x_1,x_2]-f[x_0,x_1]}{x_2-x_0
 &amp;= \frac{\frac{f(x_2)-f(x_0)}{x_2-x_1} - \frac{a_1(x_2-x_0)}{x_2-x_1}}{x_2-x_0}\\
 &amp;= \frac{f(x_2)-a_0 - a_1(x_2-x_0)}{(x_2-x_0)(x_2-x_1)}=a_2\\
 &amp;\vdots\\
-f[x_1,x_2,\cdots, x_n] &amp;\overset{\Delta}{=} \frac{f[x_1,x_2,\cdots,x_n] - f[x_0,x_1,\cdots,x_{n-1}]}{x_n-x_0} = a_n
+f[x_0,x_1,\cdots, x_n] &amp;\overset{\Delta}{=} \frac{f[x_1,x_2,\cdots,x_n] - f[x_0,x_1,\cdots,x_{n-1}]}{x_n-x_0} = a_n
 \end{align*}
 \]</div>
 <p>We can prove the above definition <span class="arithmatex">\(f[x_0,x_1\cdots,x_n]\)</span>, which is called <strong>divided difference</strong>, to be equal to <span class="arithmatex">\(a_n\)</span> by induction.</p>
-<p>We can also show that <span class="arithmatex">\(a_1\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(1\)</span> that interpolats <span class="arithmatex">\(x_0,x_1\)</span>, <span class="arithmatex">\(a_2\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(2\)</span> that interpolates <span class="arithmatex">\(x_0,x_1,x_2\)</span> ...</p>
+<p>We can also show that <span class="arithmatex">\(a_1\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(1\)</span> that interpolates <span class="arithmatex">\(x_0,x_1\)</span>, and <span class="arithmatex">\(a_2\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(2\)</span> that interpolates <span class="arithmatex">\(x_0,x_1,x_2\)</span> ...</p>
 <p>This <strong>iterative method</strong> is quite useful in determining the parameters of <span class="arithmatex">\(n\)</span>th Lagrange polynomial.</p>
 <div class="arithmatex">\[
 P_n(x) = f[x_0] + \sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(x-x_j)\right)
@@ -2519,7 +2565,7 @@ f[x_0,x_1] = \frac{f(x_1)-f(x_0)}{x_1-x_0} = f'(\xi)
 <p>The following theorem gives the error bound.</p>
 <div class="admonition success">
 <p class="admonition-title">拉格朗日基函数的余项 | The remainder of Lagrange interpolating polynomial</p>
-<p>Suppose <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span> are distinct numbers in the interval <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(f \in C^{n+1{[a, b]\)</span>. Then, for each <span class="arithmatex">\(x \in [a, b]\)</span>, a number <span class="arithmatex">\(\xi(x)\)</span> (generally unknown) between <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span>, and hence in <span class="arithmatex">\((a, b)\)</span>, exists with</p>
+<p>Suppose <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span> are distinct numbers in the interval <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(f \in C^{n+1}[a, b]\)</span>. Then, for each <span class="arithmatex">\(x \in [a, b]\)</span>, a number <span class="arithmatex">\(\xi(x)\)</span> (generally unknown) between <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span>, and hence in <span class="arithmatex">\((a, b)\)</span>, exists with</p>
 <div class="arithmatex">\[
 f(x) = P(x) + \frac{f^{n+1}(\xi(x))}{(n+1)!}\prod_{i=0}^{n}(x - x_i)
 \]</div>
@@ -2533,19 +2579,70 @@ f(x) = P(x) + \frac{f^{n+1}(\xi(x))}{(n+1)!}\prod_{i=0}^{n}(x - x_i)
 <li>Using a function </li>
 </ul>
 <div class="arithmatex">\[
-g(t) = f(t) - P(t) - [f(t)-g(t)]\prod_{i=0}^{n}\frac{(t-x_i)}{x-x_i}
+g(t) = f(t) - P(t) - [f(x)-P(x)]\prod_{i=0}^{n}\frac{(t-x_i)}{x-x_i}
 \]</div>
-<p>which is <span class="arithmatex">\(C^{n+1}[a, b]\)</span>. Note that <span class="arithmatex">\(f(x_k)=0\)</span> and <span class="arithmatex">\(f(x)=0\)</span> for <span class="arithmatex">\(x \in [a, b]\)</span>. We can see that <span class="arithmatex">\(n+1+1=+\)</span> zero points here. </p>
+<p>which is <span class="arithmatex">\(C^{n+1}[a, b]\)</span>. Here we see <span class="arithmatex">\(x\neq x_k\)</span> is a constant for variable <span class="arithmatex">\(t\)</span>. Note that <span class="arithmatex">\(f(x_k)=0(k=0,1,\cdots n)\)</span> and <span class="arithmatex">\(f(x)=0\)</span> for <span class="arithmatex">\(x \in [a, b]\)</span>(Readers can prove them by substituting in). We can see that <span class="arithmatex">\(n+1+1=n+2\)</span> zero points here(<span class="arithmatex">\(x,x_0,\cdots, x_n\)</span>). </p>
 <ul>
 <li>Using generalized Rolle's Theorem: There exists <span class="arithmatex">\(\xi(x) \in [a, b]\)</span> such that <span class="arithmatex">\(g^{n+1}(\xi(x))=0\)</span></li>
 </ul>
-<p>And make <span class="arithmatex">\(n+1\)</span> derivatives to <span class="arithmatex">\(g(t)\)</span>(corresponding to <span class="arithmatex">\(t\)</span>), and we can get the result. </p>
+<p>And make <span class="arithmatex">\(n+1\)</span> derivatives to <span class="arithmatex">\(g(t)\)</span>(with respect to <span class="arithmatex">\(t\)</span>), we have</p>
+<div class="arithmatex">\[
+g^{(n+1)}(t)=f^{(n+1)}(t)-P^{(n+1)}(t)-\frac{(n+1)![f(x)-P(x)]}{\prod\limits_{i=0}^n (x-x_i)}
+\]</div>
+<p>substitute in <span class="arithmatex">\(\xi\)</span> we have</p>
+<div class="arithmatex">\[
+0=g^{(n+1)}(\xi)=f^{(n+1)}(\xi)- \frac{(n+1)![f(\xi)-P(\xi)]}{\prod\limits_{i=0}^n (x-x_i)}
+\]</div>
+<p>cause <span class="arithmatex">\(P(x)\)</span> is <span class="arithmatex">\(n\)</span>th polynomial, so <span class="arithmatex">\(P^{(n+1)}(\xi)=0\)</span>. So solve for <span class="arithmatex">\(f(x)\)</span> we have</p>
+<div class="arithmatex">\[
+f(x)=P(x)+\frac{f^{n+1}(\xi(x))}{(n+1)!}\prod_{i=0}^{n}(x - x_i)
+\]</div>
+<p>and we can get the result. </p>
 </div>
 <div class="tabbed-block">
 <p>Or by using the relationship between divided difference and mean value differentials.</p>
 </div>
 </div>
 </div>
+<div class="admonition success">
+<p class="admonition-title">牛顿插值公式的余项 | The remainder of Newton's interpolating Formula</p>
+<p>Suppose <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span> are distinct numbers in the interval <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(f \in C^{n+1}[a, b]\)</span>. Then, for each <span class="arithmatex">\(x \in [a, b]\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+f(x)=&amp;f[x_0]+f[x_0,x_1](x-x_1)+\cdots\\
+&amp;+f[x_0,x_1,\cdots, x_n]\prod_{i=0}^{n-1}(x-x_i)\\
+&amp;+f[x_0,x_1,\cdots,x_n,x]\prod_{i=0}^n(x-x_i)
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="error-analysis-of-interpolation-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="error-analysis-of-interpolation-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Similar to proof of Lagrange interpolation polynomial. We assume <span class="arithmatex">\(z\neq x_0,x_1,\cdots,x_n\)</span>, then consider <span class="arithmatex">\(n+1\)</span>th polynomial <span class="arithmatex">\(Q(x)\)</span> that interpolates these <span class="arithmatex">\(n+2\)</span> points <span class="arithmatex">\(\{z,x_0,x_1,\cdots,x_n\}\)</span>, so we have</p>
+<div class="arithmatex">\[
+Q(x)=f[x_0]+\sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(x-x_j)\right)+f[x_0,x_1,\cdots,x_n,z]\prod_{i=0}^n(x-x_i)
+\]</div>
+<p>which satisfies <span class="arithmatex">\(f(x_i)=Q(x_i)(i=0,1,\cdots,n)\)</span> and <span class="arithmatex">\(f(z)=Q(z)\)</span>, the latter one gives</p>
+<div class="arithmatex">\[
+f(z)= Q(z) = f[x_0]+\sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(z-x_j)\right)+f[x_0,x_1,\cdots,x_n,z]\prod_{i=0}^n(z-x_i)
+\]</div>
+<p>substitute <span class="arithmatex">\(z\)</span> with <span class="arithmatex">\(x\)</span> and we are done.</p>
+<p>There is still one step left. For <span class="arithmatex">\(z=x_i\)</span>, divided difference <span class="arithmatex">\(f[x_0,x_1,\cdots,x_n,z]\)</span> is not defined. So for <span class="arithmatex">\(x_i\)</span>, we consider a sequence <span class="arithmatex">\(\{y_k^{i}\}_{k=1}^\infty\)</span>, where <span class="arithmatex">\(y_k^i\neq x_i\)</span> and <span class="arithmatex">\(\lim_{k\rightarrow \infty}y_k^i=x_i\)</span>. First we have the above theorem holds on <span class="arithmatex">\(y_k^i\)</span>, i.e.</p>
+<div class="arithmatex">\[
+\begin{align*}
+f(y_k^i) &amp;= f[x_0]+\sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(y_k^i-x_j)\right)+f[x_0,x_1,\cdots,x_n,y_k^i]\prod_{i=0}^n(y_k^i-x_i)\\
+&amp;\overset{\Delta}{=}Q(y^i_k) + R(y^i_k)
+\end{align*}
+\]</div>
+<p>we know that <span class="arithmatex">\(f(x)\)</span> and <span class="arithmatex">\(Q(x)\)</span>(<span class="arithmatex">\(n\)</span>th polynomial) are continuous on <span class="arithmatex">\([a,b]\)</span>, so <span class="arithmatex">\(\lim_{k\rightarrow \infty}f(y_k^i)=f(x_i)\)</span> and <span class="arithmatex">\(\lim_{k\rightarrow \infty}Q(y_k^i)=Q(x_i)=f(x_i)\)</span>, so</p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}R(y_k^i)=0
+\]</div>
+<p>we could define <span class="arithmatex">\(R(x_i)=0\)</span> and the above equation still holds.</p>
+</div>
+</div>
+</div>
+<p>The above error item is useful in <a href="../NI/#error-analysis">Numerical Integration</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Compared to the remainder of Taylor's extension</p>
 <div class="arithmatex">\[
@@ -2594,7 +2691,7 @@ f[x_0,x_1,\cdots,x_n]=\frac{\Delta^{n}f(x_0)}{h^n n!}
 \]</div>
 <p>where <span class="arithmatex">\(h\)</span> is the distance between two adjacent points.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="interpolation-of-equidistant-points-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="interpolation-of-equidistant-points-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="interpolation-of-equidistant-points-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="interpolation-of-equidistant-points-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By induction.</p>
@@ -2690,7 +2787,7 @@ Q3. Interpolate the following points with natural cubic spline.</p>
 </table>
 </div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="cubic-spline-interpolation-answer" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="cubic-spline-interpolation-answer">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="cubic-spline-interpolation-answer" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="cubic-spline-interpolation-answer">Answer</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Define <span class="arithmatex">\(s_0(x)=a_0+b_0x+c_0x^2+d_0x^3\)</span> and <span class="arithmatex">\(s_1(x)=a_1+b_1(x-1)+c_1(x-1)^2+d_1(x-1)^3\)</span>, then </p>

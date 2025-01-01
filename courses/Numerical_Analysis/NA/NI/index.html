@@ -509,6 +509,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -564,11 +568,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../AIML/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../AIML/Agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIML/ProblemSolving/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problem Solving
   </span>
   
 
@@ -1298,6 +1344,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#numerical-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值稳定性 | Numerical Stability
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1306,7 +1361,7 @@
         <li class="md-nav__item">
   <a href="#composite-numerical-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      混合积分 | Composite Numerical Integration
+      复化积分 | Composite Numerical Integration
     </span>
   </a>
   
@@ -1331,11 +1386,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#non-equidistant-quadrature-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      非等距求积公式 | Non-equidistant Quadrature formula
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="非等距求积公式 | Non-equidistant Quadrature formula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一致系数公式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#gaussian-gaussian-quadrature" class="md-nav__link">
     <span class="md-ellipsis">
       Gaussian 求积公式 | Gaussian Quadrature
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2152,6 +2231,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#numerical-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值稳定性 | Numerical Stability
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2160,7 +2248,7 @@
         <li class="md-nav__item">
   <a href="#composite-numerical-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      混合积分 | Composite Numerical Integration
+      复化积分 | Composite Numerical Integration
     </span>
   </a>
   
@@ -2185,11 +2273,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#non-equidistant-quadrature-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      非等距求积公式 | Non-equidistant Quadrature formula
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="非等距求积公式 | Non-equidistant Quadrature formula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一致系数公式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#gaussian-gaussian-quadrature" class="md-nav__link">
     <span class="md-ellipsis">
       Gaussian 求积公式 | Gaussian Quadrature
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2214,9 +2326,11 @@
 <div class="arithmatex">\[
 I(f) =\int_a^b\rho(x)f(x)dx
 \]</div>
-<p>which cannot be solved by indefinite integral, so we have to define a numerical formula to approximate the integration. Typecal <strong>quadrature formula</strong> (求积公式) can be written as</p>
+<p>which cannot be solved by indefinite integral, so we have to define a numerical formula to approximate the integration. Typical <strong>quadrature formula</strong> (求积公式) can be written as</p>
 <div class="arithmatex">\[
-I_n(f)=\sum_{k=1}^nA_kf(x_k)
+\begin{equation}
+I_n(f)=\sum_{k=1}^nA_kf(x_k)\label{eq1}
+\end{equation}
 \]</div>
 <p>where <span class="arithmatex">\(x_k\)</span> are nodes on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\(A_k\)</span> are coefficients, whose value are only related with <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(\rho(x)\)</span> and the sampling points, rather than the formula of <span class="arithmatex">\(f\)</span> itself.</p>
 <p>Naively, we get error</p>
@@ -2288,8 +2402,77 @@ I_5(f)=I(p_4)=\frac{b-a}{90}\left[7f(x_0)+32f(x_1)+12f(x_2)+32f(x_3)+7f(x_4)\rig
 <p>where <span class="arithmatex">\(x_i=a+(b-a)/4\cdot i\)</span>, <span class="arithmatex">\((i=0,1,2,3,4)\)</span>.</p>
 </div>
 <h3 id="error-analysis">误差分析 | Error analysis<a class="headerlink" href="#error-analysis" title="Permanent link">&para;</a></h3>
-<h2 id="composite-numerical-integration">混合积分 | Composite Numerical Integration<a class="headerlink" href="#composite-numerical-integration" title="Permanent link">&para;</a></h2>
+<p>Assume <span class="arithmatex">\(x_i(i=0,1\cdots,n)\)</span> are equidistant(<span class="arithmatex">\(h\)</span> apart), then we introduce</p>
+<div class="arithmatex">\[
+\omega_n(x)=\prod_{i=0}^n(x-x_i)
+\]</div>
+<p>which have some properties.</p>
+<div class="admonition info">
+<p class="admonition-title">Properties of <span class="arithmatex">\(\omega_n(x)\)</span></p>
+<p>(i) <span class="arithmatex">\(\omega_n((a+b)/2+\xi)=(-1)^{n+1}\omega_n((a+b)/2-\xi)\)</span></p>
+<p>(ii) For <span class="arithmatex">\(\xi\neq x_i(i=0,1,\cdots,n)\)</span>, the following statements hold.</p>
+<div class="arithmatex">\[
+\begin{align*}
+&amp;|\omega_n(\xi+h)|&lt;|\omega_n(\xi)|,\quad \forall a&lt;\xi+h\leq(a+b)/2\\
+&amp;|\omega_n(\xi)|&lt;|\omega_n(\xi+h)|,\quad \forall (a+b)/2\leq\xi&lt;b
+\end{align*}
+\]</div>
+<p>Look at the graph, in which <span class="arithmatex">\(n=5,6\)</span>.</p>
+<p><p align="center">
+<img src="../NI.png" width="50%" />
+</p></p>
+</div>
+<p>Then we define an integral of <span class="arithmatex">\(\omega_n(x)\)</span></p>
+<div class="arithmatex">\[
+\Omega_n(x)=\int_a^x \omega_n(s)ds, n=1,2,\cdots
+\]</div>
+<p>which has a great property.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of <span class="arithmatex">\(\Omega_n(x)\)</span></p>
+<p>When <span class="arithmatex">\(n\)</span> is en even number, then</p>
+<p>(i) <span class="arithmatex">\(\Omega_n(a)=\Omega_n(b)=0\)</span></p>
+<p>(ii) <span class="arithmatex">\(\Omega_n(x)&gt;0, \quad\forall x\in(a,b)\)</span></p>
+</div>
+<p>Then we can prove the error equation for Newton-Cotes Formula.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Error Analysis for Newton-Cotes Formula</p>
+<p>If <span class="arithmatex">\(n\)</span> (number of intervals) is even, and <span class="arithmatex">\(f\in C^{n+2}[a,b]\)</span>, then we have</p>
+<div class="arithmatex">\[
+E_{n+1}(f)=\frac{k_n}{(n+2)!}f^{(n+2)}(\eta),\quad a&lt;\eta&lt;b
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+k_n=\int_a^bx\omega_n(x)dx&lt;0
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="error-analysis-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="error-analysis-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using remainder of interpolation polynomial in Newton's divided difference formula.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary of Error Analysis</p>
+<p>For Simpson Formula, the rounding error is </p>
+<div class="arithmatex">\[
+E_2(f)=-\frac{(b-a)^5}{2880}f^{(4)}(\eta)
+\]</div>
+</div>
+<h3 id="numerical-stability">数值稳定性 | Numerical Stability<a class="headerlink" href="#numerical-stability" title="Permanent link">&para;</a></h3>
+<p>Actually, it is usually hard to get an accurate value of <span class="arithmatex">\(f(x_k)\)</span>, so we introduce error here, which may influence afterwards computation. Now we quantify this effect. </p>
+<p>Assume we use <span class="arithmatex">\(\tilde{f}(x_k)\)</span> to replace <span class="arithmatex">\(f(x_k)\)</span>, denote <span class="arithmatex">\(\varepsilon_k=f(x_k)-\tilde{f}(x_k)\)</span>, then the integral error</p>
+<div class="arithmatex">\[
+\begin{align*}
+|I_n(f)-I_n(\tilde{f})|&amp;=\left|\sum_{k=0}^n A_k f(x_k)-\sum_{k=0}A_k \tilde{f}(x_k)\right|\\
+&amp;\leq \sum_{k=0}^n |A_k||\varepsilon_k|\\
+&amp;&lt;\sum_{k=0}^n |A_k|\max_{0\leq k\leq n}{|\varepsilon_k|}
+\end{align*}\]</div>
+<p>So if <span class="arithmatex">\(\sum_{k=0}^n |A_k|\)</span> is bounded, then the error can be bounded. However, we could prove that this item would go to infinity as <span class="arithmatex">\(n\rightarrow \infty\)</span>, so higher order of Newton-Cotes formula is impractical.</p>
+<h2 id="composite-numerical-integration">复化积分 | Composite Numerical Integration<a class="headerlink" href="#composite-numerical-integration" title="Permanent link">&para;</a></h2>
+<p>We could use low order Newton-Cotes formula with Narrowing down <span class="arithmatex">\(h\)</span>. That is, use Simpson's formula multiple times on little interval of length <span class="arithmatex">\(h\)</span>. </p>
 <h2 id="romberg-romberg-integration">Romberg 积分 | Romberg Integration<a class="headerlink" href="#romberg-romberg-integration" title="Permanent link">&para;</a></h2>
+<p>Here we have another way to improve precision of integration, which is Richardson's Extrapolation. This is a general method.</p>
 <ul>
 <li>Richardson's Extrapolation</li>
 </ul>
@@ -2318,7 +2501,38 @@ T_n(h) &amp;= \frac{2^nT_{n-1}(h)-T_{n-1}(h)}{2^n-1} = I + \xi_1 h^{n+1} +\cdots
 \end{align*}
 \]</div>
 <h2 id="adaptive-quadrature-methods">自适应求积方法 | Adaptive Quadrature Methods<a class="headerlink" href="#adaptive-quadrature-methods" title="Permanent link">&para;</a></h2>
-<h2 id="gaussian-gaussian-quadrature">Gaussian 求积公式 | Gaussian Quadrature<a class="headerlink" href="#gaussian-gaussian-quadrature" title="Permanent link">&para;</a></h2>
+<h2 id="non-equidistant-quadrature-formula">非等距求积公式 | Non-equidistant Quadrature formula<a class="headerlink" href="#non-equidistant-quadrature-formula" title="Permanent link">&para;</a></h2>
+<p>Could we free some limits of the above quadrature, and get some more accurate formula? To be more specific, could we let the coefficient of the quadrature to vary, and do not limit the node to be integrated, and then obtain a better result? </p>
+<p>Let us analyze that, if a quadrature has <span class="arithmatex">\(m\)</span> algebraic precision, then its coefficients and nodes of formula <span class="arithmatex">\(\ref{eq1}\)</span> must follow the system</p>
+<div class="arithmatex">\[
+\begin{cases}
+A_1+A_2+\cdots+A_n&amp;=\int_{a}^b\rho(x)dx\\
+A_1x_1+A_2x_2+\cdots+A_nx_n&amp;=\int_{a}^b\rho(x)xdx\\
+\cdots&amp;\\
+A_1x_1^m+A_2x_2^m+\cdots+A_nx_n^m&amp;=\int_{a}^b\rho(x)x^mdx\\
+\end{cases}
+\]</div>
+<h3 id="_1">一致系数公式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>Given coefficients <span class="arithmatex">\(A_1,A_2,\cdots,A_n\)</span>, the above non-linear system of variables <span class="arithmatex">\(x_1,x_2,\cdots,x_n\)</span> might have solution, with at least <span class="arithmatex">\(m\)</span> algebraic precision.</p>
+<h3 id="gaussian-gaussian-quadrature">Gaussian 求积公式 | Gaussian Quadrature<a class="headerlink" href="#gaussian-gaussian-quadrature" title="Permanent link">&para;</a></h3>
+<p>Given <span class="arithmatex">\(n\)</span> unknown nodes <span class="arithmatex">\(x_1&lt;x_2&lt;\cdots&lt;x_n\)</span>, and denote</p>
+<div class="arithmatex">\[
+\omega_n(x)=\prod_{i=1}^n(x-x_i)
+\]</div>
+<p>If we let </p>
+<div class="arithmatex">\[
+A_i=\int_a^b\rho(x)\frac{\omega_n(x)}{(x-x_i)\omega_n'(x)}dx, \quad i=1,2,\cdots,n
+\]</div>
+<p>then the above quadrature must have at least <span class="arithmatex">\(n-1\)</span> algebraic precision. And have a similar error formula 
+like in <a href="#error-analysis">Newton-Cotes Formula</a></p>
+<div class="arithmatex">\[
+E_n(f)=\int_a^b\rho(x)f[x_1,x_2,\cdots,x_n,x]\omega_n(x)dx
+\]</div>
+<p>Notice that the degree of <span class="arithmatex">\(f[x_1,x_2,\cdots,x_n,x]\)</span> declines <span class="arithmatex">\(n\)</span>(Because <span class="arithmatex">\(x\)</span> is <span class="arithmatex">\(n\)</span> times divided), and assume <span class="arithmatex">\(f(x)\)</span> is a polynomial of degree larger than <span class="arithmatex">\(n-1\)</span>. If we want to let the formula have <span class="arithmatex">\(m(m&gt;n)\)</span> algebraic precision, then if and only if for all polynomial <span class="arithmatex">\(q(x)\)</span> of degree no more then <span class="arithmatex">\(m-n\)</span>, we have</p>
+<div class="arithmatex">\[
+\int_{a}^b\rho(x)q(x)\omega_n(x)dx=0
+\]</div>
+<p>Apparently, <span class="arithmatex">\(m-n\)</span> needs to be less than <span class="arithmatex">\(n\)</span>, for <span class="arithmatex">\((\omega_n,\omega_m)&gt;0\)</span>(inner product), which means <span class="arithmatex">\(m\)</span> could be at most <span class="arithmatex">\(2n-1\)</span>. If <span class="arithmatex">\(\omega_n(x)\)</span> is a <a href="../Appro/#orthogonal-polynomial">orthogonal polynomial</a>, it can satisfy the above condition.</p>
 
 
 
