@@ -513,6 +513,8 @@
       
         
       
+        
+      
     
     
       
@@ -615,6 +617,27 @@
   
   <span class="md-ellipsis">
     Problem Solving
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIML/logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic
   </span>
   
 
@@ -1396,9 +1419,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#uniform-coefficient-formula" class="md-nav__link">
     <span class="md-ellipsis">
-      一致系数公式
+      一致系数公式 | Uniform Coefficient Formula
     </span>
   </a>
   
@@ -2283,9 +2306,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#uniform-coefficient-formula" class="md-nav__link">
     <span class="md-ellipsis">
-      一致系数公式
+      一致系数公式 | Uniform Coefficient Formula
     </span>
   </a>
   
@@ -2329,10 +2352,10 @@ I(f) =\int_a^b\rho(x)f(x)dx
 <p>which cannot be solved by indefinite integral, so we have to define a numerical formula to approximate the integration. Typical <strong>quadrature formula</strong> (求积公式) can be written as</p>
 <div class="arithmatex">\[
 \begin{equation}
-I_n(f)=\sum_{k=1}^nA_kf(x_k)\label{eq1}
+I_n(f)=\sum_{k=1}^nA_kf(x_k)\label{I-genaral}
 \end{equation}
 \]</div>
-<p>where <span class="arithmatex">\(x_k\)</span> are nodes on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\(A_k\)</span> are coefficients, whose value are only related with <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(\rho(x)\)</span> and the sampling points, rather than the formula of <span class="arithmatex">\(f\)</span> itself.</p>
+<p>where the subscript <span class="arithmatex">\(n\)</span> denotes sampling on <span class="arithmatex">\(n\)</span> points, <span class="arithmatex">\(x_k(k=1,2,\cdots,n)\)</span> are nodes on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\(A_k\)</span> are coefficients, whose value are only related with <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(\rho(x)\)</span> and the sampling points, rather than the formula of <span class="arithmatex">\(f\)</span> itself.</p>
 <p>Naively, we get error</p>
 <div class="arithmatex">\[
 E_n(f)= I(f)-I_n(f)
@@ -2478,16 +2501,16 @@ E_2(f)=-\frac{(b-a)^5}{2880}f^{(4)}(\eta)
 </ul>
 <div class="arithmatex">\[
 \begin{equation}
-T_0(h) - I=\alpha_1 h + \alpha_2 h^2 +\cdots \label{eq1}
+T_0(h) - I=\alpha_1 h + \alpha_2 h^2 +\cdots \label{richardson}
 \end{equation}
 \]</div>
 <p>Let</p>
 <div class="arithmatex">\[
 \begin{equation}
-T_0(h/2)-I=\alpha_1 h/2 + \alpha_2 (h/2)^2 + \cdots \label{eq2}
+T_0(h/2)-I=\alpha_1 h/2 + \alpha_2 (h/2)^2 + \cdots \label{richardson-2}
 \end{equation}
 \]</div>
-<p>multiply <span class="arithmatex">\(2\)</span> to both sides of equation <span class="arithmatex">\(\ref{eq2}\)</span> and Subtract equation <span class="arithmatex">\(\ref{eq1}\)</span>, get</p>
+<p>multiply <span class="arithmatex">\(2\)</span> to both sides of equation <span class="arithmatex">\(\ref{richardson-2}\)</span> and Subtract equation <span class="arithmatex">\(\ref{richardson}\)</span>, get</p>
 <div class="arithmatex">\[
 \frac{2T_0(h/2)-T_0(h)}{2-1}-I=-\frac{1}{2}\alpha_2 h^2 +\cdots
 \]</div>
@@ -2503,7 +2526,7 @@ T_n(h) &amp;= \frac{2^nT_{n-1}(h)-T_{n-1}(h)}{2^n-1} = I + \xi_1 h^{n+1} +\cdots
 <h2 id="adaptive-quadrature-methods">自适应求积方法 | Adaptive Quadrature Methods<a class="headerlink" href="#adaptive-quadrature-methods" title="Permanent link">&para;</a></h2>
 <h2 id="non-equidistant-quadrature-formula">非等距求积公式 | Non-equidistant Quadrature formula<a class="headerlink" href="#non-equidistant-quadrature-formula" title="Permanent link">&para;</a></h2>
 <p>Could we free some limits of the above quadrature, and get some more accurate formula? To be more specific, could we let the coefficient of the quadrature to vary, and do not limit the node to be integrated, and then obtain a better result? </p>
-<p>Let us analyze that, if a quadrature has <span class="arithmatex">\(m\)</span> algebraic precision, then its coefficients and nodes of formula <span class="arithmatex">\(\ref{eq1}\)</span> must follow the system</p>
+<p>Let us analyze that, if a quadrature has <span class="arithmatex">\(m\)</span> algebraic precision, then its coefficients and nodes of formula <span class="arithmatex">\(\ref{I-genaral}\)</span> must follow the system</p>
 <div class="arithmatex">\[
 \begin{cases}
 A_1+A_2+\cdots+A_n&amp;=\int_{a}^b\rho(x)dx\\
@@ -2512,8 +2535,28 @@ A_1x_1+A_2x_2+\cdots+A_nx_n&amp;=\int_{a}^b\rho(x)xdx\\
 A_1x_1^m+A_2x_2^m+\cdots+A_nx_n^m&amp;=\int_{a}^b\rho(x)x^mdx\\
 \end{cases}
 \]</div>
-<h3 id="_1">一致系数公式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="uniform-coefficient-formula">一致系数公式 | Uniform Coefficient Formula<a class="headerlink" href="#uniform-coefficient-formula" title="Permanent link">&para;</a></h3>
 <p>Given coefficients <span class="arithmatex">\(A_1,A_2,\cdots,A_n\)</span>, the above non-linear system of variables <span class="arithmatex">\(x_1,x_2,\cdots,x_n\)</span> might have solution, with at least <span class="arithmatex">\(m\)</span> algebraic precision.</p>
+<p>Assume <span class="arithmatex">\(\rho(x)\equiv 1\)</span>, <span class="arithmatex">\(A_1=A_2=\cdots=A_n\)</span>, then it must follow</p>
+<div class="arithmatex">\[
+I_n(f)=A_n\sum_{i=1}^nf(x_i)
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+A_n\sum_{i=1}^nx_i^k=\frac{1}{k+1}(b^{k+1}-a^{k+1}),\quad k=1,2\cdots,n
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Common expression for uniform coefficient formula</p>
+<p>(i) <span class="arithmatex">\(n=1\)</span>, then <span class="arithmatex">\(A_1=b-a\)</span>, <span class="arithmatex">\(x_1=(a+b)/2\)</span>, so </p>
+<div class="arithmatex">\[
+I_1(f)=(b-a)f\left(\frac{a+b}{2}\right)
+\]</div>
+<p>(ii) <span class="arithmatex">\(n=2\)</span>, then <span class="arithmatex">\(A_2=(b-a)/2\)</span>, so</p>
+<div class="arithmatex">\[
+I_2=\frac{b-a}{2}\left[f\left(\frac{b+a}{2}-\frac{b-2}{2\sqrt{3}}\right) +f\left(\frac{b+a}{2}+\frac{b-2}{2\sqrt{3}}\right)  \right]
+\]</div>
+<p>Notice that here nodes are central symmetry about <span class="arithmatex">\(\frac{(a+b)}{2}\)</span>.</p>
+</div>
 <h3 id="gaussian-gaussian-quadrature">Gaussian 求积公式 | Gaussian Quadrature<a class="headerlink" href="#gaussian-gaussian-quadrature" title="Permanent link">&para;</a></h3>
 <p>Given <span class="arithmatex">\(n\)</span> unknown nodes <span class="arithmatex">\(x_1&lt;x_2&lt;\cdots&lt;x_n\)</span>, and denote</p>
 <div class="arithmatex">\[
@@ -2523,8 +2566,7 @@ A_1x_1^m+A_2x_2^m+\cdots+A_nx_n^m&amp;=\int_{a}^b\rho(x)x^mdx\\
 <div class="arithmatex">\[
 A_i=\int_a^b\rho(x)\frac{\omega_n(x)}{(x-x_i)\omega_n'(x)}dx, \quad i=1,2,\cdots,n
 \]</div>
-<p>then the above quadrature must have at least <span class="arithmatex">\(n-1\)</span> algebraic precision. And have a similar error formula 
-like in <a href="#error-analysis">Newton-Cotes Formula</a></p>
+<p>then the above quadrature must have at least <span class="arithmatex">\(n-1\)</span> algebraic precision(readers can check this because it is Lagrange interpolation polynomial, but non-equidistant nodes). And have a similar error formula like in <a href="#error-analysis">Newton-Cotes Formula</a></p>
 <div class="arithmatex">\[
 E_n(f)=\int_a^b\rho(x)f[x_1,x_2,\cdots,x_n,x]\omega_n(x)dx
 \]</div>
@@ -2532,7 +2574,36 @@ E_n(f)=\int_a^b\rho(x)f[x_1,x_2,\cdots,x_n,x]\omega_n(x)dx
 <div class="arithmatex">\[
 \int_{a}^b\rho(x)q(x)\omega_n(x)dx=0
 \]</div>
-<p>Apparently, <span class="arithmatex">\(m-n\)</span> needs to be less than <span class="arithmatex">\(n\)</span>, for <span class="arithmatex">\((\omega_n,\omega_m)&gt;0\)</span>(inner product), which means <span class="arithmatex">\(m\)</span> could be at most <span class="arithmatex">\(2n-1\)</span>. If <span class="arithmatex">\(\omega_n(x)\)</span> is a <a href="../Appro/#orthogonal-polynomial">orthogonal polynomial</a>, it can satisfy the above condition.</p>
+<p>Apparently, <span class="arithmatex">\(m-n\)</span> needs to be less than <span class="arithmatex">\(n\)</span>, for <span class="arithmatex">\((\omega_n,\omega_m)&gt;0\)</span>(inner product), which means <span class="arithmatex">\(m\)</span> could be at most <span class="arithmatex">\(2n-1\)</span>. If <span class="arithmatex">\(\omega_n(x)\)</span> is a <span class="arithmatex">\(n\)</span>th <a href="../Appro/#orthogonal-polynomial">orthogonal polynomial</a>, it can satisfy the above condition. So if we choose the roots of this polynomial as nodes to be integrated, then the corresponding quadrature formula has <span class="arithmatex">\(2n-1\)</span> algebraic precision.</p>
+<p>Theoretically speaking, Gaussian quadrature formula always exists, but in practice it is not easy to solve. Here we use method of undetermined coefficients.</p>
+<p>Using different orthogonal polynomials, we can directly deduce some Gaussian quadrature.</p>
+<div class="admonition success">
+<p class="admonition-title">Examples of Gaussian Quadrature</p>
+<p>(i) <span class="arithmatex">\(\rho(x)\equiv 1\)</span> integrated on region <span class="arithmatex">\([-1,1]\)</span>, the corresponding polynomial is Legendre Polynomial </p>
+<div class="arithmatex">\[
+P_n(x)=\frac{1}{2^n n!}\frac{d^n{(x^2-1)}^n}{dx^n}
+\]</div>
+<p>So the coefficients are </p>
+<div class="arithmatex">\[
+A_i=\int_{-1}^1 \frac{P_n(x)dx}{(x-x_i)P'_n(x_i)}=\frac{2}{(1-x_i^2)P'_n(x_i)^2}
+\]</div>
+<p>with error</p>
+<div class="arithmatex">\[
+E_n(f)=\frac{2^{2n+1}(n!)^4}{[(2n)!]^3(2n+1)}f^{(2n)}(\eta),\quad \eta\in(-1,1)
+\]</div>
+<p>(ii) <span class="arithmatex">\(\rho(x)=\sqrt{1-x^2}\)</span>, integrated on region <span class="arithmatex">\([-1,1]\)</span>, the corresponding polynomial is Second class Chebyshev polynomial</p>
+<div class="arithmatex">\[
+U_n(x)=\frac{\sin[(n+1)\arccos x]}{\sqrt{1-x^2}}
+\]</div>
+<p>using its roots as integration nodes we get</p>
+<div class="arithmatex">\[
+\int_{-1}^1\sqrt{1-x^2}f(x)ds\approx \sum_{k=1}^n\frac{\pi}{n+1}\sin^2 \frac{k\pi}{n+1}f\left(\cos \frac{kx}{n+1}\right)
+\]</div>
+<p>with error</p>
+<div class="arithmatex">\[
+E_n(f)=\frac{\pi}{2^{2n+1}(2n)!}f^{(2n)}(\eta),\quad \eta\in(-1,1)
+\]</div>
+</div>
 
 
 
