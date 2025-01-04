@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../Concept_Learning/">
       
       
-        <link rel="next" href="../Heaps/">
+        <link rel="next" href="../../../cpp/">
       
       
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>Algorithm Analysis - MapleBlog</title>
+        <title>Decision Tree - MapleBlog</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,17 +48,17 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/customize.css">
+      <link rel="stylesheet" href="../../../../stylesheets/customize.css">
     
       <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,7 +75,7 @@
     
     
     
-  <link rel="stylesheet" href="../../../assets/stylesheets/custom.7c86dd97.min.css">
+  <link rel="stylesheet" href="../../../../assets/stylesheets/custom.7c86dd97.min.css">
 
   </head>
   
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algorithm-analysis" class="md-skip">
+        <a href="#decision-tree" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Algorithm Analysis
+              Decision Tree
             
           </span>
         </div>
@@ -265,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -286,7 +286,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../" class="md-tabs__link">
           
   
     
@@ -306,7 +306,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../../../blog/" class="md-tabs__link">
           
   
     
@@ -324,7 +324,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../friends/" class="md-tabs__link">
+      <a href="../../../../friends/" class="md-tabs__link">
         
   
     
@@ -341,7 +341,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../tag/" class="md-tabs__link">
+      <a href="../../../../tag/" class="md-tabs__link">
         
   
     
@@ -375,7 +375,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -398,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,7 +466,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -496,8 +496,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -520,18 +522,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AIML/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -548,7 +548,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Artificial Intelligence & Machine Learning
@@ -597,7 +597,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AIML/AI/" class="md-nav__link ">
+            <a href="../../AI/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -630,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIML/AI/Intro/" class="md-nav__link">
+      <a href="../../AI/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIML/AI/Agent/" class="md-nav__link">
+      <a href="../../AI/Agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -672,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIML/AI/ProblemSolving/" class="md-nav__link">
+      <a href="../../AI/ProblemSolving/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -693,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIML/AI/logic/" class="md-nav__link">
+      <a href="../../AI/logic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,6 +719,8 @@
                 
   
   
+    
+  
   
   
     
@@ -742,18 +744,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../AIML/ML/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -770,7 +770,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2_3">
             <span class="md-nav__icon md-icon"></span>
             Machine Learning
@@ -786,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIML/ML/Intro/" class="md-nav__link">
+      <a href="../Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -807,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIML/ML/Concept_Learning/" class="md-nav__link">
+      <a href="../Concept_Learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -825,10 +825,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../AIML/ML/Decision_Tree/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Decision Tree
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -837,6 +857,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#id3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ID3 算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ID3 算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      信息增益
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      归纳偏置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#occams-razor" class="md-nav__link">
+    <span class="md-ellipsis">
+      奥坎姆剃刀(Occam's razor)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题: 过度拟合
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -905,7 +996,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../cpp/" class="md-nav__link ">
+            <a href="../../../cpp/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -938,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cpp/Elementary/" class="md-nav__link">
+      <a href="../../../cpp/Elementary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cpp/Class_Object/" class="md-nav__link">
+      <a href="../../../cpp/Class_Object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cpp/Inheritance/" class="md-nav__link">
+      <a href="../../../cpp/Inheritance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cpp/Dynamic_Alloc/" class="md-nav__link">
+      <a href="../../../cpp/Dynamic_Alloc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cpp/Exception/" class="md-nav__link">
+      <a href="../../../cpp/Exception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cpp/Streams/" class="md-nav__link">
+      <a href="../../../cpp/Streams/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1069,8 +1160,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1101,16 +1190,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../Data_Structure%26Algorithm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1127,7 +1218,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Data Structure & Algorithm
@@ -1140,30 +1231,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Algorithm Analysis
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Data_Structure%26Algorithm/AlgoAna/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1172,44 +1243,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-notations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Notations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recursions
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1222,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Heaps/" class="md-nav__link">
+      <a href="../../../Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sorting/" class="md-nav__link">
+      <a href="../../../Data_Structure%26Algorithm/sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Dis_Sets_Class/" class="md-nav__link">
+      <a href="../../../Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Graph/" class="md-nav__link">
+      <a href="../../../Data_Structure%26Algorithm/Graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1377,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Intro2Visualization/" class="md-nav__link ">
+            <a href="../../../Intro2Visualization/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1377,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Intro2Visualization/midterm/" class="md-nav__link">
+      <a href="../../../Intro2Visualization/midterm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1436,7 +1469,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../mpm/" class="md-nav__link ">
+            <a href="../../../mpm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1469,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mpm/preliminary/" class="md-nav__link">
+      <a href="../../../mpm/preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1498,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Modern_Control_Theory/MCT/" class="md-nav__link">
+      <a href="../../../Modern_Control_Theory/MCT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1586,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Numerical_Analysis/" class="md-nav__link ">
+            <a href="../../../Numerical_Analysis/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1586,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical_Analysis/MC/" class="md-nav__link">
+      <a href="../../../Numerical_Analysis/MC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1640,7 +1673,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Numerical_Analysis/NA/" class="md-nav__link ">
+            <a href="../../../Numerical_Analysis/NA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1673,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
+      <a href="../../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1694,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
+      <a href="../../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1715,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
+      <a href="../../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1736,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical_Analysis/NA/NI/" class="md-nav__link">
+      <a href="../../../Numerical_Analysis/NA/NI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1765,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Numerical_Analysis/DE/" class="md-nav__link">
+      <a href="../../../Numerical_Analysis/DE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1867,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ordinary_Differential_Equation/" class="md-nav__link ">
+            <a href="../../../Ordinary_Differential_Equation/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1867,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/Preliminary/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/Preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1888,7 +1921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/EIM/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/EIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1909,7 +1942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/LODEs/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/LODEs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1967,7 +2000,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ordinary_Differential_Equation/General_Theory/" class="md-nav__link ">
+            <a href="../../../Ordinary_Differential_Equation/General_Theory/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2000,7 +2033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/General_Theory/Extension_of_Solution/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/General_Theory/Extension_of_Solution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2063,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/General_Theory/Comparison_Theorem/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/General_Theory/Comparison_Theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2084,7 +2117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/General_Theory/Continuous_Dependence/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/General_Theory/Continuous_Dependence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2105,7 +2138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/General_Theory/Power_Series/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/General_Theory/Power_Series/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2134,7 +2167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/Lyapunov/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/Lyapunov/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2155,7 +2188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ordinary_Differential_Equation/Qualitative_Theory/" class="md-nav__link">
+      <a href="../../../Ordinary_Differential_Equation/Qualitative_Theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2218,7 +2251,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ProcessControl/" class="md-nav__link ">
+            <a href="../../../ProcessControl/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2251,7 +2284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProcessControl/Intro/" class="md-nav__link">
+      <a href="../../../ProcessControl/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2272,7 +2305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProcessControl/PID/" class="md-nav__link">
+      <a href="../../../ProcessControl/PID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2293,7 +2326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ProcessControl/Cascade_Control/" class="md-nav__link">
+      <a href="../../../ProcessControl/Cascade_Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2322,7 +2355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sensing%26Detection/Midterm/" class="md-nav__link">
+      <a href="../../../Sensing%26Detection/Midterm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2379,7 +2412,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../blog/" class="md-nav__link ">
+            <a href="../../../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2439,7 +2472,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../blog/Travel/" class="md-nav__link ">
+            <a href="../../../../blog/Travel/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2472,7 +2505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/Travel/5th_05_24/" class="md-nav__link">
+      <a href="../../../../blog/Travel/5th_05_24/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2501,7 +2534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2529,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../friends/" class="md-nav__link">
+      <a href="../../../../friends/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2549,7 +2582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tag/" class="md-nav__link">
+      <a href="../../../../tag/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2589,18 +2622,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-notations" class="md-nav__link">
+  <a href="#id3" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Notations
+      ID3 算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ID3 算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      信息增益
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      归纳偏置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#occams-razor" class="md-nav__link">
+    <span class="md-ellipsis">
+      奥坎姆剃刀(Occam's razor)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#recursions" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Recursions
+      常见问题: 过度拟合
     </span>
   </a>
   
@@ -2621,147 +2687,129 @@
                   
 
 
-<h1 id="algorithm-analysis">Algorithm Analysis<a class="headerlink" href="#algorithm-analysis" title="Permanent link">&para;</a></h1>
-<h2 id="basic-notations">Basic Notations<a class="headerlink" href="#basic-notations" title="Permanent link">&para;</a></h2>
-<p>We must have some notation to better describe our algorithm.</p>
+<h1 id="decision-tree">Decision Tree<a class="headerlink" href="#decision-tree" title="Permanent link">&para;</a></h1>
+<p>归纳偏置: 优先选择较小的树</p>
 <div class="admonition info">
-<p class="admonition-title">Definitions</p>
-<p>(i) We call <span class="arithmatex">\(T(N)=O(f(N))\)</span>, if there exists positive constants <span class="arithmatex">\(c\)</span>, <span class="arithmatex">\(n_0\)</span>, such that </p>
-<div class="arithmatex">\[
-T(N)\leq cf(N), \quad  \forall N\geq n_0
-\]</div>
-<p>(ii) We call <span class="arithmatex">\(T(N)=\Omega(g(N))\)</span>, if there exists positive constants <span class="arithmatex">\(c\)</span>, <span class="arithmatex">\(n_0\)</span>, such that</p>
-<div class="arithmatex">\[
-T(N)\geq cg(N), \quad  \forall N\geq n_0
-\]</div>
-<p>(iii) we call <span class="arithmatex">\(T(N)=\Theta(h(N))\)</span>, if and only if <span class="arithmatex">\(T(N)=O(h(N))\)</span> and <span class="arithmatex">\(T(N)=\Omega(h(N))\)</span>.</p>
-<p>(iv) we call <span class="arithmatex">\(T(N)=o(p(N))\)</span>, if forall constant <span class="arithmatex">\(c&gt;0\)</span>, there exists <span class="arithmatex">\(n_0\)</span> such that </p>
-<div class="arithmatex">\[
-T(N)&lt;cp(N),\quad \forall N&gt;n_0
-\]</div>
-<p>Or less formally, <span class="arithmatex">\(T(N)=o(p(N))\)</span> if <span class="arithmatex">\(T(N)=O(p(N))\)</span> and <span class="arithmatex">\(T(N)\neq \Theta(p(N))\)</span>. </p>
+<p class="admonition-title">决策树</p>
+<p>根开始，到叶子节点，对实例进行分类。树上的节点对应每个实例的属性的测试，后继分支代表该属性的一个可能值。</p>
+<p>本质上，它代表实例属性值的合取(conjuction, 从根到叶子节点)的析取式(disjunction, 一个根节点的不同的可能性)</p>
 </div>
-<p>The following rules are usually really useful for algorithm analysis.</p>
+<div class="admonition info">
+<p class="admonition-title">适用问题特征</p>
+<p>下面三点比较显然。</p>
+<ul>
+<li>
+<p>实例由 "属性-对" 组成，属性对应的值可以式离散的，也可以是分区间连续的。</p>
+</li>
+<li>
+<p>目标函数有离散的输出值，如布尔型分类，或两个以上输出值的分类器。</p>
+</li>
+<li>
+<p>需要析取的描述</p>
+</li>
+</ul>
+<p>下面两点值得探讨。</p>
+<ul>
+<li>
+<p>实例集可以包含错误？？</p>
+</li>
+<li>
+<p>实例集可以包含缺少属性值的实例？？</p>
+</li>
+</ul>
+</div>
+<h2 id="id3">ID3 算法<a class="headerlink" href="#id3" title="Permanent link">&para;</a></h2>
+<p>使用贪婪算法。</p>
+<p>核心问题是选择每个节点要测试的属性。如何衡量一个属性具有最好的选择能力？这里使用信息增益。</p>
+<h3 id="_1">信息增益<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>熵</strong></li>
+</ul>
+<p>给定一个样例集，有熵</p>
+<div class="arithmatex">\[
+entropy(S)=\sum_{i=1}^c -p_i\log_2 p_i
+\]</div>
+<p>这里 <span class="arithmatex">\(c\)</span> 表示状态数，<span class="arithmatex">\(p_i\)</span>表示某一分类值得实例占比。可知上式最大值是<span class="arithmatex">\(\log_2 c\)</span>, 当每一个状态数的实例相等的时候，最小是<span class="arithmatex">\(0\)</span>，当其中一个状态占满。</p>
+<ul>
+<li><strong>信息增益</strong>: 是由于使用这个属性分割样例集而导致期望熵的减小</li>
+</ul>
+<p>这里用期望，表明一个属性的不同值对做出样例集划分后，要加权求平均来表达总体的熵减情况。</p>
+<div class="arithmatex">\[
+gain(S,A) = entropy(S) - \sum_{v\in value(A)}\frac{|S_v|}{|S|}entropy(S_v)
+\]</div>
+<p>注意后面的熵<span class="arithmatex">\(entropy(S_v)\)</span>是条件熵，基于<span class="arithmatex">\(S_v\)</span>来计算后续别的属性的熵.</p>
+<p>递归调用。当样例个数为0或熵为0时，确定叶子节点的属性。已被树的较高节点测试的属性被排除在外。</p>
+<div class="admonition info">
+<p class="admonition-title">ID3 算法的优劣</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">优势</th>
+<th style="text-align: center;">劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">假设空间包含<strong>所有的决策树</strong>，时关于现有属性的有限离散值函数的一个完整空间。</td>
+<td style="text-align: center;">训练结束后，ID3只维护<strong>单一的当前假设</strong>。不像变形空间的候选消除算法能够维护与训练样例一致的所有假设</td>
+</tr>
+<tr>
+<td style="text-align: center;">每一步都使用当前的<strong>所有训练样例</strong>，基于统计，能够降低对个别训练样例错误的敏感性，不像Find_S算法/候选消除算法对个别数据的错误非常敏感</td>
+<td style="text-align: center;">搜索不进行<strong>回溯</strong>，容易收敛到局部最优答案？？</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="_2">归纳偏置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>近似的归纳偏置: 较短的树比较长的树优先。信息增益高的属性更靠近根节点的树优先。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID3算法</th>
+<th style="text-align: center;">候选消除算法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">优选偏置，搜索偏置，对于某种假设胜过其他假设的优选，并不考虑最终可列举的假设种类</td>
+<td style="text-align: center;">限定偏置，语言偏置，限定假设的空间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="occams-razor">奥坎姆剃刀(Occam's razor)<a class="headerlink" href="#occams-razor" title="Permanent link">&para;</a></h3>
+<p>优先选择拟合数据的最简单的假设。</p>
+<p>ID3算法优选较短决策树的归纳偏置是泛化的一种依据。</p>
+<h2 id="_3">常见问题: 过度拟合<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>噪声、巧合会导致决策树更加复杂。</li>
+</ul>
 <div class="admonition success">
-<p class="admonition-title">Rules</p>
-<p>(i) If <span class="arithmatex">\(T_1(N)=O(f(N))\)</span> and <span class="arithmatex">\(T_2(N)=O(g(N))\)</span>, then </p>
-<div class="arithmatex">\[
-\begin{align*}
-T_1(N)+T_2(N)&amp;=O(f(N)+g(N))\quad \text{(steps summation)}\\
-T_1(N)\times T_2(N)&amp;=O(f(N)\times g(N)) \quad \text{(steps multiplication)}.
-\end{align*}
-\]</div>
-<p>(ii) If <span class="arithmatex">\(T(N)\)</span> is a polynomial of degree <span class="arithmatex">\(k\)</span>, then </p>
-<div class="arithmatex">\[
-T(N)=\Theta(N^k).
-\]</div>
-<p>(Proved by find <span class="arithmatex">\(c_1\)</span>, <span class="arithmatex">\(c_2\)</span> to be its upper and lower bound)</p>
-<p>(iii) <span class="arithmatex">\(\log^kN=O(N)\)</span>, <span class="arithmatex">\(\forall k\)</span>.</p>
+<p class="admonition-title">解决方案</p>
+<ul>
+<li>
+<p>及早停止树增长: 较为困难</p>
+</li>
+<li>
+<p>后修剪法: 采用一定的准则进行修剪。</p>
+</li>
+</ul>
+<p>|||
+|:---:|</p>
 </div>
-<h2 id="recursions">Recursions<a class="headerlink" href="#recursions" title="Permanent link">&para;</a></h2>
-<p>We take Merge Sort as an example.</p>
-<div class="language-python highlight"><span class="filename">Merge</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="n">Merge</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a>    <span class="n">n1</span> <span class="o">=</span> <span class="n">q</span> <span class="o">-</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a>    <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">q</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="n">L</span><span class="p">[</span><span class="mf">1.</span><span class="o">..</span><span class="p">(</span><span class="n">n1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="n">R</span><span class="p">[</span><span class="mf">1.</span><span class="o">..</span><span class="p">(</span><span class="n">n2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">n1</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos=" 7 "></span></a>        <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">p</span> <span class="o">+</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="k">for</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="n">n2</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a>        <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">q</span> <span class="o">+</span> <span class="n">j</span><span class="p">]</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><a href="#__codelineno-0-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="n">L</span><span class="p">(</span><span class="n">n1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">R</span><span class="p">(</span><span class="n">n2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="o">+</span><span class="n">inf</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><a href="#__codelineno-0-11"><span class="linenos" data-linenos="11 "></span></a>    <span class="k">for</span> <span class="n">k</span> <span class="o">=</span> <span class="n">p</span> <span class="n">to</span> <span class="n">r</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><a href="#__codelineno-0-12"><span class="linenos" data-linenos="12 "></span></a>        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><a href="#__codelineno-0-13"><span class="linenos" data-linenos="13 "></span></a>            <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><a href="#__codelineno-0-14"><span class="linenos" data-linenos="14 "></span></a>            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><a href="#__codelineno-0-15"><span class="linenos" data-linenos="15 "></span></a>        <span class="k">else</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><a href="#__codelineno-0-16"><span class="linenos" data-linenos="16 "></span></a>            <span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><a href="#__codelineno-0-17"><span class="linenos" data-linenos="17 "></span></a>            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>
-</span></code></pre></div>
-<p>whose time cost is <span class="arithmatex">\(O(N)\)</span>, where <span class="arithmatex">\(N=r+p-1\)</span>.</p>
-<div class="language-python highlight"><span class="filename">MergeSort</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="n">MergeSort</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>    <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="n">r</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a>        <span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos="4 "></span></a>        <span class="n">MergeSort</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos="5 "></span></a>        <span class="n">MergeSort</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">q</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos="6 "></span></a>        <span class="n">Merge</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Assume the time cost of MergeSort is <span class="arithmatex">\(T(N)\)</span>, where <span class="arithmatex">\(N=r+p-1\)</span>, then we have</p>
-<div class="arithmatex">\[
-T(N)=\begin{cases}O(1),\quad N=1\\ 2T(N/2)+O(N),\quad N&gt;1\end{cases}
-\]</div>
-<p>It is apparent to draw a graph of tree for this recursion, get its time cost and then prove it using <strong>Induction</strong>.</p>
-<p>Generalize the above thoughts and we have the following theorem.</p>
-<p><a id="Master Theorem"></a></p>
+<ul>
+<li>训练和验证集法</li>
+</ul>
+<p>训练集可能因噪声、随即错误和巧合规律性误导，但验证集不太可能表现出同样的波动。这样求验证集要足够大，一般&#8531;的数据用于验证。</p>
 <div class="admonition success">
-<p class="admonition-title">Master Theorem</p>
-<p>Assume <span class="arithmatex">\(T(N)\)</span> is the time cost for a recursive algorithm, and satisfies</p>
-<div class="arithmatex">\[
-T(N)=\begin{cases}O(1),\quad N=1\\ aT(N/b)+f(N),\quad N&gt;1\end{cases}
-\]</div>
-<p>where <span class="arithmatex">\(a\geq 1\)</span>, <span class="arithmatex">\(b&gt;1\)</span> and <span class="arithmatex">\(f(N)&gt;0\)</span> for sufficient large <span class="arithmatex">\(N\)</span>. </p>
-<p>(i) If there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span> such that <span class="arithmatex">\(f(N)=O(N^{\log_b{a-\varepsilon}})\)</span>, then <span class="arithmatex">\(T(N)=\Theta(N^{\log_ba})\)</span>.</p>
-<p>(ii) If <span class="arithmatex">\(f(N)=\Theta(N^{\log_ba})\)</span>, then <span class="arithmatex">\(T(N)=\Theta(N^{\log_b a}\log N)\)</span>.</p>
-<p>(iii) If there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span>, such that <span class="arithmatex">\(f(N)=\Omega(N^{\log_b a+\varepsilon})\)</span>, and for sufficient large <span class="arithmatex">\(N\)</span>, <span class="arithmatex">\(af(N/b)\leq cf(N)\)</span>, <span class="arithmatex">\(c&lt;1\)</span>, then <span class="arithmatex">\(T(N)=\Theta(f(N))\)</span>.</p>
-</div>
-<p>The above <span class="arithmatex">\(\varepsilon\)</span> in (i) and (iii) denotes the relationship on polynomial. And the latter condition in (iii) of the above theorem is called <strong>regularity condition</strong>.</p>
-<p>The focus is to compare the relative size between <span class="arithmatex">\(N^{\log_b a}\)</span> and <span class="arithmatex">\(f(N)\)</span>. If the former is larger, then time cost is determined by <span class="arithmatex">\(T(N)=aT(N/b)\)</span>, which is <span class="arithmatex">\(O(N^{\log_b a})\)</span>, meaning the bifurcation of the tree is large enough such that the time cost of each layer can be ignored. However, on the other hand, if the latter is larger, then time cost is determined by <span class="arithmatex">\(f(N)\)</span>,  which is <span class="arithmatex">\(O(f(N))\)</span>.</p>
-<div class="question">
-<p>Q1. Solve for time cost <span class="arithmatex">\(T(n)\)</span> in the following situation</p>
-<p>(i) <span class="arithmatex">\(T(n)=9T(n/3)+n\)</span></p>
-<p>(ii) <span class="arithmatex">\(T(n)=T(2n/3)+1\)</span></p>
-<p>(iii) <span class="arithmatex">\(T(n)=3T(n/4)+n\lg n\)</span></p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="recursions-answer-for-i" name="__tabbed_1" type="radio" /><input id="recursions-answer-for-ii" name="__tabbed_1" type="radio" /><input id="recursions-answer-for-iii" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="recursions-answer-for-i">Answer for (i)</label><label for="recursions-answer-for-ii">Answer for (ii)</label><label for="recursions-answer-for-iii">Answer for (iii)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="arithmatex">\[
-n^{\log_b a}=n^{\log_3 9}=n^2&gt;n
-\]</div>
-<p>so </p>
-<div class="arithmatex">\[
-f(n)=n=O(n^{\log_b a})
-\]</div>
-<p>which is (i) of <a href="#Master Theorem">Master Theorem</a>. So <span class="arithmatex">\(T(n)=\Theta(n^2)\)</span>.</p>
-</div>
-<div class="tabbed-block">
-<div class="arithmatex">\[
-n^{\log_b a}=n^{\log_{3/2} 1}=n^0=1
-\]</div>
-<p>so</p>
-<div class="arithmatex">\[
-f(n)=1=\Theta(1)=\Theta(n^{\log_b a})
-\]</div>
-<p>which is (ii) of <a href="#Master Theorem">Master Theorem</a>. So <span class="arithmatex">\(T(n)=\Theta(\log n)\)</span>.</p>
-</div>
-<div class="tabbed-block">
-<div class="arithmatex">\[
-n^{\log_b a}=n^{\log_4 3}&lt;n^1&lt;n\lg n
-\]</div>
-<p>which does not satisfy (i), (ii) of <a href="#Master Theorem">Master Theorem</a>, so we need to confirm if it satisfies the regularity condition of (iii) in <a href="#Master Theorem">Master Theorem</a>. Notice that</p>
-<div class="arithmatex">\[
-af(n/b)=3{\frac{n}{4}}\lg \left({\frac{n}{4}}\right)
-\]</div>
-<p>So if we choose <span class="arithmatex">\(c=3/4\)</span>, then </p>
-<div class="arithmatex">\[
-af(n/b)\leq cf(n), \forall n\geq 1
-\]</div>
-<p>So it satisfies (iii) of <a href="#Master Theorem">Master Theorem</a>. Thus time cost <span class="arithmatex">\(T(n)=\Theta(n\log n)\)</span></p>
-</div>
-</div>
-</div>
-<p>Notice that there exists gap between (i) and (ii) in <a href="#Master Theorem">Master Theorem</a>, cause some function may not satisfy <span class="arithmatex">\(\varepsilon\)</span>. There also exsits a gap  between (i) and (ii) in <a href="#Master Theorem">Master Theorem</a>, cause the regularity condition.</p>
-<p><div class="question" markdown>
-Q2. Solve for time cost <span class="arithmatex">\(T(n)\)</span> in the following situation</p>
-<p>(i) <span class="arithmatex">\(T(n)=2T(n/2)+n\lg n\)</span></p>
-<p>(ii) <span class="arithmatex">\(T(n)=T(n/2)+n(2-\cos n\pi)\)</span></p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="recursions-answer" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="recursions-answer">Answer</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>The above two could not be solved by <a href="#Master Theorem">Master Theorem</a>. We have to use recursive tree.</p>
-</div>
-</div>
+<p class="admonition-title">后修剪法</p>
+<ul>
+<li>
+<p>错误率降低修剪</p>
+</li>
+<li>
+<p>规则后修剪</p>
+</li>
+</ul>
 </div>
 
 
@@ -2802,7 +2850,7 @@ Q2. Solve for time cost <span class="arithmatex">\(T(n)\)</span> in the followin
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../Concept_Learning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concept Learning">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2812,20 +2860,20 @@ Q2. Solve for time cost <span class="arithmatex">\(T(n)\)</span> in the followin
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Concept Learning
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Heaps/" class="md-footer__link md-footer__link--next" aria-label="Next: Heaps">
+          <a href="../../../cpp/" class="md-footer__link md-footer__link--next" aria-label="Next: Index">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Heaps
+                Index
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2881,26 +2929,26 @@ Q2. Solve for time cost <span class="arithmatex">\(T(n)\)</span> in the followin
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../../../javascripts/extra.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
-        <script src="../../../javascripts/apply-numbering.js"></script>
+        <script src="../../../../javascripts/apply-numbering.js"></script>
       
-        <script src="../../../javascripts/pdf-viewer.js"></script>
+        <script src="../../../../javascripts/pdf-viewer.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
       
     
-  <script src="../../../assets/javascripts/custom.4e50d00f.min.js"></script>
+  <script src="../../../../assets/javascripts/custom.4e50d00f.min.js"></script>
 
   </body>
 </html>

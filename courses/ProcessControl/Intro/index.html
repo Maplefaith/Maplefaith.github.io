@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../Sensing%26Detection/Midterm/">
+        <link rel="next" href="../PID/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -732,6 +732,8 @@
       
         
       
+        
+      
     
     
       
@@ -810,6 +812,27 @@
   
   <span class="md-ellipsis">
     Concept Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/ML/Decision_Tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decision Tree
   </span>
   
 
@@ -2113,6 +2136,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -2275,10 +2302,34 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pid-parameters-determination" class="md-nav__link">
     <span class="md-ellipsis">
       PID Parameters Determination
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PID Parameters Determination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      响应曲线法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Others
     </span>
   </a>
   
@@ -2293,6 +2344,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PID Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cascade_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cascade Control
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2643,10 +2736,34 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pid-parameters-determination" class="md-nav__link">
     <span class="md-ellipsis">
       PID Parameters Determination
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PID Parameters Determination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      响应曲线法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    <span class="md-ellipsis">
+      Others
     </span>
   </a>
   
@@ -2901,11 +3018,95 @@ K=\frac{O_f-O_i}{I_f-I_i}
 <p>(ii) time constant <span class="arithmatex">\(T\)</span> and time daley constant <span class="arithmatex">\(\tau\)</span></p>
 <p>choose <span class="arithmatex">\(y_{283}(t_1)\)</span> and <span class="arithmatex">\(y_{632}(t_2)\)</span> and then </p>
 <div class="arithmatex">\[
-T=(t_2-t_1),\quad \tau=t_2-t_0-T   
+T=1.5\times (t_2-t_1),\quad \tau=t_2-t_0-T   
 \]</div>
 <p>where <span class="arithmatex">\(t_0\)</span> denotes the start time of input step function.</p>
 </div>
-<h3 id="pid-parameters-determination">PID Parameters Determination<a class="headerlink" href="#pid-parameters-determination" title="Permanent link">&para;</a></h3>
+<h2 id="pid-parameters-determination">PID Parameters Determination<a class="headerlink" href="#pid-parameters-determination" title="Permanent link">&para;</a></h2>
+<p>After getting a one order model of the system, i.e. <span class="arithmatex">\(K\)</span>, <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(\tau\)</span>, then we can use them to get PID controller parameters.</p>
+<h3 id="_1">响应曲线法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ZN method</strong>: only applies to <span class="arithmatex">\(0&lt;\tau&lt;T\)</span></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">控制器类型</th>
+<th style="text-align: center;">K_C</th>
+<th style="text-align: center;">T_i</th>
+<th style="text-align: center;">T_d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"><span class="arithmatex">\(T/(\tau K)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI</td>
+<td style="text-align: center;"><span class="arithmatex">\(0.9T/(\tau K)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.33\tau\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">PID</td>
+<td style="text-align: center;"><span class="arithmatex">\(1.2T/(\tau K)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.0\tau\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.5\tau\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><span class="arithmatex">\(\lambda\)</span> method</strong>: all application</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">控制器类型</th>
+<th style="text-align: center;">K_C</th>
+<th style="text-align: center;">T_i</th>
+<th style="text-align: center;">T_d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P</td>
+<td style="text-align: center;"><span class="arithmatex">\(T/(\tau K)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">PI</td>
+<td style="text-align: center;"><span class="arithmatex">\(T/(2\tau K)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(T\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">PID</td>
+<td style="text-align: center;"><span class="arithmatex">\(T/(1.2\tau K)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(T\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.5\tau\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Both method are same for <span class="arithmatex">\(T_d\)</span> and P controller.</p>
+<h3 id="others">Others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>经验法</p>
+</li>
+<li>
+<p>临界比例度法</p>
+</li>
+</ul>
+<p>在闭环下，先使用纯比例控制，从小到大调节<span class="arithmatex">\(K_C\)</span>，对于给定<span class="arithmatex">\(K_C\)</span>.使用小幅度阶跃输入，使得等幅振荡下，记录周期<span class="arithmatex">\(P_u\)</span>和此时的比例增益<span class="arithmatex">\(K_{Cmax}\)</span>，求出对应参数。</p>
+<p>注: 该方法以得到4：1衰减比，合适超调为目标。</p>
+<ul>
+<li>衰减曲线法: 针对纯比例闭环下得不到等幅振荡的情况</li>
+</ul>
+<p>注：和经验法结合使用</p>
 
 
 
@@ -2962,13 +3163,13 @@ T=(t_2-t_1),\quad \tau=t_2-t_0-T
         
         
           
-          <a href="../../Sensing%26Detection/Midterm/" class="md-footer__link md-footer__link--next" aria-label="Next: Sensing &amp; Detection">
+          <a href="../PID/" class="md-footer__link md-footer__link--next" aria-label="Next: PID Controller">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Sensing & Detection
+                PID Controller
               </div>
             </div>
             <div class="md-footer__button md-icon">

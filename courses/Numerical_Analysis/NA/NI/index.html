@@ -732,6 +732,8 @@
       
         
       
+        
+      
     
     
       
@@ -810,6 +812,27 @@
   
   <span class="md-ellipsis">
     Concept Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIML/ML/Decision_Tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decision Tree
   </span>
   
 
@@ -2258,6 +2281,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -2318,6 +2345,48 @@
   
   <span class="md-ellipsis">
     Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProcessControl/PID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PID Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProcessControl/Cascade_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cascade Control
   </span>
   
 
@@ -2848,13 +2917,21 @@ I_5(f)=I(p_4)=\frac{b-a}{90}\left[7f(x_0)+32f(x_1)+12f(x_2)+32f(x_3)+7f(x_4)\rig
 <p>Then we can prove the error equation for Newton-Cotes Formula.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem of Error Analysis for Newton-Cotes Formula</p>
-<p>If <span class="arithmatex">\(n\)</span> (number of intervals) is even, and <span class="arithmatex">\(f\in C^{n+2}[a,b]\)</span>, then we have</p>
+<p>(i) If <span class="arithmatex">\(n\)</span> (number of intervals) is even, and <span class="arithmatex">\(f\in C^{n+2}[a,b]\)</span>, then we have</p>
 <div class="arithmatex">\[
 E_{n+1}(f)=\frac{k_n}{(n+2)!}f^{(n+2)}(\eta),\quad a&lt;\eta&lt;b
 \]</div>
 <p>where </p>
 <div class="arithmatex">\[
 k_n=\int_a^bx\omega_n(x)dx&lt;0
+\]</div>
+<p>(ii) If <span class="arithmatex">\(n\)</span> is odd, and <span class="arithmatex">\(f\in C^{n+1}[a,b]\)</span>, then the error expression is</p>
+<div class="arithmatex">\[
+E_{n+1}(f)=\frac{k_n}{(n+1)!}f^{(n+1)}(\eta),\quad a&lt;\eta&lt;b
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+k_n=\int_a^b\omega_n(x)dx&lt;0
 \]</div>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="error-analysis-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="error-analysis-proof">Proof</label></div>
@@ -2864,11 +2941,16 @@ k_n=\int_a^bx\omega_n(x)dx&lt;0
 </div>
 </div>
 </div>
+<p><a id='Error-Newton-Cotes'></a></p>
 <div class="admonition success">
 <p class="admonition-title">Corollary of Error Analysis</p>
-<p>For Simpson Formula, the rounding error is </p>
+<p>(i) For Tranpezoidal Formula, the rounding error is</p>
 <div class="arithmatex">\[
-E_2(f)=-\frac{(b-a)^5}{2880}f^{(4)}(\eta)
+E_2(f)=-\frac{(b-a)^3}{12}f''(\eta),\quad a&lt;\eta&lt;b
+\]</div>
+<p>(ii) For Simpson Formula, the rounding error is </p>
+<div class="arithmatex">\[
+E_2(f)=-\frac{(b-a)^5}{2880}f^{(4)}(\eta),\quad a&lt;\eta&lt;b
 \]</div>
 </div>
 <h3 id="numerical-stability">数值稳定性 | Numerical Stability<a class="headerlink" href="#numerical-stability" title="Permanent link">&para;</a></h3>
@@ -2955,20 +3037,21 @@ I_2=\frac{b-a}{2}\left[f\left(\frac{b+a}{2}-\frac{b-2}{2\sqrt{3}}\right) +f\left
 <div class="arithmatex">\[
 A_i=\int_a^b\rho(x)\frac{\omega_n(x)}{(x-x_i)\omega_n'(x)}dx, \quad i=1,2,\cdots,n
 \]</div>
-<p>then the above quadrature must have at least <span class="arithmatex">\(n-1\)</span> algebraic precision(readers can check this because it is Lagrange interpolation polynomial, but non-equidistant nodes). And have a similar error formula like in <a href="#error-analysis">Newton-Cotes Formula</a></p>
+<p>then the above quadrature must have at least <span class="arithmatex">\(n-1\)</span> algebraic precision(readers can check this because it is Lagrange interpolation polynomial, but non-equidistant nodes). That is, when using <span class="arithmatex">\(n\)</span> nodes to interpolate and then integrate, we must get a quadrature formula with <span class="arithmatex">\(n-1\)</span> algebraic precision. Now we analyze where the upper bound is for this quadrature formula if we choose a proper position of there <span class="arithmatex">\(n\)</span> nodes.</p>
+<p>Interpolation a function has a similar error formula like in <a href="#error-analysis">Newton-Cotes Formula</a></p>
 <div class="arithmatex">\[
 E_n(f)=\int_a^b\rho(x)f[x_1,x_2,\cdots,x_n,x]\omega_n(x)dx
 \]</div>
-<p>Notice that the degree of <span class="arithmatex">\(f[x_1,x_2,\cdots,x_n,x]\)</span> declines <span class="arithmatex">\(n\)</span>(Because <span class="arithmatex">\(x\)</span> is <span class="arithmatex">\(n\)</span> times divided), and assume <span class="arithmatex">\(f(x)\)</span> is a polynomial of degree larger than <span class="arithmatex">\(n-1\)</span>. If we want to let the formula have <span class="arithmatex">\(m(m&gt;n)\)</span> algebraic precision, then if and only if for all polynomial <span class="arithmatex">\(q(x)\)</span> of degree no more then <span class="arithmatex">\(m-n\)</span>, we have</p>
+<p>Notice that the degree of <span class="arithmatex">\(f[x_1,x_2,\cdots,x_n,x]\)</span> declines <span class="arithmatex">\(n\)</span>(Because <span class="arithmatex">\(x\)</span> is <span class="arithmatex">\(n\)</span> times divided), and assume <span class="arithmatex">\(f(x)\)</span> is a polynomial of degree larger than <span class="arithmatex">\(n-1\)</span>. If we want to let the quadrature formula have <span class="arithmatex">\(m(m&gt;n)\)</span> algebraic precision, then if and only if for all polynomial <span class="arithmatex">\(q(x)\)</span> of degree no more then <span class="arithmatex">\(m-n\)</span>, we have</p>
 <div class="arithmatex">\[
 \int_{a}^b\rho(x)q(x)\omega_n(x)dx=0
 \]</div>
-<p>Apparently, <span class="arithmatex">\(m-n\)</span> needs to be less than <span class="arithmatex">\(n\)</span>, for <span class="arithmatex">\((\omega_n,\omega_m)&gt;0\)</span>(inner product), which means <span class="arithmatex">\(m\)</span> could be at most <span class="arithmatex">\(2n-1\)</span>. If <span class="arithmatex">\(\omega_n(x)\)</span> is a <span class="arithmatex">\(n\)</span>th <a href="../Appro/#orthogonal-polynomial">orthogonal polynomial</a>, it can satisfy the above condition. So if we choose the roots of this polynomial as nodes to be integrated, then the corresponding quadrature formula has <span class="arithmatex">\(2n-1\)</span> algebraic precision.</p>
+<p>Apparently, <span class="arithmatex">\(m-n\)</span> needs to be less than <span class="arithmatex">\(n\)</span>, for <span class="arithmatex">\((\omega_n,\omega_n)&gt;0\)</span>(inner product), which means <span class="arithmatex">\(m\)</span> could be at most <span class="arithmatex">\(2n-1\)</span>. If <span class="arithmatex">\(\omega_n(x)\)</span> is a <span class="arithmatex">\(n\)</span>th <a href="../Appro/#orthogonal-polynomial">orthogonal polynomial</a>, it can satisfy the above condition. So if we choose the roots of this polynomial as nodes to be integrated, then the corresponding quadrature formula has <span class="arithmatex">\(2n-1\)</span> algebraic precision.</p>
 <p>Theoretically speaking, Gaussian quadrature formula always exists, but in practice it is not easy to solve. Here we use method of undetermined coefficients.</p>
 <p>Using different orthogonal polynomials, we can directly deduce some Gaussian quadrature.</p>
 <div class="admonition success">
 <p class="admonition-title">Examples of Gaussian Quadrature</p>
-<p>(i) <span class="arithmatex">\(\rho(x)\equiv 1\)</span> integrated on region <span class="arithmatex">\([-1,1]\)</span>, the corresponding polynomial is Legendre Polynomial </p>
+<p>(i) <span class="arithmatex">\(\rho(x)\equiv 1\)</span> integrated on region <span class="arithmatex">\([-1,1]\)</span>, the corresponding polynomial is <strong>Legendre Polynomial</strong> </p>
 <div class="arithmatex">\[
 P_n(x)=\frac{1}{2^n n!}\frac{d^n{(x^2-1)}^n}{dx^n}
 \]</div>
@@ -2980,7 +3063,7 @@ A_i=\int_{-1}^1 \frac{P_n(x)dx}{(x-x_i)P'_n(x_i)}=\frac{2}{(1-x_i^2)P'_n(x_i)^2}
 <div class="arithmatex">\[
 E_n(f)=\frac{2^{2n+1}(n!)^4}{[(2n)!]^3(2n+1)}f^{(2n)}(\eta),\quad \eta\in(-1,1)
 \]</div>
-<p>(ii) <span class="arithmatex">\(\rho(x)=\sqrt{1-x^2}\)</span>, integrated on region <span class="arithmatex">\([-1,1]\)</span>, the corresponding polynomial is Second class Chebyshev polynomial</p>
+<p>(ii) <span class="arithmatex">\(\rho(x)=\sqrt{1-x^2}\)</span>, integrated on region <span class="arithmatex">\([-1,1]\)</span>, the corresponding polynomial is <strong>Second class Chebyshev polynomial</strong></p>
 <div class="arithmatex">\[
 U_n(x)=\frac{\sin[(n+1)\arccos x]}{\sqrt{1-x^2}}
 \]</div>

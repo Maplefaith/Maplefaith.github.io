@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eulers-method" class="md-skip">
+        <a href="#numerical-solution-of-differential-equation" class="md-skip">
           Skip to content
         </a>
       
@@ -732,6 +732,8 @@
       
         
       
+        
+      
     
     
       
@@ -810,6 +812,27 @@
   
   <span class="md-ellipsis">
     Concept Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/ML/Decision_Tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decision Tree
   </span>
   
 
@@ -1690,6 +1713,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1718,12 +1743,23 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分 | Numerical Differentiation
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#eulers-method" class="md-nav__link">
@@ -1736,9 +1772,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#taylor-method-of-order-n" class="md-nav__link">
+  <a href="#implicite-eulers-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Taylor method of order n
+      Implicite Euler's method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modified-eulers-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modified Euler's Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-step-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double-step Method
     </span>
   </a>
   
@@ -1746,6 +1800,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taylor-method-of-order-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor method of order n
+    </span>
+  </a>
   
 </li>
       
@@ -2198,6 +2261,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -2258,6 +2325,48 @@
   
   <span class="md-ellipsis">
     Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProcessControl/PID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PID Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProcessControl/Cascade_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cascade Control
   </span>
   
 
@@ -2539,12 +2648,23 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      数值微分 | Numerical Differentiation
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#eulers-method" class="md-nav__link">
@@ -2557,9 +2677,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#taylor-method-of-order-n" class="md-nav__link">
+  <a href="#implicite-eulers-method" class="md-nav__link">
     <span class="md-ellipsis">
-      Taylor method of order n
+      Implicite Euler's method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modified-eulers-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modified Euler's Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-step-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double-step Method
     </span>
   </a>
   
@@ -2567,6 +2705,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taylor-method-of-order-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor method of order n
+    </span>
+  </a>
   
 </li>
       
@@ -2612,28 +2759,154 @@
                   
 
 
-  <h1>Numerical Solution of Differential Equations</h1>
-
+<h1 id="numerical-solution-of-differential-equation">Numerical solution of Differential Equation<a class="headerlink" href="#numerical-solution-of-differential-equation" title="Permanent link">&para;</a></h1>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p><strong>微分方程数值解：有限差分理论方法与数值计算</strong>, <em>张文生</em></p>
+<p><strong>微分方程数值解</strong>, <em>陈文斌</em></p>
+</div>
+<p>In ordinary differential equation</p>
+<div class="arithmatex">\[
+\frac{du}{dt}f(t,u),\quad u(0)=u_0
+\]</div>
+<p>in region <span class="arithmatex">\([a,b]\)</span>. Note that it is hard to know the function, but we know its derivatives at all points on the region. That is, for any dicrete point <span class="arithmatex">\(t_n\in [a,b]\)</span>, we have</p>
+<div class="arithmatex">\[
+\frac{du}{dt}\Bigg|_{t=t_n}=f(t_n,u(t_n))
+\]</div>
+<p>The following part is focused on using there infomation to get a solution of ODE.</p>
+<h2 id="numerical-differentiation">数值微分 | Numerical Differentiation<a class="headerlink" href="#numerical-differentiation" title="Permanent link">&para;</a></h2>
+<p>Denote <span class="arithmatex">\(h\)</span> as the time step forward, then according to Taylor expansion evaluated at <span class="arithmatex">\(t_n\)</span> and take another forward point <span class="arithmatex">\(t_{n+1}\)</span></p>
+<div class="arithmatex">\[
+\begin{equation}
+u(t_{n+1})=u(t_n)+h u'(t_n)+\frac{h^2}{2!}u''(t_n)+\frac{h^3}{3!}u'''(t_n)+o(h^4) \label{forward}
+\end{equation}
+\]</div>
+<p>backward at point <span class="arithmatex">\(t_{n-1}\)</span>, we substitute <span class="arithmatex">\(h\)</span> with <span class="arithmatex">\(-h\)</span> and get</p>
+<div class="arithmatex">\[
+\begin{equation}
+u(t_{n-1})=u(t_n)-h u'(t_n)+\frac{h^2}{2!}u''(t_n)-\frac{h^3}{3!}u'''(t_n)+o(h^4)\label{backward}
+\end{equation}
+\]</div>
+<p>So we have an approximation of the first order derivative from equation <span class="arithmatex">\(\ref{forward}\)</span>, that is, the forward form of divided difference</p>
+<div class="arithmatex">\[
+\begin{align}
+u'(t_n)=\frac{u(t_{n+1})-u(t_n)}{h}-\frac{h}{2!}u''(t_n)-\frac{h^2}{3!}u'''(t_n)+o(h^3) \label{Forward}
+\end{align}
+\]</div>
+<p>or from equation <span class="arithmatex">\(\ref{backward}\)</span>, that is, the backward form of divided difference</p>
+<div class="arithmatex">\[
+\begin{equation}
+u'(t_n)=\frac{u(t_{n})-u(t_{n-1})}{h}+\frac{h}{2!}u''(t_n)-\frac{h^2}{3!}u'''(t_n)+o(h^3) \label{Backward}
+\end{equation}
+\]</div>
+<p>Combine equation <span class="arithmatex">\(\ref{Forward}\)</span> and equation <span class="arithmatex">\(\ref{Backward}\)</span> we have the center divided difference form</p>
+<div class="arithmatex">\[
+\begin{equation}
+u'(t_n)=\frac{u(t_{n+1})-u(t_{n-1})}{2h}-\frac{h^2}{3!}u'''(t_n)+o(h^3) \label{center}
+\end{equation}
+\]</div>
+<p>which is more accurate. Now we can use the above equation to get Euler' method.</p>
+<div class="admonition success">
+<p class="admonition-title">Three Point Midpoint Formula</p>
+<div class="arithmatex">\[
+f'(x_0) = \frac{1}{2h}[f(x_0+h)-f(x_0-h)] -\frac{h^2}{6}f'''(\xi)
+\]</div>
+<p>Use Lagrange Polynomial to approximate a function. Then the <span class="arithmatex">\(n\)</span>th derivative of Lagrange Poly approximate the <span class="arithmatex">\(n\)</span>th derivative of the original function.</p>
+</div>
 <h2 id="eulers-method">Euler's Method<a class="headerlink" href="#eulers-method" title="Permanent link">&para;</a></h2>
-<p>error accumulates.</p>
+<p>Here we introduce Euler's one step method</p>
 <div class="arithmatex">\[
 \begin{cases}
 \omega_0=\alpha,\\ \omega_{i+1}=\omega_i+hf(t_i,\omega_i),\quad i=0,1,\cdots,n-1
 \end{cases}
 \]</div>
-<ul>
-<li>local trucation error.</li>
-</ul>
-<p>we consider error, the difference between true value and estimated value divided by <span class="arithmatex">\(h\)</span> with assuming <span class="arithmatex">\(\omega_i=y_i\)</span>.</p>
+<p>From forward form of divided difference <span class="arithmatex">\(\ref{Forward}\)</span> we have its rounding error </p>
 <div class="arithmatex">\[
-\begin{align*}
-\tau_{i+1}&amp;=\frac{y_i-\omega_i}{h}\\
-&amp;=\frac{[y_i+hy'(t_i)+h^2/2\times h''(\xi_i)]-[y_i+hy'(t_i)]}{h}\\
-&amp;=h/2\times h''(\xi_i)
-\end{align*}
+\tau_n=\frac{w(t_{n+1})-w(t_n)}{h}=\frac{h}{2}f'(\eta),\quad t_n\leq \eta\leq t_{n+1}
 \]</div>
-<p>So we can choose higher order items.</p>
-<h3 id="taylor-method-of-order-n">Taylor method of order n<a class="headerlink" href="#taylor-method-of-order-n" title="Permanent link">&para;</a></h3>
+<p>First analyze its convergence.</p>
+<div class="admonition success">
+<p class="admonition-title">Convergence of Euler's Method</p>
+<p>Assume solution <span class="arithmatex">\(\phi(t)\in C^2[t_0,b]\)</span>, then the error of the solution <span class="arithmatex">\(w_n\)</span> acquired from Euler's method satisfies</p>
+<div class="arithmatex">\[
+\max_{a\leq t_n \leq b}|w(t_n)-w_n|\leq e^{(b-t_0)L}|e_0|+\frac{e^{(b-t_0)L}-1}{L}\tau(h)
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+\tau(h)=\frac{h}{2}\|w''\|_{\infty},\quad e_0=w(t_0)-w_0
+\]</div>
+<p>If <span class="arithmatex">\(h\rightarrow 0\)</span>, s.t.</p>
+<div class="arithmatex">\[
+|w(t_0)-w_0|\leq c_1h,\quad c_1&gt;0
+\]</div>
+<p>then <span class="arithmatex">\(\exists c&gt;0\)</span>, such that</p>
+<div class="arithmatex">\[
+\max_{t_0\leq t_n\leq b}|w(t_n)-w_n|\leq ch
+\]</div>
+</div>
+<p>Then we analyze its asymptotic stability.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of asymptotic stability</p>
+<p>We call Euler's one step method is asymptotic stable, if <span class="arithmatex">\(\exists h_0&gt;0\)</span>, <span class="arithmatex">\(\exists C&gt;0\)</span>, such that <span class="arithmatex">\(\forall h\in (0,h_0]\)</span>, </p>
+<div class="arithmatex">\[
+|z_n-w_n|\leq C\varepsilon,\quad \forall 0\leq n\leq N(h)
+\]</div>
+<p>where <span class="arithmatex">\(w_n\)</span> and <span class="arithmatex">\(z_n\)</span> denotes the solution from before disturbance(initial value <span class="arithmatex">\(w_0\)</span>) and after disturbance(initial value <span class="arithmatex">\(z_0\)</span>) using Euler's one step method.</p>
+</div>
+<p>The above shows that Euler's method is asymptotic stable.</p>
+<h3 id="implicite-eulers-method">Implicite Euler's method<a class="headerlink" href="#implicite-eulers-method" title="Permanent link">&para;</a></h3>
+<p>Implicite means we have to guess the number before iterating. Usually it is used after Explicite Euler's method to improve stability.</p>
+<div class="arithmatex">\[
+\begin{cases}
+\omega_0=\alpha, \\
+\omega_{i+1}=\omega_i+hf(t_i,\omega_{i+1}),\quad i=0,1,\cdots,n-1
+\end{cases}
+\]</div>
+<p>From Backward form of Numerical Derivative(Divided Difference) <span class="arithmatex">\(\ref{Backward}\)</span>, we can express its rounding error </p>
+<div class="arithmatex">\[
+\tau_n=\frac{w(t_{n+1})-w(t_{n})}{h}=-\frac{h}{2}f'(\eta),\quad t_n\leq \eta\leq t_{n+1}
+\]</div>
+<h3 id="modified-eulers-method">Modified Euler's Method<a class="headerlink" href="#modified-eulers-method" title="Permanent link">&para;</a></h3>
+<p>So we can choose higher order items to improve accuracy.</p>
+<p>This method is also called <strong>Tranpezoid Method</strong>.</p>
+<div class="arithmatex">\[
+w(t_{n+1})=w(t_n)+\frac{h}{2}\left[f(t_n,w(t_n))+f(t_{n+1},w(t_{n+1}))\right]
+\]</div>
+<p>We have this inspiration from tranpezoidal integration. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="modified-eulers-method-from-tranpezoidal-integration" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="modified-eulers-method-from-tranpezoidal-integration">From Tranpezoidal integration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>From integration the ODE on <span class="arithmatex">\([t_n, t_{n+1}]\)</span> we have</p>
+<div class="arithmatex">\[
+w(t_{n+1})=w(t_n)+\int_{t_n}^{t_{n+1}}f(\tau, w(\tau))d\tau
+\]</div>
+<p>Using Tranpezoidal Integration Formula with its <a href="../NA/NI/#Error-Newton-Cotes">Error</a>, we have</p>
+<div class="arithmatex">\[
+w(t_{n+1})=w(t_n)+\frac{h}{2}\left[f(t_n,w(t_n))+f(t_{n+1},w(t_{n+1}))\right]-\frac{h^3}{12}f'''(\eta_n),\quad t_n\leq \eta_n\leq t_{n+1}
+\]</div>
+<p>which means a higher accuracy for method</p>
+<div class="arithmatex">\[
+w(t_{n+1})=w(t_n)+\frac{h}{2}\left[f(t_n,w(t_n))+f(t_{n+1},w(t_{n+1}))\right]
+\]</div>
+</div>
+</div>
+</div>
+<h3 id="double-step-method">Double-step Method<a class="headerlink" href="#double-step-method" title="Permanent link">&para;</a></h3>
+<p>We have this method inspired by the center form of divided difference. </p>
+<p>According to center form of divided difference <span class="arithmatex">\(\ref{center}\)</span> we have</p>
+<div class="arithmatex">\[
+\begin{cases}
+\omega_0=\alpha,\\
+\omega_1=\omega_0+hf(t_0,\omega_0), \\
+\omega_{i+1}=\omega_{i-1}+2hf(t_i,\omega_i), \quad i=1,2,\cdots,N-1
+\end{cases}
+\]</div>
+<p>with its rounding error expressed by</p>
+<div class="arithmatex">\[
+\tau_n=\frac{w_{t_{n+1}}-w(t_n)}{h}=-\frac{h^2}{3!}f''(\eta), \quad t_n\leq \eta\leq t_{n+1}
+\]</div>
+<h2 id="taylor-method-of-order-n">Taylor method of order n<a class="headerlink" href="#taylor-method-of-order-n" title="Permanent link">&para;</a></h2>
+<p>To improve precision, we can choose more items of Taylor's expansion for the one order derivative.</p>
 <div class="arithmatex">\[
 \begin{cases}
 \omega_0=\alpha, \\
@@ -2645,38 +2918,11 @@
 T^{(n)}(t_i,\omega_i)=f(t_i,\omega_i)+\frac{h}{2}f'(t_i,\omega_i)+\cdots+\frac{h^{n-1}}{n!}f^{(n-1)}(t_i,\omega_i)
 \]</div>
 <p>Euler's method is Tarlor's method of order one.</p>
-<ul>
-<li>Implicite Euler's method</li>
-</ul>
-<div class="arithmatex">\[
-\begin{cases}
-\omega_0=\alpha, \\
-\omega_{i+1}=\omega_i+hf(t_i,\omega_{i+1}),\quad i=0,1,\cdots,n-1
-\end{cases}
-\]</div>
-<p>which is more stable.</p>
-<ul>
-<li>
-<p>Trapezoidal Method</p>
-</li>
-<li>
-<p>Double-step Method</p>
-</li>
-</ul>
-<p>use the mid point of the two points. According to numerical differential</p>
-<div class="arithmatex">\[
-y'(t_0)=\frac{1}{2h}[y(t_0+h)-y(t_0-h)]-\frac{h^3}{6}y'''(\xi)
-\]</div>
-<p>So we have</p>
-<div class="arithmatex">\[
-\begin{cases}
-\omega_0=\alpha,\\
-\omega_1=\omega_0+hf(t_0,\omega_0), \\
-\omega_{i+1}=\omega_{i-1}+2hf(t_i,\omega_i), \quad i=1,2,\cdots,N-1
-\end{cases}
-\]</div>
 <h2 id="runge-kutta-method">Runge-Kutta Method<a class="headerlink" href="#runge-kutta-method" title="Permanent link">&para;</a></h2>
-<p>Runge-Kutta method with order 4.</p>
+<p>For Taylor's method of higher order, it is trivial to calculate high order derivatives, especially when <span class="arithmatex">\(p&gt;3\)</span> and <span class="arithmatex">\(f\)</span> has a complex expression. So the following <strong>Runge-Kutta Method</strong> aims to calculate function <span class="arithmatex">\(f\)</span>'s values at different points to avoid high order derivatives, reducing calculation time.</p>
+<ul>
+<li>Runge-Kutta method with order 4.</li>
+</ul>
 <div class="arithmatex">\[
 \begin{cases}
 w_{i+1}=w_i+\frac{1}{6}(k_1+2K_2+2k_3+k_4)
