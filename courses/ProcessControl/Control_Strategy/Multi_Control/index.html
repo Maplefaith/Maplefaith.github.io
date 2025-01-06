@@ -14,7 +14,7 @@
         <link rel="prev" href="../Control_Intension/">
       
       
-        <link rel="next" href="../../../Sensing%26Detection/">
+        <link rel="next" href="../Feedforward_Control/">
       
       
       <link rel="icon" href="../../../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Selection Control - MapleBlog</title>
+        <title>Multi-Variables Control - MapleBlog</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#selection-control" class="md-skip">
+        <a href="#multi-variables-control" class="md-skip">
           Skip to content
         </a>
       
@@ -153,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Selection Control
+              Multi-Variables Control
             
           </span>
         </div>
@@ -2163,6 +2163,8 @@
       
         
       
+        
+      
     
     
       
@@ -2272,6 +2274,8 @@
       
         
       
+        
+      
     
     
       
@@ -2373,16 +2377,169 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Multi-Variables Control
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Selection Control
+    Multi-Variables Control
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#selection-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择控制 | Selection Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="选择控制 | Selection Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      高低选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      防积分饱和
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split-range-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      分程控制 | Split-range Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分程控制 | Split-range Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      双控制阀的分程组合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valve-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      阀位控制 | Valve Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-the-above-control-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of the above control strategy
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Feedforward_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedforward Control
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2391,6 +2548,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Nonlinear_Compensation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nonlinear Compensation
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2833,6 +3011,116 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#selection-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择控制 | Selection Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="选择控制 | Selection Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      高低选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      防积分饱和
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split-range-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      分程控制 | Split-range Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分程控制 | Split-range Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      双控制阀的分程组合
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      目的
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valve-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      阀位控制 | Valve Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-of-the-above-control-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review of the above control strategy
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2846,7 +3134,90 @@
                   
 
 
-<h1 id="selection-control">Selection Control<a class="headerlink" href="#selection-control" title="Permanent link">&para;</a></h1>
+<h1 id="multi-variables-control">Multi-Variables Control<a class="headerlink" href="#multi-variables-control" title="Permanent link">&para;</a></h1>
+<h2 id="selection-control">选择控制 | Selection Control<a class="headerlink" href="#selection-control" title="Permanent link">&para;</a></h2>
+<p>又叫约束控制、超驰控制 (<strong>对极限的控制</strong>)</p>
+<p>目标: 为实现软保护而设计</p>
+<p>核心点: 一个操作变量MV, 两个及以上的被控变量CV. 一个是常规CV, 要精确控制, 剩余的是辅助CV, 要控制在一定范围内以确保安全。</p>
+<h3 id="_1">高低选择器<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>根据超限时，阀门输入值的变化来确定。</p>
+<h3 id="_2">防积分饱和<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>总有一台处于开环状态。</p>
+<p>我们选择 限幅法、外反馈法、积分切除法 中的 <strong>外反馈法</strong> (RFB)。</p>
+<h3 id="_3">应用<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>(i) 被控变量的测量值的选择</p>
+<ul>
+<li>
+<p>固定床反应器的热点温度，有多个测量点，选择高者</p>
+</li>
+<li>
+<p>两台成分分析仪表，选择两者测量者的高者作为反馈</p>
+</li>
+</ul>
+<p>(ii) 变结构控制</p>
+<h2 id="split-range-control">分程控制 | Split-range Control<a class="headerlink" href="#split-range-control" title="Permanent link">&para;</a></h2>
+<p>一个控制器输出信号，控制多个阀门，不同的信号区间，对映不同的阀门被控制。不会同时控制多个阀门</p>
+<p>核心点: 一个被控变量CV, 两个及以上操作变量MV。</p>
+<h3 id="_4">双控制阀的分程组合<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>连续分程</p>
+</li>
+<li>
+<p>间隙分程: 有死区，控制器没有控制任何一个阀门</p>
+</li>
+<li>
+<p>重叠分程: 有重叠区，控制器同时控制两个阀门；100%重叠区，叫做两个阀的并联。</p>
+</li>
+</ul>
+<h3 id="_5">实现<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>使用比值器+负荷分配器</p>
+<h3 id="_6">目的<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>扩大控制阀的可调范围</strong></li>
+</ul>
+<p>涉及到一个增益突变问题。需要换算。根据图像的起点、终点，根据分程纵坐标 <span class="arithmatex">\(Q_{Amax}\)</span> 求取直线对应点的横坐标。</p>
+<ul>
+<li><strong>满足操作工艺的特殊要求</strong> (气开、气关组合)</li>
+</ul>
+<p>间歇放热反应器: 考虑初态信号、终态信号。两者增益不同，造成非线性，如果冷却部分增益是加热部分的 <span class="arithmatex">\(1/3\)</span>，则可以增加冷却部分的斜率。</p>
+<p>储氮分程控制。为避免两阀门频繁开闭，在中间设置一个间歇区 (死区)。</p>
+<h2 id="valve-control">阀位控制 | Valve Control<a class="headerlink" href="#valve-control" title="Permanent link">&para;</a></h2>
+<p>也是多个操纵变量，一个被控变量。</p>
+<p>主要是要考虑两个阀门地位的不均等。既考虑经济性、合理性 (一个操纵变量)，又考虑快速性和有效性 (另一个操纵变量)。</p>
+<ul>
+<li>
+<p>主回路选择: 选择控制品质好的，动态效果好的阀门作为主回路控制器的输出控制阀。设定值是温度指标。</p>
+</li>
+<li>
+<p>阀位控制器: 选择合理、经济的阀作为阀位控制器的控制阀。让主回路的阀门的开度成为<strong>阀位控制器的被控变量</strong> (要作为测量变送输入), 设定值是主回路阀门的设定值，一般比较小，以实现经济性。通过阀位控制器的参数整定，用宽比例度和大的积分时间，实现缓慢的控制。</p>
+</li>
+</ul>
+<h2 id="review-of-the-above-control-strategy">Review of the above control strategy<a class="headerlink" href="#review-of-the-above-control-strategy" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">控制方式</th>
+<th style="text-align: center;">选择控制</th>
+<th style="text-align: center;">分程控制</th>
+<th style="text-align: center;">阀位控制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">被控变量CV (测量变送的变量)</td>
+<td style="text-align: center;"><span class="arithmatex">\(\geq 2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">操纵变量MV (阀门个数)</td>
+<td style="text-align: center;"><span class="arithmatex">\(1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\geq 2\)</span> 地位等价</td>
+<td style="text-align: center;"><span class="arithmatex">\(\geq 2\)</span> 地位不等价</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2903,13 +3274,13 @@
         
         
           
-          <a href="../../../Sensing%26Detection/" class="md-footer__link md-footer__link--next" aria-label="Next: Sensing &amp;amp; Detection">
+          <a href="../Feedforward_Control/" class="md-footer__link md-footer__link--next" aria-label="Next: Feedforward Control">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Sensing &amp; Detection
+                Feedforward Control
               </div>
             </div>
             <div class="md-footer__button md-icon">
