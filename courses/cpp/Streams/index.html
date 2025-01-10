@@ -1052,6 +1052,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Streams
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1061,6 +1072,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kinds-of-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinds of streams
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream flags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      File streams
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2879,6 +2945,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kinds-of-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinds of streams
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stream-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stream flags
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      File streams
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2894,9 +3004,7 @@
 
 <h1 id="streams">Streams<a class="headerlink" href="#streams" title="Permanent link">&para;</a></h1>
 <p>Easy to locate in a one-demension line, which flows in a single direction.</p>
-<ul>
-<li>Kinds of streams</li>
-</ul>
+<h2 id="kinds-of-streams">Kinds of streams<a class="headerlink" href="#kinds-of-streams" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Kinds of streams</p>
 <p>(i) <strong>text streams</strong></p>
@@ -2941,9 +3049,8 @@
 <p><code>cin.putback(char)</code> pushes a single character into a stream</p>
 <p><code>char peek()</code> examines next character without reading it.</p>
 <p><code>flush</code> forces content in ostream to output.</p>
-<ul>
-<li>Manipulators modify the state of the stream.</li>
-</ul>
+<h2 id="manipulators">Manipulators<a class="headerlink" href="#manipulators" title="Permanent link">&para;</a></h2>
+<p>Manipulators modify the state of the stream.</p>
 <div slign="center">
 <table>
 <thead>
@@ -3025,7 +3132,7 @@
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><a href="#__codelineno-7-9"><span class="linenos" data-linenos=" 9 "></span></a>
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a><a href="#__codelineno-7-10"><span class="linenos" data-linenos="10 "></span></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;world&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
 </span></code></pre></div>
-<p>Stream flags.</p>
+<h2 id="stream-flags">Stream flags<a class="headerlink" href="#stream-flags" title="Permanent link">&para;</a></h2>
 <div class="language-c++ highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos="1 "></span></a><span class="c1">// set amnd reset using manipulators</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><a href="#__codelineno-8-2"><span class="linenos" data-linenos="2 "></span></a><span class="n">setiosflags</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="w"> </span><span class="c1">// set &#39;1&#39;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><a href="#__codelineno-8-3"><span class="linenos" data-linenos="3 "></span></a><span class="n">resetiosflag</span><span class="p">(</span><span class="n">flags</span><span class="p">)</span><span class="w"> </span><span class="c1">// reset &#39;0&#39;</span>
@@ -3063,9 +3170,7 @@
 </span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12"></a><a href="#__codelineno-10-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13"></a><a href="#__codelineno-10-13"><span class="linenos" data-linenos="13 "></span></a><span class="p">}</span>
 </span></code></pre></div>
-<ul>
-<li>File streams</li>
-</ul>
+<h2 id="file-streams">File streams<a class="headerlink" href="#file-streams" title="Permanent link">&para;</a></h2>
 <p>In <code>&lt;fstream&gt;</code>, <code>ifstream</code>, <code>ofstream</code> connects files to streams.</p>
 <p>Open modes specify how to create files using flags.</p>
 <table>
