@@ -7,4 +7,4 @@ Here, I will write down courses notes and travel experiences, which you may find
 ## Acknowledgements
 Copyright &copy; 2024~2025 Maplefaith All Rights Reserved. 
 
-For reprints, please contact the author at XcTu291@gmail.com.
+For reprints, please contact the author through XcTu291@gmail.com.
