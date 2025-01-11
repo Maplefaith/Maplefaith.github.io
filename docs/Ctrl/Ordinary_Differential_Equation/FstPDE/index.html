@@ -2234,6 +2234,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#expression-of-first-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expression of First Integral
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3056,6 +3065,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#expression-of-first-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expression of First Integral
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3102,7 +3120,7 @@
 <p>Consider ODEs</p>
 <div class="arithmatex">\[
 \begin{equation}
-\frac{d y_j}{x}=f_{j}(x,y_1,\cdots,y_n),\quad j=1,2\cdots, n\label{ODEs}
+\frac{d y_j}{dx}=f_{j}(x,y_1,\cdots,y_n),\quad j=1,2\cdots, n\label{ODEs}
 \end{equation}
 \]</div>
 <p>where <span class="arithmatex">\(f_j(x,y_1,\cdots,y_n) (j=1,2,\cdots,n)\in C(D)\)</span>, with <span class="arithmatex">\(D\subset \mathbb{R}^{n+1}\)</span>, and are continuously differentiable with respect to <span class="arithmatex">\(y_1,y_2,\cdots, y_n\)</span>. </p>
@@ -3132,7 +3150,7 @@ V(x,y_1(x),\cdots,y_n(x))\equiv c_0,\quad x\in J
 <div class="tabbed-block">
 <p>"<span class="arithmatex">\(\Rightarrow\)</span>". Assume <span class="arithmatex">\(\varPhi(x,y_1,\cdots,y_n)\)</span> is a first integral of ODEs <span class="arithmatex">\(\ref{ODEs}\)</span>, then <span class="arithmatex">\(\forall (x_0,y_{10},\cdots,y_{n0})\in G\)</span>, which an integral curve passes is denoted as</p>
 <div class="arithmatex">\[
-y_1(x),y_2(x),\quad y_n(x),\forall x\in J
+y_1(x),y_2(x),\cdots, y_n(x),\forall x\in J
 \]</div>
 <p>we have </p>
 <div class="arithmatex">\[
@@ -3277,7 +3295,7 @@ y_j^0=\phi^0_j(x_0,c_1^0,\cdots,c_n^0),\quad j=1,2\cdots,n
 \]</div>
 <p>Due to Uniqueness of Solution, we have </p>
 <div class="arithmatex">\[
-z_j(x)\equiv phi_j(x),\quad j=1,2\cdots,n
+z_j(x)\equiv \phi_j(x),\quad j=1,2\cdots,n
 \]</div>
 <p>which means <span class="arithmatex">\(z_j\)</span> could be expressed by <span class="arithmatex">\(\phi_j\)</span>.</p>
 </div>
@@ -3296,10 +3314,62 @@ z_j(x)\equiv phi_j(x),\quad j=1,2\cdots,n
 </div>
 </div>
 </div>
+<p>The following theorem is similar to linear space.</p>
+<div class="admonition success">
+<p class="admonition-title">Maximum number of independent integrals</p>
+<p>ODEs <span class="arithmatex">\(\ref{ODEs}\)</span> has at most <span class="arithmatex">\(n\)</span> independent first integrals.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="existence-of-first-integral-proof_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="existence-of-first-integral-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By using there independence to deduce contradiction.</p>
+</div>
+</div>
+</div>
+<h3 id="expression-of-first-integral">Expression of First Integral<a class="headerlink" href="#expression-of-first-integral" title="Permanent link">&para;</a></h3>
+<p>The following theorem states the expresstion of integrals, which is like <a href="../EIM/#integral-factor">integral factors</a>.</p>
+<div class="admonition success">
+<p class="admonition-title">Expresstion of First Integral</p>
+<p>Assume <span class="arithmatex">\(V_1=V_1(x,y_1,\cdots,y_n)\)</span>, <span class="arithmatex">\(\cdots\)</span>, <span class="arithmatex">\(V_n=V_n(x,y_1,\cdots,y_n)\)</span> are <span class="arithmatex">\(n\)</span> independent first integrals of ODEs <span class="arithmatex">\(\ref{ODEs}\)</span>. Then for an arbitrary first integral <span class="arithmatex">\(V=V(x,y_1,\cdots,y_n)\subset G\)</span>, there exists <span class="arithmatex">\(C^1\)</span> function <span class="arithmatex">\(h\)</span> such that </p>
+<div class="arithmatex">\[
+V(x,y_1,\cdots,y_n)=h(V_1,\cdots,V_n).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="expression-of-first-integral-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="expression-of-first-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Cause <span class="arithmatex">\(V_1(x,y_1,\cdots,y_n),\cdots, V_n(x,y_1,\cdots,y_n)\)</span> are independent first integrals, we have</p>
+<div class="arithmatex">\[
+J=\text{det}\frac{\partial (V_1,\cdots,V_n)}{\partial (y_1,\cdots,y_n)}\neq 0
+\]</div>
+<p>By theorem of implicite function, from ODEs <span class="arithmatex">\(\ref{ODEs}\)</span>, we could solve </p>
+<div class="arithmatex">\[
+y_j=y_j(x,V_1,\cdots,V_n),\quad j=1,2\cdots,n.
+\]</div>
+<p>For an arbitrary first integral <span class="arithmatex">\(V(x,V_1,\cdots,V_n)\)</span>, let</p>
+<div class="arithmatex">\[
+h(x,V_1,\cdots,V_n)=V(x,y_1(x,V_1,\cdots,V_n),\cdots,y_n(x,V_1,\cdots, V_n))
+\]</div>
+<p>Now we prove that <span class="arithmatex">\(h\)</span> is irrelevant with <span class="arithmatex">\(x\)</span>, i.e.</p>
+<div class="arithmatex">\[
+\frac{\partial h}{\partial x}=0.
+\]</div>
+<p>Actually, </p>
+<div class="arithmatex">\[
+\frac{\partial h}{\partial x}=\frac{\partial V}{\partial x}+\sum_{j=1}^n\frac{\partial V}{\partial y_j}\frac{\partial y_j}{\partial x}.
+\]</div>
+<p>By definition of <span class="arithmatex">\(y_j\)</span>, we have</p>
+<p>$$</p>
+<p>$$</p>
+</div>
+</div>
+</div>
 <h2 id="homogeneous-first-order-pde">Homogeneous first order PDE<a class="headerlink" href="#homogeneous-first-order-pde" title="Permanent link">&para;</a></h2>
 <p>The form of homogeneoud first order PDE can be </p>
 <div class="arithmatex">\[
-\sum_{j=1}^n A_j(x_1,x_2,\cdots,x_n)\frac{\partial u}{\partial x_j}=0
+\begin{align}
+\sum_{j=1}^n A_j(x_1,x_2,\cdots,x_n)\frac{\partial u}{\partial x_j}=0 \label{PDE}
+\end{align}
 \]</div>
 <p>where <span class="arithmatex">\(u=u(x_1,x_2,\cdots,x_n)\)</span> is unknown function, coefficient function </p>
 <div class="arithmatex">\[
@@ -3309,6 +3379,63 @@ A_j(x_1,x_2,\cdots,x_n)\in C^1,\quad j=1,2,\cdots,n,\quad \forall(x_1,x_2,\cdots
 <div class="arithmatex">\[
 \sum_{j=1}^n|A_j(x_1,x_2,\cdots,x_n)|&gt;0.
 \]</div>
+<div class="admonition info">
+<p class="admonition-title">Transformation of first order PDE</p>
+<p>If <span class="arithmatex">\(A_1(x_1,x_2,\cdots,x_n)\neq 0\)</span>, then equation <span class="arithmatex">\(\ref{PDE}\)</span> could be written as</p>
+<div class="arithmatex">\[
+\frac{\partial u}{\partial x_1}+\frac{\partial u}{\partial x_2}\frac{A_2}{A_1}+\cdots+\frac{\partial u}{\partial x_n}\frac{A_n}{A_1}=0
+\]</div>
+<p>Compared to equation <span class="arithmatex">\(\ref{Property}\)</span> we could deduce that <span class="arithmatex">\(u\)</span> is a first integral of ODEs</p>
+<div class="arithmatex">\[
+\frac{d x_j}{dx_1}=\frac{A_j}{A_1},\quad j=2,3,\cdots,n.
+\]</div>
+<p>We could transfer a PDE problem into a ODEs problem.</p>
+</div>
+<p>So here comes the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">General solution to First Order PDE</p>
+<p>We define <strong>characteristic equation</strong> of PDE <span class="arithmatex">\(\ref{PDE}\)</span></p>
+<div class="arithmatex">\[
+\begin{equation}
+\frac{dx_1}{A_1(x_1,x_2,\cdots,x_n)}=\frac{dx_2}{A_2(x_1,x_2,\cdots,x_n)}=\cdots=\frac{dx_n}{A_n(x_1,x_2,\cdots,x_n)}.\label{Characteristic}
+\end{equation}
+\]</div>
+<p>which has <span class="arithmatex">\(n-1\)</span> independent first integrals</p>
+<div class="arithmatex">\[
+\phi_j(x_1,x_2,\cdots,x_n)=c_j,\quad j=1,2,\cdots, n.
+\]</div>
+<p>Then the general solution to PDE <span class="arithmatex">\(\ref{PDE}\)</span> is</p>
+<div class="arithmatex">\[
+u=\varPsi(\phi_1(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_n(x_1,x_2,\cdots,x_n))
+\]</div>
+<p>where <span class="arithmatex">\(\varPsi\)</span> is an arbitary continuously differentiable function.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="homogeneous-first-order-pde-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="homogeneous-first-order-pde-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Assume <span class="arithmatex">\(\phi(x_1,x_2,\cdots,x_n)\)</span> is a first integral of characteristic equation <span class="arithmatex">\(\ref{Characteristic}\)</span>. Cause <span class="arithmatex">\(A_1,A_2,\cdots,A_n\)</span> do not equal zero, assume there exists a neighborhood, in which <span class="arithmatex">\(A_1(x_1,x_2,\cdots,x_n)\neq 0\)</span>. So characteristic equation <span class="arithmatex">\(\ref{Characteristic}\)</span> is equivalent to the following ODEs</p>
+<div class="arithmatex">\[
+\frac{dx_j}{dx_i}=\frac{A_j(x_1,x_2,\cdots,x_n)}{A_1(x_1,x_2,\cdots,x_n)}, \quad j=2,3,\cdots,n
+\]</div>
+<p>Thus <span class="arithmatex">\(\phi(x_1,x_2,\cdots,x_n)\)</span> is also a first integral of this ODEs. So</p>
+<div class="arithmatex">\[
+\frac{\partial\phi}{\partial x_1}+\sum_{j=2}^n\frac{A_j(x_1,x_2,\cdots,x_n)}{A_1(x_1,x_2,\cdots,x_n)}\frac{\partial \phi}{\partial x_j}=0
+\]</div>
+<p>that is,</p>
+<div class="arithmatex">\[
+\sum_{j=1}^n A_j(x_1,x_2,\cdots,x_n)\frac{\partial \phi}{\partial x_j}=0
+\]</div>
+<p>Due to <span class="arithmatex">\(\phi_1,\phi_2,\cdots,\phi_{n-1}\)</span> are <span class="arithmatex">\(n-1\)</span> independent first integrals, so for an arbitrary <span class="arithmatex">\(C^1\)</span> function <span class="arithmatex">\(\varPsi\)</span>,</p>
+<div class="arithmatex">\[
+\varPsi(\phi_1,\phi_2,\cdots,\phi_n)
+\]</div>
+<p>is also a first integral of characteristic equation <span class="arithmatex">\(\ref{Characteristic}\)</span>. By the theory of expression with first integrals, for an arbitrary first integral <span class="arithmatex">\(\psi(x_1,x_2,\cdots,x_n)\)</span>, there exists a <span class="arithmatex">\(C^1\)</span> function <span class="arithmatex">\(\varPsi_0\)</span> such that</p>
+<div class="arithmatex">\[
+\psi(x_1,x_2,\cdots,x_n)=\varPsi_0(\phi_0(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_{n-1}(x_1,x_2,\cdots,x_n)).
+\]</div>
+</div>
+</div>
+</div>
 <h2 id="quasi-linear-first-order-pde">Quasi-linear first order PDE<a class="headerlink" href="#quasi-linear-first-order-pde" title="Permanent link">&para;</a></h2>
 
 
