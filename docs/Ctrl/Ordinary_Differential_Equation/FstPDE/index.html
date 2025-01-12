@@ -2249,9 +2249,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#homogeneous-first-order-pde" class="md-nav__link">
+  <a href="#homogeneous-linear-first-order-pde" class="md-nav__link">
     <span class="md-ellipsis">
-      Homogeneous first order PDE
+      Homogeneous linear first order PDE
     </span>
   </a>
   
@@ -3080,9 +3080,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#homogeneous-first-order-pde" class="md-nav__link">
+  <a href="#homogeneous-linear-first-order-pde" class="md-nav__link">
     <span class="md-ellipsis">
-      Homogeneous first order PDE
+      Homogeneous linear first order PDE
     </span>
   </a>
   
@@ -3163,7 +3163,7 @@ y_1(x),y_2(x),\cdots, y_n(x),\forall x\in J
 <p>which holds at point <span class="arithmatex">\((x_0,y_{10},\cdots,y_{n0})\)</span>. But due to <span class="arithmatex">\((x_0,y_{10},\cdots,y_{n0})\)</span> is arbitrary, so the above equation holds forall points in <span class="arithmatex">\(G\)</span>.</p>
 <p>"<span class="arithmatex">\(\Leftarrow\)</span>". Assume equation <span class="arithmatex">\(\ref{Property}\)</span> holds, then it holds for arbitrary integral curve, i.e. denote <span class="arithmatex">\(\Gamma\in G\)</span> </p>
 <div class="arithmatex">\[
-\Gamma: y_1=\phi_1(x),y_2=\phi_2(x),cdots,y_n=\phi_n(x),\quad x\in J
+\Gamma: y_1=\phi_1(x),y_2=\phi_2(x),\cdots,y_n=\phi_n(x),\quad x\in J
 \]</div>
 <p>and equation <span class="arithmatex">\(\ref{Property}\)</span> holds for <span class="arithmatex">\(\Gamma\)</span>. That is, </p>
 <div class="arithmatex">\[
@@ -3356,15 +3356,78 @@ h(x,V_1,\cdots,V_n)=V(x,y_1(x,V_1,\cdots,V_n),\cdots,y_n(x,V_1,\cdots, V_n))
 \]</div>
 <p>Actually, </p>
 <div class="arithmatex">\[
-\frac{\partial h}{\partial x}=\frac{\partial V}{\partial x}+\sum_{j=1}^n\frac{\partial V}{\partial y_j}\frac{\partial y_j}{\partial x}.
+\begin{align}
+\frac{\partial h}{\partial x}=\frac{\partial V}{\partial x}+\sum_{j=1}^n\frac{\partial V}{\partial y_j}\frac{\partial y_j}{\partial x}. \label{h-x}
+\end{align}
 \]</div>
-<p>By definition of <span class="arithmatex">\(y_j\)</span>, we have</p>
-<p>$$</p>
-<p>$$</p>
+<p>By definition of first integral, we have</p>
+<div class="arithmatex">\[
+\frac{\partial V_j}{\partial x}+\sum_{k=1}^n \frac{\partial V_j}{\partial y_k}\frac{\partial y_k}{\partial x}=0, \quad j=1,2,\cdots,n
+\]</div>
+<p>that is, </p>
+<div class="arithmatex">\[
+\left[\begin{array}{cccc}
+\displaystyle \frac{\partial V_1}{\partial y_1} &amp; \displaystyle \frac{\partial V_1}{\partial y_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial V_1}{\partial y_n} \\
+\displaystyle \frac{\partial V_2}{\partial y_1} &amp; \displaystyle \frac{\partial V_2}{\partial y_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial V_2}{\partial y_n}\\
+\displaystyle \vdots&amp; \vdots&amp; \ddots &amp;\vdots\\
+\displaystyle \frac{\partial V_n}{\partial y_1} &amp; \displaystyle \frac{\partial V_n}{\partial y_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial V_n}{\partial y_n}
+\end{array}\right] \cdot \left[\begin{array}{c}
+\displaystyle \frac{\partial y_1}{\partial x}\\
+\displaystyle \frac{\partial y_2}{\partial x}\\ \displaystyle \vdots\\ 
+\displaystyle \frac{\partial y_n}{\partial x}
+\end{array}\right]=\left[\begin{array}{c}
+\displaystyle \frac{\partial V_1}{\partial x}\\
+\displaystyle \frac{\partial V_2}{\partial x}\\ 
+\displaystyle \vdots \\ 
+\displaystyle \frac{\partial y_n}{\partial x}\end{array}\right]
+\]</div>
+<p>By Cramer principle, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{\partial y_j}{\partial x}=\frac{1}{J}\text{det}\frac{\partial(V_1,\cdots,V_n)}{\partial (y_1,\cdots,y_{j-1},x,y_{j+1},\cdots,y_n)}\label{Cramer}
+\end{align}
+\]</div>
+<p>Substitute equation <span class="arithmatex">\(\ref{Cramer}\)</span> back into equation <span class="arithmatex">\(\ref{h-x}\)</span> and we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\partial h}{\partial x}&amp;=\frac{\partial V}{\partial x}+\sum_{j=1}^n\frac{\partial V}{\partial y_j}\frac{1}{J}\text{det}\frac{\partial(V_1,\cdots,V_n)}{\partial (y_1,\cdots,y_{k-1},x,y_{k+1},\cdots,y_n)}\\
+&amp;=\frac{1}{J}\left[ J \frac{\partial V}{\partial x}+\sum_{j=1}^n\frac{\partial V}{\partial y_j}\text{det}\frac{\partial(V_1,\cdots,V_n)}{\partial (y_1,\cdots,y_{k-1},x,y_{k+1},\cdots,y_n)}\right]\\
+&amp;=\frac{1}{J}\text{det}\frac{\partial (V,V_1,\cdots,V_n)}{\partial (x,y_1,\cdots,y_n)}
+\end{align*}
+\]</div>
+<p>While for the right side matrix, its corresponding linear system could be</p>
+<div class="arithmatex">\[
+\left[\begin{array}{ccccc}
+\displaystyle \frac{\partial V}{\partial x} &amp;
+\displaystyle \frac{\partial V}{\partial y_1} &amp; \displaystyle \frac{\partial V}{\partial y_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial V}{\partial y_n} \\
+\displaystyle \frac{\partial V_1}{\partial x} &amp;
+\displaystyle \frac{\partial V_1}{\partial y_1} &amp; \displaystyle \frac{\partial V_1}{\partial y_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial V_1}{\partial y_n} \\
+\displaystyle \frac{\partial V_2}{\partial x} &amp;
+\displaystyle \frac{\partial V_2}{\partial y_1} &amp; \displaystyle \frac{\partial V_2}{\partial y_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial V_2}{\partial y_n}\\
+\displaystyle \vdots&amp; \vdots&amp; \vdots &amp; \ddots &amp;\vdots\\
+\displaystyle \frac{\partial V_n}{\partial x} &amp;
+\displaystyle \frac{\partial V_n}{\partial y_1} &amp; \displaystyle \frac{\partial V_n}{\partial y_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial V_n}{\partial y_n}
+\end{array}\right]_{(n+1)\times(n+1)} \cdot \left[\begin{array}{c}
+1 \\
+\displaystyle \frac{\partial y_1}{\partial x}\\
+\displaystyle \frac{\partial y_2}{\partial x}\\ \displaystyle \vdots\\ 
+\displaystyle \frac{\partial y_n}{\partial x}
+\end{array}\right]_{(n+1)\times 1}=\pmb{0}
+\]</div>
+<p>which has non-zero solution (by <a href="#property-of-first-integral">property of first integral</a> for <span class="arithmatex">\(V,V_1,\cdots,V_n\)</span>), meaning its determinant equals zero.</p>
+<p>And we are done.</p>
 </div>
 </div>
 </div>
-<h2 id="homogeneous-first-order-pde">Homogeneous first order PDE<a class="headerlink" href="#homogeneous-first-order-pde" title="Permanent link">&para;</a></h2>
+<p>Note: the above conclusion holds locally. we could not guarantee the existence of first integrals in a large region.</p>
+<h2 id="homogeneous-linear-first-order-pde">Homogeneous linear first order PDE<a class="headerlink" href="#homogeneous-linear-first-order-pde" title="Permanent link">&para;</a></h2>
 <p>The form of homogeneoud first order PDE can be </p>
 <div class="arithmatex">\[
 \begin{align}
@@ -3410,7 +3473,7 @@ u=\varPsi(\phi_1(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_n(x_
 \]</div>
 <p>where <span class="arithmatex">\(\varPsi\)</span> is an arbitary continuously differentiable function.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="homogeneous-first-order-pde-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="homogeneous-first-order-pde-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="homogeneous-linear-first-order-pde-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="homogeneous-linear-first-order-pde-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Assume <span class="arithmatex">\(\phi(x_1,x_2,\cdots,x_n)\)</span> is a first integral of characteristic equation <span class="arithmatex">\(\ref{Characteristic}\)</span>. Cause <span class="arithmatex">\(A_1,A_2,\cdots,A_n\)</span> do not equal zero, assume there exists a neighborhood, in which <span class="arithmatex">\(A_1(x_1,x_2,\cdots,x_n)\neq 0\)</span>. So characteristic equation <span class="arithmatex">\(\ref{Characteristic}\)</span> is equivalent to the following ODEs</p>
@@ -3429,7 +3492,7 @@ u=\varPsi(\phi_1(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_n(x_
 <div class="arithmatex">\[
 \varPsi(\phi_1,\phi_2,\cdots,\phi_n)
 \]</div>
-<p>is also a first integral of characteristic equation <span class="arithmatex">\(\ref{Characteristic}\)</span>. By the theory of expression with first integrals, for an arbitrary first integral <span class="arithmatex">\(\psi(x_1,x_2,\cdots,x_n)\)</span>, there exists a <span class="arithmatex">\(C^1\)</span> function <span class="arithmatex">\(\varPsi_0\)</span> such that</p>
+<p>is also a first integral of characteristic equation <span class="arithmatex">\(\ref{Characteristic}\)</span>. By the theory of <a href="#expression-of-first-integral">expression with first integrals</a>, for an arbitrary first integral <span class="arithmatex">\(\psi(x_1,x_2,\cdots,x_n)\)</span>, there exists a <span class="arithmatex">\(C^1\)</span> function <span class="arithmatex">\(\varPsi_0\)</span> such that</p>
 <div class="arithmatex">\[
 \psi(x_1,x_2,\cdots,x_n)=\varPsi_0(\phi_0(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_{n-1}(x_1,x_2,\cdots,x_n)).
 \]</div>
@@ -3437,6 +3500,75 @@ u=\varPsi(\phi_1(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_n(x_
 </div>
 </div>
 <h2 id="quasi-linear-first-order-pde">Quasi-linear first order PDE<a class="headerlink" href="#quasi-linear-first-order-pde" title="Permanent link">&para;</a></h2>
+<p>We call the following PDE <strong>Quasi-linear first order PDE</strong></p>
+<div class="arithmatex">\[
+\begin{align}
+\sum_{j=1}^n A_j(x_1,\cdots,x_n,u)\frac{\partial u}{\partial x_j}=B(x_1,\cdots,x_n,u) \label{ql-PDE}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(A_1,\cdots,A_n,B\in C^1(G)\)</span>. This PDE is characterized that it is linear with respect to the partial direvative of <span class="arithmatex">\(u\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Transformation of Quasi-linear first order PDE</p>
+<p>Assume <span class="arithmatex">\(u=\phi(x_1,\cdots,x_n)\)</span> is solution to PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span>, if we let </p>
+<div class="arithmatex">\[
+\varPhi(x_1,\cdots,x_n)=\phi(x_1,\cdots,x_n)-u
+\]</div>
+<p>which follows</p>
+<div class="arithmatex">\[
+\varPhi(x_1,\cdots,x_n,u)\equiv 0 \Leftrightarrow u=\phi(x_1,\cdots,x_n)
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\frac{\partial \varPhi}{\partial x_j}=\frac{\partial \phi}{\partial x_j} (j=1,2,\cdots,n),\quad \frac{\partial \varPhi}{\partial u}=-1
+\]</div>
+<p>So <span class="arithmatex">\(\varPhi\)</span> satisfies a homogeneous first order PDE</p>
+<div class="arithmatex">\[
+\begin{align}
+\sum_{j=1}^nA_j(x_1,\cdots,x_n,u)\frac{\partial \varPhi}{\partial x_j}+B(x_1,\cdots,x_n,u)\frac{\partial \varPhi}{\partial u}=0. \label{alter-PDE}
+\end{align}
+\]</div>
+</div>
+<p>Here we transform a Quasi-linear PDE into a homogeneous PDE. Then we only have to show that the solution to PDE <span class="arithmatex">\(\ref{alter-PDE}\)</span> is also a solution to PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for Quasi-linear first order PDE</p>
+<p>Assume general solution to PDE <span class="arithmatex">\(\ref{alter-PDE}\)</span> is </p>
+<div class="arithmatex">\[
+\varPhi=\varPhi(\psi_1(x_1,\cdots,x_n,u),\cdots,\psi_n(x_1,\cdots,x_n,u))
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+\psi_j(x_1,\cdots,x_n,u)=c_j,\quad j=1,2\cdots,n
+\]</div>
+<p>are <span class="arithmatex">\(n\)</span> independent first integrals of the corresponding characteristic equations</p>
+<div class="arithmatex">\[
+\frac{dx_1}{A_1(x_1,\cdots,x_n,u)}=\cdots=\frac{dx_n}{A_1(x_1,\cdots,x_n,u)}=\frac{du}{B(x_1,\cdots,x_n,u)}
+\]</div>
+<p>with <span class="arithmatex">\(\varPhi\)</span> is a continuously differentiable function. Then the general solution to PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span> is </p>
+<div class="arithmatex">\[
+\begin{align}
+\varPhi(\psi_1(x_1,\cdots,x_n,u),\cdots,\psi_n(x_1,\cdots,x_n,u))=0 \label{solu-ql}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(\frac{\partial}{\partial u}\varPhi(x_1,\cdots,x_n,u)\neq 0\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="quasi-linear-first-order-pde-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="quasi-linear-first-order-pde-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Similar to the previoud proof, we have to show that all solution to PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span> could be expressed by formula <span class="arithmatex">\(\ref{solu-ql}\)</span>. That is, for an arbitrary solution <span class="arithmatex">\(u=f(x_1,\cdots,x_n)\)</span> of PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span>, there exists <span class="arithmatex">\(\varPhi_0\)</span> such that</p>
+<div class="arithmatex">\[
+\varPhi_0(\psi_1(x_1,\cdots,x_n,f(x_1,\cdots,x_n)),\cdots,\psi_n(x_1,\cdots,x_n,f(x_1,\cdots,x_n)))\equiv 0
+\]</div>
+<p>which is equivalent to that</p>
+<div class="arithmatex">\[
+\psi_j(x_1,\cdots,x_n,f(x_1,\cdots,x_n))\overset{\Delta}{=}\phi_j(x_1,\cdots,x_n),\quad j=1,2,\cdots,n
+\]</div>
+<p>are linearly relevant. Cause</p>
+<div class="arithmatex">\[
+\frac{\phi}{}
+\]</div>
+</div>
+</div>
+</div>
 
 
 
