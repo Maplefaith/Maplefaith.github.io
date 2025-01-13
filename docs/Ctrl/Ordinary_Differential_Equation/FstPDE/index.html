@@ -3310,7 +3310,31 @@ z_j(x)\equiv \phi_j(x),\quad j=1,2\cdots,n
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="existence-of-first-integral-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="existence-of-first-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>ni</p>
+<p>Choose a small neighborhood <span class="arithmatex">\(G_1=O_\delta(P_0)\subset G\)</span>, with a point <span class="arithmatex">\((x_0,c_1,\cdots,c_n)\)</span>, consider with initial condition </p>
+<div class="arithmatex">\[
+y_1(x_0)=c_1,\cdots,y_n(x_0)=c_n.
+\]</div>
+<p>ODEs has unique solution </p>
+<div class="arithmatex">\[
+y_1=\phi_1(x,c_1,\cdots,c_n),\cdots,y_n=\phi_n(x,c_1,\cdots,c_n).
+\]</div>
+<p>where <span class="arithmatex">\(\phi_j(x,c_1,\cdots,c_n) (j=1,2,\cdots,n)\)</span> are continuously differentiable with respect to <span class="arithmatex">\((x,c_1,\cdots,c_n)\)</span>. Using <a href="../General_Theory/Continuous_Dependence/#ODE-derivatives">Continuous Differentiable dependence of solution on intial condition</a>, we have</p>
+<div class="arithmatex">\[
+\text{det}\frac{\partial (\phi_1,\cdots,\phi_n)}{\partial(c_1,\cdots,c_n)}\Bigg|_{x=x_0}=1
+\]</div>
+<p>So there exists function group <span class="arithmatex">\(V_1=V_1(x,y_1,\cdots,y_n),\cdots,V_n(x,y_1,\cdots,y_n)\)</span> such that</p>
+<div class="arithmatex">\[
+V_1(x,y_1,\cdots,y_n)=c_1,\cdots,V_n(x,y_1,\cdots,y_n)=c_n
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\text{det}\frac{\partial(V_1,\cdots,V_n)}{\partial(y_1,\cdots,y_n)}\Bigg|_{x=x_0}=1
+\]</div>
+<p>So there exists a neighborhood <span class="arithmatex">\(G_1\subset G\)</span> in which </p>
+<div class="arithmatex">\[
+\text{det}\frac{\partial(V_1,\cdots,V_n)}{\partial(y_1,\cdots,y_n)}\neq 0
+\]</div>
+<p>meaning <span class="arithmatex">\(V_1,\cdots,V_n\)</span> are <span class="arithmatex">\(n\)</span> independent first integrals.</p>
 </div>
 </div>
 </div>
@@ -3554,7 +3578,7 @@ u=\varPsi(\phi_1(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_n(x_
 <div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="quasi-linear-first-order-pde-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="quasi-linear-first-order-pde-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Similar to the previoud proof, we have to show that all solution to PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span> could be expressed by formula <span class="arithmatex">\(\ref{solu-ql}\)</span>. That is, for an arbitrary solution <span class="arithmatex">\(u=f(x_1,\cdots,x_n)\)</span> of PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span>, there exists <span class="arithmatex">\(\varPhi_0\)</span> such that</p>
+<p>Similar to the previous proof, we have to show that all solution to PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span> could be expressed by formula <span class="arithmatex">\(\ref{solu-ql}\)</span>. That is, for an arbitrary solution <span class="arithmatex">\(u=f(x_1,\cdots,x_n)\)</span> of PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span>, there exists <span class="arithmatex">\(\varPhi_0\)</span> such that</p>
 <div class="arithmatex">\[
 \varPhi_0(\psi_1(x_1,\cdots,x_n,f(x_1,\cdots,x_n)),\cdots,\psi_n(x_1,\cdots,x_n,f(x_1,\cdots,x_n)))\equiv 0
 \]</div>
@@ -3562,9 +3586,77 @@ u=\varPsi(\phi_1(x_1,x_2,\cdots,x_n),\phi_2(x_1,x_2,\cdots,x_n),\cdots,\phi_n(x_
 <div class="arithmatex">\[
 \psi_j(x_1,\cdots,x_n,f(x_1,\cdots,x_n))\overset{\Delta}{=}\phi_j(x_1,\cdots,x_n),\quad j=1,2,\cdots,n
 \]</div>
-<p>are linearly relevant. Cause</p>
+<p>are relevant. Cause</p>
 <div class="arithmatex">\[
-\frac{\phi}{}
+\frac{\partial \phi_j}{\partial x_k}=\frac{\partial \psi_j}{\partial x_k}+\frac{\partial \psi_j}{\partial u}\frac{\partial f}{\partial x_k},\quad j,k=1,2,\cdots,n
+\]</div>
+<p>by using <span class="arithmatex">\(f(x_1,\cdots,x_n)\)</span> is solution to PDE <span class="arithmatex">\(\ref{ql-PDE}\)</span>, <span class="arithmatex">\(\psi_j(x_1,\cdots,x_n,f(x_1,\cdots,x_n))(j=1,2,\cdots,n)\)</span> is solution to PDE <span class="arithmatex">\(\ref{alter-PDE}\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=1}^nA_k(x_1,\cdots,x_n,f(x_1,\cdots,x_n))\frac{\partial \phi_j}{\partial x_k}&amp;=\sum_{k=1}^n\left[A_k\frac{\partial \psi_j}{\partial x_k}+A_k\frac{\partial \psi_j}{\partial u}\frac{\partial f}{\partial x_k}\right]\\
+&amp;=\sum_{k=1}^n \left[A_k\frac{\partial \psi_j}{\partial x_k}+\frac{\partial \psi_j}{\partial u}A_k\frac{\partial f}{\partial x_k}\right]\\
+&amp;=\sum_{k=1}^n \frac{\partial \psi_j}{\partial x_k}A_k+\frac{\partial \psi_j}{\partial u}B_k\\
+&amp;=0,\quad j=1,2,\cdots,n
+\end{align*}
+\]</div>
+<p>which means the following matrix multiplication</p>
+<div class="arithmatex">\[
+\left[\begin{array}{cccc}
+\displaystyle \frac{\partial \phi_1}{\partial x_1} &amp; \displaystyle \frac{\partial \phi_1}{\partial x_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial \phi_1}{\partial x_n} \\
+\displaystyle \frac{\partial \phi_2}{\partial x_1} &amp; \displaystyle \frac{\partial \phi_2}{\partial x_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial \phi_2}{\partial x_n}\\
+\displaystyle \vdots&amp; \vdots&amp; \ddots &amp;\vdots\\
+\displaystyle \frac{\partial \phi_n}{\partial x_1} &amp; \displaystyle \frac{\partial \phi_n}{\partial x_2} &amp;\cdots &amp; 
+\displaystyle \frac{\partial \phi_n}{\partial x_n}
+\end{array}\right] \cdot \left[\begin{array}{c}
+\displaystyle A_1\\
+\displaystyle A_2\\ \displaystyle \vdots\\ 
+\displaystyle A_n
+\end{array}\right]=\pmb{0}
+\]</div>
+<p><span class="arithmatex">\(A_1,A_2,\cdots,A_n\)</span> do not equal zeto at the same time, so </p>
+<div class="arithmatex">\[
+\text{det}\frac{\partial (\phi_1,\cdots,\phi_n)}{\partial(x_1,\cdots,x_n)}=0
+\]</div>
+<p>which means <span class="arithmatex">\(\phi_1,\cdots,\phi_n\)</span> are relevent.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p>Solve the general solution to PDE</p>
+<div class="arithmatex">\[
+xz\frac{\partial z}{\partial x}+yz\frac{\partial z}{\partial y} = -xy
+\]</div>
+<p>and its solution plane which passes curve <span class="arithmatex">\(y=x^2\)</span>, <span class="arithmatex">\(z=x^3\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="quasi-linear-first-order-pde-answer" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="quasi-linear-first-order-pde-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The corresponding characteristic equation</p>
+<div class="arithmatex">\[
+\frac{dx}{xz}=\frac{dy}{yz}=\frac{dz}{-xy}
+\]</div>
+<p>which has two independent first integrals</p>
+<div class="arithmatex">\[
+\frac{x}{y}=c_1,\quad z^2+xy=c_2
+\]</div>
+<p>so the general solution to PDE is</p>
+<div class="arithmatex">\[
+V\left(\frac{x}{y},z^2+xy\right)=0
+\]</div>
+<p>where <span class="arithmatex">\(V(\xi,eta)\)</span> is an arbitrary continuously differentiable function.</p>
+<p>From above we could solve</p>
+<div class="arithmatex">\[
+f\left(\frac{x}{y}\right)=z^2+xy
+\]</div>
+<p>substitute initial condition, we have</p>
+<div class="arithmatex">\[
+f\left(\frac{1}{x}\right)=x^6+x^3 \Rightarrow f(x)=1/x^6+1/x^3
+\]</div>
+<p>so the solution with initial condition is </p>
+<div class="arithmatex">\[
+(z^2+xy)=\left(\frac{y}{x}\right)^6+\left(\frac{y}{x}\right)^3
 \]</div>
 </div>
 </div>
