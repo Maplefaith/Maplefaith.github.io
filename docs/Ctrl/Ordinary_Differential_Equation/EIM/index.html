@@ -3283,6 +3283,44 @@ x^n[M(1, u)+N(1,u)u]dx+x^{n+1}N(1,u)du=0
 \frac{1}{x}dx + \frac{N(1,u)}{M(1,u)+uN(1,u)}du=0
 \]</div>
 <p>which is also Variable Separation Equation.</p>
+<div class="question">
+<p>Q1. Solve ODE</p>
+<div class="arithmatex">\[
+xydx+(2x^2+3y^2−20)dy=0
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="variable-separation-equation-answer" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="variable-separation-equation-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+xydx+(2x^2+3y^2−20)dy&amp;=0\\
+xdx+\frac{2x^2+3y^2−20}{y}dy&amp;=0\quad y\neq 0\\
+2xdx+\frac{2y(2x^2+3y^2−20)}{y^2}dy&amp;=0\\
+\end{align*}
+\]</div>
+<p>let <span class="arithmatex">\(u=x^2\)</span>, <span class="arithmatex">\(v=y^2\)</span>, then the above equals to </p>
+<div class="arithmatex">\[
+du+\frac{2u+3v-20}{v}dv=0
+\]</div>
+<p>so we can change it into homogeneous equation. Let <span class="arithmatex">\(\xi=u-10\)</span>, <span class="arithmatex">\(\eta=v\)</span>, then </p>
+<div class="arithmatex">\[
+d\xi+\frac{2\xi+3\eta}{\eta}d\eta=0
+\]</div>
+<p>let <span class="arithmatex">\(t=\frac{\xi}{\eta}\)</span>, then <span class="arithmatex">\(d\xi=td\eta+\eta dt\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+td\eta+\eta dt+\frac{2t+3}{1}d\eta&amp;=0\\
+\frac{dt}{3t+3}&amp;=-\frac{d\eta}{\eta}\\
+\frac{1}{3}\ln{(t+1)}&amp;=-\ln{\eta}+C\\
+|t+1|&amp;=C\frac{1}{|\eta|^3}\\
+|\xi+\eta||\eta|^2&amp;=C\\
+|x^2+y^2-20||y|^4&amp;=C
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
 <h2 id="linear-first-order-differential-equation">一阶线性微分方程 | Linear First-Order Differential Equation<a class="headerlink" href="#linear-first-order-differential-equation" title="Permanent link">&para;</a></h2>
 <p>Now we focus on a really important expression of ODE: <strong>Linear First-Order Differential Equation(LFODE)</strong>:</p>
 <div class="arithmatex">\[
@@ -3320,7 +3358,7 @@ y &amp;= \pm e^{C}\cdot e^{-\int_{x_0}^{x}p(t)dt} \nonumber \\
 <li><strong>Non-Homogeneous linear First-Order Differential Equation</strong></li>
 </ul>
 <p>we have two ways to get the answer.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="linear-first-order-differential-equation-version-1" name="__tabbed_2" type="radio" /><input id="linear-first-order-differential-equation-version-2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="linear-first-order-differential-equation-version-1">Version 1</label><label for="linear-first-order-differential-equation-version-2">Version 2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="linear-first-order-differential-equation-version-1" name="__tabbed_3" type="radio" /><input id="linear-first-order-differential-equation-version-2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="linear-first-order-differential-equation-version-1">Version 1</label><label for="linear-first-order-differential-equation-version-2">Version 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Making use of <strong>Integral Factors</strong>.</p>
@@ -3418,7 +3456,7 @@ F(x,y,y')=0
 F(x,y,p)=0,\quad F'_p(x,y,p)=0.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="singular-solution-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="singular-solution-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="singular-solution-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="singular-solution-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The first equation is easy because of singular solution is also a solution.</p>
@@ -3440,7 +3478,7 @@ F(x,y,p)=0,\quad F'_p(x,y,p)=0.
 \]</div>
 <p>then <span class="arithmatex">\(y=\phi(x)\)</span> is the singular solution of ODE.</p>
 </div>
-<p>Note: if equation <span class="arithmatex">\(\ref{F-y}\)</span> and <span class="arithmatex">\(\ref{F-pp}\)</span> does not satisfies, we still could not ensure whether <span class="arithmatex">\(\y=phi(x)\)</span> is a singular solution.</p>
+<p>Note: if equation <span class="arithmatex">\(\ref{F-y}\)</span> and <span class="arithmatex">\(\ref{F-pp}\)</span> does not satisfies, we still could not ensure whether <span class="arithmatex">\(y=\phi(x)\)</span> is a singular solution.</p>
 
 
 
