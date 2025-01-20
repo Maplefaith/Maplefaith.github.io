@@ -1,0 +1,4614 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Maplefaith">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../Lebesgue_Measure/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Preliminary - MapleBlog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.7c86dd97.min.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  Follow <strong>@ZJUSAST</strong> to know more news of science & technology
+  
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MapleBlog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Preliminary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="turn off automatic mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="turn off automatic mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Night shift"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Night shift" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Day shift"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Day shift" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Courses
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Ctrl/" class="md-tabs__link">
+          
+  
+    
+  
+  Ctrl
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../friends/" class="md-tabs__link">
+        
+  
+    
+  
+  Friends
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tag/" class="md-tabs__link">
+        
+  
+    
+  
+  Tag
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    MapleBlog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../AIML/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence & Machine Learning
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Artificial Intelligence & Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../AIML/AI/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Artificial Intelligence
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/AI/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/AI/Agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/AI/ProblemSolving/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problem Solving
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/AI/logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../AIML/ML/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/ML/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/ML/Concept_Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AIML/ML/Decision_Tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decision Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../cpp/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    C Plus Plus
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            C Plus Plus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/Elementary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/Class_Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class & Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/Inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/Dynamic_Alloc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Menory Allocation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/Exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/Streams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Streams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Data_Structure%26Algorithm/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Data Structure & Algorithm
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Data Structure & Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure%26Algorithm/outline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure%26Algorithm/AlgoAna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithm Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure%26Algorithm/sorting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sorting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The disjoint Sets Class
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data_Structure%26Algorithm/Graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Intro2Visualization/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Introduction to Visualization
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mpm/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Material Point Method
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Material Point Method
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mpm/preliminary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preliminary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Numerical_Analysis/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Numerical Analysis
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Numerical Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/MC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix Calculation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Numerical_Analysis/NA/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Numerical Approximation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7_3" id="__nav_2_7_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Numerical Approximation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solutions of Equations in One Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpolation & Polynomial Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Approximation Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/NI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numerical Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/DE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numerical Solution of Differential Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Real Analysis
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Real Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Preliminary
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Preliminary
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-operations-on-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic operations on sets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-morgan-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equalibrium-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equalibrium of Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equalibrium of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#denumerability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denumerability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topology-of-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topology of Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Topology of Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neighborhood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighborhood
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interior-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interior Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-of-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel of Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accumulation-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accumulation Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse-set-dense-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sparse Set &amp; Dense Set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration of Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#borel-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borel Set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cantor-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cantor Set
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lebesgue_Measure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lebesgue Measure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ctrl
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ctrl
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/Ordinary_Differential_Equation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ordinary Differential Equation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ordinary Differential Equation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/Preliminary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preliminary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/EIM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementary Integration Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/LODEs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System of Linear Differential Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    General Theory
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            General Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existence & Uniqueness Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contraction Mapping Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Extension_of_Solution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extension of Solution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Comparison_Theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comparison Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Continuous_Dependence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Dependence of Solution on Initial Value
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Power_Series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Method of Power Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/Lyapunov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stability Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/Qualitative_Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qualitative Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/FstPDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First Order Pratial Differential Equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Modern_Control_Theory/MCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modern Control Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/ProcessControl/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Process Control
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Process Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/PID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PID Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/ProcessControl/Control_Strategy/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Control Strategy
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_4" id="__nav_3_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Control Strategy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Cascade_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cascade Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Control_Intension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control with Intension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Multi_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-Variables Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Feedforward_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedforward Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Nonlinear_Compensation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nonlinear Compensation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/Sensing%26Detection/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Sensing & Detection
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sensing & Detection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Sensing%26Detection/Midterm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Midterm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/Travel/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Travel
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Travel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/Travel/5th_05_24/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    May Day Holiday
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/Travel/Mount_Lu/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Mount Lu
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mount Lu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/Travel/Mount_Lu/Schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Friends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-operations-on-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic operations on sets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-morgan-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      De Morgan formula
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equalibrium-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equalibrium of Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equalibrium of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#denumerability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Denumerability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topology-of-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topology of Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Topology of Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neighborhood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighborhood
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interior-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interior Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-of-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel of Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accumulation-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accumulation Point
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closed-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse-set-dense-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sparse Set &amp; Dense Set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-of-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration of Sets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration of Sets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#borel-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borel Set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cantor-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cantor Set
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sets">Sets<a class="headerlink" href="#sets" title="Permanent link">&para;</a></h1>
+<h2 id="basic-operations-on-sets">Basic operations on sets<a class="headerlink" href="#basic-operations-on-sets" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Operations on sets</p>
+<p>Let <span class="arithmatex">\( A \)</span>, <span class="arithmatex">\( B \)</span>, and <span class="arithmatex">\( C \)</span> be sets. Then the following properties hold:</p>
+<p>(i)  </p>
+<div class="arithmatex">\[
+A \cup B = B \cup A, \quad A \cap B = B \cap A
+\]</div>
+<p>(ii)  </p>
+<div class="arithmatex">\[
+(A \cup B) \cup C = A \cup (B \cup C), \quad (A \cap B) \cap C = A \cap (B \cap C)
+\]</div>
+<p>(iii)  </p>
+<div class="arithmatex">\[
+(A \cup B) \cap C = (A \cap C) \cup (B \cap C), \quad (A \cap B) \cup C = (A \cup C) \cap (B \cup C)
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="basic-operations-on-sets-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="basic-operations-on-sets-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We only prove (iii). </p>
+<div class="arithmatex">\[
+\begin{aligned}
+(A \cup B) \cap C &amp;= \{ x \mid (x \in A \cup B) \land (x \in C) \} \\
+&amp;= \{ x \mid (x \in A \lor x \in B) \land (x \in C) \} \\
+&amp;= \{ x \mid (x \in A \land x \in C) \lor (x \in B \land x \in C) \} \\
+&amp;= \{ x \mid (x \in A \cap C) \lor (x \in B \cap C) \} \\
+&amp;= (A \cap C) \cup (B \cap C)
+\end{aligned}
+\]</div>
+<p>The other part is similar:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+(A \cap B) \cup C &amp;= \{ x \mid (x \in A \cap B) \lor (x \in C) \} \\
+&amp;= \{ x \mid (x \in A \land x \in B) \lor (x \in C) \} \\
+&amp;= \{ x \mid (x \in A \lor x \in C) \land (x \in B \lor x \in C) \} \\
+&amp;= \{ x \mid (x \in A \cup C) \land (x \in B \cup C) \} \\
+&amp;= (A \cup C) \cap (B \cup C)
+\end{aligned}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="de-morgan-formula">De Morgan formula<a class="headerlink" href="#de-morgan-formula" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem of De Morgan Formula</p>
+<p>Let <span class="arithmatex">\( \{ A_\lambda : \lambda \in \Lambda \} \)</span> be a family of sets on set <span class="arithmatex">\( X \)</span>. Then:</p>
+<div class="arithmatex">\[
+\left( \bigcup_{\lambda \in \Lambda} A_\lambda \right)^c = \bigcap_{\lambda \in \Lambda} A_\lambda^c, \quad \left( \bigcap_{\lambda \in \Lambda} A_\lambda \right)^c = \bigcup_{\lambda \in \Lambda} A_\lambda^c
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="de-morgan-formula-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="de-morgan-formula-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Firstly, we prove the first part:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\forall x \in \left( \bigcup_{\lambda \in \Lambda} A_\lambda \right)^c &amp;\Leftrightarrow \forall x \in X \text{ and } x \notin \bigcup_{\lambda \in \Lambda} A_\lambda \\
+&amp;\Leftrightarrow \forall x \in X, \neg (\exists \lambda \in \Lambda, x \in A_\lambda) \quad \text{(by definition of union)} \\
+&amp;\Leftrightarrow \forall x \in X, \forall \lambda \in \Lambda, x \notin A_\lambda \\
+&amp;\Leftrightarrow \forall \lambda \in \Lambda, \forall x \in X, x \notin A_\lambda \quad \text{(change order of } \forall \text{)} \\
+&amp;\Leftrightarrow \forall \lambda \in \Lambda, x \in A_\lambda^c \quad \text{(by definition of complement)} \\
+&amp;\Leftrightarrow \forall x \in \bigcap_{\lambda \in \Lambda} A_\lambda^c \quad \text{(by definition of intersection)}
+\end{aligned}
+\]</div>
+<p>Then, we prove the second part using similar logic. The following is an incorrect proof:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\forall x \in \left( \bigcap_{\lambda \in \Lambda} A_\lambda \right)^c &amp;\Leftrightarrow \forall x \in X \text{ and } x \notin \bigcap_{\lambda \in \Lambda} A_\lambda \\
+&amp;\Leftrightarrow \forall x \in X, \neg (\forall \lambda \in \Lambda, x \in A_\lambda) \quad \text{(by definition of intersection)} \\
+&amp;\Leftrightarrow \forall x \in X, \exists \lambda \in \Lambda, x \notin A_\lambda \\
+&amp;\Leftrightarrow \exists \lambda \in \Lambda, \forall x \in X, x \notin A_\lambda \quad \text{(cannot change order!)} \\
+&amp;\Leftrightarrow \exists \lambda \in \Lambda, x \in A_\lambda^c \quad \text{(by definition of complement)} \\
+&amp;\Leftrightarrow \forall x \in \bigcup_{\lambda \in \Lambda} A_\lambda^c \quad \text{(by definition of union)}
+\end{aligned}
+\]</div>
+<p>Using the first part, we can prove the second part correctly:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\left( \bigcup_{\lambda \in \Lambda} A_\lambda \right)^c &amp;= \bigcap_{\lambda \in \Lambda} A_\lambda^c \quad \text{(the first part proved)} \\
+\Rightarrow \left( \bigcup_{\lambda \in \Lambda} A_\lambda^c \right)^c &amp;= \bigcap_{\lambda \in \Lambda} \left( A_\lambda^c \right)^c \quad \text{(substitute } A_\lambda \text{ with } A_\lambda^c \text{)} \\
+\Rightarrow \left( \bigcup_{\lambda \in \Lambda} A_\lambda^c \right)^c &amp;= \bigcap_{\lambda \in \Lambda} A_\lambda \quad \text{(use } (A^c)^c = A \text{)} \\
+\Rightarrow \left( \left( \bigcup_{\lambda \in \Lambda} A_\lambda^c \right)^c \right)^c &amp;= \left( \bigcap_{\lambda \in \Lambda} A_\lambda \right)^c \quad \text{(operate both sides with complement)} \\
+\Rightarrow \bigcup_{\lambda \in \Lambda} A_\lambda^c &amp;= \left( \bigcap_{\lambda \in \Lambda} A_\lambda \right)^c \quad \text{(exactly what we want)}
+\end{aligned}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary of Set Difference</p>
+<p>For any sets <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span>, the following holds:</p>
+<div class="arithmatex">\[
+A - B = A \cap B^c = B^c - A^c
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  Prove:</p>
+<div class="arithmatex">\[
+\bigcup_{n=1}^{\infty} A_n - \bigcup_{n=1}^{\infty} B_n \subset \bigcup_{n=1}^{\infty} (A_n - B_n)
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="de-morgan-formula-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="de-morgan-formula-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We prove the statement:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\bigcup_{n=1}^{\infty} A_n - \bigcup_{n=1}^{\infty} B_n &amp;= \left( \bigcup_{n=1}^{\infty} A_n \right) \cap \left( \bigcup_{n=1}^{\infty} B_n \right)^c \\
+&amp;= \left( \bigcup_{n=1}^{\infty} A_n \right) \cap \left( \bigcap_{n=1}^{\infty} B_n^c \right) \quad \text{(by De Morgan's formula)} \\
+&amp;= \left( A_1 \cup A_2 \cup \dots \right) \cap \left( \bigcap_{n=1}^{\infty} B_n^c \right) \\
+&amp;= \left[ A_1 \cap \left( \bigcap_{n=1}^{\infty} B_n^c \right) \right] \cup \left[ A_2 \cap \left( \bigcap_{n=1}^{\infty} B_n^c \right) \right] \cup \dots \\
+&amp;\subset \left( A_1 \cap B_1^c \right) \cup \left( A_2 \cap B_2^c \right) \cup \dots \\
+&amp;= \bigcup_{n=1}^{\infty} \left( A_n \cap B_n^c \right) \\
+&amp;= \bigcup_{n=1}^{\infty} \left( A_n - B_n \right)
+\end{aligned}
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  </p>
+<p>Assume we have a list of sets <span class="arithmatex">\( \{ A_n \}_{n \geq 1} \)</span>, let <span class="arithmatex">\( B_1 = A_1 \)</span>, and for <span class="arithmatex">\( n \geq 2 \)</span>, define:</p>
+<div class="arithmatex">\[
+B_n = A_n - \bigcup_{k=1}^{n-1} A_k
+\]</div>
+<p>Then prove:</p>
+<ol>
+<li><span class="arithmatex">\( \{ B_n \}_{n \geq 1} \)</span> are mutually disjoint.</li>
+<li><span class="arithmatex">\( \bigcup_{n=1}^{\infty} B_n = \bigcup_{n=1}^{\infty} A_n \)</span>.</li>
+</ol>
+</div>
+<h2 id="equalibrium-of-sets">Equalibrium of Sets<a class="headerlink" href="#equalibrium-of-sets" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Cantor-Bernstein Theorem</p>
+<p>If <span class="arithmatex">\( A \sim B_1 \subset B \)</span> and <span class="arithmatex">\( B \sim A_1 \subset A \)</span>, then <span class="arithmatex">\( A \sim B \)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="equalibrium-of-sets-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="equalibrium-of-sets-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>From what we already know, there exist two bijections <span class="arithmatex">\( f : A \to B_1 \)</span> and <span class="arithmatex">\( g : B \to A_1 \)</span> such that <span class="arithmatex">\( B_1 = f(A) \)</span> and <span class="arithmatex">\( A_1 = g(B) \)</span>. We aim to prove that <span class="arithmatex">\( A \sim B \)</span>.</p>
+<p>Define the following sequences of sets:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A_2 &amp;= g(B_1), &amp; B_2 &amp;= f(A_1), \\
+A_3 &amp;= g(B_2), &amp; B_3 &amp;= f(A_2), \\
+&amp;\vdots \\
+A_n &amp;= g(B_{n-1}), &amp; B_n &amp;= f(A_{n-1}).
+\end{aligned}
+\]</div>
+<p>From this construction, we observe the following properties:</p>
+<div class="arithmatex">\[
+A_n \sim A_{n+2}, \quad B_n \sim B_{n+2}.
+\]</div>
+<p>If we define <span class="arithmatex">\( A = A_0 \)</span>, then:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A_0 &amp;\sim A_2 \sim A_4 \sim \dots \sim A_{2n}, \\
+A_1 &amp;\sim A_3 \sim A_5 \sim \dots \sim A_{2n+1}.
+\end{aligned}
+\]</div>
+<p>Now, consider the decomposition of <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( A_1 \)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A &amp;= (A \setminus A_1) \cup A_1 \\
+  &amp;= (A \setminus A_1) \cup (A_1 \setminus A_2) \cup A_2 \\
+  &amp;= (A \setminus A_1) \cup (A_1 \setminus A_2) \cup (A_2 \setminus A_3) \cup A_3 \\
+  &amp;= \bigcup_{i=0}^n (A_i \setminus A_{i+1}) \cup A_{n+1} \\
+  &amp;= \left( \bigcup_{i=0}^\infty (A_i \setminus A_{i+1}) \right) \cup \left( \bigcap_{i=1}^\infty A_i \right),
+\end{aligned}
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+A_1 = \left( \bigcup_{i=1}^\infty (A_i \setminus A_{i+1}) \right) \cup \left( \bigcap_{i=1}^\infty A_i \right).
+\]</div>
+<p>Note that for all <span class="arithmatex">\( n \in \mathbb{N} \)</span>, <span class="arithmatex">\( A_{2n} \setminus A_{2n+1} \sim A_{2n+2} \setminus A_{2n+3} \)</span> (this follows from <span class="arithmatex">\( A_{2n} \sim A_{2n+2} \)</span> and <span class="arithmatex">\( A_{2n+1} \sim A_{2n+3} \)</span>).</p>
+<p>Thus:</p>
+<div class="arithmatex">\[
+\bigcup_{i=0}^\infty (A_{2i} \setminus A_{2i+1}) \sim \bigcup_{i=0}^\infty (A_{2i+2} \setminus A_{2i+3}).
+\]</div>
+<p>We can now show that:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+A_0 &amp;= (A_0 \setminus A_1) \cup (A_1 \setminus A_2) \cup (A_2 \setminus A_3) \cup \dots \cup \left( \bigcap_i A_i \right), \\
+A_1 &amp;= (A_1 \setminus A_2) \cup (A_2 \setminus A_3) \cup (A_3 \setminus A_4) \cup \dots \cup \left( \bigcap_i A_i \right).
+\end{aligned}
+\]</div>
+<p>The <span class="arithmatex">\( i \)</span>-th term in the first row is equivalent to the <span class="arithmatex">\( (i+1) \)</span>-th term in the second row, and the <span class="arithmatex">\( i \)</span>-th term in the second row is equivalent to the <span class="arithmatex">\( (i+1) \)</span>-th term in the first row. Since the final term in both rows is the same, we conclude that <span class="arithmatex">\( A = A_0 \sim A_1 \)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary of Cantor-Bernstein Theorem</p>
+<p>Assume there are three sets <span class="arithmatex">\( A_0 \)</span>, <span class="arithmatex">\( A_1 \)</span>, and <span class="arithmatex">\( A_2 \)</span> such that <span class="arithmatex">\( A_2 \subset A_1 \subset A_0 \)</span>. If <span class="arithmatex">\( A_0 \sim A_2 \)</span>, then <span class="arithmatex">\( A_0 \sim A_1 \)</span>.</p>
+</div>
+<h3 id="denumerability">Denumerability<a class="headerlink" href="#denumerability" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Denumerability</p>
+<p>A set <span class="arithmatex">\( E \)</span> is said to be <strong>denumerable</strong> if <span class="arithmatex">\( E \sim \mathbb{N} \)</span>. Moreover, we write that <span class="arithmatex">\( E \)</span> has base <span class="arithmatex">\( \aleph_0 \)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Basic Facts on Denumerable Sets</p>
+<ol>
+<li>Every <strong>infinite set</strong> has a <strong>denumerable</strong> subset.</li>
+<li>Every <strong>infinite</strong> subset of a <strong>denumerable</strong> set is <strong>denumerable</strong>.</li>
+<li>The <strong>denumerable</strong> union of <strong>denumerable</strong> sets is <strong>denumerable</strong>.</li>
+</ol>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="denumerability-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We only prove (iii).  </p>
+<p>Assume <span class="arithmatex">\( \{ A_n \}_{n \geq 1} \)</span> is a collection of mutually exclusive denumerable sets. If <span class="arithmatex">\( \bigcup_{n=1}^\infty A_n \)</span> is denumerable, then by combining the same items, we can easily obtain a denumerable set.  </p>
+<p>For each <span class="arithmatex">\( n \)</span>, the denumerable set <span class="arithmatex">\( A_n \)</span> can be written as:</p>
+<div class="arithmatex">\[
+A_n = \{ a_1^{(n)}, a_2^{(n)}, \dots \}, \quad n = 1, 2, \dots
+\]</div>
+<p>Define a new collection of sets <span class="arithmatex">\( \{ B_m \}_{m \geq 1} \)</span> as:</p>
+<div class="arithmatex">\[
+B_m = \{ a_1^{(m)}, a_2^{(m-1)}, \dots, a_m^{(1)} \}, \quad m = 1, 2, \dots
+\]</div>
+<p>We observe that:</p>
+<div class="arithmatex">\[
+\bigcup_{m=1}^\infty B_m = \bigcup_{n=1}^\infty A_n
+\]</div>
+<p>Since <span class="arithmatex">\( \bigcup_{m=1}^\infty B_m \)</span> is a denumerable union of finite sets, it is denumerable. Therefore, <span class="arithmatex">\( \bigcup_{n=1}^\infty A_n \)</span> is also denumerable.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p><span class="arithmatex">\( \mathbb{Q} \)</span> is denumerable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="denumerability-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Define <span class="arithmatex">\( A_n = \{ 1/n, 2/n, \dots \} \)</span>, which is denumerable. Then:</p>
+<div class="arithmatex">\[
+\mathbb{Q}^+ = \bigcup_{n=1}^\infty A_n
+\]</div>
+<p>is denumerable (by Theorem (iii)). Similarly, <span class="arithmatex">\( \mathbb{Q}^- \)</span> is also denumerable. Thus:</p>
+<div class="arithmatex">\[
+\mathbb{Q} = \mathbb{Q}^+ \cup \{ 0 \} \cup \mathbb{Q}^-
+\]</div>
+<p>is denumerable.</p>
+</div>
+</div>
+</div>
+<p><a id="exam-denumerable-open-set"></a></p>
+<div class="question">
+<p><strong>Example</strong>.  Prove: The set of mutually exclusive open intervals is denumerable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="denumerability-proof_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\( \{ I_\lambda \}_{\lambda \in \Lambda} \subset \mathbb{R} \)</span> be a collection of mutually exclusive open intervals. For each <span class="arithmatex">\( \lambda \in \Lambda \)</span>, choose a rational number <span class="arithmatex">\( r_\lambda \in I_\lambda \)</span> and define:</p>
+<div class="arithmatex">\[
+A = \{ r_\lambda : \lambda \in \Lambda \}
+\]</div>
+<p>Then <span class="arithmatex">\( \{ I_\lambda \}_{\lambda \in \Lambda} \sim A \)</span>. Since <span class="arithmatex">\( A \)</span> is a subset of <span class="arithmatex">\( \mathbb{Q} \)</span>, which is denumerable, <span class="arithmatex">\( \{ I_\lambda \}_{\lambda \in \Lambda} \)</span> is also denumerable.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  Some facts about functions on <span class="arithmatex">\( \mathbb{R} \)</span>:</p>
+<ol>
+<li>Prove: The discontinuity points of a monotonous function on <span class="arithmatex">\( \mathbb{R} \)</span> are at most denumerable.</li>
+<li>Prove: The <strong>first case</strong> discontinuity points of a real function on <span class="arithmatex">\( \mathbb{R} \)</span> are at most denumerable.</li>
+<li>Let <span class="arithmatex">\( f \)</span> be a real function on <span class="arithmatex">\( \mathbb{R} \)</span>. If there exists <span class="arithmatex">\( M &gt; 0 \)</span> such that for any finite set of distinct points <span class="arithmatex">\( x_1, x_2, \dots, x_n \)</span>, <span class="arithmatex">\( \left| \sum_{k=1}^n f(x_k) \right| \leq M \)</span>, prove: <span class="arithmatex">\( \{ x : f(x) \neq 0 \} \)</span> is at most denumerable.</li>
+</ol>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  Some facts about sets:</p>
+<ol>
+<li>Let <span class="arithmatex">\( E \subset \mathbb{R}^3 \)</span>. If for any distinct <span class="arithmatex">\( x_1, x_2 \in E \)</span>, the distance <span class="arithmatex">\( d(x_1, x_2) \in \mathbb{Q} \)</span>, prove: <span class="arithmatex">\( E \)</span> is at most denumerable.</li>
+<li>Let <span class="arithmatex">\( A \subset \mathbb{R} \)</span> be a non-denumerable set. Prove: There exists <span class="arithmatex">\( x \in A \)</span> such that for any <span class="arithmatex">\( \delta &gt; 0 \)</span>, the neighborhood <span class="arithmatex">\( V(x, \delta) \cap A \neq \varnothing \)</span>, and the set of all such <span class="arithmatex">\( x \)</span> is also non-denumerable.</li>
+</ol>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  Fact about <strong>isolated points</strong>:  </p>
+<p>Prove: If <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span>, then the number of isolated points in <span class="arithmatex">\( E \)</span> is denumerable.</p>
+</div>
+<h3 id="continuous-base">Continuous Base<a class="headerlink" href="#continuous-base" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Continuous Base</p>
+<p>A set <span class="arithmatex">\( E \)</span> is said to have a <strong>continuous base</strong> if <span class="arithmatex">\( E \sim [0, 1] \)</span>. Moreover, we write that <span class="arithmatex">\( E \)</span> has base <span class="arithmatex">\( \aleph \)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p><span class="arithmatex">\( \mathbb{R} \)</span> has a continuous base.</p>
+</div>
+<h2 id="topology-of-set">Topology of Set<a class="headerlink" href="#topology-of-set" title="Permanent link">&para;</a></h2>
+<h3 id="neighborhood">Neighborhood<a class="headerlink" href="#neighborhood" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Neighbourhood</p>
+<p>(i) The <span class="arithmatex">\( \varepsilon \)</span> <strong>neighbourhood</strong> of <span class="arithmatex">\( \pmb{x} \in \mathbb{R}^n \)</span> is defined by:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \varepsilon) = \{ \pmb{y} \in \mathbb{R}^n : d(\pmb{x}, \pmb{y}) &lt; \varepsilon \}
+\]</div>
+<p>(ii) A set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> is called a <strong>neighbourhood</strong> of <span class="arithmatex">\( \pmb{x} \in \mathbb{R}^n \)</span> if there exists <span class="arithmatex">\( \varepsilon &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \varepsilon) \subset E
+\]</div>
+</div>
+<h3 id="interior-point">Interior Point<a class="headerlink" href="#interior-point" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Interior Point</p>
+<p>A point <span class="arithmatex">\( \pmb{x} \in \mathbb{R}^n \)</span> is an <strong>interior point</strong> of a set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> if there exists <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \delta) \subset E
+\]</div>
+</div>
+<p>Pay attention to the fact that interior points of <span class="arithmatex">\( E \)</span> are definitely in <span class="arithmatex">\( E \)</span>.</p>
+<p>We can also define <strong>outer point</strong> of a set. That is, there exists <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \delta) \subset E^c \quad \text{(or equivalently, } V(\pmb{x}, \delta) \cap E = \varnothing \text{)}
+\]</div>
+<p>And we can define the <strong>boundary point</strong> of a set. That is, for all <span class="arithmatex">\( \delta &gt; 0 \)</span>:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \delta) \cap E \neq \varnothing \quad \text{and} \quad V(\pmb{x}, \delta) \cap E^c \neq \varnothing
+\]</div>
+<p><a id="cor-interior-neighbourhood"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary of Interior Point and Neighbourhood</p>
+<p>Assume <span class="arithmatex">\( \pmb{x} \in \mathbb{R}^n \)</span> and <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span>, then:</p>
+<div class="arithmatex">\[
+\pmb{x} \text{ is an interior point of } E \iff E \text{ is a neighbourhood of } \pmb{x}.
+\]</div>
+</div>
+<p><a id="cor-Vxe-interior"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary of Neighbourhood Interior Points</p>
+<p>The set <span class="arithmatex">\( V(\pmb{x}, \varepsilon) \)</span> is a neighbourhood of all its points. That is:</p>
+<div class="arithmatex">\[
+\forall \pmb{y} \in V(\pmb{x}, \varepsilon), \pmb{y} \text{ is an interior point of } V(\pmb{x}, \varepsilon).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="interior-point-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="interior-point-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For any <span class="arithmatex">\( \pmb{y} \in V(\pmb{x}, \varepsilon) \)</span>, we have <span class="arithmatex">\( d(\pmb{y}, \pmb{x}) &lt; \varepsilon \)</span>. Choose <span class="arithmatex">\( \delta = \varepsilon - d(\pmb{y}, \pmb{x}) \)</span>. Then:</p>
+<div class="arithmatex">\[
+V(\pmb{y}, \delta) \subset V(\pmb{x}, \varepsilon)
+\]</div>
+<p>because for any <span class="arithmatex">\( \pmb{z} \in V(\pmb{y}, \delta) \)</span>:</p>
+<div class="arithmatex">\[
+d(\pmb{z}, \pmb{x}) \leq d(\pmb{z}, \pmb{y}) + d(\pmb{y}, \pmb{x}) &lt; \delta + d(\pmb{y}, \pmb{x}) = \varepsilon
+\]</div>
+<p>which implies <span class="arithmatex">\( \pmb{z} \in V(\pmb{x}, \varepsilon) \)</span>.</p>
+<p>Therefore, for any point <span class="arithmatex">\( \pmb{y} \in V(\pmb{x}, \varepsilon) \)</span>, <span class="arithmatex">\( V(\pmb{x}, \varepsilon) \)</span> is a neighbourhood of <span class="arithmatex">\( \pmb{y} \)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="kernel-of-set">Kernel of Set<a class="headerlink" href="#kernel-of-set" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Kernel of Set</p>
+<p>The <strong>kernel</strong> of a set <span class="arithmatex">\( E \)</span> is a set made up of all its interior points, denoted as <span class="arithmatex">\( E^o \)</span>. Obviously:</p>
+<div class="arithmatex">\[
+E^o \subset E
+\]</div>
+<p>Correspondingly, the set of all outer points of <span class="arithmatex">\( E \)</span> can be denoted as <span class="arithmatex">\( (E^c)^o \)</span>.</p>
+</div>
+<h3 id="open-set">Open Set<a class="headerlink" href="#open-set" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Open Set</p>
+<p>A set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> is an <strong>open set</strong> if:</p>
+<div class="arithmatex">\[
+\forall \pmb{x} \in E, \pmb{x} \text{ is an interior point of } E.
+\]</div>
+<p>By <a href="#cor-interior-neighbourhood">Corollary of Interior Point and Neighbourhood</a>, we can have another equivalent statement:</p>
+<div class="arithmatex">\[
+\forall \pmb{x} \in E, E \text{ is the neighbourhood of } \pmb{x}.
+\]</div>
+<p>Specifically, we define <span class="arithmatex">\( \varnothing \)</span> as an open set.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary of Open Sets</p>
+<p>(i) <span class="arithmatex">\( V(\pmb{x}, \varepsilon) \)</span> is an <strong>open set</strong>.<br />
+(ii) <span class="arithmatex">\( \mathbb{R}^n \)</span> is an <strong>open set</strong>.<br />
+(iii) <span class="arithmatex">\( E^o \)</span> is an <strong>open set</strong>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="open-set-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="open-set-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We only prove (iii).  </p>
+<p>For any <span class="arithmatex">\( \pmb{x} \in E^o \)</span>, there exists <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \delta) \subset E
+\]</div>
+<p>We aim to prove that <span class="arithmatex">\( \pmb{x} \)</span> is an interior point of <span class="arithmatex">\( E^o \)</span>, that is:</p>
+<div class="arithmatex">\[
+\forall \pmb{x} \in E^o, \exists \delta &gt; 0, V(\pmb{x}, \delta) \subset E^o
+\]</div>
+<p>Note that by <a href="#cor-interior-neighbourhood">Corollary of Interior Point and Neighbourhood</a>, for any <span class="arithmatex">\( \pmb{y} \in V(\pmb{x}, \delta) \)</span>, there exists <span class="arithmatex">\( \zeta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(\pmb{y}, \zeta) \subset V(\pmb{x}, \delta)
+\]</div>
+<p>By the definition of <span class="arithmatex">\( E^o \)</span>, we have:</p>
+<div class="arithmatex">\[
+V(\pmb{y}, \zeta) \subset E
+\]</div>
+<p>This implies that <span class="arithmatex">\( \pmb{y} \)</span> is an interior point of <span class="arithmatex">\( E \)</span>. Therefore:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \delta) \subset E^o
+\]</div>
+<p>Thus, <span class="arithmatex">\( E^o \)</span> is an open set.</p>
+</div>
+</div>
+</div>
+<p><a id="theo-properties-open-set"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Properties of Open Sets</p>
+<p>(i) <strong>Infinite</strong> union of open sets is an open set.<br />
+(ii) <strong>Finite</strong> intersection of open sets is an open set.</p>
+</div>
+<h3 id="accumulation-point">Accumulation Point<a class="headerlink" href="#accumulation-point" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Accumulation Point, Derived Set, and Closure of a Set</p>
+<p>A point <span class="arithmatex">\( \pmb{x} \in \mathbb{R}^n \)</span> is an <strong>accumulation point</strong> of a set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> if:</p>
+<div class="arithmatex">\[
+\forall \varepsilon &gt; 0, \quad \overline{V}(\pmb{x}, \varepsilon) \cap E \neq \varnothing
+\]</div>
+<p>The <strong>Derived Set</strong> of <span class="arithmatex">\( E \)</span> is defined as the set composed of all accumulation points of <span class="arithmatex">\( E \)</span>, denoted as <span class="arithmatex">\( E' \)</span>.</p>
+<p>The <strong>Closure</strong> of <span class="arithmatex">\( E \)</span> is the union of <span class="arithmatex">\( E \)</span> and its derived set, denoted as:</p>
+<div class="arithmatex">\[
+\overline{E} = E \cup E'
+\]</div>
+<p>Obviously, <span class="arithmatex">\( E \subset \overline{E} \)</span>.</p>
+</div>
+<p>Regularly, the points of <span class="arithmatex">\( E \setminus E' \)</span> are called <strong>isolated points</strong>. That is:</p>
+<div class="arithmatex">\[
+\exists \varepsilon &gt; 0, \quad \overline{V}(\pmb{x}, \varepsilon) \cap E = \varnothing
+\]</div>
+<p>Pay attention to the fact that accumulation points of <span class="arithmatex">\( E \)</span> are not necessarily in <span class="arithmatex">\( E \)</span>.</p>
+<p>Obviously, the interior points of <span class="arithmatex">\( E \)</span> must be accumulation points of <span class="arithmatex">\( E \)</span>. Therefore, every point of an open set <span class="arithmatex">\( E \)</span> must be an accumulation point of <span class="arithmatex">\( E \)</span>.</p>
+<div class="question">
+<p><strong>Example</strong>.  Prove:</p>
+<p>A point <span class="arithmatex">\( \pmb{x} \in \mathbb{R}^n \)</span> is an accumulation point of a set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span>, or equivalently, <span class="arithmatex">\( \pmb{x} \in E' \)</span>, if and only if there exists a sequence <span class="arithmatex">\( \{ \pmb{x}_k \} \subset E \)</span> with <span class="arithmatex">\( \pmb{x}_k \neq \pmb{x} \)</span> such that:</p>
+<div class="arithmatex">\[
+\lim_{k \to \infty} \pmb{x}_k = \pmb{x}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Facts about Kernel, Derived Set, and Closure</p>
+<p>Let <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> be subsets of <span class="arithmatex">\( \mathbb{R}^n \)</span>. Then:</p>
+<p>(i) If <span class="arithmatex">\( A \subset B \)</span>, then:</p>
+<div class="arithmatex">\[
+A' \subset B', \quad A^o \subset B^o, \quad \overline{A} \subset \overline{B}
+\]</div>
+<p>(ii) The following hold:</p>
+<div class="arithmatex">\[
+(A \cup B)' = A' \cup B', \quad \overline{A \cup B} = \overline{A} \cup \overline{B}
+\]</div>
+<p>but:</p>
+<div class="arithmatex">\[
+(A \cup B)^o \supset A^o \cup B^o
+\]</div>
+<p>(iii) The following hold:</p>
+<div class="arithmatex">\[
+(A \cap B)^o = A^o \cap B^o
+\]</div>
+<p>but:</p>
+<div class="arithmatex">\[
+(A \cap B)' \subset A' \cap B', \quad \overline{A \cap B} \subset \overline{A} \cap \overline{B}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="accumulation-point-proof-for-i" name="__tabbed_10" type="radio" /><input id="accumulation-point-proof-for-ii" name="__tabbed_10" type="radio" /><input id="accumulation-point-proof-for-iii" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="accumulation-point-proof-for-i">Proof for (i)</label><label for="accumulation-point-proof-for-ii">Proof for (ii)</label><label for="accumulation-point-proof-for-iii">Proof for (iii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) If <span class="arithmatex">\( A \subset B \)</span>, then:</p>
+<ul>
+<li>
+<p>For any <span class="arithmatex">\( \pmb{x} \in A^o \)</span>, there exists <span class="arithmatex">\( \delta &gt; 0 \)</span> such that <span class="arithmatex">\( V(\pmb{x}, \delta) \subset A \subset B \)</span>, which implies <span class="arithmatex">\( \pmb{x} \in B^o \)</span>.</p>
+</li>
+<li>
+<p>For any <span class="arithmatex">\( \pmb{x} \in A' \)</span>, for all <span class="arithmatex">\( \delta &gt; 0 \)</span>, <span class="arithmatex">\( \overline{V}(\pmb{x}, \delta) \cap A \neq \varnothing \)</span>, which implies <span class="arithmatex">\( \overline{V}(\pmb{x}, \delta) \cap B \neq \varnothing \)</span>, so <span class="arithmatex">\( \pmb{x} \in B' \)</span>.</p>
+</li>
+<li>
+<p>With <span class="arithmatex">\( A' \subset B' \)</span>, we have:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\overline{A} = A \cup A' \subset B \cup B' = \overline{B}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>(ii) It is easy to see that:</p>
+<ul>
+<li>Since <span class="arithmatex">\( A \subset A \cup B \)</span> and <span class="arithmatex">\( B \subset A \cup B \)</span>, we have <span class="arithmatex">\( A' \subset (A \cup B)' \)</span> and <span class="arithmatex">\( B' \subset (A \cup B)' \)</span>, so:</li>
+</ul>
+<div class="arithmatex">\[
+A' \cup B' \subset (A \cup B)'
+\]</div>
+<ul>
+<li>Similarly:</li>
+</ul>
+<div class="arithmatex">\[
+\overline{A \cup B} \supset \overline{A} \cup \overline{B}, \quad (A \cup B)^o \supset A^o \cup B^o
+\]</div>
+<ul>
+<li>To prove <span class="arithmatex">\( (A \cup B)' = A' \cup B' \)</span>, note that for any <span class="arithmatex">\( \pmb{x} \in (A \cup B)' \)</span>, <span class="arithmatex">\( \pmb{x} \)</span> is an accumulation point of either <span class="arithmatex">\( A \)</span> or <span class="arithmatex">\( B \)</span>. If <span class="arithmatex">\( \pmb{x} \notin A' \cup B' \)</span>, then <span class="arithmatex">\( \pmb{x} \in A'^c \cap B'^c \)</span>, which contradicts the definition of accumulation points. Thus:</li>
+</ul>
+<div class="arithmatex">\[
+(A \cup B)' = A' \cup B'
+\]</div>
+<ul>
+<li>Using this result:</li>
+</ul>
+<div class="arithmatex">\[
+\overline{A} \cup \overline{B} = A \cup A' \cup B \cup B' = (A \cup B) \cup (A' \cup B') = (A \cup B) \cup (A \cup B)' = \overline{A \cup B}
+\]</div>
+<ul>
+<li>For the opposite example, consider <span class="arithmatex">\( A = (0, 1] \)</span> and <span class="arithmatex">\( B = (1, 2] \)</span>. Then:</li>
+</ul>
+<div class="arithmatex">\[
+A^o = (0, 1), \quad B^o = (1, 2), \quad (A \cup B)^o = (0, 2) \neq (0, 1) \cup (1, 2) = A^o \cup B^o
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>(iii) Since <span class="arithmatex">\( A \cap B \subset A \)</span> and <span class="arithmatex">\( A \cap B \subset B \)</span>, we have:</p>
+<div class="arithmatex">\[
+(A \cap B)^o \subset A^o \cap B^o, \quad (A \cap B)' \subset A' \cap B', \quad \overline{A \cap B} \subset \overline{A} \cap \overline{B}
+\]</div>
+<ul>
+<li>To prove <span class="arithmatex">\( (A \cap B)^o = A^o \cap B^o \)</span>, note that for any <span class="arithmatex">\( \pmb{x} \in A^o \cap B^o \)</span>, there exist <span class="arithmatex">\( \delta_1, \delta_2 &gt; 0 \)</span> such that <span class="arithmatex">\( V(\pmb{x}, \delta_1) \subset A \)</span> and <span class="arithmatex">\( V(\pmb{x}, \delta_2) \subset B \)</span>. Let <span class="arithmatex">\( \delta = \min\{\delta_1, \delta_2\} \)</span>, then:</li>
+</ul>
+<div class="arithmatex">\[
+V(\pmb{x}, \delta) \subset A \cap B
+\]</div>
+<p>which implies <span class="arithmatex">\( \pmb{x} \in (A \cap B)^o \)</span>.</p>
+<ul>
+<li>For the last two statements, consider <span class="arithmatex">\( A = \mathbb{Q} \)</span> and <span class="arithmatex">\( B = \mathbb{Q}^c \)</span>. Then:</li>
+</ul>
+<div class="arithmatex">\[
+A' \cap B' = \mathbb{R} \neq \varnothing = (A \cap B)', \quad \overline{A} \cap \overline{B} = \mathbb{R} \neq \varnothing = \overline{A \cap B}
+\]</div>
+</div>
+</div>
+</div>
+<h3 id="closed-set">Closed Set<a class="headerlink" href="#closed-set" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Closed Set</p>
+<p>Assume a set <span class="arithmatex">\( F \subset \mathbb{R}^n \)</span>. If <span class="arithmatex">\( F^c \)</span> is an open set, then <span class="arithmatex">\( F \)</span> is a <strong>closed set</strong>.</p>
+</div>
+<p>Note that every point of an closed set <span class="arithmatex">\(E\)</span> may not be the accumulation point of <span class="arithmatex">\(E\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Properties of Closed Sets</p>
+<p>(i) <strong>Infinite</strong> intersection of closed sets is a closed set.<br />
+(ii) <strong>Finite</strong> union of closed sets is a closed set.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="closed-set-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The proof follows directly from De Morgan's formula and the properties of open sets (<a href="#de-morgan-formula">De Morgan Formula</a> and <a href="#theo-properties-open-set">Theorem of Properties of Open Sets</a>).</p>
+<ul>
+<li>For (i):  </li>
+</ul>
+<p>Let <span class="arithmatex">\( \{ F_\lambda \}_{\lambda \in \Lambda} \)</span> be a collection of closed sets. Then:</p>
+<div class="arithmatex">\[
+\left( \bigcap_{\lambda \in \Lambda} F_\lambda \right)^c = \bigcup_{\lambda \in \Lambda} F_\lambda^c
+\]</div>
+<p>Since each <span class="arithmatex">\( F_\lambda^c \)</span> is open, their union is also open. Therefore, <span class="arithmatex">\( \bigcap_{\lambda \in \Lambda} F_\lambda \)</span> is closed.</p>
+<ul>
+<li>For (ii):  </li>
+</ul>
+<p>Let <span class="arithmatex">\( F_1, F_2, \dots, F_n \)</span> be closed sets. Then:</p>
+<div class="arithmatex">\[
+\left( \bigcup_{k=1}^n F_k \right)^c = \bigcap_{k=1}^n F_k^c
+\]</div>
+<p>Since each <span class="arithmatex">\( F_k^c \)</span> is open, their finite intersection is also open. Therefore, <span class="arithmatex">\( \bigcup_{k=1}^n F_k \)</span> is closed.</p>
+</div>
+</div>
+</div>
+<p><a id="theo-closed-set-derived-set-condition"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Closed Set and Derived Set Condition</p>
+<p>A set <span class="arithmatex">\( E \)</span> is a closed set if and only if <span class="arithmatex">\( E' \subset E \)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="closed-set-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>"<span class="arithmatex">\(\Rightarrow\)</span>":  </li>
+</ul>
+<p>If <span class="arithmatex">\( E \)</span> is a closed set, then <span class="arithmatex">\( E^c \)</span> is an open set. That is:</p>
+<div class="arithmatex">\[
+\forall \pmb{x} \in E', \forall \varepsilon &gt; 0, \quad \overline{V}(\pmb{x}, \varepsilon) \cap E \neq \varnothing
+\]</div>
+<p>If <span class="arithmatex">\( \pmb{x} \in E^c \)</span>, then <span class="arithmatex">\( \pmb{x} \)</span> is an interior point of <span class="arithmatex">\( E^c \)</span>, which means:</p>
+<div class="arithmatex">\[
+\exists \delta &gt; 0, \quad V(\pmb{x}, \delta) \subset E^c \quad \Rightarrow \quad V(\pmb{x}, \delta) \cap E = \varnothing
+\]</div>
+<p>This contradicts the definition of accumulation points. Therefore, <span class="arithmatex">\( \pmb{x} \notin E^c \)</span>, which implies <span class="arithmatex">\( \pmb{x} \in E \)</span>. Thus:</p>
+<div class="arithmatex">\[
+E' \subset E
+\]</div>
+<ul>
+<li>"<span class="arithmatex">\(\Leftarrow\)</span>":  </li>
+</ul>
+<p>If <span class="arithmatex">\( E' \subset E \)</span>, then <span class="arithmatex">\( E'^c \supset E^c \)</span>. For any <span class="arithmatex">\( \pmb{x} \in E^c \)</span>, <span class="arithmatex">\( \pmb{x} \in E'^c \)</span>, which means <span class="arithmatex">\( \pmb{x} \)</span> is not an accumulation point of <span class="arithmatex">\( E \)</span>. That is:</p>
+<div class="arithmatex">\[
+\exists \delta &gt; 0, \quad \overline{V}(\pmb{x}, \delta) \cap E = \varnothing
+\]</div>
+<p>This implies:</p>
+<div class="arithmatex">\[
+\overline{V}(\pmb{x}, \delta) \subset E^c
+\]</div>
+<p>Therefore, <span class="arithmatex">\( E^c \)</span> is an open set, and <span class="arithmatex">\( E \)</span> is a closed set.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>If <span class="arithmatex">\( E \)</span> is a closed set, then:</p>
+<div class="arithmatex">\[
+\overline{E} = E
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Derived Set Closure</p>
+<p>The <strong>derived set</strong> of any set is a closed set.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="closed-set-proof-version-one" name="__tabbed_13" type="radio" /><input id="closed-set-proof-version-two" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof-version-one">Proof Version One</label><label for="closed-set-proof-version-two">Proof Version Two</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Given a set <span class="arithmatex">\( E \)</span>, we prove that <span class="arithmatex">\( E'^c \)</span> is an open set.  </p>
+<p>For any <span class="arithmatex">\( \pmb{x} \in E'^c \)</span>, <span class="arithmatex">\( \pmb{x} \notin E' \)</span>, which means <span class="arithmatex">\( \pmb{x} \)</span> is not an accumulation point of <span class="arithmatex">\( E \)</span>. That is:</p>
+<div class="arithmatex">\[
+\exists \delta &gt; 0, \quad \overline{V}(\pmb{x}, \delta) \cap E = \varnothing \quad \Rightarrow \quad \overline{V}(\pmb{x}, \delta) \subset E^c
+\]</div>
+<p>With the same logic as <a href="#cor-Vxe-interior">Corollary of Neighbourhood Interior Points</a>, we can show that for any <span class="arithmatex">\( \pmb{y} \in \overline{V}(\pmb{x}, \delta) \)</span>, there exists <span class="arithmatex">\( \zeta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(\pmb{y}, \zeta) \subset V(\pmb{x}, \delta) \subset E^c
+\]</div>
+<p>This means that every point in <span class="arithmatex">\( \overline{V}(\pmb{x}, \delta) \)</span> is not an accumulation point of <span class="arithmatex">\( E \)</span>. By <a href="#accumulation-point">Definition of accumulation point</a>:</p>
+<div class="arithmatex">\[
+\overline{V}(\pmb{x}, \delta) \subset E'^c \quad \Rightarrow \quad V(\pmb{x}, \delta) \subset E'^c
+\]</div>
+<p>Thus, <span class="arithmatex">\( \pmb{x} \)</span> is an interior point of <span class="arithmatex">\( E'^c \)</span>, so <span class="arithmatex">\( E'^c \)</span> is an open set, and <span class="arithmatex">\( E' \)</span> is a closed set.</p>
+</div>
+<div class="tabbed-block">
+<p>Now we use <a href="#theo-closed-set-derived-set-condition">Theorem of Closed Set and Derived Set Condition</a> to show that <span class="arithmatex">\( (E')' \subset E' \)</span>.  </p>
+<p>Assume <span class="arithmatex">\( E' \neq \varnothing \)</span>, and we aim to show that for any <span class="arithmatex">\( \pmb{x} \in (E')' \)</span>, for all <span class="arithmatex">\( \delta &gt; 0 \)</span>:</p>
+<div class="arithmatex">\[
+\overline{V}(\pmb{x}, \delta) \cap E' \neq \varnothing \quad \Rightarrow \quad \overline{V}(\pmb{x}, \delta) \cap E \neq \varnothing
+\]</div>
+<p>For any <span class="arithmatex">\( \pmb{y} \in \overline{V}(\pmb{x}, \delta) \cap E' \)</span>, let <span class="arithmatex">\( \delta &gt; \zeta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+\overline{V}(\pmb{y}, \zeta) \cap E \neq \varnothing
+\]</div>
+<p>Then:</p>
+<div class="arithmatex">\[
+\overline{V}(\pmb{x}, \delta) \cap E \supset \overline{V}(\pmb{y}, \zeta) \cap E \neq \varnothing
+\]</div>
+<p>So <span class="arithmatex">\( \pmb{x} \)</span> is an accumulation point of <span class="arithmatex">\( E \)</span>, which implies <span class="arithmatex">\( \pmb{x} \in E' \)</span>. Therefore, <span class="arithmatex">\( (E')' \subset E' \)</span>, and by <a href="#theo-closed-set-derived-set-condition">Theorem of Closed Set and Derived Set Condition</a>, <span class="arithmatex">\( E' \)</span> is a closed set.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>The closure <span class="arithmatex">\( \overline{E} \)</span> is a closed set.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="closed-set-a-bad-proof" name="__tabbed_14" type="radio" /><input id="closed-set-another-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="closed-set-a-bad-proof">A Bad Proof</label><label for="closed-set-another-proof">Another Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We prove that <span class="arithmatex">\( \overline{E}^c \)</span> is an open set.  </p>
+<p>For any <span class="arithmatex">\( \pmb{x} \in \overline{E}^c = \mathbb{R}^n - \overline{E} = \mathbb{R}^n - E - E' \)</span>, <span class="arithmatex">\( \pmb{x} \notin E \)</span> and <span class="arithmatex">\( \pmb{x} \)</span> is not an accumulation point of <span class="arithmatex">\( E \)</span>. That is:</p>
+<div class="arithmatex">\[
+\exists \delta &gt; 0, \quad \overline{V}(\pmb{x}, \delta) \cap E = \varnothing
+\]</div>
+<p>Additionally, we can show that:</p>
+<div class="arithmatex">\[
+\exists \zeta &gt; 0, \quad \overline{V}(\pmb{x}, \zeta) \cap E' = \varnothing
+\]</div>
+<p>(Because if <span class="arithmatex">\( \forall \zeta &gt; 0 \)</span>, <span class="arithmatex">\( \overline{V}(\pmb{x}, \zeta) \cap E' \neq \varnothing \)</span>, then <span class="arithmatex">\( \pmb{x} \)</span> would be an accumulation point of <span class="arithmatex">\( E' \)</span>, which contradicts <span class="arithmatex">\( \pmb{x} \notin E' \)</span>.)</p>
+<p>Therefore:</p>
+<div class="arithmatex">\[
+V(\pmb{x}, \delta) \subset \overline{E}^c
+\]</div>
+<p>This implies that <span class="arithmatex">\( \overline{E}^c \)</span> is an open set, so <span class="arithmatex">\( \overline{E} \)</span> is a closed set.</p>
+</div>
+<div class="tabbed-block">
+<p>We use <a href="#theo-closed-set-derived-set-condition">Theorem of Closed Set and Derived Set Condition</a> to show that <span class="arithmatex">\( \overline{E}' \subset \overline{E} \)</span>.  </p>
+<p>Since:</p>
+<div class="arithmatex">\[
+\overline{E} = E \cup E'
+\]</div>
+<p>we have:</p>
+<div class="arithmatex">\[
+\overline{E}' = (E \cup E')' = E' \cup (E')'
+\]</div>
+<p>Because <span class="arithmatex">\( E' \)</span> and <span class="arithmatex">\( (E')' \)</span> are both closed sets, their union <span class="arithmatex">\( \overline{E}' \)</span> is also a closed set. Therefore, <span class="arithmatex">\( \overline{E} \)</span> is a closed set.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Closure Facts</p>
+<p>(i) The closure of the closure of a set <span class="arithmatex">\( E \)</span> is equal to the closure of <span class="arithmatex">\( E \)</span>:</p>
+<div class="arithmatex">\[
+\overline{\overline{E}} = \overline{E}
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  </p>
+<p>Assume <span class="arithmatex">\( I = (0, 1) \)</span>, and a real function <span class="arithmatex">\( f(x) \)</span> is defined on <span class="arithmatex">\( I \)</span>. Then:</p>
+<div class="arithmatex">\[
+f(x) \text{ is continuous on } I \iff \forall \text{ open set } G \subset (-\infty, \infty), \quad f^{-1}(G) \text{ is an open set.}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="closed-set-proof_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>"<span class="arithmatex">\(\Rightarrow\)</span>":  </li>
+</ul>
+<p>If <span class="arithmatex">\( f(x) \)</span> is continuous, and assume <span class="arithmatex">\( f^{-1}(G) \)</span> is not empty, then for any <span class="arithmatex">\( x_0 \in f^{-1}(G) \)</span>, we have <span class="arithmatex">\( f(x_0) \in G \)</span>. Since <span class="arithmatex">\( G \)</span> is an open set, there exists <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(f(x_0), \delta) \subset G
+\]</div>
+<p>By the definition of a continuous function, for any <span class="arithmatex">\( \varepsilon &gt; 0 \)</span>, there exists <span class="arithmatex">\( \delta' &gt; 0 \)</span> such that for all <span class="arithmatex">\( x \in V(x_0, \delta') \)</span>:</p>
+<div class="arithmatex">\[
+-\varepsilon &lt; f(x) - f(x_0) &lt; \varepsilon
+\]</div>
+<p>Let <span class="arithmatex">\( \varepsilon &lt; \delta \)</span>. Then for all <span class="arithmatex">\( x \in V(x_0, \delta') \)</span>:</p>
+<div class="arithmatex">\[
+|f(x) - f(x_0)| &lt; \varepsilon &lt; \delta
+\]</div>
+<p>This implies:</p>
+<div class="arithmatex">\[
+V(f(x_0), \varepsilon) \subset G
+\]</div>
+<p>Therefore:</p>
+<div class="arithmatex">\[
+V(x_0, \delta') \subset f^{-1}(G)
+\]</div>
+<p>This shows that <span class="arithmatex">\( x_0 \)</span> is an interior point of <span class="arithmatex">\( f^{-1}(G) \)</span>, so <span class="arithmatex">\( f^{-1}(G) \)</span> is an open set.</p>
+<ul>
+<li>"<span class="arithmatex">\(\Leftarrow\)</span>":  </li>
+</ul>
+<p>If for every open set <span class="arithmatex">\( G \subset (-\infty, \infty) \)</span>, <span class="arithmatex">\( f^{-1}(G) \)</span> is an open set, then for any <span class="arithmatex">\( x_0 \in f^{-1}(G) \)</span> and any <span class="arithmatex">\( \varepsilon &gt; 0 \)</span>, <span class="arithmatex">\( V(x_0, \varepsilon) \)</span> is an open set. Therefore:</p>
+<div class="arithmatex">\[
+f^{-1}(V(f(x_0), \varepsilon)) \text{ is an open set.}
+\]</div>
+<p>Since <span class="arithmatex">\( x_0 \in f^{-1}(V(f(x_0), \varepsilon)) \)</span>, there exists <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+V(x_0, \delta) \subset f^{-1}(V(f(x_0), \varepsilon))
+\]</div>
+<p>This implies:</p>
+<div class="arithmatex">\[
+\forall x \in V(x_0, \delta), \quad f(x) \in V(f(x_0), \varepsilon)
+\]</div>
+<p>Thus, <span class="arithmatex">\( f(x) \)</span> is continuous at <span class="arithmatex">\( x_0 \)</span>, and since <span class="arithmatex">\( x_0 \)</span> is arbitrary, <span class="arithmatex">\( f(x) \)</span> is continuous on <span class="arithmatex">\( I \)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Biggest Open Set and Smallest Closed Set</p>
+<p>(i) The <strong>kernel</strong> <span class="arithmatex">\( E^o \)</span> is the <strong>biggest</strong> open set among all sets <span class="arithmatex">\( \subset E \)</span>.<br />
+(ii) The <strong>closure</strong> <span class="arithmatex">\( \overline{E} \)</span> is the <strong>smallest</strong> closed set among all sets <span class="arithmatex">\( \supset E \)</span>.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  Prove the following statements are equivalent:</p>
+<ol>
+<li>Set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> is a closed set.  </li>
+<li>For every <strong>accumulation point</strong> <span class="arithmatex">\( \pmb{x} \)</span> of <span class="arithmatex">\( E \)</span>, <span class="arithmatex">\( \pmb{x} \in E \)</span>, that is, <span class="arithmatex">\( E' \subset E \)</span>. (We can also get <span class="arithmatex">\( \overline{E} \supset E \)</span>.)  </li>
+<li>For every sequence <span class="arithmatex">\( \{ \pmb{x}_k \} \subset E \)</span>, if <span class="arithmatex">\( \lim_{k \to \infty} \pmb{x}_k = \pmb{x} \)</span>, then <span class="arithmatex">\( \pmb{x} \in E \)</span>.</li>
+</ol>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  Some facts about <strong>kernel</strong> and <strong>closure</strong> of a set:</p>
+<ol>
+<li>If <span class="arithmatex">\( A \cap B = \varnothing \)</span>, then:</li>
+</ol>
+<div class="arithmatex">\[
+\overline{A} \cap B^o = \varnothing
+\]</div>
+<ol>
+<li>The closure of the complement of <span class="arithmatex">\( A \)</span> is equal to the complement of the kernel of <span class="arithmatex">\( A \)</span>:</li>
+</ol>
+<div class="arithmatex">\[
+\overline{A^c} = (A^o)^c
+\]</div>
+<ol>
+<li>Assume <span class="arithmatex">\( A \)</span> is an open set. Prove:</li>
+</ol>
+<div class="arithmatex">\[
+A \subset B \iff \forall \text{ nonempty open set } S \subset A, \quad S \cap B \neq \varnothing
+\]</div>
+</div>
+<h3 id="complete-set">Complete Set<a class="headerlink" href="#complete-set" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Complete Set</p>
+<p>A set <span class="arithmatex">\( E \)</span> is called a <strong>complete set</strong> if:</p>
+<div class="arithmatex">\[
+E' = E
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  </p>
+<p>If <span class="arithmatex">\( E \)</span> is a closed set and does not have isolated points, then <span class="arithmatex">\( E \)</span> is a complete set.</p>
+</div>
+<h3 id="sparse-set-dense-set">Sparse Set &amp; Dense Set<a class="headerlink" href="#sparse-set-dense-set" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Sparse Set and Dense Set</p>
+<ul>
+<li>A set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> is called a <strong>sparse set</strong> if for every nonempty open set <span class="arithmatex">\( S \subset \mathbb{R}^n \)</span>, there exists a nonempty open subset <span class="arithmatex">\( S_0 \subset S \)</span> such that:</li>
+</ul>
+<div class="arithmatex">\[
+S_0 \cap E = \varnothing
+\]</div>
+<ul>
+<li>A set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> is called a <strong>dense set</strong> if for every nonempty open set <span class="arithmatex">\( S \subset \mathbb{R}^n \)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+S \cap E \neq \varnothing
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Sparse Set and Dense Set</p>
+<p>(i) A set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> is a <strong>sparse set</strong> if and only if:</p>
+<div class="arithmatex">\[
+\left( \overline{E} \right)^o = \varnothing
+\]</div>
+<p>(ii) A set <span class="arithmatex">\( E \subset \mathbb{R}^n \)</span> is a <strong>dense set</strong> if and only if:</p>
+<div class="arithmatex">\[
+\overline{E} = \mathbb{R}^n
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>Some common sets:</p>
+<ol>
+<li><span class="arithmatex">\( \mathbb{Z} \)</span> is a <strong>sparse set</strong>.  </li>
+<li><span class="arithmatex">\( \mathbb{Q} \)</span> is a <strong>dense set</strong>.</li>
+</ol>
+</div>
+<h2 id="configuration-of-sets">Configuration of Sets<a class="headerlink" href="#configuration-of-sets" title="Permanent link">&para;</a></h2>
+<p><a id="def-composing-interval"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Composing Interval</p>
+<p>Assume <span class="arithmatex">\( G \subset \mathbb{R} \)</span> is a bounded open set. For any <span class="arithmatex">\( x_0 \in G \)</span>, there exists an interval <span class="arithmatex">\( (\alpha, \beta) \)</span> such that:</p>
+<p>(i) <span class="arithmatex">\( x_0 \in (\alpha, \beta) \)</span>.<br />
+(ii) <span class="arithmatex">\( (\alpha, \beta) \subset G \)</span>.<br />
+(iii) <span class="arithmatex">\( \alpha \notin G \)</span> and <span class="arithmatex">\( \beta \notin G \)</span>.</p>
+<p>We define <span class="arithmatex">\( (\alpha, \beta) \)</span> as the <strong>composing interval</strong> of set <span class="arithmatex">\( G \)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Decomposition of Bounded Open Sets</p>
+<p>Assume <span class="arithmatex">\( G \subset \mathbb{R} \)</span> is a bounded open set. Then:</p>
+<div class="arithmatex">\[
+G = \bigcup_{n=1}^\infty (\alpha_n, \beta_n)
+\]</div>
+<p>where <span class="arithmatex">\( (\alpha_n, \beta_n) \)</span> are mutually exclusive (disjoint) open intervals.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="configuration-of-sets-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="configuration-of-sets-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Easy to see that:</p>
+<div class="arithmatex">\[
+\alpha = \inf\{x : (x, x_0) \subset G\}, \quad \beta = \sup\{x : (x_0, x) \subset G\}
+\]</div>
+<p>Every point <span class="arithmatex">\( x \in G \)</span> has a composing interval. That is, for any <span class="arithmatex">\( x \neq y \in G \)</span>, there exist intervals <span class="arithmatex">\( (\alpha_x, \beta_x) \)</span> and <span class="arithmatex">\( (\alpha_y, \beta_y) \subset G \)</span> that are their composing intervals, respectively.</p>
+<ul>
+<li>
+<p>If <span class="arithmatex">\( (\alpha_x, \beta_x) \)</span> and <span class="arithmatex">\( (\alpha_y, \beta_y) \)</span> have common points, then they must be the same interval. Otherwise, one of <span class="arithmatex">\( \alpha \)</span> or <span class="arithmatex">\( \beta \)</span> would lie within the other interval, which contradicts <a href="#def-composing-interval">Definition of Composing Interval</a>.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( (\alpha_x, \beta_x) \)</span> and <span class="arithmatex">\( (\alpha_y, \beta_y) \)</span> share no common points, then their intersection is empty:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+(\alpha_x, \beta_x) \cap (\alpha_y, \beta_y) = \varnothing
+\]</div>
+<p>Therefore, <span class="arithmatex">\( G \)</span> can be written as a union of mutually exclusive open intervals. Now we need to prove that the number of such intervals is denumerable, which follows directly from <a href="#exam-denumerable-open-set">Example of denumerable open sets</a>.</p>
+</div>
+</div>
+</div>
+<p>We can have similar conclusion in higher dimensions as below.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Decomposition of Open Sets in <span class="arithmatex">\( \mathbb{R}^n \)</span></p>
+<p>Assume <span class="arithmatex">\( G \subset \mathbb{R}^n \)</span> is an open set. Then:</p>
+<div class="arithmatex">\[
+G \text{ is a union of denumerable half-open cubes which are mutually exclusive.}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Complete Set in <span class="arithmatex">\( \mathbb{R} \)</span></p>
+<p>A set <span class="arithmatex">\( E \subset \mathbb{R} \)</span> is a complete set if and only if:</p>
+<div class="arithmatex">\[
+F^c = \mathbb{R} - F \text{ is a denumerable union of open sets which are mutually exclusive and share no common endpoints.}
+\]</div>
+</div>
+<h3 id="borel-set">Borel Set<a class="headerlink" href="#borel-set" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of <span class="arithmatex">\( G_\delta \)</span> Set and <span class="arithmatex">\( F_\sigma \)</span> Set</p>
+<ul>
+<li>A <strong><span class="arithmatex">\( G_\delta \)</span> set</strong> is a set composed of the denumerable intersection of open sets. That is:</li>
+</ul>
+<div class="arithmatex">\[
+G_\delta = \bigcap_{k=1}^\infty G_k, \quad \text{where } G_k \text{ is an open set.}
+\]</div>
+<ul>
+<li>A <strong><span class="arithmatex">\( F_\sigma \)</span> set</strong> is a set composed of the denumerable union of closed sets. That is:</li>
+</ul>
+<div class="arithmatex">\[
+F_\sigma = \bigcup_{k=1}^\infty F_k, \quad \text{where } F_k \text{ is a closed set.}
+\]</div>
+</div>
+<h2 id="cantor-set">Cantor Set<a class="headerlink" href="#cantor-set" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Cantor Set Configuration</p>
+<p>The construction of the <strong>Cantor set</strong> proceeds as follows:</p>
+<ul>
+<li><strong>Step 1</strong>: Remove an open interval of length <span class="arithmatex">\( \frac{1}{3} \)</span> from <span class="arithmatex">\( [0, 1] \)</span>.  </li>
+<li><strong>Step 2</strong>: Remove two open intervals of length <span class="arithmatex">\( \frac{1}{9} \)</span> from the remaining set, specifically <span class="arithmatex">\( \left( \frac{1}{9}, \frac{2}{9} \right) \)</span> and <span class="arithmatex">\( \left( \frac{7}{9}, \frac{8}{9} \right) \)</span>.  </li>
+<li><strong>Step 3</strong>: Continue this process.  </li>
+<li><strong>Step n</strong>: Remove <span class="arithmatex">\( 2^{n-1} \)</span> open intervals of length <span class="arithmatex">\( \frac{1}{3^n} \)</span> from the remaining set. Denote these intervals as <span class="arithmatex">\( I_{n,k} \)</span> where <span class="arithmatex">\( 1 \leq k \leq 2^{n-1} \)</span>. The remaining closed sets are <span class="arithmatex">\( 2^n \)</span> in number, each of length <span class="arithmatex">\( \frac{1}{3^n} \)</span>, denoted by <span class="arithmatex">\( F_n \)</span>. Note that the endpoints of <span class="arithmatex">\( I_{n,k} \)</span> are never removed.</li>
+</ul>
+<p>Finally, we obtain:</p>
+<div class="arithmatex">\[
+\begin{align*}
+G_0 = &amp;\left( \frac{1}{3}, \frac{2}{3} \right) \cup \\
+&amp;\left( \frac{1}{9}, \frac{2}{9} \right) \cup \left( \frac{7}{9}, \frac{8}{9} \right) \cup \\
+&amp;\left( \frac{1}{27}, \frac{2}{27} \right) \cup \left( \frac{7}{27}, \frac{8}{27} \right) \cup \left( \frac{19}{27}, \frac{20}{27} \right) \cup \left( \frac{25}{27}, \frac{26}{27} \right) \cup \dots
+\end{align*}
+\]</div>
+<p>This set <span class="arithmatex">\( G_0 \)</span> is an open set (by <a href="#theo-properties-open-set">Theorem of Properties of Open Sets</a>). The <strong>Cantor set</strong> is defined as:</p>
+<div class="arithmatex">\[
+P_0 = [0, 1] \setminus G_0
+\]</div>
+<p>which is a closed set. Additionally, we can express <span class="arithmatex">\( P_0 \)</span> as:</p>
+<div class="arithmatex">\[
+P_0 = \bigcap_{n=1}^\infty F_n
+\]</div>
+<p><p align="center">
+    <img src="../images/Cantor_Set.png" width="75%" />
+    </p></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Facts about Cantor Set</p>
+<p>(i) The Cantor set is a <strong>closed set</strong>, meaning it has no interior points.<br />
+(ii) The Cantor set is a <strong>complete set</strong>.<br />
+(iii) The Cantor set has base <span class="arithmatex">\( \aleph_0 \)</span>.<br />
+(iv) The Cantor set is a <strong>sparse set</strong>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:3"><input checked="checked" id="cantor-set-proof-for-i" name="__tabbed_17" type="radio" /><input id="cantor-set-proof-for-ii-ⅰ" name="__tabbed_17" type="radio" /><input id="cantor-set-proof-for-ii-ⅱ" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="cantor-set-proof-for-i">Proof for (i)</label><label for="cantor-set-proof-for-ii-ⅰ">Proof for (ii) Ⅰ</label><label for="cantor-set-proof-for-ii-ⅱ">Proof for (ii) Ⅱ</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) This is easily seen from the definition of the Cantor set. Specifically, for any <span class="arithmatex">\( x \in P_0 \)</span>, there does not exist <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+(x - \delta, x + \delta) \subset P_0
+\]</div>
+</div>
+<div class="tabbed-block">
+<p><strong>First Perspective</strong>:<br />
+Show that <span class="arithmatex">\( (P_0)' = P_0 \)</span>. Since <span class="arithmatex">\( P_0 \)</span> is a closed set, we have <span class="arithmatex">\( (P_0)' \subset P_0 \)</span> (by <a href="#theo-closed-set-derived-set-condition">Theorem of Closed Set and Derived Set Condition</a>). We only need to show that <span class="arithmatex">\( P_0 \subset (P_0)' \)</span>, meaning every point in <span class="arithmatex">\( P_0 \)</span> is an accumulation point of <span class="arithmatex">\( P_0 \)</span>. That is:</p>
+<div class="arithmatex">\[
+\forall x \in P_0, \forall \varepsilon &gt; 0, \quad (x - \varepsilon, x + \varepsilon) \cap P_0 \setminus \{x\} \neq \varnothing
+\]</div>
+<p>We use the endpoints of <span class="arithmatex">\( I_{n,k} \)</span>. For any <span class="arithmatex">\( \varepsilon &gt; 0 \)</span>, there exists <span class="arithmatex">\( k_0 &gt; 0 \)</span> such that:</p>
+<div class="arithmatex">\[
+\frac{1}{3^{k_0}} &lt; \varepsilon
+\]</div>
+<p>Since <span class="arithmatex">\( x \in P_0 = \bigcap_{n=1}^\infty F_n \)</span>, we have <span class="arithmatex">\( x \in F_{k_0} \)</span>, which is the union of <span class="arithmatex">\( 2^{k_0} \)</span> closed intervals of length <span class="arithmatex">\( \frac{1}{3^{k_0}} \)</span>. Assume <span class="arithmatex">\( x \in I = [\alpha, \beta] \)</span>, a closed interval of length <span class="arithmatex">\( \frac{1}{3^{k_0}} \)</span>. Then:</p>
+<div class="arithmatex">\[
+I \subset (x - \varepsilon, x + \varepsilon)
+\]</div>
+<p>The endpoints <span class="arithmatex">\( \alpha \)</span> and <span class="arithmatex">\( \beta \)</span> must be in <span class="arithmatex">\( P_0 \)</span>. Thus:</p>
+<div class="arithmatex">\[
+(x - \varepsilon, x + \varepsilon) \cap P_0 \setminus \{x\} \supset \{\alpha, \beta\} \neq \varnothing
+\]</div>
+</div>
+<div class="tabbed-block">
+<p><strong>Second Perspective</strong>:<br />
+Show that <span class="arithmatex">\( P_0 \)</span> has no isolated points. Assume <span class="arithmatex">\( P_0 \)</span> has an isolated point <span class="arithmatex">\( x \)</span>. Since <span class="arithmatex">\( 0 \)</span> and <span class="arithmatex">\( 1 \)</span> are accumulation points of <span class="arithmatex">\( P_0 \)</span>, assume <span class="arithmatex">\( x \neq 0, 1 \)</span>. By the definition of an isolated point:</p>
+<div class="arithmatex">\[
+\exists \delta &gt; 0, \quad (x - \delta, x + \delta) \cap P_0 \setminus \{x\} = \varnothing
+\]</div>
+<p>This implies:</p>
+<div class="arithmatex">\[
+(x - \delta, x) \cup (x, x + \delta) \subset G_0
+\]</div>
+<p>However, this contradicts the construction of <span class="arithmatex">\( P_0 \)</span>, as <span class="arithmatex">\( x \notin G_0 \)</span>.</p>
+<p>(iii) By the closed intervals embedding theorem, we can express the Cantor set using ternary expansions. Define:</p>
+<div class="arithmatex">\[
+x = \sum_{n=1}^\infty \frac{a_n}{3^n}, \quad a_n \in \{0, 1, 2\}
+\]</div>
+<p>The series converges, and:</p>
+<ul>
+<li>If <span class="arithmatex">\( a_1 = 0 \)</span>, then:</li>
+</ul>
+<div class="arithmatex">\[
+0 \leq x &lt; \sum_{n=2}^\infty \frac{2}{3^n} = \frac{1}{3}
+\]</div>
+<ul>
+<li>If <span class="arithmatex">\( a_1 = 1 \)</span>, then:</li>
+</ul>
+<div class="arithmatex">\[
+\frac{1}{3} \leq x &lt; \frac{1}{3} + \sum_{n=2}^\infty \frac{2}{3^n} = \frac{2}{3}
+\]</div>
+<ul>
+<li>If <span class="arithmatex">\( a_1 = 2 \)</span>, then:</li>
+</ul>
+<div class="arithmatex">\[
+\frac{2}{3} \leq x &lt; \frac{2}{3} + \sum_{n=2}^\infty \frac{2}{3^n} = 1
+\]</div>
+<p>If <span class="arithmatex">\( a_n \neq 1 \)</span> for all <span class="arithmatex">\( n \)</span>, then <span class="arithmatex">\( x \in P_0 \)</span>.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Real Analysis">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Real Analysis
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Lebesgue_Measure/" class="md-footer__link md-footer__link--next" aria-label="Next: Lebesgue Measure">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Lebesgue Measure
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024~2025 Maplefaith All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Maplefaith/Maplefaith.github.io" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<XcTu291@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/apply-numbering.js"></script>
+      
+        <script src="../../../javascripts/pdf-viewer.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+      
+    
+  <script src="../../../assets/javascripts/custom.4e50d00f.min.js"></script>
+
+  </body>
+</html>
