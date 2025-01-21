@@ -113,7 +113,6 @@
             
             
   Follow <strong>@ZJUSAST</strong> to know more news of science & technology
-  
 
           </div>
           
@@ -367,6 +366,23 @@
     
   
   Tag
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../logs/" class="md-tabs__link">
+        
+  
+    
+  
+  Log
 
       </a>
     </li>
@@ -1819,6 +1835,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lebesgue Measure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1828,6 +1855,49 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lebesgue-outer-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue Outer Measure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue Outer Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3047,6 +3117,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../logs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -3067,6 +3157,38 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lebesgue-outer-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue Outer Measure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue Outer Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3081,6 +3203,74 @@
 
 
 <h1 id="lebesgue-measure">Lebesgue Measure<a class="headerlink" href="#lebesgue-measure" title="Permanent link">&para;</a></h1>
+<p>This chapter we focus on the measure of bounded set on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p>Our goal: extend the concept of length on intervals to a more general set of real numbers. </p>
+<h2 id="lebesgue-outer-measure">Lebesgue Outer Measure<a class="headerlink" href="#lebesgue-outer-measure" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Lebesgue outer measure</p>
+<p>Assume <span class="arithmatex">\(E \subset \mathbb{R}\)</span>, we define the Lebesgue outer measure to be</p>
+<div class="arithmatex">\[
+m^*(E)=\inf \left\{\sum_n l(I_n): \{I_n\}_{n\geq 1} \text{ are open intervals and } E\subset \bigcup_n I_n \right\}
+\]</div>
+<p>where <span class="arithmatex">\(l(I_n)\)</span> denotes the length of intevals.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. For denumerable set <span class="arithmatex">\(E=\{x_n\}_{n\geq 1}\)</span>, its Lebesgue outer measure </p>
+<div class="arithmatex">\[
+m^*(E)=0
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="lebesgue-outer-measure-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lebesgue-outer-measure-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Choose open intervals </p>
+<div class="arithmatex">\[
+I_n=\left(x_n-\frac{\varepsilon}{2^{n+1} }, x_n+\frac{\varepsilon}{2^{n+1} } \right)
+\]</div>
+<p>and show the summation of length of <span class="arithmatex">\(\{I_n\}\)</span> are <span class="arithmatex">\(\varepsilon\)</span>, which could be sufficiently small.</p>
+</div>
+</div>
+</div>
+<p>Note that of Lebesgue outer measure of <span class="arithmatex">\(\varnothing\)</span> is also <span class="arithmatex">\(0\)</span>.</p>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Properties of Lebesgue Outer Measure</p>
+<p>(i) Homogeneously increasing.</p>
+<p>If <span class="arithmatex">\(E_1\subset E_2\)</span>, then </p>
+<div class="arithmatex">\[
+m^*(E_1)\leq m^*(E_2)
+\]</div>
+<p>(ii) If <span class="arithmatex">\(I\)</span> is an interval, then </p>
+<div class="arithmatex">\[
+m^*(I)=l(I)
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="properties-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="properties-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) <span class="arithmatex">\(\forall \varepsilon&gt;0, \exists \{I_n\}\)</span>, s.t. <span class="arithmatex">\(E_2\subset \bigcup\limits_{n=1}^\infty I_n\)</span>, and </p>
+<div class="arithmatex">\[
+\begin{equation}
+\sum_{n=1}^\infty l(I_n)\leq m^*(E_2)+\varepsilon \quad\text{by property of infimum for $E_2$}\label{ieq1}
+\end{equation}
+\]</div>
+<p>then because <span class="arithmatex">\(E_1\subset E_2\)</span>, we have <span class="arithmatex">\(E_1\subset \bigcup\limits_{n=1}^\infty I_n\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{equation}
+m^*(E_1)\leq \sum_{n=1}^\infty l(I_n)\quad \text{by property of infimum $E_1$}\label{ieq2}
+\end{equation}
+\]</div>
+<p>combine inequation <span class="arithmatex">\(\ref{ieq1}\)</span> and <span class="arithmatex">\(\ref{ieq2}\)</span>, we have</p>
+<div class="arithmatex">\[
+m^*(E_1)\leq m^*(E_2)+\varepsilon
+\]</div>
+<p>because <span class="arithmatex">\(\varepsilon\)</span> could be sufficiently small, we have</p>
+<div class="arithmatex">\[
+m^*(E_1)\leq m^*(E_2)
+\]</div>
+</div>
+</div>
+</div>
 
 
 
