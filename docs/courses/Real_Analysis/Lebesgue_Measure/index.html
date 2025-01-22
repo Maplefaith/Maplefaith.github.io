@@ -377,7 +377,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../logs/" class="md-tabs__link">
+      <a href="../../../log/" class="md-tabs__link">
         
   
     
@@ -1895,6 +1895,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lebesgue-measure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue Measure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurable Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation-invariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation Invariance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approximate-measurable-set-with-open-closed-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approximate Measurable set with open &amp; closed sets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3124,7 +3184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../logs/" class="md-nav__link">
+      <a href="../../../log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3187,6 +3247,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lebesgue-measure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue Measure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurable-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurable Sets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation-invariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation Invariance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approximate-measurable-set-with-open-closed-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approximate Measurable set with open &amp; closed sets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3214,6 +3334,7 @@ m^*(E)=\inf \left\{\sum_n l(I_n): \{I_n\}_{n\geq 1} \text{ are open intervals an
 \]</div>
 <p>where <span class="arithmatex">\(l(I_n)\)</span> denotes the length of intevals.</p>
 </div>
+<p><a id="denumerable-set-measure"></a></p>
 <div class="question">
 <p><strong>Example</strong>. For denumerable set <span class="arithmatex">\(E=\{x_n\}_{n\geq 1}\)</span>, its Lebesgue outer measure </p>
 <div class="arithmatex">\[
@@ -3233,9 +3354,10 @@ I_n=\left(x_n-\frac{\varepsilon}{2^{n+1} }, x_n+\frac{\varepsilon}{2^{n+1} } \ri
 </div>
 <p>Note that of Lebesgue outer measure of <span class="arithmatex">\(\varnothing\)</span> is also <span class="arithmatex">\(0\)</span>.</p>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<p><a id="Mono-increasing-LOM"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Properties of Lebesgue Outer Measure</p>
-<p>(i) Homogeneously increasing.</p>
+<p>(i) <strong>Monotonicity</strong>.</p>
 <p>If <span class="arithmatex">\(E_1\subset E_2\)</span>, then </p>
 <div class="arithmatex">\[
 m^*(E_1)\leq m^*(E_2)
@@ -3244,8 +3366,13 @@ m^*(E_1)\leq m^*(E_2)
 <div class="arithmatex">\[
 m^*(I)=l(I)
 \]</div>
+<p>(iii) <strong>subadditivity</strong> </p>
+<p>If <span class="arithmatex">\(\{E_n\}_{n\geq 1}^{\infty}\)</span> is a sequence of subset of <span class="arithmatex">\(\mathbb{R}\)</span>, then</p>
+<div class="arithmatex">\[
+m^*\left(\bigcup_{n=1}^\infty E_n\right) \leq \sum_{n=1}^\infty m^*(E_n)
+\]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="properties-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="properties-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="properties-proof-for-i" name="__tabbed_2" type="radio" /><input id="properties-proof-for-ii" name="__tabbed_2" type="radio" /><input id="properties-proof-for-iii" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="properties-proof-for-i">Proof for (i)</label><label for="properties-proof-for-ii">Proof for (ii)</label><label for="properties-proof-for-iii">Proof for (iii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) <span class="arithmatex">\(\forall \varepsilon&gt;0, \exists \{I_n\}\)</span>, s.t. <span class="arithmatex">\(E_2\subset \bigcup\limits_{n=1}^\infty I_n\)</span>, and </p>
@@ -3269,6 +3396,493 @@ m^*(E_1)\leq m^*(E_2)+\varepsilon
 m^*(E_1)\leq m^*(E_2)
 \]</div>
 </div>
+<div class="tabbed-block">
+<p>(ii) </p>
+<ul>
+<li>We firstly show that the conclusion for closed intervals <span class="arithmatex">\(I=[a,b]\)</span>. </li>
+</ul>
+<p>Closed set has a great property, that is, using Heine-Borel Theorem, if <span class="arithmatex">\(I \subset \bigcup_{n=1}^\infty I_n\)</span>, then <span class="arithmatex">\(\exists N\)</span>, such that <span class="arithmatex">\(I\subset \bigcup_{n=1}^N I_n\)</span>. Thus</p>
+<div class="arithmatex">\[
+l(I)&lt;\sum_{n=1}^N l(I_n) &lt; \sum_{n=1}^\infty l(I_n)\leq m^*(I)+\varepsilon
+\]</div>
+<p>which means <span class="arithmatex">\(l(I)\leq m^*(I)\)</span> (let <span class="arithmatex">\(\varepsilon\rightarrow 0\)</span>). This is one direction. </p>
+<p>The opposite direction could be explained as below. We try to choose a special open interval. <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(I\subset (a-\varepsilon, b+\varepsilon)\)</span>, which means </p>
+<div class="arithmatex">\[
+m^*(I)\leq l((a-\varepsilon, b+\varepsilon))=b-a+2\varepsilon
+\]</div>
+<p>So let <span class="arithmatex">\(\varepsilon\rightarrow 0\)</span>, we have </p>
+<div class="arithmatex">\[
+m^*(I)\leq b-a=l(I)
+\]</div>
+<ul>
+<li>Now we consider <span class="arithmatex">\(I=(a,b]\)</span> (similar logic for <span class="arithmatex">\([a,b)\)</span>).</li>
+</ul>
+<p>Note that we can use a closed interval to contain <span class="arithmatex">\(I\)</span></p>
+<div class="arithmatex">\[
+I=(a,b]\subset [a,b]
+\]</div>
+<p>So by <a href="#Mono-increasing-LOM">Monotonicity property of Lebesgue outer measure</a>, we have</p>
+<div class="arithmatex">\[
+m^*(I)\leq m^*([a,b])=l([a,b])=l((a,b])=l(I)
+\]</div>
+<p>For another direction, we can choose a closed set which is contained by <span class="arithmatex">\(I\)</span>, i.e. <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\([a+\varepsilon,b]\subset (a,b]\)</span>, by <a href="#Mono-increasing-LOM">Monotonicity property of Lebesgue outer measure</a>, we have</p>
+<div class="arithmatex">\[
+b-a-\varepsilon=m^*([a+\varepsilon,b])\leq m^*(I)
+\]</div>
+<p>let <span class="arithmatex">\(\varepsilon\rightarrow 0\)</span>, we have</p>
+<div class="arithmatex">\[
+l(I)=b-a\leq m^*(I)
+\]</div>
+<ul>
+<li>Then we consider <span class="arithmatex">\((a,b)\)</span>, by using </li>
+</ul>
+<div class="arithmatex">\[
+[a+\varepsilon,b-\varepsilon] \subset I \subset [a-\varepsilon,b+\varepsilon]
+\]</div>
+<p>which means</p>
+<div class="arithmatex">\[
+b-a-2\varepsilon=m^*([a+\varepsilon,b-\varepsilon]) \leq m^*(I)\leq m^*([a-\varepsilon,b+\varepsilon])=b-a+2\varepsilon
+\]</div>
+<p>let <span class="arithmatex">\(\varepsilon\rightarrow 0\)</span>, and we are done.</p>
+<ul>
+<li>Finally we consider unbounded intervals <span class="arithmatex">\(I=[a,+\infty]\)</span>.</li>
+</ul>
+<p>In a similar logic, we choose <span class="arithmatex">\([a,b]\)</span> (<span class="arithmatex">\(\forall b&gt;a\)</span>), we have <span class="arithmatex">\([a,b] \subset [a,\infty)=I\)</span>, so</p>
+<div class="arithmatex">\[
+b-a=m^*([a,b])\leq m^*(I)
+\]</div>
+<p>let <span class="arithmatex">\(b\rightarrow +\infty\)</span>, we have </p>
+<div class="arithmatex">\[
++\infty\leq m^*(I)\leq +\infty
+\]</div>
+<p>and we are done.</p>
+</div>
+<div class="tabbed-block">
+<p>We have a sequence to add up, so we have to use a similar strategy in <a href="#denumerable-set-measure">Example of measure of Denumerable set</a>, i.e. use <span class="arithmatex">\(\varepsilon/{2^{n}}\)</span>. </p>
+<ul>
+<li>
+<p>if <span class="arithmatex">\(\sum_{n=1}^\infty E_n=\infty\)</span>, then (iii) holds naturally.</p>
+</li>
+<li>
+<p>Consider <span class="arithmatex">\(\sum_{n=1}^\infty E_n&lt;\infty\)</span>. <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\forall E_n (n\geq 1)\)</span>, we have sequence of open intervals <span class="arithmatex">\(\{I^{(n)}_k\}_{k=1}^\infty\)</span>, such that <span class="arithmatex">\(E_n\subset \bigcup_{n=1}^\infty I_k^{(n)}\)</span> and</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\sum_{k=1}^\infty I_k^{(n)}\leq m^*(E_n)+\frac{\varepsilon}{2^n}
+\]</div>
+<p>Show that these sequences of open intervals could compose a covering for <span class="arithmatex">\(\bigcup_{n=1}^\infty E_n\)</span>, i.e.</p>
+<div class="arithmatex">\[
+\bigcup_{n=1}^\infty E_n \subset \bigcup_{n=1}^\infty\bigcup_{k=1}^\infty I_k^{(n)}
+\]</div>
+<p>by <a href="#Mono-increasing-LOM">Monotonicity property of Lebesgue outer measure</a>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*\left(\bigcup_{n=1}^\infty E_n\right) &amp;\leq m^*\left(\bigcup_{n=1}^\infty\bigcup_{k=1}^\infty I_k^{(n)}\right)\\
+&amp;=\sum_{n=1}^\infty \sum_{n=1}^\infty l(I_k^{(n)}) \quad \text{by property of measure for intervals}\\
+&amp;\leq \sum_{n=1}^\infty \left[m^*(E_n)+\frac{\varepsilon}{2^n}\right]\\
+&amp;=\sum_{n=1}^\infty m^*(E_n) + \varepsilon
+\end{align*}
+\]</div>
+<p>let <span class="arithmatex">\(\varepsilon \rightarrow 0\)</span>, and we are done.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Prove another definition of Lebesgue outer measure</p>
+<div class="arithmatex">\[
+m^*(E)'=\inf\{m(Q): E\subset Q, Q \text{ is an open set}\}
+\]</div>
+<p>where <span class="arithmatex">\(m(\cdot)\)</span> means the Lebesgue measure, which we will discuss in more details in the following part. Here we use it because for open intervals, its outer measure and measure are of the same.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="properties-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="properties-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(m^*(E) \leq m^*(E)'\)</span>. </li>
+</ul>
+<div class="arithmatex">\[
+\forall \varepsilon&gt;0, \exists \{I_n\} \text{ s.t } E\subset \bigcup_n I_n \text{ &amp; } \sum_n l(I_n)\leq m^*(E)+\varepsilon
+\]</div>
+<p>let <span class="arithmatex">\(Q=\bigcup_n I_n\)</span>, then <span class="arithmatex">\(E\subset Q\)</span> and <span class="arithmatex">\(m(Q)=\sum_n l(I_n)\leq m^*(E)+\varepsilon\)</span>. Let <span class="arithmatex">\(\varepsilon\rightarrow 0\)</span>, and get</p>
+<div class="arithmatex">\[
+m^*(E)'\leq m^*(E)
+\]</div>
+<ul>
+<li><span class="arithmatex">\(m^*(E)\geq m^*(E)'\)</span>.</li>
+</ul>
+<p>This part is easy. Because we have an arbitrary open set <span class="arithmatex">\(Q\supset E\)</span>, <span class="arithmatex">\(m^*(E)\leq m^*(Q)=m(Q)\)</span>. Apply "inf" to both sides we have</p>
+<div class="arithmatex">\[
+m^*(E)\leq \inf_{Q} {m(Q)}=m^*(E)'
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="lebesgue-measure_1">Lebesgue Measure<a class="headerlink" href="#lebesgue-measure_1" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Lebesgue Measure</p>
+<p>Set <span class="arithmatex">\(E\subset \mathbb{R}\)</span> is Lebesgue measurable, if <span class="arithmatex">\(\forall A\subset \mathbb{R}\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align}
+m^*(A)\geq m^*(A\cap E)+m^*(A\cap E^c). \label{caratheo}
+\end{align}
+\]</div>
+<p>which is also called <strong>Carath&eacute;odory condition</strong> (or criterion). and we have Lebesgue measure denoted by <span class="arithmatex">\(m(A)=m^*(A)\)</span>. Denote <span class="arithmatex">\(\Omega\)</span> as a set of all measurable set.</p>
+</div>
+<p>Note that <span class="arithmatex">\(A=(A\cap E)\cup (A\cap E^c)\)</span>, so by subadditivity of Lebesgue outer measure, we have equality holds in inequation <span class="arithmatex">\(\ref{caratheo}\)</span>. Here <span class="arithmatex">\(A\)</span> is also called <strong>test set</strong>.</p>
+<p><a id="measure-def-2"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Another condition for measurable set</p>
+<p>Set <span class="arithmatex">\(E\subset \mathbb{R}\)</span> and <span class="arithmatex">\(E\in \Omega\)</span>, iff <span class="arithmatex">\(\forall A\subset E\)</span>, <span class="arithmatex">\(b\subset E^c\)</span>, such that</p>
+<div class="arithmatex">\[
+\begin{align}
+m^*(A\cup B)=m^*(A)+m^*(B) \label{Cara-eq}
+\end{align}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="lebesgue-measure_1-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="lebesgue-measure_1-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This is quite simple if we could see the relationship between condition <span class="arithmatex">\(\ref{Cara-eq}\)</span> and Carath&eacute;eodory condition.</p>
+<ul>
+<li><span class="arithmatex">\(\Rightarrow\)</span>. If <span class="arithmatex">\(E\)</span> satisfies Caratheodory condition, then <span class="arithmatex">\(\forall T\subset \mathbb{R}\)</span>, </li>
+</ul>
+<div class="arithmatex">\[
+m^*(T)\geq m^*(T\cap E)+m^*(T\cap E^c).
+\]</div>
+<p>Let <span class="arithmatex">\(A=T\cap E\subset E\)</span>, <span class="arithmatex">\(B=T\cap E^c\subset E^c\)</span>, then <span class="arithmatex">\(T=(T\cap E)\cup (T\cap E^c)=A\cup B\)</span>, so the above condition <span class="arithmatex">\(\ref{Cara-eq}\)</span> holds.</p>
+<ul>
+<li><span class="arithmatex">\(\Leftarrow\)</span>. If <span class="arithmatex">\(E\)</span> satisfies condition <span class="arithmatex">\(\ref{Cara-eq}\)</span>, then <span class="arithmatex">\(\forall A\subset E\)</span>, <span class="arithmatex">\(B\subset E^c\)</span>, </li>
+</ul>
+<div class="arithmatex">\[
+m^*(A\cup B)=m^*(A)+m^*(B)
+\]</div>
+<p>let <span class="arithmatex">\(T = A\cup B\)</span>, then <span class="arithmatex">\(A = (A\cup B)\cap E=T\cap E\)</span>, <span class="arithmatex">\(B=(A\cup B)\cap E^c=T\cap E^c\)</span>, then Carath&eacute;odory condition holds.</p>
+</div>
+</div>
+</div>
+<p>This condition <span class="arithmatex">\(\ref{Cara-eq}\)</span> is also quite useful in the following proof.</p>
+<h3 id="measurable-sets">Measurable Sets<a class="headerlink" href="#measurable-sets" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Lebesgue Measurable Sets</p>
+<p>(i) If <span class="arithmatex">\(m^*(E)=0\)</span>, then <span class="arithmatex">\(E\in \Omega\)</span>, and <span class="arithmatex">\(m(E)=0\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(E\)</span> is an interval, then <span class="arithmatex">\(E\in \Omega\)</span>, and <span class="arithmatex">\(m(E)=m^*(E)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="measurable-sets-proof-for-i" name="__tabbed_5" type="radio" /><input id="measurable-sets-proof-for-ii" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="measurable-sets-proof-for-i">Proof for (i)</label><label for="measurable-sets-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Because <span class="arithmatex">\(E \supset (A\cap E)\)</span>, so <span class="arithmatex">\(0=m^*(E)\geq m^*(A\cap E)\geq 0\)</span>, which means <span class="arithmatex">\(m^*(A\cap E)=0\)</span>.</p>
+<p>then by <span class="arithmatex">\(A\supset (A\cap E^c)\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A)&amp;\geq m^*(A\cap E^c)\\
+&amp;=m^*(A\cap E^c)+0\\
+&amp;=m^*(A\cap E^c)+m^*(A\cap E)
+\end{align*}
+\]</div>
+<p>which satisfies Carath&eacute;odory condition.</p>
+</div>
+<div class="tabbed-block">
+<p>We need to prove that intervals satisfies Carath&eacute;odory condition, i.e. <span class="arithmatex">\(\forall A\subset \mathbb{R}\)</span>, </p>
+<div class="arithmatex">\[
+m^*(A)\geq m^*(A\cap E)+m^*(A\cap E^c)
+\]</div>
+<p>We focus on using open intervals of <span class="arithmatex">\(A\)</span>. That is, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists {I_n}\)</span> s.t. <span class="arithmatex">\(A\subset \bigcup_n I_n\)</span> and <span class="arithmatex">\(\sum_n l(I_n)\leq m^*(A)+\varepsilon\)</span>. We want to show that <span class="arithmatex">\(m^*(A\cap E)+m^*(A\cap E^c)\leq \sum_n l(I_n)\)</span>.</p>
+<p>Notice that <span class="arithmatex">\(A\cap E\subset \left[(\bigcup_n I_n)\cap E\right]\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A\cap E)&amp;\leq m^*\left(\left(\bigcup_n I_n\right)\cap E\right)\\
+&amp;=m^*\left(\bigcup_n \left(I_n\cap E\right)\right)\quad\text{by distributive law}\\
+&amp;\leq \sum_n m^*(I_n\cap E) \quad \text{by subadditivity}\\
+&amp;=\sum_n l(I_n\cap E) \quad\text{$I_n\cap E$ is also intervals}
+\end{align*}
+\]</div>
+<p>We have <span class="arithmatex">\(E^c=E_1\cup E_2\)</span> where <span class="arithmatex">\(E_1\)</span> and <span class="arithmatex">\(E_2\)</span> are also intervals, because <span class="arithmatex">\(E\)</span> is an interval. Apply same logic to <span class="arithmatex">\(E_1\)</span> and <span class="arithmatex">\(E_2\)</span> gives </p>
+<div class="arithmatex">\[
+m^*(A\cap E_1)\leq \sum_n l(I_n\cap E_1)
+\]</div>
+<div class="arithmatex">\[
+m^*(A\cap E_2)\leq \sum_n l(I_n\cap E_2)
+\]</div>
+<p>adding the above three inequation up and get</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A\cap E)+ m^*(A\cap E_1)+m^*(A\cap E_1)&amp;\leq \sum_n l(I_n\cap E)+l(I_n\cap E_1)+l(I_n\cap E_2)\\
+&amp;=\sum_n l(I_n) \quad\text{additivity of intervals}
+\end{align*}
+\]</div>
+<p>Notice that <span class="arithmatex">\((A\cap E^c)=(A\cap E_1)\cup (A\cap E_2)\)</span>, then also by subadditivity of Lebesgue outer measure</p>
+<div class="arithmatex">\[
+m^*(A\cap E^c)\leq m^*(A\cap E_1)+m^*(A\cap E_2)
+\]</div>
+<p>So we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A\cap E)+m^*(A\cap E^c)&amp;\leq m^*(A\cap E)+m^*(A\cap E_1)+m^*(A\cap E_2)\\
+&amp;\leq \sum_n l(I_n)\\
+&amp;\leq  m^*(A)+\varepsilon
+\end{align*}
+\]</div>
+<p>Let <span class="arithmatex">\(\varepsilon\rightarrow 0\)</span>, so <span class="arithmatex">\(E\)</span> satisfies Carath&eacute;odory condition.</p>
+</div>
+</div>
+</div>
+<p>From (i) we could know that denumerable sets have zero measure. From (ii) we could know that any open, closed intervals are measurable.</p>
+<h3 id="measure-operations">Measure Operations<a class="headerlink" href="#measure-operations" title="Permanent link">&para;</a></h3>
+<p>This part we aim to show denumerable additivity of measure. So we have to give some foundations.</p>
+<div class="admonition success">
+<p class="admonition-title">Measure operations</p>
+<p>Assume <span class="arithmatex">\(E_1\in \Omega\)</span>, <span class="arithmatex">\(E_2\in \Omega\)</span>, then</p>
+<p>(i) <span class="arithmatex">\(E_1^c\in \Omega\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(E_1\cup E_2\in \Omega\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(E_1\cap E_2\in \Omega\)</span>.</p>
+<p>(iv) <span class="arithmatex">\(E_1 \backslash E_2 \in \Omega\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="measure-operations-proof-for-i" name="__tabbed_6" type="radio" /><input id="measure-operations-proof-for-ii" name="__tabbed_6" type="radio" /><input id="measure-operations-proof-for-iii" name="__tabbed_6" type="radio" /><input id="measure-operations-proof-for-iv" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof-for-i">Proof for (i)</label><label for="measure-operations-proof-for-ii">Proof for (ii)</label><label for="measure-operations-proof-for-iii">Proof for (iii)</label><label for="measure-operations-proof-for-iv">Proof for (iv)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This is quite easy, cause we can substitute <span class="arithmatex">\(E=(E^c)^c\)</span> into Carath&eacute;odory condition and we could get the result.</p>
+</div>
+<div class="tabbed-block">
+<p>Our goal is <span class="arithmatex">\(\forall A\subset \mathbb{R}\)</span>,</p>
+<div class="arithmatex">\[
+m^*(A)\geq m^*(A\cap (E_1\cup E_2))+m^*(A\cap (E_1\cup E_2)^c)
+\]</div>
+<p>From what we already know, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A)\geq m^*(A\cap E_1)+m^*(A\cap E_1^c)\\
+m^*(A)\geq m^*(A\cap E_2)+m^*(A\cap E_2^c)
+\end{align*}
+\]</div>
+<p>The following is a little tricky. Let <span class="arithmatex">\(A=A\cap E_1^c\)</span>, then the second of above two becomes</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*[(A\cap E_1^c)\cap E_2]+m^*[(A\cap E_1^c)\cap E_2^c]&amp;\leq m^*(A\cap E_1^c)\\
+m^*[(A\cap E_1^c)\cap E_2]+m^*[A\cap (E_1\cup E_2)^c]&amp;\leq m^*(A)-m^*(A\cap E_1)\\
+m^*[(A\cap E_1^c)\cap E_2]+m^*(A\cap E_1)+m^*[A\cap (E_1\cup E_2)^c]&amp;\leq m^*(A)
+\end{align*}
+\]</div>
+<p>Now we only need to show that <span class="arithmatex">\(m^*[(A\cap E_1^c)\cap E_2]+m^*(A\cap E_1)=m^*[A\cap (E_1\cup E_2)]\)</span>. Here we could use <a href="#measure-def-2">another definition of measurable set</a>. Notice that <span class="arithmatex">\((A\cap E_1)\subset E_1\)</span>, <span class="arithmatex">\([(A\cap E_1^c)\cap E_2]\subset E_1^c\)</span>, <span class="arithmatex">\(E_1\in \Omega\)</span>, so </p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*[(A\cap E_1^c)\cap E_2]+m^*(A\cap E_1)&amp;=m^*([(A\cap E_1^c)\cap E_2]\cup (A\cap E_1))\\
+&amp;=m^*([(A\cap E_1^c)\cup(A\cap E_1)]\cap [E_2\cup (A\cap E_1)])\\
+&amp;=m^*(A\cap[(E_2\cup A)\cap(E_2\cup E_1)])\\
+&amp;=m^*(A\cap(E_1\cup E_2))
+\end{align*}
+\]</div>
+<p>Or we have </p>
+<div class="arithmatex">\[
+\begin{align*}
+[(A\cap E_1^c)\cap E_2]\cup (A\cap E_1)&amp;=[A\cap (E_1^c\cap E_2)]\cup (A\cap E_1)\\
+&amp;=[(E_1^c\cap E_2)\cup E_1]\cap A\\
+&amp;=[(E_2\cup E_1)\cap (E_1^c\cup E_1)]\cap A\\
+&amp;=[(E_1\cup E_2)\cap \mathbb{R}]\cap A\\
+&amp;=(E_1\cup E_2)\cap A
+\end{align*}
+\]</div>
+<p>which gives the same answer.</p>
+</div>
+<div class="tabbed-block">
+<p>Using (i) and (ii)</p>
+<p>Notice <span class="arithmatex">\(E_1\cap E_2=(E_1^c\cup E_2^c)^c\)</span>. Because operations of complementation and union both holds for measurable, operation of intersection also holds for measurable.</p>
+</div>
+<div class="tabbed-block">
+<p>Same logic with (iii). Notice that <span class="arithmatex">\(E_1\backslash E_2=E_1\cap E_2^c\)</span>, since operation of intersection and complementation holds for measurable, operation of difference also holds for measurable.</p>
+</div>
+</div>
+</div>
+<p><a id="finite-measurable-sets"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>Assume <span class="arithmatex">\(E_n\in \Omega\)</span>, <span class="arithmatex">\(k=1,2\cdots\)</span>, then <span class="arithmatex">\(\forall N&gt;0\)</span> and <span class="arithmatex">\(N&lt;\infty\)</span>,</p>
+<div class="arithmatex">\[
+\bigcup_{n=1}^N E_n\in \Omega,\quad \bigcap_{n=1}^N E_n\in \Omega
+\]</div>
+</div>
+<p>Using the above corollary we could have a great result for operations of sequence of measurable sets.</p>
+<p><a id="union-sequence-measurable-sets"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for union of sequence of measurable sets</p>
+<p>If <span class="arithmatex">\(\{E_n\}_{n\geq 1}\)</span> are mutually disjoint and <span class="arithmatex">\(E_n\in \Omega\)</span>, then </p>
+<div class="arithmatex">\[
+\bigcup_n E_n\in \Omega
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="measure-operations-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice that <span class="arithmatex">\(\forall N&gt;0\)</span>, using <a href="#finite-measurable-sets">corollary</a></p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A)&amp;\geq m^*\left[A\cap \left(\bigcup_{n=1}^N E_n\right)\right]+m^*\left[A\cap \left(\bigcup_{n=1}^N E_n\right)^c\right]\\
+\end{align*}
+\]</div>
+<p>Here we could not let <span class="arithmatex">\(N\rightarrow \infty\)</span>, due to <span class="arithmatex">\(N\)</span> is embedded in the operation of sets, so we need to get it out. By additivity for mutually disjoint sets, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A)&amp;=\left[\sum_{n=1}^N m^*(A\cap E_n)\right] + m^*\left[A\cap \left(\bigcup_{n=1}^N E_n\right)^c\right]\quad\\
+&amp;\geq \left[\sum_{n=1}^N m^*(A\cap E_n)\right] + m^*\left[A\cap \left(\bigcup_{n=1}^\infty E_n\right)^c\right]
+\end{align*}
+\]</div>
+<p>let <span class="arithmatex">\(N\rightarrow \infty\)</span>, and get <span class="arithmatex">\(\infty\)</span> back into operations of sets</p>
+<div class="arithmatex">\[
+\begin{align*}
+m^*(A)&amp;\geq\left[\sum_{n=1}^\infty m^*(A\cap E_n)\right] + m^*\left[A\cap \left(\bigcup_{n=1}^\infty E_n\right)^c\right]\\
+&amp;\geq m^*\left[\bigcup_{n=1}^\infty (A\cap E_n)\right]+ m^*\left[A\cap \left(\bigcup_{n=1}^\infty E_n\right)^c\right]\quad \text{by subadditivity}\\
+&amp;=m^*\left[A\cap \left(\bigcup_{n=1}^\infty E_n\right)\right] +m^*\left[A\cap \left(\bigcup_{n=1}^\infty E_n\right)^c\right]
+\end{align*}
+\]</div>
+<p>and we are done.</p>
+</div>
+</div>
+</div>
+<p>In a similar way, we have</p>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>If <span class="arithmatex">\(\{E_n\}_{n\geq 1}\)</span> are mutually disjoint and <span class="arithmatex">\(E_n\in \Omega\)</span>, then </p>
+<div class="arithmatex">\[
+\bigcap_n E_n\in \Omega
+\]</div>
+</div>
+<p>the above two theorems both hold if we remove the condition "mutually disjoint".</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for operations of denumerable sets</p>
+<p>Assume <span class="arithmatex">\(E_n\in \Omega\)</span>, <span class="arithmatex">\(n=1,2,\cdots\)</span>, then </p>
+<div class="arithmatex">\[
+\bigcup_n E_n\in \Omega,\quad \bigcap_n E_n\in \Omega
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="measure-operations-proof_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We could use the conclusion from the above two theorem. That is, construct mutually disjoint sets to help prove. We would use some conclusion from <a href="../Sets/#construct-mutually-disjoint-sets">Sets</a>.</p>
+<p>Define <span class="arithmatex">\(A_1=E_1\)</span>, <span class="arithmatex">\(A_n=E_n-\bigcup_{k=1}^{n-1}E_n (n\geq 2)\)</span> so we have a sequence of mutually disjoint sets <span class="arithmatex">\(\{A_n\}\)</span> which satisfies <span class="arithmatex">\(\bigcup_n A_n=\bigcup_n E_n\)</span>.</p>
+<p>Because <span class="arithmatex">\(\bigcup_n A_n\)</span> are measurable due to <a href="#union-sequence-measurable-sets">Theorem for union of sequence of measurable sets</a>, so <span class="arithmatex">\(\bigcup_n E_n\in \Omega\)</span>.</p>
+</div>
+</div>
+</div>
+<p>To be more specific, we have a good property for measurable sets, which is denumerable additivity, or <span class="arithmatex">\(\sigma\)</span>-additiviity.</p>
+<div class="admonition success">
+<p class="admonition-title"><span class="arithmatex">\(\sigma\)</span>-additivity</p>
+<p>If <span class="arithmatex">\(\{E_n\}_{n\geq 1}\)</span> are mutually disjoint and <span class="arithmatex">\(E_n\in \Omega\)</span>, then <span class="arithmatex">\(\forall A\in \mathbb{R}\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align}
+m^*\left[A\cap \left(\bigcup_{n=1}^\infty E_n\right)\right]=\sum_{n=1}^\infty m^*(A\cap E_n)\label{sigma-additivity}
+\end{align}\]</div>
+<p>If we let <span class="arithmatex">\(A=\mathbb{R}\)</span>, then equation <span class="arithmatex">\(\ref{sigma-additivity}\)</span> becomes</p>
+<div class="arithmatex">\[
+m^*\left(\bigcup_{n=1}^\infty E_n\right)=\sum_{n=1}^\infty m^*(E_n)
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="measure-operations-proof_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The proof has been given in proof of <a href="#union-sequence-measurable-sets">Theorem for union of sequence of measurable sets</a>.</p>
+</div>
+</div>
+</div>
+<h3 id="limit-operation">Limit Operation<a class="headerlink" href="#limit-operation" title="Permanent link">&para;</a></h3>
+<p>Now we introduce limit operation which might be useful in future proof.</p>
+<div class="admonition success">
+<p class="admonition-title">Limit Operations</p>
+<p>If a sequence of measurable sets <span class="arithmatex">\(\{E_n\}_{n\geq 1}\)</span> satisfies either of the following condition </p>
+<p>(i) <span class="arithmatex">\(\{E_n\}\)</span> is monotonically increasing.</p>
+<p>(ii) <span class="arithmatex">\(\{E_n\}\)</span> is monotonically decreasing, and <span class="arithmatex">\(m(E_1)&lt;\infty\)</span>.</p>
+<p>then </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty} m(E_n) = m\left(\lim_{n\rightarrow \infty} E_n\right)
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="limit-operation-proof-for-i" name="__tabbed_10" type="radio" /><input id="limit-operation-proof-for-ii" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="limit-operation-proof-for-i">Proof for (i)</label><label for="limit-operation-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) means <span class="arithmatex">\(E_1\subset E_2\subset\cdots\)</span>, so </p>
+<div class="arithmatex">\[
+m\left( \lim_{n\rightarrow \infty} E_n\right)=m\left( \bigcup_{n=1}^\infty E_n \right)
+\]</div>
+<p>and </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty} m(E_n)=\lim_{N\rightarrow \infty}m\left( \bigcup_{n=1}^N E_n \right)
+\]</div>
+<p>and the proposition to be proved equals to </p>
+<div class="arithmatex">\[
+m\left( \bigcup_{n=1}^\infty E_n \right)=\lim_{N\rightarrow \infty}m\left( \bigcup_{n=1}^N E_n \right)
+\]</div>
+<p>Let <span class="arithmatex">\(A_1=E_1\)</span>, <span class="arithmatex">\(A_n=E_n-\bigcup_{k=1}^{n-1}E_n (n\geq 2)\)</span>, so <span class="arithmatex">\(\{A_n\}\)</span> are mutually disjoint and satisfies <span class="arithmatex">\(\bigcup_n A_n=\bigcup_n E_n\)</span>. So</p>
+<div class="arithmatex">\[
+\begin{align*}
+m\left( \bigcup_{n=1}^\infty E_n \right)&amp;=m\left( \bigcup_{n=1}^\infty A_n \right)\\
+&amp;=\sum_{n=1}^\infty m(A_n)\quad\text{by $\sigma$-additivity}\\
+&amp;=\lim_{N\rightarrow \infty}\sum_{n=1}^N m(A_n)\quad\text{holds for series}\\
+&amp;=\lim_{N\rightarrow \infty}m\left( \bigcup_{n=1}^N A_n \right)\\
+&amp;=\lim_{N\rightarrow \infty}m\left( \bigcup_{n=1}^N E_n \right)\\
+\end{align*}
+\]</div>
+<p>and we are done.</p>
+</div>
+<div class="tabbed-block">
+<p>(ii) means <span class="arithmatex">\(E_1\supset E_2\supset \cdots\)</span>. We could use the conclusion from (i), that is, let <span class="arithmatex">\(A_n=E_1\backslash E_n (n\geq 1)\)</span> so it is easy to see that</p>
+<div class="arithmatex">\[
+A_1\subset A_2\subset \cdots \text{ and } \bigcup_n A_n=E_1\backslash \left(\bigcup_n E_n\right)
+\]</div>
+<p>So by operation of difference, </p>
+<div class="arithmatex">\[
+\begin{align*}
+m(E_1)-m\left(\bigcup_n E_n\right)&amp;=m\left(\bigcup_n A_n\right)\\
+m(E_1)&amp;=\lim_n m(A_n)+m\left(\bigcup_n A_n\right)\\
+\Rightarrow \lim_n [m(E_1)-m(A_n)]&amp;=m\left(\bigcup_n A_n\right) \\
+\lim_n [m(E_1\backslash A_n)]&amp;=m\left(\bigcup_n A_n\right)\quad\text{by operation of difference}\\
+\lim_n m(E_n)&amp;=m\left(\bigcup_n A_n\right)
+\end{align*}
+\]</div>
+<p>and we are done.</p>
+</div>
+</div>
+</div>
+<h3 id="translation-invariance">Translation Invariance<a class="headerlink" href="#translation-invariance" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Translation</p>
+<p>Assume <span class="arithmatex">\(E\subset \mathbb{R}\)</span> and <span class="arithmatex">\(y\in \mathbb{R}\)</span>, then </p>
+<div class="arithmatex">\[
+E_y=\{x+y: x\in E\}
+\]</div>
+<p>is called a translation of <span class="arithmatex">\(E\)</span> about <span class="arithmatex">\(y\)</span>.</p>
+</div>
+<p>About translation, we have the following property.</p>
+<div class="admonition success">
+<p class="admonition-title">Property of Translation</p>
+<p>Assume <span class="arithmatex">\(E, F\subset \mathbb{R}\)</span>, then <span class="arithmatex">\(\forall y\in \mathbb{R}\)</span>,</p>
+<p>(i) <span class="arithmatex">\(E\cap E_y=(E_{-y}\cap F)_y\)</span>.</p>
+<p>(ii) <span class="arithmatex">\((E^c)_y=(E_y)^c\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(m^*(E)=m^*(E_y)\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Translation Invariance of Measure</p>
+<p>Assume <span class="arithmatex">\(E \in \Omega\)</span>, then <span class="arithmatex">\(\forall y\in \mathbb{R}\)</span>, <span class="arithmatex">\(E_y\in \Omega\)</span> and <span class="arithmatex">\(m(E_y)=m(E)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="translation-invariance-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="translation-invariance-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use the above property to transfer Carath&eacute;odory condition of <span class="arithmatex">\(E\)</span> into <span class="arithmatex">\(E_y\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="approximate-measurable-set-with-open-closed-sets">Approximate Measurable set with open &amp; closed sets<a class="headerlink" href="#approximate-measurable-set-with-open-closed-sets" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Approximation</p>
+<p>The following proposition are equivalent.</p>
+<p>(i) <span class="arithmatex">\(E\in \Omega\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \text{ open set }G\supset E\)</span>, such that <span class="arithmatex">\(m^*(G-E)&lt;\varepsilon\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \text{ closed set} F \subset E\)</span>, such that <span class="arithmatex">\(m^*(E-F)&lt;\varepsilon\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii" name="__tabbed_12" type="radio" /><input id="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii_1" name="__tabbed_12" type="radio" /><input id="approximate-measurable-set-with-open-closed-sets-ii-rightarrow-i" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii">(i) <span class="arithmatex">\(\Rightarrow\)</span> (ii)</label><label for="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii_1">(i) <span class="arithmatex">\(\Rightarrow\)</span> (ii)</label><label for="approximate-measurable-set-with-open-closed-sets-ii-rightarrow-i">(ii) <span class="arithmatex">\(\Rightarrow\)</span> (i)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) <span class="arithmatex">\(\Rightarrow\)</span> (ii).</p>
+</div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
 </div>
 </div>
 
