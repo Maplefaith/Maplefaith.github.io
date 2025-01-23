@@ -1752,6 +1752,8 @@
       
         
       
+        
+      
     
     
       
@@ -1995,21 +1997,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration of Sets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#borel-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      Borel Set
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2042,6 +2029,27 @@
   
   <span class="md-ellipsis">
     Lebesgue Measure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Measurable_Func/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurable Function
   </span>
   
 
@@ -3455,21 +3463,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration of Sets">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#borel-set" class="md-nav__link">
-    <span class="md-ellipsis">
-      Borel Set
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3593,6 +3586,7 @@ A \cup B = B \cup A, \quad A \cap B = B \cap A
 A - B = A \cap B^c = B^c - A^c
 \]</div>
 </div>
+<p><a id="subtraction-relation"></a></p>
 <div class="question">
 <p><strong>Example</strong>.  Prove:</p>
 <div class="arithmatex">\[
@@ -3660,13 +3654,34 @@ x\in A_j-\bigcup_{k=1}^{j-1} A_k=A_j\cap \left(\bigcup_{k=1}^{j-1}A_k\right)^c =
 </div>
 </div>
 </div>
-<p>The above two conclusions are quite useful in configuration of sets when we encounter measurable sets.</p>
+<p><div class="question" markdown>
+<strong>Example</strong>. Prove</p>
+<p>$$
+\bigcup_{n=1}^\infty (A-A_n)=A-\bigcap_{n=1}^\infty A_n
+$$
+</div></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="de-morgan-formula-proof_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="de-morgan-formula-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Just use De Morgan formula.</p>
+<div class="arithmatex">\[
+\begin{align*}
+A-\bigcap_{n=1}^\infty A_n&amp;=A\cap \left[\bigcap_{n=1}^\infty A_n\right]^c\\
+&amp;=A\cap \bigcup_{n=1}^\infty A_n^c\\
+&amp;=\bigcup_{n=1}^\infty (A\cap A_n^c)\\
+&amp;=\bigcup_{n=1}^\infty (A-A_n)
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>The above conclusions are quite useful in configuration of sets when we encounter measurable sets.</p>
 <h2 id="equalibrium-of-sets">Equalibrium of Sets<a class="headerlink" href="#equalibrium-of-sets" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Cantor-Bernstein Theorem</p>
 <p>If <span class="arithmatex">\( A \sim B_1 \subset B \)</span> and <span class="arithmatex">\( B \sim A_1 \subset A \)</span>, then <span class="arithmatex">\( A \sim B \)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="equalibrium-of-sets-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="equalibrium-of-sets-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="equalibrium-of-sets-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="equalibrium-of-sets-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>From what we already know, there exist two bijections <span class="arithmatex">\( f : A \to B_1 \)</span> and <span class="arithmatex">\( g : B \to A_1 \)</span> such that <span class="arithmatex">\( B_1 = f(A) \)</span> and <span class="arithmatex">\( A_1 = g(B) \)</span>. We aim to prove that <span class="arithmatex">\( A \sim B \)</span>.</p>
@@ -3737,7 +3752,7 @@ A_1 &amp;= (A_1 \setminus A_2) \cup (A_2 \setminus A_3) \cup (A_3 \setminus A_4)
 <li>The <strong>denumerable</strong> union of <strong>denumerable</strong> sets is <strong>denumerable</strong>.</li>
 </ol>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="denumerability-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="denumerability-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We only prove (iii).  </p>
@@ -3762,7 +3777,7 @@ B_m = \{ a_1^{(m)}, a_2^{(m-1)}, \dots, a_m^{(1)} \}, \quad m = 1, 2, \dots
 <p class="admonition-title">Corollary</p>
 <p><span class="arithmatex">\( \mathbb{Q} \)</span> is denumerable.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="denumerability-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="denumerability-proof_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Define <span class="arithmatex">\( A_n = \{ 1/n, 2/n, \dots \} \)</span>, which is denumerable. Then:</p>
@@ -3781,7 +3796,7 @@ B_m = \{ a_1^{(m)}, a_2^{(m-1)}, \dots, a_m^{(1)} \}, \quad m = 1, 2, \dots
 <div class="question">
 <p><strong>Example</strong>.  Prove: The set of mutually exclusive open intervals is denumerable.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="denumerability-proof_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="denumerability-proof_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let <span class="arithmatex">\( \{ I_\lambda \}_{\lambda \in \Lambda} \subset \mathbb{R} \)</span> be a collection of mutually exclusive open intervals. For each <span class="arithmatex">\( \lambda \in \Lambda \)</span>, choose a rational number <span class="arithmatex">\( r_\lambda \in I_\lambda \)</span> and define:</p>
@@ -3866,7 +3881,7 @@ V(\pmb{x}, \delta) \cap E \neq \varnothing \quad \text{and} \quad V(\pmb{x}, \de
 \forall \pmb{y} \in V(\pmb{x}, \varepsilon), \pmb{y} \text{ is an interior point of } V(\pmb{x}, \varepsilon).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="interior-point-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="interior-point-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="interior-point-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="interior-point-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>For any <span class="arithmatex">\( \pmb{y} \in V(\pmb{x}, \varepsilon) \)</span>, we have <span class="arithmatex">\( d(\pmb{y}, \pmb{x}) &lt; \varepsilon \)</span>. Choose <span class="arithmatex">\( \delta = \varepsilon - d(\pmb{y}, \pmb{x}) \)</span>. Then:</p>
@@ -3910,7 +3925,7 @@ E^o \subset E
 (ii) <span class="arithmatex">\( \mathbb{R}^n \)</span> is an <strong>open set</strong>.<br />
 (iii) <span class="arithmatex">\( E^o \)</span> is an <strong>open set</strong>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="open-set-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="open-set-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="open-set-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="open-set-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We only prove (iii).  </p>
@@ -3995,7 +4010,7 @@ A' \subset B', \quad A^o \subset B^o, \quad \overline{A} \subset \overline{B}
 (A \cap B)' \subset A' \cap B', \quad \overline{A \cap B} \subset \overline{A} \cap \overline{B}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="accumulation-point-proof-for-i" name="__tabbed_11" type="radio" /><input id="accumulation-point-proof-for-ii" name="__tabbed_11" type="radio" /><input id="accumulation-point-proof-for-iii" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="accumulation-point-proof-for-i">Proof for (i)</label><label for="accumulation-point-proof-for-ii">Proof for (ii)</label><label for="accumulation-point-proof-for-iii">Proof for (iii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="accumulation-point-proof-for-i" name="__tabbed_12" type="radio" /><input id="accumulation-point-proof-for-ii" name="__tabbed_12" type="radio" /><input id="accumulation-point-proof-for-iii" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="accumulation-point-proof-for-i">Proof for (i)</label><label for="accumulation-point-proof-for-ii">Proof for (ii)</label><label for="accumulation-point-proof-for-iii">Proof for (iii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) If <span class="arithmatex">\( A \subset B \)</span>, then:</p>
@@ -4079,7 +4094,7 @@ A' \cap B' = \mathbb{R} \neq \varnothing = (A \cap B)', \quad \overline{A} \cap 
 <p>(i) <strong>Infinite</strong> intersection of closed sets is a closed set.<br />
 (ii) <strong>Finite</strong> union of closed sets is a closed set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="closed-set-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="closed-set-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The proof follows directly from De Morgan's formula and the properties of open sets (<a href="#de-morgan-formula">De Morgan Formula</a> and <a href="#theo-properties-open-set">Theorem of Properties of Open Sets</a>).</p>
@@ -4107,7 +4122,7 @@ A' \cap B' = \mathbb{R} \neq \varnothing = (A \cap B)', \quad \overline{A} \cap 
 <p class="admonition-title">Theorem of Closed Set and Derived Set Condition</p>
 <p>A set <span class="arithmatex">\( E \)</span> is a closed set if and only if <span class="arithmatex">\( E' \subset E \)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="closed-set-proof_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="closed-set-proof_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4151,7 +4166,7 @@ E' \subset E
 <p class="admonition-title">Theorem of Derived Set Closure</p>
 <p>The <strong>derived set</strong> of any set is a closed set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="closed-set-proof-version-one" name="__tabbed_14" type="radio" /><input id="closed-set-proof-version-two" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof-version-one">Proof Version One</label><label for="closed-set-proof-version-two">Proof Version Two</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="closed-set-proof-version-one" name="__tabbed_15" type="radio" /><input id="closed-set-proof-version-two" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof-version-one">Proof Version One</label><label for="closed-set-proof-version-two">Proof Version Two</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Given a set <span class="arithmatex">\( E \)</span>, we prove that <span class="arithmatex">\( E'^c \)</span> is an open set.  </p>
@@ -4191,7 +4206,7 @@ V(\pmb{y}, \zeta) \subset V(\pmb{x}, \delta) \subset E^c
 <p class="admonition-title">Corollary</p>
 <p>The closure <span class="arithmatex">\( \overline{E} \)</span> is a closed set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="closed-set-a-bad-proof" name="__tabbed_15" type="radio" /><input id="closed-set-another-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="closed-set-a-bad-proof">A Bad Proof</label><label for="closed-set-another-proof">Another Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="closed-set-a-bad-proof" name="__tabbed_16" type="radio" /><input id="closed-set-another-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="closed-set-a-bad-proof">A Bad Proof</label><label for="closed-set-another-proof">Another Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We prove that <span class="arithmatex">\( \overline{E}^c \)</span> is an open set.  </p>
@@ -4238,7 +4253,7 @@ V(\pmb{x}, \delta) \subset \overline{E}^c
 f(x) \text{ is continuous on } I \iff \forall \text{ open set } G \subset (-\infty, \infty), \quad f^{-1}(G) \text{ is an open set.}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="closed-set-proof_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="closed-set-proof_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4383,7 +4398,7 @@ G = \bigcup_{n=1}^\infty (\alpha_n, \beta_n)
 \]</div>
 <p>where <span class="arithmatex">\( (\alpha_n, \beta_n) \)</span> are mutually exclusive (disjoint) open intervals.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="configuration-of-sets-proof" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="configuration-of-sets-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="configuration-of-sets-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="configuration-of-sets-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Easy to see that:</p>
@@ -4421,7 +4436,6 @@ G \text{ is a union of denumerable half-open cubes which are mutually exclusive.
 F^c = \mathbb{R} - F \text{ is a denumerable union of open sets which are mutually exclusive and share no common endpoints.}
 \]</div>
 </div>
-<h3 id="borel-set">Borel Set<a class="headerlink" href="#borel-set" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definition of <span class="arithmatex">\( G_\delta \)</span> Set and <span class="arithmatex">\( F_\sigma \)</span> Set</p>
 <ul>
@@ -4474,7 +4488,7 @@ P_0 = \bigcap_{n=1}^\infty F_n
 (iii) The Cantor set has base <span class="arithmatex">\( \aleph_0 \)</span>.<br />
 (iv) The Cantor set is a <strong>sparse set</strong>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:3"><input checked="checked" id="cantor-set-proof-for-i" name="__tabbed_18" type="radio" /><input id="cantor-set-proof-for-ii-ⅰ" name="__tabbed_18" type="radio" /><input id="cantor-set-proof-for-ii-ⅱ" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="cantor-set-proof-for-i">Proof for (i)</label><label for="cantor-set-proof-for-ii-ⅰ">Proof for (ii) Ⅰ</label><label for="cantor-set-proof-for-ii-ⅱ">Proof for (ii) Ⅱ</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:3"><input checked="checked" id="cantor-set-proof-for-i" name="__tabbed_19" type="radio" /><input id="cantor-set-proof-for-ii-ⅰ" name="__tabbed_19" type="radio" /><input id="cantor-set-proof-for-ii-ⅱ" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="cantor-set-proof-for-i">Proof for (i)</label><label for="cantor-set-proof-for-ii-ⅰ">Proof for (ii) Ⅰ</label><label for="cantor-set-proof-for-ii-ⅱ">Proof for (ii) Ⅱ</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) This is easily seen from the definition of the Cantor set. Specifically, for any <span class="arithmatex">\( x \in P_0 \)</span>, there does not exist <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
