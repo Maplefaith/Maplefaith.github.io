@@ -1989,6 +1989,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#levi-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levi Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fatou-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fatou Lemma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lebesgues-dominated-convergence-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue's Dominated Convergence Theorem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue's Dominated Convergence Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-ldct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of LDCT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann-integral-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riemann Integral &amp; Lebesgue Integral
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3329,6 +3380,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#levi-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levi Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fatou-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fatou Lemma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lebesgues-dominated-convergence-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue's Dominated Convergence Theorem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue's Dominated Convergence Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-ldct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of LDCT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann-integral-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riemann Integral &amp; Lebesgue Integral
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3439,6 +3541,7 @@ E_k:=\{f_n\geq \lambda c\}, \forall n\in \mathbb{N}^+.
 </div>
 </div>
 </div>
+<p><a id="Theorem-for-limit-of-monotonically-increasing- sequences"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for limit of monotonically increasing sequences</p>
 <p>Assume <span class="arithmatex">\(\{f_n\}\)</span> and <span class="arithmatex">\(\{g_n\}\)</span> are non-negative simple functions on measurable set <span class="arithmatex">\(D\)</span>. If <span class="arithmatex">\(\forall x\in D\)</span>, <span class="arithmatex">\(\{f_n(x)\}\)</span> and <span class="arithmatex">\(\{g_n(x)\}\)</span> monotonically increase and converge to the same limit, then </p>
@@ -3479,19 +3582,58 @@ E_k:=\{f_n\geq \lambda c\}, \forall n\in \mathbb{N}^+.
 </div>
 <div class="admonition success">
 <p class="admonition-title">Equivalent definition for Lebesgue integral of non-negative measurable function</p>
+<p>Assume <span class="arithmatex">\(f(x)\)</span> is a non-negative measurable function on <span class="arithmatex">\(E\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E fdx=\sup_{\varphi(x)\leq f(x)}\left\{\int_E \varphi(x) dx: \varphi(x) \text{ is a non-negative simple function}\right\}.
+\]</div>
+<p>Or to be more specific, if we define <span class="arithmatex">\(\varPhi(f,E)\)</span> is a set composed by non-negative simple function <span class="arithmatex">\(\varphi\)</span> that satisfy <span class="arithmatex">\(\varphi\leq f\)</span> on <span class="arithmatex">\(E\)</span>, then</p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_E \varphi_k(x)dx=\sup_{\varphi\in \varPhi(f,E)}\int_E \varphi(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="non-negative-measurable-function-integral-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="non-negative-measurable-function-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p><span class="arithmatex">\(\leq\)</span>. Apparently, because <span class="arithmatex">\(\forall k\in \mathbb{N}^+\)</span>, we have <span class="arithmatex">\(\varphi_k\in \varPhi(f,E)\)</span>, so "<span class="arithmatex">\(\leq\)</span>" holds naturally.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\geq\)</span>. We know that <span class="arithmatex">\(\forall \varphi\in \varPhi(f,E)\)</span>, it satisfies <span class="arithmatex">\(\varphi(x)\leq f(x)=\lim_{k\rightarrow \infty}\varphi_k(x),\forall x\in E\)</span>, so by monotonicity</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_E \varphi(x)dx\leq\int_E\lim_{k\rightarrow \infty}\varphi_k(x)dx
+\]</div>
+<p>by <a href="#Theorem-for-limit-of-monotonically-increasing- sequences">Theorem for limit of monotonically increasing sequences</a>, we have</p>
+<div class="arithmatex">\[
+\int_E \varphi(x)dx\leq\lim_{k\rightarrow \infty}\int_E \varphi_k dx
+\]</div>
+<p>apply superior operation on both sides and we have "<span class="arithmatex">\(\geq\)</span>" hold.</p>
+</div>
+</div>
 </div>
 <h3 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Properties</p>
-<p>(iv) <span class="arithmatex">\(\int_E fdx=\int_Afdx+\int_B fdx. (E=A\cup B, A\cap B=\varnothing)\)</span></p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a non-negative measurable function on <span class="arithmatex">\(E\)</span>, then </p>
+<p>(iii) if <span class="arithmatex">\(A\subset E\)</span> is also a measurable set, then </p>
+<div class="arithmatex">\[
+\int_A f(x)dx=\int_E f(x)\chi_A(x)dx
+\]</div>
+<p>(iv) if <span class="arithmatex">\(E=A\cup B, A\cap B=\varnothing\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E fdx=\int_Afdx+\int_B fdx.
+\]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="properties_1-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="properties_1-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(iv) Using interval additivity of non-negative simple functions.</p>
 </div>
 </div>
 </div>
+<p><a id="Chebyshev-Inequation"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Chebyshev Inequation</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is a non-negative function on <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(\forall \alpha&gt;0\)</span>, </p>
@@ -3499,7 +3641,7 @@ E_k:=\{f_n\geq \lambda c\}, \forall n\in \mathbb{N}^+.
 m(\{f\geq \alpha\})\leq \frac{1}{\alpha}\int_E f(x)dx.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="properties_1-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="properties_1-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let <span class="arithmatex">\(A=\{f\geq \alpha\}\)</span>, then</p>
@@ -3534,16 +3676,12 @@ f(x)=f^+(x)-f^-(x),\quad |f(x)|=f^+(x)+f^-(x).
 \left|\int_D fdx\right|\leq \int_D |f|dx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="genaral-measurable-function-integral-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="genaral-measurable-function-integral-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="genaral-measurable-function-integral-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="genaral-measurable-function-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(f\in L(D)\)</span> iff <span class="arithmatex">\(f^+, f^-\in L(D)\)</span> iff <span class="arithmatex">\(|f|\in L(D)\)</span>. </p>
 </div>
 </div>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Theorem of Lebesgue integral</p>
-<p>(i) </p>
 </div>
 <h3 id="properties_2">Properties<a class="headerlink" href="#properties_2" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
@@ -3560,7 +3698,7 @@ f(x)=f^+(x)-f^-(x),\quad |f(x)|=f^+(x)+f^-(x).
 \int_{E_1\cup E_2}fdx=\int_{E_1} fdx+\int_{E_2} fdx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="properties_2-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="properties_2-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="properties_2-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="properties_2-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) from equivalent definition.</p>
@@ -3571,6 +3709,345 @@ f(x)=f^+(x)-f^-(x),\quad |f(x)|=f^+(x)+f^-(x).
 </div>
 </div>
 </div>
+<h2 id="levi-theorem">Levi Theorem<a class="headerlink" href="#levi-theorem" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Levi Theorem</p>
+<p>Assime <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> are non-negative measurable function on <span class="arithmatex">\(D\)</span>, satisfy </p>
+<div class="arithmatex">\[
+f_1(x)\leq f_2(x)\leq\cdots,\quad x\in D
+\]</div>
+<p>and <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f_n(x)=f(x)\)</span>, then </p>
+<div class="arithmatex">\[
+\int_D fdx=\lim_{n\rightarrow \infty}\int_D f_n dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="levi-theorem-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="levi-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(\int_D fdx\geq\lim_{n\rightarrow \infty}\int_D f_n dx\)</span>.</li>
+</ul>
+<p>Notice that limit function <span class="arithmatex">\(f\)</span> is also measurable, so its L integral has definition. Then since <span class="arithmatex">\(f_1\leq f_2\leq\cdots\leq f\)</span>, by monotonicity of L integral, we have</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Some examples which do not satisfy condition of Levi Theorem.</p>
+<p>(i) <span class="arithmatex">\(f_k(x)=\chi_{[k,k+1]}(x),\quad E=\mathbb{R}\)</span>.</p>
+<p><span class="arithmatex">\(f_k(x)\rightarrow f(x)=0\)</span>, but</p>
+<div class="arithmatex">\[
+\int_E f_kdx =1&gt;0=\int_E fdx
+\]</div>
+<p>(ii) <span class="arithmatex">\(f_k(x)=\frac{1}{k}\chi_{[0,k]}(x),\quad E=\mathbb{R}\)</span>.</p>
+<p><span class="arithmatex">\(f_k(x)\rightrightarrows f(x)=0\)</span>, but</p>
+<div class="arithmatex">\[
+\int_E f_kdx =1&gt;0=\int_E fdx
+\]</div>
+</div>
+<p>There are two natural corollaries derived from Levi Theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 1: Series form of Levi Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a non-negative simple function sequence, then </p>
+<div class="arithmatex">\[
+\int_E \sum_{n=1}^\infty f_n(x)dx=\sum_{n=1}^\infty \int_E f_n(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="levi-theorem-proof_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="levi-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(u_k(x)=\sum_{i=1}^k f_i(x)\)</span>, which satisfies the condition of Levi Theorem.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2: Denumerable Additivity</p>
+<p>Assume <span class="arithmatex">\(E\in \Omega\)</span>, <span class="arithmatex">\(E=\bigcup_{n=1}^\infty E_n\)</span>, where <span class="arithmatex">\(E_i\cap E_j=\varnothing\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, <span class="arithmatex">\(f\geq 0\)</span>, then <span class="arithmatex">\(\forall k\in \mathbb{N}^+\)</span>, <span class="arithmatex">\(f\in L(E_k)\)</span>, and </p>
+<div class="arithmatex">\[
+\int_E f(x)dx=\sum_{k=1}^\infty \int_{E_k} f(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="levi-theorem-proof_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="levi-theorem-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(f_k(x)=f(x)\sum_{i=1}^k \chi_{E_i}(x)\)</span> and use property </p>
+</div>
+</div>
+</div>
+<h2 id="fatou-lemma">Fatou Lemma<a class="headerlink" href="#fatou-lemma" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Fatou Lemma</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a non-negativa measurable function sequence, then </p>
+<div class="arithmatex">\[
+\int_D \underline{\lim}\limits_{n\rightarrow \infty} f_ndx\leq \underline{\lim}\limits_{n\rightarrow \infty} \int_D f_n dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="fatou-lemma-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="fatou-lemma-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>From the definition of <a href="../Measurable_Func/#Function-Limit-superior-inferior">limit inferior of function</a>, we could define </p>
+<div class="arithmatex">\[
+g_n(x)=\inf_{k\geq n}f_k(x),\quad x\in D.
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. <span class="arithmatex">\(f_k(x)\geq 0\)</span>, <span class="arithmatex">\(f_k\in L(E)\)</span>. If </p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_E f_k(x)dx=0,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+f_k\overset{m}{\rightarrow} 0.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="fatou-lemma-proof_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="fatou-lemma-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall \sigma&gt;0\)</span>, by <a href="#Chebyshev-Inequation">Chebyshev Inequation</a></p>
+<div class="arithmatex">\[
+\sigma \cdot m(\{|f_k-0|\geq \sigma\})\leq \int_{\{|f_k-0|\geq \sigma\}} f_kdx \leq \int_E f_kdx \rightarrow 0(k\rightarrow \infty) 
+\]</div>
+<p>which means <span class="arithmatex">\(m(\{|f_k-0|\geq \sigma\})\rightarrow 0\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. <span class="arithmatex">\(f_k(x)\geq 0\)</span>, <span class="arithmatex">\(f_k\in L(E)\)</span>, and <span class="arithmatex">\(f_k\rightarrow f, a.e.x\in E\)</span>. If </p>
+<div class="arithmatex">\[
+\exists M&gt;0, \int_E f_k(x)dx\leq M,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+f\in L(E).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="fatou-lemma-proof_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="fatou-lemma-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\int_E fdx&amp;=\int_{E_1}\lim_{k\rightarrow \infty}f_kdx\\
+&amp;\leq \lim_{k\rightarrow \infty}\int_{E_1}f_kdx \quad\text{by Fatou Lemma}\\
+&amp;\leq \lim_{k\rightarrow \infty}\int_{E}f_kdx&lt;M
+\end{align*}
+\]</div>
+<p>Note that limit and limit inferior are of the same here.</p>
+</div>
+</div>
+</div>
+<h2 id="lebesgues-dominated-convergence-theorem">Lebesgue's Dominated Convergence Theorem<a class="headerlink" href="#lebesgues-dominated-convergence-theorem" title="Permanent link">&para;</a></h2>
+<p><a id="Dominated-Convergence-Theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lebesgue's Dominated Convergence Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a measurable function sequence <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(f_n\rightarrow f, a.e.x\in E\)</span>. If there exists <span class="arithmatex">\(g\in L(E)\)</span>, such that <span class="arithmatex">\(\forall n\geq 1\)</span>, <span class="arithmatex">\(|f_n(x)|\leq g(x), a.e.x\in E\)</span>, then <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f_n\)</span> is L integrable on <span class="arithmatex">\(E\)</span> and </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_E f_ndx=\int_E f dx
+\]</div>
+<p>where <span class="arithmatex">\(g\)</span> is also called the controlling function.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Since <span class="arithmatex">\(|f_n|\leq g\)</span>, so its limit value <span class="arithmatex">\(|f|\leq g\)</span>, so <span class="arithmatex">\(g\in L(E)\)</span> could induce <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f_n\)</span> are L integrable.</p>
+<p>Since <span class="arithmatex">\(|f_k-f|\leq |f_k|+|f|\leq 2g\)</span>, we could define </p>
+<div class="arithmatex">\[
+g_k(x)=2g-|f_k-f|\geq 0,
+\]</div>
+<p>then by <a href="#fatou-lemma">Fatou Lemma</a></p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E \underline{\lim}\limits_{k\rightarrow \infty}g_k(x)dx&amp;\leq \underline{\lim}\limits_{k\rightarrow \infty}\int_E g_k(x)dx\\
+\int_E \underline{\lim}\limits_{k\rightarrow \infty} (2g-|f_k-f|)dx&amp;\leq \underline{\lim}\limits_{k\rightarrow \infty}\int_E (2g-|f_k-f|)dx\\
+\int_E 2gdx &amp;\leq \underline{\lim}\limits_{k\rightarrow \infty}\left[\int_E 2gdx - \int_E |f_k-f|dx\right]\\
+\int_E 2gdx &amp;\leq \int_E 2g dx + \underline{\lim}\limits_{k\rightarrow \infty} \left(-\int_E |f_k-f|dx\right)\\
+0&amp;\leq -\overline{\lim}\limits_{k\rightarrow \infty}\int_E |f_k-f|dx\\
+\overline{\lim}\limits_{k\rightarrow \infty}\int_E |f_k-f|dx&amp;\leq 0
+\end{align*}
+\]</div>
+<p>So by relationship of limit superior and inferior</p>
+<div class="arithmatex">\[
+0\leq \underline{\lim}\limits_{k\rightarrow \infty}|f_k-f|dx\leq \overline{\lim}\limits_{k\rightarrow \infty}|f_k-f|dx\leq 0
+\]</div>
+<p>which gives </p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}|f_k-f|dx=0
+\]</div>
+<p>Since</p>
+<div class="arithmatex">\[
+\left|\int_E f_kdx-\int_E fdx\right|=\left|\int_E (f_k-f)dx\right|\leq \int_E |f_k-f|dx\rightarrow 0(k\rightarrow \infty)
+\]</div>
+<p>and we are done.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Another form of Dominated Convergence Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a measurable function sequence <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(f_n\overset{m}{\rightarrow} f, a.e.x\in E\)</span>. If there exists <span class="arithmatex">\(g\in L(E)\)</span>, such that <span class="arithmatex">\(\forall n\geq 1\)</span>, <span class="arithmatex">\(|f_n(x)|\leq g(x), a.e.x\in E\)</span>, then <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f_n\)</span> is L integrable on <span class="arithmatex">\(E\)</span> and </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_E f_ndx=\int_E f dx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use contradiction and the above <a href="#Dominated-Convergence-Theorem">Dominated Convergence Theorem</a>.</p>
+<p>Let <span class="arithmatex">\(a_k=\int_E f_kdx\)</span>, <span class="arithmatex">\(a=\int_E fdx\)</span>. Assume <span class="arithmatex">\(a_k\nrightarrow a\)</span>, then <span class="arithmatex">\(\exists \{k_j\}\)</span>, such that the convergence of its subsequence</p>
+<div class="arithmatex">\[
+\lim_{j\rightarrow \infty}\int_E f_{k_j}dx=A\neq a.
+\]</div>
+<p>we want to find a point that contradicts. Since <span class="arithmatex">\(f_k\overset{m}{\rightarrow}f\)</span>, we have <span class="arithmatex">\(f_{k_j}\overset{m}{\rightarrow}f\)</span>. By <a href="../Measurable_Func/#Riesz-Theorem">Riesz Theorem</a>, we have</p>
+<div class="arithmatex">\[
+f_{k_{j_i}}\rightarrow f, a.e.x\in E
+\]</div>
+<p>Combined with <span class="arithmatex">\(|f_{k_{j_i}}|\leq g\)</span>, by <a href="#Dominated-Convergence-Theorem">Dominated Convergence Theorem</a>, we have</p>
+<div class="arithmatex">\[
+\lim_{i\rightarrow \infty}\int_E f_{k_{j_i}}dx=\int_E fdx=A
+\]</div>
+<p>while <span class="arithmatex">\(a_{k_j}\rightarrow A\neq a\)</span>, we have <span class="arithmatex">\(a_{k_{j_i}}\rightarrow A\neq a\)</span>, which contradics!</p>
+</div>
+</div>
+</div>
+<h3 id="applications-of-ldct">Applications of LDCT<a class="headerlink" href="#applications-of-ldct" title="Permanent link">&para;</a></h3>
+<p>The following come some applications of LDCT.</p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 1: Term-by-term Integration Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}\)</span> are measurable functions on <span class="arithmatex">\(D\)</span>, satisfies </p>
+<div class="arithmatex">\[
+\sum\limits_{n=1}^\infty \int\limits_E |f_n|dx&lt;\infty,
+\]</div>
+<p>then <span class="arithmatex">\(f:=\sum\limits_{n=1}^\infty f_n\)</span> converges absolutely <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(D\)</span>, and </p>
+<div class="arithmatex">\[
+\int_E fdx = \sum_{n=1}^\infty \int_E f_ndx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="applications-of-ldct-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Consider define <span class="arithmatex">\(F_k(x):=\sum\limits_{j=1}^\infty f_j,k\in \mathbb{N}^+\)</span>, then <span class="arithmatex">\(g=\sum\limits_{k=1}^\infty |f_k|\)</span>.</p>
+<p>Apply LDCT to <span class="arithmatex">\(F_k\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2: limit of integral region theorem</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a measurable function on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(E_1\subset E_2\subset \cdots\)</span> is a sequence of subsets of <span class="arithmatex">\(E\)</span>, which satisfy <span class="arithmatex">\(E=\bigcup_{k=1}^\infty E_k\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E fdx=\lim_{k\rightarrow \infty}\int_{E_k}fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="applications-of-ldct-proof_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Calculate </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_{(0,+\infty)}\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)dx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="applications-of-ldct-answer" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(f_n(x)=\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)\)</span>, <span class="arithmatex">\(f(x)=0\)</span>. Here we have to discuss a controlling function.</p>
+<ul>
+<li><span class="arithmatex">\(x\in(0,1]\)</span>. Notice</li>
+</ul>
+<div class="arithmatex">\[
+\left|\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)\right|\leq \left|\frac{n\sqrt{x}}{1+n^2x^2}\right|\leq \frac{n\sqrt{x}}{2nx}=\frac{1}{\sqrt{x}}.
+\]</div>
+<p>whose L integral is finite on <span class="arithmatex">\((0,1]\)</span>, so Choose <span class="arithmatex">\(g(x)=\frac{1}{2\sqrt{x}}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(x\in (1,+\infty)\)</span>. Notice</li>
+</ul>
+<div class="arithmatex">\[
+\left|\frac{n\sqrt{x}}{1+n^2x^2}\right|\leq \frac{n\sqrt{x}}{n^2x^2}\leq \frac{1}{x^{3/2}}.
+\]</div>
+<p>whose L integral is finite on <span class="arithmatex">\((1,+\infty)\)</span>, so choose <span class="arithmatex">\(g(x)=\frac{1}{x^{3/2}}\)</span>.</p>
+<p>Thus consider</p>
+<div class="arithmatex">\[
+g(x)=\begin{cases}
+\frac{1}{2\sqrt{x}},\quad x\in(0,1]\\
+\frac{1}{x^{3/2}},\quad x\in (1,+\infty).
+\end{cases}
+\]</div>
+<p>So <span class="arithmatex">\(f_n(x)\)</span> satisfy LDCT, meaning</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_{(0,+\infty)}\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)dx=\int_{(0,+\infty)}0dx=0.
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of denumberable additivity</p>
+<p>Assume <span class="arithmatex">\(a\)</span> is a measurable function on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\{E_k\}_{k\geq 1}\)</span> is a sequence of subsets of <span class="arithmatex">\(E\)</span>, which satisfies <span class="arithmatex">\(E=\bigcup_{k} E_k\)</span> and <span class="arithmatex">\(E_i\cap E_j=\varnothing, \forall i,j\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, then</p>
+<div class="arithmatex">\[
+\int_E fdx=\sum_{k=1}^\infty \int_{E_k}fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="applications-of-ldct-proof_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By using </p>
+</div>
+</div>
+</div>
+<p>Notice derivative is also a limit operation, so here comes the following theorem.</p>
+<p><a id="Parameter-derivatives-of-L-integral"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Parameter derivatives of L integral</p>
+<p>Assume <span class="arithmatex">\(f(x,y)\)</span> is a function on <span class="arithmatex">\(E\times I\)</span>, where <span class="arithmatex">\(E\in \Omega(\mathbb{R}^n)\)</span>, <span class="arithmatex">\(I\subset \mathbb{R}\)</span> is an interval. If </p>
+<p>(i) <span class="arithmatex">\(\forall y\in I\)</span>, <span class="arithmatex">\(f(x,y)\in L(E)\)</span> with respect to <span class="arithmatex">\(x\)</span>, </p>
+<p>(ii) <span class="arithmatex">\(\forall x\in E\)</span>, <span class="arithmatex">\(f(x,y)\in C(I)\)</span> with respect to <span class="arithmatex">\(y\)</span>,</p>
+<p>(iii) <span class="arithmatex">\(\exists 0\leq F(x)\in L(E)\)</span>, such that</p>
+<div class="arithmatex">\[
+\left|\frac{\partial }{\partial y}f(x,y)\right|\leq F(x),\quad \forall (x,y)\in E\times I,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+\frac{\partial}{\partial y}\int_E f(x,y)dx=\int_E \frac{\partial}{\partial y}f(x,y)dx,\quad \forall y\in I.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="applications-of-ldct-proof_3" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall y\in I\)</span>, <span class="arithmatex">\(\exists h_k&gt;0\)</span>, s.t. <span class="arithmatex">\(y+h_k\in I\)</span>, then define</p>
+<div class="arithmatex">\[
+g_k(x,y):=\frac{f(x,y+h_k)-f(x,y)}{h_k}.
+\]</div>
+<p>which is apprarently a measurable function, and its limit function is <span class="arithmatex">\(g(x)=\frac{\partial }{\partial y}f(x,y)\)</span>. We have to find an appropriate controlling function <span class="arithmatex">\(G(x)\)</span> to control <span class="arithmatex">\(g_k\)</span>. Notice that by mean value theorem</p>
+<div class="arithmatex">\[
+g_k(x,y)=\left|\frac{\partial }{\partial y}f(x,y+\theta_k h_k)\right|\leq F(x),\quad \forall x\in E, \text{ where }\theta_k\in (0,1).
+\]</div>
+<p>So by LDCT, we have </p>
+<div class="arithmatex">\[
+\begin{align*}
+\lim_{k\rightarrow \infty}\frac{1}{h_k}\left[\int_E f(x,y+h_k)dx-\int_E f(x,y)dx\right]&amp;=\lim_{k\rightarrow \infty}\int_{E} g_k(x,y)dx=\int_{E}\lim_{k\rightarrow \infty} g_k(x,y)dx\\
+\frac{\partial}{\partial y}\int_E f(x,y)dx&amp;=\int_E \frac{\partial}{\partial y}f(x,y)dx
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p>Assume <span class="arithmatex">\(f\in L[a,b]\)</span>, prove</p>
+<div class="arithmatex">\[
+\frac{d}{dx}\int_{[a,b]}f(y)\sin(xy)dy=\int_{[a,b]}yf(y)\cos(xy)dy.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="applications-of-ldct-answer_1" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer_1">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Easy to see that <span class="arithmatex">\(F(x)=f(y)\sin(xy)\in L([a,b])\)</span> with respect to <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(F(x)\in C(I)\)</span> with respect to <span class="arithmatex">\(x\)</span>. Notice that</p>
+<div class="arithmatex">\[
+\left|\frac{\partial}{\partial x}F(x)\right|=|yf(y)\cos(xy)|\leq |yf(y)| \in L([a,b]\times I).
+\]</div>
+<p>So by <a href="#Parameter-derivatives-of-L-integral">Theorem for Parameter derivatives of L integral</a>, we are done.</p>
+</div>
+</div>
+</div>
+<h2 id="riemann-integral-lebesgue-integral">Riemann Integral &amp; Lebesgue Integral<a class="headerlink" href="#riemann-integral-lebesgue-integral" title="Permanent link">&para;</a></h2>
 
 
 

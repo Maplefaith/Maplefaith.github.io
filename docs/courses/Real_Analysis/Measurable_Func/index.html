@@ -3551,22 +3551,10 @@ D,\quad 0\leq\alpha&lt;1 \\
 </div>
 </div>
 <h2 id="limit-superior-limit-inferior">Limit superior &amp; limit inferior<a class="headerlink" href="#limit-superior-limit-inferior" title="Permanent link">&para;</a></h2>
+<p><a id="Function-Limit-superior-inferior"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Limit superior &amp; limit inferior</p>
-<p>(i) Sequence of Sets</p>
-<p>Given a sequence of sets <span class="arithmatex">\(\{A_n\}_{n\leq 1}\)</span>, we could construct two new sets</p>
-<div class="arithmatex">\[
-B_n=\bigcup_{k=n}^\infty A_k,\quad  C_n=\bigcap_{k=n}^\infty A_k
-\]</div>
-<p>So we have <span class="arithmatex">\(B_1\supset B_2\supset \cdots\)</span>, and <span class="arithmatex">\(C_1\subset C_2\subset \cdots\)</span>. Then define limit superior</p>
-<div class="arithmatex">\[
-\overline{\lim}\limits_{n\rightarrow \infty}A_n:=\bigcap_{n=1}^\infty B_n=\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k
-\]</div>
-<p>and limit inferior</p>
-<div class="arithmatex">\[
-\underline{\lim}\limits_{n\rightarrow \infty}A_n:=\bigcup_{n=1}^\infty C_n=\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k
-\]</div>
-<p>(ii) Sequence of Function</p>
+<p><strong>Sequence of Function</strong>.</p>
 <p>Similarly, given a sequence of function <span class="arithmatex">\(\{f_n(x)\}_{n\geq 1}\)</span> we have limit superior</p>
 <div class="arithmatex">\[
 \overline{\lim}\limits_{n\rightarrow \infty}f_n=\inf_{n\geq 1} \{\sup_{k\geq n}\{f_k(x)\}\}
@@ -3578,7 +3566,7 @@ B_n=\bigcup_{k=n}^\infty A_k,\quad  C_n=\bigcap_{k=n}^\infty A_k
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem for measurability of Limit</p>
-<p>Assume {f_n(x)}_{n\geq 1} is a sequence of measurable functions on measurable set <span class="arithmatex">\(D\)</span>, then the following functions are all measurable.</p>
+<p>Assume <span class="arithmatex">\(\{f_n(x)\}_{n\geq 1}\)</span> is a sequence of measurable functions on measurable set <span class="arithmatex">\(D\)</span>, then the following functions are all measurable.</p>
 <div class="arithmatex">\[
 \begin{align}
 \sup_{n\geq 1}f_n(x),\quad \inf_{n\geq 1}f_n(x)\label{supinf-function}\\
@@ -3943,6 +3931,7 @@ m(\{x\in E: |f_n(x)-f(x)|\geq \varepsilon\})\leq m(E_\delta)&lt;\delta.
 </div>
 </div>
 <p>Note that <span class="arithmatex">\(m(E)&lt;\infty\)</span> is not necessary, see that we use the uniform convergence to prove, which is the most important.</p>
+<p><a id="Riesz-Theorem"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Riesz Theorem</p>
 <p>Assume function <span class="arithmatex">\(f\)</span> and function sequence <span class="arithmatex">\(\{f_n\}\)</span> are measurable function <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, where <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(\{f_n\}\)</span> are bounded <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>. Then </p>
