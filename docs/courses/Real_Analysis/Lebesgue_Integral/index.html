@@ -2038,6 +2038,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Riemann Integral & Lebesgue Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalized-riemann-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized Riemann integral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Lebesgue integral
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -3429,6 +3453,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Riemann Integral & Lebesgue Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalized-riemann-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized Riemann integral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Lebesgue integral
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -3972,7 +4020,7 @@ g(x)=\begin{cases}
 \frac{1}{x^{3/2}},\quad x\in (1,+\infty).
 \end{cases}
 \]</div>
-<p>So <span class="arithmatex">\(f_n(x)\)</span> satisfy LDCT, meaning</p>
+<p>So <span class="arithmatex">\(f_n(x)\)</span> satisfy condition of LDCT, meaning</p>
 <div class="arithmatex">\[
 \lim_{n\rightarrow \infty}\int_{(0,+\infty)}\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)dx=\int_{(0,+\infty)}0dx=0.
 \]</div>
@@ -3981,7 +4029,7 @@ g(x)=\begin{cases}
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem of denumberable additivity</p>
-<p>Assume <span class="arithmatex">\(a\)</span> is a measurable function on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\{E_k\}_{k\geq 1}\)</span> is a sequence of subsets of <span class="arithmatex">\(E\)</span>, which satisfies <span class="arithmatex">\(E=\bigcup_{k} E_k\)</span> and <span class="arithmatex">\(E_i\cap E_j=\varnothing, \forall i,j\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, then</p>
+<p>Assume <span class="arithmatex">\(a\)</span> is a measurable function on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\{E_k\}_{k\geq 1}\)</span> is a sequence of subsets of <span class="arithmatex">\(E\)</span>, which satisfies <span class="arithmatex">\(E=\bigcup_{k} E_k\)</span> and <span class="arithmatex">\(E_i\cap E_j=\varnothing, \forall i\neq j\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, then</p>
 <div class="arithmatex">\[
 \int_E fdx=\sum_{k=1}^\infty \int_{E_k}fdx.
 \]</div>
@@ -4048,6 +4096,282 @@ g_k(x,y)=\left|\frac{\partial }{\partial y}f(x,y+\theta_k h_k)\right|\leq F(x),\
 </div>
 </div>
 <h2 id="riemann-integral-lebesgue-integral">Riemann Integral &amp; Lebesgue Integral<a class="headerlink" href="#riemann-integral-lebesgue-integral" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Deduction</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, and we have a partition <span class="arithmatex">\(\{x_k\}_{0\leq k\leq n}\)</span> on <span class="arithmatex">\([a,b]\)</span></p>
+<div class="arithmatex">\[
+\Delta_k: a=x_0&lt;x_1&lt;\cdots&lt;x_n=b.
+\]</div>
+<p>Define <span class="arithmatex">\(M_j=\sup_{x\in [a,b]}\{f(x)\}\)</span>, <span class="arithmatex">\(n_j=\inf_{x\in [a,b]}\{f(x)\}\)</span>, and define two function</p>
+<div class="arithmatex">\[
+\begin{align*}
+M_{\Delta_k} (x)=\sum_{j=1}^n M_j \chi_{[x_{j-1},x_j]}(x)\\
+m_{\Delta_k} (x)=\sum_{j=1}^n m_j \chi_{[x_{j-1},x_j]}(x)
+\end{align*}
+\]</div>
+<p>which apparently is measurable function (simple function), and we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+m_{\Delta_k}(x)\leq f(x)\leq M_{\Delta_k} (x)
+\end{align*}
+\]</div>
+<p>So we have an important relationship</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_{[a,b]}M_{\Delta_k}(x)dx=\sum_{j=1}^n M_j m([x_{j-1},x_j])=\sum_{j=1}^n M_j \Delta x_k = \overline{S}_{\Delta_k}(f)\\
+\int_{[a,b]}m_{\Delta_k}(x)dx=\sum_{j=1}^n m_j m([x_{j-1},x_j])=\sum_{j=1}^n m_j \Delta x_k = \underline{S}_{\Delta_k}(f)
+\end{align*}
+\]</div>
+<p>Since <span class="arithmatex">\(\Delta_k\)</span> is not denumerable, so we choose to let <span class="arithmatex">\(\Delta_k\)</span> to be an equi-distant partition of <span class="arithmatex">\([a,b]\)</span> with distance <span class="arithmatex">\(N_k=2^k\)</span>:</p>
+<div class="arithmatex">\[
+\Delta_k: a=x_0^{(k)}&lt;x_1^{(k)}&lt;\cdots&lt;x_{N_k}^{(k)}=b
+\]</div>
+<p>and <span class="arithmatex">\(\Delta_{k+1}\)</span> is a refinement of <span class="arithmatex">\(\Delta_{k}\)</span>, <span class="arithmatex">\(\Vert\Delta_k\Vert\rightarrow 0 (k\rightarrow \infty)\)</span>.</p>
+<p>Since <span class="arithmatex">\(\int_{[a,b]}m_{\Delta_k}(x)dx\)</span> does not increase, <span class="arithmatex">\(\int_{[a,b]}M_{\Delta_k}(x)dx\)</span> does not decrease, we have their limit </p>
+<div class="arithmatex">\[
+\begin{align*}
+\lim_{k\rightarrow\infty}\int_{[a,b]}M_{\Delta_k}(x)dx=\lim_{k\rightarrow \infty}\overline{S}_{\Delta_k}(f) = \inf \overline{S}_{\Delta_k}(f)\\
+\lim_{k\rightarrow\infty}\int_{[a,b]}m_{\Delta_k}(x)dx=\lim_{k\rightarrow \infty}\underline{S}_{\Delta_k}(f) = \inf \underline{S}_{\Delta_k}(f)
+\end{align*}
+\]</div>
+</div>
+<p>So from what we have known in Riemann integral, </p>
+<div class="arithmatex">\[
+\begin{equation}
+f\in R[a,b]\Leftrightarrow \lim_{k\rightarrow\infty}\int_{[a,b]}m_{\Delta_k}(x)dx=\lim_{k\rightarrow\infty}\int_{[a,b]}M_{\Delta_k}(x)dx \label{R-L-1}
+\end{equation}
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Deduction 2</p>
+<p>Thus we have to use integral limit theorem. That is, define <strong>Baire upper and lower function</strong> <span class="arithmatex">\(M(x)=\lim\limits_{k\rightarrow \infty}M_{\Delta_k}(x)\)</span>, <span class="arithmatex">\(m(x)=\lim\limits_{k\rightarrow \infty}m_{\Delta_k}(x)\)</span>, which is bounded, satisfying condition of LDCT, i.e.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\lim_{k\rightarrow \infty}\int_{[a,b]} M_{\Delta_k}(x)dx=\int_{[a,b]}m(x)dx\\
+\lim_{k\rightarrow \infty}\int_{[a,b]} m_{\Delta_k}(x)dx=\int_{[a,b]}m(x)dx.
+\end{align*}
+\]</div>
+</div>
+<p>So equivalence <span class="arithmatex">\(\ref{R-L-1}\)</span> becomes</p>
+<div class="arithmatex">\[
+\begin{align*}
+f\in R[a,b]&amp;\Leftrightarrow \int_{[a,b]}m(x)dx=\int_{[a,b]}M(x)dx\\
+&amp;\Leftrightarrow \int_{[a,b]}[M(x)-m(x)]dx=0\\
+&amp;\Leftrightarrow M(x)=m(x), a.e.x\in [a,b]\quad \text{by }
+\end{align*}
+\]</div>
+<p>Note that about Barie functions, we have a theorem </p>
+<div class="admonition success">
+<p class="admonition-title">Baire Theorem</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(x_0\in [a,b]\)</span>, then <span class="arithmatex">\(f\)</span> is continuous at <span class="arithmatex">\(x_0\)</span>, iff <span class="arithmatex">\(M(x_0)=m(x_0)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>"<span class="arithmatex">\(\Rightarrow\)</span>".</li>
+</ul>
+<p><span class="arithmatex">\(f\)</span> is continuous at <span class="arithmatex">\(x_0\)</span>, then <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, such that </p>
+<div class="arithmatex">\[
+|f(x)-f(x_0)|&lt; \varepsilon,\quad \forall x\in O_\delta(x_0)
+\]</div>
+<p>that is, <span class="arithmatex">\(f(x_0)-\varepsilon&lt;f(x)&lt;f(x_0)+\varepsilon\)</span>。 There exists sufficient large <span class="arithmatex">\(k\)</span> such that </p>
+<div class="arithmatex">\[
+f(x_0)-\varepsilon&lt;m_{\Delta_k}(x)&lt;M_{\Delta_k}(x)&lt;f(x_0)+\varepsilon.
+\]</div>
+<ul>
+<li>"<span class="arithmatex">\(\Leftarrow\)</span>".</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Finally we have the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Riemann integral and Lebesgue integral</p>
+<p>If <span class="arithmatex">\(f\in R[a,b]\)</span>, then <span class="arithmatex">\(f\in L[a,b]\)</span>, and </p>
+<div class="arithmatex">\[
+(R)\int_a^b fdx=(L)\int_{[a,b]}fdx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_1" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Sufficient &amp; Necessary condition for Riemann integrable</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f\in R[a,b]\)</span>, iff <span class="arithmatex">\(f\in C(a.e.x\in [a,b])\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>"<span class="arithmatex">\(\Rightarrow\)</span>".</li>
+</ul>
+</div>
+</div>
+</div>
+<p><div class="question" markdown>
+<strong>Example</strong>. </p>
+<p>(i) Riemann function</p>
+<div class="arithmatex">\[
+R(x)=\begin{cases}\frac{1}{q},\quad x=\frac{p}{q}\\
+0,\quad x\in \mathbb{Q}^c
+\end{cases}.
+\]</div>
+<p>is Riemann integrable.</p>
+<p>(ii) Characteristic function of Cantor set <span class="arithmatex">\(\chi_C(x)\)</span> is Riemann integrable.</p>
+</div>
+<h3 id="generalized-riemann-integral">Generalized Riemann integral<a class="headerlink" href="#generalized-riemann-integral" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Generalized Riemann integral of non-negative function</p>
+<p>(i) Assume <span class="arithmatex">\(f(x)\geq 0\)</span>, if</p>
+<div class="arithmatex">\[
+(R)\int_0^\infty fdx=\lim_{A\rightarrow \infty}\int_0^A fdx
+\]</div>
+<p>converges, then <span class="arithmatex">\(f\in L((0,\infty))\)</span> and</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}fdx=(R)\int_0^\infty fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="generalized-riemann-integral-proof" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) First we prove that <span class="arithmatex">\(f\in L((0,\infty))\)</span>. Notice that</p>
+<div class="arithmatex">\[
+f\in R([a,b])\Rightarrow f\in L([a,b])
+\]</div>
+<p>let <span class="arithmatex">\(b\rightarrow \infty\)</span>, we get <span class="arithmatex">\(f\in L((0,\infty))\)</span>.</p>
+<p>Then we prove the equation. Notice that</p>
+<div class="arithmatex">\[
+(R)\int_0^\infty fdx=\lim_{k\rightarrow \infty}(R)\int_0^kfdx=\lim_{k\rightarrow \infty}(L)\int_{(0,k)}fdx=\lim_{k\rightarrow \infty}\int_{(0,\infty)}f(x)\chi_{(0,k)}(x)dx
+\]</div>
+<p>Define <span class="arithmatex">\(f_k(x)=f(x)\chi_{(0,k)}(x)\)</span>, then <span class="arithmatex">\(f_k \nearrow\)</span>, satisfy confition of Levi Theorem, so</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}fdx=\lim_{k\rightarrow \infty}(L)\int_{(0,\infty)}f_kdx=(R)\int_0^\infty fdx
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: Generalized Riemann integral</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on finite intervals and </p>
+<div class="arithmatex">\[
+(R)\int_0^\infty |f|dx=\lim_{A\rightarrow \infty}\int_0^A |f|dx
+\]</div>
+<p>converges, then <span class="arithmatex">\(f\in L((0,\infty))\)</span> and</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}fdx=(R)\int_0^\infty fdx.
+\]</div>
+<p>Note that we can prove in a similar way that</p>
+<div class="arithmatex">\[
+(L)\int_{(-\infty,+\infty)}fdx=(R)\int_{-\infty}^{+\infty} fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:1"><input checked="checked" id="generalized-riemann-integral-proof_1" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This function might not be non-negative, so we should use LDCT. That is, Define <span class="arithmatex">\(f_k(x)=f(x)\chi_{(0,k)}(x)\)</span>, which converges to <span class="arithmatex">\(f(x)\)</span>, and</p>
+<div class="arithmatex">\[
+|f_k(x)|\leq |f(x)|
+\]</div>
+<p>while the latter one is L integrable, so by LDCT, we have <span class="arithmatex">\(f\in L((0,\infty))\)</span> and</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}f dx=\lim_{k\rightarrow \infty}(L)\int_{(0,k)}f_kdx=\lim_{k\rightarrow \infty} (R)\int_0^k f_kdx = \lim_{k\rightarrow \infty} (R)\int_0^k fdx = \int_0^\infty fdx
+\]</div>
+</div>
+</div>
+</div>
+<p>Theoretically speaking, the Riemann integral of <strong>conditional convergent function</strong> could not be extended to Lebesgue integral.</p>
+<h2 id="multiple-lebesgue-integral">Multiple Lebesgue integral<a class="headerlink" href="#multiple-lebesgue-integral" title="Permanent link">&para;</a></h2>
+<p>This part we aim to find whether the following equation holds</p>
+<div class="arithmatex">\[
+\begin{align}
+\int_{\mathbb{R}^p\times \mathbb{R}^q}f(x,y)dxdy=\int_{\mathbb{R}^p}\left[\int_{\mathbb{R}^q}f(x,y)dy\right]dx\label{multiple-integral}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(x\in \mathbb{R}^p\)</span>, <span class="arithmatex">\(y\in \mathbb{R}^q\)</span>.</p>
+<p>Firstly, we consider characteristic functions.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Cross Section</p>
+<p>Assume <span class="arithmatex">\(E\in \Omega(\mathbb{R}^{p+q})\)</span>, <span class="arithmatex">\(\forall y\in \mathbb{R}^q\)</span>, then define</p>
+<div class="arithmatex">\[
+E^y:=\{x\in \mathbb{R}^p| (x,y)\in E\}
+\]</div>
+<p>the cross section of <span class="arithmatex">\(E\)</span> at <span class="arithmatex">\(y\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties about cross section</p>
+<p>Assume <span class="arithmatex">\(A,B,\{E_k\}\)</span> are subsets of <span class="arithmatex">\(\mathbb{R}^{p+q}\)</span>, <span class="arithmatex">\(\forall y\in \mathbb{R}^q\)</span>, then </p>
+<p>(i) If <span class="arithmatex">\(A\subset B\)</span>, then <span class="arithmatex">\(A^y\subset B^y\)</span>.</p>
+<p>(ii) <span class="arithmatex">\((\bigcup_k E_k)^y=\bigcup_k E_k^y\)</span>, <span class="arithmatex">\((\bigcap_k E_k)^y=\bigcap_k E_k^y\)</span>.</p>
+<p>(iii) <span class="arithmatex">\((A-B)^y=A^y-B^y\)</span>.</p>
+<p>(iv) If <span class="arithmatex">\(E_k \nearrow A\)</span>, then <span class="arithmatex">\((E_k)^y\nearrow A^y\)</span>; If <span class="arithmatex">\(E_k \searrow A\)</span>, then <span class="arithmatex">\((E_k)^y\searrow A^y\)</span></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for characteristic function</p>
+<p>Assume <span class="arithmatex">\(E\subset \mathbb{R}^{p+q}\)</span> is measurable, then</p>
+<p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(E^y\)</span> is measurable with respect to <span class="arithmatex">\(y\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(m(E^y)\)</span> is a non-negative function on <span class="arithmatex">\(\mathbb{R}^q\)</span> and </p>
+<div class="arithmatex">\[
+\int_{\mathbb{E}^q}m(E^y)dy=m(E).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="multiple-lebesgue-integral-proof" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="multiple-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>(i) <span class="arithmatex">\(E=I\times J\)</span>, where <span class="arithmatex">\(I\subset \mathbb{R}^p\)</span>, <span class="arithmatex">\(J\subset \mathbb{R}^q\)</span> are half-open cubes. </li>
+</ul>
+<p>So <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, we have</p>
+<div class="arithmatex">\[
+E^y=\begin{cases}
+I,\quad y\in J\\
+\varnothing,\quad y\notin J
+\end{cases}
+\]</div>
+<p>meaning <span class="arithmatex">\(E^y\)</span> is measurable.</p>
+<ul>
+<li>(ii) <span class="arithmatex">\(E\)</span> is a bounded open set on <span class="arithmatex">\(\mathbb{R}^{p+q}\)</span>. So by configuration of open sets, we have</li>
+</ul>
+<div class="arithmatex">\[
+E=\bigcup_{k=1}^\infty I_k, \quad I_k\subset \mathbb{R}^{p+q}, \text{ &amp; } E_i\cap E_j=\varnothing.
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+E^y=\left(\bigcup_{k=1}^\infty I_k\right)^y = \bigcup_{k=1}^\infty I_k^y
+\]</div>
+<p>then by denumerable additivity</p>
+<div class="arithmatex">\[
+m(E^y)=\sum_{k=0}^\infty m(I_k^y)
+\]</div>
+<p>is a non-negative measurable function. Thus</p>
+<div class="arithmatex">\[
+\begin{align*}
+m(E)&amp;=\sum_{k=1}^\infty m(I_k)\\
+&amp;=\sum_{k=1}^\infty \int_{\mathbb{R}^q} m(I_k^y)dy\quad\text{by (i)}\\
+&amp;=\int_{\mathbb{R}^q} m(E^y)dy
+\end{align*}
+\]</div>
+<ul>
+<li>(iii) <span class="arithmatex">\(E\)</span> is a bounded <span class="arithmatex">\(G_\delta\)</span> set.</li>
+</ul>
+<p>That is, <span class="arithmatex">\(E=\bigcap_{k=1}^\infty G_k\)</span>, and <span class="arithmatex">\(G_1\supset G_2\supset \cdots\)</span>, so </p>
+<div class="arithmatex">\[
+\begin{align*}
+E^y&amp;=\left(\bigcap_{k=1}^\infty G_k\right)^y\\
+&amp;=\bigcap_{k=1}^\infty G_k^y
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Tonelli Theorem</p>
+<p>Assume <span class="arithmatex">\(f(x,y)\)</span> is a non-negative measurable function with <span class="arithmatex">\((x,y)\in \mathbb{R}^p\times \mathbb{R}^q\)</span>, then </p>
+<p>(i) <span class="arithmatex">\(\forall a.e.x\in \mathbb{R}^p\)</span>, <span class="arithmatex">\(f(x,y)\)</span>, as a function of <span class="arithmatex">\(y\in \mathbb{R}^q\)</span> is non-negative measurable.</p>
+<p>(ii) <span class="arithmatex">\(F(x):=\int_{\mathbb{R}^q}f(x,y)dy\)</span> is non-negative measurable on <span class="arithmatex">\(\mathbb{R}^p\)</span>.</p>
+<p>(iii) equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> holds.</p>
+</div>
 
 
 

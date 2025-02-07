@@ -4051,6 +4051,13 @@ V(\pmb{x}, \delta) \subset E^o
 <p>(i) <strong>Infinite</strong> union of open sets is an open set.<br />
 (ii) <strong>Finite</strong> intersection of open sets is an open set.</p>
 </div>
+<p><strong>Infinite</strong> intersection of open sets might not be an open set.</p>
+<div class="question">
+<p><strong>Example</strong>. Notice that </p>
+<div class="arithmatex">\[
+\bigcap_{n=1}^\infty \left(1-\frac{1}{n},2+\frac{1}{n}\right)=[1,2].
+\]</div>
+</div>
 <h3 id="accumulation-point">Accumulation Point<a class="headerlink" href="#accumulation-point" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definition of Accumulation Point, Derived Set, and Closure of a Set</p>
@@ -4208,6 +4215,13 @@ A' \cap B' = \mathbb{R} \neq \varnothing = (A \cap B)', \quad \overline{A} \cap 
 <p>Since each <span class="arithmatex">\( F_k^c \)</span> is open, their finite intersection is also open. Therefore, <span class="arithmatex">\( \bigcup_{k=1}^n F_k \)</span> is closed.</p>
 </div>
 </div>
+</div>
+<p><strong>Infinite</strong> union of closed sets might not be a closed set.</p>
+<div class="question">
+<p><strong>Example</strong>. Notice that </p>
+<div class="arithmatex">\[
+\bigcup_{n=1}^\infty \left[1+\frac{1}{n},2-\frac{1}{n}\right]=(1,2).
+\]</div>
 </div>
 <p><a id="theo-closed-set-derived-set-condition"></a></p>
 <div class="admonition success">
@@ -4578,10 +4592,10 @@ P_0 = \bigcap_{n=1}^\infty F_n
 <p class="admonition-title">Theorem of Facts about Cantor Set</p>
 <p>(i) The Cantor set is a <strong>closed set</strong>, meaning it has no interior points.<br />
 (ii) The Cantor set is a <strong>complete set</strong>.<br />
-(iii) The Cantor set has base <span class="arithmatex">\( \aleph_0 \)</span>.<br />
+(iii) The Cantor set has base <span class="arithmatex">\( \aleph \)</span>.<br />
 (iv) The Cantor set is a <strong>sparse set</strong>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:3"><input checked="checked" id="cantor-set-proof-for-i" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-ii-ⅰ" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-ii-ⅱ" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="cantor-set-proof-for-i">Proof for (i)</label><label for="cantor-set-proof-for-ii-ⅰ">Proof for (ii) Ⅰ</label><label for="cantor-set-proof-for-ii-ⅱ">Proof for (ii) Ⅱ</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:4"><input checked="checked" id="cantor-set-proof-for-i" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-ii-ⅰ" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-ii-ⅱ" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-iii" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="cantor-set-proof-for-i">Proof for (i)</label><label for="cantor-set-proof-for-ii-ⅰ">Proof for (ii) Ⅰ</label><label for="cantor-set-proof-for-ii-ⅱ">Proof for (ii) Ⅱ</label><label for="cantor-set-proof-for-iii">Proof for (iii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) This is easily seen from the definition of the Cantor set. Specifically, for any <span class="arithmatex">\( x \in P_0 \)</span>, there does not exist <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>
@@ -4619,6 +4633,8 @@ Show that <span class="arithmatex">\( P_0 \)</span> has no isolated points. Assu
 (x - \delta, x) \cup (x, x + \delta) \subset G_0
 \]</div>
 <p>However, this contradicts the construction of <span class="arithmatex">\( P_0 \)</span>, as <span class="arithmatex">\( x \notin G_0 \)</span>.</p>
+</div>
+<div class="tabbed-block">
 <p>(iii) By the closed intervals embedding theorem, we can express the Cantor set using ternary expansions. Define:</p>
 <div class="arithmatex">\[
 x = \sum_{n=1}^\infty \frac{a_n}{3^n}, \quad a_n \in \{0, 1, 2\}

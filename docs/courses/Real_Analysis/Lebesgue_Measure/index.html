@@ -3673,6 +3673,23 @@ m^*(A\cap E)+m^*(A\cap E^c)&amp;\leq m^*(A\cap E)+m^*(A\cap E_1)+m^*(A\cap E_2)\
 </div>
 </div>
 <p>From (i) we could know that denumerable sets have zero measure. From (ii) we could know that any open, closed intervals are measurable.</p>
+<div class="question">
+<p><strong>Example</strong>. Cantor set has zero measure.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="measurable-sets-answer" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="measurable-sets-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Because in <a href="../Sets/#cantor-set">configuration of Cantor set</a>, the measure of <span class="arithmatex">\(G\)</span> </p>
+<div class="arithmatex">\[
+\begin{align*}
+m(G)&amp;=\frac{1}{3}+2\cdot \frac{1}{3^2}+2^2\frac{1}{3^3}+\cdots\\
+&amp;=\frac{1}{3} \frac{[1-(\frac{2}{3})^n]}{1-\frac{2}{3}}\rightarrow 1 (n\rightarrow \infty)
+\end{align*}
+\]</div>
+<p>So <span class="arithmatex">\(m(C)=m([0,1])-m(G)=0\)</span>.</p>
+</div>
+</div>
+</div>
 <h3 id="measure-operations">Measure Operations<a class="headerlink" href="#measure-operations" title="Permanent link">&para;</a></h3>
 <p>This part we aim to show denumerable additivity of measure. So we have to give some foundations.</p>
 <div class="admonition success">
@@ -3683,7 +3700,7 @@ m^*(A\cap E)+m^*(A\cap E^c)&amp;\leq m^*(A\cap E)+m^*(A\cap E_1)+m^*(A\cap E_2)\
 <p>(iii) <span class="arithmatex">\(E_1\cap E_2\in \Omega\)</span>.</p>
 <p>(iv) <span class="arithmatex">\(E_1 \backslash E_2 \in \Omega\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="measure-operations-proof-for-i" name="__tabbed_6" type="radio" /><input id="measure-operations-proof-for-ii" name="__tabbed_6" type="radio" /><input id="measure-operations-proof-for-iii" name="__tabbed_6" type="radio" /><input id="measure-operations-proof-for-iv" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof-for-i">Proof for (i)</label><label for="measure-operations-proof-for-ii">Proof for (ii)</label><label for="measure-operations-proof-for-iii">Proof for (iii)</label><label for="measure-operations-proof-for-iv">Proof for (iv)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:4"><input checked="checked" id="measure-operations-proof-for-i" name="__tabbed_7" type="radio" /><input id="measure-operations-proof-for-ii" name="__tabbed_7" type="radio" /><input id="measure-operations-proof-for-iii" name="__tabbed_7" type="radio" /><input id="measure-operations-proof-for-iv" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof-for-i">Proof for (i)</label><label for="measure-operations-proof-for-ii">Proof for (ii)</label><label for="measure-operations-proof-for-iii">Proof for (iii)</label><label for="measure-operations-proof-for-iv">Proof for (iv)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>This is quite easy, cause we can substitute <span class="arithmatex">\(E=(E^c)^c\)</span> into Carath&eacute;odory condition and we could get the result.</p>
@@ -3755,7 +3772,7 @@ m^*[(A\cap E_1^c)\cap E_2]+m^*(A\cap E_1)&amp;=m^*([(A\cap E_1^c)\cap E_2]\cup (
 \bigcup_n E_n\in \Omega
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="measure-operations-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="measure-operations-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Notice that <span class="arithmatex">\(\forall N&gt;0\)</span>, using <a href="#finite-measurable-sets">corollary</a></p>
@@ -3799,7 +3816,7 @@ m^*(A)&amp;\geq\left[\sum_{n=1}^\infty m^*(A\cap E_n)\right] + m^*\left[A\cap \l
 \bigcup_n E_n\in \Omega,\quad \bigcap_n E_n\in \Omega
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="measure-operations-proof_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="measure-operations-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We could use the conclusion from the above two theorem. That is, construct mutually disjoint sets to help prove. We would use some conclusion from <a href="../Sets/#construct-mutually-disjoint-sets">Sets</a>.</p>
@@ -3821,7 +3838,7 @@ m^*\left[A\cap \left(\bigcup_{n=1}^\infty E_n\right)\right]=\sum_{n=1}^\infty m^
 m^*\left(\bigcup_{n=1}^\infty E_n\right)=\sum_{n=1}^\infty m^*(E_n)
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="measure-operations-proof_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="measure-operations-proof_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="measure-operations-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The proof has been given in proof of <a href="#union-sequence-measurable-sets">Theorem for union of sequence of measurable sets</a>.</p>
@@ -3841,7 +3858,7 @@ m^*\left(\bigcup_{n=1}^\infty E_n\right)=\sum_{n=1}^\infty m^*(E_n)
 \lim_{n\rightarrow \infty} m(E_n) = m\left(\lim_{n\rightarrow \infty} E_n\right)
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="limit-operation-proof-for-i" name="__tabbed_10" type="radio" /><input id="limit-operation-proof-for-ii" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="limit-operation-proof-for-i">Proof for (i)</label><label for="limit-operation-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="limit-operation-proof-for-i" name="__tabbed_11" type="radio" /><input id="limit-operation-proof-for-ii" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="limit-operation-proof-for-i">Proof for (i)</label><label for="limit-operation-proof-for-ii">Proof for (ii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) means <span class="arithmatex">\(E_1\subset E_2\subset\cdots\)</span>, so </p>
@@ -3908,7 +3925,7 @@ E_y=\{x+y: x\in E\}
 <p class="admonition-title">Translation Invariance of Measure</p>
 <p>Assume <span class="arithmatex">\(E \in \Omega\)</span>, then <span class="arithmatex">\(\forall y\in \mathbb{R}\)</span>, <span class="arithmatex">\(E_y\in \Omega\)</span> and <span class="arithmatex">\(m(E_y)=m(E)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="translation-invariance-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="translation-invariance-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="translation-invariance-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="translation-invariance-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use the above property to transfer Carath&eacute;odory condition of <span class="arithmatex">\(E\)</span> into <span class="arithmatex">\(E_y\)</span>.</p>
@@ -3924,7 +3941,7 @@ E_y=\{x+y: x\in E\}
 <p>(ii) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \text{ open set }G\supset E\)</span>, such that <span class="arithmatex">\(m^*(G-E)&lt;\varepsilon\)</span>.</p>
 <p>(iii) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \text{ closed set } F \subset E\)</span>, such that <span class="arithmatex">\(m^*(E-F)&lt;\varepsilon\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii" name="__tabbed_12" type="radio" /><input id="approximate-measurable-set-with-open-closed-sets-ii-rightarrow-i" name="__tabbed_12" type="radio" /><input id="approximate-measurable-set-with-open-closed-sets-i-rightarrow-iii" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii">(i) <span class="arithmatex">\(\Rightarrow\)</span> (ii)</label><label for="approximate-measurable-set-with-open-closed-sets-ii-rightarrow-i">(ii) <span class="arithmatex">\(\Rightarrow\)</span> (i)</label><label for="approximate-measurable-set-with-open-closed-sets-i-rightarrow-iii">(i) <span class="arithmatex">\(\Rightarrow\)</span> (iii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii" name="__tabbed_13" type="radio" /><input id="approximate-measurable-set-with-open-closed-sets-ii-rightarrow-i" name="__tabbed_13" type="radio" /><input id="approximate-measurable-set-with-open-closed-sets-i-rightarrow-iii" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="approximate-measurable-set-with-open-closed-sets-i-rightarrow-ii">(i) <span class="arithmatex">\(\Rightarrow\)</span> (ii)</label><label for="approximate-measurable-set-with-open-closed-sets-ii-rightarrow-i">(ii) <span class="arithmatex">\(\Rightarrow\)</span> (i)</label><label for="approximate-measurable-set-with-open-closed-sets-i-rightarrow-iii">(i) <span class="arithmatex">\(\Rightarrow\)</span> (iii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We could prove this on <span class="arithmatex">\(\mathbb{R}^n\)</span>.</p>

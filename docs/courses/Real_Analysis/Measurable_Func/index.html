@@ -3428,7 +3428,7 @@
 <p class="admonition-title">Definition of Measurable Function</p>
 <p>Assume function <span class="arithmatex">\(f\)</span> has defined on measurable set <span class="arithmatex">\(D\)</span>. If <span class="arithmatex">\(\forall \alpha\in \mathbb{R}\)</span>, set</p>
 <div class="arithmatex">\[
-D(f&gt;\alpha):=\{x\in D: f(x)&gt; \alpha\}
+\{f&gt;\alpha\}=D(f&gt;\alpha):=\{x\in D: f(x)&gt; \alpha\}
 \]</div>
 <p>is also measurable, then we call <span class="arithmatex">\(f\)</span> is a measurable function on <span class="arithmatex">\(D\)</span>.</p>
 </div>
@@ -3512,12 +3512,45 @@ D,\quad 0\leq\alpha&lt;1 \\
 </div>
 </div>
 <p>The above (i), (ii) and (iii) are equivalent definition of measurable function, but (iv) is not. </p>
+<p><div class="question" markdown>
+<strong>Example</strong>. <span class="arithmatex">\(f\)</span> is measurable on measurable set <span class="arithmatex">\(D\)</span>, iff <span class="arithmatex">\(\forall r\in \mathbb{Q}\)</span>, <span class="arithmatex">\(\{f&gt;r\}\)</span> is measurable.
+</div></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="properties-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="properties-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>"<span class="arithmatex">\(\Rightarrow\)</span>". Let <span class="arithmatex">\(\forall \alpha\)</span>, <span class="arithmatex">\(\alpha=r\)</span>.</p>
+</li>
+<li>
+<p>"<span class="arithmatex">\(\Leftarrow\)</span>". Notice that <span class="arithmatex">\(\forall \alpha, \exists \{r_n\}\)</span>, such that <span class="arithmatex">\(r_n\in \mathbb{R}\)</span>, and <span class="arithmatex">\(r_1&gt;r_2&gt;\cdots\)</span>, and <span class="arithmatex">\(r_n\rightarrow \alpha\)</span>, so </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\{f&gt;\alpha\}=\bigcup_{n=1}^\infty\{f&gt;r_n\}
+\]</div>
+<p>which means <span class="arithmatex">\(f\)</span> is measurable.</p>
+<p>When <span class="arithmatex">\(\{f=r\}\)</span> is measurable, we could not deduce the same result. Bacause let <span class="arithmatex">\(A\)</span> to be a non-measurable set, define </p>
+<div class="arithmatex">\[
+f=\begin{cases}
+\sqrt{3},\quad x\in A\\
+\sqrt{2},\quad x\notin A
+\end{cases}
+\]</div>
+<p>then <span class="arithmatex">\(\forall r\in \mathbb{Q}\)</span>, <span class="arithmatex">\(\{f=r\}=\varnothing\)</span> is measurable, but let <span class="arithmatex">\(\alpha=1.5\)</span>,</p>
+<div class="arithmatex">\[
+\{f&gt;1.5\}=A
+\]</div>
+<p>is not measurable, so <span class="arithmatex">\(f\)</span> is not measurable.</p>
+</div>
+</div>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Region Extension</p>
 <p>(i) Assume generalized real function <span class="arithmatex">\(f(x)\)</span> is defined on <span class="arithmatex">\(D_1\cup D_2\)</span>. If <span class="arithmatex">\(f(x)\)</span> is measurable on <span class="arithmatex">\(D_1\)</span> and <span class="arithmatex">\(D_2\)</span>, then <span class="arithmatex">\(f(x)\)</span> is also measurable on <span class="arithmatex">\(D_1\cup D_2\)</span>.</p>
 <p>(ii) Assume <span class="arithmatex">\(f(x)\)</span> is measurable on <span class="arithmatex">\(D\)</span>. If <span class="arithmatex">\(A\subset D\)</span> is also measurable, then <span class="arithmatex">\(f(x)\)</span> is also measurable on <span class="arithmatex">\(A\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="properties-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="properties-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="properties-proof_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="properties-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) <span class="arithmatex">\(\{x\in D_1\cup D_2:f&gt;\alpha\}=\{x\in D_1: f&gt;\alpha\}\cup \{x\in D_2: f&gt;\alpha\}\)</span> and by measure operation.</p>
@@ -3525,28 +3558,83 @@ D,\quad 0\leq\alpha&lt;1 \\
 </div>
 </div>
 </div>
-<p><a id="lemma"></a></p>
+<p><a id="lemma-functions"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Lemma of functions</p>
 <p>Assume <span class="arithmatex">\(f(x)\)</span>, <span class="arithmatex">\(g(x)\)</span> are measurable on <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(\{f&gt;g\}\)</span> is also measurable.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="properties-proof_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="properties-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="properties-proof_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="properties-proof_3">Proof</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall \varepsilon_r=\frac{1}{r},r\in \mathbb{N}^+\)</span>, we have</p>
+<div class="arithmatex">\[
+\{f&gt;g\} = \bigcup_{r=1}^\infty\{f&gt; \varepsilon_r\}\cap\{\varepsilon_r &gt;g\}
+\]</div>
+<p>so <span class="arithmatex">\(\{f&gt;g\}\)</span> is measurable.</p>
+</div>
 </div>
 </div>
 <h2 id="basic-operations">Basic Operations<a class="headerlink" href="#basic-operations" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Basic Operations of Measurable Function</p>
-<p>Assume <span class="arithmatex">\(f(x)\)</span>, <span class="arithmatex">\(g(x)\)</span> are measurable function on <span class="arithmatex">\(E\)</span>, then the following functions are measurable.</p>
+<p>Assume <span class="arithmatex">\(f(x)\)</span>, <span class="arithmatex">\(g(x)\)</span> are measurable function on <span class="arithmatex">\(D\)</span>, then the following functions are measurable.</p>
 <p>(i) <span class="arithmatex">\(cf(x) (c\in \mathbb{R})\)</span>. (ii) <span class="arithmatex">\(f(x)+g(x)\)</span>. (iii) <span class="arithmatex">\(f(x)\cdot g(x)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="basic-operations-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="basic-operations-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="basic-operations-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="basic-operations-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) move <span class="arithmatex">\(c\)</span> to the side of <span class="arithmatex">\(\alpha\)</span>.</p>
-<p>(ii) same logic with <a href="#lemma">Lemma</a>.</p>
-<p>(iii) use <span class="arithmatex">\(4f(x)\cdot g(x)=[f(x)+g(x)]^2-[f(x)-g(x)]^2\)</span>. You only need to consider whether <span class="arithmatex">\(f^2(x)\)</span> are measurable.</p>
+<p>(ii) same logic with <a href="#lemma-functions">Lemma</a>.</p>
+<p>(iii) use <span class="arithmatex">\(4f(x)\cdot g(x)=[f(x)+g(x)]^2-[f(x)-g(x)]^2\)</span>. You only need to consider whether <span class="arithmatex">\(f^2(x)\)</span> are measurable, which is easy to see. Notice that <span class="arithmatex">\(\forall\alpha\geq 0\)</span>,</p>
+<div class="arithmatex">\[
+\{f^2&gt;\alpha\}=\{f&gt;\sqrt{\alpha}\}\cup \{f&lt;-\sqrt{\alpha}\}
+\]</div>
+<p>is measurable, and <span class="arithmatex">\(\forall \alpha&lt;0\)</span>,</p>
+<div class="arithmatex">\[
+\{f^2&gt;\alpha\}=D
+\]</div>
+<p>is measurable.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f\)</span> is defined on measurable set <span class="arithmatex">\(D\)</span>, prove: if <span class="arithmatex">\(f^2\)</span> is measurable on <span class="arithmatex">\(D\)</span> and <span class="arithmatex">\(\{f&gt;0\}\)</span> is measurable, then <span class="arithmatex">\(f\)</span> is measurable on <span class="arithmatex">\(D\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="basic-operations-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="basic-operations-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(\forall \alpha\geq 0\)</span>,</li>
+</ul>
+<div class="arithmatex">\[
+\{f&gt;\alpha\}=\{f^2&gt;\alpha^2\}\cap \{f&gt;0\}
+\]</div>
+<p>is measurable.</p>
+<ul>
+<li><span class="arithmatex">\(\forall \alpha&lt;0\)</span>,</li>
+</ul>
+<div class="arithmatex">\[
+\{f&gt;\alpha\}=\{f&gt;0\}\cup \{\alpha&lt;f\leq 0\}=\{f&gt;0\}\cup \left[\{f^2&lt;\alpha^2\}\cap \{f\leq 0\}\right]
+\]</div>
+<p>is measurable.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f\)</span> is a measurable function on <span class="arithmatex">\(D\)</span>, prove: for all open set <span class="arithmatex">\(G\subset \mathbb{R}\)</span> and closed set <span class="arithmatex">\(F\subset \mathbb{R}\)</span>, </p>
+<div class="arithmatex">\[
+f^{-1}(G),\quad f^{-1}(F)
+\]</div>
+<p>are measurable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="basic-operations-proof_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="basic-operations-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Known from <a href="../Sets/#configuration-of-sets">configuration of set</a>, <span class="arithmatex">\(\forall\)</span> open set <span class="arithmatex">\(G\subset \mathbb{R}\)</span>, there exists <span class="arithmatex">\(\{a_n\}\)</span> and <span class="arithmatex">\(\{b_n\}\)</span>, such that <span class="arithmatex">\(a_n&lt;b_n\)</span>, and <span class="arithmatex">\(G=\bigcup\limits_{n=1}^\infty(a_n,b_n)\)</span>, so</p>
+<div class="arithmatex">\[
+f^{-1}(G)=\bigcup_{n=1}^\infty\{a_n&lt;f&lt;b_n\}
+\]</div>
+<p>is measurable. Notice that <span class="arithmatex">\(f^{-1}(F)=f^{-1}(\mathbb{R}-F^c)=D-f^{-1}(F^c)\)</span> is also measurable.</p>
 </div>
 </div>
 </div>
@@ -3564,6 +3652,7 @@ D,\quad 0\leq\alpha&lt;1 \\
 \underline{\lim}\limits_{n\rightarrow \infty}f_n=\sup_{n\geq 1} \{\inf_{k\geq n}\{f_k(x)\}\}
 \]</div>
 </div>
+<p><a id="Theorem-for-measurability-of-Limit"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for measurability of Limit</p>
 <p>Assume <span class="arithmatex">\(\{f_n(x)\}_{n\geq 1}\)</span> is a sequence of measurable functions on measurable set <span class="arithmatex">\(D\)</span>, then the following functions are all measurable.</p>
@@ -3574,7 +3663,7 @@ D,\quad 0\leq\alpha&lt;1 \\
 \end{align}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="limit-superior-limit-inferior-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="limit-superior-limit-inferior-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="limit-superior-limit-inferior-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="limit-superior-limit-inferior-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -3590,6 +3679,28 @@ D,\quad 0\leq\alpha&lt;1 \\
 </div>
 </div>
 </div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f_n\)</span> is a measurable function on <span class="arithmatex">\(D\)</span>. Prove: Set </p>
+<div class="arithmatex">\[
+\{x\in D: f_n \text{ converges}.\}
+\]</div>
+<p>is measurable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="limit-superior-limit-inferior-proof_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="limit-superior-limit-inferior-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(f_n\)</span> converges, iff its limit superior and inferior are of the same. So we define </p>
+<div class="arithmatex">\[
+F(x)=\overline{\lim}\limits_{n\rightarrow \infty}f_n,\quad f(x)=\underline{\lim}\limits_{n\rightarrow \infty}f_n,
+\]</div>
+<p>both of which are measurable by <a href="#Theorem-for-measurability-of-Limit">Theorem for limit</a>. Then consider </p>
+<div class="arithmatex">\[
+\{F=f\}=D-\{F&gt;f\}
+\]</div>
+<p>since the latter is measurable according to <a href="#lemma-functions">Lemma of functions</a>, <span class="arithmatex">\(\{F=f\}\)</span> is measurable.</p>
+</div>
+</div>
+</div>
 <h2 id="almost-everywhere">Almost Everywhere<a class="headerlink" href="#almost-everywhere" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Definition of Almost Everywhere of a Proposition</p>
@@ -3599,6 +3710,8 @@ D,\quad 0\leq\alpha&lt;1 \\
 P(x) \ a.e.x \in D.
 \]</div>
 </div>
+<h2 id="approximation">Approximation<a class="headerlink" href="#approximation" title="Permanent link">&para;</a></h2>
+<h3 id="approximation-with-simple-function">Approximation with Simple Function<a class="headerlink" href="#approximation-with-simple-function" title="Permanent link">&para;</a></h3>
 <p><a id="Simple-Function"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Simple Function</p>
@@ -3608,8 +3721,6 @@ P(x) \ a.e.x \in D.
 f(x)=\sum_{k=1}^n a_k \chi_{E_k}(x)
 \]</div>
 </div>
-<h2 id="approximation">Approximation<a class="headerlink" href="#approximation" title="Permanent link">&para;</a></h2>
-<h3 id="approximation-with-simple-function">Approximation with Simple Function<a class="headerlink" href="#approximation-with-simple-function" title="Permanent link">&para;</a></h3>
 <p><a id="Approximation-with-Simple-Function"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Approximate measurable function with sequence of simple functions</p>
@@ -3617,7 +3728,7 @@ f(x)=\sum_{k=1}^n a_k \chi_{E_k}(x)
 <p>(i) <span class="arithmatex">\(f\)</span> is non-negative, then <span class="arithmatex">\(\{f_k\}_{k\geq 1}\)</span> is monotonically increasing.</p>
 <p>(ii) <span class="arithmatex">\(f\)</span> is bounded, then <span class="arithmatex">\(\{f_k\}_{k\geq 1}\)</span> converges uniformly to <span class="arithmatex">\(f(x)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="approximation-with-simple-function-hints" name="__tabbed_7" type="radio" /><input id="approximation-with-simple-function-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="approximation-with-simple-function-hints">Hints</label><label for="approximation-with-simple-function-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="approximation-with-simple-function-hints" name="__tabbed_11" type="radio" /><input id="approximation-with-simple-function-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="approximation-with-simple-function-hints">Hints</label><label for="approximation-with-simple-function-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use a special construction.</p>
@@ -3662,6 +3773,20 @@ n,\quad f(x)&gt;n\\
 </div>
 </div>
 </div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f\)</span> is differentiable on <span class="arithmatex">\(\mathbb{R}\)</span>, prove <span class="arithmatex">\(f'(x)\)</span> is measurable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="approximation-with-simple-function-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="approximation-with-simple-function-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(f\)</span> is differentiable, so <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f(x+\frac{1}{n})\)</span> is continuous, thus measurable. So </p>
+<div class="arithmatex">\[
+f'(x)=\lim_{n\rightarrow \infty} \frac{f(x+\frac{1}{n})-f(x)}{\frac{1}{n}}\overset{\Delta}{=}f_n(x)
+\]</div>
+<p><span class="arithmatex">\(f_n\)</span> is measurable, so <span class="arithmatex">\(f'\)</span> is also measurable.</p>
+</div>
+</div>
+</div>
 <h3 id="uniform-convergnce-ae">Uniform Convergnce a.e.<a class="headerlink" href="#uniform-convergnce-ae" title="Permanent link">&para;</a></h3>
 <p><a id="Lemma-language-of-Set-Convergence"></a></p>
 <div class="admonition success">
@@ -3671,7 +3796,7 @@ n,\quad f(x)&gt;n\\
 \lim_{j\rightarrow \infty} m\left(\bigcup_{k=j}^\infty E_k(\varepsilon)\right)=0.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="uniform-convergnce-ae-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="uniform-convergnce-ae-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="uniform-convergnce-ae-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="uniform-convergnce-ae-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We have the following equivalent statement for point-wise convergence.</p>
@@ -3714,7 +3839,7 @@ x\in \bigcap_{\varepsilon&gt;0}\bigcup_{N=1}^\infty \bigcap_{k=N}^\infty \{x\in 
 f_k(x)\rightrightarrows f(x), \quad \forall x\in E-E_\delta.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="uniform-convergnce-ae-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="uniform-convergnce-ae-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="uniform-convergnce-ae-proof_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="uniform-convergnce-ae-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Choose <span class="arithmatex">\(\varepsilon=\frac{1}{r}\)</span> and define </p>
@@ -3748,7 +3873,7 @@ E\backslash E_\delta=\bigcap_{r=1}^\infty \bigcap_{k=N}^\infty E_k^c\left(\frac{
 <p class="admonition-title">Lusin Theorem</p>
 <p>Assume <span class="arithmatex">\(f(x)\)</span> is a measurable function <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(\forall \delta&gt;0\)</span>, <span class="arithmatex">\(\exists\)</span> closed set <span class="arithmatex">\(F\subset E\)</span>, s.t. <span class="arithmatex">\(m(E\backslash F)&lt;\delta\)</span>, and <span class="arithmatex">\(f(x)\)</span> is a continuous function on <span class="arithmatex">\(F\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="extension-of-continuous-function-hints" name="__tabbed_14" type="radio" /><input id="extension-of-continuous-function-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="extension-of-continuous-function-hints">Hints</label><label for="extension-of-continuous-function-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="extension-of-continuous-function-hints" name="__tabbed_19" type="radio" /><input id="extension-of-continuous-function-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="extension-of-continuous-function-hints">Hints</label><label for="extension-of-continuous-function-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using Theorem in Mathematical Analysis for uniform convergent function, that is, the convergent function of uniformly convergent function sequence is continuous(Here notice we have to cut off a closed set from <span class="arithmatex">\(E\)</span>, which might be infinite). So we have to make use of <a href="#Egoroff-Theorem">Egoroff Theorem</a>.</p>
@@ -3820,7 +3945,7 @@ m(E\backslash F)&amp;\leq m\left[E\backslash E_\delta\right]+m\left[E_\delta \ba
 \]</div>
 <p>which naturally satisfies the condition in the theorem.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="extension-of-continuous-function-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="extension-of-continuous-function-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="extension-of-continuous-function-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="extension-of-continuous-function-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By <a href="#Lusin-Theorem">Lusin Theorem</a>, <span class="arithmatex">\(\forall \delta&gt;0\)</span>, there exists closed set <span class="arithmatex">\(F\subset E\)</span>, such that <span class="arithmatex">\(m(E-F)&lt;\delta\)</span>, and <span class="arithmatex">\(f\in C(F)\)</span>. Now the only problem is, how to extend this continuoud function on <span class="arithmatex">\(F\)</span> to all space <span class="arithmatex">\(F\)</span> and satisfy the so-called boundary condition <span class="arithmatex">\(\ref{boundary-condition}\)</span>.</p>
@@ -3885,7 +4010,7 @@ m(E_n(\varepsilon))=\frac{1}{2^k}\rightarrow 0
 f(x)=g(x),\quad a.e.x\in E.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="uniqueness-of-convergent-function-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="uniqueness-of-convergent-function-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="uniqueness-of-convergent-function-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="uniqueness-of-convergent-function-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Because <span class="arithmatex">\(|f(x)-g(x)|\leq |f(x)-f_n(x)|+|f_n(x)-g(x)|\)</span>, so </p>
@@ -3904,7 +4029,7 @@ m(\{|f(x)-g(x)|&gt;\varepsilon\})\leq m\left(\left\{|f(x)-f_n(x)|&gt;\frac{\vare
 <p class="admonition-title">Relationship between two Convergences</p>
 <p>Assume <span class="arithmatex">\(m(E)&lt;\infty\)</span>, <span class="arithmatex">\(\{f_n(x)\}\)</span> is a measurable function sequence <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>. If <span class="arithmatex">\(\{f_n\}\)</span> converges to function <span class="arithmatex">\(f(x)\)</span> <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, where <span class="arithmatex">\(f(x)\)</span> is a bounded function <span class="arithmatex">\(a.e.x\in E\)</span>, then <span class="arithmatex">\(f_n(x)\)</span> converges to <span class="arithmatex">\(f(x)\)</span> in measure.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="relationship-between-two-convergences-hints" name="__tabbed_11" type="radio" /><input id="relationship-between-two-convergences-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-hints">Hints</label><label for="relationship-between-two-convergences-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="relationship-between-two-convergences-hints" name="__tabbed_16" type="radio" /><input id="relationship-between-two-convergences-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-hints">Hints</label><label for="relationship-between-two-convergences-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use <span class="arithmatex">\(m(E)&lt;\infty\)</span> to show that <span class="arithmatex">\(f_n(x) \rightrightarrows f(x)\)</span>, which could gives convergence in measure.</p>
@@ -3938,7 +4063,7 @@ m(\{x\in E: |f_n(x)-f(x)|\geq \varepsilon\})\leq m(E_\delta)&lt;\delta.
 <p>(i) If <span class="arithmatex">\(\{f_n\}\)</span> converge to <span class="arithmatex">\(f\)</span> in measure, then there exists subsequence <span class="arithmatex">\(\{f_{n_j}\}\)</span> convergent to <span class="arithmatex">\(f\)</span> <span class="arithmatex">\(a.e.x\in E\)</span>.</p>
 <p>(ii) If <span class="arithmatex">\(m(E)&lt;\infty\)</span>, and <span class="arithmatex">\(\{f_n\}\)</span> converge to <span class="arithmatex">\(f\)</span> <span class="arithmatex">\(a.e.x\in E\)</span>, then <span class="arithmatex">\(\{f_n\}\)</span> converge to <span class="arithmatex">\(f\)</span> in measure.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="relationship-between-two-convergences-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="relationship-between-two-convergences-proof_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -3950,7 +4075,7 @@ m(\{x\in E: |f_n(x)-f(x)|\geq \varepsilon\})\leq m(E_\delta)&lt;\delta.
 f_{n_{j_i}}\rightarrow f(x), a.e.x\in E.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="relationship-between-two-convergences-proof_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="relationship-between-two-convergences-proof_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
