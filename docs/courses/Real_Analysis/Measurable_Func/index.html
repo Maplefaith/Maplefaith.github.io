@@ -1756,6 +1756,8 @@
       
         
       
+        
+      
     
     
       
@@ -2028,6 +2030,27 @@
   
   <span class="md-ellipsis">
     Lebesgue Integral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Differential_Integral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differential & Integral
   </span>
   
 
@@ -3949,7 +3972,7 @@ m(E\backslash F)&amp;\leq m\left[E\backslash E_\delta\right]+m\left[E_\delta \ba
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By <a href="#Lusin-Theorem">Lusin Theorem</a>, <span class="arithmatex">\(\forall \delta&gt;0\)</span>, there exists closed set <span class="arithmatex">\(F\subset E\)</span>, such that <span class="arithmatex">\(m(E-F)&lt;\delta\)</span>, and <span class="arithmatex">\(f\in C(F)\)</span>. Now the only problem is, how to extend this continuoud function on <span class="arithmatex">\(F\)</span> to all space <span class="arithmatex">\(F\)</span> and satisfy the so-called boundary condition <span class="arithmatex">\(\ref{boundary-condition}\)</span>.</p>
-<p>By <a href="../Sets/#Conposition-of-complete-set">Conposition of closed set</a>, <span class="arithmatex">\(F\)</span> could be expressed by <span class="arithmatex">\(\mathbb{R}-G\)</span>, where <span class="arithmatex">\(G\)</span> is a union of denumerable open intervals which are mutually disjoint. That is, </p>
+<p>By <a href="../Sets/#Composition-of-complete-set">Conposition of closed set</a>, <span class="arithmatex">\(F\)</span> could be expressed by <span class="arithmatex">\(\mathbb{R}-G\)</span>, where <span class="arithmatex">\(G\)</span> is a union of denumerable open intervals which are mutually disjoint. That is, </p>
 <div class="arithmatex">\[
 F^c=\mathbb{R}-F=\bigcup_{i=1}^\infty(a_i,b_i).
 \]</div>
@@ -4063,9 +4086,51 @@ m(\{x\in E: |f_n(x)-f(x)|\geq \varepsilon\})\leq m(E_\delta)&lt;\delta.
 <p>(i) If <span class="arithmatex">\(\{f_n\}\)</span> converge to <span class="arithmatex">\(f\)</span> in measure, then there exists subsequence <span class="arithmatex">\(\{f_{n_j}\}\)</span> convergent to <span class="arithmatex">\(f\)</span> <span class="arithmatex">\(a.e.x\in E\)</span>.</p>
 <p>(ii) If <span class="arithmatex">\(m(E)&lt;\infty\)</span>, and <span class="arithmatex">\(\{f_n\}\)</span> converge to <span class="arithmatex">\(f\)</span> <span class="arithmatex">\(a.e.x\in E\)</span>, then <span class="arithmatex">\(\{f_n\}\)</span> converge to <span class="arithmatex">\(f\)</span> in measure.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="relationship-between-two-convergences-proof_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="relationship-between-two-convergences-proof-for-i" name="__tabbed_17" type="radio" /><input id="relationship-between-two-convergences-proof-for-ii" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof-for-i">Proof for (i)</label><label for="relationship-between-two-convergences-proof-for-ii">Proof for (ii)</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>We hope to use <span class="arithmatex">\(\delta\)</span> to get a subsequence of <span class="arithmatex">\(f_n\)</span>.</p>
+<p><span class="arithmatex">\(\forall k\in \mathbb{N}^+\)</span>, let <span class="arithmatex">\(\delta_k=\frac{1}{2^k}\)</span>, so <span class="arithmatex">\(f_n\overset{m}{\rightarrow}f\)</span> implies</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}m(\{|f_n-f|\geq \delta_k\})=0.
+\]</div>
+<p>So there exsits <span class="arithmatex">\(n_k\)</span>, such that </p>
+<div class="arithmatex">\[
+m(\{|f_{n_k}-f|\geq \delta_k\})&lt;\frac{1}{2^k}.
+\]</div>
+<p>Notice {m({|f_n-f|\geq \delta_k})}_{n\geq 1} is a number sequence, so <span class="arithmatex">\(n_1&lt;n_2&lt;\cdots\)</span>.</p>
+<p>Define </p>
+<div class="arithmatex">\[
+E:=\bigcap_{p=1}^\infty\bigcup_{k=p}\left\{|f_{n_k}-f|\geq \frac{1}{2^k}\right\}
+\]</div>
+<p>and for every <span class="arithmatex">\(p\)</span>, measure</p>
+<div class="arithmatex">\[
+m(E)\leq m\left(\left\{|f_{n_k}-f|\geq \frac{1}{2^k}\right\}\right)&lt;\sum_{k=p}^\infty\frac{1}{2^k}=\frac{1}{2^{p-1}}.
+\]</div>
+<p>let <span class="arithmatex">\(p\rightarrow \infty\)</span>, we have <span class="arithmatex">\(m(E)=0\)</span>. Thus for every <span class="arithmatex">\(x\in D-E\)</span>, i.e.</p>
+<div class="arithmatex">\[
+x\in \bigcup_{p=1}^\infty\bigcap_{k=p}^\infty\left\{|f_{n_k}-f|&lt; \frac{1}{2^k}\right\}
+\]</div>
+<p>which means, <span class="arithmatex">\(\exists p_0\geq 1\)</span>, such that </p>
+<div class="arithmatex">\[
+|f_{n_k}-f|&lt; \frac{1}{2^k},\quad \forall k\geq p_0
+\]</div>
+<p>meaning <span class="arithmatex">\(\lim\limits_{k\rightarrow \infty}f_{n_k}=f\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall \delta&gt;0\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, since <span class="arithmatex">\(m(D)&lt;\infty\)</span>, by <a href="#Egoroff-Theorem">Egoroff Theorem</a>, there exists measurable set <span class="arithmatex">\(E\subset D\)</span>, such that <span class="arithmatex">\(m(D-E)&lt;\varepsilon\)</span>, and <span class="arithmatex">\(f_n\rightrightarrows f, a.e.x\in E\)</span>. That is, there exsits <span class="arithmatex">\(N\)</span>, such that</p>
+<div class="arithmatex">\[
+|f_n(x)-f(x)|&lt;\delta,\quad x\in E,n\geq N.
+\]</div>
+<p>which means</p>
+<div class="arithmatex">\[
+m(\{|f_n(x)-f(x)|\geq \delta\})=M(D-E)&lt;\varepsilon,\quad n&gt;N
+\]</div>
+<p>meaning </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}m(\{|f_n(x)-f(x)|\geq \delta\})=0.
+\]</div>
+</div>
 </div>
 </div>
 <div class="admonition success">
@@ -4075,7 +4140,7 @@ m(\{x\in E: |f_n(x)-f(x)|\geq \varepsilon\})\leq m(E_\delta)&lt;\delta.
 f_{n_{j_i}}\rightarrow f(x), a.e.x\in E.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="relationship-between-two-convergences-proof_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="relationship-between-two-convergences-proof_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>

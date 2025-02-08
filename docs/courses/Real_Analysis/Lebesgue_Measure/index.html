@@ -1756,6 +1756,8 @@
       
         
       
+        
+      
     
     
       
@@ -1959,6 +1961,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#measure-of-direct-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure of Direct Product
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2001,6 +2012,27 @@
   
   <span class="md-ellipsis">
     Lebesgue Integral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Differential_Integral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differential & Integral
   </span>
   
 
@@ -3353,6 +3385,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#measure-of-direct-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure of Direct Product
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4000,6 +4041,28 @@ F\subset E\subset G \text{ and } m(G\backslash F)&lt;\varepsilon.
 \]</div>
 <p>(iii) <span class="arithmatex">\(\exists G=G_\delta \supset E\)</span>, such that <span class="arithmatex">\(m^*(G-E)=0\)</span></p>
 <p>(iv) <span class="arithmatex">\(\exists F=F_\sigma \subset E\)</span>, such that <span class="arithmatex">\(m^*(E-F)=0\)</span></p>
+</div>
+<h2 id="measure-of-direct-product">Measure of Direct Product<a class="headerlink" href="#measure-of-direct-product" title="Permanent link">&para;</a></h2>
+<p>This part is useful in deducing multiple integral formula.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for measurability of Direct Product</p>
+<p>Assume <span class="arithmatex">\(P\)</span> and <span class="arithmatex">\(Q\)</span> are measurable sets in <span class="arithmatex">\(\mathbb{R}^p\)</span> and <span class="arithmatex">\(\mathbb{R}^q\)</span> respectively, then <span class="arithmatex">\(P\times Q\)</span> is a measurable set in <span class="arithmatex">\(\mathbb{R}^{p+q}\)</span>, and</p>
+<div class="arithmatex">\[
+m(P\times Q)=m(P)\cdot m(Q).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="measure-of-direct-product-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="measure-of-direct-product-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(Q\)</span> are cubes in <span class="arithmatex">\(\mathbb{R}^p\)</span> and <span class="arithmatex">\(\mathbb{R}^q\)</span> respectively.</p>
+<p>(ii) <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(Q\)</span> are open sets in <span class="arithmatex">\(\mathbb{R}^p\)</span> and <span class="arithmatex">\(\mathbb{R}^q\)</span> respectively.</p>
+<p>Use <a href="../Sets/#Configuration-high-space">Configuration of open sets in high dimension space</a>.</p>
+<p>(iii) <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(Q\)</span> are measure-finite sets in <span class="arithmatex">\(\mathbb{R}^p\)</span> and <span class="arithmatex">\(\mathbb{R}^q\)</span> respectively.</p>
+<p>Use <a href="#Theorem-of-Approximation">Approximation with open and closed sets</a>.</p>
+<p>(iv) <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(Q\)</span> are general measurable sets in <span class="arithmatex">\(\mathbb{R}^p\)</span> and <span class="arithmatex">\(\mathbb{R}^q\)</span> respectively. </p>
+<p>Use series of measure-finite sets like <span class="arithmatex">\(\{x\in \mathbb{R}^p: k-1\leq \|x\|&lt; k\}\)</span> to intersect to construct cases that could use conclusion in (iii).</p>
+</div>
+</div>
 </div>
 
 
