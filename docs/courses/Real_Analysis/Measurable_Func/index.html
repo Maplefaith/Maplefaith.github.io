@@ -4059,7 +4059,7 @@ f(x)=g(x),\quad a.e.x\in E.
 <div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="uniqueness-of-convergent-function-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="uniqueness-of-convergent-function-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Because <span class="arithmatex">\(|f(x)-g(x)|\leq |f(x)-f_n(x)|+|f_n(x)-g(x)|\)</span>, so </p>
+<p>Because <span class="arithmatex">\(|f(x)-g(x)|\leq |f(x)-f_n(x)|+|f_n(x)-g(x)|\)</span> (at least one set of the right side should be larger then <span class="arithmatex">\(\varepsilon/2\)</span> if <span class="arithmatex">\(|f(x)-g(x)|&gt;\varepsilon\)</span>), so </p>
 <div class="arithmatex">\[
 \{|f(x)-g(x)|&gt;\varepsilon\}\subset \left\{|f(x)-f_n(x)|&gt;\frac{\varepsilon}{2}\right\}\cup \left\{|g(x)-f_n(x)|&gt;\frac{\varepsilon}{2}\right\}
 \]</div>
@@ -4071,8 +4071,9 @@ m(\{|f(x)-g(x)|&gt;\varepsilon\})\leq m\left(\left\{|f(x)-f_n(x)|&gt;\frac{\vare
 </div>
 </div>
 <h3 id="relationship-between-two-convergences">Relationship between two Convergences<a class="headerlink" href="#relationship-between-two-convergences" title="Permanent link">&para;</a></h3>
+<p><a id="Lebesgue-Theorem"></a></p>
 <div class="admonition success">
-<p class="admonition-title">Relationship between two Convergences</p>
+<p class="admonition-title">Lebesgue's Theorem: Relationship between two Convergences</p>
 <p>Assume <span class="arithmatex">\(m(E)&lt;\infty\)</span>, <span class="arithmatex">\(\{f_n(x)\}\)</span> is a measurable function sequence <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>. If <span class="arithmatex">\(\{f_n\}\)</span> converges to function <span class="arithmatex">\(f(x)\)</span> <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, where <span class="arithmatex">\(f(x)\)</span> is a bounded function <span class="arithmatex">\(a.e.x\in E\)</span>, then <span class="arithmatex">\(f_n(x)\)</span> converges to <span class="arithmatex">\(f(x)\)</span> in measure.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="relationship-between-two-convergences-hints" name="__tabbed_16" type="radio" /><input id="relationship-between-two-convergences-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="relationship-between-two-convergences-hints">Hints</label><label for="relationship-between-two-convergences-proof">Proof</label></div>
@@ -4169,6 +4170,25 @@ f_{n_{j_i}}\rightarrow f(x), a.e.x\in E.
 <ul>
 <li>"<span class="arithmatex">\(\Rightarrow\)</span>".</li>
 </ul>
+<p>We prove <span class="arithmatex">\(\forall\)</span> subsequence <span class="arithmatex">\(\{f_{n_j}\}\)</span>, <span class="arithmatex">\(f_{n_j}\)</span> converges to <span class="arithmatex">\(f\)</span> in measure, which holds apparently because <span class="arithmatex">\(f_n(x)\)</span> converges to <span class="arithmatex">\(f(x)\)</span> in measure.</p>
+<p>Then apply Riesz Theorem to <span class="arithmatex">\(f_{n_j}\)</span> and we are done.</p>
+<ul>
+<li>"<span class="arithmatex">\(\Leftarrow\)</span>". We make use of contradiction. That is, if <span class="arithmatex">\(\{f_n\}\)</span> does not converges to <span class="arithmatex">\(f\)</span> in measure, i.e. <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>, </li>
+</ul>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty} m(\{|f_n-f|\geq \varepsilon_0\})\neq 0.
+\]</div>
+<p>So <span class="arithmatex">\(\forall j, \exists n_j\)</span>, s.t.</p>
+<div class="arithmatex">\[
+\begin{align}
+m(\{|f_{n_j}-f|\geq \varepsilon_0\})&gt;0.\label{contradiction}
+\end{align}
+\]</div>
+<p>But if there exists a subsequence <span class="arithmatex">\(\{f_{n_{j_i}}\}\)</span> such that </p>
+<div class="arithmatex">\[
+f_{n_{j_i}}\rightarrow f(x), a.e.x\in E.
+\]</div>
+<p>then by <a href="#Lebesgue-Theorem">Lebesgue's Theorem</a> (<span class="arithmatex">\(m(E)&lt;\infty\)</span>), we have <span class="arithmatex">\(f_{n_{j_i}}\overset{m}{\rightarrow}f\)</span>, which contradicts inequation <span class="arithmatex">\(\ref{contradiction}\)</span>.</p>
 </div>
 </div>
 </div>

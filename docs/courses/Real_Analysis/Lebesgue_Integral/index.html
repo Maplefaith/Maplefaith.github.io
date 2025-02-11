@@ -4142,6 +4142,32 @@ f\in L(E).
 </div>
 </div>
 </div>
+<p><div class="question" markdown>
+<strong>Example</strong>. Assume non-negative measurable function sequence <span class="arithmatex">\(\{f_k\}\)</span> satisfies <span class="arithmatex">\(f_k\overset{m}{\rightarrow}f\)</span>, then prove
+hunmy</p>
+<div class="arithmatex">\[
+\int_E fdx\leq \underline{\lim}\limits_{k\rightarrow \infty} f_kdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="fatou-lemma-proof_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="fatou-lemma-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Get a subsequence <span class="arithmatex">\(\{f_{k_s}\}\)</span> such that </p>
+<div class="arithmatex">\[
+\int_E f_kdx=\lim_{s\rightarrow \infty}\int_{E} f_{k_s}dx
+\]</div>
+<p>Since <span class="arithmatex">\(f_k\overset{m}{\rightarrow} f\)</span>, there exists a subsequence <span class="arithmatex">\(\{f_{k_{s_i}}(x)\}\rightarrow f(x), a.e.x\in E\)</span>, then by <a href="#fatou-lemma">Fatou Lemma</a>(1nd "$\leq  $"), we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E fdx&amp;=\int_E \lim_{i\rightarrow \infty} f_{k_{s_i}}dx\\
+&amp;\leq \lim_{i\rightarrow \infty} \int_E f_{k_{s_i}}dx\\
+&amp;\leq \lim_{s\rightarrow \infty} \int_E f_{k_{s}}dx\\
+&amp;=\underline{\lim}\limits_{k\rightarrow \infty} f_kdx.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
 <h2 id="lebesgues-dominated-convergence-theorem">Lebesgue's Dominated Convergence Theorem<a class="headerlink" href="#lebesgues-dominated-convergence-theorem" title="Permanent link">&para;</a></h2>
 <p><a id="Dominated-Convergence-Theorem"></a></p>
 <div class="admonition success">
@@ -4152,7 +4178,7 @@ f\in L(E).
 \]</div>
 <p>where <span class="arithmatex">\(g\)</span> is also called the controlling function.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Since <span class="arithmatex">\(|f_n|\leq g\)</span>, so its limit value <span class="arithmatex">\(|f|\leq g\)</span>, so <span class="arithmatex">\(g\in L(E)\)</span> could induce <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f_n\)</span> are L integrable.</p>
@@ -4194,7 +4220,7 @@ g_k(x)=2g-|f_k-f|\geq 0,
 \lim_{n\rightarrow \infty}\int_E f_ndx=\int_E f dx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use contradiction and the above <a href="#Dominated-Convergence-Theorem">Dominated Convergence Theorem</a>.</p>
@@ -4227,7 +4253,7 @@ f_{k_{j_i}}\rightarrow f, a.e.x\in E
 \int_E fdx = \sum_{n=1}^\infty \int_E f_ndx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="applications-of-ldct-proof" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="applications-of-ldct-proof" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Consider define <span class="arithmatex">\(F_k(x):=\sum\limits_{j=1}^\infty f_j,k\in \mathbb{N}^+\)</span>, then <span class="arithmatex">\(g=\sum\limits_{k=1}^\infty |f_k|\)</span>.</p>
@@ -4243,7 +4269,7 @@ f_{k_{j_i}}\rightarrow f, a.e.x\in E
 \int_E fdx=\lim_{k\rightarrow \infty}\int_{E_k}fdx.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="applications-of-ldct-proof_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="applications-of-ldct-proof_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let <span class="arithmatex">\(f_k(x):=f(x)\chi_{E_k}(x)\)</span>, so <span class="arithmatex">\(\lim_{k\rightarrow \infty}f_k=f(x)\)</span> and <span class="arithmatex">\(|f_k|\leq |f|\in L(E)\)</span>, by LDCT, we have</p>
@@ -4263,7 +4289,7 @@ f_{k_{j_i}}\rightarrow f, a.e.x\in E
 \lim_{n\rightarrow \infty}\int_{(0,+\infty)}\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)dx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="applications-of-ldct-answer" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="applications-of-ldct-answer" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer">Answer</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let <span class="arithmatex">\(f_n(x)=\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)\)</span>, <span class="arithmatex">\(f(x)=0\)</span>. Here we have to discuss a controlling function.</p>
@@ -4302,7 +4328,7 @@ g(x)=\begin{cases}
 \int_E fdx=\sum_{k=1}^\infty \int_{E_k}fdx.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="applications-of-ldct-proof_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="applications-of-ldct-proof_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Construct another sequence of sets <span class="arithmatex">\(\{\tilde{E_k}\}\)</span> as</p>
@@ -4337,7 +4363,7 @@ g(x)=\begin{cases}
 \frac{\partial}{\partial y}\int_E f(x,y)dx=\int_E \frac{\partial}{\partial y}f(x,y)dx,\quad \forall y\in I.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="applications-of-ldct-proof_3" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_3">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="applications-of-ldct-proof_3" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(\forall y\in I\)</span>, <span class="arithmatex">\(\exists h_k&gt;0\)</span>, s.t. <span class="arithmatex">\(y+h_k\in I\)</span>, then define</p>
@@ -4364,7 +4390,7 @@ g_k(x,y)=\left|\frac{\partial }{\partial y}f(x,y+\theta_k h_k)\right|\leq F(x),\
 \frac{d}{dx}\int_{[a,b]}f(y)\sin(xy)dy=\int_{[a,b]}yf(y)\cos(xy)dy.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="applications-of-ldct-answer_1" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer_1">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="applications-of-ldct-answer_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer_1">Answer</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Easy to see that <span class="arithmatex">\(F(x)=f(y)\sin(xy)\in L([a,b])\)</span> with respect to <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(F(x)\in C(I)\)</span> with respect to <span class="arithmatex">\(x\)</span>. Notice that</p>
@@ -4445,7 +4471,7 @@ f\in R[a,b]&amp;\Leftrightarrow \int_{[a,b]}m(x)dx=\int_{[a,b]}M(x)dx\\
 <p class="admonition-title">Baire Theorem</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(x_0\in [a,b]\)</span>, then <span class="arithmatex">\(f\)</span> is continuous at <span class="arithmatex">\(x_0\)</span>, iff <span class="arithmatex">\(M(x_0)=m(x_0)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4473,7 +4499,7 @@ f(x_0)-\varepsilon&lt;m_{\Delta_k}(x)&lt;M_{\Delta_k}(x)&lt;f(x_0)+\varepsilon.
 (R)\int_a^b fdx=(L)\int_{[a,b]}fdx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_1" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_1" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -4482,7 +4508,7 @@ f(x_0)-\varepsilon&lt;m_{\Delta_k}(x)&lt;M_{\Delta_k}(x)&lt;f(x_0)+\varepsilon.
 <p class="admonition-title">Sufficient &amp; Necessary condition for Riemann integrable</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f\in R[a,b]\)</span>, iff <span class="arithmatex">\(f\in C(a.e.x\in [a,b])\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="28:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4514,7 +4540,7 @@ R(x)=\begin{cases}\frac{1}{q},\quad x=\frac{p}{q}\\
 (L)\int_{(0,\infty)}fdx=(R)\int_0^\infty fdx.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="generalized-riemann-integral-proof" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="generalized-riemann-integral-proof" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) First we prove that <span class="arithmatex">\(f\in L((0,\infty))\)</span>. Notice that</p>
@@ -4548,7 +4574,7 @@ f\in R([a,b])\Rightarrow f\in L([a,b])
 (L)\int_{(-\infty,+\infty)}fdx=(R)\int_{-\infty}^{+\infty} fdx.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="generalized-riemann-integral-proof_1" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:1"><input checked="checked" id="generalized-riemann-integral-proof_1" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>This function might not be non-negative, so we should use LDCT. That is, Define <span class="arithmatex">\(f_k(x)=f(x)\chi_{(0,k)}(x)\)</span>, which converges to <span class="arithmatex">\(f(x)\)</span>, and</p>
@@ -4618,7 +4644,7 @@ m(E)=\int_{\mathbb{R}^q}\left[\int_{\mathbb{R}^p}\chi_{E^y} (x)dx\right]dy=\int_
 \int_{\mathbb{E}^q}m(E^y)dy=m(E).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="31:1"><input checked="checked" id="multiple-lebesgue-integral-proof" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="multiple-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:1"><input checked="checked" id="multiple-lebesgue-integral-proof" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="multiple-lebesgue-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4706,7 +4732,7 @@ m(E^y)=m(\lim_{k\rightarrow \infty}G_k^y)=\lim_{k\rightarrow \infty}m(G_k^y)
 <p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(f(x,y)\)</span>, as a function of <span class="arithmatex">\(x\in \mathbb{R}^q\)</span> is non-negative measurable.</p>
 <p>(ii) <span class="arithmatex">\(F(y):=\int_{\mathbb{R}^p}f(x,y)dx\)</span> is non-negative measurable on <span class="arithmatex">\(\mathbb{R}^q\)</span>, and equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> holds.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="32:1"><input checked="checked" id="tonelli-theorem-proof" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:1"><input checked="checked" id="tonelli-theorem-proof" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) <span class="arithmatex">\(f\)</span> is a simple function, which holds naturally, bacause Linearity of Lebesgue integral.</p>
@@ -4725,7 +4751,7 @@ f(x)=\lim_{k\rightarrow \infty}\varphi_k(x,y)
 \]</div>
 <p>where <span class="arithmatex">\(d_f(\alpha)=m(\{f&gt;\alpha\})\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="33:1"><input checked="checked" id="tonelli-theorem-proof_1" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:1"><input checked="checked" id="tonelli-theorem-proof_1" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="arithmatex">\[
@@ -4747,7 +4773,7 @@ f(x)=\lim_{k\rightarrow \infty}\varphi_k(x,y)
 <p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(f(x,y)\)</span>, as a function of <span class="arithmatex">\(x\in \mathbb{R}^q\)</span> is L integrable.</p>
 <p>(ii) <span class="arithmatex">\(F(y):=\int_{\mathbb{R}^p}f(x,y)dx\)</span> is L integrable on <span class="arithmatex">\(\mathbb{R}^q\)</span>, and equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> holds.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="34:1"><input checked="checked" id="fubini-theorem-proof" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:1"><input checked="checked" id="fubini-theorem-proof" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Notice that <span class="arithmatex">\(f(x,y)=f(x,y)^+-f(x,y)^-\)</span>, which are non-negative measurable function. So by Tonelli Theorem, we are done.</p>
@@ -4760,7 +4786,7 @@ f(x)=\lim_{k\rightarrow \infty}\varphi_k(x,y)
 I=\int_{(0,\infty)}\frac{\sin x}{x}[e^{-ax}-e^{-bx}]dx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="35:1"><input checked="checked" id="fubini-theorem-answer" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-answer">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:1"><input checked="checked" id="fubini-theorem-answer" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-answer">Answer</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Notice that</p>
