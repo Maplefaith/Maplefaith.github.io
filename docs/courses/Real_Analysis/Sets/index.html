@@ -3945,13 +3945,82 @@ A = \{ r_\lambda : \lambda \in \Lambda \}
 </div>
 </div>
 </div>
+<p>The above denumerability is quite important in proving. Readers could check the following examples.</p>
 <div class="question">
 <p><strong>Example</strong>.  Some facts about functions on <span class="arithmatex">\( \mathbb{R} \)</span>:</p>
-<ol>
-<li>Prove: The discontinuity points of a monotonous function on <span class="arithmatex">\( \mathbb{R} \)</span> are at most denumerable.</li>
-<li>Prove: The <strong>first case</strong> discontinuity points of a real function on <span class="arithmatex">\( \mathbb{R} \)</span> are at most denumerable.</li>
-<li>Let <span class="arithmatex">\( f \)</span> be a real function on <span class="arithmatex">\( \mathbb{R} \)</span>. If there exists <span class="arithmatex">\( M &gt; 0 \)</span> such that for any finite set of distinct points <span class="arithmatex">\( x_1, x_2, \dots, x_n \)</span>, <span class="arithmatex">\( \left| \sum_{k=1}^n f(x_k) \right| \leq M \)</span>, prove: <span class="arithmatex">\( \{ x : f(x) \neq 0 \} \)</span> is at most denumerable.</li>
-</ol>
+<p>(i) Prove: The discontinuity points of a monotonic function on <span class="arithmatex">\( \mathbb{R} \)</span> are at most denumerable.</p>
+<p>(ii) Prove: The <strong>first case</strong> discontinuity points of a real function on <span class="arithmatex">\( \mathbb{R} \)</span> are at most denumerable.</p>
+<p>(iii) Let <span class="arithmatex">\( f \)</span> be a real function on <span class="arithmatex">\( \mathbb{R} \)</span>. If there exists <span class="arithmatex">\( M &gt; 0 \)</span> such that for any finite set of distinct points <span class="arithmatex">\( x_1, x_2, \dots, x_n \)</span>, <span class="arithmatex">\( \left| \sum_{k=1}^n f(x_k) \right| \leq M \)</span>, prove: <span class="arithmatex">\( \{ x : f(x) \neq 0 \} \)</span> is at most denumerable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="denumerability-proof-for-i" name="__tabbed_11" type="radio" /><input id="denumerability-proof-for-ii" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof-for-i">Proof for (i)</label><label for="denumerability-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(f\)</span> to be monotonically increasing. Firstly we prove that the discontinuity point is the first class, i.e. its left and right limits exists.</p>
+<p>Let <span class="arithmatex">\(A=\{f(t): x_1&lt;t&lt;x_0\}\)</span>, then <span class="arithmatex">\(f(x_0)&lt;\infty\)</span> is an upper bound of <span class="arithmatex">\(A\)</span>. Denote <span class="arithmatex">\(\alpha=\sup A\)</span>, then by its definition, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists x_2\in (x_1,x_0)\)</span>, such that </p>
+<div class="arithmatex">\[
+\alpha-\varepsilon&lt;f(x_2)&lt;\alpha.
+\]</div>
+<p>which means <span class="arithmatex">\(|f(x_2)-\alpha|&lt;\varepsilon\)</span>. Since <span class="arithmatex">\(f\)</span> is monotonically increasing, so <span class="arithmatex">\(\forall x\in (x_2,x_0)\)</span>, <span class="arithmatex">\(|f(x)-\alpha|&lt;\varepsilon\)</span>, which means </p>
+<div class="arithmatex">\[
+f(x_0^-)=\lim_{x\rightarrow x_0^-}f(x)=\alpha\leq f(x_0)&lt;\infty
+\]</div>
+<p>meaning left limit exists. Same for right limit. </p>
+<p>Then we have to show that these discontinuity points are denumerable. Let <span class="arithmatex">\(B\)</span> to be the set composed by all the discontinuity points and <span class="arithmatex">\(C\)</span> to be a set composed by open intervals in <span class="arithmatex">\(\mathbb{R}\)</span>. Let</p>
+<div class="arithmatex">\[
+\varphi:B\mapsto C, \quad x\mapsto (f(x^-),f(x^+)).
+\]</div>
+<p>which is a bijection. Because <span class="arithmatex">\(f\)</span> is monotonically increasing, range of <span class="arithmatex">\(\varphi\)</span> is mutually disjoint. By <a href="#exam-denumerable-open-set">Example of mutually disjoint open intervals</a>, the range of <span class="arithmatex">\(\varphi\)</span> is at most denumerable, so its original image is also denumerable.</p>
+</div>
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(A\)</span> to denote the set composed by all the first class discontinuity points of <span class="arithmatex">\(f\)</span>, then </p>
+<div class="arithmatex">\[
+A=\{x: |f(x)-f(x^+)|&gt;0\}\cup \{x: |f(x)-f(x^-)|&gt;0\}
+\]</div>
+<p>If we define</p>
+<div class="arithmatex">\[
+E_n:=\{x: |f(x)-f(x^+)|&gt;\frac{1}{n}\},\quad F_m:=\{x: |f(x)-f(x^-)|&gt;\frac{1}{m}\},
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+A=\left(\bigcup_{n=1}^\infty E_n\right)\cup \left(\bigcup_{m=1}^\infty F_m\right)
+\]</div>
+<p>Now we want to show that <span class="arithmatex">\(E_n\)</span> is a denumerable set. <span class="arithmatex">\(\forall x\in E_n\)</span>, by definition of right limit, <span class="arithmatex">\(\exists \delta_x&gt;0\)</span>, such that when <span class="arithmatex">\(t\in (x,x+\delta_x)\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{equation}
+|f(t)-f(x^+)|&lt;\frac{1}{4n}.\label{def-limit}
+\end{equation}
+\]</div>
+<p>So <span class="arithmatex">\(\forall x_1,x_2\in (x,x+\delta_x)\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+|f(x_1)-f(x_2)|&lt;|f(x_1)-f(x^+)|+|f(x_2)-f(x^+)|&lt;\frac{1}{2n}.\label{def-limit2}
+\end{align}
+\]</div>
+<p>We have to show that these open intervals <span class="arithmatex">\(I_x:=(x,x+\delta_x),x\in E_n\)</span> are mutually disjoint. We prove it by contradiction. Assume there exists <span class="arithmatex">\(x_3\in E_n\)</span> such that <span class="arithmatex">\(x_3\in (x,x+\delta)\)</span>, then from inequation <span class="arithmatex">\(\ref{def-limit2}\)</span>, <span class="arithmatex">\(\forall t\in (x,x+\delta_x)\)</span>, <span class="arithmatex">\(x_3\)</span> follows inequation <span class="arithmatex">\(\ref{def-limit}\)</span></p>
+<div class="arithmatex">\[
+\begin{align}
+|f(x_3)-f(t)|&lt;\frac{1}{2n}.\label{x3-t}
+\end{align}
+\]</div>
+<p>However on the other hand, since <span class="arithmatex">\(x_3\in E_n\)</span>, it follows </p>
+<div class="arithmatex">\[
+\begin{align}
+|f(x_3)-f(x_3^+)|&gt;\frac{1}{n}\label{x3-def}
+\end{align}
+\]</div>
+<p>and also by definition of right limit, <span class="arithmatex">\(\exists\delta_{x_3}\)</span> such that when <span class="arithmatex">\(t\in (x_3,x_3+\delta_{x_3})\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+|f(t)-f(x_3^+)|&lt;\frac{1}{2n}.\label{x3-limit}
+\end{align}
+\]</div>
+<p>We could choose <span class="arithmatex">\(\delta_{x_3}&lt;\delta_x\)</span>, then <span class="arithmatex">\(\forall t\in (x_3,x_3+\delta_{x_3})\subset (x,x+\delta_x)\)</span>, by inequation <span class="arithmatex">\(\ref{x3-def}\)</span> and <span class="arithmatex">\(\ref{x3-limit}\)</span>, we have</p>
+<div class="arithmatex">\[
+|f(x_3)-f(t)|\geq|f(x_3)-f(x_3^+)|-|f(t)-f(x_3^+)|&gt;\frac{1}{n}-\frac{1}{2n}=\frac{1}{2n},
+\]</div>
+<p>which contradicts inequation <span class="arithmatex">\(\ref{x3-t}\)</span>! So <span class="arithmatex">\(\{I_x,x\in E_n\}\)</span> are mutually disjoint, so still by <a href="#exam-denumerable-open-set">example of denumerable open set</a>, <span class="arithmatex">\(E_n\)</span> is denumerable. The same logic for <span class="arithmatex">\(F_m\)</span>, so <span class="arithmatex">\(A\)</span> is also denumerable.</p>
+</div>
+</div>
 </div>
 <div class="question">
 <p><strong>Example</strong>.  Some facts about sets:</p>
@@ -4019,7 +4088,7 @@ V(\pmb{x}, \delta) \cap E \neq \varnothing \quad \text{and} \quad V(\pmb{x}, \de
 \forall \pmb{y} \in V(\pmb{x}, \varepsilon), \pmb{y} \text{ is an interior point of } V(\pmb{x}, \varepsilon).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="interior-point-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="interior-point-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="interior-point-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="interior-point-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>For any <span class="arithmatex">\( \pmb{y} \in V(\pmb{x}, \varepsilon) \)</span>, we have <span class="arithmatex">\( d(\pmb{y}, \pmb{x}) &lt; \varepsilon \)</span>. Choose <span class="arithmatex">\( \delta = \varepsilon - d(\pmb{y}, \pmb{x}) \)</span>. Then:</p>
@@ -4063,7 +4132,7 @@ E^o \subset E
 (ii) <span class="arithmatex">\( \mathbb{R}^n \)</span> is an <strong>open set</strong>.<br />
 (iii) <span class="arithmatex">\( E^o \)</span> is an <strong>open set</strong>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="open-set-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="open-set-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="open-set-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="open-set-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We only prove (iii).  </p>
@@ -4155,7 +4224,7 @@ A' \subset B', \quad A^o \subset B^o, \quad \overline{A} \subset \overline{B}
 (A \cap B)' \subset A' \cap B', \quad \overline{A \cap B} \subset \overline{A} \cap \overline{B}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="accumulation-point-proof-for-i" name="__tabbed_13" type="radio" /><input id="accumulation-point-proof-for-ii" name="__tabbed_13" type="radio" /><input id="accumulation-point-proof-for-iii" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="accumulation-point-proof-for-i">Proof for (i)</label><label for="accumulation-point-proof-for-ii">Proof for (ii)</label><label for="accumulation-point-proof-for-iii">Proof for (iii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="accumulation-point-proof-for-i" name="__tabbed_14" type="radio" /><input id="accumulation-point-proof-for-ii" name="__tabbed_14" type="radio" /><input id="accumulation-point-proof-for-iii" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="accumulation-point-proof-for-i">Proof for (i)</label><label for="accumulation-point-proof-for-ii">Proof for (ii)</label><label for="accumulation-point-proof-for-iii">Proof for (iii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) If <span class="arithmatex">\( A \subset B \)</span>, then:</p>
@@ -4239,7 +4308,7 @@ A' \cap B' = \mathbb{R} \neq \varnothing = (A \cap B)', \quad \overline{A} \cap 
 <p>(i) <strong>Infinite</strong> intersection of closed sets is a closed set.<br />
 (ii) <strong>Finite</strong> union of closed sets is a closed set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="closed-set-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="closed-set-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The proof follows directly from De Morgan's formula and the properties of open sets (<a href="#de-morgan-formula">De Morgan Formula</a> and <a href="#theo-properties-open-set">Theorem of Properties of Open Sets</a>).</p>
@@ -4274,7 +4343,7 @@ A' \cap B' = \mathbb{R} \neq \varnothing = (A \cap B)', \quad \overline{A} \cap 
 <p class="admonition-title">Theorem of Closed Set and Derived Set Condition</p>
 <p>A set <span class="arithmatex">\( E \)</span> is a closed set if and only if <span class="arithmatex">\( E' \subset E \)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="closed-set-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="closed-set-proof_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4318,7 +4387,7 @@ E' \subset E
 <p class="admonition-title">Theorem of Derived Set Closure</p>
 <p>The <strong>derived set</strong> of any set is a closed set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="closed-set-proof-version-one" name="__tabbed_16" type="radio" /><input id="closed-set-proof-version-two" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof-version-one">Proof Version One</label><label for="closed-set-proof-version-two">Proof Version Two</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="closed-set-proof-version-one" name="__tabbed_17" type="radio" /><input id="closed-set-proof-version-two" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof-version-one">Proof Version One</label><label for="closed-set-proof-version-two">Proof Version Two</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Given a set <span class="arithmatex">\( E \)</span>, we prove that <span class="arithmatex">\( E'^c \)</span> is an open set.  </p>
@@ -4358,7 +4427,7 @@ V(\pmb{y}, \zeta) \subset V(\pmb{x}, \delta) \subset E^c
 <p class="admonition-title">Corollary</p>
 <p>The closure <span class="arithmatex">\( \overline{E} \)</span> is a closed set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="closed-set-a-bad-proof" name="__tabbed_17" type="radio" /><input id="closed-set-another-proof" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="closed-set-a-bad-proof">A Bad Proof</label><label for="closed-set-another-proof">Another Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="closed-set-a-bad-proof" name="__tabbed_18" type="radio" /><input id="closed-set-another-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="closed-set-a-bad-proof">A Bad Proof</label><label for="closed-set-another-proof">Another Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We prove that <span class="arithmatex">\( \overline{E}^c \)</span> is an open set.  </p>
@@ -4405,7 +4474,7 @@ V(\pmb{x}, \delta) \subset \overline{E}^c
 f(x) \text{ is continuous on } I \iff \forall \text{ open set } G \subset (-\infty, \infty), \quad f^{-1}(G) \text{ is an open set.}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="closed-set-proof_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="closed-set-proof_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="closed-set-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4550,7 +4619,7 @@ G = \bigcup_{n=1}^\infty (\alpha_n, \beta_n)
 \]</div>
 <p>where <span class="arithmatex">\( (\alpha_n, \beta_n) \)</span> are mutually exclusive (disjoint) open intervals.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="configuration-of-sets-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="configuration-of-sets-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="configuration-of-sets-proof" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="configuration-of-sets-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Easy to see that:</p>
@@ -4642,7 +4711,7 @@ P_0 = \bigcap_{n=1}^\infty F_n
 (iii) The Cantor set has base <span class="arithmatex">\( \aleph \)</span>.<br />
 (iv) The Cantor set is a <strong>sparse set</strong>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:4"><input checked="checked" id="cantor-set-proof-for-i" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-ii-ⅰ" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-ii-ⅱ" name="__tabbed_20" type="radio" /><input id="cantor-set-proof-for-iii" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="cantor-set-proof-for-i">Proof for (i)</label><label for="cantor-set-proof-for-ii-ⅰ">Proof for (ii) Ⅰ</label><label for="cantor-set-proof-for-ii-ⅱ">Proof for (ii) Ⅱ</label><label for="cantor-set-proof-for-iii">Proof for (iii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:4"><input checked="checked" id="cantor-set-proof-for-i" name="__tabbed_21" type="radio" /><input id="cantor-set-proof-for-ii-ⅰ" name="__tabbed_21" type="radio" /><input id="cantor-set-proof-for-ii-ⅱ" name="__tabbed_21" type="radio" /><input id="cantor-set-proof-for-iii" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="cantor-set-proof-for-i">Proof for (i)</label><label for="cantor-set-proof-for-ii-ⅰ">Proof for (ii) Ⅰ</label><label for="cantor-set-proof-for-ii-ⅱ">Proof for (ii) Ⅱ</label><label for="cantor-set-proof-for-iii">Proof for (iii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) This is easily seen from the definition of the Cantor set. Specifically, for any <span class="arithmatex">\( x \in P_0 \)</span>, there does not exist <span class="arithmatex">\( \delta &gt; 0 \)</span> such that:</p>

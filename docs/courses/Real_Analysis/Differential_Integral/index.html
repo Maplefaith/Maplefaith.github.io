@@ -1982,6 +1982,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#indefinite-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indefinite Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#absolute-continuous-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute Continuous Function
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3315,6 +3333,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#indefinite-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indefinite Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#absolute-continuous-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Absolute Continuous Function
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3331,6 +3367,20 @@
 
 
 <h1 id="differential-integral">Differential &amp; Integral<a class="headerlink" href="#differential-integral" title="Permanent link">&para;</a></h1>
+<p>From we already known, differential operation and integration operation could be inverse in terms of Riemann integral.</p>
+<div class="admonition info">
+<p class="admonition-title">Riemann Integration</p>
+<p>(i) If <span class="arithmatex">\(f\in R[a,b]\)</span>, and is continuous at <span class="arithmatex">\(x_0\)</span>, then </p>
+<div class="arithmatex">\[
+F(x)=\int_a^x f(t)dt
+\]</div>
+<p>is differentiable at <span class="arithmatex">\(x_0\)</span>, and <span class="arithmatex">\(F'(x_0)=f(x_0)\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(f\in C^1[a,b]\)</span>, and <span class="arithmatex">\(f'\in R[a,b]\)</span>, then <span class="arithmatex">\(\forall x\in [a,b]\)</span>, we have</p>
+<div class="arithmatex">\[
+\int_a^xf'(t)dt=f(x)-f(a).
+\]</div>
+</div>
+<p>In this chapter, we aim to extend the above theorem in terms of Lebesgue Integration.</p>
 <h2 id="vitalis-covering-theorem">Vitali's Covering Theorem<a class="headerlink" href="#vitalis-covering-theorem" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Vitali Covering</p>
@@ -3410,7 +3460,8 @@ E_1=\{x: D^+f&gt; D_-f\}, E_2=\{D^-f&gt; D_+f\}.
 </div>
 </div>
 </div>
-<p>Finally, we have the following theorem.</p>
+<p>Finally, we have the following theorem.
+<a id="Lebesgue-Monotonic-Differential-Theorem"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Lebesgue Monotonic Differential Theorem</p>
 <p>Assume <span class="arithmatex">\(f(x)\)</span> is a monotonically increasing function on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f'(x)\)</span> exists <span class="arithmatex">\(a.e.\)</span>, and <span class="arithmatex">\(f'\in L[a,b]\)</span>, and </p>
@@ -3442,16 +3493,291 @@ f_n(x)=n\left[f\left(x+\frac{1}{n}\right)-f(x)\right], \quad x\in [a,b].
 </div>
 </div>
 </div>
+<p>See the following typical examples to check the condition and conclusion of the above theorem.</p>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(E\subset [a,b]\)</span> is a zero-measure set. Then there exists a monotonically increasing real continuous function <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\([a,b]\)</span>, such that for every <span class="arithmatex">\(x\in E\)</span>, we have <span class="arithmatex">\(f'(x)=\infty\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="monotonic-function-differential-proof_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="monotonic-function-differential-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For zero-measure set <span class="arithmatex">\(E\)</span>, there exists a monotonically decreasing sequence of sets <span class="arithmatex">\(\{G_n\}_{n\geq 1}\)</span>, such that</p>
+<div class="arithmatex">\[
+E\subset G_n,\quad G_n&lt;\frac{1}{2^n}.
+\]</div>
+<p>If we let </p>
+<div class="arithmatex">\[
+f_n(x)=m([a,x]\cap G_n), \quad f(x)=\sum_{i=1}^\infty f_n(x).
+\]</div>
+<p>Similar to proof in <a href="../Lebesgue_Measure/#Continuous-function-measure">Example for measure of interval intersection</a>, we could prove that <span class="arithmatex">\(f_n\)</span> is non-negative monotonically increasing continuous function which is not generalized(convergent, so we could change order in series).</p>
+<p>Now for all <span class="arithmatex">\(x\in E\)</span>, <span class="arithmatex">\(n\geq 1\)</span>, so long as <span class="arithmatex">\(h\)</span> is sufficiently small, such that <span class="arithmatex">\([x,x+h]\subset G_n\)</span>. Because <span class="arithmatex">\(G_k\)</span> is monotonically decreasing, so <span class="arithmatex">\([x,x+h]\subset G_k\)</span>, for <span class="arithmatex">\(k=1,2,\cdots,n\)</span>. So differential quotient</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{f(x+h)-f(x)}{h}&amp;=\frac{1}{h}\left[\sum_{k=1}^\infty f_k(x+h)- \sum_{k=1}^\infty f_k(x)\right]\\
+&amp;=\frac{1}{h}\sum_{k=1}^\infty \left[ f_k(x+h)-f_k(x)\right]\\
+&amp;\geq \frac{1}{h}\sum_{k=1}^n \left[ f_k(x+h)-f_k(x)\right]\\ 
+&amp;=\frac{1}{h}\sum_{k=1}^n m([x,x+h]\cap G_k)\\
+&amp;=\frac{1}{h}\sum_{k=1}^n m([x,x+h])\\
+&amp;=\frac{nh}{h}=n
+\end{align*}
+\]</div>
+<p>So <span class="arithmatex">\(f'(x)=\lim\limits_{n\rightarrow \infty}n=\infty\)</span>.</p>
+</div>
+</div>
+</div>
+<p>This example shows that in <a href="#Lebesgue-Monotonic-Differential-Theorem">Lebesgue Monotonic Differential Theorem</a>, we could not weaken condition "<span class="arithmatex">\(f\)</span> is differential <span class="arithmatex">\(a.e.x\in E\)</span>" any more.</p>
+<div class="question">
+<p><strong>Example</strong>. Prove: There exists a strictly monotonically increasing continuous function on <span class="arithmatex">\([a,b]\)</span>, such that </p>
+<div class="arithmatex">\[
+f'(x)=0,\quad a.e.x\in [a,b].
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="monotonic-function-differential-proof_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="monotonic-function-differential-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>This example shows that we could not change "<span class="arithmatex">\(\leq\)</span>" into "<span class="arithmatex">\(=\)</span>" in conclusion of <a href="#Lebesgue-Monotonic-Differential-Theorem">Lebesgue Monotonic Differential Theorem</a></p>
 <h2 id="bounded-variation-function">Bounded Variation Function<a class="headerlink" href="#bounded-variation-function" title="Permanent link">&para;</a></h2>
 <p>Assume <span class="arithmatex">\(f(x)\)</span> is a real function (not genaralized) on <span class="arithmatex">\([a,b]\)</span>, we make a partition <span class="arithmatex">\(\Delta: a=x_0&lt;x_1&lt;\cdots&lt;x_n=b\)</span> and sum <span class="arithmatex">\(|f(x_i)-f(x_{i-1})|\)</span> up, denoted by</p>
 <div class="arithmatex">\[
 V_\Delta(f)=\sum_{i=1}^\infty|f(x_i)-f(x_{i-1})|,
 \]</div>
-<p>which is called <strong>variation</strong> of <span class="arithmatex">\(f(x)\)</span> on <span class="arithmatex">\([a,b]\)</span> correspoding to partition <span class="arithmatex">\(\Delta\)</span>. Apparently, a variation of a function is dependent on its partition <span class="arithmatex">\(\Delta\)</span>, so we want to get rid of its influence, by defining its <strong>Total Variation</strong> as</p>
+<p>which is called <strong>variation</strong> of <span class="arithmatex">\(f(x)\)</span> on <span class="arithmatex">\([a,b]\)</span> corresponding to partition <span class="arithmatex">\(\Delta\)</span>. Apparently, a variation of a function is dependent on its partition <span class="arithmatex">\(\Delta\)</span>, so we want to get rid of its influence, by defining its <strong>Total Variation</strong> as</p>
 <div class="arithmatex">\[
-V_a^b(f):=\sup\{V_\Delta: \forall \Delta \text{ of } $[a,b]$\}.
+V_a^b(f):=\sup\{V_\Delta: \forall \Delta \text{ of } [a,b]\}.
 \]</div>
 <p>If <span class="arithmatex">\(V_a^b&lt;\infty\)</span>, then we call <span class="arithmatex">\(f(x)\)</span> is a <strong>bounded variation function</strong>. The whole set of bounded variation functions on <span class="arithmatex">\([a,b]\)</span> is denoted by <span class="arithmatex">\(BV([a,b])\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Corollary: Monotonic real function must be bounded variation function</p>
+<p>Monotonic real function (not generalized) must be bounded variation.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="bounded-variation-function-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="bounded-variation-function-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(V_\Delta(f)=|f(b)-f(a)|&lt;\infty\)</span>.</p>
+</div>
+</div>
+</div>
+<p>While monotonic real function is bounded variation function, it is not so for continuous function, as shown in the following example.</p>
+<p><div class="question" markdown>
+<strong>Example</strong>. Assume </p>
+<div class="arithmatex">\[
+f(x)=\begin{cases}
+x\cos\frac{\pi}{2x},\quad &amp;x\in(0,1],\\
+0,\quad &amp;x=0.
+\end{cases}
+\]</div>
+<p>Then Prove: <span class="arithmatex">\(f(x)\)</span> is continuous on <span class="arithmatex">\([0,1]\)</span>, but is not bounded variation.
+</div></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="bounded-variation-function-proof_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="bounded-variation-function-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For <span class="arithmatex">\(n\geq 1\)</span>, construct a partition</p>
+<div class="arithmatex">\[
+\Delta_n:\left\{0,\frac{1}{2n},\frac{1}{2n-1},\cdots,\frac{1}{2},1 \right\}
+\]</div>
+<p>then</p>
+<div class="arithmatex">\[
+\begin{align*}
+V_\Delta (f)&amp;=\frac{1}{2n}+\frac{1}{2n}+\frac{1}{2(n-1)}+\frac{1}{2(n-1)}+\cdots+\frac{1}{2}+\frac{1}{2}\\
+&amp;=\sum_{i=1}^n \frac{1}{i}\rightarrow \infty (n\rightarrow \infty)
+\end{align*}
+\]</div>
+<p>So it is not bounded variation.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties for bounded variation function</p>
+<p>(i) Bounded variation function on <span class="arithmatex">\([a,b]\)</span> must be bounded.</p>
+<p>(ii) <strong>Operations</strong>. If <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are both bounded variation function, then <span class="arithmatex">\(f\pm g\)</span> and <span class="arithmatex">\(fg\)</span> both are bounded variation functions. And if <span class="arithmatex">\(|g(x)|\geq \lambda&gt;0\)</span>, then <span class="arithmatex">\(f/g\)</span> are also bounded variation function.</p>
+<p>(iii) <strong>Region additivity</strong>. If <span class="arithmatex">\(f\)</span> is a function on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(\forall c\in [a,b]\)</span>,</p>
+<div class="arithmatex">\[
+V_a^b(f)=V^c_a(f)+V^b_c(f).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="bounded-variation-function-proof_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="bounded-variation-function-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) <span class="arithmatex">\(\forall a\in [a,b]\)</span>, we have</p>
+<div class="arithmatex">\[
+|f(x)-f(a)|&lt;V_a^b (f)&lt;\infty
+\]</div>
+<p>so <span class="arithmatex">\(|f(x)|\leq |f(a)|+V_a^b (f)\)</span>.</p>
+<p>(ii) We could use </p>
+<div class="arithmatex">\[
+\begin{align*}
+V_\Delta(f+g)&amp;=\sum_{i}|(f+g)(x_i)-(f+g)(x_{i-1})|\\
+&amp;\leq \sum_{i}|f(x_i)-f(x_{i-1})| + \sum_{i}|g(x_i)-g(x_{i-1})|\\
+&amp;=V_\Delta(f) + V_\Delta(g)\leq V_a^b(f)+V^b_a(g)
+\end{align*}
+\]</div>
+<p>to show that <span class="arithmatex">\(f+g\)</span> is also bounded variation function.</p>
+<p>(iii) For "<span class="arithmatex">\(\leq\)</span>", we use <span class="arithmatex">\(\tilde{\Delta}=\Delta\cup \{c\}\)</span>.</p>
+<p>For "<span class="arithmatex">\(\geq\)</span>", we use <span class="arithmatex">\(\Delta=\Delta_1\cup \Delta_2\)</span>.</p>
+</div>
+</div>
+</div>
+<p>From property (iii), we could know that <span class="arithmatex">\(\forall x\in [a,b]\)</span>, <span class="arithmatex">\(f\)</span> is also bounded variation on <span class="arithmatex">\([a,x]\)</span>. So function <span class="arithmatex">\(F(x)=V_a^x(f)\)</span> is called <strong>incomplete bounded variation function</strong>, which is apparently a <em>non-negative function and monotonically increases</em>.</p>
+<div class="admonition success">
+<p class="admonition-title">Jordan Decomposition Theorem: description of bounded variation function</p>
+<p><span class="arithmatex">\(f\)</span> is a bounded variation function, iff <span class="arithmatex">\(f\)</span> could be expressed by the subtraction of two monotonically increasing functions.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="bounded-variation-function-proof_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="bounded-variation-function-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>"<span class="arithmatex">\(\Leftarrow\)</span>". <span class="arithmatex">\(g,h\)</span> are monotonically increasing, so <span class="arithmatex">\(g, h\)</span> are both bounded variation functions. By property (ii), we could know that <span class="arithmatex">\(f=g-h\)</span> is also bounded variation function.</p>
+</li>
+<li>
+<p>"<span class="arithmatex">\(\Rightarrow\)</span>". Assume <span class="arithmatex">\(f\)</span> is bounded variation, then <span class="arithmatex">\(\forall a\leq x_1\leq x_2\leq b\)</span>,</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+f(x_2)-f(x_1)\leq V_{x_1}^{x_2}(f)=V_a^{x_2}(f)-V_a^{x_1}(f),
+\]</div>
+<p>which means <span class="arithmatex">\(V_a^{x_1}(f)-f(x_1)\leq V_a^{x_2}(f)-f(x_2)\)</span>.</p>
+<p>so define <span class="arithmatex">\(g=V_a^x(f)\)</span>, <span class="arithmatex">\(h=V_a^x(f)-f(x)\)</span>, both are monotonically increasing. Then <span class="arithmatex">\(f=g-h\)</span> and we are done.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: bounded variation function must be differential a.e.</p>
+<p>Bounded variation function <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\([a,b]\)</span> must be differential a.e. and its derivative <span class="arithmatex">\(f'\)</span> is L integrable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="bounded-variation-function-proof_4" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="bounded-variation-function-proof_4">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(f=g-h\)</span>, where <span class="arithmatex">\(g,h\)</span> are monotonically increasing function. By <a href="#Lebesgue-Monotonic-Differential-Theorem">Lebesgue Monotonic Differential Theorem</a>, <span class="arithmatex">\(g,h\)</span> is differential <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\([a,b]\)</span>, so by operations, <span class="arithmatex">\(f\)</span> is also differential <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\([a.b]\)</span>.</p>
+</div>
+</div>
+</div>
+<h2 id="indefinite-integration">Indefinite Integration<a class="headerlink" href="#indefinite-integration" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Indefinite Integration</p>
+<p>If <span class="arithmatex">\(f\)</span> is L integrable on <span class="arithmatex">\([a,b]\)</span>, then </p>
+<div class="arithmatex">\[
+F(x)=\int_a^x f(t)dt, \quad x\in [a,b]
+\]</div>
+<p>is called <strong>Indefinite Integration</strong> of <span class="arithmatex">\(f\)</span>.</p>
+</div>
+<p>Using what we have known from above, we have the following property for Indefinite integration.</p>
+<p><a id="Property-of-Indefinite-Integration"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Property of Indefinite Integration</p>
+<p>If <span class="arithmatex">\(f\)</span> is L integrable on <span class="arithmatex">\([a,b]\)</span>,, then its indefinite integration <span class="arithmatex">\(F(x)\)</span> is a continuous bounded variation function on <span class="arithmatex">\([a,b]\)</span> and satisfies</p>
+<div class="arithmatex">\[
+V_a^b(f)=\int_a^b|f(t)|dt.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="indefinite-integration-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="indefinite-integration-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(F\)</span> is continuous because of absolute continuity of L integral.</p>
+</div>
+</div>
+</div>
+<p>To get to the result of this part, we should have a lemma proved.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: indefinite integration equals zero</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is L integral on <span class="arithmatex">\([a,b]\)</span>, and its indefinite integration </p>
+<div class="arithmatex">\[
+F(x)\equiv 0,
+\]</div>
+<p>then <span class="arithmatex">\(f(x)=0,\quad a.e.x\in [a,b]\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="indefinite-integration-proof_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="indefinite-integration-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For zero-constant function <span class="arithmatex">\(F\)</span>, we have its total variation function <span class="arithmatex">\(V_a^b(F)=0\)</span>. By <a href="#Property-of-Indefinite-Integration">Property of Indefinite Integration</a>, we have</p>
+<div class="arithmatex">\[
+\int_a^b|f(t)|dt=0.
+\]</div>
+<p>Then by <a href="../Lebesgue_Integral/#int0-f0-ae">Example in Non-negative measurable function</a>, we have</p>
+<div class="arithmatex">\[
+|f(x)|=0,\quad a.e.x\in [a,b].
+\]</div>
+<p>and we are done.</p>
+</div>
+</div>
+</div>
+<p>Finally we have the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for Derivative of indefinite integration</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is L integrable on <span class="arithmatex">\([a,b]\)</span>, and <span class="arithmatex">\(F(x)\)</span> is an indefinite integration of <span class="arithmatex">\(f\)</span>, then</p>
+<div class="arithmatex">\[
+F'(x)=f(x),\quad a.e.x\in [a,b].
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="indefinite-integration-proof_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="indefinite-integration-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p><span class="arithmatex">\(f\)</span> is bounded. Use LDCT.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> is measurable. Let <span class="arithmatex">\(f\geq 0\)</span> might as well.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="absolute-continuous-function">Absolute Continuous Function<a class="headerlink" href="#absolute-continuous-function" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Absolute continuous function</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a real function on <span class="arithmatex">\([a,b]\)</span>. If <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, such that for finite number of open intervals <span class="arithmatex">\(\{(a_k,b_k)\}_{1\leq k\leq n}\)</span> which are mutually disjoint, so long as <span class="arithmatex">\(\sum_{k=1}^n |b_k-a_k|&lt;\delta\)</span>, </p>
+<div class="arithmatex">\[
+\sum_{k=1}^n|f(b_k)-f(a_k)|&lt;\varepsilon,
+\]</div>
+<p>then we call <span class="arithmatex">\(f\)</span> is an absolute continuous function.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: Indefinite integration of L-integrable function must be absolute continuous</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is L integrable on <span class="arithmatex">\([a,b]\)</span>, then its indefinite integration <span class="arithmatex">\(F\)</span> is absolute continuous.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="absolute-continuous-function-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="absolute-continuous-function-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice that</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=1}^n|F(b_k)-F(a_{k})|&amp;=\sum_{k=1}^n\left|\int_{a_{k}}^{b_k} f(t)dt\right|\\
+&amp;\leq \sum_{k=1}^n\int_{a_{k}}^{b_k} |f(t)|dt\\
+&amp;=\int_{\bigcup\limits_{k=1}^n (a_k,b_k)} |f(t)|dt
+\end{align*}
+\]</div>
+<p>By <a href="../Lebesgue_Integral/#Absolute-Continuity-of-L-integral">absolute continuity of L integral</a>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, such that 
+<span class="arithmatex">\(\forall \{a_k,b_k\}\)</span> satisfying <span class="arithmatex">\(\sum_{k=1}^n(b_k-a_k)&lt;\delta\)</span>, we have</p>
+<div class="arithmatex">\[
+\sum_{k=1}^n|F(b_k)-F(a_{k})|\leq \int_{\bigcup\limits_{k=1}^n (a_k,b_k)} |f(t)|dt&lt;\varepsilon.
+\]</div>
+</div>
+</div>
+</div>
+<p>For absolute continuous function, we have the following properties.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of Absolute continuous function</p>
+<p>(i) Absolute continuous function must be continuous and consistently continuous.</p>
+<p>(ii) <strong>Operations</strong>. If <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are absolute continuous functions, then <span class="arithmatex">\(f\pm g\)</span>, <span class="arithmatex">\(fg\)</span> are absolute continuous. And if <span class="arithmatex">\(g\)</span> has no zero points, <span class="arithmatex">\(f/g\)</span> is also absolute continuous. </p>
+<p>(iii) <strong>Function composition</strong>. If <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(\varphi\)</span> are absolute continuous on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\([p,q]\)</span> respectively, and <span class="arithmatex">\(a\leq \varphi(x)\leq b\)</span>, <span class="arithmatex">\(\varphi\)</span> is strictly monotonically increasing, then function</p>
+<div class="arithmatex">\[
+f(\varphi(t))
+\]</div>
+<p>is absolute continuous on <span class="arithmatex">\([p,q]\)</span>.</p>
+<p>(iv) If <span class="arithmatex">\(f\)</span> is absolute continuous function on <span class="arithmatex">\([a,b]\)</span>, then it must be bounded variation function.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="absolute-continuous-function-proof_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="absolute-continuous-function-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Choose <span class="arithmatex">\(n=1\)</span> in definition.</p>
+<p>(ii) Use some formula of triangle inequation.</p>
+<p>(iii) </p>
+<p>(iv) .</p>
+</div>
+</div>
+</div>
 
 
 
