@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../Solve_Equ/">
+        <link rel="prev" href="../Differential_Integral/">
       
       
-        <link rel="next" href="../Appro/">
+        <link rel="next" href="../../../Ctrl/">
       
       
-      <link rel="icon" href="../../../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Interpolation & Polynomial Approximation - MapleBlog</title>
+        <title>L^p Space - MapleBlog</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,17 +48,17 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/customize.css">
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
     
       <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,7 +75,7 @@
     
     
     
-  <link rel="stylesheet" href="../../../../assets/stylesheets/custom.7c86dd97.min.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.7c86dd97.min.css">
 
   </head>
   
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interpolating-polynomial" class="md-skip">
+        <a href="#lp-space" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interpolation & Polynomial Approximation
+              L^p Space
             
           </span>
         </div>
@@ -264,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Ctrl/" class="md-tabs__link">
+        <a href="../../../Ctrl/" class="md-tabs__link">
           
   
     
@@ -325,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
     
@@ -343,7 +343,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../friends/" class="md-tabs__link">
+      <a href="../../../friends/" class="md-tabs__link">
         
   
     
@@ -360,7 +360,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../tag/" class="md-tabs__link">
+      <a href="../../../tag/" class="md-tabs__link">
         
   
     
@@ -377,7 +377,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../log/" class="md-tabs__link">
+      <a href="../../../log/" class="md-tabs__link">
         
   
     
@@ -411,7 +411,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -434,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +496,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -561,7 +561,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../AIML/" class="md-nav__link ">
+            <a href="../../AIML/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -627,7 +627,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../AIML/AI/" class="md-nav__link ">
+            <a href="../../AIML/AI/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -660,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AIML/AI/Intro/" class="md-nav__link">
+      <a href="../../AIML/AI/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AIML/AI/Agent/" class="md-nav__link">
+      <a href="../../AIML/AI/Agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AIML/AI/ProblemSolving/" class="md-nav__link">
+      <a href="../../AIML/AI/ProblemSolving/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AIML/AI/logic/" class="md-nav__link">
+      <a href="../../AIML/AI/logic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -783,7 +783,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../AIML/ML/" class="md-nav__link ">
+            <a href="../../AIML/ML/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -816,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AIML/ML/Intro/" class="md-nav__link">
+      <a href="../../AIML/ML/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AIML/ML/Concept_Learning/" class="md-nav__link">
+      <a href="../../AIML/ML/Concept_Learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AIML/ML/Decision_Tree/" class="md-nav__link">
+      <a href="../../AIML/ML/Decision_Tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -935,7 +935,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../cpp/" class="md-nav__link ">
+            <a href="../../cpp/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -968,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cpp/Elementary/" class="md-nav__link">
+      <a href="../../cpp/Elementary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cpp/Class_Object/" class="md-nav__link">
+      <a href="../../cpp/Class_Object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1010,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cpp/Inheritance/" class="md-nav__link">
+      <a href="../../cpp/Inheritance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cpp/Dynamic_Alloc/" class="md-nav__link">
+      <a href="../../cpp/Dynamic_Alloc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cpp/Exception/" class="md-nav__link">
+      <a href="../../cpp/Exception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../cpp/Streams/" class="md-nav__link">
+      <a href="../../cpp/Streams/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1142,7 +1142,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Data_Structure%26Algorithm/" class="md-nav__link ">
+            <a href="../../Data_Structure%26Algorithm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1175,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/outline/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/outline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1196,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/AlgoAna/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/AlgoAna/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1217,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1238,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/sorting/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1259,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1280,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Data_Structure%26Algorithm/Graph/" class="md-nav__link">
+      <a href="../../Data_Structure%26Algorithm/Graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1337,7 +1337,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Intro2Visualization/" class="md-nav__link ">
+            <a href="../../Intro2Visualization/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1403,7 +1403,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../mpm/" class="md-nav__link ">
+            <a href="../../mpm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1436,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mpm/preliminary/" class="md-nav__link">
+      <a href="../../mpm/preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1462,8 +1462,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1490,16 +1488,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../Numerical_Analysis/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1516,7 +1516,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             Numerical Analysis
@@ -1532,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MC/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/MC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1550,8 +1550,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1577,16 +1575,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../Numerical_Analysis/NA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1603,7 +1603,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7_3">
             <span class="md-nav__icon md-icon"></span>
             Numerical Approximation
@@ -1619,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Solve_Equ/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1637,28 +1637,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Interpolation & Polynomial Approximation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,102 +1649,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#interpolating-polynomial" class="md-nav__link">
-    <span class="md-ellipsis">
-      插值多项式 | Interpolating Polynomial
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="插值多项式 | Interpolating Polynomial">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lagrange-lagrange-interpolating-polynomial" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lagrange插值多项式 | Lagrange Interpolating Polynomial
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#neville-nevilles-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      Neville方法 | Neville's Method
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#newton-newtons-divided-difference-formula" class="md-nav__link">
-    <span class="md-ellipsis">
-      Newton差商表达式 | Newton's Divided Difference Formula
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-analysis-of-interpolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      插值误差分析 | Error Analysis of Interpolation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interpolation-of-equidistant-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      等距插值 | Interpolation of Equidistant Points
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hermite-hermite-polynomials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hermite多项式 | Hermite Polynomials
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cubic-spline-interpolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      样条插值 | Cubic Spline Interpolation
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1775,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Appro/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1796,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NI/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/NI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1825,7 +1711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DE/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/DE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,8 +1737,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1883,18 +1771,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../Real_Analysis/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1911,7 +1797,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             Real Analysis
@@ -1927,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Real_Analysis/Sets/" class="md-nav__link">
+      <a href="../Sets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1948,7 +1834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Real_Analysis/Lebesgue_Measure/" class="md-nav__link">
+      <a href="../Lebesgue_Measure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1969,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Real_Analysis/Measurable_Func/" class="md-nav__link">
+      <a href="../Measurable_Func/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1990,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Real_Analysis/Lebesgue_Integral/" class="md-nav__link">
+      <a href="../Lebesgue_Integral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2011,7 +1897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Real_Analysis/Differential_Integral/" class="md-nav__link">
+      <a href="../Differential_Integral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2029,10 +1915,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Real_Analysis/Lp_Space/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L^p Space
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2041,6 +1947,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties-of-lp-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of \(L^p\) Space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties of \(L^p\) Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completeness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completeness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2101,7 +2051,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Ctrl/" class="md-nav__link ">
+            <a href="../../../Ctrl/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2173,7 +2123,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Ctrl/Ordinary_Differential_Equation/" class="md-nav__link ">
+            <a href="../../../Ctrl/Ordinary_Differential_Equation/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2206,7 +2156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/Preliminary/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/Preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2227,7 +2177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/EIM/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/EIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2248,7 +2198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/LODEs/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/LODEs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2306,7 +2256,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Ctrl/Ordinary_Differential_Equation/General_Theory/" class="md-nav__link ">
+            <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2339,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2360,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2381,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Extension_of_Solution/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Extension_of_Solution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2402,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Comparison_Theorem/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Comparison_Theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2423,7 +2373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Continuous_Dependence/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Continuous_Dependence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2444,7 +2394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Power_Series/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Power_Series/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2473,7 +2423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/Lyapunov/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/Lyapunov/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2494,7 +2444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/Qualitative_Theory/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/Qualitative_Theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2515,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Ordinary_Differential_Equation/FstPDE/" class="md-nav__link">
+      <a href="../../../Ctrl/Ordinary_Differential_Equation/FstPDE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2544,7 +2494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Modern_Control_Theory/MCT/" class="md-nav__link">
+      <a href="../../../Ctrl/Modern_Control_Theory/MCT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2598,7 +2548,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Ctrl/ProcessControl/" class="md-nav__link ">
+            <a href="../../../Ctrl/ProcessControl/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2631,7 +2581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/ProcessControl/Intro/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2652,7 +2602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/ProcessControl/PID/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/PID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2706,7 +2656,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Ctrl/ProcessControl/Control_Strategy/" class="md-nav__link ">
+            <a href="../../../Ctrl/ProcessControl/Control_Strategy/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2739,7 +2689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/ProcessControl/Control_Strategy/Cascade_Control/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Cascade_Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2760,7 +2710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/ProcessControl/Control_Strategy/Control_Intension/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Control_Intension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2781,7 +2731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/ProcessControl/Control_Strategy/Multi_Control/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Multi_Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2802,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/ProcessControl/Control_Strategy/Feedforward_Control/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Feedforward_Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2831,7 +2781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/ProcessControl/Nonlinear_Compensation/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Nonlinear_Compensation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2887,7 +2837,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Ctrl/Sensing%26Detection/" class="md-nav__link ">
+            <a href="../../../Ctrl/Sensing%26Detection/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2920,7 +2870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Ctrl/Sensing%26Detection/Midterm/" class="md-nav__link">
+      <a href="../../../Ctrl/Sensing%26Detection/Midterm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2987,7 +2937,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../blog/" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3020,7 +2970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/MiddleSchool/" class="md-nav__link">
+      <a href="../../../blog/MiddleSchool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3070,7 +3020,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../blog/Travel/" class="md-nav__link ">
+            <a href="../../../blog/Travel/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3103,7 +3053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/Travel/5th_05_24/" class="md-nav__link">
+      <a href="../../../blog/Travel/5th_05_24/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3151,7 +3101,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../blog/Travel/Mount_Lu/" class="md-nav__link ">
+            <a href="../../../blog/Travel/Mount_Lu/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3184,7 +3134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/Travel/Mount_Lu/Schedule/" class="md-nav__link">
+      <a href="../../../blog/Travel/Mount_Lu/Schedule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3221,7 +3171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3249,7 +3199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../friends/" class="md-nav__link">
+      <a href="../../../friends/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3269,7 +3219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tag/" class="md-nav__link">
+      <a href="../../../tag/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3289,7 +3239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../log/" class="md-nav__link">
+      <a href="../../../log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3319,6 +3269,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3327,37 +3279,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#interpolating-polynomial" class="md-nav__link">
+  <a href="#properties-of-lp-space" class="md-nav__link">
     <span class="md-ellipsis">
-      插值多项式 | Interpolating Polynomial
+      Properties of \(L^p\) Space
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="插值多项式 | Interpolating Polynomial">
+    <nav class="md-nav" aria-label="Properties of \(L^p\) Space">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lagrange-lagrange-interpolating-polynomial" class="md-nav__link">
+  <a href="#completeness" class="md-nav__link">
     <span class="md-ellipsis">
-      Lagrange插值多项式 | Lagrange Interpolating Polynomial
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#neville-nevilles-method" class="md-nav__link">
-    <span class="md-ellipsis">
-      Neville方法 | Neville's Method
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#newton-newtons-divided-difference-formula" class="md-nav__link">
-    <span class="md-ellipsis">
-      Newton差商表达式 | Newton's Divided Difference Formula
+      Completeness
     </span>
   </a>
   
@@ -3365,42 +3299,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-analysis-of-interpolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      插值误差分析 | Error Analysis of Interpolation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interpolation-of-equidistant-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      等距插值 | Interpolation of Equidistant Points
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hermite-hermite-polynomials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hermite多项式 | Hermite Polynomials
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cubic-spline-interpolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      样条插值 | Cubic Spline Interpolation
-    </span>
-  </a>
   
 </li>
       
@@ -3419,576 +3317,181 @@
                   
 
 
-  <h1>Interpolation & Polynomial Approximation</h1>
-
-<h2 id="interpolating-polynomial">插值多项式 | Interpolating Polynomial<a class="headerlink" href="#interpolating-polynomial" title="Permanent link">&para;</a></h2>
-<h3 id="lagrange-lagrange-interpolating-polynomial">Lagrange插值多项式 | Lagrange Interpolating Polynomial<a class="headerlink" href="#lagrange-lagrange-interpolating-polynomial" title="Permanent link">&para;</a></h3>
-<p>Inspired by 加权平均.</p>
-<p>There exists and only exists a <span class="arithmatex">\(n\)</span>th <strong>Lagrange interpolating polynomial</strong> (拉格朗日基函数) </p>
-<div class="arithmatex">\[ 
-L_n(x) = \sum_{i=0}^{n}l_i(x)y_i = \begin{bmatrix} l_0(x) &amp; l_1(x) &amp;l_2(x) &amp; \cdots &amp; l_n(x) 
-\end{bmatrix}
-\begin{bmatrix} y_0 \\ y_1 \\ \vdots \\ y_n 
-\end{bmatrix} = \Phi_n(x)\vec{y} 
-\]</div>
-<p>such that for each pair of given points <span class="arithmatex">\((x_i, y_i)\)</span>, <span class="arithmatex">\(i = 0, 1,2,\cdots n\)</span>, we have <span class="arithmatex">\(y_i = L_n(x_i)\)</span>.</p>
-<p>Here we can consider <span class="arithmatex">\(l_i(x)\)</span> as a base of a linear space <span class="arithmatex">\(\mathcal{P}_n(x)\)</span>, and it can be displayed by natural base <span class="arithmatex">\(1, x, x^2, \cdots x^n\)</span>. To be more specific,</p>
-<div class="arithmatex">\[
-l_i(x) = \prod_{j=0 \atop j \neq i }^{n}\frac{(x - x_i)}{(x_i-x_j)} \quad i=0,1,\cdots n 
-\]</div>
-<p>readers can prove the above <span class="arithmatex">\(n+1\)</span> polynomials are linearly irrelevant.</p>
+<h1 id="lp-space"><span class="arithmatex">\(L^p\)</span> Space<a class="headerlink" href="#lp-space" title="Permanent link">&para;</a></h1>
+<p>Modern Real analysis focuses on digging into the structure of Space combined by these functions. Lebesgue Integral Theory is the most successful one.</p>
 <div class="admonition info">
-<p class="admonition-title">Another form of <span class="arithmatex">\(l_i(x)\)</span></p>
-<p>If we denote <span class="arithmatex">\(\omega(x)=\prod\limits_{k=0}^{n}(x-x_k)\)</span>, so the numerator of <span class="arithmatex">\(l_i(x)\)</span> is </p>
+<p class="admonition-title">Definitions</p>
+<p>(i) Assume <span class="arithmatex">\(E\)</span> is a measurable set, <span class="arithmatex">\(1\leq p&lt;\infty\)</span>, denote</p>
 <div class="arithmatex">\[
-\frac{\omega(x)}{x-x_i}
+L^p(E)=\{f: f\text{ is measurable on } E \text{ and } \int_E |f(x)|^pdx&lt;\infty \}.
 \]</div>
-<p>and its demunerator is </p>
+<p>for <span class="arithmatex">\(f\in L^p(E)\)</span>, denote</p>
 <div class="arithmatex">\[
-\omega'(x)|_{x=x_i}=\sum_{j=0}^{n}\prod_{k=0 \atop k\neq j}^{n}(x-x_k)|_{x=x_i}=\prod_{k=0\atop k\neq i}^{n}(x_i-x_k)
+\|f\|_p=\left[\int_E |f(x)|^pdx\right]^{\frac{1}{p}}
 \]</div>
-<p>so </p>
+<p>as norm of <span class="arithmatex">\(f\)</span>. Notice that <span class="arithmatex">\(L^1(E)\)</span> equals <span class="arithmatex">\(L(E)\)</span>.</p>
+<p>(ii) Assume <span class="arithmatex">\(m(E)&gt;0\)</span>. If there exists M&gt;0, such that <span class="arithmatex">\(|f(x)|\leq M,\quad a.e.x\in E\)</span>, then we call <span class="arithmatex">\(f\)</span> is <strong>essentially bounded</strong> on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(M\)</span> is called the <strong>essential upper bound</strong> of <span class="arithmatex">\(f(x)\)</span>. A set composed by all essentially bounded function is denoted as <span class="arithmatex">\(L^\infty(E)\)</span>. If <span class="arithmatex">\(f\in L^{\infty}(E)\)</span>, define</p>
 <div class="arithmatex">\[
-l_i(x)=\frac{\omega(x)}{(x-x_i)\omega'(x_i)}
+\|f\|_{\infty}:=\inf\{M: |f(x)|\leq M,\quad a.e.x\in E\}
 \]</div>
-<p>which satisfies </p>
+<p>as the norm or essential bound of <span class="arithmatex">\(f\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem</p>
+<p>If <span class="arithmatex">\(m(E)&lt;\infty\)</span>, then <span class="arithmatex">\(L^p(E)\subset L^1(E)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="lp-space-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lp-space-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(A=\{f\geq 1\}\cap E\)</span>, <span class="arithmatex">\(B=\{f&lt;1\}\cap E\)</span>, if <span class="arithmatex">\(f\in L^p(E)\)</span>, then</p>
 <div class="arithmatex">\[
-l_i(x_j)=\begin{cases}1,\quad &amp;j=i,\\ 0,\quad &amp;j\neq i.\end{cases}
+\begin{align*}
+\int_E |f|^p dx&lt;\infty.
+\end{align*}
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E |f| dx&amp;=\int_A |f|dx+\int_B|f|dx\\
+&amp;&lt;\int_A |f|^pdx+m(B)\\
+&amp;&lt;\int_E |f|^pdx+m(B)&lt;\infty.
+\end{align*}
 \]</div>
 </div>
-<p><a id="q1"></a></p>
+</div>
+</div>
 <div class="question">
-<p>Q1. Calculate the Lagrange polynomial that interpolates the following 3 points.</p>
-<div style="text-align: center;">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><span class="arithmatex">\(x_i\)</span></th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><span class="arithmatex">\(f(x_i)\)</span></td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">5</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Example</strong>. <span class="arithmatex">\(E=(0,\infty)\)</span>, <span class="arithmatex">\(f(x)=\frac{1}{1+x}\)</span>, then <span class="arithmatex">\(f\in L^p(E)\)</span> but <span class="arithmatex">\(f\notin L^1(E)\)</span>.</p>
 </div>
+<h2 id="properties-of-lp-space">Properties of <span class="arithmatex">\(L^p\)</span> Space<a class="headerlink" href="#properties-of-lp-space" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">H&ouml;lder Inequation</p>
+<p>If <span class="arithmatex">\(1&lt;p,q&lt;\infty\)</span>, and </p>
+<div class="arithmatex">\[
+\frac{1}{p}+\frac{1}{q}=1,
+\]</div>
+<p>then we call <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span> are conjugate indexes.</p>
+<p>If <span class="arithmatex">\(f\in L^p(E)\)</span>, <span class="arithmatex">\(g\in L^q(E)\)</span>, then <span class="arithmatex">\(fg\in L(E)\)</span> and </p>
+<div class="arithmatex">\[
+\|fg\|_1\leq \|f\|_p\cdot \|g\|_q.
+\]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="lagrange-lagrange-interpolating-polynomial-answer" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lagrange-lagrange-interpolating-polynomial-answer">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="properties-of-lp-space-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Use inequation </p>
 <div class="arithmatex">\[
-\begin{align*}
-p_2(x) &amp;= \frac{(x-2)(x-4)}{(1-2)(1-4)}\times 8 + \frac{(x-1)(x-4)}{(2-1)(2-4)}\times 1 + \frac{(x-1)(x-2)}{(4-1)(4-2)}\times 5\\
-&amp;=\frac{8}{3}(x^2-6x+8)-\frac{1}{2}(x^2-5x+4)+\frac{5}{6}(x^2-3x+2)\\
-&amp;=3x^2-16x+21
-\end{align*}
+ab\leq \frac{a^p}{p}+\frac{b^q}{q}.
 \]</div>
 </div>
 </div>
 </div>
-<p>In fact, if we assume <span class="arithmatex">\(P_n(x) = \sum\limits_{i=0}^{n}a_ix^i\)</span>(natural base), and to get the parameters <span class="arithmatex">\(\{a_i\}\)</span> such that <span class="arithmatex">\(P_n(x_i) = y_i\)</span>, we have to solve the following linear system</p>
-<div class="arithmatex">\[
-\begin{bmatrix} 1 &amp; x_0 &amp; x_0^2 &amp;\cdots &amp; x_0^n \\ 
-1 &amp; x_1 &amp; x_1^2 &amp;\cdots &amp; x_1^n \\ 
-\vdots &amp; \vdots &amp; \vdots &amp; &amp;\vdots \\
-1 &amp; x_n &amp; x_n^2 &amp;\cdots &amp; x_n^n 
-\end{bmatrix}
-\begin{bmatrix} 
-a_0 \\ a_1 \\ \vdots \\ a_n 
-\end{bmatrix}= 
-\begin{bmatrix} y_0 \\ y_1 \\ \vdots \\ y_n 
-\end{bmatrix} 
-\]</div>
-<p>which is a little tedious.</p>
-<h3 id="neville-nevilles-method">Neville方法 | Neville's Method<a class="headerlink" href="#neville-nevilles-method" title="Permanent link">&para;</a></h3>
-<p>There is another way to express polynomial, which is also a weighted average.</p>
-<p>An interpolation polynomial for a set of points <span class="arithmatex">\(A =\{x_0, x_1, \cdots x_n \}\)</span> can be expressed by two polynomials that interpolate <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_i\}\)</span> and <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_j\}\)</span>. That is,</p>
-<div class="arithmatex">\[
-\begin{align*}
-P_{0,1,\cdots,n}(x) &amp;= \frac{(x-x_i)P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)-(x-x_j)P_{0,1,\cdots,j-1,j+1,\cdots,n}(x)}{(x_j-x_i)}\\
-&amp;=\frac{1}{(x_j-x_i)}\left|\begin{array}{cc}
-(x-x_i) &amp; P_{0,1,\cdots,j-1,j+1,\cdots,n}(x) \\
-(x-x_j) &amp; P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)
-\end{array}\right|
-\end{align*}
-\]</div>
-<p>where <span class="arithmatex">\(P_{0,1,\cdots,i-1,i+1,\cdots,n}(x)\)</span> and <span class="arithmatex">\(P_{0,1,\cdots,j-1,j+1,\cdots,n}(x)\)</span> denotes the polynomial that interpolates <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_i\}\)</span> and <span class="arithmatex">\(A\)</span> \ <span class="arithmatex">\(\{ x_j\}\)</span> respectively.</p>
-<p>For the first item, we have</p>
-<div class="arithmatex">\[
-\begin{align*}
-P_{0,1}(x) &amp;= \frac{(x-x_0)\times f(x_1)-(x-x_1)\times f(x_0)}{(x_1-x_0)}\\
-&amp;=\frac{1}{(x_1-x_0)}\left|\begin{array}{cc}
-(x-x_0) &amp; f(x_0) \\
-(x-x_1) &amp; f(x_1)
-\end{array}\right|
-\end{align*}
-\]</div>
-<div class="question">
-<p>Q2. Get the polynomial <span class="arithmatex">\(p_3(x)\)</span> that interpolates the following 4 points and estimate <span class="arithmatex">\(f(5)\)</span> by calculate <span class="arithmatex">\(p_3(5)\)</span>.</p>
-<div style="text-align: center;">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><span class="arithmatex">\(x_i\)</span></th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">4</th>
-<th style="text-align: center;">6</th>
-<th style="text-align: center;">8</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><span class="arithmatex">\(f(x_i)\)</span></td>
-<td style="text-align: center;">-8</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">64</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="neville-nevilles-method-answer" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="neville-nevilles-method-answer">Answer</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>It is a little tedious if we write the form of the polynomial and then substitute <span class="arithmatex">\(5\)</span> in. It is more suitable to list a table.</p>
-<p><div style="text-align: center;">
-<table style="font-size:12px;" >
-<tr align="center" valign="middle">
-    <th align="center"><span class="arithmatex">\(x\)</span></th>
-    <th align="center"><span class="arithmatex">\(f(x)\)</span></th>
-    <th align="center"><span class="arithmatex">\(p_1(5)\)</span></th>
-    <th align="center"><span class="arithmatex">\(p_2(5)\)</span></th>
-    <th align="center"><span class="arithmatex">\(p_3(5)\)</span></th>
-</tr>
-<tr >
-    <td align="center">2</td>
-    <td align="center">-8</td>
-    <td align="center"></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td align="center">4</td>
-    <td align="center">0</td>
-    <td align="center"><span class="arithmatex">\(\frac{1}{(4-2)}\left|\begin{array}{cc}
-    (5-2) &amp; -8 \\
-    (5-4) &amp; 0
-    \end{array}\right|=4\)</span></td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td align="center">6</td>
-    <td align="center">8</td>
-    <td align="center"><span class="arithmatex">\(\frac{1}{(6-4)}\left|\begin{array}{cc}
-    (5-4) &amp; 0 \\
-    (5-6) &amp; 8
-    \end{array}\right|=4\)</span></td>
-    <td align="center"><span class="arithmatex">\(\frac{1}{(6-2)}\left|\begin{array}{cc}
-    (5-2) &amp; 4 \\
-    (5-6) &amp; 4
-    \end{array}\right|=4\)</span></td>
-    <td></td>
-</tr>
-<tr>
-    <td align="center">8</td>
-    <td align="center">64</td>
-    <td align="center"><span class="arithmatex">\(\frac{1}{(8-6)}\left|\begin{array}{cc}
-    (5-6) &amp; -8 \\
-    (5-8) &amp; 64
-    \end{array}\right|=-20\)</span></td>
-    <td align="center"><span class="arithmatex">\(\frac{1}{(8-4)}\left|\begin{array}{cc}
-    (5-4) &amp; 4 \\
-    (5-8) &amp; -20
-    \end{array}\right|=-2\)</span></td>
-    <td align="center"><span class="arithmatex">\(\frac{1}{(8-2)}\left|\begin{array}{cc}
-    (5-2) &amp; 4 \\
-    (5-8) &amp; -2
-    \end{array}\right|=1\)</span></td>
-</tr>
-</table>
-</div></p>
-</div>
-</div>
-</div>
-<h3 id="newton-newtons-divided-difference-formula">Newton差商表达式 | Newton's Divided Difference Formula<a class="headerlink" href="#newton-newtons-divided-difference-formula" title="Permanent link">&para;</a></h3>
-<p>If we rewrite the <span class="arithmatex">\(n\)</span>th Lagrange polynomial <span class="arithmatex">\(P_n(x)\)</span> into another form:</p>
-<div class="arithmatex">\[
-P_n(x) = a_0+a_1(x-x_0)+a_2(x-x_0)(x-x_1)+\cdots+a_n(x-x_0)\cdots(x-x_n)
-\]</div>
-<p>By letting <span class="arithmatex">\(x =x_0, x_1,\cdots, x_n\)</span>, we get</p>
-<div class="arithmatex">\[
-\begin{align*}
-P_n(x_0) = &amp; a_0\\
-P_n(x_1) = &amp; a_0 + a_1(x_1-x_0)\\
-P_n(x_2) = &amp; a_0+a_1(x_2-x_0)+a_2(x_2-x_0)(x_2-x_1)\\
-&amp;\vdots\\
-P_n(x_n) = &amp; a_0+a_1(x_n-x_0)+a_2(x_n-x_0)(x_n-x_1)+\\
-&amp;\cdots+a_n(x_n-x_0)\cdots(x_n-x_{n-1})
-\end{align*}
-\]</div>
-<p>Then we can define:</p>
-<div class="arithmatex">\[
-\begin{align*}
-f_n[x_0] &amp;\overset{\Delta}{=} f(x_0) = a_0\\
-f_n[x_0, x_1] &amp;\overset{\Delta}{=} \frac{f(x_1) - f(x_0)}{x_1-x_0} = a_1\\
-f_n[x_0, x_1, x_2] &amp;\overset{\Delta}{=} \frac{f[x_1,x_2]-f[x_0,x_1]}{x_2-x_0} \\&amp;= \frac{\frac{f(x_2)-f(x_1)}{x_2-x_1}-\frac{f(x_1)-f(x_0)}{x_1-x_0} }{x_2-x_0} \\&amp;= \frac{\frac{f(x_2)-f(x_0)-(f(x_1)-f(x_0))}{x_2-x_1}-a_1}{x_2-x_0} \\
-&amp;= \frac{\frac{f(x_2)-f(x_0)}{x_2-x_1} - \frac{a_1(x_1-x_0)}{x_2-x_1}-\frac{a_1(x_2-x_1)}{x_2-x_1}}{x_2-x_0} \\
-&amp;= \frac{\frac{f(x_2)-f(x_0)}{x_2-x_1} - \frac{a_1(x_2-x_0)}{x_2-x_1}}{x_2-x_0}\\
-&amp;= \frac{f(x_2)-a_0 - a_1(x_2-x_0)}{(x_2-x_0)(x_2-x_1)}=a_2\\
-&amp;\vdots\\
-f[x_0,x_1,\cdots, x_n] &amp;\overset{\Delta}{=} \frac{f[x_1,x_2,\cdots,x_n] - f[x_0,x_1,\cdots,x_{n-1}]}{x_n-x_0} = a_n
-\end{align*}
-\]</div>
-<p>We can prove the above definition <span class="arithmatex">\(f[x_0,x_1\cdots,x_n]\)</span>, which is called <strong>divided difference</strong>, to be equal to <span class="arithmatex">\(a_n\)</span> by induction.</p>
-<p>We can also show that <span class="arithmatex">\(a_1\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(1\)</span> that interpolates <span class="arithmatex">\(x_0,x_1\)</span>, and <span class="arithmatex">\(a_2\)</span> is the coefficient of the highest item of polynomial of degree <span class="arithmatex">\(2\)</span> that interpolates <span class="arithmatex">\(x_0,x_1,x_2\)</span> ...</p>
-<p>This <strong>iterative method</strong> is quite useful in determining the parameters of <span class="arithmatex">\(n\)</span>th Lagrange polynomial.</p>
-<div class="arithmatex">\[
-P_n(x) = f[x_0] + \sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(x-x_j)\right)
-\]</div>
-<p>The following relation gives a slightly quicker way to compute <span class="arithmatex">\(f[x_0,x_1,\cdots,x_n]\)</span>:</p>
-<div class="admonition success">
-<p class="admonition-title">计算差商 | Calculating divided difference</p>
-<div class="arithmatex">\[
-f[x_0,x_1,\cdots,x_n] = \sum_{k=0}^{n}\frac{f(x_k)}{\omega'_{n+1}(x_k)}
-\]</div>
-<p>where </p>
-<div class="arithmatex">\[
-\omega_{n+1}(x) = \prod_{i=0}^{n}(x-x_i),\quad \omega'_{n+1}(x_j) = \prod_{i=0 \atop i \neq j}^{n}(x_j-x_i)
-\]</div>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="newton-newtons-divided-difference-formula-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="newton-newtons-divided-difference-formula-proof">Proof</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>We know from Lagrange polynomial of degree <span class="arithmatex">\(n\)</span></p>
-<div class="arithmatex">\[
-P_n(x) = \sum_{i=0}^{n}f(x_i)\frac{\omega(x)}{(x-x_i)\omega'(x_i)}
-\]</div>
-<p>where </p>
-<div class="arithmatex">\[
-\omega(x) = \prod_{j=0}^n(x-x_j), \quad \omega'(x_i) = \prod_{j=0\atop j\neq i}^n(x_i-x_j)
-\]</div>
-<p>So the divided difference equals to the coefficient of the highest item of <span class="arithmatex">\(P_n(x)\)</span>, and we are done.</p>
-</div>
-</div>
-</div>
-<p>Now solve <a href="#q1">Question 1</a> in the above part of the article.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="newton-newtons-divided-difference-formula-answer" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="newton-newtons-divided-difference-formula-answer">Answer</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><div style="text-align: center;">
-<table>
-    <tr align="center" valign="middle">
-        <th align="center"><span class="arithmatex">\(x_i\)</span></th>
-        <th align="center"><span class="arithmatex">\(f(x_i)\)</span></th>
-        <th align="center"><span class="arithmatex">\(f[x_i,x_j]\)</span></th>
-        <th align="center"><span class="arithmatex">\(f[x_i,x_j,x_k]\)</span></th>
-    </tr>
-    <tr>
-        <td style="text-align: center; vertical-align: middle;">1 <br> 2 <br> 4</td>
-        <td style="text-align: center; vertical-align: middle;">8 <br> 1 <br> 5</td>
-        <td style="text-align: center; vertical-align: middle;">-7 <br> 2</td>
-        <td style="text-align: center; vertical-align: middle;">3</td>
-    </tr>
-</table>
-</div></p>
-<p>So the interpolating polynomial is </p>
-<div class="arithmatex">\[
-P_2(x) = 8-7(x-1)+ 3(x-1)(x-2)
-\]</div>
-</div>
-</div>
-</div>
-<p>Some properties are the followings.</p>
-<div class="admonition success">
-<p class="admonition-title">差商与微分均值的关系 | Relationship of DD &amp; Mean Value Differentials</p>
-<p>Suppose that <span class="arithmatex">\(f \in C^n[a, b]\)</span> and <span class="arithmatex">\(x_0, x_1, \cdots, x_n\)</span> are distinct numbers in <span class="arithmatex">\([a, b]\)</span>. Then a number <span class="arithmatex">\(\xi\)</span> exists in <span class="arithmatex">\((a, b)\)</span> with</p>
-<div class="arithmatex">\[
-f[x_0,x_1\cdots,x_n] = \frac{f^{(n)}(\xi)}{n!}
-\]</div>
-<p>Specifically, we denote <span class="arithmatex">\(a=\min\{x_i:i=0,1\cdots,n\}\)</span> and <span class="arithmatex">\(b=\max\{x_i:i=0,1\cdots,n\}\)</span></p>
-</div>
-<p>It is like </p>
-<div class="arithmatex">\[
-f[x_0,x_1] = \frac{f(x_1)-f(x_0)}{x_1-x_0} = f'(\xi)
-\]</div>
-<p>but add <span class="arithmatex">\(n!\)</span> to the denominator.</p>
-<p>The collary can be quite simple.</p>
-<div class="admonition success">
-<p class="admonition-title">Collary of the above</p>
-<p>If <span class="arithmatex">\(f(x)\)</span> is a polynomial of degree <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(k&lt;n\)</span>, so the <span class="arithmatex">\(n\)</span>th divided difference is <span class="arithmatex">\(0\)</span>.</p>
-</div>
-<h2 id="error-analysis-of-interpolation">插值误差分析 | Error Analysis of Interpolation<a class="headerlink" href="#error-analysis-of-interpolation" title="Permanent link">&para;</a></h2>
-<p>The following theorem gives the error bound.</p>
-<div class="admonition success">
-<p class="admonition-title">拉格朗日基函数的余项 | The remainder of Lagrange interpolating polynomial</p>
-<p>Suppose <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span> are distinct numbers in the interval <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(f \in C^{n+1}[a, b]\)</span>. Then, for each <span class="arithmatex">\(x \in [a, b]\)</span>, a number <span class="arithmatex">\(\xi(x)\)</span> (generally unknown) between <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span>, and hence in <span class="arithmatex">\((a, b)\)</span>, exists with</p>
-<div class="arithmatex">\[
-f(x) = P(x) + \frac{f^{n+1}(\xi(x))}{(n+1)!}\prod_{i=0}^{n}(x - x_i)
-\]</div>
-<p>where <span class="arithmatex">\(P(x)\)</span> is the Lagrange interpolating polynomial.</p>
-</div>
-<p>Prove it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="error-analysis-of-interpolation-hints" name="__tabbed_5" type="radio" /><input id="error-analysis-of-interpolation-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="error-analysis-of-interpolation-hints">Hints</label><label for="error-analysis-of-interpolation-proof">Proof</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ul>
-<li>Using a function </li>
-</ul>
-<div class="arithmatex">\[
-g(t) = f(t) - P(t) - [f(x)-P(x)]\prod_{i=0}^{n}\frac{(t-x_i)}{x-x_i}
-\]</div>
-<p>which is <span class="arithmatex">\(C^{n+1}[a, b]\)</span>. Here we see <span class="arithmatex">\(x\neq x_k\)</span> is a constant for variable <span class="arithmatex">\(t\)</span>. Note that <span class="arithmatex">\(f(x_k)=0(k=0,1,\cdots n)\)</span> and <span class="arithmatex">\(f(x)=0\)</span> for <span class="arithmatex">\(x \in [a, b]\)</span>(Readers can prove them by substituting in). We can see that <span class="arithmatex">\(n+1+1=n+2\)</span> zero points here(<span class="arithmatex">\(x,x_0,\cdots, x_n\)</span>). </p>
-<ul>
-<li>Using generalized Rolle's Theorem: There exists <span class="arithmatex">\(\xi(x) \in [a, b]\)</span> such that <span class="arithmatex">\(g^{n+1}(\xi(x))=0\)</span></li>
-</ul>
-<p>And make <span class="arithmatex">\(n+1\)</span> derivatives to <span class="arithmatex">\(g(t)\)</span>(with respect to <span class="arithmatex">\(t\)</span>), we have</p>
-<div class="arithmatex">\[
-g^{(n+1)}(t)=f^{(n+1)}(t)-P^{(n+1)}(t)-\frac{(n+1)![f(x)-P(x)]}{\prod\limits_{i=0}^n (x-x_i)}
-\]</div>
-<p>substitute in <span class="arithmatex">\(\xi\)</span> we have</p>
-<div class="arithmatex">\[
-0=g^{(n+1)}(\xi)=f^{(n+1)}(\xi)- \frac{(n+1)![f(\xi)-P(\xi)]}{\prod\limits_{i=0}^n (x-x_i)}
-\]</div>
-<p>cause <span class="arithmatex">\(P(x)\)</span> is <span class="arithmatex">\(n\)</span>th polynomial, so <span class="arithmatex">\(P^{(n+1)}(\xi)=0\)</span>. So solve for <span class="arithmatex">\(f(x)\)</span> we have</p>
-<div class="arithmatex">\[
-f(x)=P(x)+\frac{f^{n+1}(\xi(x))}{(n+1)!}\prod_{i=0}^{n}(x - x_i)
-\]</div>
-<p>and we can get the result. </p>
-</div>
-<div class="tabbed-block">
-<p>Or by using the relationship between divided difference and mean value differentials.</p>
-</div>
-</div>
-</div>
-<div class="admonition success">
-<p class="admonition-title">牛顿插值公式的余项 | The remainder of Newton's interpolating Formula</p>
-<p>Suppose <span class="arithmatex">\(x_0, x_1, \cdots , x_n\)</span> are distinct numbers in the interval <span class="arithmatex">\([a, b]\)</span> and <span class="arithmatex">\(f \in C^{n+1}[a, b]\)</span>. Then, for each <span class="arithmatex">\(x \in [a, b]\)</span>, we have</p>
-<div class="arithmatex">\[
-\begin{align*}
-f(x)=&amp;f[x_0]+f[x_0,x_1](x-x_1)+\cdots\\
-&amp;+f[x_0,x_1,\cdots, x_n]\prod_{i=0}^{n-1}(x-x_i)\\
-&amp;+f[x_0,x_1,\cdots,x_n,x]\prod_{i=0}^n(x-x_i)
-\end{align*}
-\]</div>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="error-analysis-of-interpolation-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="error-analysis-of-interpolation-proof_1">Proof</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Similar to proof of Lagrange interpolation polynomial. We assume <span class="arithmatex">\(z\neq x_0,x_1,\cdots,x_n\)</span>, then consider <span class="arithmatex">\(n+1\)</span>th polynomial <span class="arithmatex">\(Q(x)\)</span> that interpolates these <span class="arithmatex">\(n+2\)</span> points <span class="arithmatex">\(\{z,x_0,x_1,\cdots,x_n\}\)</span>, so we have</p>
-<div class="arithmatex">\[
-Q(x)=f[x_0]+\sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(x-x_j)\right)+f[x_0,x_1,\cdots,x_n,z]\prod_{i=0}^n(x-x_i)
-\]</div>
-<p>which satisfies <span class="arithmatex">\(f(x_i)=Q(x_i)(i=0,1,\cdots,n)\)</span> and <span class="arithmatex">\(f(z)=Q(z)\)</span>, the latter one gives</p>
-<div class="arithmatex">\[
-f(z)= Q(z) = f[x_0]+\sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(z-x_j)\right)+f[x_0,x_1,\cdots,x_n,z]\prod_{i=0}^n(z-x_i)
-\]</div>
-<p>substitute <span class="arithmatex">\(z\)</span> with <span class="arithmatex">\(x\)</span> and we are done.</p>
-<p>There is still one step left. For <span class="arithmatex">\(z=x_i\)</span>, divided difference <span class="arithmatex">\(f[x_0,x_1,\cdots,x_n,z]\)</span> is not defined. So for <span class="arithmatex">\(x_i\)</span>, we consider a sequence <span class="arithmatex">\(\{y_k^{i}\}_{k=1}^\infty\)</span>, where <span class="arithmatex">\(y_k^i\neq x_i\)</span> and <span class="arithmatex">\(\lim_{k\rightarrow \infty}y_k^i=x_i\)</span>. First we have the above theorem holds on <span class="arithmatex">\(y_k^i\)</span>, i.e.</p>
-<div class="arithmatex">\[
-\begin{align*}
-f(y_k^i) &amp;= f[x_0]+\sum_{i=1}^{n}\left(f[x_0,x_1,\cdots,x_i]\prod_{j=0}^{i-1}(y_k^i-x_j)\right)+f[x_0,x_1,\cdots,x_n,y_k^i]\prod_{i=0}^n(y_k^i-x_i)\\
-&amp;\overset{\Delta}{=}Q(y^i_k) + R(y^i_k)
-\end{align*}
-\]</div>
-<p>we know that <span class="arithmatex">\(f(x)\)</span> and <span class="arithmatex">\(Q(x)\)</span>(<span class="arithmatex">\(n\)</span>th polynomial) are continuous on <span class="arithmatex">\([a,b]\)</span>, so <span class="arithmatex">\(\lim_{k\rightarrow \infty}f(y_k^i)=f(x_i)\)</span> and <span class="arithmatex">\(\lim_{k\rightarrow \infty}Q(y_k^i)=Q(x_i)=f(x_i)\)</span>, so</p>
-<div class="arithmatex">\[
-\lim_{k\rightarrow \infty}R(y_k^i)=0
-\]</div>
-<p>we could define <span class="arithmatex">\(R(x_i)=0\)</span> and the above equation still holds.</p>
-</div>
-</div>
-</div>
-<p>The above error item is useful in <a href="../NI/#error-analysis">Numerical Integration</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Compared to the remainder of Taylor's extension</p>
-<div class="arithmatex">\[
-R_n(x) = \frac{f^{n+1}(\xi(x))}{(n+1)!}(x-x_0)^{n+1}
-\]</div>
-</div>
-<p>Because <span class="arithmatex">\(\xi(x)\)</span> is usually unknown, so we often use a number <span class="arithmatex">\(x' \in  [a, b]\)</span> such that </p>
-<div class="arithmatex">\[
-|f^{n+1}(\xi(x))|\leq |f^{n+1}(x')|
-\]</div>
-<h2 id="interpolation-of-equidistant-points">等距插值 | Interpolation of Equidistant Points<a class="headerlink" href="#interpolation-of-equidistant-points" title="Permanent link">&para;</a></h2>
-<p>In actual calculation in computer, we use difference to replace divided difference when we interpolate points with equal distance.</p>
-<div class="admonition info">
-<p class="admonition-title">Definition of Difference on Equidistant Points</p>
-<p>Difference of first order is defined by</p>
-<div class="arithmatex">\[
-\Delta f(x_i)=f(x_{i+1})-f(x_i)
-\]</div>
-<p>Difference of second order is defined by</p>
-<div class="arithmatex">\[
-\begin{align*}
-\Delta^2 f(x_i)&amp;=\Delta f(x_{i+1})-\Delta f(x_i)\\
-&amp;=f(x_{i+2})-2f(x_{i+1})+f(x_i)
-\end{align*}
-\]</div>
-<p>By recursion, we define Difference of <span class="arithmatex">\(n\)</span>th order</p>
-<div class="arithmatex">\[
-\Delta^n f(x_i)=\Delta^{n-1}f(x_{i+1})-\Delta^{n-1}f(x_i)
-\]</div>
-</div>
-<p>By induction, it is easy to see that</p>
-<div class="arithmatex">\[
-\begin{align*}
-\Delta^{n}f(x_i) = &amp;f(x_{i+n})-nf(x_{i+n-1})+C^1_{n}f(x_{i+n-2})\\
-+&amp;\cdots+(-1)^{n-1}nf(x_{i+1})+(-1)^nf(x_i)\\
-=&amp;\sum_{k=0}^n(-1)^k C_n^kf(x_{i+k}).
-\end{align*}
-\]</div>
-<p>We usually use the recursive method for computing.</p>
-<p>In situation where points are equally distant, we have a relationship between divided difference and difference.</p>
-<div class="admonition success">
-<p class="admonition-title">relationship between divided difference and difference</p>
-<p>Under equidistant points, we have </p>
-<div class="arithmatex">\[
-f[x_0,x_1,\cdots,x_n]=\frac{\Delta^{n}f(x_0)}{h^n n!}
-\]</div>
-<p>where <span class="arithmatex">\(h\)</span> is the distance between two adjacent points.</p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="interpolation-of-equidistant-points-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="interpolation-of-equidistant-points-proof">Proof</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>By induction.</p>
-</div>
-</div>
-</div>
-<h2 id="hermite-hermite-polynomials">Hermite多项式 | Hermite Polynomials<a class="headerlink" href="#hermite-hermite-polynomials" title="Permanent link">&para;</a></h2>
-<p>We want to consider the smoothness of interpolating polynomials, so we need to consider its derivatives, especially the first order derivative. </p>
-<div class="admonition success">
-<p class="admonition-title">Definition of Osculating Polynomial</p>
-<p>The osculating polynomial approximating <span class="arithmatex">\(f\)</span> is the polynomial <span class="arithmatex">\(P(x)\)</span> of least degree such that</p>
-<div class="arithmatex">\[
-\frac{d^kP(x_i)}{dx^k} = \frac{d^kf(x_i)}{dx^k},\quad, \forall i = 0,1,\cdots, n, \forall k = 0,1,\cdots, m_i
-\]</div>
-</div>
-<p>Where <span class="arithmatex">\(n\)</span> is the total number of sampling points and <span class="arithmatex">\(m_i\)</span> is the degree of smoothness at point <span class="arithmatex">\(x_i\)</span>.</p>
-<p>If <span class="arithmatex">\(m_i=1\)</span> for all <span class="arithmatex">\(i=0,1,\cdots, n\)</span>, then the above polynomial is called <strong>Hermite Polynomial</strong>.</p>
-<div class="admonition success">
-<p class="admonition-title">Composition of Hermite Polynomial</p>
-<p>If <span class="arithmatex">\(f \in C^1[a, b]\)</span> and <span class="arithmatex">\(x_0, \cdots , x_n \in [a, b]\)</span> are distinct, the unique polynomial of least degree agreeing with <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f'\)</span> at <span class="arithmatex">\(x_0,\cdots , x_n\)</span> is the Hermite polynomial of degree at most <span class="arithmatex">\(2n + 1\)</span> given by</p>
-<div class="arithmatex">\[
-H_{2n+1}(x) = \sum_{j=0}^{n}f(x_j)H_{n,j}(x) + \sum_{j=0}^{n}f'(x_j)\hat{H}_{n,j}(x)
-\]</div>
-<p>where, for <span class="arithmatex">\(L_{n, j}(x)\)</span> denoting the <span class="arithmatex">\(j\)</span>th Lagrange coefficient polynomial of degree <span class="arithmatex">\(n\)</span>, we have</p>
-<div class="arithmatex">\[
-H_{n,j}(x) = [1-2(x-x_j)L'_{n,j}(x_j)]L^2_{n,j}(x),\quad \hat{H}_{n,j}(x) = (x-x_j)L^2_{n,j}(x)
-\]</div>
-</div>
-<p>The composition is usually a little tedious.</p>
-<h2 id="cubic-spline-interpolation">样条插值 | Cubic Spline Interpolation<a class="headerlink" href="#cubic-spline-interpolation" title="Permanent link">&para;</a></h2>
-<p>We change <span class="arithmatex">\(\frac{d^kP(x_i)}{dx^k} = \frac{d^kf(x_i)}{dx^k}\)</span> into equations between adjacent curves. Because we often do not know the derivatives of the point.</p>
-<p>Define <span class="arithmatex">\(s(x)\)</span> piece-wisely with <span class="arithmatex">\(s_i(x)\in [x_i,x_{i+1}]\)</span></p>
-<div class="arithmatex">\[
-s_i(x)=a_i+b_ix+c_ix^2+d_ix^3, \quad i=0,1,\cdots,n-1
-\]</div>
-<p>which has 4 parameters to be determined. So the overall number of parameters to be determined is <span class="arithmatex">\(4n\)</span>. The condition they have to satisfy</p>
-<div class="arithmatex">\[
-s_i(x_i)=f(x_i), s_i(x_{i+1})=f(x_{i+1}), i=0,1,\cdots,n-1 \quad \text{[$2n$ equations]}
-\]</div>
-<div class="arithmatex">\[
-s'_i(x_{i})=s'_{i-1}(x_{i}),i=1,2,\cdots, n-1\quad \text{[$n-1$ equations]}
-\]</div>
-<div class="arithmatex">\[
-s''_i(x_{i})=s''_{i-1}(x_{i}),i=1,2,\cdots, n-1\quad \text{[$n-1$ equations]}
-\]</div>
-<p>So the above necessary condition gives <span class="arithmatex">\(4n-2\)</span> equations while we have <span class="arithmatex">\(4n\)</span> parameters to be determined. So we need to add another two equations for computing. There are many ways while the followings are usually seen.</p>
-<div class="admonition success">
-<p class="admonition-title">Three possible dealings</p>
-<p>(i) provide the derivatives of <span class="arithmatex">\(2\)</span> endpoints, i.e. <span class="arithmatex">\(s'(a)=f'(a)\)</span>, <span class="arithmatex">\(s'(b)=f'(b)\)</span>, which is called <strong>D1 cubic spline</strong> or <strong>Clamped Cubic Spline</strong>.</p>
-<p>(ii) provide the second derivatives of <span class="arithmatex">\(2\)</span> endpoints, i.e. <span class="arithmatex">\(s''(a)=f''(a)\)</span>, <span class="arithmatex">\(s''(b)=f''(b)\)</span>, which is called <strong>D1 cubic spline</strong>. Specially, if <span class="arithmatex">\(s''(a)=s''(b)=0\)</span>, it is called <strong>Natural Spline</strong>.</p>
-<p>(iii) take <span class="arithmatex">\(s(a)=f(a)\)</span> or <span class="arithmatex">\(s(b)=f(b)\)</span> out and provide extra <span class="arithmatex">\(3\)</span> equations <span class="arithmatex">\(s(a)=s(b)\)</span>, <span class="arithmatex">\(s'(a)=s'(b)\)</span>, <span class="arithmatex">\(s''(a)=s''(b)\)</span>, which is called <strong>periodical cubic spline</strong>.</p>
-</div>
-<p>The solution for solving parameters by given condition.</p>
-<div class="admonition success">
-<p class="admonition-title">Calculation of parameters</p>
-<p>Consider <span class="arithmatex">\(s(x)\)</span> on <span class="arithmatex">\([x_i,x_{i+1}]\)</span>, if we denote <span class="arithmatex">\(s''(x_i)=M_i\)</span>, then the overall equation becomes</p>
-<div class="arithmatex">\[
-\mu_i M_{i-1}+2M_i+\lambda_i M_{i+1} = 6f[x_{i-1},x_i,x_{i+1}], \quad i=1,2,\cdots,n-1
-\]</div>
-<p>where </p>
-<div class="arithmatex">\[
-\mu_i=\frac{x_i-x_{i-1}}{x_{i+1}-x_{i-1}}, \lambda_i=\frac{x_{i+1}-x_i}{x_{i+1}-x_{i-1}}
-\]</div>
-<p>for <span class="arithmatex">\(i=0\)</span> and <span class="arithmatex">\(i=n\)</span> two situation, we deduce different equations for different condition.</p>
-<p>(i) D1 cubic spline. we have</p>
-<div class="arithmatex">\[
-\begin{cases}
-2M_0+M_1=6f[x_0,x_0,x_1]\\
-M_{n-2}+2M_{n-1}=6f[x_{n-2},x_{n-1}]
-\end{cases}
-\]</div>
-</div>
+<p>When <span class="arithmatex">\(p=2\)</span> in the above inequation, it is called <strong>Schwartz Inequation</strong>.</p>
 <p><div class="question" markdown>
-Q3. Interpolate the following points with natural cubic spline.</p>
-<div style="text-align: center;">
-<table>
-<thead>
-<tr>
-<th style="text-align: center;"><span class="arithmatex">\(x_i\)</span></th>
-<th style="text-align: center;">0</th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><span class="arithmatex">\(f(x_i)\)</span></td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">6</td>
-</tr>
-</tbody>
-</table>
+<strong>Example</strong>. Assume <span class="arithmatex">\(m(E)&lt;\infty\)</span>, and <span class="arithmatex">\(1\leq p&lt; q &lt;\infty\)</span>, then <span class="arithmatex">\(L^q(E)\subset L^p(E)\)</span>, and </p>
+<div class="arithmatex">\[
+\|f\|_p\leq [m(E)]^{\frac{1}{p}-\frac{1}{q}}\|f\|_q.
+\]</div>
 </div>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="cubic-spline-interpolation-answer" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="cubic-spline-interpolation-answer">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="properties-of-lp-space-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Define <span class="arithmatex">\(s_0(x)=a_0+b_0x+c_0x^2+d_0x^3\)</span> and <span class="arithmatex">\(s_1(x)=a_1+b_1(x-1)+c_1(x-1)^2+d_1(x-1)^3\)</span>, then </p>
+<p>Use H&ouml;lder inequation. Let <span class="arithmatex">\(r=\frac{q}{p}\)</span> and <span class="arithmatex">\(r'=\frac{r}{r-1}=\frac{q}{q-p}\)</span>.</p>
 <div class="arithmatex">\[
-\begin{cases}
-b_0+2c_0+3d_0=b_1 \quad &amp;\text{derivative}\\
-2c_0+6d_0=2c_1\quad &amp;\text{second derivative}\\
-2c_0=0 \quad &amp;s''(a)=0\\
-2c_1+6d_1=0 \quad &amp; s''(b)=0
-\end{cases}
+\begin{align*}
+\int_E |f|^p\cdot 1dx&amp;\leq \| |f|^p\|_r\cdot \|1\|_{r'}\\
+\|f\|_p^p&amp;=\left(\int_E |f|^{p\cdot r}dx\right)^\frac{1}{r}\cdot \left(\int_E 1dx\right)^\frac{1}{r'}\\
+\|f\|_p^p&amp;=\left(\int_E |f|^{q}dx\right)^\frac{p}{q}\cdot \left(m(E)\right)^\frac{q-p}{q}\\
+\|f\|_p^p&amp;=\|f\|_q^p\cdot \left(m(E)\right)^\frac{q-p}{q}\\
+\Rightarrow \|f\|_p&amp;=\|f\|_q\cdot\left(m(E)\right)^{\frac{1}{p}-\frac{1}{q}}
+\end{align*}
 \]</div>
-<p>with condition that satisfies passing data points</p>
+<p>which means <span class="arithmatex">\(L^q(E)\subset L^p(E)\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f\in L^r(E)\cap L^s(E)\)</span>, where <span class="arithmatex">\(1\leq r&lt; q &lt; s \leq \infty\)</span>, and </p>
 <div class="arithmatex">\[
-\begin{cases}
-a_0=1\\ 
-a_0+b_0+c_0+d_0=2\\
-a_1=2\\
-a_1+b_1+c_1+d_1=6
-\end{cases}
+\frac{1}{p}=\frac{\lambda}{r}+\frac{1-\lambda}{s},\quad 0&lt;\lambda&lt;1.
 \]</div>
-<p>So represent all the parameters with <span class="arithmatex">\(d_1\)</span> or <span class="arithmatex">\(d_0\)</span>, we get</p>
+<p>then</p>
 <div class="arithmatex">\[
-\begin{cases}
-a_0=1\\
-b_0=\frac{1}{4}\\
-c_0=0\\
-d_0=\frac{3}{4}
-\end{cases}
-,\quad 
-\begin{cases}
-a_1=2\\
-b_1=\frac{5}{2}\\
-c_1=\frac{9}{4}\\
-d_1=-\frac{3}{4}\\
-\end{cases}
+\|f\|_p\leq \|f\|_r^\lambda \|f\|_s^{1-\lambda}.
 \]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="properties-of-lp-space-proof_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Minkowski Inequation</p>
+<p>Assume <span class="arithmatex">\(f,g\in L^p(E)\)</span>, <span class="arithmatex">\(1\leq p\leq\infty\)</span>, then <span class="arithmatex">\(f+g\in L^p(E)\)</span>, and</p>
+<div class="arithmatex">\[
+\|f+g\|_p\leq \|f\|_p+\|g\|_p.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="properties-of-lp-space-proof_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(1\leq p\leq \infty\)</span>. If <span class="arithmatex">\(f_k(x)\in L^p(E), k=1,2,\cdots\)</span>, and <span class="arithmatex">\(\sum\limits_{k=1}^\infty f_k(x)\)</span> converges <span class="arithmatex">\(a.e.x\in E\)</span>, then </p>
+<div class="arithmatex">\[
+\left\|\sum_{k=1}^\infty f_k\right\|_p\leq \sum_{k=1}^\infty \|f_k\|_p.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="properties-of-lp-space-proof_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_4">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(p=\infty\)</span>.</li>
+</ul>
+<p>Notice that</p>
+<div class="arithmatex">\[
+\left|\sum\limits_{k=1}^\infty f_k(x)\right|\leq \sum\limits_{k=1}^\infty \left|f_k(x)\right|\leq \sum_{k=1}^\infty \left\|f_k(x)\right\|_\infty
+\]</div>
+<p>then by definition of <span class="arithmatex">\(\left\|\sum\limits_{k=1}^\infty f_k\right\|_\infty\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\left\|\sum_{k=1}^\infty f_k\right\|_\infty&amp;\leq \sum_{k=1}^\infty \left\|f_k\right\|_\infty.
+\end{align*}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(1\leq p&lt;\infty\)</span>.</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+\left\|\sum_{k=1}^\infty f_k\right\|_p^p&amp;=\int_E \left|\sum_{k=1}^\infty f_k\right|^pdx\\
+&amp;\leq \int_E \left(\sum_{k=1}^\infty \left|f_k\right|\right)^p dx\\
+&amp;=\int_E \lim_{n\rightarrow \infty} \left(\sum_{k=1}^n \left|f_k\right|\right)^p dx\\
+&amp;=\lim_{n\rightarrow \infty} \int_E \left(\sum_{k=1}^n \left|f_k\right|\right)^p dx\quad \text{Levi Theorem}\\
+&amp;=\lim_{n\rightarrow \infty} \left\|\sum_{k=1}^n \left|f_k\right|\right\|_p^p\\
+&amp;\leq \lim_{n\rightarrow \infty}\left(\sum_{k=1}^n \left\|f_k\right\|_p\right)^p \quad \text{Minkowski}
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>To introduce distance in <span class="arithmatex">\(L^p(E)\)</span>, we assume that if <span class="arithmatex">\(f,g\in L^p(E)\)</span>, we have <span class="arithmatex">\(f(x)=g(x),a.e.x\in E\)</span>, then we denote this relationship as <span class="arithmatex">\(f=g\)</span>.</p>
+<h3 id="completeness">Completeness<a class="headerlink" href="#completeness" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Riesz-Ficher: Completeness</p>
+<p><span class="arithmatex">\(L^p(E)\)</span> is a complete metric space.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="completeness-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="completeness-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p><span class="arithmatex">\(1\leq p&lt;\infty\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p=\infty\)</span>.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -4031,7 +3534,7 @@ d_1=-\frac{3}{4}\\
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Solve_Equ/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Solutions of Equations in One Variables">
+          <a href="../Differential_Integral/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Differential &amp; Integral">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4041,20 +3544,20 @@ d_1=-\frac{3}{4}\\
                 Previous
               </span>
               <div class="md-ellipsis">
-                Solutions of Equations in One Variables
+                Differential & Integral
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Appro/" class="md-footer__link md-footer__link--next" aria-label="Next: Approximation Theory">
+          <a href="../../../Ctrl/" class="md-footer__link md-footer__link--next" aria-label="Next: Control">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Approximation Theory
+                Control
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4110,26 +3613,26 @@ d_1=-\frac{3}{4}\\
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="../../../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="../../../../javascripts/apply-numbering.js"></script>
+        <script src="../../../javascripts/apply-numbering.js"></script>
       
-        <script src="../../../../javascripts/pdf-viewer.js"></script>
+        <script src="../../../javascripts/pdf-viewer.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
       
     
-  <script src="../../../../assets/javascripts/custom.4e50d00f.min.js"></script>
+  <script src="../../../assets/javascripts/custom.4e50d00f.min.js"></script>
 
   </body>
 </html>
