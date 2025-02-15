@@ -1965,9 +1965,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-of-continuous-function" class="md-nav__link">
+  <a href="#extension-of-measurable-function" class="md-nav__link">
     <span class="md-ellipsis">
-      Extension of Continuous Function
+      Extension of Measurable Function
     </span>
   </a>
   
@@ -3430,9 +3430,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#extension-of-continuous-function" class="md-nav__link">
+  <a href="#extension-of-measurable-function" class="md-nav__link">
     <span class="md-ellipsis">
-      Extension of Continuous Function
+      Extension of Measurable Function
     </span>
   </a>
   
@@ -3935,14 +3935,14 @@ E\backslash E_\delta=\bigcap_{r=1}^\infty \bigcap_{k=N}^\infty E_k^c\left(\frac{
 <div class="question">
 <p><strong>Example</strong>. <span class="arithmatex">\(f_n(x)=x^n\)</span> converges to <span class="arithmatex">\(f(x)=\begin{cases}0,\quad 0&lt;x&lt;1 \\ 1,\quad x=1 \end{cases}\)</span> point-wisely, but not uniformly. If we remove a sufficiently small set <span class="arithmatex">\((1-\delta,1]\)</span>, then <span class="arithmatex">\(f_n(x)\rightrightarrows f(x)\)</span> uniformly.
 </div></p>
-<h3 id="extension-of-continuous-function">Extension of Continuous Function<a class="headerlink" href="#extension-of-continuous-function" title="Permanent link">&para;</a></h3>
+<h3 id="extension-of-measurable-function">Extension of Measurable Function<a class="headerlink" href="#extension-of-measurable-function" title="Permanent link">&para;</a></h3>
 <p>The following theorem is the main result of this part.
 <a id="Lusin-Theorem"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Lusin Theorem</p>
 <p>Assume <span class="arithmatex">\(f(x)\)</span> is a measurable function <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(\forall \delta&gt;0\)</span>, <span class="arithmatex">\(\exists\)</span> closed set <span class="arithmatex">\(F\subset E\)</span>, s.t. <span class="arithmatex">\(m(E\backslash F)&lt;\delta\)</span>, and <span class="arithmatex">\(f(x)\)</span> is a continuous function on <span class="arithmatex">\(F\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="extension-of-continuous-function-hints" name="__tabbed_19" type="radio" /><input id="extension-of-continuous-function-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="extension-of-continuous-function-hints">Hints</label><label for="extension-of-continuous-function-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="extension-of-measurable-function-hints" name="__tabbed_19" type="radio" /><input id="extension-of-measurable-function-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="extension-of-measurable-function-hints">Hints</label><label for="extension-of-measurable-function-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using Theorem in Mathematical Analysis for uniform convergent function, that is, the convergent function of uniformly convergent function sequence is continuous(Here notice we have to cut off a closed set from <span class="arithmatex">\(E\)</span>, which might be infinite). So we have to make use of <a href="#Egoroff-Theorem">Egoroff Theorem</a>.</p>
@@ -4014,7 +4014,7 @@ m(E\backslash F)&amp;\leq m\left[E\backslash E_\delta\right]+m\left[E_\delta \ba
 \]</div>
 <p>which naturally satisfies the condition in the theorem.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="extension-of-continuous-function-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="extension-of-continuous-function-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="extension-of-measurable-function-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="extension-of-measurable-function-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By <a href="#Lusin-Theorem">Lusin Theorem</a>, <span class="arithmatex">\(\forall \delta&gt;0\)</span>, there exists closed set <span class="arithmatex">\(F\subset E\)</span>, such that <span class="arithmatex">\(m(E-F)&lt;\delta\)</span>, and <span class="arithmatex">\(f\in C(F)\)</span>. Now the only problem is, how to extend this continuoud function on <span class="arithmatex">\(F\)</span> to all space <span class="arithmatex">\(F\)</span> and satisfy the so-called boundary condition <span class="arithmatex">\(\ref{boundary-condition}\)</span>.</p>
@@ -4035,6 +4035,7 @@ f(b_i),\quad &amp;x\in (-\infty, b_i).
 </div>
 </div>
 <h2 id="convergence-in-measure">Convergence in Measure<a class="headerlink" href="#convergence-in-measure" title="Permanent link">&para;</a></h2>
+<p><a id="example-measure-convergence"></a></p>
 <div class="question">
 <p><strong>Example</strong>. <span class="arithmatex">\(\forall n\in \mathbb{N}^+\)</span>, <span class="arithmatex">\(\exists ! k,i\in \mathbb{N}^+\)</span>, such that <span class="arithmatex">\(n=2^k+i\)</span>, where <span class="arithmatex">\(0\leq u\leq 2^k\)</span>. Formulate a function sequence </p>
 <div class="arithmatex">\[

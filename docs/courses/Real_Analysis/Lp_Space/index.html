@@ -1970,8 +1970,26 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Properties of \(L^p\) Space">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-p-norm-as-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use p-norm as Metric
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use p-norm as Metric">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convergence
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#completeness" class="md-nav__link">
@@ -3285,8 +3303,26 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Properties of \(L^p\) Space">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-p-norm-as-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use p-norm as Metric
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use p-norm as Metric">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convergence
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#completeness" class="md-nav__link">
@@ -3327,20 +3363,54 @@ L^p(E)=\{f: f\text{ is measurable on } E \text{ and } \int_E |f(x)|^pdx&lt;\inft
 \]</div>
 <p>for <span class="arithmatex">\(f\in L^p(E)\)</span>, denote</p>
 <div class="arithmatex">\[
-\|f\|_p=\left[\int_E |f(x)|^pdx\right]^{\frac{1}{p}}
+\|f\|_p=\left(\int_E |f(x)|^pdx\right)^{\frac{1}{p}}
 \]</div>
 <p>as norm of <span class="arithmatex">\(f\)</span>. Notice that <span class="arithmatex">\(L^1(E)\)</span> equals <span class="arithmatex">\(L(E)\)</span>.</p>
-<p>(ii) Assume <span class="arithmatex">\(m(E)&gt;0\)</span>. If there exists M&gt;0, such that <span class="arithmatex">\(|f(x)|\leq M,\quad a.e.x\in E\)</span>, then we call <span class="arithmatex">\(f\)</span> is <strong>essentially bounded</strong> on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(M\)</span> is called the <strong>essential upper bound</strong> of <span class="arithmatex">\(f(x)\)</span>. A set composed by all essentially bounded function is denoted as <span class="arithmatex">\(L^\infty(E)\)</span>. If <span class="arithmatex">\(f\in L^{\infty}(E)\)</span>, define</p>
+<p>(ii) Assume <span class="arithmatex">\(m(E)&gt;0\)</span>. If there exists <span class="arithmatex">\(M&gt;0\)</span>, such that <span class="arithmatex">\(|f(x)|\leq M,\quad a.e.x\in E\)</span>, then we call <span class="arithmatex">\(f\)</span> is <strong>essentially bounded</strong> on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(M\)</span> is called the <strong>essential upper bound</strong> of <span class="arithmatex">\(f(x)\)</span>. A set composed by all essentially bounded function is denoted as <span class="arithmatex">\(L^\infty(E)\)</span>. If <span class="arithmatex">\(f\in L^{\infty}(E)\)</span>, define</p>
 <div class="arithmatex">\[
 \|f\|_{\infty}:=\inf\{M: |f(x)|\leq M,\quad a.e.x\in E\}
 \]</div>
 <p>as the norm or essential bound of <span class="arithmatex">\(f\)</span>.</p>
 </div>
+<div class="question">
+<p><strong>Example</strong>. Prove: when <span class="arithmatex">\(0&lt; m(E)&lt;\infty\)</span>, we have</p>
+<div class="arithmatex">\[
+\lim_{p\rightarrow \infty}\|f\|_p=\|f\|_\infty.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="lp-space-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lp-space-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(M=\|f\|_\infty\)</span>, then choose <span class="arithmatex">\(M'&lt;M\)</span>, and define set </p>
+<div class="arithmatex">\[
+A=\{x\in E: |f(x)|&gt;M'\}
+\]</div>
+<p>which has positive measure. Then by</p>
+<div class="arithmatex">\[
+\|f\|_p=\left(\int_E |f(x)|^pdx\right)^{\frac{1}{p}}\geq M' [m(A)]^{\frac{1}{p}}
+\]</div>
+<p>let <span class="arithmatex">\(p\rightarrow \infty\)</span>, we have</p>
+<div class="arithmatex">\[
+\underline{\lim}\limits_{p\rightarrow \infty}\|f\|_p\geq M'
+\]</div>
+<p>let <span class="arithmatex">\(M'\rightarrow M\)</span>, we have <span class="arithmatex">\(\underline{\lim}\limits_{p\rightarrow \infty}\|f\|_p\geq M\)</span>.</p>
+<p>On the other hand, we have</p>
+<div class="arithmatex">\[
+\|f\|_p\leq \left(\int_E M^pdx\right)^{\frac{1}{p}}=M[m(E)]^{\frac{1}{p}}
+\]</div>
+<p>let <span class="arithmatex">\(p\rightarrow \infty\)</span>, we have</p>
+<div class="arithmatex">\[
+\overline{\lim}\limits_{p\rightarrow \infty}\|f\|_p\leq M.
+\]</div>
+<p>So we are done.</p>
+</div>
+</div>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Theorem</p>
 <p>If <span class="arithmatex">\(m(E)&lt;\infty\)</span>, then <span class="arithmatex">\(L^p(E)\subset L^1(E)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="lp-space-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="lp-space-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="lp-space-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="lp-space-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let <span class="arithmatex">\(A=\{f\geq 1\}\cap E\)</span>, <span class="arithmatex">\(B=\{f&lt;1\}\cap E\)</span>, if <span class="arithmatex">\(f\in L^p(E)\)</span>, then</p>
@@ -3376,7 +3446,7 @@ L^p(E)=\{f: f\text{ is measurable on } E \text{ and } \int_E |f(x)|^pdx&lt;\inft
 \|fg\|_1\leq \|f\|_p\cdot \|g\|_q.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="properties-of-lp-space-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="properties-of-lp-space-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use inequation </p>
@@ -3393,7 +3463,7 @@ ab\leq \frac{a^p}{p}+\frac{b^q}{q}.
 \|f\|_p\leq [m(E)]^{\frac{1}{p}-\frac{1}{q}}\|f\|_q.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="properties-of-lp-space-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="properties-of-lp-space-proof_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use H&ouml;lder inequation. Let <span class="arithmatex">\(r=\frac{q}{p}\)</span> and <span class="arithmatex">\(r'=\frac{r}{r-1}=\frac{q}{q-p}\)</span>.</p>
@@ -3420,11 +3490,12 @@ ab\leq \frac{a^p}{p}+\frac{b^q}{q}.
 \|f\|_p\leq \|f\|_r^\lambda \|f\|_s^{1-\lambda}.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="properties-of-lp-space-proof_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="properties-of-lp-space-proof_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
 </div>
+<p><a id="Minkowski-Inequation"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Minkowski Inequation</p>
 <p>Assume <span class="arithmatex">\(f,g\in L^p(E)\)</span>, <span class="arithmatex">\(1\leq p\leq\infty\)</span>, then <span class="arithmatex">\(f+g\in L^p(E)\)</span>, and</p>
@@ -3432,7 +3503,7 @@ ab\leq \frac{a^p}{p}+\frac{b^q}{q}.
 \|f+g\|_p\leq \|f\|_p+\|g\|_p.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="properties-of-lp-space-proof_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_3">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="properties-of-lp-space-proof_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -3443,7 +3514,7 @@ ab\leq \frac{a^p}{p}+\frac{b^q}{q}.
 \left\|\sum_{k=1}^\infty f_k\right\|_p\leq \sum_{k=1}^\infty \|f_k\|_p.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="properties-of-lp-space-proof_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_4">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="properties-of-lp-space-proof_4" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="properties-of-lp-space-proof_4">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -3476,22 +3547,125 @@ ab\leq \frac{a^p}{p}+\frac{b^q}{q}.
 </div>
 </div>
 <p>To introduce distance in <span class="arithmatex">\(L^p(E)\)</span>, we assume that if <span class="arithmatex">\(f,g\in L^p(E)\)</span>, we have <span class="arithmatex">\(f(x)=g(x),a.e.x\in E\)</span>, then we denote this relationship as <span class="arithmatex">\(f=g\)</span>.</p>
+<h2 id="use-p-norm-as-metric">Use p-norm as Metric<a class="headerlink" href="#use-p-norm-as-metric" title="Permanent link">&para;</a></h2>
+<p>Now in the following parts, we assume <span class="arithmatex">\(1\leq p\leq \infty\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definitions</p>
+<p>Assume <span class="arithmatex">\(f,g\in L^p(E)\)</span>, we introduce distance (or to be more specific, metric) </p>
+<div class="arithmatex">\[
+\rho(f,g)=\|f-g\|_p,\quad 1\leq p\leq \infty.
+\]</div>
+<p>then <span class="arithmatex">\(\rho\)</span> satisfies <a href="../../../Ctrl/Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/#Definition-of-Metric-Space">three conditions of metric</a>, and <span class="arithmatex">\((L^p(E),\rho)\)</span> is a metric space.</p>
+</div>
+<h3 id="convergence">Convergence<a class="headerlink" href="#convergence" title="Permanent link">&para;</a></h3>
+<p>With metric <span class="arithmatex">\(\rho\)</span>, we could introduce the limit in a sense of <span class="arithmatex">\(\rho\)</span>. </p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Convergence in <span class="arithmatex">\(L^p\)</span> Space</p>
+<p>Assume <span class="arithmatex">\(f_n\in L^p(E)\)</span>, if there exists <span class="arithmatex">\(f\in L^P(E)\)</span>, such that</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty} \rho(f_n,f)=\lim_{n\rightarrow \infty}\|f_n-f\|_p=0,
+\]</div>
+<p>then we call <span class="arithmatex">\(\{f_n\}\)</span> converges to <span class="arithmatex">\(f\)</span> in a sense of <span class="arithmatex">\(L^p(E)\)</span>, which is denoted by <span class="arithmatex">\(f_n\rightarrow (L^p)\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Convergence in <span class="arithmatex">\(L^p\)</span> Space</p>
+<p>(i) <strong>Uniqueness</strong>. If <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty} \rho(f_n,f)=0=\lim\limits_{n\rightarrow \infty} \rho(f_n,g)\)</span>, then </p>
+<div class="arithmatex">\[
+f(x)=g(x),\quad a.e.x\in E.
+\]</div>
+<p>(ii) If <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty} \rho(f_n,f)=0\)</span>, then </p>
+<div class="arithmatex">\[
+\lim\limits_{n\rightarrow \infty} \|f_n\|_p=\|f\|_p.
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Still the same function of <a href="../Measurable_Func/#example-measure-convergence">Example</a>. We could know that</p>
+<div class="arithmatex">\[
+f_n(x)\nrightarrow 0,\quad a.e.x\in E,
+\]</div>
+<p>but <span class="arithmatex">\(f_n\overset{L^p}{\rightarrow}0\)</span>, since</p>
+<div class="arithmatex">\[
+\int_0^1 |f_n-f|^pdx=\int_{\left[\frac{i}{2^k},\frac{i+1}{2^k}\right]}1^pdx=\frac{1}{2^k}\rightarrow 0(n\rightarrow \infty).
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. <span class="arithmatex">\(f_k(x)=k\chi_{(0,\frac{1}{k})}\)</span>, <span class="arithmatex">\(E=(0,\infty)\)</span>, then </p>
+<div class="arithmatex">\[
+f_k(x)\rightarrow 0,\quad \forall x\in E.
+\]</div>
+<p>but <span class="arithmatex">\(f_k\overset{L^p}{\nrightarrow} f\)</span>, since</p>
+<div class="arithmatex">\[
+\int_E |f_n-f|^pdx=\int_{(0,\frac{1}{k})}|k|^pdx=|k|^{p-1}\rightarrow \infty.
+\]</div>
+</div>
+<p>Similar to Cauchy sequence in <span class="arithmatex">\(\mathbb{R}\)</span>, we have the following Cauchy sequence in a sense of <span class="arithmatex">\(L^p(E)\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Cauchy Sequence in <span class="arithmatex">\(L^p\)</span> Space</p>
+<p>Assume <span class="arithmatex">\(f_k\in L^p(E)\)</span>, if</p>
+<div class="arithmatex">\[
+\lim_{n,m\rightarrow \infty}\rho(f_m,f_n)=\lim_{n,m\rightarrow \infty}\|f_m-f_n\|_p=0,
+\]</div>
+<p>then we call <span class="arithmatex">\(\{f_k\}\)</span> is <strong>Cauchy Sequence</strong> in <span class="arithmatex">\(L^p(E)\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">properties of Cauchy Sequence</p>
+<p>Assume <span class="arithmatex">\(f_n\)</span> is a Cauchy Sequence in <span class="arithmatex">\(L^p(E)\)</span>. If there exists a subsequence <span class="arithmatex">\(\{f_{n_j}\}_{j\geq 1}\)</span> which is convergent in a sense of <span class="arithmatex">\(L^p\)</span>, then <span class="arithmatex">\(f_n\)</span> itself also converges in a sense of <span class="arithmatex">\(L^p\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="convergence-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="convergence-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\|f_n-f\|_p\leq \|f_n-f_{n_j}\|_p+\|f_{n_j}-f\|_p
+\]</div>
+</div>
+</div>
+</div>
 <h3 id="completeness">Completeness<a class="headerlink" href="#completeness" title="Permanent link">&para;</a></h3>
+<p>Similar to proof in <span class="arithmatex">\(\mathbb{R}\)</span>, we could prove that a convergent sequence must be Cauchy Sequence. Readers could use <a href="#Minkowski-Inequation">Minkowski inequation</a></p>
+<div class="arithmatex">\[
+\|f_{n+l}-f_{n}\|_p\leq \|f_{n+1}-f\|_p+\|f_n-f\|_p\rightarrow 0 (n\rightarrow \infty)
+\]</div>
+<p>Now we have to prove Cauchy Sequence must be a convergent sequence, and its limit must be in <span class="arithmatex">\(L^p(E)\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Riesz-Ficher: Completeness</p>
 <p><span class="arithmatex">\(L^p(E)\)</span> is a complete metric space.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="completeness-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="completeness-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="completeness-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="completeness-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li>
-<p><span class="arithmatex">\(1\leq p&lt;\infty\)</span>.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(p=\infty\)</span>.</p>
-</li>
+<li><span class="arithmatex">\(1\leq p&lt;\infty\)</span>.</li>
 </ul>
+<p>By definition of Cauchy sequence, <span class="arithmatex">\(\forall m\geq 1\)</span>, <span class="arithmatex">\(\exists\)</span></p>
+<ul>
+<li><span class="arithmatex">\(p=\infty\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Lebesgue's dominated control theorem in <span class="arithmatex">\(L^p\)</span> Space</p>
+<p>Assume <span class="arithmatex">\(f_k\)</span>, <span class="arithmatex">\(f\)</span> are measurable function on <span class="arithmatex">\(E\)</span>. If <span class="arithmatex">\(f_k\rightarrow f,a.e.x\in E\)</span>, and there exists a function <span class="arithmatex">\(F(x)\in L^p(E)\)</span> such that</p>
+<div class="arithmatex">\[
+|f_k(x)|\leq F(x),\quad a.e.x\in E,
+\]</div>
+<p>then <span class="arithmatex">\(f_k\overset{L^p}{\rightarrow}f\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="completeness-proof_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="completeness-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let </p>
+<div class="arithmatex">\[
+g_n(x)=|f_k(x)-f(x)|^p\rightarrow 0(k\rightarrow \infty).
+\]</div>
+<p>Notice that </p>
+<div class="arithmatex">\[
+|g_k(x)|\leq (|f_k|+|f|)^p\leq 2^p|f|^p\in L^1(E), 
+\]</div>
+<p>So by LDCT in <span class="arithmatex">\(L^1(E)\)</span>, we have</p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_E |f_k-f|^p=\int_E 0dx=0.
+\]</div>
 </div>
 </div>
 </div>
