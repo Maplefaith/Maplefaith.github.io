@@ -4483,6 +4483,41 @@ g_k(x,y)=\left|\frac{\partial }{\partial y}f(x,y+\theta_k h_k)\right|\leq F(x),\
 </div>
 </div>
 </div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 5: Approximation with functions</p>
+<p>Assume <span class="arithmatex">\(f\in L([a,b])\)</span>, prove: <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists\)</span></p>
+<p>(i) bounded measurable function <span class="arithmatex">\(g\)</span>, such that <span class="arithmatex">\(\int_a^b|f-g|dx&lt;\varepsilon\)</span>.</p>
+<p>(ii) continuous function <span class="arithmatex">\(h\)</span>, such that <span class="arithmatex">\(\int_a^b|f-h|dx&lt;\varepsilon\)</span>.</p>
+<p>(iii) polynomial <span class="arithmatex">\(P\)</span>, such that <span class="arithmatex">\(\int_a^b|f-P|dx&lt;\varepsilon\)</span>.</p>
+<p>(iv) step function <span class="arithmatex">\(S\)</span>, such that <span class="arithmatex">\(\int_a^b|f-S|dx&lt;\varepsilon\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="applications-of-ldct-proof_4" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_4">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Let <span class="arithmatex">\(f_k(x)=f\cdot \chi_{\{|f|\leq k\}}(x)\)</span>. Since</p>
+<div class="arithmatex">\[
+|f_k(x)-f(x)|\leq |f(x)|\in L([a,b])
+\]</div>
+<p>and <span class="arithmatex">\(\lim_{k\rightarrow\infty}|f_k-f|=0,a.e.x\in [a,b]\)</span>. By LDCT we have </p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_a^b |f-f_k|dx=0.
+\]</div>
+<p>So there exists <span class="arithmatex">\(K\)</span>, when <span class="arithmatex">\(k\geq K\)</span>, we have </p>
+<div class="arithmatex">\[
+\int_a^b |f-f_k|dx&lt;\varepsilon.
+\]</div>
+<p>Let <span class="arithmatex">\(g=f_{k_0}\)</span> for some <span class="arithmatex">\(k_0\geq K\)</span>.</p>
+<p>(ii) By (i), there exists bounded measurable function <span class="arithmatex">\(g\)</span> such that <span class="arithmatex">\(\int_a^b|f-g|dx&lt;\frac{\varepsilon}{2}\)</span>. Let <span class="arithmatex">\(|g(x)|\leq M\)</span>. To get a continuous function, we could use Luzin theorem, there exists continuous function <span class="arithmatex">\(h\)</span> such that <span class="arithmatex">\(m(\{h\neq g\})&lt;\frac{\varepsilon}{4M}\)</span> and <span class="arithmatex">\(\max|h(x)|\leq M\)</span>, then</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_a^b |f-h|dx&amp;\leq \int_a^b|f-g|dx+\int_a^b|g-h|dx\\
+&amp;\leq \frac{\varepsilon}{2}+2M\cdot m(\{g\neq h\})\\
+&amp;&lt;\frac{\varepsilon}{2}+2M\cdot \frac{\varepsilon}{4M}=\varepsilon.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
 <h2 id="riemann-integral-lebesgue-integral">Riemann Integral &amp; Lebesgue Integral<a class="headerlink" href="#riemann-integral-lebesgue-integral" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Deduction</p>
@@ -4553,7 +4588,7 @@ f\in R[a,b]&amp;\Leftrightarrow \int_{[a,b]}m(x)dx=\int_{[a,b]}M(x)dx\\
 <p class="admonition-title">Baire Theorem</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(x_0\in [a,b]\)</span>, then <span class="arithmatex">\(f\)</span> is continuous at <span class="arithmatex">\(x_0\)</span>, iff <span class="arithmatex">\(M(x_0)=m(x_0)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4581,7 +4616,7 @@ f(x_0)-\varepsilon&lt;m_{\Delta_k}(x)&lt;M_{\Delta_k}(x)&lt;f(x_0)+\varepsilon.
 (R)\int_a^b fdx=(L)\int_{[a,b]}fdx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_1" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_1" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -4590,7 +4625,7 @@ f(x_0)-\varepsilon&lt;m_{\Delta_k}(x)&lt;M_{\Delta_k}(x)&lt;f(x_0)+\varepsilon.
 <p class="admonition-title">Sufficient &amp; Necessary condition for Riemann integrable</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f\in R[a,b]\)</span>, iff <span class="arithmatex">\(f\in C(a.e.x\in [a,b])\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="31:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4622,7 +4657,7 @@ R(x)=\begin{cases}\frac{1}{q},\quad x=\frac{p}{q}\\
 (L)\int_{(0,\infty)}fdx=(R)\int_0^\infty fdx.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="32:1"><input checked="checked" id="generalized-riemann-integral-proof" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:1"><input checked="checked" id="generalized-riemann-integral-proof" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) First we prove that <span class="arithmatex">\(f\in L((0,\infty))\)</span>. Notice that</p>
@@ -4656,7 +4691,7 @@ f\in R([a,b])\Rightarrow f\in L([a,b])
 (L)\int_{(-\infty,+\infty)}fdx=(R)\int_{-\infty}^{+\infty} fdx.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="33:1"><input checked="checked" id="generalized-riemann-integral-proof_1" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:1"><input checked="checked" id="generalized-riemann-integral-proof_1" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>This function might not be non-negative, so we should use LDCT. That is, Define <span class="arithmatex">\(f_k(x)=f(x)\chi_{(0,k)}(x)\)</span>, which converges to <span class="arithmatex">\(f(x)\)</span>, and</p>
@@ -4726,7 +4761,7 @@ m(E)=\int_{\mathbb{R}^q}\left[\int_{\mathbb{R}^p}\chi_{E^y} (x)dx\right]dy=\int_
 \int_{\mathbb{E}^q}m(E^y)dy=m(E).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="34:1"><input checked="checked" id="multiple-lebesgue-integral-proof" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="multiple-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:1"><input checked="checked" id="multiple-lebesgue-integral-proof" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="multiple-lebesgue-integral-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4814,7 +4849,7 @@ m(E^y)=m(\lim_{k\rightarrow \infty}G_k^y)=\lim_{k\rightarrow \infty}m(G_k^y)
 <p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(f(x,y)\)</span>, as a function of <span class="arithmatex">\(x\in \mathbb{R}^q\)</span> is non-negative measurable.</p>
 <p>(ii) <span class="arithmatex">\(F(y):=\int_{\mathbb{R}^p}f(x,y)dx\)</span> is non-negative measurable on <span class="arithmatex">\(\mathbb{R}^q\)</span>, and equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> holds.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="35:1"><input checked="checked" id="tonelli-theorem-proof" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:1"><input checked="checked" id="tonelli-theorem-proof" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) <span class="arithmatex">\(f\)</span> is a simple function, which holds naturally, bacause Linearity of Lebesgue integral.</p>
@@ -4833,7 +4868,7 @@ f(x)=\lim_{k\rightarrow \infty}\varphi_k(x,y)
 \]</div>
 <p>where <span class="arithmatex">\(d_f(\alpha)=m(\{f&gt;\alpha\})\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="36:1"><input checked="checked" id="tonelli-theorem-proof_1" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:1"><input checked="checked" id="tonelli-theorem-proof_1" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="arithmatex">\[
@@ -4855,7 +4890,7 @@ f(x)=\lim_{k\rightarrow \infty}\varphi_k(x,y)
 <p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(f(x,y)\)</span>, as a function of <span class="arithmatex">\(x\in \mathbb{R}^q\)</span> is L integrable.</p>
 <p>(ii) <span class="arithmatex">\(F(y):=\int_{\mathbb{R}^p}f(x,y)dx\)</span> is L integrable on <span class="arithmatex">\(\mathbb{R}^q\)</span>, and equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> holds.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="37:1"><input checked="checked" id="fubini-theorem-proof" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="38:1"><input checked="checked" id="fubini-theorem-proof" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Notice that <span class="arithmatex">\(f(x,y)=f(x,y)^+-f(x,y)^-\)</span>, which are non-negative measurable function. So by Tonelli Theorem, we are done.</p>
@@ -4868,7 +4903,7 @@ f(x)=\lim_{k\rightarrow \infty}\varphi_k(x,y)
 I=\int_{(0,\infty)}\frac{\sin x}{x}[e^{-ax}-e^{-bx}]dx
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="38:1"><input checked="checked" id="fubini-theorem-answer" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-answer">Answer</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="39:1"><input checked="checked" id="fubini-theorem-answer" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-answer">Answer</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Notice that</p>

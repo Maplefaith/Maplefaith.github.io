@@ -2000,6 +2000,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#separability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separability
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3333,6 +3342,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#separability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separability
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3565,7 +3583,7 @@ ab\leq \frac{a^p}{p}+\frac{b^q}{q}.
 <div class="arithmatex">\[
 \lim_{n\rightarrow \infty} \rho(f_n,f)=\lim_{n\rightarrow \infty}\|f_n-f\|_p=0,
 \]</div>
-<p>then we call <span class="arithmatex">\(\{f_n\}\)</span> converges to <span class="arithmatex">\(f\)</span> in a sense of <span class="arithmatex">\(L^p(E)\)</span>, which is denoted by <span class="arithmatex">\(f_n\rightarrow (L^p)\)</span>.</p>
+<p>then we call <span class="arithmatex">\(\{f_n\}\)</span> converges to <span class="arithmatex">\(f\)</span> in a sense of <span class="arithmatex">\(L^p(E)\)</span>, which is denoted by <span class="arithmatex">\(f_n\rightarrow f(L^p)\)</span>.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Properties of Convergence in <span class="arithmatex">\(L^p\)</span> Space</p>
@@ -3577,6 +3595,17 @@ f(x)=g(x),\quad a.e.x\in E.
 <div class="arithmatex">\[
 \lim\limits_{n\rightarrow \infty} \|f_n\|_p=\|f\|_p.
 \]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="convergence-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="convergence-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) easy to see.</p>
+<p>(ii) We have</p>
+<div class="arithmatex">\[
+|\|f_k\|_p-\|f\|_p|\leq \|f_k-f\|_p.
+\]</div>
+</div>
+</div>
 </div>
 <div class="question">
 <p><strong>Example</strong>. Still the same function of <a href="../Measurable_Func/#example-measure-convergence">Example</a>. We could know that</p>
@@ -3607,11 +3636,12 @@ f_k(x)\rightarrow 0,\quad \forall x\in E.
 \]</div>
 <p>then we call <span class="arithmatex">\(\{f_k\}\)</span> is <strong>Cauchy Sequence</strong> in <span class="arithmatex">\(L^p(E)\)</span>.</p>
 </div>
+<p><a id="Property-Cauchy-Sequence"></a></p>
 <div class="admonition success">
-<p class="admonition-title">properties of Cauchy Sequence</p>
+<p class="admonition-title">Property of Cauchy Sequence</p>
 <p>Assume <span class="arithmatex">\(f_n\)</span> is a Cauchy Sequence in <span class="arithmatex">\(L^p(E)\)</span>. If there exists a subsequence <span class="arithmatex">\(\{f_{n_j}\}_{j\geq 1}\)</span> which is convergent in a sense of <span class="arithmatex">\(L^p\)</span>, then <span class="arithmatex">\(f_n\)</span> itself also converges in a sense of <span class="arithmatex">\(L^p\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="convergence-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="convergence-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="convergence-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="convergence-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="arithmatex">\[
@@ -3625,21 +3655,123 @@ f_k(x)\rightarrow 0,\quad \forall x\in E.
 <div class="arithmatex">\[
 \|f_{n+l}-f_{n}\|_p\leq \|f_{n+1}-f\|_p+\|f_n-f\|_p\rightarrow 0 (n\rightarrow \infty)
 \]</div>
+<p>To show its completeness, we have the following lemma.
+<a id="Lemma-find-convergent-function"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: find convergent function</p>
+<p>Assume <span class="arithmatex">\(\{f_k\}\subset L^p(E)\)</span>, <span class="arithmatex">\(1\leq p&lt;\infty\)</span>. If </p>
+<div class="arithmatex">\[
+\begin{equation}
+\sum_{k=1}^\infty\|f_k\|_p&lt;\infty,\label{lemma-condition}
+\end{equation}
+\]</div>
+<p>then there exists <span class="arithmatex">\(f\in L^p(E)\)</span>, such that</p>
+<div class="arithmatex">\[
+\sum_{k=1}^\infty f_k\overset{L^p}{=}f.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="completeness-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="completeness-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(g_k(x)=\sum\limits_{j=1}^k |f_j|\)</span>, and <span class="arithmatex">\(g=\lim\limits_{k\rightarrow \infty} g_k(x)=\sum\limits_{k=1}^\infty |f_k|\)</span>. so </p>
+<div class="arithmatex">\[
+g_k^p(x)=\left(\sum\limits_{j=1}^k |f_j|\right)^p\rightarrow g^p=\left(\sum\limits_{k=1}^\infty |f_k|\right)^p.
+\]</div>
+<p>Since <span class="arithmatex">\(g^p_k\)</span> are non-negative and monotonically increasing, by Levi Theorem, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E g^pdx&amp;=\lim_{k\rightarrow \infty}\int_E g_k^pdx\\
+&amp;=\lim_{k\rightarrow \infty}\|g_k\|^p_p\\
+&amp;\leq \lim_{k\rightarrow \infty} \left(\sum_{j=1}^k \|f_j\|_p\right)^p\quad \text{Minkowski}\\
+&amp;=\left(\sum_{j=1}^\infty \|f_j\|_p\right)^p
+\end{align*}
+\]</div>
+<p>by condition <span class="arithmatex">\(\ref{lemma-condition}\)</span> of this lemma, we have <span class="arithmatex">\(g(x)&lt;\infty\)</span>, i.e. <span class="arithmatex">\(\sum\limits_{k=1}^\infty f_k\)</span> converges absolutely <span class="arithmatex">\(a.e.x\in E\)</span>. So there exists measurable function <span class="arithmatex">\(f\)</span>, such that </p>
+<div class="arithmatex">\[
+f=\sum\limits_{k=1}^\infty f_k, \quad a.e.x\in E.
+\]</div>
+<p>Notice this limit function is just measurable, we have to prove that <span class="arithmatex">\(f\in L^p(E)\)</span>. Notice that</p>
+<div class="arithmatex">\[
+\left|\sum\limits_{j=1}^k f_j\right|^p\leq \left(\sum\limits_{j=1}^k |f_j|\right)^p\leq \left(\sum\limits_{j=1}^\infty |f_j|\right)^p=g^p
+\]</div>
+<p>where the last item <span class="arithmatex">\(g^p\)</span> is L integral, so <span class="arithmatex">\(F_k=\left(\sum\limits_{j=1}^k f_j\right)^p\)</span> is controlled by <span class="arithmatex">\(g^p\)</span>. Since <span class="arithmatex">\(|f|^p=\lim\limits_{k\rightarrow \infty}|F_k|^p\)</span>, by LDCT, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E |f|^pdx=\lim_{k\rightarrow \infty}\int_E \left|\sum\limits_{j=1}^k f_j\right|^pdx\leq \int_E g^pdx&lt;\infty.
+\end{align*}
+\]</div>
+<p>which means <span class="arithmatex">\(f\in L^p(E)\)</span>. Finally, we have to show that <span class="arithmatex">\(F_k\)</span> converges to <span class="arithmatex">\(f\)</span> in a sense of <span class="arithmatex">\(L^p(E)\)</span>. That is, Notice that</p>
+<div class="arithmatex">\[
+|f-F_k|^p=\left|\sum_{j=k+1}^\infty f_j\right|\leq \left(\sum_{j=k+1}^\infty|f_j|\right)^p\leq g^p \in L^1(E),
+\]</div>
+<p>by LDCT, we have</p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_E |f-F_k|^pdx=\int_E \lim_{k\rightarrow \infty} |f-F_k|^pdx=0.
+\]</div>
+</div>
+</div>
+</div>
 <p>Now we have to prove Cauchy Sequence must be a convergent sequence, and its limit must be in <span class="arithmatex">\(L^p(E)\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Riesz-Ficher: Completeness</p>
-<p><span class="arithmatex">\(L^p(E)\)</span> is a complete metric space.</p>
+<p><span class="arithmatex">\(L^p(E)\)</span> is a complete metric space. That is, Cauchy sequence in <span class="arithmatex">\(L^p(E)\)</span> must converges.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="completeness-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="completeness-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="completeness-proof_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="completeness-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
 <li><span class="arithmatex">\(1\leq p&lt;\infty\)</span>.</li>
 </ul>
-<p>By definition of Cauchy sequence, <span class="arithmatex">\(\forall m\geq 1\)</span>, <span class="arithmatex">\(\exists\)</span></p>
+<p>By definition of Cauchy sequence, <span class="arithmatex">\(\forall m\geq 1\)</span>, <span class="arithmatex">\(\exists j_m\)</span>, such that</p>
+<div class="arithmatex">\[
+\|f_{j_m}-f_k\|_p&lt;\frac{1}{2^m},\quad \forall k&gt;j_m.
+\]</div>
+<p>Choose <span class="arithmatex">\(k=j_m+1\)</span>, so we get a subsequence <span class="arithmatex">\(\{f_{j_m}\}\)</span> such that</p>
+<div class="arithmatex">\[
+\|f_{j_m}-f_{j_m+1}\|_p&lt;\frac{1}{2^m}
+\]</div>
+<p>Now let <span class="arithmatex">\(g_1=f_{j_1}\)</span>, <span class="arithmatex">\(g_k=f_{j_k}-f_{j_{k-1}}, k\geq 2\)</span>. Then we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=1}^\infty\|g_k\|_p&amp;=\|f_{j_1}\|_p+\sum_{k=2}^\infty \|f_{j_k}-f_{j_{k-1}}\|_p\\
+&amp;&lt;\|f_{j_1}\|_p+\sum_{k=2}^\infty\frac{1}{2^k}&lt;\infty
+\end{align*}
+\]</div>
+<p>which satisfies the condition <span class="arithmatex">\(\ref{lemma-condition}\)</span> of <a href="#Lemma-find-convergent-function">lemma</a>. So there exsits <span class="arithmatex">\(f\in L^p(E)\)</span> such that</p>
+<div class="arithmatex">\[
+G_k:=\sum_{j=1}^k g_j=f_{j_k}\rightarrow f(L^p).
+\]</div>
+<p>Then by <a href="#Property-Cauchy-Sequence">Property of Cauchy Sequence</a>, convergence of subseuquence could deduce original sequence <span class="arithmatex">\(f_k\)</span> converges to <span class="arithmatex">\(f\)</span> in a sense of <span class="arithmatex">\(L^p(E)\)</span>.</p>
 <ul>
 <li><span class="arithmatex">\(p=\infty\)</span>.</li>
 </ul>
+<p>Assume <span class="arithmatex">\(\{f_k\}\in L^\infty(E)\)</span> is a Cauchy sequence, then by its definition, <span class="arithmatex">\(\forall m\in \mathbb{N}\)</span>, <span class="arithmatex">\(\exists k_m\)</span>, such that</p>
+<div class="arithmatex">\[
+\|f_j-f_k\|_\infty&lt;\frac{1}{2^m},\quad \forall j,k&gt;k_m.
+\]</div>
+<p>By definition of <span class="arithmatex">\(L^\infty\)</span>, there exsits a zero-measure set <span class="arithmatex">\(Z_{j,k,m}\)</span>, such that</p>
+<div class="arithmatex">\[
+|f_j(x)-f_k(x)|\leq \|f_j-f_k\|_\infty&lt;\frac{1}{2^m},\quad \forall x\in E-Z_{j,k,m},j,k&gt;k_m.
+\]</div>
+<p>Let <span class="arithmatex">\(Z=\bigcup_{j,k,m\in \mathbb{N}}Z_{j,k,m}\)</span> which is also zero-measure, and</p>
+<div class="arithmatex">\[
+\begin{align}
+|f_j(x)-f_k(x)|&lt;\frac{1}{2^m},\quad x\in E-Z, j,k&gt;k_m.\label{completeness}
+\end{align}
+\]</div>
+<p>The above inequation implies <span class="arithmatex">\(\{f_n\}\)</span> is Cauchy number sequence (<span class="arithmatex">\(\mathbb{R}\)</span>), so </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}f_n(x)=f(x),\quad x\in E-Z.
+\]</div>
+<p>let <span class="arithmatex">\(j\rightarrow \infty\)</span> in inequation <span class="arithmatex">\(\ref{completeness}\)</span>, we have</p>
+<div class="arithmatex">\[
+|f(x)-f_k(x)|\leq\frac{1}{2^m},\quad x\in E-Z, k&gt;k_m.
+\]</div>
+<p>which still by definition of <span class="arithmatex">\(L^\infty\)</span>, we have</p>
+<div class="arithmatex">\[
+\|f(x)-f_k(x)\|_\infty \leq\frac{1}{2^m},\quad x\in E-Z, k&gt;k_m.
+\]</div>
+<p>which means <span class="arithmatex">\(f\in L^\infty(E)\)</span> and <span class="arithmatex">\(f_k\overset{L^\infty}{\rightarrow} f\)</span>.</p>
 </div>
 </div>
 </div>
@@ -3651,7 +3783,7 @@ f_k(x)\rightarrow 0,\quad \forall x\in E.
 \]</div>
 <p>then <span class="arithmatex">\(f_k\overset{L^p}{\rightarrow}f\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="completeness-proof_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="completeness-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="completeness-proof_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="completeness-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let </p>
@@ -3668,6 +3800,23 @@ g_n(x)=|f_k(x)-f(x)|^p\rightarrow 0(k\rightarrow \infty).
 \]</div>
 </div>
 </div>
+</div>
+<h3 id="separability">Separability<a class="headerlink" href="#separability" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definitions of Separations</p>
+<p>(i) Assume <span class="arithmatex">\(\varGamma\subset L^p(E)\)</span>. If <span class="arithmatex">\(\forall f\in L^p(E)\)</span>, <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists g\in \varGamma\)</span>, such that</p>
+<div class="arithmatex">\[
+\|f-g\|_p&lt;\varepsilon,
+\]</div>
+<p>then we call <span class="arithmatex">\(\varGamma\)</span> is a dense subset of <span class="arithmatex">\(L^p(E)\)</span>. Apparently, its equivalent definition is <span class="arithmatex">\(\forall f\in L^p(E)\)</span>, <span class="arithmatex">\(\exists \{g_n\}\subset \varGamma\)</span>, such that <span class="arithmatex">\(g_n\rightarrow f(L^p)\)</span>, i.e.</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\|f-g_n\|_p=0.
+\]</div>
+<p>(ii) If <span class="arithmatex">\(L^p(E)\)</span> has dense subsets whose elements are denumerable, then we call <span class="arithmatex">\(L^p(E)\)</span> is separable.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Separability of <span class="arithmatex">\(L^p(E)\)</span></p>
+<p>If <span class="arithmatex">\(1\leq g&lt;\infty\)</span>, then <span class="arithmatex">\(L^p(E)\)</span> is separable.</p>
 </div>
 
 
