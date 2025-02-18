@@ -1,0 +1,5351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Maplefaith">
+      
+      
+      
+        <link rel="prev" href="../Measurable_Func/">
+      
+      
+        <link rel="next" href="../Differential_Integral/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Lebesgue Integral - MapleBlog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.7c86dd97.min.css">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lebesgue-integral" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  Follow <strong>@ZJUSAST</strong> to know more news of science & technology
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MapleBlog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lebesgue Integral
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="turn off automatic mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="turn off automatic mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Night shift"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Night shift" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Day shift"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Day shift" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../courses/" class="md-tabs__link">
+          
+  
+    
+  
+  Courses
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Ctrl/" class="md-tabs__link">
+          
+  
+    
+  
+  Ctrl
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../friends/" class="md-tabs__link">
+        
+  
+    
+  
+  Friends
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tag/" class="md-tabs__link">
+        
+  
+    
+  
+  Tag
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../log/" class="md-tabs__link">
+        
+  
+    
+  
+  Log
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    MapleBlog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mpm/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Material Point Method
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Material Point Method
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mpm/preliminary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preliminary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Numerical_Analysis/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Numerical Analysis
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Numerical Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/MC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix Calculation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Numerical_Analysis/NA/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Numerical Approximation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Numerical Approximation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solutions of Equations in One Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interpolation & Polynomial Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Approximation Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/NA/NI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numerical Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Numerical_Analysis/DE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Numerical Solution of Differential Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Ordinary_Differential_Equation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ordinary Differential Equation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ordinary Differential Equation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/Preliminary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preliminary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/EIM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementary Integration Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/LODEs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System of Linear Differential Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Ordinary_Differential_Equation/General_Theory/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    General Theory
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_5" id="__nav_2_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            General Theory
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existence & Uniqueness Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contraction Mapping Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Extension_of_Solution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extension of Solution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Comparison_Theorem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comparison Theorem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Continuous_Dependence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Dependence of Solution on Initial Value
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Power_Series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Method of Power Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/Lyapunov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stability Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/Qualitative_Theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qualitative Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ordinary_Differential_Equation/FstPDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First Order Pratial Differential Equation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Real Analysis
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Real Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preliminary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lebesgue_Measure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lebesgue Measure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Measurable_Func/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurable Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lebesgue Integral
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lebesgue Integral
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#non-negative-simple-function-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-negative simple function integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-negative simple function integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-negative-measurable-function-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-negative measurable function integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-negative measurable function integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genaral-measurable-function-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genaral measurable function integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genaral measurable function integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#levi-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levi Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fatou-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fatou Lemma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lebesgues-dominated-convergence-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue's Dominated Convergence Theorem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue's Dominated Convergence Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-ldct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of LDCT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann-integral-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riemann Integral &amp; Lebesgue Integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riemann Integral & Lebesgue Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalized-riemann-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized Riemann integral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Lebesgue integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Lebesgue integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tonelli-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tonelli Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fubini-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fubini Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Differential_Integral/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differential & Integral
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lp_Space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L^p Space
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../StochasticProcesses/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Stochastic Processes
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Stochastic Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../StochasticProcesses/Ele_Prob_Theo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementary Probability Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../courses/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../courses/AIML/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence & Machine Learning
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Artificial Intelligence & Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../courses/AIML/AI/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Artificial Intelligence
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/AIML/AI/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/AIML/AI/Agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/AIML/AI/ProblemSolving/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problem Solving
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/AIML/AI/logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../courses/AIML/ML/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/AIML/ML/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/AIML/ML/Concept_Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/AIML/ML/Decision_Tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Decision Tree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../courses/cpp/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    C Plus Plus
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            C Plus Plus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/cpp/Elementary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/cpp/Class_Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class & Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/cpp/Inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/cpp/Dynamic_Alloc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Menory Allocation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/cpp/Exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/cpp/Streams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Streams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../courses/Data_Structure%26Algorithm/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Data Structure & Algorithm
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Data Structure & Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/Data_Structure%26Algorithm/outline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/Data_Structure%26Algorithm/AlgoAna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithm Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/Data_Structure%26Algorithm/sorting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sorting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The disjoint Sets Class
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../courses/Data_Structure%26Algorithm/Graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../courses/Intro2Visualization/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Introduction to Visualization
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction to Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ctrl
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ctrl
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/Manipulators_Modelling/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Manipulator Modelling & Control
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Manipulator Modelling & Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Manipulators_Modelling/Spatial_Desc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spatial Description & Transformation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Modern_Control_Theory/MCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modern Control Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/ProcessControl/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Process Control
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Process Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/PID/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PID Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/ProcessControl/Control_Strategy/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Control Strategy
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Control Strategy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Cascade_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cascade Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Control_Intension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control with Intension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Multi_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-Variables Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Feedforward_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedforward Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/ProcessControl/Nonlinear_Compensation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nonlinear Compensation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Ctrl/Sensing%26Detection/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Sensing & Detection
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sensing & Detection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Sensing%26Detection/Midterm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Midterm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/MiddleSchool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MiddleSchool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/Travel/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Travel
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Travel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/Travel/5th_05_24/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    May Day Holiday
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/Travel/Mount_Lu/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Mount Lu
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mount Lu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/Travel/Mount_Lu/Schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../friends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Friends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../log/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#non-negative-simple-function-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-negative simple function integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-negative simple function integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-negative-measurable-function-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-negative measurable function integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Non-negative measurable function integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genaral-measurable-function-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Genaral measurable function integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Genaral measurable function integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#levi-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Levi Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fatou-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fatou Lemma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lebesgues-dominated-convergence-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lebesgue's Dominated Convergence Theorem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lebesgue's Dominated Convergence Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#applications-of-ldct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of LDCT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann-integral-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riemann Integral &amp; Lebesgue Integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Riemann Integral & Lebesgue Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalized-riemann-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized Riemann integral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-lebesgue-integral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Lebesgue integral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Lebesgue integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tonelli-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tonelli Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fubini-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fubini Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lebesgue-integral">Lebesgue Integral<a class="headerlink" href="#lebesgue-integral" title="Permanent link">&para;</a></h1>
+<p>This part, we want to use conclusions from previous parts to extend the concept of integral.</p>
+<p>The basic idea is, first define integral of simple function, then use convergence of simple function sequence to define integral of measurable function. Note that we first define them on non-negative functions. Then by making use of positive and negative part of function to extend to the whole functions.</p>
+<h2 id="non-negative-simple-function-integral">Non-negative simple function integral<a class="headerlink" href="#non-negative-simple-function-integral" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Lebesgue Integral of non-negative Simple Function</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a non-negative simple function defined on region measurable set <span class="arithmatex">\(D\)</span>, that is, there exists a partition <span class="arithmatex">\(\{E_i\}_{1\leq i\leq S}\)</span>, and non-negative real number set <span class="arithmatex">\(\{a_i\}_{1\leq i\leq S}\)</span>, such that</p>
+<div class="arithmatex">\[
+f(x)=\sum_{i=1}^S a_i \chi_{E_i} (x),\quad x\in D.
+\]</div>
+<p>Then its Lebesgue integral is defined by</p>
+<div class="arithmatex">\[
+\int_{D}f(x)dx=\sum_{i=1}^S a_i m(E_i).
+\]</div>
+</div>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h3>
+<p><a id="Invariance-of-Lebesgue-Integral"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Invariance of Lebesgue Integral</p>
+<p>Assume <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are non-negative simple functions on measurable set <span class="arithmatex">\(D\)</span>, and satisfy <span class="arithmatex">\(f(x)=g(x), a.e.x \in  D\)</span>, then their Lebesgue integrals on <span class="arithmatex">\(D\)</span> are of the same.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="properties-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="properties-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Making use of the Partition of simple functions. </p>
+<p>That is, let <span class="arithmatex">\(\{E_i\}_{1\leq i\leq N}\)</span> and <span class="arithmatex">\(\{F_j\}_{1\leq j\leq M}\)</span> to be the partition of <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> respectively, let non-negative number sets <span class="arithmatex">\(\{a_i\}\)</span> and <span class="arithmatex">\(\{b_j\}\)</span> to be the range of <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> respectively. Thus </p>
+<div class="arithmatex">\[
+f(x)=\sum_{i=1}^N a_i \chi_{E_i}(x), \quad g(x)=\sum_{j=1}^M b_j \chi_{F_j}(x).
+\]</div>
+<p>Once <span class="arithmatex">\(E_i\cap F_j\neq \varnothing\)</span>, we have <span class="arithmatex">\(a_i=b_j\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties for L integral of non-negative simple function</p>
+<p>Assume <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are both simple functions on measurable set <span class="arithmatex">\(D\)</span>, then</p>
+<p>(i) <strong>Monotonicity</strong>. If <span class="arithmatex">\(f(x)\leq g(x),a.e.x\in D\)</span>, then <span class="arithmatex">\(\int_D fdx\leq \int_D gdx\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(\int_D fdx \leq \max f(x)\cdot m(D)\)</span>. If <span class="arithmatex">\(m(D)=0\)</span>, then <span class="arithmatex">\(\int_D fdx=0\)</span></p>
+<p>(iii) <strong>Linearity</strong>. If <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> are two non-negative real number, then </p>
+<div class="arithmatex">\[
+\int_D (\lambda f + \mu g)dx=\lambda \int_Dfdx+\mu \int_D gdx.
+\]</div>
+<p>(iv) <strong>Interval additivity</strong>. If <span class="arithmatex">\(A, B\subset D\)</span> and <span class="arithmatex">\(A\cap B=\varnothing\)</span>, then</p>
+<div class="arithmatex">\[
+\int_{A\cup B}fdx=\int_A fdx+\int_B fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="properties-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="properties-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) similar to proof in <a href="#Invariance-of-Lebesgue-Integral">Invariance of Lebesgue Integral</a>, just have <span class="arithmatex">\(a_i\leq b_j\)</span>.</p>
+<p>(ii) easy to see.</p>
+<p>(iii) Choose partition <span class="arithmatex">\(\{E_i\cap F_j\}_{1\leq i\leq N, 1\leq j\leq M}\)</span>.</p>
+<p>(iv) For partition <span class="arithmatex">\(\{E_i\}_{1\leq i\leq N}\)</span>, see that</p>
+<div class="arithmatex">\[
+E_i\cap (A\cup B)=(E_i\cap A)\cup (E_i\cap B)
+\]</div>
+<p>and <span class="arithmatex">\((E_i\cap A)\cap (E_i\cap B)=\varnothing\)</span>.</p>
+</div>
+</div>
+</div>
+<p>The following lemma is a brigde between <strong>non-negative simple function</strong> and <strong>measurable function</strong>.</p>
+<p><a id="Lemma-Bridge"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: Bridge</p>
+<p>Assume <span class="arithmatex">\(g\)</span> and <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> are non-negative simple functions on measurable set <span class="arithmatex">\(E\)</span>, and satisfy</p>
+<p>(i) <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> are monotonically increasing <span class="arithmatex">\(a.e.x\in E\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(0\leq g(x)\leq \lim_{n\rightarrow \infty}f_n(x) (a.e.x\in E)\)</span>.</p>
+<p>Then</p>
+<div class="arithmatex">\[
+\int_{E}g(x)dx\leq \lim_{n\rightarrow \infty} \int_E f_n(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="properties-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="properties-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice that <span class="arithmatex">\(\lim_{n\rightarrow \infty}f_n(x)\)</span> would not be a simple function, so we could not use the monotonicity of Lebesgue integral for simple functions.</p>
+<p>(i) <span class="arithmatex">\(g(x)\equiv c&gt;0\)</span>. </p>
+<p><span class="arithmatex">\(\forall 0&lt;\lambda&lt;1\)</span>, define </p>
+<div class="arithmatex">\[
+E_k:=\{f_n\geq \lambda c\}, \forall n\in \mathbb{N}^+.
+\]</div>
+<p>It is easy to validify that <span class="arithmatex">\(E_1\subset E_2\subset \cdots\)</span> and <span class="arithmatex">\(E=\bigcup_{n=1}^\infty E_n\)</span>. Thus</p>
+<div class="arithmatex">\[
+\int_E f_1dx=\int_{E_n} f_ndx+\int_{E-E_n}f_ndx\geq \int_{E_n}f_ndx\geq \lambda c m(E_n)
+\]</div>
+<p>let <span class="arithmatex">\(n\rightarrow \infty\)</span> on both sides, we have</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_{E}f_ndx\geq \lambda c m(E)=\lambda\int_E gdx
+\]</div>
+<p>at last we let <span class="arithmatex">\(\lambda\rightarrow 1\)</span> and get the result.</p>
+<p>(ii) Making use of the interval additivity.</p>
+</div>
+</div>
+</div>
+<p><a id="Theorem-for-limit-of-monotonically-increasing- sequences"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for limit of monotonically increasing sequences</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}\)</span> and <span class="arithmatex">\(\{g_n\}\)</span> are non-negative simple functions on measurable set <span class="arithmatex">\(D\)</span>. If <span class="arithmatex">\(\forall x\in D\)</span>, <span class="arithmatex">\(\{f_n(x)\}\)</span> and <span class="arithmatex">\(\{g_n(x)\}\)</span> monotonically increase and converge to the same limit, then </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_D f_ndx = \lim_{n\rightarrow \infty}\int_D g_n dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="properties-proof_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="properties-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The proof is to make use of the lemma above twice.</p>
+<p><span class="arithmatex">\(\forall n \geq 1\)</span>, <span class="arithmatex">\(\forall a.e. x\in D\)</span>, we have</p>
+<div class="arithmatex">\[
+0\leq g_n(x)\leq \lim_{k\rightarrow \infty}g_k(x)\leq \lim_{k\rightarrow \infty} f_k(x).
+\]</div>
+<p>By <a href="#Lemma-Bridge">Lemma</a>, we have</p>
+<div class="arithmatex">\[
+\int_D g_ndx\leq \lim_{k\rightarrow \infty}\int_D f_kdx.
+\]</div>
+<p>Let <span class="arithmatex">\(n\rightarrow \infty\)</span>, we have <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}\int\limits_D g_ndx\leq \lim\limits_{k\rightarrow \infty}\int\limits_D f_kdx\)</span>. The opposite direction is of the same logic.</p>
+</div>
+</div>
+</div>
+<h2 id="non-negative-measurable-function-integral">Non-negative measurable function integral<a class="headerlink" href="#non-negative-measurable-function-integral" title="Permanent link">&para;</a></h2>
+<p><a id="definition-measurable-function"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Lebesgue integral of measurable function</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a non-negative measurable function on measurable set <span class="arithmatex">\(D\)</span>. According to <a href="../Measurable_Func/#Approximation-with-Simple-Function">Approximation with Simple Function</a>, there exists a non-negative function sequence <span class="arithmatex">\(\{f_n\}\)</span> on <span class="arithmatex">\(D\)</span>, such that <span class="arithmatex">\(\forall x\in D\)</span>, <span class="arithmatex">\(\{f_n(x)\}\)</span> monotonically increase and converges to <span class="arithmatex">\(f(x)\)</span>. Thus we define Lebesgue integral of <span class="arithmatex">\(f\)</span> to be</p>
+<div class="arithmatex">\[
+\int_D f dx =\lim_{n\rightarrow \infty }\int_D f_n dx.
+\]</div>
+<p>When <span class="arithmatex">\(\int_D fdx&lt;\infty\)</span>, we call <span class="arithmatex">\(f\)</span> is <strong>L integrable</strong> on <span class="arithmatex">\(D\)</span>.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Use definition of Lebesgue integral to calculate</p>
+<div class="arithmatex">\[
+\int_{[0,\infty)} e^{-x}dx
+\]</div>
+</div>
+<p><a id="another-definition-L-integral"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Equivalent definition for Lebesgue integral of non-negative measurable function</p>
+<p>Assume <span class="arithmatex">\(f(x)\)</span> is a non-negative measurable function on <span class="arithmatex">\(E\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E fdx=\sup_{\varphi(x)\leq f(x)}\left\{\int_E \varphi(x) dx: \varphi(x) \text{ is a non-negative simple function}\right\}.
+\]</div>
+<p>Or to be more specific, if we define <span class="arithmatex">\(\varPhi(f,E)\)</span> is a set composed by non-negative simple function <span class="arithmatex">\(\varphi\)</span> that satisfy <span class="arithmatex">\(\varphi\leq f\)</span> on <span class="arithmatex">\(E\)</span>, then</p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_E \varphi_k(x)dx=\sup_{\varphi\in \varPhi(f,E)}\int_E \varphi(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="non-negative-measurable-function-integral-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="non-negative-measurable-function-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p><span class="arithmatex">\(\leq\)</span>. Apparently, because <span class="arithmatex">\(\forall k\in \mathbb{N}^+\)</span>, we have <span class="arithmatex">\(\varphi_k\in \varPhi(f,E)\)</span>, so "<span class="arithmatex">\(\leq\)</span>" holds naturally.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\geq\)</span>. We know that <span class="arithmatex">\(\forall \varphi\in \varPhi(f,E)\)</span>, it satisfies <span class="arithmatex">\(\varphi(x)\leq f(x)=\lim_{k\rightarrow \infty}\varphi_k(x),\forall x\in E\)</span>, so by monotonicity</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\int_E \varphi(x)dx\leq\int_E\lim_{k\rightarrow \infty}\varphi_k(x)dx
+\]</div>
+<p>by <a href="#Theorem-for-limit-of-monotonically-increasing- sequences">Theorem for limit of monotonically increasing sequences</a>, we have</p>
+<div class="arithmatex">\[
+\int_E \varphi(x)dx\leq\lim_{k\rightarrow \infty}\int_E \varphi_k dx
+\]</div>
+<p>apply superior operation on both sides and we have "<span class="arithmatex">\(\geq\)</span>" hold.</p>
+</div>
+</div>
+</div>
+<h3 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">&para;</a></h3>
+<p><a id="Properties-for-L-integral-of-non-negative measurable-function"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Properties for L integral of non-negative measurable function</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a non-negative measurable function on <span class="arithmatex">\(E\)</span>, then </p>
+<p>(i) <span class="arithmatex">\(0\leq \int_E f(x)dx\leq \infty\)</span>.</p>
+<p>(ii) <strong>Linearity</strong>. If <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> are two non-negative real number, then </p>
+<div class="arithmatex">\[
+\int_E (\lambda f + \mu g)dx=\lambda \int_E fdx+\mu \int_E gdx.
+\]</div>
+<p>(iii) if <span class="arithmatex">\(A\subset E\)</span> is also a measurable set, then </p>
+<div class="arithmatex">\[
+\int_A f(x)dx=\int_E f(x)\chi_A(x)dx
+\]</div>
+<p>(iv) if <span class="arithmatex">\(E=A\cup B, A\cap B=\varnothing\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E fdx=\int_Afdx+\int_B fdx.
+\]</div>
+<p>(v) <strong>Monotonicity</strong>. If <span class="arithmatex">\(f(x)\leq g(x), \forall x\in E\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E f(x)dx\leq \int_E g(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="properties_1-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(iv) Using interval additivity of non-negative simple functions.</p>
+<p>(v) similar to monotonicity for L integral of simple functions. </p>
+</div>
+</div>
+</div>
+<p><a id="int0-f0-ae"></a></p>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(m(E)&gt;0\)</span>, <span class="arithmatex">\(f\in L(E)\)</span>, <span class="arithmatex">\(f\geq 0\)</span>, prove: if </p>
+<div class="arithmatex">\[
+\int_E fdx=0,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+f(x)=0,\quad a.e.x\in E.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="properties_1-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Transfer problem into</p>
+<div class="arithmatex">\[
+m(\{f(x)&gt;0\})=0.
+\]</div>
+<p><span class="arithmatex">\(\forall n\geq 1\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E f(x)dx&amp;\geq \int_{\{f\geq 1/n\}}f(x)dx\\
+&amp;\geq \int_{\{f\geq 1/n\}}\frac{1}{n}dx\\
+&amp;=\frac{1}{n}m(\{f\geq 1/n\})
+\end{align*}
+\]</div>
+<p>which means <span class="arithmatex">\(m(\{f\geq 1/n\})=0\)</span>, so</p>
+<div class="arithmatex">\[
+\{f&gt;0\}=\bigcup_{n=1}^\infty\{f\geq \frac{1}{n}\} =0,
+\]</div>
+<p>which means <span class="arithmatex">\(f(x)=0, a.e.x\in E\)</span>.</p>
+</div>
+</div>
+</div>
+<p><a id="Chebyshev-Inequation"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Chebyshev Inequation</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a non-negative function on <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(\forall \alpha&gt;0\)</span>, </p>
+<div class="arithmatex">\[
+m(\{f\geq \alpha\})\leq \frac{1}{\alpha}\int_E f(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="properties_1-proof_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(A=\{f\geq \alpha\}\)</span>, then</p>
+<div class="arithmatex">\[
+\int_E fdx\geq \int_A fdx \geq \int_A \alpha dx = \alpha m(A).
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. <span class="arithmatex">\(f_k(x)\geq 0\)</span>, <span class="arithmatex">\(f_k\in L(E)\)</span>. If </p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_E f_k(x)dx=0,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+f_k\overset{m}{\rightarrow} 0.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="properties_1-proof_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall \sigma&gt;0\)</span>, by <a href="#Chebyshev-Inequation">Chebyshev Inequation</a></p>
+<div class="arithmatex">\[
+\sigma \cdot m(\{|f_k-0|\geq \sigma\})\leq \int_{\{|f_k-0|\geq \sigma\}} f_kdx \leq \int_E f_kdx \rightarrow 0(k\rightarrow \infty) 
+\]</div>
+<p>which means <span class="arithmatex">\(m(\{|f_k-0|\geq \sigma\})\rightarrow 0\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f\)</span> is a non-negative function on <span class="arithmatex">\(\mathbb{R}\)</span> with positive period <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(f\in L([0,T])\)</span>, prove:</p>
+<div class="arithmatex">\[
+\lim_{x\rightarrow \infty}\frac{1}{x}\int_0^x f(t)dt=\frac{1}{T}\int_0^T f(t)dt.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="properties_1-proof_4" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="properties_1-proof_4">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For all <span class="arithmatex">\(k\geq 1\)</span>, we have</p>
+<div class="arithmatex">\[
+\int_{kT}^{(k+1)T}f(t)dt=\int_0^T f(t+kT)dt=\int_0^Tf(t)dt.
+\]</div>
+<p>So when <span class="arithmatex">\(kT\leq x\leq(k+1)T\)</span>, or <span class="arithmatex">\(\frac{1}{T}\geq \frac{k}{x}\geq \frac{k}{(k+1)T}\)</span>. Let <span class="arithmatex">\(k\rightarrow \infty\)</span>, we have the middle item</p>
+<div class="arithmatex">\[
+\frac{k}{x}\rightarrow \frac{1}{T}.
+\]</div>
+<p>so</p>
+<div class="arithmatex">\[
+\begin{align}
+\nonumber\int_0^x f(t)dt&amp;=\int_0^{kT}f(t)dt+\int_{kT}^x f(t)dt\\
+\nonumber\int_0^xf(t) dt&amp;=k\int_0^T f(t)dt+\int_{kT}^x f(t)dt\\
+\Rightarrow \frac{1}{x}\int_0^xf(t)dt&amp;=\frac{k}{x}\int_0^Tf(t)dt+\frac{1}{x}\int_{kT}^xf(t)dt\label{T-int}
+\end{align}
+\]</div>
+<p>Since </p>
+<div class="arithmatex">\[
+\left|\int_{kT}^x f(t)dt\right|\leq \int_{kT}^x |f(t)|dt\leq \int_{kT}^{(k+1)T} |f(t)|dt=\int_0^T|f(t)|dt=C
+\]</div>
+<p>is bounded. So <span class="arithmatex">\(\frac{1}{x}\int_{kT}^xf(t)dt\rightarrow 0 (x\rightarrow \infty)\)</span>. So we let <span class="arithmatex">\(x\rightarrow \infty\)</span> in equation <span class="arithmatex">\(\ref{T-int}\)</span>, we have the result.</p>
+</div>
+</div>
+</div>
+<h2 id="genaral-measurable-function-integral">Genaral measurable function integral<a class="headerlink" href="#genaral-measurable-function-integral" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Lebesgue integral of Genaral measurable function</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a measurable fuunction on <span class="arithmatex">\(D\)</span>. <span class="arithmatex">\(\forall x\in D\)</span>, define positive and negative part of <span class="arithmatex">\(f\)</span></p>
+<div class="arithmatex">\[
+f^+(x):=\max\{0,f(x)\},\quad f^-(x):=\max\{0,-f(x)\}
+\]</div>
+<p>then it is easy to see that <span class="arithmatex">\(f^+\)</span> and <span class="arithmatex">\(f^-\)</span> are non-negative measurable functions and</p>
+<div class="arithmatex">\[
+f(x)=f^+(x)-f^-(x),\quad |f(x)|=f^+(x)+f^-(x).
+\]</div>
+<p>If either of <span class="arithmatex">\(f^+\)</span> and <span class="arithmatex">\(f^-\)</span> are <span class="arithmatex">\(\infty\)</span> at the same time, then define Lebesgue integral of <span class="arithmatex">\(f\)</span> to be</p>
+<div class="arithmatex">\[
+\int_D f(x)dx=\int_D f^+(x)dx-\int_D f^-(x)dx.
+\]</div>
+<p>when the above item is finite, we call <span class="arithmatex">\(f\)</span> is Lebesgue integrable on <span class="arithmatex">\(D\)</span>, denoted as <span class="arithmatex">\(f\in L(D)\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Equivalent condition for Lebesgue integrable</p>
+<p><span class="arithmatex">\(f\in L(D)\)</span> iff <span class="arithmatex">\(|f|\in L(D)\)</span>.</p>
+<p>When <span class="arithmatex">\(f\)</span> is Lebesgue integrable, it apparently satisfies</p>
+<div class="arithmatex">\[
+\left|\int_D fdx\right|\leq \int_D |f|dx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="genaral-measurable-function-integral-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="genaral-measurable-function-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(f\in L(D)\)</span> iff <span class="arithmatex">\(f^+, f^-\in L(D)\)</span> iff <span class="arithmatex">\(|f|\in L(D)\)</span>. </p>
+</div>
+</div>
+</div>
+<h3 id="properties_2">Properties<a class="headerlink" href="#properties_2" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Properties for L integral of general measurable function</p>
+<p>(i) If <span class="arithmatex">\(f\in L(E)\)</span>, then <span class="arithmatex">\(|f(x)|&lt;+\infty, a.e.x\in E\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(f\)</span> is a generalized real function on zero-measure set <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(\int_A fdx=0\)</span>.</p>
+<p>(iii) If <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are measurable functions on <span class="arithmatex">\(E\)</span>, and <span class="arithmatex">\(f(x)=g(x),a.e.x\in E\)</span>, then <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are both L integrable or not integrable. When integrable, their values of integral are of the same.</p>
+<p>(iv) <strong>Homotonicity &amp; Linearity</strong>. If <span class="arithmatex">\(f, g\in L(E)\)</span>, <span class="arithmatex">\(a,b\in \mathbb{R}\)</span>, then <span class="arithmatex">\(af+bg\in L(E)\)</span> and</p>
+<div class="arithmatex">\[
+\int_E (af(x)+bg(x))dx=a\int_E f(x)dx+b\int_E g(x)dx.
+\]</div>
+<p>(v) <strong>Interval additivity</strong>. If <span class="arithmatex">\(f\in L(E_1)\)</span>, <span class="arithmatex">\(f\in L(E_2)\)</span>, and <span class="arithmatex">\(E_1\cap E_2=\varnothing\)</span>, then <span class="arithmatex">\(f\in L(E_1\cup E_2)\)</span> and</p>
+<div class="arithmatex">\[
+\int_{E_1\cup E_2}fdx=\int_{E_1} fdx+\int_{E_2} fdx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="properties_2-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="properties_2-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) from equivalent definition.</p>
+<p>(ii) easy to see.</p>
+<p>(iii) <span class="arithmatex">\(f=g,a.e.x\in E\)</span> <span class="arithmatex">\(\Rightarrow\)</span> <span class="arithmatex">\(f^+=g^+, f^-=g^- a.e.x\in E\)</span>.</p>
+<p>(iv) pay attention that <span class="arithmatex">\((af)^+\)</span> has 3 different partition versions, i.e. <span class="arithmatex">\(a=0\)</span>, <span class="arithmatex">\(a&gt;0\)</span> and <span class="arithmatex">\(a&lt;0\)</span>. </p>
+<p>(v) Notice that <span class="arithmatex">\(|f+g|\leq |f|+|g|&lt;\infty\)</span>, so <span class="arithmatex">\(f+g\in L(E)\)</span>.</p>
+</div>
+</div>
+</div>
+<p><a id="Absolute-Continuity-of-L-integral"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Absolute Continuity of L integral</p>
+<p>Assume <span class="arithmatex">\(f\in L(D)\)</span>. Then <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, such that <span class="arithmatex">\(\forall\)</span> measurable set <span class="arithmatex">\(A\subset D\)</span>, so long as <span class="arithmatex">\(m(A)&lt;\delta\)</span>, we have</p>
+<div class="arithmatex">\[
+\left|\int_A f(x)dx\right|&lt;\varepsilon.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="properties_2-proof_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="properties_2-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Assume <span class="arithmatex">\(f\)</span> is non-negative (discuss <span class="arithmatex">\(f^+\)</span> and <span class="arithmatex">\(f^-\)</span>). <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists\)</span> non-negative simple function <span class="arithmatex">\(\varphi\leq |f|\)</span>, such that</p>
+<div class="arithmatex">\[
+\int_D |f|dx&lt;\int_D \varphi dx+\frac{\varepsilon}{2}.
+\]</div>
+<p>Because <span class="arithmatex">\(\varphi\)</span> is bounded on <span class="arithmatex">\(D\)</span>, so <span class="arithmatex">\(\varphi(x)\leq M\)</span>. Choose <span class="arithmatex">\(\delta=\frac{\varepsilon}{2M}\)</span>, such that for all <span class="arithmatex">\(A\subset D\)</span>, <span class="arithmatex">\(m(A)&lt;\delta\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\left|\int_A fdx\right|&amp;\leq \int_A|f|dx\\
+&amp;=\int_A (|f|-\varphi)dx + \int_A \varphi dx\\
+&amp;&lt;\frac{\varepsilon}{2}+m(A)\cdot M&lt;\varepsilon.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="levi-theorem">Levi Theorem<a class="headerlink" href="#levi-theorem" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Levi Theorem</p>
+<p>Assime <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> are non-negative measurable function on <span class="arithmatex">\(D\)</span>, satisfy </p>
+<div class="arithmatex">\[
+f_1(x)\leq f_2(x)\leq\cdots,\quad x\in D
+\]</div>
+<p>and <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}f_n(x)=f(x)\)</span>, then </p>
+<div class="arithmatex">\[
+\int_D fdx=\lim_{n\rightarrow \infty}\int_D f_n dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="levi-theorem-proof-version-ⅰ" name="__tabbed_14" type="radio" /><input id="levi-theorem-proof-version-ⅱ" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="levi-theorem-proof-version-ⅰ">Proof version Ⅰ</label><label for="levi-theorem-proof-version-ⅱ">Proof version Ⅱ</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(\int_D fdx\geq\lim\limits_{n\rightarrow \infty}\int_D f_n dx\)</span>.</li>
+</ul>
+<p>Notice that limit function <span class="arithmatex">\(f\)</span> is also measurable, so its L integral has definition. Then since <span class="arithmatex">\(f_1\leq f_2\leq\cdots\leq f\)</span>, by monotonicity of L integral, we have <span class="arithmatex">\(\int_E f_n(x)dx\)</span> monotonically increase, so its limit number <span class="arithmatex">\(\lim_{n\rightarrow \infty}\int_E f_n(x)dx\)</span> has definition. By <a href="#Properties-for-L-integral-of-non-negative measurable-function">Monotonicity of L integral</a>, </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_E f_ndx\leq \int_E fdx.
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\int_D fdx\leq\lim\limits_{n\rightarrow \infty}\int_D f_n dx\)</span>.</li>
+</ul>
+<p>Choose a non-negative simple function <span class="arithmatex">\(\varphi(x)\)</span>, such that <span class="arithmatex">\(\varphi(x)\leq f(x),x\in E\)</span>. Let <span class="arithmatex">\(\lambda\in (0,1)\)</span>, denoted</p>
+<div class="arithmatex">\[
+D_n=\{x\in D: f_n(x)\geq \lambda\varphi(x)\}
+\]</div>
+<p>which is monotonically increasing, and <span class="arithmatex">\(\lim_{n\rightarrow \infty}D_n=D\)</span>. So</p>
+<div class="arithmatex">\[
+\int_D f_ndx\geq \int_{D_n}f_ndx\geq \int_{D_n}\lambda \varphi(x)dx=\lambda\int_{D_n}\varphi(x)dx.
+\]</div>
+<p>If we let <span class="arithmatex">\(n\rightarrow \infty\)</span>, the right side of inequation is a limit of integral region, i.e.</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_D f_ndx\geq \lambda\int_D \varphi(x)dx.
+\]</div>
+<p>at last, let <span class="arithmatex">\(\lambda\rightarrow 1\)</span>, we have</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_D f_ndx\geq \int_D \varphi(x)dx.
+\]</div>
+<p>by <a href="#another-definition-L-integral">another definition of L integral of non-negative measurable function</a>, we have</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_D f_ndx\geq \int_D f(x)dx.
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>Use another equvalent non-negative simple function sequence <span class="arithmatex">\(\{\psi_n\}\)</span> of non-negative measurable function <span class="arithmatex">\(f_n\)</span> to approximate <span class="arithmatex">\(f\)</span>.</p>
+<p>Firstly, we have to make another simple function sequence useing <a href="#definition-measurable-function">its definition</a>. That is, for every <span class="arithmatex">\(n\geq 1\)</span>, <span class="arithmatex">\(f_n\)</span> is defined by sequence of non-negative simple function </p>
+<div class="arithmatex">\[
+\{\varphi_k^{(n)}\}_{k\geq 1},
+\]</div>
+<p>which monotonically increase and converge to <span class="arithmatex">\(f_n\)</span>. Here, the method is a little tricky. For every <span class="arithmatex">\(k\geq 1\)</span>, define</p>
+<div class="arithmatex">\[
+\psi_k(x):=\max\{\varphi_k^{(1)}(x),\varphi_k^{(2)}(x),\cdots,\varphi_k^{(k)}(x),\}, \quad x\in D.
+\]</div>
+<p>So <span class="arithmatex">\(\psi_k(x)\)</span> is also a non-negative simple function and </p>
+<div class="arithmatex">\[
+\begin{align}
+\nonumber 0\leq \psi_1(x)\leq \psi_2(x)\leq\cdots\leq \psi_k(x)&lt;\cdots,\quad x\in D.\\
+\varphi_k^{(n)}(x)\leq \psi_k(x)\leq f_k(x),\quad  1\leq n\leq k,x\in D.\label{ineq1}
+\end{align}
+\]</div>
+<p>Notice that inequation <span class="arithmatex">\(\ref{ineq1}\)</span> use <span class="arithmatex">\(n\leq k\)</span>.</p>
+<p>So by monotonicity of non-negative simple function, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\int_D\varphi_k^{(n)}(x)\leq \int_D\psi_k(x)\leq \int_D f_k(x), \quad 1\leq n\leq k.\label{ineq2}
+\end{align}
+\]</div>
+<p>In inequation <span class="arithmatex">\(\ref{ineq1}\)</span>, let <span class="arithmatex">\(k\rightarrow \infty\)</span> firstly and let <span class="arithmatex">\(n\rightarrow \infty\)</span>, and we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\nonumber f_n(x)\leq \lim_{k\rightarrow \infty}\psi_k(x)&amp;\leq f(x). \quad n\geq 1,x\in D.\\
+\Rightarrow \lim_{k\rightarrow \infty}\psi_k(x)&amp;=f(x),\quad x\in D.\label{eq1}
+\end{align}
+\]</div>
+<p>Similarly, in inequation <span class="arithmatex">\(\ref{ineq2}\)</span>, let <span class="arithmatex">\(k\rightarrow \infty\)</span> firstly and let <span class="arithmatex">\(n\rightarrow \infty\)</span>, and we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\nonumber \int_D f_n(x)dx=\lim_{k\rightarrow \infty}\int_D\varphi_k^{(n)}(x)&amp;\leq \lim_{k\rightarrow \infty}\int_D\psi_k(x)\leq \lim_{k\rightarrow \infty}\int_D f_k(x), \quad n\geq 1.\\
+\Rightarrow \lim_{k\rightarrow \infty}\int_D\psi_k(x)&amp;=\lim_{n\rightarrow \infty}\int_D f_n(x)dx.\label{eq2}
+\end{align}
+\]</div>
+<p>Equation <span class="arithmatex">\(\ref{eq1}\)</span> means <span class="arithmatex">\(f\)</span> could be approximated by <span class="arithmatex">\(\{\psi_K(x)\}\)</span>, which is just a nen-negative simple function sequence. Equation <span class="arithmatex">\(\ref{eq2}\)</span> means </p>
+<div class="arithmatex">\[
+\int_D f(x)dx\overset{\text{definition}}{=}\lim_{k\rightarrow \infty}\int_D\psi_k(x)=\lim_{n\rightarrow \infty}\int_D f_n(x)dx.
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Some examples which do not satisfy condition of Levi Theorem.</p>
+<p>(i) <span class="arithmatex">\(f_k(x)=\chi_{[k,k+1]}(x),\quad E=\mathbb{R}\)</span>.</p>
+<p><span class="arithmatex">\(f_k(x)\rightarrow f(x)=0\)</span>, but</p>
+<div class="arithmatex">\[
+\int_E f_kdx =1&gt;0=\int_E fdx
+\]</div>
+<p>(ii) <span class="arithmatex">\(f_k(x)=\frac{1}{k}\chi_{[0,k]}(x),\quad E=\mathbb{R}\)</span>.</p>
+<p><span class="arithmatex">\(f_k(x)\rightrightarrows f(x)=0\)</span>, but</p>
+<div class="arithmatex">\[
+\int_E f_kdx =1&gt;0=\int_E fdx
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f\)</span> is L integrable on <span class="arithmatex">\(E\)</span>, prove: </p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}k\cdot m(\{|f|&gt;k\})=0.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="levi-theorem-answer" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="levi-theorem-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use <span class="arithmatex">\(\{|f|&gt;k\}\)</span> to narrow down the integral region.</p>
+<p>Let </p>
+<div class="arithmatex">\[
+f_k(x)=\begin{cases}
+f(x),\quad &amp;|f|\leq k,\\
+0,\quad &amp;|f|&gt;k.
+\end{cases}
+\]</div>
+<p>Then <span class="arithmatex">\(|f_k|\)</span> <span class="arithmatex">\(\nearrow\)</span> <span class="arithmatex">\(|f|\)</span>. By <a href="#levi-theorem">Levi Theorem</a>, </p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E |f|dx&amp;=\lim_{k\rightarrow \infty} \int_E |f_k| dx\\
+\Rightarrow \lim_{k\rightarrow \infty}\int_E(|f|-|f_k|)dx&amp;=0
+\end{align*}
+\]</div>
+<p>While </p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E(|f|-|f_k|)dx&amp;= \int_{\{|f|\leq k\}}+\int_{\{|f|&gt;k\}}(|f|-|f_k|)dx\\
+&amp;=\int_{\{f&gt;k\}}|f|dx \\
+&amp;&gt; k\cdot m(\{|f|&gt;k\})\rightarrow 0 (k\rightarrow \infty).
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>There are two natural corollaries derived from Levi Theorem.</p>
+<p><a id="Series-form-of-Levi-Theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 1: Series form of Levi Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a non-negative measurable function sequence, then </p>
+<div class="arithmatex">\[
+\int_E \sum_{n=1}^\infty f_n(x)dx=\sum_{n=1}^\infty \int_E f_n(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="levi-theorem-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="levi-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(u_k(x)=\sum_{i=1}^k f_i(x)\)</span>, which satisfies the condition of Levi Theorem.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2: Denumerable Additivity</p>
+<p>Assume <span class="arithmatex">\(E\in \Omega\)</span>, <span class="arithmatex">\(E=\bigcup_{n=1}^\infty E_n\)</span>, where <span class="arithmatex">\(E_i\cap E_j=\varnothing\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, <span class="arithmatex">\(f\geq 0\)</span>, then <span class="arithmatex">\(\forall k\in \mathbb{N}^+\)</span>, <span class="arithmatex">\(f\in L(E_k)\)</span>, and </p>
+<div class="arithmatex">\[
+\int_E f(x)dx=\sum_{k=1}^\infty \int_{E_k} f(x)dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="levi-theorem-proof_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="levi-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(f_k(x)=f(x)\sum_{i=1}^k \chi_{E_i}(x)\)</span> and use <a href="#Properties-for-L-integral-of-non-negative measurable-function">property (iii)</a>.</p>
+</div>
+</div>
+</div>
+<h2 id="fatou-lemma">Fatou Lemma<a class="headerlink" href="#fatou-lemma" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Fatou Lemma</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a non-negative measurable function sequence, then </p>
+<div class="arithmatex">\[
+\int_D \underline{\lim}\limits_{n\rightarrow \infty} f_ndx\leq \underline{\lim}\limits_{n\rightarrow \infty} \int_D f_n dx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="fatou-lemma-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="fatou-lemma-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>From the definition of <a href="../Measurable_Func/#Function-Limit-superior-inferior">limit inferior of function</a>, for every <span class="arithmatex">\(n\geq 1\)</span>, we could define </p>
+<div class="arithmatex">\[
+g_n(x)=\inf_{k\geq n}f_k(x),\quad x\in D.
+\]</div>
+<p>so <span class="arithmatex">\(\{g_n\}\)</span> monotonically increase and converges to <span class="arithmatex">\(\underline{\lim}\limits_{n\rightarrow \infty}f_n(x)\)</span>. By <a href="#levi-theorem">Levi Theorem</a>, </p>
+<div class="arithmatex">\[
+\int_D \underline{\lim}\limits_{n\rightarrow \infty}f_n(x)dx=\lim_{n\rightarrow \infty}\int_D g_n(x)dx.
+\]</div>
+<p>Since <span class="arithmatex">\(g_n(x)\leq f_n(x)\)</span>, so </p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_D \underline{\lim}\limits_{n\rightarrow \infty}f_n(x)dx&amp;=\underline{\lim}\limits_{n\rightarrow \infty}\int_D g_n(x)dx\\
+&amp;\leq \underline{\lim}\limits_{n\rightarrow \infty}\int_D f_n(x)dx
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>This is a quite weak theorem, thus could be used in many fields.</p>
+<div class="question">
+<p><strong>Example</strong>. <span class="arithmatex">\(f_k(x)\geq 0\)</span>, <span class="arithmatex">\(f_k\in L(E)\)</span>, and <span class="arithmatex">\(f_k\rightarrow f, a.e.x\in E\)</span>. If </p>
+<div class="arithmatex">\[
+\exists M&gt;0, \int_E f_k(x)dx\leq M,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+f\in L(E).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="fatou-lemma-proof_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="fatou-lemma-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\int_E fdx&amp;=\int_{E_1}\lim_{k\rightarrow \infty}f_kdx\\
+&amp;\leq \lim_{k\rightarrow \infty}\int_{E_1}f_kdx \quad\text{by Fatou Lemma}\\
+&amp;\leq \lim_{k\rightarrow \infty}\int_{E}f_kdx&lt;M
+\end{align*}
+\]</div>
+<p>Note that limit and limit inferior are of the same here.</p>
+</div>
+</div>
+</div>
+<p><div class="question" markdown>
+<strong>Example</strong>. Assume non-negative measurable function sequence <span class="arithmatex">\(\{f_k\}\)</span> satisfies <span class="arithmatex">\(f_k\overset{m}{\rightarrow}f\)</span>, then prove
+hunmy</p>
+<div class="arithmatex">\[
+\int_E fdx\leq \underline{\lim}\limits_{k\rightarrow \infty} f_kdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="fatou-lemma-proof_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="fatou-lemma-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Get a subsequence <span class="arithmatex">\(\{f_{k_s}\}\)</span> such that </p>
+<div class="arithmatex">\[
+\int_E f_kdx=\lim_{s\rightarrow \infty}\int_{E} f_{k_s}dx
+\]</div>
+<p>Since <span class="arithmatex">\(f_k\overset{m}{\rightarrow} f\)</span>, there exists a subsequence <span class="arithmatex">\(\{f_{k_{s_i}}(x)\}\rightarrow f(x), a.e.x\in E\)</span>, then by <a href="#fatou-lemma">Fatou Lemma</a>(1<sup>st</sup> "<span class="arithmatex">\(\leq\)</span>"), we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E fdx&amp;=\int_E \lim_{i\rightarrow \infty} f_{k_{s_i}}dx\\
+&amp;\leq \lim_{i\rightarrow \infty} \int_E f_{k_{s_i}}dx\\
+&amp;\leq \lim_{s\rightarrow \infty} \int_E f_{k_{s}}dx\\
+&amp;=\underline{\lim}\limits_{k\rightarrow \infty} f_kdx.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="lebesgues-dominated-convergence-theorem">Lebesgue's Dominated Convergence Theorem<a class="headerlink" href="#lebesgues-dominated-convergence-theorem" title="Permanent link">&para;</a></h2>
+<p><a id="Dominated-Convergence-Theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lebesgue's Dominated Convergence Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a measurable function sequence <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(f_n\rightarrow f, a.e.x\in E\)</span>. If there exists <span class="arithmatex">\(g\in L(E)\)</span>, such that <span class="arithmatex">\(\forall n\geq 1\)</span>, <span class="arithmatex">\(|f_n(x)|\leq g(x), a.e.x\in E\)</span>, then <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f_n\)</span> is L integrable on <span class="arithmatex">\(E\)</span> and </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_E f_ndx=\int_E f dx
+\]</div>
+<p>where <span class="arithmatex">\(g\)</span> is also called the controlling function.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Since <span class="arithmatex">\(|f_n|\leq g\)</span>, so its limit value <span class="arithmatex">\(|f|\leq g\)</span>, so <span class="arithmatex">\(g\in L(E)\)</span> could induce <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f_n\)</span> are L integrable.</p>
+<p>Since <span class="arithmatex">\(|f_k-f|\leq |f_k|+|f|\leq 2g\)</span>, we could define </p>
+<div class="arithmatex">\[
+g_k(x)=2g-|f_k-f|\geq 0,
+\]</div>
+<p>then by <a href="#fatou-lemma">Fatou Lemma</a></p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E \underline{\lim}\limits_{k\rightarrow \infty}g_k(x)dx&amp;\leq \underline{\lim}\limits_{k\rightarrow \infty}\int_E g_k(x)dx\\
+\int_E \underline{\lim}\limits_{k\rightarrow \infty} (2g-|f_k-f|)dx&amp;\leq \underline{\lim}\limits_{k\rightarrow \infty}\int_E (2g-|f_k-f|)dx\\
+\int_E 2gdx &amp;\leq \underline{\lim}\limits_{k\rightarrow \infty}\left[\int_E 2gdx - \int_E |f_k-f|dx\right]\\
+\int_E 2gdx &amp;\leq \int_E 2g dx + \underline{\lim}\limits_{k\rightarrow \infty} \left(-\int_E |f_k-f|dx\right)\\
+0&amp;\leq -\overline{\lim}\limits_{k\rightarrow \infty}\int_E |f_k-f|dx\\
+\overline{\lim}\limits_{k\rightarrow \infty}\int_E |f_k-f|dx&amp;\leq 0
+\end{align*}
+\]</div>
+<p>So by relationship of limit superior and inferior</p>
+<div class="arithmatex">\[
+0\leq \underline{\lim}\limits_{k\rightarrow \infty}|f_k-f|dx\leq \overline{\lim}\limits_{k\rightarrow \infty}|f_k-f|dx\leq 0
+\]</div>
+<p>which gives </p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}|f_k-f|dx=0
+\]</div>
+<p>Since</p>
+<div class="arithmatex">\[
+\left|\int_E f_kdx-\int_E fdx\right|=\left|\int_E (f_k-f)dx\right|\leq \int_E |f_k-f|dx\rightarrow 0(k\rightarrow \infty)
+\]</div>
+<p>and we are done.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Another form of Dominated Convergence Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}_{n\geq 1}\)</span> is a measurable function sequence <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(f_n\overset{m}{\rightarrow} f, a.e.x\in E\)</span>. If there exists <span class="arithmatex">\(g\in L(E)\)</span>, such that <span class="arithmatex">\(\forall n\geq 1\)</span>, <span class="arithmatex">\(|f_n(x)|\leq g(x), a.e.x\in E\)</span>, then <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f_n\)</span> is L integrable on <span class="arithmatex">\(E\)</span> and </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_E f_ndx=\int_E f dx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="lebesgues-dominated-convergence-theorem-proof_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="lebesgues-dominated-convergence-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use contradiction and the above <a href="#Dominated-Convergence-Theorem">Dominated Convergence Theorem</a>.</p>
+<p>Let <span class="arithmatex">\(a_k=\int_E f_kdx\)</span>, <span class="arithmatex">\(a=\int_E fdx\)</span>. Assume <span class="arithmatex">\(a_k\nrightarrow a\)</span>, then <span class="arithmatex">\(\exists \{k_j\}\)</span>, such that the convergence of its subsequence</p>
+<div class="arithmatex">\[
+\lim_{j\rightarrow \infty}\int_E f_{k_j}dx=A\neq a.
+\]</div>
+<p>we want to find a point that contradicts. Since <span class="arithmatex">\(f_k\overset{m}{\rightarrow}f\)</span>, we have <span class="arithmatex">\(f_{k_j}\overset{m}{\rightarrow}f\)</span>. By <a href="../Measurable_Func/#Riesz-Theorem">Riesz Theorem</a>, we have</p>
+<div class="arithmatex">\[
+f_{k_{j_i}}\rightarrow f, a.e.x\in E
+\]</div>
+<p>Combined with <span class="arithmatex">\(|f_{k_{j_i}}|\leq g\)</span>, by <a href="#Dominated-Convergence-Theorem">Dominated Convergence Theorem</a>, we have</p>
+<div class="arithmatex">\[
+\lim_{i\rightarrow \infty}\int_E f_{k_{j_i}}dx=\int_E fdx=A
+\]</div>
+<p>while <span class="arithmatex">\(a_{k_j}\rightarrow A\neq a\)</span>, we have <span class="arithmatex">\(a_{k_{j_i}}\rightarrow A\neq a\)</span>, which contradicts!</p>
+</div>
+</div>
+</div>
+<h3 id="applications-of-ldct">Applications of LDCT<a class="headerlink" href="#applications-of-ldct" title="Permanent link">&para;</a></h3>
+<p>The following come some applications of LDCT.</p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 1: Term-by-term Integration Theorem</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}\)</span> are measurable functions on <span class="arithmatex">\(D\)</span>, satisfies </p>
+<div class="arithmatex">\[
+\sum\limits_{n=1}^\infty \int\limits_E |f_n|dx&lt;\infty,
+\]</div>
+<p>then <span class="arithmatex">\(f:=\sum\limits_{n=1}^\infty f_n\)</span> converges absolutely <span class="arithmatex">\(a.e.\)</span> on <span class="arithmatex">\(D\)</span>, and </p>
+<div class="arithmatex">\[
+\int_E fdx = \sum_{n=1}^\infty \int_E f_ndx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="applications-of-ldct-proof" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Consider define <span class="arithmatex">\(F_k(x):=\sum\limits_{j=1}^\infty f_j,k\in \mathbb{N}^+\)</span>, then <span class="arithmatex">\(g=\sum\limits_{k=1}^\infty |f_k|\)</span>.</p>
+<p>Apply LDCT to <span class="arithmatex">\(F_k\)</span>.</p>
+</div>
+</div>
+</div>
+<p><a id="theorem-for-limit-of-integral-region"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2: theorem for limit of integral region</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a measurable function on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(E_1\subset E_2\subset \cdots\)</span> is a sequence of subsets of <span class="arithmatex">\(E\)</span>, which satisfy <span class="arithmatex">\(E=\bigcup_{k=1}^\infty E_k\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E fdx=\lim_{k\rightarrow \infty}\int_{E_k}fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="applications-of-ldct-proof_1" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(f_k(x):=f(x)\chi_{E_k}(x)\)</span>, so <span class="arithmatex">\(\lim_{k\rightarrow \infty}f_k=f(x)\)</span> and <span class="arithmatex">\(|f_k|\leq |f|\in L(E)\)</span>, by LDCT, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_{E}fdx&amp;=\lim_{k\rightarrow \infty}\int_{E}f_kdx\\
+&amp;=\lim_{k\rightarrow \infty}\int_{E}f(x)\chi_{E_k}dx\\
+&amp;=\lim_{k\rightarrow \infty}\int_{E_k}f(x)dx
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Calculate </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_{(0,+\infty)}\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)dx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="applications-of-ldct-answer" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(f_n(x)=\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)\)</span>, <span class="arithmatex">\(f(x)=0\)</span>. Here we have to discuss a controlling function.</p>
+<ul>
+<li><span class="arithmatex">\(x\in(0,1]\)</span>. Notice</li>
+</ul>
+<div class="arithmatex">\[
+\left|\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)\right|\leq \left|\frac{n\sqrt{x}}{1+n^2x^2}\right|\leq \frac{n\sqrt{x}}{2nx}=\frac{1}{\sqrt{x}}.
+\]</div>
+<p>whose L integral is finite on <span class="arithmatex">\((0,1]\)</span>, so Choose <span class="arithmatex">\(g(x)=\frac{1}{2\sqrt{x}}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(x\in (1,+\infty)\)</span>. Notice</li>
+</ul>
+<div class="arithmatex">\[
+\left|\frac{n\sqrt{x}}{1+n^2x^2}\right|\leq \frac{n\sqrt{x}}{n^2x^2}\leq \frac{1}{x^{3/2}}.
+\]</div>
+<p>whose L integral is finite on <span class="arithmatex">\((1,+\infty)\)</span>, so choose <span class="arithmatex">\(g(x)=\frac{1}{x^{3/2}}\)</span>.</p>
+<p>Thus consider</p>
+<div class="arithmatex">\[
+g(x)=\begin{cases}
+\frac{1}{2\sqrt{x}},\quad x\in(0,1]\\
+\frac{1}{x^{3/2}},\quad x\in (1,+\infty).
+\end{cases}
+\]</div>
+<p>So <span class="arithmatex">\(f_n(x)\)</span> satisfy condition of LDCT, meaning</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\int_{(0,+\infty)}\frac{n\sqrt{x}}{1+n^2x^2}\sin^{24}(nx)dx=\int_{(0,+\infty)}0dx=0.
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 3: Theorem of denumberable additivity</p>
+<p>Assume <span class="arithmatex">\(a\)</span> is a measurable function on <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\{E_k\}_{k\geq 1}\)</span> is a sequence of subsets of <span class="arithmatex">\(E\)</span>, which satisfies <span class="arithmatex">\(E=\bigcup_{k} E_k\)</span> and <span class="arithmatex">\(E_i\cap E_j=\varnothing, \forall i\neq j\)</span>. If <span class="arithmatex">\(f\in L(E)\)</span>, then</p>
+<div class="arithmatex">\[
+\int_E fdx=\sum_{k=1}^\infty \int_{E_k}fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="applications-of-ldct-proof_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Construct another sequence of sets <span class="arithmatex">\(\{\tilde{E_k}\}\)</span> as</p>
+<div class="arithmatex">\[
+\tilde{E_k}:=\bigcup_{j=1}^kE_j,
+\]</div>
+<p>which monotonically increase and <span class="arithmatex">\(\lim\limits_{k\rightarrow \infty}\tilde{E_k}=E\)</span>, so by <a href="#theorem-for-limit-of-integral-region">Corollary 2: theorem for limit of integral region</a>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E fdx&amp;=\lim_{k\rightarrow \infty}\int_{\tilde{E_k}} fdx\\
+&amp;=\lim_{k\rightarrow \infty}\int_{\bigcup_{j=1}^kE_j} fdx\\
+&amp;=\lim_{k\rightarrow \infty}\sum_{j=1}^k \int_{E_j}fdx\\
+&amp;=\sum_{j=1}^\infty \int_{E_j}fdx.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>Notice derivative is also a limit operation, so here comes the following theorem.</p>
+<p><a id="Parameter-derivatives-of-L-integral"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 4: Parameter derivatives of L integral</p>
+<p>Assume <span class="arithmatex">\(f(x,y)\)</span> is a function on <span class="arithmatex">\(E\times I\)</span>, where <span class="arithmatex">\(E\in \Omega(\mathbb{R}^n)\)</span>, <span class="arithmatex">\(I\subset \mathbb{R}\)</span> is an interval. If </p>
+<p>(i) <span class="arithmatex">\(\forall y\in I\)</span>, <span class="arithmatex">\(f(x,y)\in L(E)\)</span> with respect to <span class="arithmatex">\(x\)</span>, </p>
+<p>(ii) <span class="arithmatex">\(\forall x\in E\)</span>, <span class="arithmatex">\(f(x,y)\in C(I)\)</span> with respect to <span class="arithmatex">\(y\)</span>,</p>
+<p>(iii) <span class="arithmatex">\(\exists 0\leq F(x)\in L(E)\)</span>, such that</p>
+<div class="arithmatex">\[
+\left|\frac{\partial }{\partial y}f(x,y)\right|\leq F(x),\quad \forall (x,y)\in E\times I,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+\frac{\partial}{\partial y}\int_E f(x,y)dx=\int_E \frac{\partial}{\partial y}f(x,y)dx,\quad \forall y\in I.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="applications-of-ldct-proof_3" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall y\in I\)</span>, <span class="arithmatex">\(\exists h_k&gt;0\)</span>, s.t. <span class="arithmatex">\(y+h_k\in I\)</span>, then define</p>
+<div class="arithmatex">\[
+g_k(x,y):=\frac{f(x,y+h_k)-f(x,y)}{h_k}.
+\]</div>
+<p>which is apprarently a measurable function, and its limit function is <span class="arithmatex">\(g(x)=\frac{\partial }{\partial y}f(x,y)\)</span>. We have to find an appropriate controlling function <span class="arithmatex">\(G(x)\)</span> to control <span class="arithmatex">\(g_k\)</span>. Notice that by mean value theorem</p>
+<div class="arithmatex">\[
+g_k(x,y)=\left|\frac{\partial }{\partial y}f(x,y+\theta_k h_k)\right|\leq F(x),\quad \forall x\in E, \text{ where }\theta_k\in (0,1).
+\]</div>
+<p>So by LDCT, we have </p>
+<div class="arithmatex">\[
+\begin{align*}
+\lim_{k\rightarrow \infty}\frac{1}{h_k}\left[\int_E f(x,y+h_k)dx-\int_E f(x,y)dx\right]&amp;=\lim_{k\rightarrow \infty}\int_{E} g_k(x,y)dx=\int_{E}\lim_{k\rightarrow \infty} g_k(x,y)dx\\
+\frac{\partial}{\partial y}\int_E f(x,y)dx&amp;=\int_E \frac{\partial}{\partial y}f(x,y)dx
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p>Assume <span class="arithmatex">\(f\in L[a,b]\)</span>, prove</p>
+<div class="arithmatex">\[
+\frac{d}{dx}\int_{[a,b]}f(y)\sin(xy)dy=\int_{[a,b]}yf(y)\cos(xy)dy.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:1"><input checked="checked" id="applications-of-ldct-answer_1" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-answer_1">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Easy to see that <span class="arithmatex">\(F(x)=f(y)\sin(xy)\in L([a,b])\)</span> with respect to <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(F(x)\in C(I)\)</span> with respect to <span class="arithmatex">\(x\)</span>. Notice that</p>
+<div class="arithmatex">\[
+\left|\frac{\partial}{\partial x}F(x)\right|=|yf(y)\cos(xy)|\leq |yf(y)| \in L([a,b]\times I).
+\]</div>
+<p>So by <a href="#Parameter-derivatives-of-L-integral">Theorem for Parameter derivatives of L integral</a>, we are done.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 5: Approximation with functions</p>
+<p>Assume <span class="arithmatex">\(f\in L([a,b])\)</span>, prove: <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists\)</span></p>
+<p>(i) bounded measurable function <span class="arithmatex">\(g\)</span>, such that <span class="arithmatex">\(\int_a^b|f-g|dx&lt;\varepsilon\)</span>.</p>
+<p>(ii) continuous function <span class="arithmatex">\(h\)</span>, such that <span class="arithmatex">\(\int_a^b|f-h|dx&lt;\varepsilon\)</span>.</p>
+<p>(iii) polynomial <span class="arithmatex">\(P\)</span>, such that <span class="arithmatex">\(\int_a^b|f-P|dx&lt;\varepsilon\)</span>.</p>
+<p>(iv) step function <span class="arithmatex">\(S\)</span>, such that <span class="arithmatex">\(\int_a^b|f-S|dx&lt;\varepsilon\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="applications-of-ldct-proof_4" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="applications-of-ldct-proof_4">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Let <span class="arithmatex">\(f_k(x)=f\cdot \chi_{\{|f|\leq k\}}(x)\)</span>. Since</p>
+<div class="arithmatex">\[
+|f_k(x)-f(x)|\leq |f(x)|\in L([a,b])
+\]</div>
+<p>and <span class="arithmatex">\(\lim_{k\rightarrow\infty}|f_k-f|=0,a.e.x\in [a,b]\)</span>. By LDCT we have </p>
+<div class="arithmatex">\[
+\lim_{k\rightarrow \infty}\int_a^b |f-f_k|dx=0.
+\]</div>
+<p>So there exists <span class="arithmatex">\(K\)</span>, when <span class="arithmatex">\(k\geq K\)</span>, we have </p>
+<div class="arithmatex">\[
+\int_a^b |f-f_k|dx&lt;\varepsilon.
+\]</div>
+<p>Let <span class="arithmatex">\(g=f_{k_0}\)</span> for some <span class="arithmatex">\(k_0\geq K\)</span>.</p>
+<p>(ii) By (i), there exists bounded measurable function <span class="arithmatex">\(g\)</span> such that <span class="arithmatex">\(\int_a^b|f-g|dx&lt;\frac{\varepsilon}{2}\)</span>. Let <span class="arithmatex">\(|g(x)|\leq M\)</span>. To get a continuous function, we could use Luzin theorem, there exists continuous function <span class="arithmatex">\(h\)</span> such that <span class="arithmatex">\(m(\{h\neq g\})&lt;\frac{\varepsilon}{4M}\)</span> and <span class="arithmatex">\(\max|h(x)|\leq M\)</span>, then</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_a^b |f-h|dx&amp;\leq \int_a^b|f-g|dx+\int_a^b|g-h|dx\\
+&amp;\leq \frac{\varepsilon}{2}+2M\cdot m(\{g\neq h\})\\
+&amp;&lt;\frac{\varepsilon}{2}+2M\cdot \frac{\varepsilon}{4M}=\varepsilon.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="riemann-integral-lebesgue-integral">Riemann Integral &amp; Lebesgue Integral<a class="headerlink" href="#riemann-integral-lebesgue-integral" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Deduction</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, and we have a partition <span class="arithmatex">\(\{x_k\}_{0\leq k\leq n}\)</span> on <span class="arithmatex">\([a,b]\)</span></p>
+<div class="arithmatex">\[
+\Delta_k: a=x_0&lt;x_1&lt;\cdots&lt;x_n=b.
+\]</div>
+<p>Define <span class="arithmatex">\(M_j=\sup_{x\in [a,b]}\{f(x)\}\)</span>, <span class="arithmatex">\(n_j=\inf_{x\in [a,b]}\{f(x)\}\)</span>, and define two function</p>
+<div class="arithmatex">\[
+\begin{align*}
+M_{\Delta_k} (x)=\sum_{j=1}^n M_j \chi_{[x_{j-1},x_j]}(x)\\
+m_{\Delta_k} (x)=\sum_{j=1}^n m_j \chi_{[x_{j-1},x_j]}(x)
+\end{align*}
+\]</div>
+<p>which apparently is measurable function (simple function), and we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+m_{\Delta_k}(x)\leq f(x)\leq M_{\Delta_k} (x)
+\end{align*}
+\]</div>
+<p>So we have an important relationship</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_{[a,b]}M_{\Delta_k}(x)dx=\sum_{j=1}^n M_j m([x_{j-1},x_j])=\sum_{j=1}^n M_j \Delta x_k = \overline{S}_{\Delta_k}(f)\\
+\int_{[a,b]}m_{\Delta_k}(x)dx=\sum_{j=1}^n m_j m([x_{j-1},x_j])=\sum_{j=1}^n m_j \Delta x_k = \underline{S}_{\Delta_k}(f)
+\end{align*}
+\]</div>
+<p>Since <span class="arithmatex">\(\Delta_k\)</span> is not denumerable, so we choose to let <span class="arithmatex">\(\Delta_k\)</span> to be an equi-distant partition of <span class="arithmatex">\([a,b]\)</span> with distance <span class="arithmatex">\(N_k=2^k\)</span>:</p>
+<div class="arithmatex">\[
+\Delta_k: a=x_0^{(k)}&lt;x_1^{(k)}&lt;\cdots&lt;x_{N_k}^{(k)}=b
+\]</div>
+<p>and <span class="arithmatex">\(\Delta_{k+1}\)</span> is a refinement of <span class="arithmatex">\(\Delta_{k}\)</span>, <span class="arithmatex">\(\Vert\Delta_k\Vert\rightarrow 0 (k\rightarrow \infty)\)</span>.</p>
+<p>Since <span class="arithmatex">\(\int_{[a,b]}m_{\Delta_k}(x)dx\)</span> does not increase, <span class="arithmatex">\(\int_{[a,b]}M_{\Delta_k}(x)dx\)</span> does not decrease, we have their limit </p>
+<div class="arithmatex">\[
+\begin{align*}
+\lim_{k\rightarrow\infty}\int_{[a,b]}M_{\Delta_k}(x)dx=\lim_{k\rightarrow \infty}\overline{S}_{\Delta_k}(f) = \inf \overline{S}_{\Delta_k}(f)\\
+\lim_{k\rightarrow\infty}\int_{[a,b]}m_{\Delta_k}(x)dx=\lim_{k\rightarrow \infty}\underline{S}_{\Delta_k}(f) = \inf \underline{S}_{\Delta_k}(f)
+\end{align*}
+\]</div>
+</div>
+<p>So from what we have known in Riemann integral, </p>
+<div class="arithmatex">\[
+\begin{equation}
+f\in R[a,b]\Leftrightarrow \lim_{k\rightarrow\infty}\int_{[a,b]}m_{\Delta_k}(x)dx=\lim_{k\rightarrow\infty}\int_{[a,b]}M_{\Delta_k}(x)dx \label{R-L-1}
+\end{equation}
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Deduction 2</p>
+<p>Thus we have to use integral limit theorem. That is, define <strong>Baire upper and lower function</strong> <span class="arithmatex">\(M(x)=\lim\limits_{k\rightarrow \infty}M_{\Delta_k}(x)\)</span>, <span class="arithmatex">\(m(x)=\lim\limits_{k\rightarrow \infty}m_{\Delta_k}(x)\)</span>, which is bounded, satisfying condition of LDCT, i.e.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\lim_{k\rightarrow \infty}\int_{[a,b]} M_{\Delta_k}(x)dx=\int_{[a,b]}m(x)dx\\
+\lim_{k\rightarrow \infty}\int_{[a,b]} m_{\Delta_k}(x)dx=\int_{[a,b]}m(x)dx.
+\end{align*}
+\]</div>
+</div>
+<p>So equivalence <span class="arithmatex">\(\ref{R-L-1}\)</span> becomes</p>
+<div class="arithmatex">\[
+\begin{align*}
+f\in R[a,b]&amp;\Leftrightarrow \int_{[a,b]}m(x)dx=\int_{[a,b]}M(x)dx\\
+&amp;\Leftrightarrow \int_{[a,b]}[M(x)-m(x)]dx=0\\
+&amp;\Leftrightarrow M(x)=m(x), a.e.x\in [a,b]\quad \text{by }
+\end{align*}
+\]</div>
+<p>The last Equivalence is due to <a href="#int0-f0-ae">Example</a>.</p>
+<p>Note that about Barie functions, we have a theorem </p>
+<div class="admonition success">
+<p class="admonition-title">Baire Theorem</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, <span class="arithmatex">\(x_0\in [a,b]\)</span>, then <span class="arithmatex">\(f\)</span> is continuous at <span class="arithmatex">\(x_0\)</span>, iff <span class="arithmatex">\(M(x_0)=m(x_0)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>"<span class="arithmatex">\(\Rightarrow\)</span>".</li>
+</ul>
+<p><span class="arithmatex">\(f\)</span> is continuous at <span class="arithmatex">\(x_0\)</span>, then <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, such that </p>
+<div class="arithmatex">\[
+|f(x)-f(x_0)|&lt; \varepsilon,\quad \forall x\in O_\delta(x_0)
+\]</div>
+<p>that is, <span class="arithmatex">\(f(x_0)-\varepsilon&lt;f(x)&lt;f(x_0)+\varepsilon\)</span>。 There exists sufficient large <span class="arithmatex">\(k\)</span> such that </p>
+<div class="arithmatex">\[
+f(x_0)-\varepsilon&lt;m_{\Delta_k}(x)&lt;M_{\Delta_k}(x)&lt;f(x_0)+\varepsilon.
+\]</div>
+<ul>
+<li>"<span class="arithmatex">\(\Leftarrow\)</span>".</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Finally we have the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Riemann integral and Lebesgue integral</p>
+<p>If <span class="arithmatex">\(f\in R[a,b]\)</span>, then <span class="arithmatex">\(f\in L[a,b]\)</span>, and </p>
+<div class="arithmatex">\[
+(R)\int_a^b fdx=(L)\int_{[a,b]}fdx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_1" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Sufficient &amp; Necessary condition for Riemann integrable</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(f\in R[a,b]\)</span>, iff <span class="arithmatex">\(f\in C(a.e.x\in [a,b])\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:1"><input checked="checked" id="riemann-integral-lebesgue-integral-proof_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="riemann-integral-lebesgue-integral-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>"<span class="arithmatex">\(\Rightarrow\)</span>".</li>
+</ul>
+</div>
+</div>
+</div>
+<p><div class="question" markdown>
+<strong>Example</strong>. </p>
+<p>(i) Riemann function</p>
+<div class="arithmatex">\[
+R(x)=\begin{cases}\frac{1}{q},\quad x=\frac{p}{q}\\
+0,\quad x\in \mathbb{Q}^c
+\end{cases}.
+\]</div>
+<p>is Riemann integrable.</p>
+<p>(ii) Characteristic function of Cantor set <span class="arithmatex">\(\chi_C(x)\)</span> is Riemann integrable.</p>
+</div>
+<h3 id="generalized-riemann-integral">Generalized Riemann integral<a class="headerlink" href="#generalized-riemann-integral" title="Permanent link">&para;</a></h3>
+<p>Because genaralized Riemann integral is a limit in a sense of Cauchy, we could not say generalized Riemann integral could be extended into Lebesgue integral. </p>
+<div class="question">
+<p><strong>Example</strong>. <span class="arithmatex">\(f(x)=\sin x/x\)</span>, then their generalized integral</p>
+<div class="arithmatex">\[
+\int_0^\infty\frac{\sin x}{x}dx=\frac{\pi}{2}.
+\]</div>
+<p>but </p>
+<div class="arithmatex">\[
+\int_0^\infty \left|\frac{\sin x}{x}\right|=\infty.
+\]</div>
+<p>so <span class="arithmatex">\(f\notin L([0,\infty))\)</span>.</p>
+</div>
+<p>In another words, Lebesgue integral is an absolute convergent intergal. So we have the following relation regarding generalized integral.</p>
+<div class="admonition success">
+<p class="admonition-title">Generalized Riemann integral of non-negative function</p>
+<p>(i) Assume <span class="arithmatex">\(f(x)\geq 0\)</span>, if</p>
+<div class="arithmatex">\[
+(R)\int_0^\infty fdx=\lim_{A\rightarrow \infty}\int_0^A fdx
+\]</div>
+<p>converges, then <span class="arithmatex">\(f\in L((0,\infty))\)</span> and</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}fdx=(R)\int_0^\infty fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:1"><input checked="checked" id="generalized-riemann-integral-proof" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) First we prove that <span class="arithmatex">\(f\in L((0,\infty))\)</span>. Notice that</p>
+<div class="arithmatex">\[
+f\in R([a,b])\Rightarrow f\in L([a,b])
+\]</div>
+<p>let <span class="arithmatex">\(b\rightarrow \infty\)</span>, we get <span class="arithmatex">\(f\in L((0,\infty))\)</span>.</p>
+<p>Then we prove the equation. Notice that</p>
+<div class="arithmatex">\[
+(R)\int_0^\infty fdx=\lim_{k\rightarrow \infty}(R)\int_0^kfdx=\lim_{k\rightarrow \infty}(L)\int_{(0,k)}fdx=\lim_{k\rightarrow \infty}\int_{(0,\infty)}f(x)\chi_{(0,k)}(x)dx
+\]</div>
+<p>Define <span class="arithmatex">\(f_k(x)=f(x)\chi_{(0,k)}(x)\)</span>, then <span class="arithmatex">\(f_k \nearrow\)</span>, satisfy condition of Levi Theorem, so</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}fdx=\lim_{k\rightarrow \infty}(L)\int_{(0,\infty)}f_kdx=(R)\int_0^\infty fdx
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: Generalized Riemann integral</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is bounded on finite intervals and </p>
+<div class="arithmatex">\[
+(R)\int_0^\infty |f|dx=\lim_{A\rightarrow \infty}\int_0^A |f|dx
+\]</div>
+<p>converges, then <span class="arithmatex">\(f\in L((0,\infty))\)</span> and</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}fdx=(R)\int_0^\infty fdx.
+\]</div>
+<p>Note that we can prove in a similar way that</p>
+<div class="arithmatex">\[
+(L)\int_{(-\infty,+\infty)}fdx=(R)\int_{-\infty}^{+\infty} fdx.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:1"><input checked="checked" id="generalized-riemann-integral-proof_1" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="generalized-riemann-integral-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This function might not be non-negative, so we should use LDCT. That is, Define <span class="arithmatex">\(f_k(x)=f(x)\chi_{(0,k)}(x)\)</span>, which converges to <span class="arithmatex">\(f(x)\)</span>, and</p>
+<div class="arithmatex">\[
+|f_k(x)|\leq |f(x)|
+\]</div>
+<p>while the latter one is L integrable, so by LDCT, we have <span class="arithmatex">\(f\in L((0,\infty))\)</span> and</p>
+<div class="arithmatex">\[
+(L)\int_{(0,\infty)}f dx=\lim_{k\rightarrow \infty}(L)\int_{(0,k)}f_kdx=\lim_{k\rightarrow \infty} (R)\int_0^k f_kdx = \lim_{k\rightarrow \infty} (R)\int_0^k fdx = \int_0^\infty fdx
+\]</div>
+</div>
+</div>
+</div>
+<p>Theoretically speaking, the Riemann integral of <strong>conditional convergent function</strong> could not be extended to Lebesgue integral.</p>
+<h2 id="multiple-lebesgue-integral">Multiple Lebesgue integral<a class="headerlink" href="#multiple-lebesgue-integral" title="Permanent link">&para;</a></h2>
+<p>This part we aim to find whether the following equation holds</p>
+<div class="arithmatex">\[
+\begin{align}
+\int_{\mathbb{R}^p\times \mathbb{R}^q}f(x,y)dxdy=\int_{\mathbb{R}^q}\left[\int_{\mathbb{R}^p}f(x,y)dx\right]dy\label{multiple-integral}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(x\in \mathbb{R}^p\)</span>, <span class="arithmatex">\(y\in \mathbb{R}^q\)</span>.</p>
+<p>Firstly, we consider characteristic functions.</p>
+<div class="admonition info">
+<p class="admonition-title">Deduction 1</p>
+<p>Assume <span class="arithmatex">\(f=\chi_E\)</span>, then equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> becomes </p>
+<div class="arithmatex">\[
+\begin{align}
+m(E)=\int_{\mathbb{R}^p\times \mathbb{R}^q}\chi_E(x,y) dxdy=\int_{\mathbb{R}^q}\left[\int_{\mathbb{R}^p}\chi_E (x,y)dx\right]dy.\label{mid-equation-integral}
+\end{align}
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Cross Section</p>
+<p>Assume <span class="arithmatex">\(E\in \Omega(\mathbb{R}^{p+q})\)</span>, <span class="arithmatex">\(\forall y\in \mathbb{R}^q\)</span>, then define</p>
+<div class="arithmatex">\[
+E^y:=\{x\in \mathbb{R}^p| (x,y)\in E\}
+\]</div>
+<p>the cross section of <span class="arithmatex">\(E\)</span> at <span class="arithmatex">\(y\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Deduction 2</p>
+<p>With the above definition, check that <span class="arithmatex">\(\chi_E(x,y)=1\Leftrightarrow (x,y)\in E\)</span>, i.e. <span class="arithmatex">\(x\in \{x\in \mathbb{R}^p: (x,y)\in E\}=E^y\)</span>. So we could have an equivalent relation</p>
+<div class="arithmatex">\[
+\chi_E(x,y)=\chi_{E^y}(x).
+\]</div>
+<p>Thus equation <span class="arithmatex">\(\ref{mid-equation-integral}\)</span> becomes </p>
+<div class="arithmatex">\[
+m(E)=\int_{\mathbb{R}^q}\left[\int_{\mathbb{R}^p}\chi_{E^y} (x)dx\right]dy=\int_{\mathbb{R}^q}m(E^y)dy.
+\]</div>
+</div>
+<p>Before we begin proof, we have to give some properties of the cross section.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties about cross section</p>
+<p>Assume <span class="arithmatex">\(A,B,\{E_k\}\)</span> are subsets of <span class="arithmatex">\(\mathbb{R}^{p+q}\)</span>, <span class="arithmatex">\(\forall y\in \mathbb{R}^q\)</span>, then </p>
+<p>(i) If <span class="arithmatex">\(A\subset B\)</span>, then <span class="arithmatex">\(A^y\subset B^y\)</span>.</p>
+<p>(ii) <span class="arithmatex">\((\bigcup_k E_k)^y=\bigcup_k E_k^y\)</span>, <span class="arithmatex">\((\bigcap_k E_k)^y=\bigcap_k E_k^y\)</span>.</p>
+<p>(iii) <span class="arithmatex">\((A-B)^y=A^y-B^y\)</span>.</p>
+<p>(iv) If <span class="arithmatex">\(E_k \nearrow A\)</span>, then <span class="arithmatex">\((E_k)^y\nearrow A^y\)</span>; If <span class="arithmatex">\(E_k \searrow A\)</span>, then <span class="arithmatex">\((E_k)^y\searrow A^y\)</span></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for Cross Section</p>
+<p>Assume <span class="arithmatex">\(E\subset \mathbb{R}^{p+q}\)</span> is measurable, then</p>
+<p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(E^y\)</span> is measurable with respect to <span class="arithmatex">\(y\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(m(E^y)\)</span> is a non-negative function on <span class="arithmatex">\(\mathbb{R}^q\)</span> and </p>
+<div class="arithmatex">\[
+\int_{\mathbb{E}^q}m(E^y)dy=m(E).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:1"><input checked="checked" id="multiple-lebesgue-integral-proof" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="multiple-lebesgue-integral-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>(i) <span class="arithmatex">\(E=I\times J\)</span>, where <span class="arithmatex">\(I\subset \mathbb{R}^p\)</span>, <span class="arithmatex">\(J\subset \mathbb{R}^q\)</span> are half-open cubes. </li>
+</ul>
+<p>So <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, we have</p>
+<div class="arithmatex">\[
+E^y=\begin{cases}
+I,\quad y\in J\\
+\varnothing,\quad y\notin J
+\end{cases}
+\]</div>
+<p>meaning <span class="arithmatex">\(E^y\)</span> is measurable. Its measure (a function of <span class="arithmatex">\(y\)</span>)</p>
+<div class="arithmatex">\[
+m(E^y)=m(I)\cdot \chi_{J}(y)
+\]</div>
+<p>So by <a href="../Lebesgue_Measure/#measure-of-direct-product">Measure of direct product</a> (the 3<sup>rd</sup> "="), its integral</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_{\mathbb{R}^q}m(E^y)dy&amp;=\int_{\mathbb{R}^q}m(I)\chi_J (y)dy\\
+&amp;=m(I)m(J)\\
+&amp;=m(I\times J)=m(E).
+\end{align*}
+\]</div>
+<ul>
+<li>(ii) <span class="arithmatex">\(E\)</span> is a bounded open set on <span class="arithmatex">\(\mathbb{R}^{p+q}\)</span>. So by configuration of open sets, we have</li>
+</ul>
+<div class="arithmatex">\[
+E=\bigcup_{k=1}^\infty I_k, \quad I_k\subset \mathbb{R}^{p+q}, \text{ &amp; } E_i\cap E_j=\varnothing.
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+E^y=\left(\bigcup_{k=1}^\infty I_k\right)^y = \bigcup_{k=1}^\infty I_k^y
+\]</div>
+<p>which is measurable. Then by denumerable additivity</p>
+<div class="arithmatex">\[
+\begin{align}
+m(E^y)=\sum_{k=0}^\infty m(I_k^y)\label{Ey}
+\end{align}
+\]</div>
+<p>is a non-negative measurable function. Thus by <a href="#Series-form-of-Levi-Theorem">Series form of Levi Theorem</a> (the 3<sup>rd</sup> "=") and equation <span class="arithmatex">\(\ref{Ey}\)</span> (the 4<sup>th</sup> "=")</p>
+<div class="arithmatex">\[
+\begin{align*}
+m(E)&amp;=\sum_{k=1}^\infty m(I_k)\\
+&amp;=\sum_{k=1}^\infty \int_{\mathbb{R}^q} m(I_k^y)dy\quad\text{by (i)}\\
+&amp;=\int_{\mathbb{R}^q} \sum_{k=1}^\infty m(I_k^y)dy \\
+&amp;=\int_{\mathbb{R}^q} m(E^y)dy 
+\end{align*}
+\]</div>
+<ul>
+<li>(iii) <span class="arithmatex">\(E\)</span> is a bounded <span class="arithmatex">\(G_\delta\)</span> set.</li>
+</ul>
+<p>That is, <span class="arithmatex">\(E=\bigcap_{k=1}^\infty G_k\)</span>, where <span class="arithmatex">\(G_k\)</span> are mutually disjoint open sets. Here we let <span class="arithmatex">\(G_k\)</span> monotonically decrease (increase makes no sense for intersection), i.e. <span class="arithmatex">\(G_1\supset G_2\supset \cdots\)</span>, so the cross section</p>
+<div class="arithmatex">\[
+E^y=\bigcap_{k=1}^\infty G_k^y, \quad G_1^y\supset G_2^y\supset\cdots
+\]</div>
+<p>so by <a href="../Lebesgue_Measure/#limit-operation">limit operation of measure</a>, its measure (a function of <span class="arithmatex">\(y\)</span>)</p>
+<div class="arithmatex">\[
+m(E^y)=m(\lim_{k\rightarrow \infty}G_k^y)=\lim_{k\rightarrow \infty}m(G_k^y)
+\]</div>
+<p>meaning it could be expressed as a form of limit of measurable functions. So we could use LDCT, if we check that </p>
+<div class="arithmatex">\[
+|m(G_k^y)|\leq |m[(I\times J)^y]|=m(I)\chi_J(x)\in L(\mathbb{R}^q).
+\]</div>
+<p>So by LDCT, </p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_{\mathbb{R}^q}m(E^y)dy&amp;=\lim_{k\rightarrow \infty}\int_{\mathbb{R}^q}m(G_k^y)dy\\
+&amp;=\lim_{k\rightarrow \infty}m(G_k)\quad \text{by (ii)}\\
+&amp;=m(E)
+\end{align*}
+\]</div>
+<p>(iv) <span class="arithmatex">\(E\)</span> is a zeo-measure set in <span class="arithmatex">\(\mathbb{R}^{p+q}\)</span>.</p>
+<p>So by [Approximation me]</p>
+<p>(v) <span class="arithmatex">\(E\)</span> is a bounded measurable set.</p>
+<p>(vi) <span class="arithmatex">\(E\)</span> is a general measurable set.</p>
+</div>
+</div>
+</div>
+<h3 id="tonelli-theorem">Tonelli Theorem<a class="headerlink" href="#tonelli-theorem" title="Permanent link">&para;</a></h3>
+<p>Then we consider <span class="arithmatex">\(f\)</span> is a measurable function.</p>
+<div class="admonition success">
+<p class="admonition-title">Tonelli Theorem</p>
+<p>Assume <span class="arithmatex">\(f(x,y)\)</span> is a non-negative measurable function with <span class="arithmatex">\((x,y)\in \mathbb{R}^p\times \mathbb{R}^q\)</span>, then </p>
+<p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(f(x,y)\)</span>, as a function of <span class="arithmatex">\(x\in \mathbb{R}^q\)</span> is non-negative measurable.</p>
+<p>(ii) <span class="arithmatex">\(F(y):=\int_{\mathbb{R}^p}f(x,y)dx\)</span> is non-negative measurable on <span class="arithmatex">\(\mathbb{R}^q\)</span>, and equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> holds.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:1"><input checked="checked" id="tonelli-theorem-proof" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) <span class="arithmatex">\(f\)</span> is a simple function, which holds naturally, bacause Linearity of Lebesgue integral.</p>
+<p>(ii) <span class="arithmatex">\(f\)</span> is a non-negative measurable funcion. Notice that</p>
+<div class="arithmatex">\[
+f(x)=\lim_{k\rightarrow \infty}\varphi_k(x,y)
+\]</div>
+<p>where <span class="arithmatex">\(\varphi_k\)</span> are non-negative simple functions, and monotonically increase.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f\)</span> is a measurable function on <span class="arithmatex">\(E\)</span>, then </p>
+<div class="arithmatex">\[
+\int_E |f|dx=\int_{(0,\infty)}d_f(\alpha)d\alpha
+\]</div>
+<p>where <span class="arithmatex">\(d_f(\alpha)=m(\{f&gt;\alpha\})\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:1"><input checked="checked" id="tonelli-theorem-proof_1" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="tonelli-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\int_{(0,\infty)}d_f(\alpha)d\alpha&amp;=\int_{(0,\infty)}m(\{f&gt;\alpha\})d\alpha\\
+&amp;=\int_{0,\infty}\left[\int_E \chi_{\{f&gt;\alpha\}}(x)dx\right]d\alpha\\
+&amp;=\int_E dx\int_{(0,\infty)} \left[\int_E \chi_{\{f&gt;\alpha\}}(x)d\alpha\right]\quad \text{by Tonelli Theorem}\\
+&amp;=\int_E dx \int_{(0,|f|)} \left[\int_E \chi_{\{f&gt;\alpha\}}(x)d\alpha\right]\\
+&amp;=\int_E |f|dx.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h3 id="fubini-theorem">Fubini Theorem<a class="headerlink" href="#fubini-theorem" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Fubini Theorem</p>
+<p>Assume <span class="arithmatex">\(f(x,y)\)</span> is a L integrable function with <span class="arithmatex">\((x,y)\in \mathbb{R}^p\times \mathbb{R}^q\)</span>, then </p>
+<p>(i) <span class="arithmatex">\(\forall a.e.y\in \mathbb{R}^q\)</span>, <span class="arithmatex">\(f(x,y)\)</span>, as a function of <span class="arithmatex">\(x\in \mathbb{R}^q\)</span> is L integrable.</p>
+<p>(ii) <span class="arithmatex">\(F(y):=\int_{\mathbb{R}^p}f(x,y)dx\)</span> is L integrable on <span class="arithmatex">\(\mathbb{R}^q\)</span>, and equation <span class="arithmatex">\(\ref{multiple-integral}\)</span> holds.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="38:1"><input checked="checked" id="fubini-theorem-proof" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice that <span class="arithmatex">\(f(x,y)=f(x,y)^+-f(x,y)^-\)</span>, which are non-negative measurable function. So by Tonelli Theorem, we are done.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Calculate L integral <span class="arithmatex">\((0&lt; a &lt; b)\)</span></p>
+<div class="arithmatex">\[
+I=\int_{(0,\infty)}\frac{\sin x}{x}[e^{-ax}-e^{-bx}]dx
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="39:1"><input checked="checked" id="fubini-theorem-answer" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="fubini-theorem-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice that</p>
+<div class="arithmatex">\[
+I=\int_0^\infty \sin x dx\int_{a}^b e^{-xy}dy
+\]</div>
+<p>Check whether <span class="arithmatex">\(f=\sin x e^{-xy}\)</span> is L integrable, i.e. for <span class="arithmatex">\(|f|\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_{(0,\infty)}\int_a^b |f|dxdy&amp;\leq \int_{(0,\infty)}\int_a^b e^{-xy}dxdy\\
+&amp;=\int_a^b dy\int_{(0,\infty)}e^{-xy}dx\quad\text{by Tonelli Theorem}\\
+&amp;=\int_a^b \frac{1}{x}dx=\ln (b/a)&lt;\infty
+\end{align*}
+\]</div>
+<p>which is L integrable. So by Fubini Theorem,</p>
+<div class="arithmatex">\[
+\begin{align*}
+I&amp;=\int_a^b dy\int_{(0,\infty)}e^{-xy}\sin x dx\\
+&amp;=\int_a^b \frac{1}{1+y^2}dy=\arctan b-\arctan a
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. prove</p>
+<div class="arithmatex">\[
+\int_{(0,\infty)^2}e^{-xy}\sin x\sin ydxdy=\int_{(0,\infty)}\sin y dy\int_{(0,\infty)}e^{-xy}\sin xdx=\int_{(0,\infty)}\sin x dx\int_{(0,\infty)}e^{-xy}\sin ydy
+\]</div>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Measurable_Func/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Measurable Function">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Measurable Function
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Differential_Integral/" class="md-footer__link md-footer__link--next" aria-label="Next: Differential &amp; Integral">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Differential & Integral
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024~2025 Maplefaith All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Maplefaith/Maplefaith.github.io" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<XcTu291@gmail.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/apply-numbering.js"></script>
+      
+        <script src="../../../javascripts/pdf-viewer.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+      
+    
+  <script src="../../../assets/javascripts/custom.4e50d00f.min.js"></script>
+
+  </body>
+</html>
