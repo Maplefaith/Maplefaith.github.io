@@ -1846,6 +1846,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#condition-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition Probability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathematical-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Expectation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3802,6 +3820,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#condition-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition Probability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathematical-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Expectation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3974,7 +4010,70 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 <p>(ii) <span class="arithmatex">\(F_\xi\)</span> is right continuous.</p>
 <p>(iii) <span class="arithmatex">\(\lim\limits_{x\rightarrow -\infty}F_\xi(x)=0,\quad \lim\limits_{x\rightarrow +\infty}F_\xi(x)=1\)</span>.</p>
 </div>
-<p>We care more about distribution rather than random variables. Because, only defined on the same probability space, random variable <span class="arithmatex">\(\xi,\eta\)</span> could chances to equal. But defined on different probability space, we could see their resemblence by checking their distribution variables, since both its <em>demain of definition</em> and <em>range</em> could be measured on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p>We care more about distribution rather than random variables. Because, only defined on the same probability space, random variable <span class="arithmatex">\(\xi,\eta\)</span> could chances to equal. But defined on different probability space, we could see their resemblance by checking their distribution variables, since both its <em>demain of definition</em> and <em>range</em> could be measured on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<h2 id="condition-probability">Condition Probability<a class="headerlink" href="#condition-probability" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definitions of Independence</p>
+<p>Events <span class="arithmatex">\(A, B\)</span> is said to be independent, if</p>
+<div class="arithmatex">\[
+\mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B).
+\]</div>
+<p>Events sequence <span class="arithmatex">\(\{A_n\}_{n\geq 1}\)</span> are said to be independent mutually, if <span class="arithmatex">\(\forall\)</span> finite number of events <span class="arithmatex">\(\{A_{n_j}\}_{1\leq j\leq k}\)</span>,    </p>
+<div class="arithmatex">\[
+\mathbb{P}\left(\bigcap_{j=1}^k A_{n_j}\right)=\prod_{j=1}^k \mathbb{P}(A_{n_j}).
+\]</div>
+<p>Random variables <span class="arithmatex">\(\{\xi_i\}_{1\leq i\leq n}\)</span> are said to be independent mutually, if <span class="arithmatex">\(\forall x_i\in \mathbb{R} (1\leq i\leq n)\)</span>, </p>
+<div class="arithmatex">\[
+\mathbb{P}(\xi_1\leq x_1,\cdots, \xi_n\leq x_n)=\prod_{i=1}^n \mathbb{P}(\xi_i\leq x_i).
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definitions of Conditional Probability</p>
+<p>Assume <span class="arithmatex">\((\Omega, \mathscr{F}, \mathbb{P})\)</span> is a probability space, <span class="arithmatex">\(A,B\in \mathscr{F}\)</span>, and <span class="arithmatex">\(\mathbb{P}(A)&gt;0\)</span>. Conditional probability of <span class="arithmatex">\(B\)</span> on <span class="arithmatex">\(A\)</span> is </p>
+<div class="arithmatex">\[
+\mathbb{P}(B|A):=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(A)}.
+\]</div>
+<p>which is a mapping <span class="arithmatex">\(B\mapsto \mathbb{P}(B|A)\)</span>, is a probability on <span class="arithmatex">\((\Omega, \mathscr{F})\)</span>, and a probability on a shrinked space <span class="arithmatex">\((A,A\cap \mathscr{F})\)</span>, where <span class="arithmatex">\(A\cap \mathscr{F}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra on <span class="arithmatex">\(A\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Conditional Probability</p>
+<p>(i) <span class="arithmatex">\(\mathbb{P}((C|B)|A)=\mathbb{P}(C|A\cap B)\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Total Probability Formula</p>
+<p>Assume events <span class="arithmatex">\(\{\Omega_n\}_{n\geq 1}\subset \mathscr{F}\)</span> is a partition of <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(\forall A\in \mathscr{F}\)</span>, </p>
+<div class="arithmatex">\[
+\mathbb{P}(A)=\sum_{n\geq 1}\mathbb{P}(A\cap \Omega_n)=\sum_{n\geq 1}\mathbb{P}(A|\Omega_n)\mathbb{P}(\Omega_n).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="condition-probability-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="condition-probability-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Since <span class="arithmatex">\(A=A\cap \Omega=\bigcup_{n\geq 1}(A\cap\Omega_n)\)</span>, so by sigma-additivity</p>
+<div class="arithmatex">\[
+\mathbb{P}(A)=\mathbb{P}\left(\bigcup_{n\geq 1}(A\cap\Omega_n)\right)=\sum_{n\geq 1}\mathbb{P}(A\cap\Omega_n)=\sum_{n\geq 1}\mathbb{P}(A|\Omega_n)\mathbb{P}(\Omega_n).
+\]</div>
+</div>
+</div>
+</div>
+<p>If <span class="arithmatex">\(A\)</span> happens, then we could calculate probability of every categories <span class="arithmatex">\(\Omega_n\)</span></p>
+<div class="arithmatex">\[
+\mathbb{P}(\Omega_n|A)=\frac{\mathbb{P}(A|\Omega_n)\mathbb{P}(\Omega_n)}{\mathbb{P}(A)}.
+\]</div>
+<p>where <span class="arithmatex">\(\mathbb{P}(A)\)</span> is calculated using Total probability formula.</p>
+<h2 id="mathematical-expectation">Mathematical Expectation<a class="headerlink" href="#mathematical-expectation" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definitions</p>
+<p>(i) Assume <span class="arithmatex">\(\xi\)</span> is asimple random variable</p>
+<div class="arithmatex">\[
+\xi=\sum_{x\in R(\xi)}x\cdot 1_{\{\xi=x\}}
+\]</div>
+<p>define its <strong>mathematical expectation</strong></p>
+<div class="arithmatex">\[
+\mathbb{E}\xi=\sum_{x\in R(\xi)}x\mathbb{P}(\xi=x).
+\]</div>
+<p>Actually, it is Lebesgue integral of simple function.</p>
+</div>
 
 
 
