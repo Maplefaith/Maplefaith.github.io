@@ -3952,18 +3952,20 @@
 <p><strong>Example</strong>. Assume <span class="arithmatex">\(\Omega=[0,1]\)</span>, <span class="arithmatex">\(\mathscr{F}\)</span> is a Borel set <span class="arithmatex">\(\mathscr{B}([0,1])\)</span>. For <span class="arithmatex">\(A\in \mathscr{F}\)</span>, <span class="arithmatex">\(\mathbb{P}(A)=|A|\)</span>, this is exactly Lebesgue measure of <span class="arithmatex">\(A\)</span>. Then show that <span class="arithmatex">\((\Omega, \mathscr{F}, \mathbb{P})\)</span> is a probability space, also called <strong>Geometric Probability Spcae</strong>.</p>
 </div>
 <h2 id="random-variable">Random Variable<a class="headerlink" href="#random-variable" title="Permanent link">&para;</a></h2>
+<p>This part we have a similar path as we have in <a href="../../Real_Analysis/Measurable_Func/">measurable function</a>, but just gives specific definitions.</p>
+<p>Simply speaking, random variables is a measurable function on <span class="arithmatex">\(\Omega\)</span>, to endow basic events with a number. </p>
 <div class="admonition info">
 <p class="admonition-title">Definition of Random Variable</p>
 <p>Assume <span class="arithmatex">\(\{\Omega, \mathscr{F}, \mathbb{P}\}\)</span> is a probability space. <span class="arithmatex">\(\xi:\Omega\rightarrow \mathbb{R}\)</span>, a function defined on <span class="arithmatex">\(\Omega\)</span>, is called <strong>Random Variable</strong>, if <span class="arithmatex">\(\forall \alpha\in \mathbb{R}\)</span></p>
 <div class="arithmatex">\[
 \{\xi\leq \alpha\}:=\{\omega\in \Omega: \xi(\omega)\leq \alpha\}\in \mathscr{F}.
 \]</div>
-<p>Note: for a random variable <span class="arithmatex">\(\xi\)</span>, we say <span class="arithmatex">\(\xi\in A\)</span>, if <span class="arithmatex">\(\forall \omega\in \Omega\)</span>, <span class="arithmatex">\(\xi(\omega)\in A\)</span>.</p>
+<p>Note: for a random variable <span class="arithmatex">\(\xi\)</span>, we say <span class="arithmatex">\(\xi\in A\)</span>, if <span class="arithmatex">\(\forall \omega\in \Omega\)</span>, <span class="arithmatex">\(\xi(\omega)\in A\)</span>. If <span class="arithmatex">\(\mathbb{P}(\xi\in A)=1\)</span> (usually <span class="arithmatex">\(&lt;1\)</span>), then we call <span class="arithmatex">\(\xi\)</span> is distributed on <span class="arithmatex">\(A\)</span>. </p>
 </div>
 <p>Readers could check this definition with <a href="../../Real_Analysis/Measurable_Func/">measurable functions</a> and its equivalent definitions. Here measurability of <span class="arithmatex">\(\xi\)</span> means that information of a <span class="arithmatex">\(\sigma\)</span>-algebra is enough to find <span class="arithmatex">\(\xi\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Properties of Random Variable</p>
-<p>(i) random variable of <span class="arithmatex">\(\sigma\)</span>-algebra constructs a linear space. Note its addition is similar to proof in measurable function.</p>
+<p>(i) random variable of <span class="arithmatex">\(\sigma\)</span>-algebra constructs a <strong>linear space</strong>. Note its addition is similar to proof in measurable function.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="random-variable-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="random-variable-proof">Proof</label></div>
 <div class="tabbed-content">
@@ -3994,7 +3996,13 @@ A^c,\quad &amp;\alpha\in[0,1),\\
 \]</div>
 </div>
 <p>Notice here we use <span class="arithmatex">\(\{\xi\leq \alpha\}\)</span> rather than <span class="arithmatex">\(\{\xi&gt;\alpha\}\)</span>, because of practical meaning of the former one.</p>
-<p>We just have a similar path as we have in measurable function, but just gives specific definitions.</p>
+<div class="admonition info">
+<p class="admonition-title">Definitions of discrete random variables</p>
+<p>If random variable <span class="arithmatex">\(\xi\)</span> is distributed on a set with denumerable elements, i.e. the range of <span class="arithmatex">\(\xi\)</span> is denumerable, then we call <span class="arithmatex">\(\xi\)</span> <strong>discrete random variable</strong>, whose range is denoted by <span class="arithmatex">\(R(\xi)\)</span>. If <span class="arithmatex">\(R(\xi)\)</span> has finite elements, then we call <span class="arithmatex">\(\xi\)</span> <strong>simple random variable</strong>. In terms of form, we have</p>
+<div class="arithmatex">\[
+\xi=\sum_{x\in R(\xi)}x 1_{\{\xi=x\}}.
+\]</div>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Definition of Distribution function</p>
 <p>Assume <span class="arithmatex">\(\xi\)</span> is a random variable, then <span class="arithmatex">\(\forall x\in \mathbb{R}\)</span>, </p>
@@ -4007,10 +4015,24 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 <p class="admonition-title">Properties of Distribution Function</p>
 <p>Assume <span class="arithmatex">\(F_\xi\)</span> is a distribution function, then</p>
 <p>(i) <span class="arithmatex">\(F_\xi\)</span> monotonically increases,</p>
-<p>(ii) <span class="arithmatex">\(F_\xi\)</span> is right continuous.</p>
+<p>(ii) <span class="arithmatex">\(F_\xi\)</span> is right continuous,</p>
 <p>(iii) <span class="arithmatex">\(\lim\limits_{x\rightarrow -\infty}F_\xi(x)=0,\quad \lim\limits_{x\rightarrow +\infty}F_\xi(x)=1\)</span>.</p>
 </div>
-<p>We care more about distribution rather than random variables. Because, only defined on the same probability space, random variable <span class="arithmatex">\(\xi,\eta\)</span> could chances to equal. But defined on different probability space, we could see their resemblance by checking their distribution variables, since both its <em>demain of definition</em> and <em>range</em> could be measured on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<div class="question">
+<p><strong>Example</strong>.  (<strong>Bernoulli Distribution</strong>). A random experiment with only two results are usually called <strong>Bernoulli Experiment</strong>. Denote the success probability of an event <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(\mathbb{P}(A)=p\)</span>, counterpart is <span class="arithmatex">\(q=1-p\)</span>, so the index of success <span class="arithmatex">\(\xi\)</span> is a random variable with distribution</p>
+<div class="arithmatex">\[
+\left(\begin{array}{ccc}
+\xi &amp; 0&amp;1\\
+\mathbb{P} &amp;q &amp;p
+\end{array}\right).
+\]</div>
+<p>The index <span class="arithmatex">\(1_A\)</span> of an event <span class="arithmatex">\(A\)</span> is Bernoulli distribution. Any Bernoulli distribution must be an index of an event.</p>
+</div>
+<p>We care more about distribution rather than random variables. Because, only defined on the same probability space, random variable <span class="arithmatex">\(\xi,\eta\)</span> could chances to equal. But defined on different probability space, we could see their resemblance by checking their distribution variables, since both its <em>demain of definition</em> <span class="arithmatex">\((R(\xi))\)</span>and <em>range</em> <span class="arithmatex">\((F_\xi(x))\)</span> could be measured on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Same distribution</p>
+<p>Two random variables (might be defined on different probability space) <span class="arithmatex">\(\xi\)</span> and <span class="arithmatex">\(\eta\)</span> are called to have <strong>Same Distribution</strong>, if their distribution functions are of the same.</p>
+</div>
 <h2 id="condition-probability">Condition Probability<a class="headerlink" href="#condition-probability" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Definitions of Independence</p>
@@ -4033,46 +4055,122 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 <div class="arithmatex">\[
 \mathbb{P}(B|A):=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(A)}.
 \]</div>
-<p>which is a mapping <span class="arithmatex">\(B\mapsto \mathbb{P}(B|A)\)</span>, is a probability on <span class="arithmatex">\((\Omega, \mathscr{F})\)</span>, and a probability on a shrinked space <span class="arithmatex">\((A,A\cap \mathscr{F})\)</span>, where <span class="arithmatex">\(A\cap \mathscr{F}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra on <span class="arithmatex">\(A\)</span>.</p>
+<p>which is a mapping <span class="arithmatex">\(B\mapsto \mathbb{P}(B|A)\)</span>, is a probability on <span class="arithmatex">\((\Omega, \mathscr{F})\)</span>, and also a probability on a shrinked space <span class="arithmatex">\((A,A\cap \mathscr{F})\)</span>, where <span class="arithmatex">\(A\cap \mathscr{F}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra on <span class="arithmatex">\(A\)</span>.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Properties of Conditional Probability</p>
-<p>(i) <span class="arithmatex">\(\mathbb{P}((C|B)|A)=\mathbb{P}(C|A\cap B)\)</span>.</p>
+<p>(i) Random variables <span class="arithmatex">\(\xi_1,\cdots,\xi_n\)</span> are mutually independent, iff <span class="arithmatex">\(\forall x_i\leq y_i, 1\leq i\leq n\)</span>, </p>
+<div class="arithmatex">\[
+\mathbb{P}(x_1&lt;\xi_1\leq y_1,\cdots,x_n&lt;\xi_n\leq y_n)=\mathbb{P}(x_1&lt;\xi_1\leq y_1)\cdots\mathbb{P}(x_n&lt;\xi_n\leq y_n).
+\]</div>
+<p>(ii) If the random variables are discrete, then they are independent iff</p>
+<div class="arithmatex">\[
+\mathbb{P}(\xi_1=x_1,\cdots,\xi_n=x_n)=\mathbb{P}(\xi_1=x_1)\cdots\mathbb{P}(\xi_n=x_n).
+\]</div>
+<p>(iii) <span class="arithmatex">\(\mathbb{P}((C|B)|A)=\mathbb{P}(C|A\cap B)\)</span>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Definition of Total Probability Formula</p>
+<div class="question">
+<p><strong>Example</strong>. <em>Toss coin infinite times could be achieved</em>  is equivalent to <em>uniform distribution could be achieved</em>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="condition-probability-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="condition-probability-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(\Rightarrow\)</span>. If random variable <span class="arithmatex">\(\xi\)</span> defined on probability space <span class="arithmatex">\((\Omega, \mathscr{F},\mathbb{P})\)</span> is uniformly distributed on <span class="arithmatex">\([0,1]\)</span>. Then denote its <span class="arithmatex">\(n\)</span> bit of number as <span class="arithmatex">\(\xi_n\)</span>, with <span class="arithmatex">\(\xi_n \in {0,1}\)</span>. Then the first <span class="arithmatex">\(n\)</span> bits number could fall into an interval with length <span class="arithmatex">\(\frac{1}{2^n}\)</span>, i.e.</li>
+</ul>
+<div class="arithmatex">\[
+\mathbb{P}(\xi_1=a_1,\cdots,\xi_n=a_n)=\frac{1}{2^n}
+\]</div>
+<p>which means <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> are mutually independent, demonstrating that it described coin-toss problem.</p>
+<ul>
+<li><span class="arithmatex">\(\Leftarrow\)</span>. If random variables <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> defined on <span class="arithmatex">\((\Omega, \mathscr{F},\mathbb{P})\)</span> which are mutually independent. Then define</li>
+</ul>
+<div class="arithmatex">\[
+\xi:=\sum_{n=1}^\infty\frac{\xi_n}{2^n}.
+\]</div>
+<p>Then <span class="arithmatex">\(\xi\)</span> is a binary number. Then <span class="arithmatex">\(\forall n\geq 1, 0\leq k\leq 2^n-1\)</span>, we have</p>
+<div class="arithmatex">\[
+\mathbb{P}(\xi\in [\frac{k}{2^n},\frac{k+1}{2^n}])=\frac{1}{2^n},
+\]</div>
+<p>meaning <span class="arithmatex">\(\xi\)</span> is a uniform distribution.
+<p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Total Probability Formula</p>
 <p>Assume events <span class="arithmatex">\(\{\Omega_n\}_{n\geq 1}\subset \mathscr{F}\)</span> is a partition of <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(\forall A\in \mathscr{F}\)</span>, </p>
 <div class="arithmatex">\[
 \mathbb{P}(A)=\sum_{n\geq 1}\mathbb{P}(A\cap \Omega_n)=\sum_{n\geq 1}\mathbb{P}(A|\Omega_n)\mathbb{P}(\Omega_n).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="condition-probability-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="condition-probability-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="condition-probability-proof_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="condition-probability-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Since <span class="arithmatex">\(A=A\cap \Omega=\bigcup_{n\geq 1}(A\cap\Omega_n)\)</span>, so by sigma-additivity</p>
 <div class="arithmatex">\[
 \mathbb{P}(A)=\mathbb{P}\left(\bigcup_{n\geq 1}(A\cap\Omega_n)\right)=\sum_{n\geq 1}\mathbb{P}(A\cap\Omega_n)=\sum_{n\geq 1}\mathbb{P}(A|\Omega_n)\mathbb{P}(\Omega_n).
 \]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Bayes Formula</p>
 <p>If <span class="arithmatex">\(A\)</span> happens, then we could calculate probability of every categories <span class="arithmatex">\(\Omega_n\)</span></p>
 <div class="arithmatex">\[
 \mathbb{P}(\Omega_n|A)=\frac{\mathbb{P}(A|\Omega_n)\mathbb{P}(\Omega_n)}{\mathbb{P}(A)}.
 \]</div>
-<p>where <span class="arithmatex">\(\mathbb{P}(A)\)</span> is calculated using Total probability formula.</p>
+<p>where <span class="arithmatex">\(\mathbb{P}(A)\)</span> is calculated using Total probability formula. The above formula is called <strong>Bayes Formula</strong>.</p>
+</div>
 <h2 id="mathematical-expectation">Mathematical Expectation<a class="headerlink" href="#mathematical-expectation" title="Permanent link">&para;</a></h2>
+<p>This part we also have a similar path as we have in <a href="../../Real_Analysis/Lebesgue_Integral/">Lebesgue Integral</a>.</p>
 <div class="admonition info">
-<p class="admonition-title">Definitions</p>
-<p>(i) Assume <span class="arithmatex">\(\xi\)</span> is asimple random variable</p>
+<p class="admonition-title">Definitions of ME for simple RV</p>
+<p>(i) Assume <span class="arithmatex">\(\xi\)</span> is a simple random variable</p>
 <div class="arithmatex">\[
 \xi=\sum_{x\in R(\xi)}x\cdot 1_{\{\xi=x\}}
 \]</div>
-<p>define its <strong>mathematical expectation</strong></p>
+<p>define its <strong>mathematical expectation</strong> as a weighted average</p>
 <div class="arithmatex">\[
 \mathbb{E}\xi=\sum_{x\in R(\xi)}x\mathbb{P}(\xi=x).
 \]</div>
 <p>Actually, it is Lebesgue integral of simple function.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Region irrelevance of ME for simple RV</p>
+<p>If <span class="arithmatex">\(x_1,\cdots,x_n\in \mathbb{R}\)</span>, and <span class="arithmatex">\(\Omega_1,\cdots,\Omega_n\)</span> are finite partition of <span class="arithmatex">\(\Omega\)</span>, then</p>
+<div class="arithmatex">\[
+\mathbb{E}\left(\sum_{i=1}^n x1_{\Omega_i}\right)=\sum_{i=1}^nx_i\mathbb{P}(\Omega_i).
+\]</div>
+<p>Note here <span class="arithmatex">\(\sum\limits_{i=1}^n\mathbb{P}(\Omega_n)=1\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of simple RV</p>
+<p>Assume <span class="arithmatex">\(\xi,\eta\)</span> are simple random variables,</p>
+<p>(i) if <span class="arithmatex">\(\xi\geq 0\)</span>, then <span class="arithmatex">\(\mathbb{E}\xi\geq 0\)</span>.</p>
+<p>(ii) <strong>Homogeneity</strong>. <span class="arithmatex">\(\forall a\in \mathbb{R}\)</span>, <span class="arithmatex">\(\mathbb{E}(a\xi)=a\mathbb{E}\xi\)</span>.</p>
+<p>(iii) <strong>Linearity</strong>. <span class="arithmatex">\(\mathbb{E}(\xi+\eta)=\mathbb{E}(\xi)+\mathbb{E}(\eta)\)</span>.</p>
+<p>(iv) <strong>Characteristic function</strong>. If <span class="arithmatex">\(A\in \mathscr{F}\)</span>, then <span class="arithmatex">\(\mathbb{E}1_A=\mathbb{P}(A)\)</span>.</p>
+<p>(v) <strong>Zero a.s.</strong>. If <span class="arithmatex">\(\mathbb{P}(\xi\neq 0)=0\)</span>, then <span class="arithmatex">\(\mathbb{E}\xi=0\)</span>.</p>
+<p>(vi) <strong>Monotonicity</strong>. If <span class="arithmatex">\(\xi\leq \eta\)</span>, then <span class="arithmatex">\(\mathbb{E}\xi\leq \mathbb{E}\eta\)</span>.</p>
+<p>(vii) <strong>Independence property</strong>. If <span class="arithmatex">\(\xi\)</span> and <span class="arithmatex">\(\eta\)</span> are independent, then <span class="arithmatex">\(\mathbb{E}(\xi\cdot \eta)=\mathbb{E}\xi\cdot\mathbb{E}\eta\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: using linearity</p>
+<p>Choose arbitrary events <span class="arithmatex">\(\{A_k\}_{1\leq k\leq n}\)</span> and real number <span class="arithmatex">\(\{x_k\}_{1\leq k\leq n}\)</span>, then </p>
+<div class="arithmatex">\[
+\mathbb{E}\left(\sum_{k=1}^n x_k1_{A_k}\right)=\sum_{k=1}^n x_k\mathbb{P}(A_k).
+\]</div>
+</div>
+<p>Here comes the mathematical expectation of non-negative random variables.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of ME for Non-negative random variables</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a non-negative randon variable, define is <strong>Mathematical Expectation</strong> to be </p>
+<div class="arithmatex">\[
+\mathbb{E}\xi=\sup\{\mathbb{E}\eta: 0\leq\eta\leq \xi, \eta\text{ is a simple RV}\}.
+\]</div>
+<p>If <span class="arithmatex">\(\mathbb{E}\xi&lt;\infty\)</span>, we call <span class="arithmatex">\(\xi\)</span> is integrable(L). If <span class="arithmatex">\(A\)</span> is an event, then we use <span class="arithmatex">\(\mathbb{E}(\xi; A)\)</span> to denote <span class="arithmatex">\(\mathbb{E}(\xi\cdot 1_A)\)</span>, the ME of <span class="arithmatex">\(\xi\)</span> limited on event <span class="arithmatex">\(A\)</span>. </p>
 </div>
 
 
