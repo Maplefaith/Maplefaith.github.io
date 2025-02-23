@@ -4278,10 +4278,10 @@ x\in A_j-\bigcup_{k=1}^{j-1} A_k=A_j\cap \left(\bigcup_{k=1}^{j-1}A_k\right)^c =
 </div>
 <p><div class="question" markdown>
 <strong>Example</strong>. Prove</p>
-<p>$$
+<div class="arithmatex">\[
 \bigcup_{n=1}^\infty (A-A_n)=A-\bigcap_{n=1}^\infty A_n
-$$
-</div></p>
+\]</div>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="de-morgan-formula-proof_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="de-morgan-formula-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4417,6 +4417,7 @@ A_1 &amp;= (A_1 \setminus A_2) \cup (A_2 \setminus A_3) \cup (A_3 \setminus A_4)
 <p class="admonition-title">Definition of Denumerability</p>
 <p>A set <span class="arithmatex">\( E \)</span> is said to be <strong>denumerable</strong> if <span class="arithmatex">\( E \sim \mathbb{N} \)</span>. Moreover, we write that <span class="arithmatex">\( E \)</span> has base <span class="arithmatex">\( \aleph_0 \)</span>.</p>
 </div>
+<p><a id="union-of-denumerable-sets-is-denumerable"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem of Basic Facts on Denumerable Sets</p>
 <ol>
@@ -4428,8 +4429,8 @@ A_1 &amp;= (A_1 \setminus A_2) \cup (A_2 \setminus A_3) \cup (A_3 \setminus A_4)
 <div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="denumerability-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="denumerability-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>We only prove (iii).  </p>
-<p>Assume <span class="arithmatex">\( \{ A_n \}_{n \geq 1} \)</span> is a collection of mutually exclusive denumerable sets. If <span class="arithmatex">\( \bigcup_{n=1}^\infty A_n \)</span> is denumerable, then by combining the same items, we can easily obtain a denumerable set.  </p>
+<p>We only prove (iii). This method is known as <strong>diagonal method</strong>.</p>
+<p>Assume <span class="arithmatex">\( \{ A_n \}_{n \geq 1} \)</span> is a collection of mutually exclusive denumerable sets. Because we can use <a href="#construct-mutually-disjoint-sets">Example: construct mutually disjoint sets</a> to convert an arbitrary sequence of sets into a sequence of mutually disjoint sets. (If <span class="arithmatex">\( \bigcup_{n=1}^\infty A_n \)</span> is denumerable, then by combining the same items, we can easily obtain a denumerable set.)</p>
 <p>For each <span class="arithmatex">\( n \)</span>, the denumerable set <span class="arithmatex">\( A_n \)</span> can be written as:</p>
 <div class="arithmatex">\[
 A_n = \{ a_1^{(n)}, a_2^{(n)}, \dots \}, \quad n = 1, 2, \dots

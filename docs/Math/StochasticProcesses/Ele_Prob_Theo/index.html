@@ -1862,6 +1862,63 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Mathematical Expectation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#law-of-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Law of large numbers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Random Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Random Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3836,6 +3893,63 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Mathematical Expectation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#law-of-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Law of large numbers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Random Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Continuous Random Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3855,6 +3969,7 @@
 
 <h1 id="elementary-probability-theory">Elementary Probability Theory<a class="headerlink" href="#elementary-probability-theory" title="Permanent link">&para;</a></h1>
 <h2 id="probability-space">Probability Space<a class="headerlink" href="#probability-space" title="Permanent link">&para;</a></h2>
+<p><a id="Definitions-of-sigma-algebra"></a></p>
 <div class="admonition info">
 <p class="admonition-title">Definitions of <span class="arithmatex">\(\sigma\)</span>-algebra</p>
 <p>A family of subset <span class="arithmatex">\(\mathscr{F}\)</span> of non-empty set <span class="arithmatex">\(\Omega\)</span> is called a <strong><span class="arithmatex">\(\pmb{\sigma}\)</span>-algebra</strong> on <span class="arithmatex">\(\Omega\)</span>, if it satisfies</p>
@@ -3956,7 +4071,7 @@
 <p>Simply speaking, random variables is a measurable function on <span class="arithmatex">\(\Omega\)</span>, to endow basic events with a number. </p>
 <div class="admonition info">
 <p class="admonition-title">Definition of Random Variable</p>
-<p>Assume <span class="arithmatex">\(\{\Omega, \mathscr{F}, \mathbb{P}\}\)</span> is a probability space. <span class="arithmatex">\(\xi:\Omega\rightarrow \mathbb{R}\)</span>, a function defined on <span class="arithmatex">\(\Omega\)</span>, is called <strong>Random Variable</strong>, if <span class="arithmatex">\(\forall \alpha\in \mathbb{R}\)</span></p>
+<p>Assume <span class="arithmatex">\((\Omega, \mathscr{F}, \mathbb{P})\)</span> is a probability space. <span class="arithmatex">\(\xi:\Omega\rightarrow \mathbb{R}\)</span>, a function defined on <span class="arithmatex">\(\Omega\)</span>, is called <strong>Random Variable</strong>, if <span class="arithmatex">\(\forall \alpha\in \mathbb{R}\)</span></p>
 <div class="arithmatex">\[
 \{\xi\leq \alpha\}:=\{\omega\in \Omega: \xi(\omega)\leq \alpha\}\in \mathscr{F}.
 \]</div>
@@ -4070,7 +4185,7 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 <p>(iii) <span class="arithmatex">\(\mathbb{P}((C|B)|A)=\mathbb{P}(C|A\cap B)\)</span>.</p>
 </div>
 <div class="question">
-<p><strong>Example</strong>. <em>Toss coin infinite times could be achieved</em>  is equivalent to <em>uniform distribution could be achieved</em>.</p>
+<p><strong>Example</strong>. <strong>Toss coin infinite times could be achieved</strong>  is equivalent to <strong>uniform distribution could be achieved</strong>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="condition-probability-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="condition-probability-proof">Proof</label></div>
 <div class="tabbed-content">
@@ -4145,6 +4260,7 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 \]</div>
 <p>Note here <span class="arithmatex">\(\sum\limits_{i=1}^n\mathbb{P}(\Omega_n)=1\)</span>.</p>
 </div>
+<p><a id="Properties-of-simple-RV"> </a></p>
 <div class="admonition success">
 <p class="admonition-title">Properties of simple RV</p>
 <p>Assume <span class="arithmatex">\(\xi,\eta\)</span> are simple random variables,</p>
@@ -4171,6 +4287,269 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 \mathbb{E}\xi=\sup\{\mathbb{E}\eta: 0\leq\eta\leq \xi, \eta\text{ is a simple RV}\}.
 \]</div>
 <p>If <span class="arithmatex">\(\mathbb{E}\xi&lt;\infty\)</span>, we call <span class="arithmatex">\(\xi\)</span> is integrable(L). If <span class="arithmatex">\(A\)</span> is an event, then we use <span class="arithmatex">\(\mathbb{E}(\xi; A)\)</span> to denote <span class="arithmatex">\(\mathbb{E}(\xi\cdot 1_A)\)</span>, the ME of <span class="arithmatex">\(\xi\)</span> limited on event <span class="arithmatex">\(A\)</span>. </p>
+</div>
+<p>Readers could compare the following contents with similar results in <a href="../../Real_Analysis/Lebesgue_Integral/#levi-theorem">Lebesgue Integral</a>.</p>
+<p><a id="Levi-Monotonic-Convergence-Theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">L&eacute;vi Monotonic Convergence Theorem</p>
+<p>(i) If random variables <span class="arithmatex">\(\xi,\eta\)</span> satisfy <span class="arithmatex">\(0\leq \eta\leq \xi\)</span>, then <span class="arithmatex">\(\mathbb{E}\eta\leq\mathbb{E}\xi\)</span>.</p>
+<p>(ii) If a sequence of non-negative random variables <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> monotinically increase and converge to <span class="arithmatex">\(\xi\)</span>, then <span class="arithmatex">\(\lim\limits_{n\rightarrow\infty}\mathbb{E}\xi_n=\mathbb{E}\xi\)</span>.</p>
+<p>(iii) Non-negative random variables could always be represented by the limit of s sequence of non-negative random variables.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="mathematical-expectation-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="mathematical-expectation-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>We use <span class="arithmatex">\(\mathscr{F}_+\)</span> to denote all the non-negative random variables on <span class="arithmatex">\((\Omega, \mathscr{F})\)</span>, then we know <span class="arithmatex">\(\mathbb{E}\)</span> is a function defined on <span class="arithmatex">\(\mathscr{F}_+\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Relationship between Probability and Mathematical Expectation</p>
+<p>By definition of non-negative random variables and <a href="#Levi-Monotonic-Convergence-Theorem">L&eacute;vi Theorem</a>, we have the following results.</p>
+<p>(i) <strong>Additivity of random variables</strong>. Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1} \subset \mathscr{F}_+\)</span> , then </p>
+<div class="arithmatex">\[
+\mathbb{E}\sum_n\xi_n=\sum_n \mathbb{E}\xi_n.
+\]</div>
+<p>(ii) <strong>Characteristic function</strong>. <span class="arithmatex">\(\forall A\in \mathscr{F}\)</span>, we have <span class="arithmatex">\(\mathbb{E}1_A=\mathbb{P}(A)\)</span>. </p>
+<p>Conversely, if there exists a non-negative function <span class="arithmatex">\(\mathbb{E}\)</span> defined on <span class="arithmatex">\(\mathscr{F}_+\)</span>, such that it satisfies additivity and <span class="arithmatex">\(\mathbb{E}1=1\)</span>, then <span class="arithmatex">\(\forall A\in \Omega\)</span>, we could use <span class="arithmatex">\(\mathbb{E}\)</span> to define probability measure</p>
+<div class="arithmatex">\[
+\mathbb{P}(A)=\mathbb{E}1_A.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definitions of ME for genaral random variables</p>
+<p>For a general random variable <span class="arithmatex">\(\xi\)</span>, we separate it into positive add negetive parts (non-negative random variables)</p>
+<div class="arithmatex">\[
+\xi^+=\xi\cdot 1_{\{\xi&gt;0\}}=\max\{\xi,0\} ,\quad 
+\xi^-=\xi\cdot 1_{\{\xi&lt;0\}}=\max\{-\xi,0\}.
+\]</div>
+<p>Then <span class="arithmatex">\(\xi=\xi^+-\xi^-\)</span>, <span class="arithmatex">\(|\xi|=\xi^+ +\xi^-\)</span>. If <span class="arithmatex">\(\mathbb{E}|\xi|&lt;\infty\)</span>, then we call <span class="arithmatex">\(\xi\)</span> is integrable. If <span class="arithmatex">\(\xi\)</span> is integrable, then we could define is <strong>Mathematical Expectation</strong></p>
+<div class="arithmatex">\[
+\mathbb{E}\xi=\mathbb{E}\xi^+ -\mathbb{E}\xi^-.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of non-negative random variables</p>
+<p>Almost the same as (i) (ii) (iii) in <a href="#Properties-of-simple-RV">Properties of simple RV</a>.</p>
+<p>(iv) <strong>Independence</strong>. Assume <span class="arithmatex">\(\xi,\eta\)</span> are independent. If they are non-negative, or they are integrable and their multiplication <span class="arithmatex">\(\xi\eta\)</span> is also integrable, then <span class="arithmatex">\(\mathbb{E}\xi\eta=\mathbb{E}\xi\cdot \mathbb{E}\eta\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Fatou Lemma</p>
+<p>Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> are non-negative, then <span class="arithmatex">\(\mathbb{E}\lim\inf_n\xi_n\leq \lim\inf_n\mathbb{E}\xi_n\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Lebesgue's Dominated Convergence Theorem</p>
+<p>Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> satisfies <span class="arithmatex">\(\lim\limits_{n\rightarrow\infty}\xi_n=\xi\)</span>, and there exists an integrable non-negative simple function <span class="arithmatex">\(\eta\)</span> such that <span class="arithmatex">\(|\xi_n|\leq \eta\)</span>, then <span class="arithmatex">\(\mathbb{E}\xi=\lim\limits_{n\rightarrow \infty}\mathbb{E}\xi_n\)</span>.</p>
+</div>
+<p>Similar to <a href="../../Real_Analysis/Measurable_Func/#almost-everywhere">convergence almost everywhere</a>, we have an allege <strong>holds almost surely</strong>, denoted by <span class="arithmatex">\(a.s.\)</span>. Like <span class="arithmatex">\(\xi=0, a.s.\)</span> means <span class="arithmatex">\(\mathbb{P}(\xi\neq 0)=0\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of general Random Variables</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a random variable on probability space <span class="arithmatex">\((\Omega,\mathscr{F},\mathbb{P})\)</span>, </p>
+<p>(i) If <span class="arithmatex">\(\xi=0, a.s.\)</span>, then <span class="arithmatex">\(\xi\)</span> is integrable, and <span class="arithmatex">\(\mathbb{E}\xi=0\)</span>;</p>
+<p>(ii) If <span class="arithmatex">\(\mathbb{P}(A)=0\)</span>, then <span class="arithmatex">\(\mathbb{E}(\xi; A)=0\)</span>;</p>
+<p>(iii) If <span class="arithmatex">\(\xi\)</span> is integrable, then <span class="arithmatex">\(\xi=0, a.s.\)</span> iff <span class="arithmatex">\(\forall A\in \mathbb{F}\)</span>, <span class="arithmatex">\(\mathbb{E}(\xi;A)=0\)</span>;</p>
+<p>(iv) If <span class="arithmatex">\(\xi\)</span> is non-negative, then <span class="arithmatex">\(\mathbb{E}\xi=0\)</span> implies <span class="arithmatex">\(\xi=0, a.s.\)</span></p>
+</div>
+<h3 id="calculations">Calculations<a class="headerlink" href="#calculations" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem for calculating ME of discrete random variables</p>
+<p>A discrete random variable <span class="arithmatex">\(\xi\)</span> is integrable, iff </p>
+<div class="arithmatex">\[
+\mathbb{E}(|\xi|)=\mathbb{E}\left(\sum_{x\in R(\xi)}|x|1_{\{\xi=x\}}\right)=\sum_{x\in R(\xi)}|x|\mathbb{P}(\xi=x)&lt;\infty
+\]</div>
+<p>and holds</p>
+<div class="arithmatex">\[
+\mathbb{E}(\xi)=\sum_{x\in R(\xi)}x\mathbb{P}(\xi=x)&lt;\infty.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: ME for function</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a discrete random variable, and <span class="arithmatex">\(\phi:\mathbb{R}\rightarrow \mathbb{R}\)</span>. Then <span class="arithmatex">\(\phi(\xi)\)</span> is integrable, iff</p>
+<div class="arithmatex">\[
+\mathbb{E}|\phi(\xi)|=\sum_{x\in R(\xi)}|\phi(x)|\mathbb{P}(\xi=x)&lt;\infty,
+\]</div>
+<p>and </p>
+<div class="arithmatex">\[
+\mathbb{E}\phi(\xi)=\sum_{x\in R(\xi)}\phi(x)\mathbb{P}(\xi=x).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="calculations-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="calculations-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Easy to show that <span class="arithmatex">\(\phi(\xi)\)</span> is also a discrete random variable. 
+<p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for calculation of general random variables</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a random variable, <span class="arithmatex">\(F\)</span> is its distribution function. If <span class="arithmatex">\(\phi\)</span> is non-negaitve continuous or bounded continuous function, then </p>
+<div class="arithmatex">\[
+\mathbb{E}\phi(\xi)=\int_\mathbb{R}\phi(x)dF(x).
+\]</div>
+</div>
+<h3 id="variance">Variance<a class="headerlink" href="#variance" title="Permanent link">&para;</a></h3>
+<p>The following inequation is essentially the same as we have discussed in Real analysis.
+<a id="Chebyshev-Inequation"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Chebyshev Inequation (Markov Inequation)</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a random variable, <span class="arithmatex">\(\alpha&gt;0\)</span>, then <span class="arithmatex">\(\forall m&gt;0\)</span>, we have</p>
+<div class="arithmatex">\[
+\mathbb{P}(|\xi|&gt;m)\leq \frac{1}{m^\alpha}\mathbb{E}|\xi|^\alpha. 
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="variance-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="variance-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By definition</p>
+<div class="arithmatex">\[
+\mathbb{E}|\xi|^\alpha\geq \mathbb{E}(|\xi|^\alpha:|\xi|&gt;m)\geq m^\alpha \mathbb{P}(|\xi|&gt;m).
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Cauchy-Schwarz Inequation</p>
+<p>Assume <span class="arithmatex">\(\xi,\eta\)</span> are random variables, then</p>
+<div class="arithmatex">\[
+|\mathbb{E}\xi\eta|^2\leq \mathbb{E}\xi^2\cdot \mathbb{E}\eta^2.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="variance-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="variance-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Just as the most popular method, i.e. using quadratic function.</p>
+</div>
+</div>
+</div>
+<p>If <span class="arithmatex">\(\mathbb{E}\xi^2&lt;\infty\)</span>, then <span class="arithmatex">\(\xi\)</span> is square integrable, and implies <span class="arithmatex">\(\xi\)</span> is integrable. Here we could define its <strong>Variance</strong> as</p>
+<div class="arithmatex">\[
+D\xi:=\mathbb{E}(\xi-\mathbb{E}\xi)^2.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Variance</p>
+<p>(i) <span class="arithmatex">\(D\xi\geq 0\)</span>. <span class="arithmatex">\(D\xi=0\)</span> iff <span class="arithmatex">\(\xi=C, a.s.\)</span></p>
+<p>(ii) <strong>Calculation</strong>.<span class="arithmatex">\(D\xi=\mathbb{E}\xi^2-(\mathbb{E}\xi)^2\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(D(a\xi)=a^2D\xi\)</span>.</p>
+<p>(iv) If <span class="arithmatex">\(\xi,\eta\)</span> are independent, then <span class="arithmatex">\(D(\xi+\eta)=D\xi+D\eta\)</span>.</p>
+</div>
+<h3 id="law-of-large-numbers">Law of large numbers<a class="headerlink" href="#law-of-large-numbers" title="Permanent link">&para;</a></h3>
+<p>We could now discuss the relationship between probability and frequency.</p>
+<div class="admonition success">
+<p class="admonition-title">Bernoulli's Law of large numbers</p>
+<p>Assume we carry out a Bernoulli experiment with rate of success <span class="arithmatex">\(p\)</span>, and use <span class="arithmatex">\(\xi_n\)</span> to denote the number of success within first <span class="arithmatex">\(n\)</span> times experiments. So <span class="arithmatex">\(\frac{\xi_n}{n}\)</span> is the frequency of first <span class="arithmatex">\(n\)</span> times experiments, which is also a random variable. Then <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow\infty}\mathbb{P}\left(\left|\frac{\xi_n}{n}-p\right|&gt;\varepsilon\right)=0.
+\]</div>
+<p>which means that <span class="arithmatex">\(\eta_n=\frac{\xi_n}{n}\)</span> converges to <span class="arithmatex">\(p\)</span> in a sense of probability.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="law-of-large-numbers-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="law-of-large-numbers-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using <a href="#Chebyshev-Inequation">Chebyshev Inequation</a>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{P}\left(\left|\frac{\xi_n}{n}-p\right|&gt;\varepsilon\right)\leq \frac{1}{\varepsilon^\alpha}\mathbb{E}\left|\frac{\xi_n}{n}-p\right|^\alpha
+\end{align*}
+\]</div>
+<p>Choose <span class="arithmatex">\(\alpha=2\)</span>, and by <span class="arithmatex">\(\mathbb{E}\xi_n=np\)</span>, <span class="arithmatex">\(\mathbb{E}\xi_n^2=np(1-p)+(np)^2\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{P}\left(\left|\frac{\xi_n}{n}-p\right|&gt;\varepsilon\right)&amp;\leq \frac{1}{\varepsilon^2}\mathbb{E}\left|\frac{\xi_n}{n}-p\right|^2\\
+&amp;=\frac{1}{\varepsilon^2}\frac{\mathbb{E}(\xi_n^2)-2np\mathbb{E}\xi_n+(np)^2}{n^2}\\
+&amp;=\frac{1}{\varepsilon^2}\frac{p-p^2}{n}\rightarrow 0(n\rightarrow \infty).
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>Total probability formula has a expectation form.</p>
+<div class="admonition info">
+<p class="admonition-title">Conditional Mathematical Expectation</p>
+<p>Assume integrable random variable <span class="arithmatex">\(\xi_n\)</span> is defined on probability space <span class="arithmatex">\((\Omega,\mathscr{F}, \mathbb{P})\)</span>. For an arbitrary event <span class="arithmatex">\(A\)</span> with positive probability, define <strong>Conditional Mathematical Expectation</strong></p>
+<div class="arithmatex">\[
+\mathbb{E}(\xi|A):=\frac{\mathbb{E}(\xi;A)}{\mathbb{P}(A)}.
+\]</div>
+</div>
+<p>So with the above definition, we have an extension of total probability formula. </p>
+<div class="admonition success">
+<p class="admonition-title">Expectation form of Total probability formula</p>
+<p>Assume <span class="arithmatex">\(\{\Omega_n\}_{n\geq 1}\subset \mathscr{F}\)</span> is a paritition of <span class="arithmatex">\(\Omega\)</span>, then for all random variable <span class="arithmatex">\(\xi\)</span>, we have</p>
+<div class="arithmatex">\[
+\mathbb{E}(\xi)=\sum_{n=1}^\infty \mathbb{E}(\xi;\Omega_n)\mathbb{P}(\Omega_n).
+\]</div>
+</div>
+<h2 id="continuous-random-variables">Continuous Random Variables<a class="headerlink" href="#continuous-random-variables" title="Permanent link">&para;</a></h2>
+<h3 id="measurability">Measurability<a class="headerlink" href="#measurability" title="Permanent link">&para;</a></h3>
+<p>In a discrete sample space <span class="arithmatex">\(\Omega_d\)</span>, we could choose its power set as its <span class="arithmatex">\(\sigma\)</span>-algebra, but in continuous sample space <span class="arithmatex">\(\Omega_c\)</span>, it has been proved contradicted when we choose its power set. In fact, apart from the smallest and biggest family of set, it is usually not easy to find a <span class="arithmatex">\(\sigma\)</span>-algebra directly, but often generated indirectly.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of <span class="arithmatex">\(\sigma\)</span>-algebra</p>
+<p>Assume <span class="arithmatex">\(\{\mathscr{F}_\lambda\}_{\lambda\in\Lambda}\)</span> are <span class="arithmatex">\(\sigma\)</span>-algebra on <span class="arithmatex">\(\Omega\)</span>, then </p>
+<div class="arithmatex">\[
+\bigcap_{\lambda\in \Lambda}\mathscr{F}_\lambda
+\]</div>
+<p>is also a <span class="arithmatex">\(\sigma\)</span>-algebra. </p>
+</div>
+<p><a id="Definition-of-sigma-algebra-generated"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Definition of <span class="arithmatex">\(\sigma\)</span>-algebra generated</p>
+<p>For a family set of <span class="arithmatex">\(\Omega\)</span>, denoted by <span class="arithmatex">\(\mathscr{A}\)</span>, define <span class="arithmatex">\(\sigma\)</span>-algebra generated by <span class="arithmatex">\(\mathscr{A}\)</span> to be the intersection of family sets of <span class="arithmatex">\(\Omega\)</span> which contain <span class="arithmatex">\(\mathscr{A}\)</span>, denoted by</p>
+<div class="arithmatex">\[
+\sigma(\mathscr{A}):=\bigcap_{\lambda\in \Lambda\atop \mathscr{A}\subset \mathscr{F}_\lambda}\mathscr{F}_\lambda.
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Still the <a href="#Example-Discrete">Discrete-exmaple</a>, we could write its generated <span class="arithmatex">\(\sigma\)</span>-algebra</p>
+<div class="arithmatex">\[
+\sigma(\{\Omega_n\}_{n\geq 1})=\left\{\bigcup_{i\in I}\Omega_i: I\subset \mathbb{N}\right\}.
+\]</div>
+</div>
+<p>To go through the following theorem, we have to introduce some properties of inverse image. That is, assume <span class="arithmatex">\(f:X\rightarrow Y\)</span> is a mapping, <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are domain of definition and range. If <span class="arithmatex">\(B\subset Y\)</span>, define inverse image</p>
+<div class="arithmatex">\[
+f^{-1}(B)=\{x\in X:f(x)=B\}.
+\]</div>
+<p>which is also denoted by <span class="arithmatex">\(\{f\in B\}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of Inverse Image</p>
+<p>Assume <span class="arithmatex">\(f:X\rightarrow Y\)</span> is a mapping, then </p>
+<p>(i) <span class="arithmatex">\(f^{-1}(\varnothing)=\varnothing\)</span>, <span class="arithmatex">\(f^{-1}(Y)=X\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(B\subset Y\)</span>, then <span class="arithmatex">\(f^{-1}(B^c)=f^{-1}(B)^c\)</span>.</p>
+<p>(iii) If <span class="arithmatex">\(\{B_\lambda\}_{\lambda\in\Lambda}\subset Y\)</span>, then </p>
+<div class="arithmatex">\[
+\begin{align*}
+f^{-1}\left(\bigcap_{\lambda\in\Lambda}B_\lambda\right)&amp;=\bigcap_{\lambda\in\Lambda}f^{-1}\left(B_\lambda\right)\\
+f^{-1}\left(\bigcup_{\lambda\in\Lambda}B_\lambda\right)&amp;=\bigcup_{\lambda\in\Lambda}f^{-1}\left(B_\lambda\right).
+\end{align*}
+\]</div>
+</div>
+<p>With the following properties, we have the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for high-dimension <span class="arithmatex">\(\sigma\)</span>-Algebra</p>
+<p>Assume <span class="arithmatex">\(\xi:\Omega\rightarrow \mathbb{R}^n\)</span>, and a family set <span class="arithmatex">\(\mathscr{B}_0\)</span>. If <span class="arithmatex">\(B\subset \mathbb{R}^n\)</span>, define </p>
+<div class="arithmatex">\[
+\xi^{-1}(\mathscr{B}_0)=\{\xi^{-1}(B): B\in \mathscr{B}_0\}
+\]</div>
+<p>to be the inverse of family set <span class="arithmatex">\(\mathscr{B}_0\)</span>. Then if <span class="arithmatex">\(\mathscr{B}_0\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra, then <span class="arithmatex">\(\xi^{-1}(\mathscr{B}_0)\)</span> is also a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="measurability-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="measurability-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using the properties of inverse, and transform the problem into image.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Sufficient and necessary condition for random variable</p>
+<p>Assume <span class="arithmatex">\((\Omega,\mathscr{F}, \mathbb{P})\)</span> is a probability space, then <span class="arithmatex">\(\xi\)</span> defined on <span class="arithmatex">\(\Omega\)</span> is a random variable, iff</p>
+<div class="arithmatex">\[
+\xi^{-1}(\mathscr{B})\subset \mathscr{F}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="measurability-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="measurability-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
 </div>
 
 
