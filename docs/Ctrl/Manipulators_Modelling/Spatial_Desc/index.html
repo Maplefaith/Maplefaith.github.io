@@ -2950,14 +2950,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#homogenious-transformation-matrix" class="md-nav__link">
+    <nav class="md-nav" aria-label="Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homogeneous-transform-matrix" class="md-nav__link">
     <span class="md-ellipsis">
-      Homogenious Transformation Matrix
+      Homogeneous Transform Matrix
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatiors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operatiors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gimbal-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gimbal Lock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3782,14 +3815,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#homogenious-transformation-matrix" class="md-nav__link">
+    <nav class="md-nav" aria-label="Descriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homogeneous-transform-matrix" class="md-nav__link">
     <span class="md-ellipsis">
-      Homogenious Transformation Matrix
+      Homogeneous Transform Matrix
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chain-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatiors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operatiors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gimbal-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gimbal Lock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3810,28 +3876,67 @@
 
 <h1 id="spatial-description-transformation">Spatial Description &amp; Transformation<a class="headerlink" href="#spatial-description-transformation" title="Permanent link">&para;</a></h1>
 <h2 id="descriptions">Descriptions<a class="headerlink" href="#descriptions" title="Permanent link">&para;</a></h2>
+<p>Note that we use capital form (upper-case) <span class="arithmatex">\(X\)</span> or bold form of lower case <span class="arithmatex">\(\pmb{x}\)</span> to denote vectors. </p>
 <div class="admonition info">
 <p class="admonition-title">Descriptions of a position, an orientation</p>
-<p>In a coordinate system <span class="arithmatex">\(\{A\}\)</span> (three orthogonal unit vectors), </p>
-<p>(i) A point <span class="arithmatex">\(^AP\)</span> is expressed by a vector</p>
+<p>In a coordinate system <span class="arithmatex">\(\{A\}\)</span> (three orthogonal unit vectors), we use <span class="arithmatex">\(\hat{X}\)</span> to denote the norm of vector <span class="arithmatex">\(X\)</span> equals <span class="arithmatex">\(1\)</span>, and use subscript <span class="arithmatex">\(\hat{X}_A\)</span> to denote <span class="arithmatex">\(X\)</span> is the unit vector of frame <span class="arithmatex">\(\{A\}\)</span> along <span class="arithmatex">\(x\)</span>-axis.</p>
+<p>(i) A point <span class="arithmatex">\(^AP\)</span> (superscript on the left means reference frame is <span class="arithmatex">\(\{A\}\)</span>) is expressed by a vector</p>
 <div class="arithmatex">\[
 ^AP=\left[\begin{array}{c}
 p_x\\p_y\\p_z
 \end{array}\right]
 \]</div>
-<p>(ii) Attach another coordinate system <span class="arithmatex">\(\{B\}\)</span>, with its unit vectors <span class="arithmatex">\(\hat{X}_B\)</span>, <span class="arithmatex">\(\hat{Y}_B\)</span>, and <span class="arithmatex">\(\hat{Z}_B\)</span>. If they represented by system <span class="arithmatex">\(\{A\}\)</span>, as <span class="arithmatex">\(^A\hat{X}_B\)</span>, <span class="arithmatex">\(^A\hat{Y}_B\)</span>, and <span class="arithmatex">\(^A\hat{Z}_B\)</span>. Stack these three vectors together, and we have a rotation matrix from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(B\)</span></p>
+<p>or a vector expressed by unit vectors</p>
+<div class="arithmatex">\[
+\pmb{r}_{OP}=\left[\begin{array}{ccc}\hat{X}_A&amp;\hat{X}_A&amp;\hat{X}_A\end{array}\right]^AP.
+\]</div>
+<p>(ii) Attach another coordinate system <span class="arithmatex">\(\{B\}\)</span>, with its unit vectors <span class="arithmatex">\(\hat{X}_B\)</span>, <span class="arithmatex">\(\hat{Y}_B\)</span> and <span class="arithmatex">\(\hat{Z}_B\)</span>. If they are represented by system <span class="arithmatex">\(\{A\}\)</span>, as <span class="arithmatex">\(^A\hat{X}_B\)</span>, <span class="arithmatex">\(^A\hat{Y}_B\)</span>, and <span class="arithmatex">\(^A\hat{Z}_B\)</span>. Stack these three vectors together, and we have a <strong>Rotation Matrix</strong> from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(B\)</span></p>
 <div class="arithmatex">\[
 ^A_BR=\left[\begin{array}{ccc}^A\hat{X}_B&amp; ^A\hat{Y}_B&amp; ^A\hat{Z}_B\end{array}\right].
 \]</div>
-<p>If we consider from linear algebra, denoting <span class="arithmatex">\(\hat{e}_1,\hat{e}_2,\hat{e}_3\)</span> as basis of <span class="arithmatex">\(\{B\}\)</span>, <span class="arithmatex">\(e_1,e_2,e_3\)</span> as basis of <span class="arithmatex">\(\{A\}\)</span>, so </p>
+<p>Actually, it represents the poze (orientation) transfer from <span class="arithmatex">\(\{A\}\)</span> to <span class="arithmatex">\(\{B\}\)</span>. It is also a method to get a rotation matrix, using expression of <span class="arithmatex">\(\{B\}\)</span> basis expressed in <span class="arithmatex">\(\{A\}\)</span>.</p>
+</div>
+<p><a id="Properties-of-Rotation-Matrix"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Properties of Rotation Matrix</p>
+<p>(i) <strong>Calculate elements of rotation matrix</strong>. </p>
 <div class="arithmatex">\[
-\hat{e}_{i}=\sum_{j=1}^3 r_{ij} e_j,
+^A_BR=\left[\begin{array}{ccc}
+\langle\hat{X}_B, \hat{X}_A\rangle&amp;\langle\hat{Y}_B, \hat{X}_A\rangle&amp;\langle\hat{Z}_B, \hat{X}_A\rangle\\
+\langle\hat{X}_B, \hat{Y}_A\rangle&amp;\langle\hat{Y}_B, \hat{Y}_A\rangle&amp;\langle\hat{Z}_B, \hat{Y}_A\rangle\\
+\langle\hat{X}_B, \hat{Z}_A\rangle&amp;\langle\hat{Y}_B, \hat{Z}_A\rangle&amp;\langle\hat{Z}_B, \hat{Z}_A\rangle
+\end{array}\right]
 \]</div>
-<p>from inner product, we have</p>
+<p>Note that inner product is irrelevant with the choice of frame.</p>
+<p>(ii) Show that</p>
 <div class="arithmatex">\[
-\langle\hat{e}_i,e_j\rangle=r_{ij}.
+^A_BR=\left[\begin{array}{c}
+^B\hat{X}_A^T\\^B\hat{Y}_A^T\\^B\hat{Z}_A^T
+\end{array}\right],
 \]</div>
-<p>So a rotation matrix from <span class="arithmatex">\(\{A\}\)</span> to <span class="arithmatex">\(B\)</span>, we have</p>
+<p>and then </p>
+<div class="arithmatex">\[
+^B_AR= {^A_B}R^T.
+\]</div>
+<p>(iii) <span class="arithmatex">\(^A_BR\)</span> is reversible, and </p>
+<div class="arithmatex">\[
+(^A_BR)^{-1}={^B_A}R^T.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="descriptions-proof-for-i" name="__tabbed_1" type="radio" /><input id="descriptions-proof-for-ii" name="__tabbed_1" type="radio" /><input id="descriptions-proof-for-iii" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="descriptions-proof-for-i">Proof for (i)</label><label for="descriptions-proof-for-ii">Proof for (ii)</label><label for="descriptions-proof-for-iii">Proof for (iii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>If we consider from linear algebra, denoting <span class="arithmatex">\(\hat{\pmb{e}}_1,\hat{\pmb{e}}_2,\hat{\pmb{e}}_3\)</span> as basis of <span class="arithmatex">\(\{B\}\)</span>, <span class="arithmatex">\(\pmb{e}_1,\pmb{e}_2,\pmb{e}_3\)</span> as basis of <span class="arithmatex">\(\{A\}\)</span>, so </p>
+<div class="arithmatex">\[
+\hat{\pmb{e}}_{j}=\left[\begin{array}{ccc}\pmb{e}_1&amp;\pmb{e}_2&amp;\pmb{e}_3\end{array}\right]\left[\begin{array}{c}
+r_{1j}\\r_{2j}\\r_{3j}
+\end{array}\right]=\sum_{i=1}^3 r_{ij} \pmb{e}_i,\quad j=1,2,3.
+\]</div>
+<p>From inner product, we have</p>
+<div class="arithmatex">\[
+\langle\pmb{e}_i, \hat{\pmb{e}}_j\rangle=r_{ij}.
+\]</div>
+<p>So a rotation matrix from <span class="arithmatex">\(\{A\}\)</span> to <span class="arithmatex">\(\{B\}\)</span>, we have</p>
 <div class="arithmatex">\[
 ^A_BR=\left[\begin{array}{ccc}
 r_{11}&amp;r_{12}&amp;r_{13}\\
@@ -3839,23 +3944,209 @@ r_{21}&amp;r_{22}&amp;r_{23}\\
 r_{31}&amp;r_{32}&amp;r_{33}
 \end{array}\right]
 \]</div>
-<p>we can express the relationship between the two basis</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p>from (i) we could know that</p>
 <div class="arithmatex">\[
-\left[\begin{array}{ccc}\hat{e}_1&amp;\hat{e}_2&amp;\hat{e}_3\end{array}\right]=\left[\begin{array}{ccc}e_1&amp;e_2&amp;e_3\end{array}\right]^A_BR
+^A\hat{X}_B=\left[\begin{array}{c}
+\langle\hat{X}_B, \hat{X}_A\rangle\\
+\langle\hat{X}_B, \hat{Y}_A\rangle\\
+\langle\hat{X}_B, \hat{Z}_A\rangle
+\end{array}\right]
 \]</div>
-<p>or </p>
+<p>Similarly we have</p>
 <div class="arithmatex">\[
-\left[\begin{array}{c}\hat{e}_1\\\hat{e}_2\\\hat{e}_3\end{array}\right]=^A_BR^T\left[\begin{array}{c}e_1\\e_2\\e_3\end{array}\right]
+^B\hat{X}_A=\left[\begin{array}{c}
+\langle\hat{X}_B, \hat{X}_A\rangle\\
+\langle\hat{Y}_B, \hat{X}_A\rangle\\
+\langle\hat{Z}_B, \hat{X}_A\rangle
+\end{array}\right]
 \]</div>
-<p>So if we have a point <span class="arithmatex">\(\vec{v}=\left[\begin{array}{ccc}v_1&amp;v_2&amp;v_3\end{array}\right]\left[\begin{array}{ccc}e_1&amp;e_2&amp;e_3\end{array}\right]^T\)</span> in frame <span class="arithmatex">\(A\)</span>, assume <span class="arithmatex">\(^A_BR\)</span> is inversible, then we have its expression in frame <span class="arithmatex">\(B\)</span></p>
+<p>which is just the transpose of the first line of <span class="arithmatex">\(^A_BR\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p>Since </p>
 <div class="arithmatex">\[
-\vec{v}=\left[\begin{array}{ccc}v_1&amp;v_2&amp;v_3\end{array}\right]\left(^A_BR^T\right)^{-1}\left[\begin{array}{c}\hat{e}_1\\\hat{e}_2\\\hat{e}_3\end{array}\right]
+\begin{align*}
+^B_AR\cdot {^A_B}R={^A_B}R^T \cdot{^A_B}R&amp;=\left[\begin{array}{ccc}^A\hat{X}^T_B&amp; ^A\hat{Y}^T_B&amp; ^A\hat{Z}^T_B\end{array}\right]^T\left[\begin{array}{ccc}^A\hat{X}_B&amp; ^A\hat{Y}_B&amp; ^A\hat{Z}_B\end{array}\right]\\
+&amp;=\left[\begin{array}{c}^A\hat{X}^T_B\\ ^A\hat{Y}^T_B\\ ^A\hat{Z}^T_B\end{array}\right]\left[\begin{array}{ccc}^A\hat{X}_B&amp; ^A\hat{Y}_B&amp; ^A\hat{Z}_B\end{array}\right]\\
+&amp;=I_{3\times 3}.
+\end{align*}
+\]</div>
+<p>So <span class="arithmatex">\((^A_BR)^{-1}={^B_A}R^T\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Now we could discuss the description of points within different frames.</p>
+<div class="admonition success">
+<p class="admonition-title">Same points within different frames in simple cases</p>
+<p>The following process is called analyze points from moving frame into fixed frame.</p>
+<p>(i) <span class="arithmatex">\(\{B\}\)</span> is a translation of <span class="arithmatex">\(\{A\}\)</span>. Then </p>
+<div class="arithmatex">\[
+^AP={^B}P+{^A}O_B.
+\]</div>
+<p>(ii) <span class="arithmatex">\(\{B\}\)</span> is a rotation of <span class="arithmatex">\(\{A\}\)</span>. Then </p>
+<div class="arithmatex">\[
+^AP={^A_B}R {^B}P.
+\]</div>
+<p>Note the we <strong>premultiply</strong> rotation matrix to <span class="arithmatex">\(^BP\)</span>, while we <strong>postmultiply</strong> rotation matrix to basis vectors in <span class="arithmatex">\(\{B\}\)</span> to get basis vectors in <span class="arithmatex">\(\{A\}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="descriptions-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="descriptions-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Easy to see.</p>
+<p>(ii) Using relationship between basis vectors</p>
+<div class="arithmatex">\[
+\left[\begin{array}{ccc}\hat{X}_B&amp;\hat{X}_B&amp;\hat{X}_B\end{array}\right]=\left[\begin{array}{ccc}\hat{X}_A&amp;\hat{X}_A&amp;\hat{X}_A\end{array}\right]{^A_B}R,
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\pmb{r}_{OP}&amp;=\left[\begin{array}{ccc}\hat{X}_B&amp;\hat{X}_B&amp;\hat{X}_B\end{array}\right]{^B}P\\
+&amp;=\left[\begin{array}{ccc}\hat{X}_A&amp;\hat{X}_A&amp;\hat{X}_A\end{array}\right]{^A_BR} \cdot{^BP}\\
+&amp;:=\left[\begin{array}{ccc}\hat{X}_A&amp;\hat{X}_A&amp;\hat{X}_A\end{array}\right]{^A}P.
+\end{align*}
+\]</div>
+<p>So we are done.</p>
+</div>
+</div>
+</div>
+<p>Combined from the above two simple cases, we have the following general cases.
+<a id="Same-points-within-different-frames-in-general-cases"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Same points within different frames in general cases</p>
+<p>Assume <span class="arithmatex">\(\{B\}\)</span> is translation and rotation of <span class="arithmatex">\(\{A\}\)</span>, then </p>
+<div class="arithmatex">\[
+^AP= {^A_BR} {^BP}+ {^AO_B}
 \]</div>
 </div>
-<h2 id="homogenious-transformation-matrix">Homogenious Transformation Matrix<a class="headerlink" href="#homogenious-transformation-matrix" title="Permanent link">&para;</a></h2>
+<h3 id="homogeneous-transform-matrix">Homogeneous Transform Matrix<a class="headerlink" href="#homogeneous-transform-matrix" title="Permanent link">&para;</a></h3>
+<p>It is usually good to think of the above formula as a mapping from <span class="arithmatex">\(^BP\)</span> to <span class="arithmatex">\(^AP\)</span>, but if we write</p>
+<div class="arithmatex">\[
+\begin{align}
+^AP=\phi({^BP})=T \cdot{^BP},\label{3times3}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(T_{3\times 3}\)</span> is not just the rotation matrix or the translation, which is left out. We are adept to making use of <span class="arithmatex">\(^A_BR\)</span> and <span class="arithmatex">\(^AO_B\)</span> if we expend one dimension, as the following definition shows.</p>
+<p><a id="Homogeneous-Transform"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Homogeneous Transform</p>
+<p>Define <strong>Homogeneous Transform</strong> to be </p>
+<div class="arithmatex">\[
+^A_BT_{4\times 4}:=\left[\begin{array}{ccc:c}
+&amp;^A_BR_{3\times 3}&amp; &amp;^AO_B\\
+\hdashline
+0&amp;0&amp;0&amp; 1
+\end{array}\right]
+\]</div>
+<p>such that</p>
+<div class="arithmatex">\[
+\begin{align}
+\left[\begin{array}{c}
+^AP\\1
+\end{array}\right]={^A_BT}\left[\begin{array}{c}
+^BP\\1
+\end{array}\right] \label{4times4}
+\end{align}
+\]</div>
+</div>
+<p>Actually it is equivalent to equation <span class="arithmatex">\(\ref{3times3}\)</span>, because equation <span class="arithmatex">\(\ref{4times4}\)</span> demonstrates</p>
+<div class="arithmatex">\[
+\begin{cases}
+^AP&amp;= {^A_BR} {^BP}+ {^AO_B}\\
+1&amp;=1.
+\end{cases}
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Homogeneous Transform</p>
+<p>Inverse of Homogeneous Transform Matrix.</p>
+<p>Assume homogeneous transform matrix <span class="arithmatex">\(^A_BT\)</span> from <span class="arithmatex">\(\{A\}\)</span> to <span class="arithmatex">\(\{B\}\)</span>, then it is reversible and </p>
+<div class="arithmatex">\[
+{^B_AT}={^A_BT^{-1}}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="homogeneous-transform-matrix-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="homogeneous-transform-matrix-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We make use of structure inherent of <span class="arithmatex">\(^A_BT\)</span>. </p>
+<ul>
+<li>For rotation matrix <span class="arithmatex">\(^A_BR\)</span>, by <a href="#Properties-of-Rotation-Matrix">Properties of Rotation Matrix</a> we have</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+^B_AR={^A_BR^T}.\label{Rotation}
+\end{align}
+\]</div>
+<ul>
+<li>For translation vector <span class="arithmatex">\(^AO_B\)</span>, we want to know <span class="arithmatex">\(^BO_A\)</span>. This is a little tricky. We apply <a href="#Same-points-within-different-frames-in-general-cases">Same points within different frames in general cases</a> to <span class="arithmatex">\(O_B\)</span>, in terms of <span class="arithmatex">\(\{B\}\)</span>. That is, we have the <span class="arithmatex">\(O_B\)</span> in frame <span class="arithmatex">\(\{B\}\)</span> expressed by frame <span class="arithmatex">\(\{A\}\)</span></li>
+</ul>
+<div class="arithmatex">\[
+\pmb{0}={^BO_B}={^B_AR}{^AO_B}+ {^BO_A}
+\]</div>
+<p>which gives </p>
+<div class="arithmatex">\[
+\begin{align}
+{^BO_A}=-{^B_AR}{^AO_B}=-{^A_BR^T}{^AO_B}.\label{Translation}
+\end{align}
+\]</div>
+<p>Conbined with equation <span class="arithmatex">\(\ref{Rotation}\)</span> and <span class="arithmatex">\(\ref{Translation}\)</span>, we have</p>
+<div class="arithmatex">\[
+^B_AT=\left[\begin{array}{ccc:c}
+&amp;^A_BR^T&amp; &amp;-{^A_BR^T}{^AO_B}\\
+\hdashline
+0&amp;0&amp;0&amp; 1
+\end{array}\right]
+\]</div>
+<p>So <span class="arithmatex">\({^A_BT}\cdot {^B_AT}=I_{4\times 4}\)</span>, which is reversible.</p>
+</div>
+</div>
+</div>
+<p>The above proof also gives the method to quickly solve the inverse of <span class="arithmatex">\(^A_BT\)</span>.</p>
+<h3 id="chain-rule">Chain Rule<a class="headerlink" href="#chain-rule" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Chain Rule: Same points with multiple different frames</p>
+<p>Assume frame <span class="arithmatex">\(\{C\}\)</span> is known relative to frame <span class="arithmatex">\(\{B\}\)</span>, frame <span class="arithmatex">\(\{B\}\)</span> is known relative to frame <span class="arithmatex">\(\{A\}\)</span>. Their relationship is expressed by <span class="arithmatex">\(^B_CT\)</span> and <span class="arithmatex">\(^A_BT\)</span>, respectively. Then expression of point <span class="arithmatex">\(P\)</span> in frame <span class="arithmatex">\(A\)</span> could be expressed by transform of its expression in frame <span class="arithmatex">\(C\)</span> as</p>
+<div class="arithmatex">\[
+^AP={^A_BT}{^B_CT}{^CP}.
+\]</div>
+<p>That is, the relationship from <span class="arithmatex">\(\{A\}\)</span> to <span class="arithmatex">\(\{C\}\)</span> is </p>
+<div class="arithmatex">\[
+{^A_CT}={^A_BT}{^B_CT}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="chain-rule-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="chain-rule-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice that by <a href="#Homogeneous-Transform">Homogeneous Transform</a></p>
+<div class="arithmatex">\[
+\begin{align*}
+\left[\begin{array}{c}
+^AP\\1
+\end{array}\right]&amp;={^A_BT}\left[\begin{array}{c}
+^BP\\1
+\end{array}\right]\\
+&amp;={^A_BT}{^B_CT}\left[\begin{array}{c}
+^CP\\1
+\end{array}\right]\\
+&amp;:={^A_CT}\left[\begin{array}{c}
+^CP\\1
+\end{array}\right].
+\end{align*}
+\]</div>
+<p>and we are done.</p>
+</div>
+</div>
+</div>
+<h3 id="operatiors">Operatiors<a class="headerlink" href="#operatiors" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Translation</p>
+</div>
+<h3 id="gimbal-lock">Gimbal Lock<a class="headerlink" href="#gimbal-lock" title="Permanent link">&para;</a></h3>
 <p>Does every matrix could be expressed by <span class="arithmatex">\(Z-Y-X\)</span> angle?</p>
-<p>When <span class="arithmatex">\(\beta=\frac{\pi}{2}\)</span>, then we lose a degree of freedom, solution is not unique.</p>
-<p>gamble lock.</p>
+<p>When <span class="arithmatex">\(\beta=\frac{\pi}{2}\)</span> in Euler's angle, then we lose a degree of freedom, solution is not unique.</p>
 
 
 

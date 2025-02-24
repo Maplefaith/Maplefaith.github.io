@@ -1844,6 +1844,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Random Variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribution Function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1911,6 +1926,24 @@
   <a href="#measurability" class="md-nav__link">
     <span class="md-ellipsis">
       Measurability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achievement-of-distribution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Achievement of Distribution function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#density-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Density Function
     </span>
   </a>
   
@@ -3875,6 +3908,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Random Variable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribution Function
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3942,6 +3990,24 @@
   <a href="#measurability" class="md-nav__link">
     <span class="md-ellipsis">
       Measurability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achievement-of-distribution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Achievement of Distribution function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#density-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Density Function
     </span>
   </a>
   
@@ -4118,6 +4184,7 @@ A^c,\quad &amp;\alpha\in[0,1),\\
 \xi=\sum_{x\in R(\xi)}x 1_{\{\xi=x\}}.
 \]</div>
 </div>
+<h3 id="distribution-function">Distribution Function<a class="headerlink" href="#distribution-function" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definition of Distribution function</p>
 <p>Assume <span class="arithmatex">\(\xi\)</span> is a random variable, then <span class="arithmatex">\(\forall x\in \mathbb{R}\)</span>, </p>
@@ -4364,7 +4431,7 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 \]</div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Corollary: ME for function</p>
+<p class="admonition-title">Corollary: ME for function of discrete random variable</p>
 <p>Assume <span class="arithmatex">\(\xi\)</span> is a discrete random variable, and <span class="arithmatex">\(\phi:\mathbb{R}\rightarrow \mathbb{R}\)</span>. Then <span class="arithmatex">\(\phi(\xi)\)</span> is integrable, iff</p>
 <div class="arithmatex">\[
 \mathbb{E}|\phi(\xi)|=\sum_{x\in R(\xi)}|\phi(x)|\mathbb{P}(\xi=x)&lt;\infty,
@@ -4510,6 +4577,7 @@ D\xi:=\mathbb{E}(\xi-\mathbb{E}\xi)^2.
 f^{-1}(B)=\{x\in X:f(x)=B\}.
 \]</div>
 <p>which is also denoted by <span class="arithmatex">\(\{f\in B\}\)</span>.</p>
+<p><a id="Properties-of-Inverse-Image"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Properties of Inverse Image</p>
 <p>Assume <span class="arithmatex">\(f:X\rightarrow Y\)</span> is a mapping, then </p>
@@ -4548,8 +4616,96 @@ f^{-1}\left(\bigcup_{\lambda\in\Lambda}B_\lambda\right)&amp;=\bigcup_{\lambda\in
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="measurability-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="measurability-proof_1">Proof</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<ul>
+<li>"<span class="arithmatex">\(\Leftarrow\)</span>".</li>
+</ul>
+<p>Just check the condition for <span class="arithmatex">\(\xi\)</span> to be a random variable.</p>
+<ul>
+<li>"<span class="arithmatex">\(\Rightarrow\)</span>".</li>
+</ul>
+<p>Denote <span class="arithmatex">\(\mathscr{B}'\)</span> as the whole set <span class="arithmatex">\(B\subset \mathbb{R}\)</span>, which satisfies <span class="arithmatex">\(\{\xi\in B\}\in \mathscr{F}\)</span>, i.e.</p>
+<div class="arithmatex">\[
+\mathscr{B}'=\{B\subset \mathbb{R}: \{\xi\in B\}\in \mathscr{F}\}.
+\]</div>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a random variable. then by its definition, we have </p>
+<div class="arithmatex">\[
+\{(-\infty, x]: x\in \mathbb{R}\}\subset \mathscr{B}'
+\]</div>
+<p>If <span class="arithmatex">\(\mathscr{B}'\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra, then by <a href="../../Real_Analysis/Lebesgue_Measure/#Equivalent-configuration-of-Borel-Algebra">another configuration of Borel algebra</a>, then <span class="arithmatex">\(\mathscr{B}'\)</span> it is a <span class="arithmatex">\(\sigma\)</span>-algebra containing <span class="arithmatex">\(\mathscr{B}\)</span>, then <span class="arithmatex">\(\xi^{-1}(\mathscr{B})\subset \mathscr{F}\)</span>.</p>
+<p>Check that</p>
+<p>(i) total space <span class="arithmatex">\(\mathbb{R}\in\mathscr{B}'\)</span>, since <span class="arithmatex">\(\xi^{-1}(\mathbb{R})=\Omega\in \mathscr{F}\)</span>, so here <span class="arithmatex">\(B=\mathbb{R}\in \mathscr{B}'\)</span>.</p>
+<p>(ii) Assume <span class="arithmatex">\(A\in \mathscr{B}'\)</span>, then by definition of <span class="arithmatex">\(\mathscr{B}'\)</span>, we have <span class="arithmatex">\(\xi^{-1}(A)\in \mathscr{F}\)</span>, then by <a href="#Properties-of-Inverse-Image">operations of inverse mapping</a>, we have </p>
+<div class="arithmatex">\[
+\xi^{-1}(A^c)=(\xi^{-1}(A))^c\in \mathscr{F}.
+\]</div>
+<p>So here <span class="arithmatex">\(B=A^c\in \mathscr{B}'\)</span>.</p>
+<p>(iii) Assume <span class="arithmatex">\(\{A_n\}_{n\geq 1}\in \mathscr{B}'\)</span>, then <span class="arithmatex">\(\xi^{-1}(A_n)\in \mathscr{F}\)</span>, then by <a href="#Properties-of-Inverse-Image">operations of inverse mapping</a>, we have</p>
+<div class="arithmatex">\[
+\xi^{-1}\left(\bigcup_n A_n\right)=\bigcup_n \xi^{-1}(A_n)\in\mathscr{F}.
+\]</div>
+<p>So here <span class="arithmatex">\(B=\bigcup_n A_n\in \mathscr{F}\)</span>.</p>
+<p>In a nutshell, combined with (i) (ii) and (iii), we have <span class="arithmatex">\(\mathscr{B}'\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
 </div>
+</div>
+</div>
+<p>From the above deduction, we could see that <span class="arithmatex">\(\xi\)</span> is a random variable, iff there exists any family set <span class="arithmatex">\(\mathscr{A}\)</span> generated by <span class="arithmatex">\(\mathscr{B}\)</span>, such that</p>
+<div class="arithmatex">\[
+\xi^{-1}(\mathscr{A})\in \mathscr{F}.
+\]</div>
+<p>So if <span class="arithmatex">\(\xi\)</span> is a random variable on <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathscr{A}\)</span>, then it must be a random variable on any <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathscr{A}'\supset \mathscr{A}\)</span>. From these logic, we could see that there exists a smallest <span class="arithmatex">\(\sigma\)</span>-algebra denoted by <span class="arithmatex">\(\sigma(\xi)\)</span>, such that <span class="arithmatex">\(\xi\)</span> is a random variable on <span class="arithmatex">\(\sigma(\xi)\)</span>. It is easy to see that </p>
+<div class="arithmatex">\[
+\sigma(\xi)=\xi^{-1}(\mathscr{B}).
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Borel measurable function</p>
+<p>For a special case, <span class="arithmatex">\(\Omega=\mathbb{R}\)</span>, we call <span class="arithmatex">\(\xi=f\)</span> is a Borel measurable function, if <span class="arithmatex">\(\forall x\in \mathbb{R}\)</span>, </p>
+<div class="arithmatex">\[
+\{f\leq x\}\in \mathscr{B}.
+\]</div>
+</div>
+<p>It is natural to have the following properties.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of Borel measurable function</p>
+<p>(i) Assume <span class="arithmatex">\(f\in C(\mathbb{R})\)</span> is Borel measurable function.</p>
+<p>(ii) Assume <span class="arithmatex">\(\xi\)</span> is a random variable, <span class="arithmatex">\(f\)</span> is a Borel measurable function, then <span class="arithmatex">\(f(\xi)\)</span> is a random variable.</p>
+</div>
+<h3 id="achievement-of-distribution-function">Achievement of Distribution function<a class="headerlink" href="#achievement-of-distribution-function" title="Permanent link">&para;</a></h3>
+<p>With the help of Borel algebra, we have the following extra properties of distribution function.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of Distribution Function</p>
+<p>(i) <span class="arithmatex">\(\forall a&lt;b\)</span>, <span class="arithmatex">\(\mathbb{P}(\xi\in (a,b])=F(b)-F(a)\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(\forall x\in \mathbb{R}\)</span>, <span class="arithmatex">\(\mathbb{R}(\xi=x)=F(x)-F(x^-)\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(\forall x\in\mathbb{R}\)</span>, <span class="arithmatex">\(\mathbb{P}(\xi&gt;x)=1-F(x)\)</span>.</p>
+<p>(iv) Two distribution functions <span class="arithmatex">\(F(x)=G(x),\quad \forall x\in \mathbb{R}\)</span>, iff they are the same on a dense subset of <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for achievement of DF</p>
+<p>An arbitrary distribution function <span class="arithmatex">\(F\)</span> on <span class="arithmatex">\(\mathbb{R}\)</span> could be achieved.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="achievement-of-distribution-function-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="achievement-of-distribution-function-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using generalized inverse. The above proof is not applicable to multi-dimension distribution function.</p>
+</div>
+</div>
+</div>
+<h3 id="density-function">Density Function<a class="headerlink" href="#density-function" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Continuous DF &amp; Density Function</p>
+<p>A distribution function <span class="arithmatex">\(F\)</span> is said to be continuous, if there exists a non-negative L integrable function <span class="arithmatex">\(f\)</span>, such that <span class="arithmatex">\(\forall x\in \mathbb{R}\)</span>,</p>
+<div class="arithmatex">\[
+F(x)=\int_{-\infty}^x f(t)dt.
+\]</div>
+<p>and <span class="arithmatex">\(f\)</span> is called the <strong>Density Function</strong>. In this case, we also call its corresponding random variable <span class="arithmatex">\(\xi\)</span> to be <strong>continuous</strong>.</p>
+</div>
+<p>Readers could see that <span class="arithmatex">\(F\)</span> is absolute continuous, by <a href="../../Real_Analysis/Differential_Integral/#Property-of-Indefinite-Integration">properties of indefinite integral</a>. Density function is not unique, since they could differ in zero-measure sets.</p>
+<div class="admonition success">
+<p class="admonition-title">Calculation for ME of Continuous distribution</p>
+<p>Assume <span class="arithmatex">\(F\)</span> is a continuous distribution function of random variable <span class="arithmatex">\(\xi\)</span>, with its density function <span class="arithmatex">\(f\)</span>, then for a non-negative continuous or bounded continuous function <span class="arithmatex">\(\phi(\xi)\)</span>, </p>
+<div class="arithmatex">\[
+\mathbb{E}\phi(\xi)=\int_\mathbb{R}\phi(x)f(x)dx.
+\]</div>
 </div>
 
 
