@@ -1954,6 +1954,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#random-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Vector
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random Vector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#covariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covariance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4018,6 +4042,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#random-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Vector
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Random Vector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#covariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covariance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4707,6 +4755,72 @@ F(x)=\int_{-\infty}^x f(t)dt.
 \mathbb{E}\phi(\xi)=\int_\mathbb{R}\phi(x)f(x)dx.
 \]</div>
 </div>
+<h2 id="random-vector">Random Vector<a class="headerlink" href="#random-vector" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of joint distribution function</p>
+<p>A joint distribution function of random vector <span class="arithmatex">\(X=(\xi_1,\cdot,\xi_n)\)</span> is deinfed by</p>
+<div class="arithmatex">\[
+F_X(x_1,\cdots,x_n)=\mathbb{P}(\xi_1\leq x_1,\cdots,\xi_n\leq x_n).
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of joint distribution function</p>
+<p>(i) Easy to see that marginal distribution function of one random variable</p>
+<div class="arithmatex">\[
+F_{\xi_i}(x_i)=F_X(\infty,\cdots,x_i,\cdots,\infty).
+\]</div>
+<p>(ii) If <span class="arithmatex">\(\xi_1,\cdots,\xi_n\)</span> are mutually independent, then </p>
+<div class="arithmatex">\[
+F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
+\]</div>
+</div>
+<h3 id="covariance">Covariance<a class="headerlink" href="#covariance" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Covariance</p>
+<p>Assume <span class="arithmatex">\(\xi, \eta\)</span> are two random variables, and their <strong>Covariance</strong> is defined by</p>
+<div class="arithmatex">\[
+\text{cov}(\xi,\eta):=\mathbb{E}[(\xi-\mathbb{\xi})(\eta-\mathbb{E}\eta)]=\mathbb{E}\xi\eta-\mathbb{E}\xi\cdot\mathbb{E}\eta.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Covariance</p>
+<p>Assume <span class="arithmatex">\(\xi, \eta\)</span> are two random variables, then</p>
+<p>(i) <span class="arithmatex">\(\text{cov}(\xi,\xi)=D\xi\geq 0\)</span>;</p>
+<p>(ii) <span class="arithmatex">\(\text{cov}(\xi,\eta)=\text{cov}(\eta,\xi)\)</span>;</p>
+<p>(iii) <strong>Linearity</strong>. <span class="arithmatex">\(\forall c_1,c_2\in \mathbb{R}\)</span>, </p>
+<div class="arithmatex">\[
+\text{cov}(c_1\xi_1+c_2\xi_2,\eta)=c_1\text{cov}(\xi_1,\eta)+c_2\text{cov}(\xi_2,\eta).
+\]</div>
+</div>
+<p>Corresponding to covariance, we have its normalized quantity <strong>correlation coefficient</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Correlation Coefficient</p>
+<p>Assume <span class="arithmatex">\(\xi,\eta\)</span> are two random variables, their <strong>Correlation Coefficient</strong> is defined by</p>
+<div class="arithmatex">\[
+\rho(\xi,\eta):=\frac{\text{cov}(\xi,\eta)}{\sqrt{D\xi\cdot D\eta}}.
+\]</div>
+<p>when the denumerator equals <span class="arithmatex">\(0\)</span>, it is accustomed to <span class="arithmatex">\(1\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Correlation Coefficient</p>
+<p>(i) <span class="arithmatex">\(|\rho(\xi,\eta)|\leq 1\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(|\rho(\xi,\eta)|=1\)</span>, iff <span class="arithmatex">\(\xi, \eta\)</span> are linearly relevant, i.e. <span class="arithmatex">\(\exists a,b,c\in \mathbb{R}, a,b\neq 0\)</span>, such that</p>
+<div class="arithmatex">\[
+\mathbb{P}(a\xi+b\eta=c)=1.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Covariance Matrix</p>
+<p>Assume <span class="arithmatex">\(X=(\xi_1,\cdots,\xi_n)\)</span>, <span class="arithmatex">\(Y=(\eta_1,\cdots,\eta_m)\)</span> is a random vector, then define its Covariance Matrix $$to be</p>
+<div class="arithmatex">\[
+\pmb{\text{cov}}(X,Y):=(\text{cov}(\xi_i,\eta_j))_{n\times m}.
+\]</div>
+<p>For <span class="arithmatex">\(Y=X\)</span>, we have a <strong>phalanx</strong></p>
+<div class="arithmatex">\[
+\pmb{\text{cov}}(X,X)=\mathbb{E}[X^TX]-(\mathbb{E}X)^T(\mathbb{E}X).
+\]</div>
+</div>
+<p>!!! success "Properties of Covariance Matrix"w</p>
 
 
 
