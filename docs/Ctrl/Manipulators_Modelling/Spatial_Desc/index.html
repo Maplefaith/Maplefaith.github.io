@@ -2954,6 +2954,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#same-points-in-different-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same Points in different frames
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#homogeneous-transform-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       Homogeneous Transform Matrix
@@ -2972,11 +2981,44 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#operatiors" class="md-nav__link">
+  <a href="#operators" class="md-nav__link">
     <span class="md-ellipsis">
-      Operatiors
+      Operators
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-angles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed angles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euler-angles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Euler angles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalent-angle-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalent angle-axis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3819,6 +3861,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#same-points-in-different-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Same Points in different frames
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#homogeneous-transform-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       Homogeneous Transform Matrix
@@ -3837,11 +3888,44 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#operatiors" class="md-nav__link">
+  <a href="#operators" class="md-nav__link">
     <span class="md-ellipsis">
-      Operatiors
+      Operators
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-angles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed angles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euler-angles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Euler angles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalent-angle-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Equivalent angle-axis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3980,6 +4064,7 @@ r_{31}&amp;r_{32}&amp;r_{33}
 </div>
 </div>
 </div>
+<h3 id="same-points-in-different-frames">Same Points in different frames<a class="headerlink" href="#same-points-in-different-frames" title="Permanent link">&para;</a></h3>
 <p>Now we could discuss the description of points within different frames.</p>
 <div class="admonition success">
 <p class="admonition-title">Same points within different frames in simple cases</p>
@@ -3994,7 +4079,7 @@ r_{31}&amp;r_{32}&amp;r_{33}
 \]</div>
 <p>Note the we <strong>premultiply</strong> rotation matrix to <span class="arithmatex">\(^BP\)</span>, while we <strong>postmultiply</strong> rotation matrix to basis vectors in <span class="arithmatex">\(\{B\}\)</span> to get basis vectors in <span class="arithmatex">\(\{A\}\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="descriptions-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="descriptions-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="same-points-in-different-frames-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="same-points-in-different-frames-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) Easy to see.</p>
@@ -4140,9 +4225,104 @@ r_{31}&amp;r_{32}&amp;r_{33}
 </div>
 </div>
 </div>
-<h3 id="operatiors">Operatiors<a class="headerlink" href="#operatiors" title="Permanent link">&para;</a></h3>
+<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
+<p>Operators like translation, rotation could ba accomplished by the same mathematics as mapping the point to a second frame.</p>
 <div class="admonition success">
-<p class="admonition-title">Translation</p>
+<p class="admonition-title">Translation Operator</p>
+<p>In frame <span class="arithmatex">\(\{A\}\)</span>, vector <span class="arithmatex">\(^AP_1\)</span> is translated by a vector <span class="arithmatex">\(^AQ\)</span>, the result denoted by </p>
+<div class="arithmatex">\[
+^AP_2={^AP_1}+{^AQ}.
+\]</div>
+<p>We could use another perspective, i.e. construct a imaginary frame <span class="arithmatex">\(\{B\}\)</span> with same orientation of <span class="arithmatex">\(\{A\}\)</span> but origins at point <span class="arithmatex">\(Q\)</span>. The homogeneous transform matrix is</p>
+<div class="arithmatex">\[
+^A_BT=\left[\begin{array}{ccc:c}
+&amp;I_{3\times 3}&amp;&amp; {^AO_B}\\
+\hdashline
+0&amp;0&amp;0&amp;1
+\end{array}\right]=\left[\begin{array}{ccc:c}
+&amp;I_{3\times 3}&amp;&amp; {^AQ}\\
+\hdashline
+0&amp;0&amp;0&amp;1
+\end{array}\right].
+\]</div>
+<p>so the same point <span class="arithmatex">\(P\)</span> (after translation) in frame <span class="arithmatex">\(\{A\}\)</span> could be expressed in terms of that in frame <span class="arithmatex">\(\{B\}\)</span></p>
+<div class="arithmatex">\[
+^AP_2={^A_BT}{^BP_2}={^A_BT}{^AP_1}.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Rotation Operator</p>
+<p>Similar as we have in translation operator, we shall interpret a rotation to be a transform between two frames, i.e. </p>
+<div class="arithmatex">\[
+^AP_2={^A_BT}{^AP_1}.
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+^A_BT=\left[\begin{array}{ccc:c}
+&amp;R_K(\theta)&amp;&amp; \pmb{0}\\
+\hdashline
+0&amp;0&amp;0&amp;1
+\end{array}\right].
+\]</div>
+</div>
+<p>Here we discuss a little more about <span class="arithmatex">\(R_K(\theta)\)</span> using different perspectives.</p>
+<h4 id="fixed-angles">Fixed angles<a class="headerlink" href="#fixed-angles" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">X-Y-Z Fixed angles</p>
+<p>Assume frame <span class="arithmatex">\(\{B\}\)</span> coincides with a known reference frame <span class="arithmatex">\(\{A\}\)</span>, then rotate <span class="arithmatex">\(\{B\}\)</span> about <span class="arithmatex">\(\hat{X}_A\)</span> by an angle <span class="arithmatex">\(\gamma\)</span>, then rotate about <span class="arithmatex">\(\hat{Y}_A\)</span> by an angle <span class="arithmatex">\(\beta\)</span>, and finally about <span class="arithmatex">\(\hat{Z}_A\)</span> by an angle <span class="arithmatex">\(\alpha\)</span>.</p>
+<p>We can interpret these three steps as moving the same vector <span class="arithmatex">\(P\)</span> in three steps. Assume initially its expression in frame <span class="arithmatex">\(\{A\}\)</span> is <span class="arithmatex">\(^AP\)</span>, the final point <span class="arithmatex">\(P'\)</span> could be expressed by</p>
+<div class="arithmatex">\[
+^AP'=R_Z(\alpha)\cdot R_Y(\beta)\cdot R_X(\gamma)\cdot{^AP}.
+\]</div>
+<p>On the other hand, expression of <span class="arithmatex">\(P'\)</span> in frame <span class="arithmatex">\(\{B\}\)</span> is the same as in frame <span class="arithmatex">\(\{A\}\)</span>, i.e. <span class="arithmatex">\({^BP'}={^AP}\)</span>. So </p>
+<div class="arithmatex">\[
+^AP'=R_Z(\alpha)\cdot R_Y(\beta)\cdot R_X(\gamma)\cdot{^BP'}.
+\]</div>
+<p>meaning <span class="arithmatex">\(^A_BR=R_Z(\alpha)\cdot R_Y(\beta)\cdot R_X(\gamma)\)</span> by <a href="#same-points-in-different-frames">same point in different frames</a>, which is also called X-Y-Z fixed angle, achieved by <strong>premultiplying</strong> rotation matrices. We define X-Y-Z fixed angle as</p>
+<div class="arithmatex">\[
+^A_BR_{XYZ}(\gamma, \beta,\alpha)={R_{xyz}(\gamma,\beta, \alpha)}.
+\]</div>
+</div>
+<h4 id="euler-angles">Euler angles<a class="headerlink" href="#euler-angles" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Z-Y-X Euler angles</p>
+<p>Assume frame <span class="arithmatex">\(\{B\}\)</span> coincides with a known reference frame <span class="arithmatex">\(\{A\}\)</span>, then rotate <span class="arithmatex">\(\{B\}\)</span> about <span class="arithmatex">\(\hat{Z}_B\)</span> by an angle <span class="arithmatex">\(\alpha\)</span>, then rotate about <span class="arithmatex">\(\hat{Y}_B\)</span> by an angle <span class="arithmatex">\(\beta\)</span>, and finally about <span class="arithmatex">\(\hat{X}_B\)</span> by an angle <span class="arithmatex">\(\gamma\)</span>.</p>
+<p>For these three steps, we could construct three frames <span class="arithmatex">\(\{C\}\)</span>, <span class="arithmatex">\(\{D\}\)</span> and <span class="arithmatex">\(\{E\}\)</span>. Easy to see that</p>
+<div class="arithmatex">\[
+^A_CR=R_Z(\alpha)=\left[\begin{array}{ccc}
+1&amp;0&amp;0\\
+0&amp;\cos \alpha&amp;-\sin \alpha\\
+0 &amp; \sin \alpha&amp; \cos \alpha
+\end{array}\right].
+\]</div>
+<p>and </p>
+<div class="arithmatex">\[
+^C_DR=R_Y(\beta)=\left[\begin{array}{ccc}
+\cos \beta&amp;0&amp;\sin \beta\\
+0&amp;1&amp;0\\
+-\sin \beta&amp;0&amp; \cos \beta
+\end{array}\right],\quad ^D_ER=R_X(\gamma)=\left[\begin{array}{ccc}
+\cos \gamma&amp;-\sin \gamma&amp;0\\
+\sin \gamma&amp; \cos \gamma&amp;0\\
+0&amp;0&amp;1
+\end{array}\right].
+\]</div>
+<p>By <a href="#chain-rule">chain rule</a> we have</p>
+<div class="arithmatex">\[
+^A_BR={^A_ER}={^A_CR}\cdot{^C_DR}\cdot{^D_ER}=R_Z(\alpha)\cdot R_Y(\beta)\cdot R_X(\gamma).
+\]</div>
+<p>meaning the whole process could be achieved by <strong>postmultiplying</strong> rotation matrices, which is also called Z-Y-X fixed angles. We define Z-Y-X Euler angle as</p>
+<div class="arithmatex">\[
+^A_BR_{Z'Y'X'}(\beta,\alpha,\gamma)={R_{z'y'x'}(\beta, \alpha,\gamma)}.
+\]</div>
+</div>
+<p>Notice the above process is the same as we have in fixed angles.</p>
+<p>We have 6 symmetric and 6 non-symmetric forms of fixed angles or Euler angles.</p>
+<h4 id="equivalent-angle-axis">Equivalent angle-axis<a class="headerlink" href="#equivalent-angle-axis" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Definition of Equivalent angle-axis representations</p>
+<p>Given a random axis <span class="arithmatex">\(^AK={^A\pmb{r}_{OK}}=[\begin{array}{ccc}k_x &amp;k_y&amp;k_z\end{array}]^T\)</span> expressed in frame <span class="arithmatex">\(\{A\}\)</span>, rotate the original frame <span class="arithmatex">\(\{A\}\)</span> about axis <span class="arithmatex">\(\pmb{r}_{OK}\)</span> and get another frame <span class="arithmatex">\(\{B\}\)</span>. HOw to get the corresponding rotation matrix?</p>
+<p>Assume <span class="arithmatex">\(\pmb{r}_{OK}\)</span> is a unit vector. We want to find the expression of base vector <span class="arithmatex">\(\hat{X}_A\)</span> after it is rotated.</p>
 </div>
 <h3 id="gimbal-lock">Gimbal Lock<a class="headerlink" href="#gimbal-lock" title="Permanent link">&para;</a></h3>
 <p>Does every matrix could be expressed by <span class="arithmatex">\(Z-Y-X\)</span> angle?</p>

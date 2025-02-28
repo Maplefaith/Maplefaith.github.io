@@ -1899,9 +1899,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#law-of-large-numbers" class="md-nav__link">
+  <a href="#bernoullis-law-of-large-numbers" class="md-nav__link">
     <span class="md-ellipsis">
-      Law of large numbers
+      Bernoulli's Law of large numbers
     </span>
   </a>
   
@@ -1975,6 +1975,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convergence-for-sequence-of-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convergence for Sequence of random variables
+    </span>
+  </a>
   
 </li>
       
@@ -3987,9 +3996,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#law-of-large-numbers" class="md-nav__link">
+  <a href="#bernoullis-law-of-large-numbers" class="md-nav__link">
     <span class="md-ellipsis">
-      Law of large numbers
+      Bernoulli's Law of large numbers
     </span>
   </a>
   
@@ -4063,6 +4072,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convergence-for-sequence-of-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convergence for Sequence of random variables
+    </span>
+  </a>
   
 </li>
       
@@ -4549,7 +4567,7 @@ D\xi:=\mathbb{E}(\xi-\mathbb{E}\xi)^2.
 <p>(iii) <span class="arithmatex">\(D(a\xi)=a^2D\xi\)</span>.</p>
 <p>(iv) If <span class="arithmatex">\(\xi,\eta\)</span> are independent, then <span class="arithmatex">\(D(\xi+\eta)=D\xi+D\eta\)</span>.</p>
 </div>
-<h3 id="law-of-large-numbers">Law of large numbers<a class="headerlink" href="#law-of-large-numbers" title="Permanent link">&para;</a></h3>
+<h3 id="bernoullis-law-of-large-numbers">Bernoulli's Law of large numbers<a class="headerlink" href="#bernoullis-law-of-large-numbers" title="Permanent link">&para;</a></h3>
 <p>We could now discuss the relationship between probability and frequency.</p>
 <div class="admonition success">
 <p class="admonition-title">Bernoulli's Law of large numbers</p>
@@ -4559,7 +4577,7 @@ D\xi:=\mathbb{E}(\xi-\mathbb{E}\xi)^2.
 \]</div>
 <p>which means that <span class="arithmatex">\(\eta_n=\frac{\xi_n}{n}\)</span> converges to <span class="arithmatex">\(p\)</span> in a sense of probability.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="law-of-large-numbers-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="law-of-large-numbers-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="bernoullis-law-of-large-numbers-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="bernoullis-law-of-large-numbers-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using <a href="#Chebyshev-Inequation">Chebyshev Inequation</a>.</p>
@@ -4820,7 +4838,63 @@ F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
 \pmb{\text{cov}}(X,X)=\mathbb{E}[X^TX]-(\mathbb{E}X)^T(\mathbb{E}X).
 \]</div>
 </div>
-<p>!!! success "Properties of Covariance Matrix"w</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of Covariance Matrix of a random vector <span class="arithmatex">\(X\)</span></p>
+<p>Assume cov<span class="arithmatex">\((X,X)\)</span> is a covariance matrix of <span class="arithmatex">\(X=(\xi_1,\cdots,\xi_n)\)</span>, then cov<span class="arithmatex">\((X,X)\)</span> is a symmetric non-negative definite matrix.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="covariance-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="covariance-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall (x_1,\cdots,x_n)\in\mathbb{R}^n\)</span>, </p>
+<div class="arithmatex">\[
+\sum_{1\leq i,j\leq n}x_i\text{cov}(\xi_i,\xi_j)x_j=\left(\sum_{i=1}^nx_i\xi_i,\sum_{j=1}^n x_j\xi_j\right)=D\left(\sum_{i=1}^n x_i\xi_i\right)\geq 0.
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="convergence-for-sequence-of-random-variables">Convergence for Sequence of random variables<a class="headerlink" href="#convergence-for-sequence-of-random-variables" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of convergence</p>
+<p>Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> is a sequence of random variables, <span class="arithmatex">\(\xi\)</span> is a random variable. We call</p>
+<p>(i) <span class="arithmatex">\(\{\xi_n\}\)</span> converges to <span class="arithmatex">\(\xi\)</span> in a sense of probability, if <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\mathbb{P}(\{\omega\in\Omega: |\xi_n(\omega)-\xi(\omega)|&gt;\varepsilon\})=0.
+\]</div>
+<p>which is denoted by <span class="arithmatex">\(\xi_n\overset{p}{\rightarrow}\xi\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(\{x_n\}\)</span> almost surely converges to <span class="arithmatex">\(\xi\)</span>, if</p>
+<div class="arithmatex">\[
+\mathbb{P}(\{\omega\in\Omega: \lim_{n\rightarrow\infty}\xi_n(\omega)=\xi(\omega)\})=1
+\]</div>
+<p>or <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists A\subset \Omega\)</span>, s.t. <span class="arithmatex">\(\mathbb{P}(A)=0\)</span> and</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow\infty} \xi_n(\omega)=\xi(\omega),\quad \forall \omega\in \Omega-A.
+\]</div>
+<p>which is denoted by <span class="arithmatex">\(\xi_n\overset{a.s.}{\rightarrow}\xi\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Law of large numbers</p>
+<p>Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> is a sequence of random variables. Let partial summation <span class="arithmatex">\(S_n=\sum\limits_{i=1}^n\xi_i\)</span>, <span class="arithmatex">\(m_n=\mathbb{E}(S_n)\)</span>, <span class="arithmatex">\(s_n^2=DS_n\)</span>. Then <span class="arithmatex">\(\{\xi_n\}\)</span> satisfies</p>
+<p>(i) <strong>Law of large number</strong>, if <span class="arithmatex">\(\frac{S_n-m_n}{n}\overset{P}{\rightarrow} 0(n\rightarrow \infty)\)</span>, i.e. <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>,</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\mathbb{P}\left(\left\{\frac{\sum\limits_{i=1}^n\xi_i-m_n}{n}&gt;\varepsilon\right\}\right)=0.
+\]</div>
+<p>(ii) <strong>Strong law of large number</strong>, if <span class="arithmatex">\(\frac{S_n-m_n}{n}\overset{a.s.}{\rightarrow} 0(n\rightarrow \infty\)</span>, i.e.</p>
+<div class="arithmatex">\[
+\mathbb{P}\left(\left\{\lim_{n\rightarrow \infty}\frac{\sum\limits_{i=1}^n\xi_i-m_n}{n}=0\right\}\right)=1.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Borel-Cantelli Theorem</p>
+<p>Assume <span class="arithmatex">\(\{A_n\}\)</span> is a sequence of events, </p>
+<p>(i) If <span class="arithmatex">\(\sum\limits_{n=1}^\infty\mathbb{P}(A_n)&lt;\infty\)</span>, then </p>
+<div class="arithmatex">\[
+\mathbb{P}(\lim\sup_nA_n)=0.
+\]</div>
+<p>(ii) If <span class="arithmatex">\(\{A_n\}\)</span> are independent events, and <span class="arithmatex">\(\sum\limits_{n=1}^\infty\mathbb{P}(A_n)=\infty\)</span>, then</p>
+<div class="arithmatex">\[
+\mathbb{P}(\lim\sup_nA_n)=1.
+\]</div>
+</div>
 
 
 
