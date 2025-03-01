@@ -750,6 +750,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#important-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Equations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#basic-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Basic Concepts
@@ -3800,6 +3809,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#important-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Equations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#basic-concepts" class="md-nav__link">
     <span class="md-ellipsis">
       Basic Concepts
@@ -3848,6 +3866,138 @@
 
 
 <h1 id="metric-space">Metric Space<a class="headerlink" href="#metric-space" title="Permanent link">&para;</a></h1>
+<h2 id="important-equations">Important Equations<a class="headerlink" href="#important-equations" title="Permanent link">&para;</a></h2>
+<p><a id="inequation-lemma"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lemma</p>
+<p>Assume positive real number <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span> satisfies conjugate condition <span class="arithmatex">\(\alpha+\beta=1\)</span>, then </p>
+<div class="arithmatex">\[
+u^\alpha v^\beta\leq u\cdot\alpha+v\cdot\beta.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="important-equations-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="important-equations-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Since <span class="arithmatex">\(f(x)=x^\alpha (0&lt;\alpha&lt;1)\)</span> is concave function, so tangent function at any point on the function curve lies above it. Choose <span class="arithmatex">\((1,1)\)</span>, we have tangent function</p>
+<div class="arithmatex">\[
+y=\alpha(x-1)+1=\alpha x+1-\alpha=\alpha x+\beta
+\]</div>
+<p>with <span class="arithmatex">\(\beta=1-\alpha\in (0,1)\)</span>. So</p>
+<div class="arithmatex">\[
+x^\alpha\leq \alpha x + \beta.
+\]</div>
+<p>Let <span class="arithmatex">\(x=\frac{u}{v}\)</span>, then </p>
+<div class="arithmatex">\[
+\begin{align*}
+\left(\frac{u}{v}\right)^\alpha &amp;\leq \alpha \frac{u}{v} +\beta\\
+u^\alpha\cdot v^{-\alpha}&amp;\leq \alpha u \cdot v^{-1}+\beta\\
+u^\alpha\cdot v^{1-\alpha}&amp;\leq \alpha u +\beta v\\
+u^\alpha\cdot v^{\beta}&amp;\leq \alpha u +\beta v.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>If we let <span class="arithmatex">\(\alpha=\frac{1}{p}\)</span>, <span class="arithmatex">\(\beta=\frac{1}{q}\)</span> in <a href="#inequation-lemma">inequation</a>, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+u^{\frac{1}{p}}\cdot v^{\frac{1}{q}}\leq \frac{1}{p}u+\frac{1}{q}v, \quad \frac{1}{p}+\frac{1}{q}=1.\label{conjugate-inequation}
+\end{align}
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">H&ouml;lder Inequation</p>
+<p>Assume <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(q\)</span> satisfies conjugate condition <span class="arithmatex">\(\frac{1}{p}+\frac{1}{q}=1\)</span>, then </p>
+<p>(i) For <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> and <span class="arithmatex">\(\{\eta_n\}_{n\geq 1}\)</span>, <span class="arithmatex">\(\xi_n,\eta_n\in \mathbb{C}\)</span> we have</p>
+<div class="arithmatex">\[
+\sum_{n=1}^\infty |\xi_n\eta_n|\leq \left(\sum_{n=1}^\infty |\xi_n|^p\right)^{\frac{1}{p}}\cdot \left(\sum_{n=1}^\infty |\eta_n|^q\right)^{\frac{1}{q}}.
+\]</div>
+<p>(ii) For <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(g\)</span> satisfies <span class="arithmatex">\(\int_E |f(x)|^pdx&lt;\infty\)</span>, <span class="arithmatex">\(\int_E |g(x)|^qdx&lt;\infty\)</span>, we have</p>
+<div class="arithmatex">\[
+\int_E |f(x)g(x)|dx\leq \left(\int_E |f(x)|^pdx\right)^{\frac{1}{p}}\cdot \left(\int_E |g(x)|^qdx\right)^{\frac{1}{g}}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="important-equations-proof-for-i" name="__tabbed_2" type="radio" /><input id="important-equations-proof-for-ii" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="important-equations-proof-for-i">Proof for (i)</label><label for="important-equations-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>In inequation <span class="arithmatex">\(\ref{conjugate-inequation}\)</span>, for <span class="arithmatex">\(n=1,2,\cdots\)</span> let </p>
+<div class="arithmatex">\[
+u=\frac{|\xi_n|^p}{\left(\sum_{n=1}^\infty |\xi_n|^p\right)}, \quad 
+v=\frac{|\eta_n|^q}{\left(\sum_{n=1}^\infty |\eta_n|^q\right)},
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+\frac{|\xi_n|}{\left(\sum_{n=1}^\infty |\xi_n|^p\right)^{\frac{1}{p}}}\cdot \frac{|\eta_n|}{\left(\sum_{n=1}^\infty |\eta_n|^q\right)^{\frac{1}{q}}}\leq \frac{1}{p}\frac{|\xi_n|^p}{\left(\sum_{n=1}^\infty |\xi_n|^p\right)}+\frac{1}{q}\frac{|\eta_n|^q}{\left(\sum_{n=1}^\infty |\eta_n|^q\right)}
+\]</div>
+<p>summing up <span class="arithmatex">\(n=1,2,\cdots\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\sum_{n=1}^\infty|\xi_n\eta_n|}{\left(\sum_{n=1}^\infty |\xi_n|^p\right)^{\frac{1}{p}}\left(\sum_{n=1}^\infty |\eta_n|^q\right)^{\frac{1}{q}}} &amp;\leq \frac{1}{p}\frac{\sum_{n=1}^\infty|\xi_n|^p}{\left(\sum_{n=1}^\infty |\xi_n|^p\right)}+\frac{1}{q}\frac{\sum_{n=1}^\infty|\eta_n|^q}{\left(\sum_{n=1}^\infty |\eta_n|^q\right)}\\
+\frac{\sum_{n=1}^\infty|\xi_n\eta_n|}{\left(\sum_{n=1}^\infty |\xi_n|^p\right)^{\frac{1}{p}}\left(\sum_{n=1}^\infty |\eta_n|^q\right)^{\frac{1}{q}}} &amp;\leq \frac{1}{p}+\frac{1}{q}=1\\
+\Rightarrow\quad  \sum_{n=1}^\infty|\xi_n\eta_n|&amp; \leq \left(\sum_{n=1}^\infty |\xi_n|^p\right)^{\frac{1}{p}}\left(\sum_{n=1}^\infty |\eta_n|^q\right)^{\frac{1}{q}}.
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<p>In inequation <span class="arithmatex">\(\ref{conjugate-inequation}\)</span>, let </p>
+<div class="arithmatex">\[
+u=\frac{|f(x)|^p}{\left(\int_E |f(x)|^p dx\right)}, \quad 
+v=\frac{|g(x)|^q}{\left(\int_E |g(x)|^q dx\right)},
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+\frac{|f(x)|}{\left(\int_E |f(x)|^p dx\right)^{\frac{1}{p}}}\cdot \frac{|g(x)|}{\left(\int_E |g(x)|^q dx\right)^{\frac{1}{q}}}\leq \frac{1}{p}\frac{|f(x)|^p}{\left(\int_E |f(x)|^p dx\right)}+\frac{1}{q}\frac{|g(x)|^q}{\left(\int_E |g(x)|^q dx\right)}
+\]</div>
+<p>integrate on <span class="arithmatex">\(E\)</span> on both sides, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\int_E |f(x)g(x)|dx}{\left(\int_E |f(x)|^p dx\right)^{\frac{1}{p}}\left(\int_E |g(x)|^q dx\right)^{\frac{1}{q}}}&amp;\leq \frac{1}{p}\frac{\int_E |f(x)|^pdx}{\left(\int_E |f(x)|^p dx\right)}+\frac{1}{q}\frac{\int_E |g(x)|^qdx}{\left(\int_E |g(x)|^q dx\right)}\\
+\frac{\int_E |f(x)g(x)|dx}{\left(\int_E |f(x)|^p dx\right)^{\frac{1}{p}}\left(\int_E |g(x)|^q dx\right)^{\frac{1}{q}}}&amp;\leq \frac{1}{p}+\frac{1}{q}=1\\
+\Rightarrow \quad \int_E |f(x)g(x)|dx &amp;\leq \left(\int_E |f(x)|^p dx\right)^{\frac{1}{p}}\left(\int_E |g(x)|^q dx\right)^{\frac{1}{q}}.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Minkowski Inequation</p>
+<p>Assume <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(q\)</span> satisfies conjugate condition <span class="arithmatex">\(\frac{1}{p}+\frac{1}{q}=1\)</span>, then </p>
+<p>(i) For <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> and <span class="arithmatex">\(\{\eta_n\}_{n\geq 1}\)</span>, <span class="arithmatex">\(\xi_n,\eta_n\in \mathbb{C}\)</span>, we have</p>
+<div class="arithmatex">\[
+\left(\sum_{n=1}^\infty |\xi_n+\eta_n|^p\right)^{\frac{1}{p}} \leq \left(\sum_{n=1}^\infty |\xi_n|^p\right)^{\frac{1}{p}} + \left(\sum_{n=1}^\infty |\eta_n|^p\right)^{\frac{1}{p}}
+\]</div>
+<p>(ii) For <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(g\)</span> satisfies <span class="arithmatex">\(\int_E |f(x)|^pdx&lt;\infty\)</span>, <span class="arithmatex">\(\int_E |g(x)|^qdx&lt;\infty\)</span>, we have</p>
+<div class="arithmatex">\[
+\left(\int_E |f(x)+g(x)|^pdx\right)^{\frac{1}{p}}\leq \left(\int_E |f(x)|^pdx\right)^{\frac{1}{p}}+\left(\int_E |g(x)|^pdx\right)^{\frac{1}{p}}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="important-equations-proof-for-i_1" name="__tabbed_3" type="radio" /><input id="important-equations-proof-for-ii_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="important-equations-proof-for-i_1">Proof for (i)</label><label for="important-equations-proof-for-ii_1">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\left(\sum_{n=1}^\infty |\xi_n+\eta_n|^p\right)&amp;=\sum_{n=1}^\infty \left( |\xi_n+\eta_n|^{p-1}\cdot  |\xi_n+\eta_n|\right)\\
+&amp;\leq \sum_{n=1}^\infty \left[|\xi_n+\eta_n|^{\frac{p}{q}}\cdot \left(|\xi_n|+|\eta_n|\right)\right]\\
+&amp;=\sum_{n=1}^\infty \left( |\xi_n+\eta_n|^{\frac{p}{q}}\cdot |\xi_n|\right) + \sum_{n=1}^\infty \left( |\xi_n+\eta_n|^{\frac{p}{q}}\cdot |\eta_n|\right)\\
+&amp;\leq \left( \sum_{n=1}^\infty |\xi_n+\eta_n|^{\frac{p}{q}\cdot q} \right)^\frac{1}{q}\cdot \left( \sum_{n=1}^\infty |\xi_n|^p\right)^\frac{1}{p} + \left( \sum_{n=1}^\infty |\xi_n+\eta_n|^{\frac{p}{q}\cdot q} \right)^\frac{1}{q}\cdot  \left(\sum_{n=1}^\infty |\eta_n|^p\right)^\frac{1}{p}\\
+\Rightarrow \quad \left( \sum_{n=1}^\infty |\xi_n+\eta_n|^{\frac{p}{q}\cdot q} \right)^{1-\frac{1}{q}} &amp;\leq \left(\sum_{n=1}^\infty |\xi_n|^p\right)^\frac{1}{p}+\left(\sum_{n=1}^\infty |\eta_n|^p\right)^\frac{1}{p}\\
+\left( \sum_{n=1}^\infty |\xi_n+\eta_n|^{p}\right)^{\frac{1}{p}} &amp;\leq \left(\sum_{n=1}^\infty |\xi_n|^p\right)^\frac{1}{p}+\left(\sum_{n=1}^\infty |\eta_n|^p\right)^\frac{1}{p}\\
+\end{align*}
+\]</div>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\left(\int_E |f(x)+g(x)|^p dx\right)&amp;=\int_E \left( |f(x)+g(x)|^{p-1}\cdot  |f(x)+g(x)|\right) dx\\
+&amp;\leq \int_E \left[|f(x)+g(x)|^{\frac{p}{q}}\cdot \left(|f(x)|+|g(x)|\right)\right] dx\\
+&amp;=\int_E \left( |f(x)+g(x)|^{\frac{p}{q}}\cdot |f(x)|\right) dx + \int_E \left( |f(x)+g(x)|^{\frac{p}{q}}\cdot |g(x)|\right) dx\\
+&amp;\leq \left( \int_E |f(x)+g(x)|^{\frac{p}{q}\cdot q} dx\right)^\frac{1}{q}\cdot \left( \int_E |f(x)|^pdx\right)^\frac{1}{p} + \left( \int_E |f(x)+g(x)|^{\frac{p}{q}\cdot q} dx\right)^\frac{1}{q}\cdot  \left(\int_E |g(x)|^pdx\right)^\frac{1}{p}\\
+\Rightarrow \quad \left( \int_E |f(x)+g(x)|^{\frac{p}{q}\cdot q} dx\right)^{1-\frac{1}{q}} &amp;\leq \left(\int_E |f(x)|^pdx\right)^\frac{1}{p}+\left(\int_E |g(x)|^pdx\right)^\frac{1}{p}\\
+\left( \int_E |f(x)+g(x)|^{p}dx\right)^{\frac{1}{p}} &amp;\leq \left(\int_E |f(x)|^pdx\right)^\frac{1}{p}+\left(\int_E |g(x)|^pdx\right)^\frac{1}{p}\\
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
 <h2 id="basic-concepts">Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">&para;</a></h2>
 <p><a id="Definition-of-Metric-Space"></a></p>
 <div class="admonition info">
@@ -3890,7 +4040,7 @@
 \rho(f,g)=\max_{t\in[a,b]}|f(t)-g(t)|.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="basic-concepts-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="basic-concepts-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) Use Cauchy inequation.</p>
@@ -3916,7 +4066,7 @@ l^\infty:=\{\{\xi_n\}_{n\geq 1}: \exists M&gt;0, \text{ s.t } |\xi_n|\leq M,\for
 \rho(x,y)=\sup_{n}|\xi_n-\eta_n|.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="basic-concepts-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="basic-concepts-proof_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -3940,7 +4090,7 @@ L^\infty:=\{\text{measurable } f : \exists M&gt;0, \exists E_0\subset  E, \text{
 \rho(f,g)=\inf_{m(E_0)=0,\atop E_0\subset E}\left\{\sup_{t\in E-E_0}|f(t)-g(t)|\right\}.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="basic-concepts-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="basic-concepts-proof_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) </p>
@@ -3964,7 +4114,7 @@ L^\infty:=\{\text{measurable } f : \exists M&gt;0, \exists E_0\subset  E, \text{
 <p>(ii) <span class="arithmatex">\(\forall y_0\in M\)</span>, <span class="arithmatex">\(\{\rho(x_n,y_0)\}_{n\geq 1}\)</span> is bounded.</p>
 <p>(iii) <strong>Subsequence</strong>. for all subsequence <span class="arithmatex">\(\{x_{n_j}\}\)</span> converges to the same limit. Conversely, if for all subsequence <span class="arithmatex">\(\{x_{n_j}\}\)</span> converges, then <span class="arithmatex">\(\{x_n\}\)</span> also converges.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="convergence-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="convergence-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="convergence-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="convergence-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) Assume there are two distinct limits <span class="arithmatex">\(x_0,y_0\in M\)</span>,</p>

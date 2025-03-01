@@ -1985,6 +1985,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Convergence for Sequence of random variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uniform-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniform Convergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence-in-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convergence in distribution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4082,6 +4106,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Convergence for Sequence of random variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uniform-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniform Convergence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#convergence-in-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convergence in distribution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4878,7 +4926,7 @@ F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
 <div class="arithmatex">\[
 \lim_{n\rightarrow \infty}\mathbb{P}\left(\left\{\frac{\sum\limits_{i=1}^n\xi_i-m_n}{n}&gt;\varepsilon\right\}\right)=0.
 \]</div>
-<p>(ii) <strong>Strong law of large number</strong>, if <span class="arithmatex">\(\frac{S_n-m_n}{n}\overset{a.s.}{\rightarrow} 0(n\rightarrow \infty\)</span>, i.e.</p>
+<p>(ii) <strong>Strong law of large number</strong>, if <span class="arithmatex">\(\frac{S_n-m_n}{n}\overset{a.s.}{\rightarrow} 0(n\rightarrow \infty)\)</span>, i.e.</p>
 <div class="arithmatex">\[
 \mathbb{P}\left(\left\{\lim_{n\rightarrow \infty}\frac{\sum\limits_{i=1}^n\xi_i-m_n}{n}=0\right\}\right)=1.
 \]</div>
@@ -4895,6 +4943,68 @@ F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
 \mathbb{P}(\lim\sup_nA_n)=1.
 \]</div>
 </div>
+<p>The following is the probability form of <a href="../../Real_Analysis/Measurable_Func/#Riesz-Theorem">Riesz theorem</a>.</p>
+<div class="admonition success">
+<p class="admonition-title">Riesz Theorem for Probability</p>
+<p>Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> is a sequence of random variables, <span class="arithmatex">\(\xi\)</span> is a random variable, then</p>
+<p>(i) If <span class="arithmatex">\(\xi_n\overset{P}{\rightarrow}\xi\)</span>, then there exists a subsequence <span class="arithmatex">\(\{\xi_{n_k}\}\)</span> such that <span class="arithmatex">\(\xi_{n_k}\overset{a.s.}{\rightarrow} \xi\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(\xi_{n}\overset{a.s.}{\rightarrow} \xi\)</span>, then <span class="arithmatex">\(\xi_n\overset{P}{\rightarrow}\xi\)</span>.</p>
+</div>
+<p>The following theorem is a sufficient condition for almost surely convergence.</p>
+<div class="admonition success">
+<p class="admonition-title">Sufficient condition for almost surely convergence</p>
+<p>Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> is a sequence of random variables, <span class="arithmatex">\(\xi\)</span> is a random variable. If <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, </p>
+<div class="arithmatex">\[
+\sum_{n=1}^\infty\mathbb{P}(|\xi_n-\xi|&gt;\varepsilon)&lt;\infty,
+\]</div>
+<p>then <span class="arithmatex">\(\xi_{n}\overset{a.s.}{\rightarrow} \xi\)</span>.</p>
+</div>
+<h3 id="uniform-convergence">Uniform Convergence<a class="headerlink" href="#uniform-convergence" title="Permanent link">&para;</a></h3>
+<p>This is the expectation form of H&ouml;lder inequation.</p>
+<div class="admonition success">
+<p class="admonition-title">H&ouml;lder Inequation</p>
+<p>Assume <span class="arithmatex">\(1&lt;p&lt;\infty\)</span>, <span class="arithmatex">\(1&lt;q&lt;\infty\)</span>, <span class="arithmatex">\(\frac{1}{p}+\frac{1}{q}=1\)</span>, then</p>
+<div class="arithmatex">\[
+\mathbb{E}|\xi\eta|\leq (\mathbb{E}|\xi|^p)^{\frac{1}{p}}(\mathbb{E}|\eta|^q)^{\frac{1}{q}}.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">a order absolute moment</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a ranodm variable and <span class="arithmatex">\(a&gt;0\)</span>, we call <span class="arithmatex">\(\mathbb{E}|\xi|^a\)</span> <span class="arithmatex">\(a\)</span> order absolute moment.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of absolute moment</p>
+<p>Assume <span class="arithmatex">\(0&lt;a&lt;b\)</span>, then</p>
+<div class="arithmatex">\[
+(\mathbb{E}|\xi|^a)^{\frac{1}{a}}\leq (\mathbb{E}|\xi|^b)^{\frac{1}{b}}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="uniform-convergence-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="uniform-convergence-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using H&ouml;lder inequation, let <span class="arithmatex">\(p=\frac{a}{b}\)</span>.</p>
+<div class="arithmatex">\[
+\mathbb{E}|\xi|^a\cdot 1\leq (\mathbb{E}(|\xi|^a)^\frac{a}{b})^{\frac{b}{a}}\cdot (\mathbb{E}(1)^{\frac{a}{a-b}})^{\frac{a-b}{a}}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><span class="arithmatex">\(L^r\)</span> space for probability</p>
+<p>Assume <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> is a sequence of random variables, <span class="arithmatex">\(\xi\)</span> is a random variable. <span class="arithmatex">\(\{\xi_n\}\)</span> is said to converge to <span class="arithmatex">\(\xi\)</span> in a sense of <span class="arithmatex">\(r\)</span> order absolute moment, or <span class="arithmatex">\(L^r\)</span> (<span class="arithmatex">\(r\geq 1\)</span>), if <span class="arithmatex">\(\mathbb{E}|\xi_n|^r\)</span> and <span class="arithmatex">\(\mathbb{E}|\xi|^r\)</span> is finite, and </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}\mathbb{E}|\xi_n-\xi|^r=0,
+\]</div>
+<p>which is denoted by <span class="arithmatex">\(\xi_n\overset{L^r}{\rightarrow}\xi\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of uniform convergence</p>
+<p>Assume integrable family of random variables <span class="arithmatex">\(\{\xi_\lambda\}_{\lambda\in\Lambda}\)</span> is uniformly convergent, if</p>
+<div class="arithmatex">\[
+\lim_{N\rightarrow \infty}\sup_\Lambda\mathbb{E}(|\xi_\lambda|; |\xi|\geq N)=0.
+\]</div>
+</div>
+<h3 id="convergence-in-distribution">Convergence in distribution<a class="headerlink" href="#convergence-in-distribution" title="Permanent link">&para;</a></h3>
 
 
 
