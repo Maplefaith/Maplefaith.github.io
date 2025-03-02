@@ -3953,7 +3953,7 @@
 <h2 id="complex-number-plane">Complex Number &amp; Plane<a class="headerlink" href="#complex-number-plane" title="Permanent link">&para;</a></h2>
 <h3 id="basic-concepts">Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">&para;</a></h3>
 <p>Assume <span class="arithmatex">\(i^2=-1\)</span>, then <span class="arithmatex">\(\mathbb{C}:= \{z: z=x+iy, \quad x,y\in \mathbb{R} \}\)</span>. From definition we know there exsits a bijection bwtween <span class="arithmatex">\(\mathbb{C}\)</span> and <span class="arithmatex">\(\mathbb{R}^2\)</span>.</p>
-<p>It is natural to define operations like <strong>addition</strong> and <strong>multiplication</strong>. Its <strong>modulus</strong> is consistent with norm-2 in <span class="arithmatex">\(\mathbb{R}^2\)</span>:</p>
+<p>It is natural to define differential operations like <strong>addition</strong> and <strong>multiplication</strong>. Its <strong>modulus</strong> is consistent with norm-2 in <span class="arithmatex">\(\mathbb{R}^2\)</span>:</p>
 <div class="arithmatex">\[
 |z|=(x^2+y^2)^{\frac{1}{2}}.
 \]</div>
@@ -4035,6 +4035,14 @@ z=re^{i\theta},
 <p>In fact more is true: every holomorphic function is analytic, in the sense that it has a power series expansion near every point (power series will be discussed in the next section), and for this reason we also use the term analytic as a synonym for holomorphic. </p>
 <p>Again, this is in contrast with the fact that there are indefinitely differentiable functions of one real variable that cannot be expanded in a power series. (See Exercise 23.)</p>
 </div>
+<div class="admonition success">
+<p class="admonition-title">Interpretation of the above</p>
+<p>Assume <span class="arithmatex">\(\Omega\)</span> is a region in <span class="arithmatex">\(\mathbb{C}\)</span>, use <span class="arithmatex">\(C(\Omega)\)</span> to denote the whole continuous function on <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(H(\Omega)\)</span> to denote the whole holomorphic function on <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(H(\Omega)\subset C(\Omega)\)</span>.</p>
+<p>In the following chapter, we will have more stronger theorems. If we use <span class="arithmatex">\(C^1(\Omega)\)</span> to denote the whole function whose <span class="arithmatex">\(f_x, f_y\)</span> are continous, <span class="arithmatex">\(C^k(\Omega)\)</span> to denote the whole function whose <span class="arithmatex">\(f^{(k)}_x,f^{(k)}_y\)</span> are continuous, then we have</p>
+<div class="arithmatex">\[
+H(\Omega)\subset C^{\infty}(\Omega)\subset C^k(\Omega)\subset ^(\Omega).
+\]</div>
+</div>
 <div class="question">
 <p><strong>Example</strong>. </p>
 <p>(i) Function <span class="arithmatex">\(f(z)=z\)</span> is holomorphic on any open set in <span class="arithmatex">\(\mathbb{C}\)</span> with <span class="arithmatex">\(f'(z)=1\)</span>. </p>
@@ -4075,19 +4083,19 @@ f(z_0+h)=f(z_0)+f'(z_0)h+o(h).
 <p>To distinguish, we have the follwoing definition of the so-called differentiability.</p>
 <div class="admonition info">
 <p class="admonition-title">Definitions of differentiability</p>
-<p>(i) Differentiability of real function. Assume <span class="arithmatex">\(f(z)=u(x,y)+iv(x,y)\)</span> is defined on <span class="arithmatex">\(\Omega\)</span>, <span class="arithmatex">\(z_0=x_0+iy_0\in \Omega\)</span>. <span class="arithmatex">\(f\)</span> is said to be real differentiable, if binary real functions <span class="arithmatex">\(u(x,y), v(x,y)\)</span> is differentiable at <span class="arithmatex">\((x_0,y_0)\)</span>.</p>
+<p>(i) <strong>Differentiability of real function</strong>. Assume <span class="arithmatex">\(f(z)=u(x,y)+iv(x,y)\)</span> is defined on <span class="arithmatex">\(\Omega\)</span>, <span class="arithmatex">\(z_0=x_0+iy_0\in \Omega\)</span>. <span class="arithmatex">\(f\)</span> is said to be real differentiable, if binary real functions <span class="arithmatex">\(u(x,y), v(x,y)\)</span> is differentiable at <span class="arithmatex">\((x_0,y_0)\)</span>.</p>
 <p>Recall that a binary function <span class="arithmatex">\(f\)</span> is differentiable at <span class="arithmatex">\((x_0,y_0)\)</span>, could implies <span class="arithmatex">\(f\)</span> if continuous at <span class="arithmatex">\((x_0,y_0)\)</span> and has partial derivatives from all directions.</p>
-<p>(ii) Differantiability of Vector function <span class="arithmatex">\(\pmb{f}: \mathbb{R}^n\rightarrow \mathbb{R}^m\)</span> is said to be differentiable at <span class="arithmatex">\(\pmb{x}_0\)</span>, if there exists matrix (or linear transformation) <span class="arithmatex">\(\pmb{A}_{m\times n}(\pmb{x_0})\)</span> independent of <span class="arithmatex">\(\Delta \pmb{x}\)</span>, such that</p>
+<p>(ii) <strong>Differantiability of Vector function</strong> <span class="arithmatex">\(\pmb{f}: \mathbb{R}^n\rightarrow \mathbb{R}^m\)</span> is said to be differentiable at <span class="arithmatex">\(\pmb{x}_0\)</span>, if there exists matrix (or linear transformation) <span class="arithmatex">\(\pmb{A}_{m\times n}(\pmb{x_0})\)</span> independent of <span class="arithmatex">\(\Delta \pmb{x}\)</span>, such that</p>
 <div class="arithmatex">\[
 \Delta\pmb{y}=\pmb{f}(\pmb{x}+\Delta\pmb{x})-\pmb{f}(\pmb{x})=\pmb{A}\Delta \pmb{x}+o(\Delta\pmb{x}).
 \]</div>
 <p>Here <span class="arithmatex">\(\pmb{A}\)</span> is denoted as Jacobi matrix <span class="arithmatex">\(J\)</span>.</p>
-<p>(iii) Differentiability of complex function <span class="arithmatex">\(f\)</span>. We could use from a vector function <span class="arithmatex">\(\mathbb{R}^2\rightarrow \mathbb{R}^2\)</span>. That is, there exsits a complex number <span class="arithmatex">\(w\)</span>, such that</p>
+<p>(iii) <strong>Differentiability of complex function</strong> <span class="arithmatex">\(f\)</span>. We could use from a vector function <span class="arithmatex">\(\mathbb{R}^2\rightarrow \mathbb{R}^2\)</span>. That is, there exsits a complex number <span class="arithmatex">\(w\)</span>, such that</p>
 <div class="arithmatex">\[
 f(z_0+h)=f(z_0)+wh+o(h), \quad h\in \mathbb{C}.
 \]</div>
 </div>
-<p>Compared to Jacobi matrix expressed by <span class="arithmatex">\((u,v)\)</span></p>
+<p>Compared to Jacobi matrix with <span class="arithmatex">\(\pmb{f}=(u,v)\)</span> expressed by </p>
 <div class="arithmatex">\[
 J=\left[\begin{array}{cc}
 \frac{\partial u}{\partial x}&amp; \frac{\partial u}{\partial y}\\
@@ -4096,25 +4104,32 @@ J=\left[\begin{array}{cc}
 \]</div>
 <p>how to connect <span class="arithmatex">\(w=f'(z_0)\in \mathbb{C}\)</span> and matrix <span class="arithmatex">\(J\in \mathbb{R}^{2\times 2}\)</span>? We consider two special derivatives, real and pure imaginary ones.</p>
 <div class="admonition success">
-<p class="admonition-title">Deduction for Cauchy-Riemann Equations</p>
-<p>In definition of <span class="arithmatex">\(f'(z_0)\)</span>, we let <span class="arithmatex">\(h=h_1+ih_2\)</span>, where <span class="arithmatex">\(h_1,h_2\in mathbb{R}\)</span>, in order to change the dimension of denominator of formulation <span class="arithmatex">\(\ref{derivative-f-complex}\)</span>.</p>
+<p class="admonition-title">Holomorphic implies Cauchy-Riemann Equations</p>
+<p>In definition of <span class="arithmatex">\(f'(z_0)\)</span>, we let <span class="arithmatex">\(h=h_1+ih_2\)</span>, where <span class="arithmatex">\(h_1,h_2\in \mathbb{R}\)</span>, in order to change the dimension of denominator of formulation <span class="arithmatex">\(\ref{derivative-f-complex}\)</span>.</p>
 <p>(i) <span class="arithmatex">\(h_2=0\)</span>, then <span class="arithmatex">\(h=h_1\in \mathbb{R}\)</span>, this is just a real derivative of complex function <span class="arithmatex">\(f\)</span>, i.e. </p>
 <div class="arithmatex">\[
-f'(z_0)=\frac{\partial f}{\partial x}=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}
+\begin{equation}
+f'(z_0)=\frac{\partial f}{\partial x}=\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x}\label{x-partial}
+\end{equation}
 \]</div>
 <p>is still a complex number.</p>
 <p>(ii) <span class="arithmatex">\(h_1=0\)</span>, then <span class="arithmatex">\(h=ih_2\)</span> is a pure imaginary number. So this gives </p>
 <div class="arithmatex">\[
-f'(z_0)=\frac{1}{i}\frac{\partial f}{\partial y}=-i\frac{\partial u}{\partial y}+\frac{\partial v}{\partial y}
+\begin{align}
+f'(z_0)=\frac{1}{i}\frac{\partial f}{\partial y}=-i\frac{\partial u}{\partial y}+\frac{\partial v}{\partial y}\label{y-partial}
+\end{align}
 \]</div>
 <p>is also still a complex number.</p>
 <p>Combine (i) and (ii) and let real and imaginary parts equals, we have</p>
 <div class="arithmatex">\[
-\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\quad \frac{\partial u}{\partial y}=-\frac{\partial v}{\partial y}
+\begin{align}
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\quad \frac{\partial u}{\partial y}=-\frac{\partial v}{\partial y}\label{Cauchy-Riemann}
+\end{align}
 \]</div>
+<p>which is called Cauchy-Riemann Equations.</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Deduction 2</p>
+<p class="admonition-title">Using another two variables <span class="arithmatex">\(z\)</span> and <span class="arithmatex">\(\overline{z}\)</span></p>
 <p>Recall from formulation <span class="arithmatex">\(\ref{variables-x-y-z-zbar}\)</span>, we could express <span class="arithmatex">\(x,y\)</span> using <span class="arithmatex">\(z,\overline{z}\)</span>. Then we could deduce the relationship of derivatives between <span class="arithmatex">\(x,y\)</span> and <span class="arithmatex">\(x,\overline{z}\)</span>.</p>
 <p>Notice that </p>
 <div class="arithmatex">\[
@@ -4134,10 +4149,10 @@ f(x,y)=f\left(\frac{z+\overline{z}}{2}, -i\frac{z-\overline{z}}{2}\right),
 </div>
 <p>The more specific relationship could be expressed in the following theorem.</p>
 <div class="admonition success">
-<p class="admonition-title">Holomorphic implies relationship of real &amp; imaginary parts</p>
+<p class="admonition-title">Extention of derivatives: Complex differential expressed by extended partial derivatives</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is holomorphic at <span class="arithmatex">\(z_0\)</span>, then </p>
 <div class="arithmatex">\[
-\frac{\partial f}{\partial \overline{z}}=0
+\frac{\partial f}{\partial \overline{z}}\Bigg|_{z=z_0}=0
 \]</div>
 <p>and </p>
 <div class="arithmatex">\[
@@ -4148,9 +4163,78 @@ f'(z_0)=\frac{\partial f}{\partial z}(z_0)=2\frac{\partial u}{\partial z}(z_0).
 \text{det}J_{F}(x_0,y_0)=|f'(z_0)|^2.
 \]</div>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="relationship-between-real-imaginary-parts-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="relationship-between-real-imaginary-parts-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By definition of differential operator,</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\partial f}{\partial \overline{z}}\Bigg|_{z=z_0}&amp;=
+\frac{1}{2}\left(\frac{\partial f}{\partial x} + i\frac{\partial f}{\partial y} \right)\\
+&amp;=\frac{1}{2}\left(\frac{\partial f}{\partial x} -\frac{1}{i}\frac{\partial f}{\partial y} \right)\\
+&amp;=\frac{1}{2}\left(\frac{\partial u}{\partial x}+i\frac{\partial v}{\partial x} +i\frac{\partial u}{\partial y}-\frac{\partial v}{\partial y}\right)\\
+&amp;=0.
+\end{align*}
+\]</div>
+<p>where the third "<span class="arithmatex">\(=\)</span>" holds by equation <span class="arithmatex">\(\ref{x-partial}\)</span> and <span class="arithmatex">\(\ref{y-partial}\)</span>, the forth "<span class="arithmatex">\(=\)</span>" holds by Cauchy-Riemann equations <span class="arithmatex">\(\ref{Cauchy-Riemann}\)</span>.</p>
+<p>Also using equation <span class="arithmatex">\(\ref{x-partial}\)</span> and <span class="arithmatex">\(\ref{y-partial}\)</span>, we have an average expresstion</p>
+<div class="arithmatex">\[
+\begin{align*}
+f'(z_0)&amp;=\frac{1}{2}\cdot 2f'(z_0)\\
+&amp;=\frac{1}{2}\left(\frac{\partial f}{\partial x}+\frac{1}{i}\frac{\partial f}{\partial y}\right)\\
+&amp;=\frac{1}{2}\left(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y}\right)\\
+&amp;=\frac{\partial f}{\partial z}.
+\end{align*}
+\]</div>
+<p>where the second "<span class="arithmatex">\(=\)</span>" holds by equation <span class="arithmatex">\(\ref{x-partial}\)</span> and <span class="arithmatex">\(\ref{y-partial}\)</span>, the forth "<span class="arithmatex">\(=\)</span>" holds by its definition.</p>
+<p>and</p>
+<div class="arithmatex">\[
+\begin{align*}
+\text{det}J_{F}(x_0,y_0)&amp;=\left|\begin{array}{cc}
+\frac{\partial u}{\partial x}&amp; \frac{\partial u}{\partial y}\\
+\frac{\partial v}{\partial x}&amp; \frac{\partial v}{\partial y}
+\end{array}\right|\\
+&amp;=\frac{\partial u}{\partial x}\frac{\partial v}{\partial y}-\frac{\partial u}{\partial y}\frac{\partial v}{\partial x}\\
+&amp;=\left(\frac{\partial u}{\partial x}\right)^2+\left(\frac{\partial v}{\partial x}\right)^2\\
+&amp;=\left|2\frac{\partial u}{\partial x}\right|^2=|f'(z_0)|^2
+\end{align*}
+\]</div>
+<p>where the last "<span class="arithmatex">\(=\)</span>" holds by equation <span class="arithmatex">\(\ref{x-partial}\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 <p>If we consider reversibly, we could also use Cauchy-Riemann equations to deduce holomorphism of <span class="arithmatex">\(f\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Reverse version</p>
+<p>Suppose <span class="arithmatex">\(f=u+iv\)</span> is a complex-valued function defined on an open set <span class="arithmatex">\(\Omega\)</span>. If <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(v\)</span> are continuously differentiable, and satisfies Cauchy-Riemann equations on <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(f\)</span> is holomorphi on <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(f'(z)=\frac{\partial f}{\partial z}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="relationship-between-real-imaginary-parts-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="relationship-between-real-imaginary-parts-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By differential of rael functions, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+u(x+h_1,y+h_2)-u(x,y)&amp;=u'_x h_1+u'_y h_2+o\left(\sqrt{h_1^2+h_2^2}\right)\\
+v(x+h_1,y+h_2)-v(x,y)&amp;=v'_x h_1+v'_y h_2+o\left(\sqrt{h_1^2+h_2^2}\right).
+\end{align*}
+\]</div>
+<p>where <span class="arithmatex">\(z=x+iy\)</span>, <span class="arithmatex">\(h=h_1+ih_2\)</span>. So</p>
+<div class="arithmatex">\[
+\begin{align*}
+f(z+h)-f(z)&amp;=u(x+h_1,y+h_2)-u(x,y)+i[v(x+h_1,y+h_2)-v(x,y)]\\
+&amp;=u'_x h_1+u'_y h_2+o\left(\sqrt{h_1^2+h_2^2}\right)+i\left[v'_x h_1+v'_y h_2+o\left(\sqrt{h_1^2+h_2^2}\right)\right]\\
+&amp;=(u'_x+iv'_x )h_1 + (u'_y+iv'_y) h_2+o\left(\sqrt{h_1^2+h_2^2}\right)\\
+&amp;=(u'_x+iv'_x )h_1 + (-v'_x+iu'_x) h_2+o\left(\sqrt{h_1^2+h_2^2}\right)\\
+&amp;=(u'_x+iv'_x )h_1 + (i^2v'_x+iu'_x) h_2+o\left(\sqrt{h_1^2+h_2^2}\right)\\
+&amp;=(u'_x+iv'_x )(h_1 +i h_2)+o\left(\sqrt{h_1^2+h_2^2}\right)\\
+&amp;=f'(z)h+o\left(|h|\right)
+\end{align*}
+\]</div>
+<p>which means <span class="arithmatex">\(f\)</span> is holomorphic.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
 </div>
 
 
