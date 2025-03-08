@@ -803,6 +803,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#density-seperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Density &amp; Seperability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completeness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completeness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Completeness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meager-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meager sets
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3951,6 +3993,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#density-seperability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Density &amp; Seperability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completeness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Completeness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Completeness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meager-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meager sets
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4283,6 +4367,173 @@ B(x_0, \varepsilon)\cap (G-\{x_0\})\neq \varnothing,
 <p class="admonition-title">Properties of Closure</p>
 <p>Assume metric space <span class="arithmatex">\((M,\rho)\)</span>, <span class="arithmatex">\(A,B\subset X\)</span>, then</p>
 <p>(i) <span class="arithmatex">\(A\subset \overline{A}\)</span>, (ii) <span class="arithmatex">\(\overline{\overline{A}}=\overline{A}\)</span>, (iii) <span class="arithmatex">\(\overline{A\cup B}=\overline{A}\cup \overline{B}\)</span>, (iv) <span class="arithmatex">\(\overline{\varnothing}=\varnothing\)</span>.</p>
+</div>
+<h3 id="density-seperability">Density &amp; Seperability<a class="headerlink" href="#density-seperability" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of Density</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A,B\subset X\)</span>. If <span class="arithmatex">\(\overline{B}\supset A\)</span>, then <span class="arithmatex">\(B\)</span> is dense in <span class="arithmatex">\(A\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Equivalent proposition of Density</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A,B\subset X\)</span>. Then the following statements are equivalent.</p>
+<p>(i) <span class="arithmatex">\(B\)</span> is dense in <span class="arithmatex">\(A\)</span>, </p>
+<p>(ii) <span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>,  <span class="arithmatex">\(\exists y\in B\)</span>, such that <span class="arithmatex">\(x\in B(y,\varepsilon)\)</span> (or <span class="arithmatex">\(\rho(x,y)&lt;\varepsilon\)</span>).</p>
+<p>(iii) <span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\exists \{x_n\}\in B\)</span>, such that <span class="arithmatex">\(\lim\limits_{n\rightarrow\infty}x_n=x\)</span>.</p>
+<p>(iv) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(A\subset \bigcup\limits_{x\in B}B(x, \varepsilon)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="density-seperability-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="density-seperability-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>(i) <span class="arithmatex">\(\Rightarrow\)</span> (ii)</li>
+</ul>
+<p><span class="arithmatex">\(\forall x\in A\)</span>, since <span class="arithmatex">\(A\subset \overline{B}\)</span>, then <span class="arithmatex">\(x\in \overline{B}\)</span>, so <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(B(x,\varepsilon)\cap B\neq\varnothing\)</span>. So <span class="arithmatex">\(\exists y\in B(x,\varepsilon)\cap B\)</span>, which satisfies <span class="arithmatex">\(\rho(x,y)&lt;\varepsilon\)</span>.</p>
+<ul>
+<li>(ii) <span class="arithmatex">\(\Rightarrow\)</span> (iii)</li>
+</ul>
+<p><span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\forall \varepsilon_k=\frac{1}{k}&gt;0\)</span>, <span class="arithmatex">\(\exists y_k\in B\)</span>, such that <span class="arithmatex">\(\rho(x,y_k)&lt;\varepsilon_k\)</span>. So <span class="arithmatex">\(\lim\limits_{k\rightarrow \infty}y_k=x\)</span>.</p>
+<ul>
+<li>(iii) <span class="arithmatex">\(\Rightarrow\)</span> (iv)</li>
+</ul>
+<p><span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\exists \{x_n\}\in B\)</span>, such that <span class="arithmatex">\(\lim\limits_{n\rightarrow\infty}x_n=x\)</span>. So <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, <span class="arithmatex">\(\rho(x,x_N)&lt;\varepsilon\)</span>, which means <span class="arithmatex">\(x\in B(x_N,\varepsilon)\)</span>. So <span class="arithmatex">\(A\subset \bigcup\limits_{x\in B}B(x, \varepsilon)\)</span>.</p>
+<ul>
+<li>(iv) <span class="arithmatex">\(\Rightarrow\)</span> (i)</li>
+</ul>
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(A\subset \bigcup\limits_{x\in B}B(x, \varepsilon)\)</span>, so <span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\exists y\in B\)</span>, <span class="arithmatex">\(x\in B(y,\varepsilon)\)</span>, which means <span class="arithmatex">\(B(x,\varepsilon)\cap B=\neq \varnothing\)</span> (at least we have <span class="arithmatex">\(y\)</span>), so <span class="arithmatex">\(x\in \overline{B}\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Seperability</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space. If there exists denumerable set <span class="arithmatex">\(B\subset X\)</span>, <span class="arithmatex">\(B\)</span> is dense in <span class="arithmatex">\(X\)</span>, then <span class="arithmatex">\(X\)</span> is seperable.</p>
+</div>
+<h3 id="continuous-mapping">Continuous Mapping<a class="headerlink" href="#continuous-mapping" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Mapping &amp; Continuous Mapping</p>
+<p>Assume <span class="arithmatex">\(X,Y\)</span> are metric space, with its distance <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(\rho_1\)</span>, respectively. If <span class="arithmatex">\(\forall x\in X\)</span>, <span class="arithmatex">\(\exists ! y\in Y\)</span>, such that <span class="arithmatex">\(Tx=y\)</span>, then we call <span class="arithmatex">\(T\)</span> is a <strong>mapping</strong> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>.</p>
+<p>If mapping <span class="arithmatex">\(T\)</span> satisfies that for a fixed poinr <span class="arithmatex">\(x_0\in X\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, such that <span class="arithmatex">\(\rho_1(Tx,Tx_0)&lt;\varepsilon\)</span> whenever <span class="arithmatex">\(\rho(x,x_0)&lt;\delta\)</span>, then we call <span class="arithmatex">\(T\)</span> is a continuous mapping at <span class="arithmatex">\(x_0\)</span>.</p>
+<p>If the above property holds for all <span class="arithmatex">\(x_0\in X\)</span>, then we call <span class="arithmatex">\(T\)</span> continuous mapping on <span class="arithmatex">\(X\)</span>.</p>
+</div>
+<p>Usually we call a mapping from metric space <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(\mathbb{R}\)</span> <strong>functional</strong>.</p>
+<div class="question">
+<p><strong>Example</strong>. (i) Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(x_0\in X\)</span>, mapping <span class="arithmatex">\(T(x)=\rho(x,x_0), (x\in X)\)</span> is a continuous functional from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p>(ii) Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(F\subset X\)</span>, mapping <span class="arithmatex">\(T(x)=\inf\limits_{y\in F}\rho(x,y), (x\in X)\)</span> is continuous functional from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(\mathbb{R}\)</span>. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="continuous-mapping-proof-for-i" name="__tabbed_9" type="radio" /><input id="continuous-mapping-proof-for-ii" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-proof-for-i">Proof for (i)</label><label for="continuous-mapping-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Equivalent definition for continuous mapping</p>
+<p>Assume <span class="arithmatex">\(X,Y\)</span> are metric space, with its distance <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(\rho_1\)</span>, respectively. </p>
+<p>(i) Choose a point <span class="arithmatex">\(x_0\in X\)</span>. A mapping <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span> is continuous at <span class="arithmatex">\(x_0\)</span>, iff </p>
+<div class="arithmatex">\[
+\forall \{x_n\}_{n\geq 1}\subset X, \lim\limits_{n\rightarrow \infty}x_n=x, s.t. \lim\limits_{n\rightarrow \infty}Tx_n=Tx.
+\]</div>
+<p>(ii) A mapping <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span> is continuous, iff one of the following two condition holds</p>
+<div class="arithmatex">\[
+\forall \text{ open set } G\in Y, T^{-1}(G) \text{ is an open set.} 
+\]</div>
+<div class="arithmatex">\[
+\forall \text{ closed set } F\in Y, T^{-1}(F) \text{ is a closed set.}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="continuous-mapping-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of inverse mapping</p>
+<p>Assume <span class="arithmatex">\(X,Y\)</span> are metric space, with its distance <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(\rho_1\)</span>, respectively. If a mapping <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span> is injective and surjective, or bijective, then <span class="arithmatex">\(\forall y\in Y\)</span>, <span class="arithmatex">\(\exists ! x\in X\)</span>, such that </p>
+<div class="arithmatex">\[
+Tx=y.
+\]</div>
+<p>here we have a new mapping, called <strong>Inverse Mapping</strong>, deonted as <span class="arithmatex">\(T^{-1}\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Homeomorphic Mapping</p>
+<p>Assume <span class="arithmatex">\(X,Y\)</span> are metric space, with its distance <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(\rho_1\)</span>, respectively. If a mapping <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span> is bijective, and <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(T^{-1}\)</span> are both continuous on <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span>, respectively, then we call <span class="arithmatex">\(T\)</span> is a <strong>Homeomorphic Mapping</strong>.</p>
+<p>If there exists a homeomorphic mapping <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>, then we call <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are <strong>homeomorphic</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Isometric Mapping</p>
+<p>Assume <span class="arithmatex">\(X,Y\)</span> are metric space, with its distance <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(\rho_1\)</span>, respectively. If a mapping <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>, satisfies that <span class="arithmatex">\(\forall x,y\in X\)</span>, <span class="arithmatex">\(\rho(x,y)=\rho_1(Tx,Ty)\)</span>, then we call <span class="arithmatex">\(T\)</span> is <strong>an isometric mapping</strong>.</p>
+<p>If there exists a bijective and isometric mapping <span class="arithmatex">\(T\)</span> from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>, then we call <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are <strong>isometric</strong>.</p>
+</div>
+<p>When Two metric space are homeomorphic or isometric, we view them as the <em>same</em>.</p>
+<h2 id="completeness">Completeness<a class="headerlink" href="#completeness" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Basic sequence (Cauchy Sequence)</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space with metric <span class="arithmatex">\(\rho\)</span>. Sequence <span class="arithmatex">\(\{x_n\}_{n\geq 1}\subset X\)</span> is said to be a <strong>Cauchy Sequence</strong>, if <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, <span class="arithmatex">\(\forall n,m&gt;N\)</span>, such that </p>
+<div class="arithmatex">\[
+\rho(x_n,x_m)&lt;\varepsilon.
+\]</div>
+</div>
+<p>The core problem of functional analysis, lies in formulating a complete space, i.e. every Cauchy sequence of <span class="arithmatex">\(X\)</span> converge to the point in the space <span class="arithmatex">\(X\)</span> itself.</p>
+<div class="question">
+<p><strong>Example</strong>. Basic space <span class="arithmatex">\(\mathbb{R}\)</span> and <span class="arithmatex">\(C[a,b]\)</span> are complete.</p>
+</div>
+<h3 id="meager-sets">Meager sets<a class="headerlink" href="#meager-sets" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Definition of nowhere dense sets</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(A\)</span> is said to be <strong>Nowhere Dense Set</strong>, if <span class="arithmatex">\(\forall \text{ open set }G\subset X\)</span>, <span class="arithmatex">\(A\)</span> is not dense in <span class="arithmatex">\(G\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Equivalent definition of nowhere dense sets</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(A\)</span> is said to be <strong>Nowhere Dense Set</strong>, iff </p>
+<div class="arithmatex">\[
+\forall \text{ open ball }S(x_0,r), \exists \text{ open ball }S(y_0,r')\subset S(x_0,r), s.t. A\cap S(y_0,r')=\varnothing.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="meager-sets-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Set of the first &amp; second category</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(A\)</span> is said to be a <strong>set of the first category</strong>, if there exists a sequence of nowhere dense sets <span class="arithmatex">\(\{F_n\}_{n\geq 1}\)</span>, such that </p>
+<div class="arithmatex">\[
+A=\bigcup_{n=1}^\infty F_n.
+\]</div>
+<p>If not, we call <span class="arithmatex">\(A\)</span> a <strong>set of the second category</strong>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Nested Closed Balls</p>
+<p>Metric Space <span class="arithmatex">\(X\)</span> is complete, iff $\forall $ nested closed ball <span class="arithmatex">\(\{K_n=\overline{S}(x_n,r_n)\}_{n\geq 1}\)</span>, which satisfies </p>
+<div class="arithmatex">\[
+\overline{S}(x_1,r_1)\supset \overline{S}(x_2,r_2)\supset \cdots,
+\]</div>
+<p>and <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}r_n=0\)</span>, then there exists a unique point <span class="arithmatex">\(x_0\in X\)</span>, such that <span class="arithmatex">\(x_0\in \bigcap_{n=1}^\infty \overline{S}(x_n,r_n)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="meager-sets-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Baire Theorem</p>
+<p>Every complete space is a set of the second category.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="meager-sets-proof_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
 </div>
 
 

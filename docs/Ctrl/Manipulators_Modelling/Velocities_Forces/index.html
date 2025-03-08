@@ -3047,6 +3047,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#motions" class="md-nav__link">
+    <span class="md-ellipsis">
+      motions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supplementary-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      supplementary info
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3899,6 +3917,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#motions" class="md-nav__link">
+    <span class="md-ellipsis">
+      motions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supplementary-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      supplementary info
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3929,7 +3965,7 @@
 </div>
 <p>Here we have two notations. Note that we express a velocity in two frames, or the velocity is dependent on two frames.The first one with respect to which is the differentiation is done, and one in which the resulting velocity is done.</p>
 <div class="admonition success">
-<p class="admonition-title">Frames</p>
+<p class="admonition-title">Linear velocity expressed in different frames</p>
 <p>Actually, we calculate differential in the frame of <span class="arithmatex">\(\{B\}\)</span>, we mean that the two frames are both <span class="arithmatex">\(\{B\}\)</span>, i.e.</p>
 <div class="arithmatex">\[
 ^B({^BV_Q})={^B V_Q}.
@@ -3946,6 +3982,265 @@ v_C={^UV_{CORG}}.
 <p>where the reference frame is <span class="arithmatex">\(\{U\}\)</span> and the frame whose origin measured is <span class="arithmatex">\(\{C\}\)</span>.</p>
 </div>
 <h2 id="angular-velocity-vector">Angular Velocity Vector<a class="headerlink" href="#angular-velocity-vector" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Angular Velocity Vector</p>
+<p>Define <span class="arithmatex">\(^A\Omega_B\)</span> to be the instantaneous axis of the rotation of frame <span class="arithmatex">\(\{B\}\)</span> relative to <span class="arithmatex">\(\{A\}\)</span>. In part <a href="#supplementary-info">Supplementary info</a>, we will discuss more about why we use these vector to represent angular velocity.</p>
+<p>Due to a vector could be determined on if its direction and magnitude are both determined, we let its magnitude to express the speed of rotation.</p>
+<p>Similar to <a href="#linear-velocity-vector">Linear velocity vector</a>, we can express angular velocity vector in different frames. We introduce</p>
+<div class="arithmatex">\[
+\omega_C={^U\Omega_C}
+\]</div>
+<p>to show the angular velocity of frame <span class="arithmatex">\(\{C\}\)</span> relative to some understood reference frame <span class="arithmatex">\(\{U\}\)</span>. Thus <span class="arithmatex">\(^A\omega_C\)</span> means angular velocity of frame <span class="arithmatex">\(\{C\}\)</span> expressed in frame <span class="arithmatex">\(\{A\}\)</span> but default relative to frame <span class="arithmatex">\(\{U\}\)</span>.</p>
+</div>
+<h2 id="motions">motions<a class="headerlink" href="#motions" title="Permanent link">&para;</a></h2>
+<p><a id="linear-velocity"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Motion in a reference frame with Linear velocity</p>
+<p>Assume frame <span class="arithmatex">\(\{B\}\)</span> is located relative to <span class="arithmatex">\(\{A\}\)</span>, with a position vector <span class="arithmatex">\(^AO_B\)</span>, and rotation matrix <span class="arithmatex">\(^A_BR\)</span>. Here we assume <span class="arithmatex">\(^A_BR\)</span> does not change with time. A point <span class="arithmatex">\(Q\)</span> expressed in frame <span class="arithmatex">\(B\)</span> is <span class="arithmatex">\(^BQ\)</span>. Then </p>
+<div class="arithmatex">\[
+^AV_Q={^AV_{O_B}}+{^A_BR}{^BV_Q},
+\]</div>
+<p>where we call <span class="arithmatex">\(^AV_{O_B}=^AV_B\)</span> are the linear velocity of frame <span class="arithmatex">\(\{B\}\)</span> relative to frame <span class="arithmatex">\(\{A\}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="motions-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="motions-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>recall <a href="../Spatial_Desc/#same-points-in-different-frames">same point in different frames</a>, we have <span class="arithmatex">\(Q\)</span> express in frame <span class="arithmatex">\(\{A\}\)</span></p>
+<div class="arithmatex">\[
+^AQ={^AO_B}+{^A_BR}{^BQ}.
+\]</div>
+<p>If we have velocity of <span class="arithmatex">\(Q\)</span> in frame <span class="arithmatex">\(\{B\}\)</span></p>
+<div class="arithmatex">\[
+^B V_Q =\lim_{\Delta t \rightarrow 0}\frac{{^B}Q(t+\Delta t)-{^B}Q(t)}{\Delta t},
+\]</div>
+<p>then its expression in frame <span class="arithmatex">\(\{A\}\)</span> is</p>
+<div class="arithmatex">\[
+\begin{align*}
+^AV_Q&amp;= \lim_{\Delta t \rightarrow 0}\frac{{^A}Q(t+\Delta t)-{^A}Q(t)}{\Delta t}\\
+&amp;=\lim_{\Delta t \rightarrow 0}\frac{[{^AO_B}(t+\Delta t)-{^AO_B}(t)]+[{^AR_B}{^BQ}(t+\Delta t)-{^AR_B}{^BQ}(t)]}{\Delta t}\\
+&amp;={^AV_{O_B}}+\lim_{\Delta t \rightarrow 0}\frac{{^AR_B}[{^BQ}(t+\Delta t)-{^BQ}(t)]}{\Delta t}\\
+&amp;={^AV_{O_B}}+{^A_BR}{^BV_Q}.
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p><a id="Motion-in-a-reference-frame-with-Rotational velocity"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Motion in a reference frame with Rotational velocity</p>
+<p>Assume frame <span class="arithmatex">\(\{B\}\)</span> coincide with <span class="arithmatex">\(\{A\}\)</span> with zero linear velocity, i.e. their origins <span class="arithmatex">\(O_A\)</span> and <span class="arithmatex">\(O_B\)</span> remain coincident all the time. Let the orientation of <span class="arithmatex">\(\{B\}\)</span> changes with time, expressed by <span class="arithmatex">\(^A\Omega_B\)</span>. </p>
+<p>(i) A point <span class="arithmatex">\(Q\)</span> <strong>fixed</strong> in frame <span class="arithmatex">\(\{B\}\)</span> (i.e. <span class="arithmatex">\(^BV_Q=0\)</span>), would apparently move because of the rotation of frame <span class="arithmatex">\(\{B\}\)</span>. Then</p>
+<div class="arithmatex">\[
+^AV_Q={^A\Omega_B}\times {^AQ}.
+\]</div>
+<p>(ii) The point <span class="arithmatex">\(Q\)</span> also <strong>moves</strong> in frame <span class="arithmatex">\(B\)</span>, i.e. <span class="arithmatex">\(^BQ\)</span> (or <span class="arithmatex">\(^AQ\)</span>) would change and <span class="arithmatex">\(^BV_Q\neq 0\)</span>. Then</p>
+<div class="arithmatex">\[
+^AV_Q={^A_BR}{^BV_Q}+{^A\Omega_B}\times ({^A_BR}{^BQ}).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="motions-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="motions-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Here we have to find out the movement of <span class="arithmatex">\(Q\)</span> viewed in frame <span class="arithmatex">\(\{A\}\)</span>. See the following picture in details.</p>
+<p><p align="center">
+<img src="../rotat_vel.png" width="55%" />
+</p></p>
+<p>Check that the magnitude of position change in small time <span class="arithmatex">\(\Delta t\)</span> is </p>
+<div class="arithmatex">\[
+|\Delta Q|=|{^AQ}|\sin \theta{|^A\Omega_B}|\Delta t,
+\]</div>
+<p>and the direction is perpendicular to both vector <span class="arithmatex">\(^A\Omega_B\)</span> and <span class="arithmatex">\(^AQ\)</span>. Actually, we can easily get the following relation if readers have learned general physics</p>
+<div class="arithmatex">\[
+^AV_Q={^A\Omega_B}\times {^AQ}.
+\]</div>
+<p>(ii) By superposition of velocities and former equation of <a href="#linear-velocity">linear velocity relationship</a></p>
+<div class="arithmatex">\[
+\begin{align*}
+^AV_Q&amp;={^A({^BV_Q})}+{^A\Omega_B}\times {^AQ}\\
+&amp;={^A_BR}{^BV_Q}+{^A\Omega_B}\times ({^A_BR}{^BQ}).
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">general case of motion</p>
+<p>Adding the above two cases up, we have a formula for general motion of a point <span class="arithmatex">\(Q\)</span> in frame <span class="arithmatex">\(\{B\}\)</span> expressed in another frame <span class="arithmatex">\(\{A\}\)</span></p>
+<div class="arithmatex">\[
+^AV_Q={^AV_B}+{^A\Omega_B}\times {{^A_BR}{^BQ}} +{^A_BR}{^BV_Q}
+\]</div>
+<p>where the first item is the translation of <span class="arithmatex">\(\{B\}\)</span> relative to <span class="arithmatex">\(\{A\}\)</span>, the second item is the rotation of <span class="arithmatex">\(\{B\}\)</span> relative to <span class="arithmatex">\(\{A\}\)</span> and the last item is the translation movement of <span class="arithmatex">\(Q\)</span> itself expressed in <span class="arithmatex">\(\{A\}\)</span>, respectively.</p>
+</div>
+<h2 id="supplementary-info">supplementary info<a class="headerlink" href="#supplementary-info" title="Permanent link">&para;</a></h2>
+<p>Here we talk a little more with rotation item <span class="arithmatex">\({^A\Omega_B}\times {^AQ}\)</span>.</p>
+<p><a id="Lemma 1: properties of the derivative of an orthonormal matrix"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lemma 1: properties of the derivative of an orthonormal matrix</p>
+<p>For orthonormal matrix <span class="arithmatex">\(R\in \mathbb{R}^n\)</span>, or rotation matrix (<span class="arithmatex">\(n=3\)</span>) in this course, define <span class="arithmatex">\(S=\dot{R} R^T\)</span>, then it satisfies</p>
+<div class="arithmatex">\[
+S+S^T=\pmb{0}
+\]</div>
+<p>which is a skew-symmetric matrix.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="supplementary-info-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="supplementary-info-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By properties of orthonormal matrix, we have</p>
+<div class="arithmatex">\[
+RR^T=I_{n\times n}.
+\]</div>
+<p>then we take a derivative on both sides</p>
+<div class="arithmatex">\[
+\dot{R} R^T+ R \dot{R}^T=\pmb{0}.
+\]</div>
+<p>by propeties of transpose, we have</p>
+<div class="arithmatex">\[
+\dot{R} R^T+ (\dot{R} R^T)^T=\pmb{0}.
+\]</div>
+<p>which just means the result.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Still the case (ii) in <a href="#Motion-in-a-reference-frame-with-Rotational velocity">Motion in a reference frame with Rotational velocity</a>, now we deduce the velocity relationship in another perspective.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma 2: rotational description</p>
+<p>If we define <span class="arithmatex">\(^A_BS={^A_B\dot{R}} {^A_BR}^{T}\)</span>, then </p>
+<div class="arithmatex">\[
+^AQ={^A_BS}{^AQ}+{^A_BR}{^BV_Q}.
+\]</div>
+<p>Easy to see that <span class="arithmatex">\(^A_BS\)</span> satisfies the property in <a href="#Lemma 1: properties of the derivative of an orthonormal matrix">Lemma 1</a>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="supplementary-info-proof_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="supplementary-info-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We start from </p>
+<div class="arithmatex">\[
+^AQ={^A_BR}{^BQ}.
+\]</div>
+<p>Take a derivative on both sides, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+^AQ&amp;={^A_B\dot{R}}{^BQ}+{^A_BR}{^BV_Q}\\
+&amp;={^A_B\dot{R}} {^A_BR}^{T}{^AQ}+ {^A_BR}{^BV_Q}\\
+\end{align*}
+\]</div>
+<p>which gives the result if we substitute <span class="arithmatex">\(^A_BS\)</span> in.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Compared to the result we get in <a href="#Motion-in-a-reference-frame-with-Rotational velocity">Motion in a reference frame with Rotational velocity</a>, the following theorem comes out naturally.</p>
+<p><a id="Theorem for skew-sysmmetric matrix and vector cross-product"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for skew-sysmmetric matrix and vector cross-product</p>
+<p>Define a vector <span class="arithmatex">\(\Omega=[\begin{array}{ccc}\Omega_x&amp; \Omega_y&amp; \Omega_z\end{array}]^T\)</span> and a point <span class="arithmatex">\(Q\)</span>, then</p>
+<div class="arithmatex">\[
+\Omega\times Q=S\cdot Q
+\]</div>
+<p>where <span class="arithmatex">\(S\)</span> is a skew-symmetric matrix with an expression</p>
+<div class="arithmatex">\[
+S=\left[\begin{array}{ccc}
+0 &amp; -\Omega_z &amp; \Omega_y\\
+\Omega_z &amp; 0 &amp; -\Omega_x\\
+-\Omega_y &amp; \Omega_x &amp; 0\\
+\end{array}\right].
+\]</div>
+<p>We call <span class="arithmatex">\(\Omega\)</span> angular velocity vector, the same meaning as we defined in <a href="#angular-velocity-vector">Angular Velocity Vector</a>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="supplementary-info-proof_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="supplementary-info-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We calculate the cross product <span class="arithmatex">\(\Omega\times Q\)</span> gives</p>
+<div class="arithmatex">\[
+\Omega\times Q=\left|\begin{array}{ccc}
+i&amp;j&amp;k\\
+\Omega_x &amp;\Omega_y&amp;\Omega_z\\
+Q_x &amp;Q_y &amp;Q_z 
+\end{array}\right|
+\]</div>
+<p>rewrite the above calculation in form of a linear transformation, or matrix premultiplication <span class="arithmatex">\(S\cdot Q\)</span> as</p>
+<div class="arithmatex">\[
+\Omega\times Q = \left[\begin{array}{ccc}
+0 &amp; -\Omega_z &amp; \Omega_y\\
+\Omega_z &amp; 0 &amp; -\Omega_x\\
+-\Omega_y &amp; \Omega_x &amp; 0\\
+\end{array}\right] \cdot \left[\begin{array}{c}
+Q_x\\Q_y\\Q_z
+\end{array}\right]
+:=SQ.
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>We dig into the representation of angular velocity vector <span class="arithmatex">\(\Omega\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for physical insight concerning angular velocity vector</p>
+<p>Angular velocity vector could be expressed as</p>
+<div class="arithmatex">\[
+\Omega=\dot{\theta}\hat{K},
+\]</div>
+<p>where <span class="arithmatex">\(\hat{K}\)</span> is the rotation axis and <span class="arithmatex">\(\dot{\theta}\)</span> is the speed of rotation about the axis.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="supplementary-info-proof_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="supplementary-info-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Consider the differentiation of a rotation matrix <span class="arithmatex">\(R\)</span></p>
+<div class="arithmatex">\[
+\begin{equation}
+\dot{R}=\frac{dR}{dt}=\lim_{\Delta\rightarrow \infty}\frac{R(t+\Delta t)-R(t)}{\Delta t}.\label{R-differential}
+\end{equation}
+\]</div>
+<p>Here we rewrite <span class="arithmatex">\(R(t+\Delta t)\)</span> in a sense of rotation. That is, in time period <span class="arithmatex">\(\Delta t\)</span>, frame <span class="arithmatex">\(\{B\}\)</span> rotates about some axis <span class="arithmatex">\(\hat{K}\)</span> with a little angle <span class="arithmatex">\(\Delta \theta\)</span> (using expression of equivalent axis), and then we get the final rotation matrix</p>
+<div class="arithmatex">\[
+R(t+\Delta t)=R_{K}(\theta)R(t).
+\]</div>
+<p>equation <span class="arithmatex">\(\ref{R-differential}\)</span> becomes</p>
+<div class="arithmatex">\[
+\begin{align}
+\nonumber\dot{R}&amp;=\lim_{\Delta\rightarrow \infty}\frac{R_{K}(\theta)R(t)-R(t)}{\Delta t}\\
+&amp;=\lim_{\Delta\rightarrow \infty}\left[\frac{R_{K}(\theta)-I_{3}}{\Delta t}\right]R(t)\label{R-differential2}
+\end{align}
+\]</div>
+<p>recall that we have a linear approximation of <span class="arithmatex">\(R_K(\theta)\)</span> when <span class="arithmatex">\(\theta\)</span> is quite small, i.e.</p>
+<div class="arithmatex">\[
+R_K(\theta)=\left[\begin{array}{ccc}
+1 &amp; -k_z \theta &amp; k_y \theta\\
+k_z\theta &amp; 1 &amp; -k_x\theta\\
+-k_y\theta &amp; k_x\theta &amp;1
+\end{array}\right]
+\]</div>
+<p>so equation <span class="arithmatex">\(\ref{R-differential2}\)</span> becomes</p>
+<div class="arithmatex">\[
+\dot{R}=\left[\begin{array}{ccc}
+0 &amp; -k_z \dot{\theta} &amp; k_y \dot{\theta}\\
+k_z\dot{\theta} &amp; 0 &amp; -k_x\dot{\theta}\\
+-k_y\dot{\theta} &amp; k_x\dot{\theta} &amp;0
+\end{array}\right] R(t).
+\]</div>
+<p>Postmultiply <span class="arithmatex">\(R^{-1}\)</span> on both sides we have</p>
+<div class="arithmatex">\[
+\dot{R}R^{T}=\left[\begin{array}{ccc}
+0 &amp; -k_z \dot{\theta} &amp; k_y \dot{\theta}\\
+k_z\dot{\theta} &amp; 0 &amp; -k_x\dot{\theta}\\
+-k_y\dot{\theta} &amp; k_x\dot{\theta} &amp;0
+\end{array}\right].
+\]</div>
+<p>Comparing the result in <a href="#Theorem for skew-sysmmetric matrix and vector cross-product">Theorem for skew-sysmmetric matrix and vector cross-product</a>, we have</p>
+<div class="arithmatex">\[
+\Omega = \left[\begin{array}{ccc}
+\Omega_x&amp; \Omega_y&amp;\Omega_z
+\end{array}\right]^T=\left[\begin{array}{ccc}
+k_x\dot{\theta}&amp; k_y\dot{\theta}&amp;k_z\dot{\theta}
+\end{array}\right]^T=\dot{\theta}\hat{K}.
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 
 
 
