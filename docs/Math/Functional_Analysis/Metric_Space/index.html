@@ -850,6 +850,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#compact-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compact Sets
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4040,6 +4049,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#compact-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compact Sets
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4533,6 +4551,83 @@ A=\bigcup_{n=1}^\infty F_n.
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
+</div>
+</div>
+<h2 id="compact-sets">Compact Sets<a class="headerlink" href="#compact-sets" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Bounded set</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, and <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(A\)</span> is said to be a <strong>bounded set</strong>, if there exists a open ball <span class="arithmatex">\(K=S(x,r)\)</span> (or closed ball <span class="arithmatex">\(K=\overline{S}(x,r)\)</span>) such that <span class="arithmatex">\(A\subset K\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition for relative compact set &amp; compact set</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. If <span class="arithmatex">\(\forall \{x_n\}\subset A\)</span>, <span class="arithmatex">\(\exists \{n_k\}_{k\geq 1}\)</span> and <span class="arithmatex">\(x\in X\)</span>, such that <span class="arithmatex">\(\lim\limits_{k\rightarrow \infty}x_{n_k}=x\)</span>, then we call <span class="arithmatex">\(A\)</span> a <strong>relative compact set</strong>. If the limit point <span class="arithmatex">\(x\in A\)</span>, then <span class="arithmatex">\(A\)</span> is called <strong>compact set</strong>.</p>
+<p>If <span class="arithmatex">\(X\)</span> itself is a compact set, then <span class="arithmatex">\(X\)</span> is called compact metric space.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties for relative compact set &amp; compact set</p>
+<p>(i) Any set with finite number elements is compact set.</p>
+<p>(ii) Assume <span class="arithmatex">\(A\subset X\)</span> is a relative compact set, then <span class="arithmatex">\(\forall B\subset A\)</span>, <span class="arithmatex">\(B\)</span> is also a relative compact set.</p>
+<p>(iii) Assume <span class="arithmatex">\(A\subset X\)</span> is a compact set, then <span class="arithmatex">\(\forall \text{ closed set }B\subset A\)</span>, <span class="arithmatex">\(B\)</span> is also a compact set.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="compact-sets-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="compact-sets-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(ii) By definition. <span class="arithmatex">\(\forall \{x_n\}_{n\geq 1}\subset B\subset A\)</span>, so <span class="arithmatex">\(\exists \{n_k\}_{k\geq 1}\)</span> and <span class="arithmatex">\(x\in X\)</span>, such that <span class="arithmatex">\(\lim\limits_{k\rightarrow \infty}x_{n_k}=x\)</span>, so <span class="arithmatex">\(B\)</span> is a relative compact set.</p>
+<p>(iii) <span class="arithmatex">\(\forall \{x_n\}_{n\geq 1}\subset B\subset A\)</span>, <span class="arithmatex">\(\exists \{n_k\}_{k\geq 1}\)</span> and <span class="arithmatex">\(x\in A\)</span>, such that <span class="arithmatex">\(\lim\limits_{k\rightarrow \infty}x_{n_k}=x\)</span>. Since <span class="arithmatex">\(B\)</span> is a closed set, the limit point should be in <span class="arithmatex">\(B\)</span>, i.e. <span class="arithmatex">\(x\in B\)</span>. So <span class="arithmatex">\(B\)</span> is a compact set.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Now we give a description for relative compact set.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition for <span class="arithmatex">\(\varepsilon\)</span>-net</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space with metric <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(A,B\subset X\)</span>. If for a given number <span class="arithmatex">\(\varepsilon&gt;0\)</span>, <span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\exists y\in B\)</span>, such that <span class="arithmatex">\(\rho(x,y)&lt;\varepsilon\)</span>, then we call <span class="arithmatex">\(B\)</span> is an <span class="arithmatex">\(\varepsilon\)</span>-net of <span class="arithmatex">\(A\)</span>.</p>
+<p>Note we do not ask <span class="arithmatex">\(B\cap A\neq \varnothing\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition for Totally Bounded Set</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. If <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \varepsilon\)</span>-net with finite number of elements for <span class="arithmatex">\(A\)</span>, then we call <span class="arithmatex">\(A\)</span> is a <strong>Totally Bounded Set</strong>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties for totally bounded set</p>
+<p>(i) Any set with finite number of elements is a totally bounded set.</p>
+<p>(ii) Assume <span class="arithmatex">\(A\subset X\)</span> is a totally bounded set, then <span class="arithmatex">\(\forall B\subset A\)</span>, <span class="arithmatex">\(B\)</span> is also a totally bounded set.</p>
+<p>(iii) Assume <span class="arithmatex">\(A\subset X\)</span> is a totally bounded set, then <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists B\subset A\)</span>, s.t <span class="arithmatex">\(B\)</span> is a <span class="arithmatex">\(\varepsilon\)</span>-net of <span class="arithmatex">\(A\)</span>. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="compact-sets-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="compact-sets-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Choose the set itself as an <span class="arithmatex">\(\varepsilon\)</span>-net, which has finite number of elements.</p>
+<p>(ii) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists C\)</span> with finite number of elements, such that <span class="arithmatex">\(B\subset A\subset \bigcup\limits_{x\in C}S(x,\varepsilon)\)</span>, so <span class="arithmatex">\(C\)</span> is also an <span class="arithmatex">\(\varepsilon\)</span>-net of <span class="arithmatex">\(B\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists C=\{y_n\}_{1\leq n\leq N}\)</span> is an <span class="arithmatex">\(\frac{\varepsilon}{2}\)</span>-net of <span class="arithmatex">\(A\)</span>. That is, <span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\exists y\in C\)</span>, such that <span class="arithmatex">\(\rho(x,y)&lt;\frac{\varepsilon}{2}\)</span>. By assumption, <span class="arithmatex">\(\exists \{n_k\}_{1\leq k\leq K} (K\leq N)\)</span>, such that <span class="arithmatex">\(S(y_{n_k},\frac{\varepsilon}{2})\cap A\neq \varnothing\)</span>, then choose <span class="arithmatex">\(z_k\in S(y_{n_k},\frac{\varepsilon}{2})\cap A\)</span>. Then define <span class="arithmatex">\(B=\bigcup_{k=1}^K \{z_k\}\)</span>, which satisfies </p>
+<div class="arithmatex">\[
+\forall x\in A, \exists z_k\in B, \rho(x,z_k)&lt;\varepsilon.
+\]</div>
+<p>So <span class="arithmatex">\(B\)</span> is a <span class="arithmatex">\(\varepsilon\)</span>-net of <span class="arithmatex">\(A\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for totally bounded set</p>
+<p>Totally bounded set is bounded and seperable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="compact-sets-proof_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="compact-sets-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) easy to see it is bounded. Choose one element of an <span class="arithmatex">\(\varepsilon\)</span>-net as center of ball, estimate the sufficient radious of the ball.</p>
+<p>(ii) Leverage the <span class="arithmatex">\(\frac{1}{n}\)</span>-net to formulate a dense denumerable subsequence.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p>.,</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for relative compact description</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space with metric <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(A\subset X\)</span> is a relative compact set, then <span class="arithmatex">\(A\)</span> is totally bounded set.</p>
+<p>On the other hand, If <span class="arithmatex">\(X\)</span> is a complete metric space, if <span class="arithmatex">\(A\subset X\)</span> is a totally bounded set, then <span class="arithmatex">\(A\)</span> is also a relative compact set.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="compact-sets-proof_3" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="compact-sets-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
 </div>
 </div>
 
