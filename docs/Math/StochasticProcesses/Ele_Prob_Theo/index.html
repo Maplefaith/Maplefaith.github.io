@@ -1749,6 +1749,8 @@
       
         
       
+        
+      
     
     
       
@@ -2030,6 +2032,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#analysis-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Tool
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2051,6 +2062,27 @@
   
   <span class="md-ellipsis">
     Basic Processes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Possion_Pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Possion Process
   </span>
   
 
@@ -4238,6 +4270,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#analysis-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis Tool
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5111,6 +5152,30 @@ F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
 \]</div>
 </div>
 <h3 id="convergence-in-distribution">Convergence in distribution<a class="headerlink" href="#convergence-in-distribution" title="Permanent link">&para;</a></h3>
+<h2 id="analysis-tool">Analysis Tool<a class="headerlink" href="#analysis-tool" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Probability Generating Function</p>
+<p>Assume the distribution sequence of discrete variable <span class="arithmatex">\(\xi\)</span> is <span class="arithmatex">\(\mathbb{P}(\xi=k)=p_k\)</span>, <span class="arithmatex">\(k=0,1,\cdots\)</span>. We call a function of real variable <span class="arithmatex">\(s\)</span></p>
+<div class="arithmatex">\[
+\psi_\xi(s)=\mathbb{E}(s^\xi)=\sum_{k=0}^\infty p_k s^k, |s|&lt;1.
+\]</div>
+<p><strong>Probability Generating Function</strong>.</p>
+</div>
+<p>Similar to <span class="arithmatex">\(z\)</span>-Transfer in signal analysis.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties for generating function</p>
+<p>(i) <span class="arithmatex">\(|\psi_\xi(s)|\leq \psi_\xi(1)=1\)</span>.</p>
+<p>(ii) Assume <span class="arithmatex">\(\{\xi_i\}_{1\leq i\leq n}\)</span> are mutually independent, and have generating function <span class="arithmatex">\(\psi_{\xi_i}(s)\)</span>, then <span class="arithmatex">\(\eta=\sum_{i=1}^n \xi_i\)</span> has generating function</p>
+<div class="arithmatex">\[
+\psi_\eta(s)=\prod_{i=1}^n \psi_{\xi_i}(s).
+\]</div>
+<p>(iii) <span class="arithmatex">\(p_k=\mathbb{P}(\xi=k)=\frac{\psi^{(k)}(0)}{k!}\)</span>, <span class="arithmatex">\(k=0,1,\cdots\)</span></p>
+</div>
+<p><div class="question" markdown>
+<strong>Example</strong>. Calculate the generating function of the following distribution corresponding to a random variable.</p>
+<p>(i) Binary distribution <span class="arithmatex">\(\xi\sim B(n,p)\)</span>.</p>
+<p>(ii) Possion distribution <span class="arithmatex">\(\xi\sim \pi(\lambda)\)</span>.
+</div></p>
 
 
 
