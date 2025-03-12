@@ -3112,6 +3112,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#static-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Forces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Static Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jacobians-in-the-force-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jacobians in the force domain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4006,6 +4030,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#static-forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Forces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Static Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jacobians-in-the-force-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jacobians in the force domain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4320,7 +4368,7 @@ k_x\dot{\theta}&amp; k_y\dot{\theta}&amp;k_z\dot{\theta}
 <div class="admonition success">
 <p class="admonition-title">Linear Velocity</p>
 <p>Assume we have frame <span class="arithmatex">\(\{i\}\)</span> and <span class="arithmatex">\(\{i+1\}\)</span>.</p>
-<p>(i) Next joint is <strong>revolute</strong>.</p>
+<p>(i) Next joint is <strong>Revolute</strong>.</p>
 <p>In frame <span class="arithmatex">\(i\)</span>, we have <span class="arithmatex">\(^{i}v_{i+1}\)</span> expressed by </p>
 <div class="arithmatex">\[
 ^iv_{i+1}=^iv_{i}+{^i\omega_{i+1}}\times {^iO_{i+1}}.
@@ -4359,14 +4407,20 @@ k_x\dot{\theta}&amp; k_y\dot{\theta}&amp;k_z\dot{\theta}
 \]</div>
 </div>
 <h2 id="jacobians">Jacobians<a class="headerlink" href="#jacobians" title="Permanent link">&para;</a></h2>
-<p>In the field of robotics, we generally use Jacobians that relate joint velocities to Cartesian velocities of the tip of the arm. In 3D circumstances, we have the linear and angular velocity of the end effector</p>
+<p>In the field of robotics, we generally use Jacobians that relate joint velocities to Cartesian velocities of the tip of the arm. In 3D circumstances, we have the small change of linear and angular displacement of the end effector</p>
+<div class="arithmatex">\[
+^0\Delta r=\left[\begin{array}{c}
+^0\Delta R\\ ^0\Delta \alpha
+\end{array}\right]={^0J(\Theta)}\Delta {\Theta},
+\]</div>
+<p>by dividing both sides <span class="arithmatex">\(\Delta t\)</span> and let <span class="arithmatex">\(\Delta t\rightarrow \infty\)</span>, we have linear and angular velocity of the end effector</p>
 <div class="arithmatex">\[
 ^0\nu=\left[\begin{array}{c}
 ^0v\\ ^0\omega
 \end{array}\right]={^0J(\Theta)}\dot{\Theta},
 \]</div>
 <p>where <span class="arithmatex">\(\dot{\Theta}=\left[\begin{array}{cccccc}
-\theta_1&amp; \theta_2&amp; \theta_3&amp; \theta_4&amp; \theta_5 &amp; \theta_6
+\dot{\theta_1}&amp; \dot{\theta_2}&amp; \dot{\theta_3}&amp; \dot{\theta_4}&amp; \dot{\theta_5 }&amp; \dot{\theta_6}
 \end{array}\right]^T\)</span> denotes six (generally) rotation axis of the manipulator.</p>
 <div class="admonition success">
 <p class="admonition-title">Changing a Jacobian's frame of reference</p>
@@ -4401,6 +4455,63 @@ k_x\dot{\theta}&amp; k_y\dot{\theta}&amp;k_z\dot{\theta}
 \end{array}\right]{^BJ(\Theta)}.
 \]</div>
 </div>
+<h2 id="static-forces">Static Forces<a class="headerlink" href="#static-forces" title="Permanent link">&para;</a></h2>
+<p>We also have to consider how forces and moments "propagate" from one link to the next. We wish to solve for the joint torques that must be acting to keep the system <strong>in static equilibrium</strong>. Here we do not consider the gravity of links.</p>
+<div class="admonition info">
+<p class="admonition-title">Symbols for the force and torque</p>
+<p>Denote <span class="arithmatex">\(f_i\)</span> to be the force exerted on link <span class="arithmatex">\(i\)</span> by link <span class="arithmatex">\(i-1\)</span>, <span class="arithmatex">\(n_i\)</span> to be the torque exerted on link <span class="arithmatex">\(i\)</span> by link <span class="arithmatex">\(i-1\)</span>. Check the following image for details.</p>
+<p><p align="center">
+<img src="../link_static_force.png" width="65%" />
+</p></p>
+<p>so for link <span class="arithmatex">\(i\)</span>, it follows force and torque equilibrium</p>
+<div class="arithmatex">\[
+\begin{cases}
+^if_i-{^if_{i+1}}=0,\\
+{^in_i}-{^in_{i+1}}-{^iP_{i+1}}\times {^if_{i+1}}=0.    \end{cases}
+\]</div>
+<p>thus we have the propagation formula</p>
+<div class="arithmatex">\[
+\begin{cases}
+^if_i={^if_{i+1}},\\
+{^in_i}={^in_{i+1}}+{^iP_{i+1}}\times {^if_{i+1}}.    \end{cases}
+\]</div>
+<p>which transfer the force from the end effector to the base <span class="arithmatex">\(0\)</span>.</p>
+<p>To write these equations in terms of only forces and moments defined within their own link frames, we transform with the rotation matrix</p>
+<div class="arithmatex">\[
+\begin{cases}
+^if_i={^i_{i+1}R}\cdot {^{i+1}f_{i+1}},\\
+{^in_i}={^i_{i+1}R}\cdot {^{i+1}n_{i+1}}+{^iP_{i+1}}\times {^if_{i}}.    
+\end{cases}
+\]</div>
+</div>
+<p>After computing the forces and torques exerted on each link, now we have to consider, in each joint, how much force or torque should we provide so as to keep the system in equilibrium?</p>
+<div class="admonition success">
+<p class="admonition-title">Forces or Torques provided by joints</p>
+<p>(i) For revolute joint <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(^if_i\)</span> prevents it from translation, and <span class="arithmatex">\(^in_i\)</span> prevents it from rotation in other directions. So if the joint want to rotate, we project <span class="arithmatex">\(^in_i\)</span> into the rotation axis, i.e. <span class="arithmatex">\(\hat{Z}_i\)</span>, and </p>
+<div class="arithmatex">\[
+\tau_i={^in_i}\cdot {^i\hat{Z}_i}={^in_i^T} {^i\hat{Z}_i}.
+\]</div>
+<p>(ii) For Prismatic joint <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(^in_i\)</span> pervents it from rotation, and <span class="arithmatex">\(^if_i\)</span> prevents it from translation in other directions. So if the joint want to translate, we project <span class="arithmatex">\(^if_i\)</span> into the translation axis, i.e. <span class="arithmatex">\(\hat{Z}_i\)</span>, and </p>
+<div class="arithmatex">\[
+\tau_i={^if_i}\cdot {^i\hat{Z}_i}={^if_i^T} {^i\hat{Z}_i}.
+\]</div>
+<p>where we still use <span class="arithmatex">\(\tau_i\)</span> to represent the linear force in (ii).</p>
+</div>
+<h3 id="jacobians-in-the-force-domain">Jacobians in the force domain<a class="headerlink" href="#jacobians-in-the-force-domain" title="Permanent link">&para;</a></h3>
+<p>Here we use the principle of virtual work to demonstrate the relationship in force.</p>
+<p>From a general frame, we have</p>
+<div class="arithmatex">\[
+\mathcal{F}^T \Delta r=\tau^T\Delta \theta
+\]</div>
+<p>where <span class="arithmatex">\(\mathcal{F}_{6\times 1}=[\begin{array}{cc} F&amp; N\end{array}]^T\)</span>, <span class="arithmatex">\(F\)</span> is a force vector, and <span class="arithmatex">\(N\)</span> is a moment vector.</p>
+<p>by definition of Jacobian, we have</p>
+<div class="arithmatex">\[
+\mathcal{F}^T J(\Theta)\Theta=\tau^T\Delta \theta
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+\mathcal{F}^T J(\Theta)=\tau^T, \text{ or }\tau=J(\Theta)\mathcal{F}.
+\]</div>
 
 
 
