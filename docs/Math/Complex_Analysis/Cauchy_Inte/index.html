@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../Numerical_Analysis/DE/">
+        <link rel="prev" href="../Preliminary/">
       
       
-        <link rel="next" href="Preliminary/">
+        <link rel="next" href="../../Functional_Analysis/">
       
       
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Ordinary Differential Equation - MapleBlog</title>
+        <title>Cauchy's Integral Theorem - MapleBlog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,17 +48,17 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-      <link rel="stylesheet" href="../../stylesheets/customize.css">
+      <link rel="stylesheet" href="../../../stylesheets/customize.css">
     
       <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,7 +75,7 @@
     
     
     
-  <link rel="stylesheet" href="../../assets/stylesheets/custom.7c86dd97.min.css">
+  <link rel="stylesheet" href="../../../assets/stylesheets/custom.7c86dd97.min.css">
 
   </head>
   
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ordinary-differential-equation" class="md-skip">
+        <a href="#cauchys-integral-theorem" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../.." title="MapleBlog" class="md-header__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ordinary Differential Equation
+              Cauchy's Integral Theorem
             
           </span>
         </div>
@@ -264,7 +264,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../courses/" class="md-tabs__link">
+        <a href="../../../courses/" class="md-tabs__link">
           
   
     
@@ -325,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Ctrl/" class="md-tabs__link">
+        <a href="../../../Ctrl/" class="md-tabs__link">
           
   
     
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
     
@@ -363,7 +363,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../friends/" class="md-tabs__link">
+      <a href="../../../friends/" class="md-tabs__link">
         
   
     
@@ -380,7 +380,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../tag/" class="md-tabs__link">
+      <a href="../../../tag/" class="md-tabs__link">
         
   
     
@@ -397,7 +397,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
+      <a href="../../../about/" class="md-tabs__link">
         
   
     
@@ -414,7 +414,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../log/" class="md-tabs__link">
+      <a href="../../../log/" class="md-tabs__link">
         
   
     
@@ -448,7 +448,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
+    <a href="../../.." title="MapleBlog" class="md-nav__button md-logo" aria-label="MapleBlog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -471,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +533,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -563,8 +563,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -587,18 +589,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Complex_Analysis/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -615,7 +615,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Complex Analysis
@@ -631,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Complex_Analysis/Preliminary/" class="md-nav__link">
+      <a href="../Preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -649,10 +649,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Complex_Analysis/Cauchy_Inte/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cauchy's Integral Theorem
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -661,6 +681,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#integration-along-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration along curves
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cauchys-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy's Theorem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cauchy's Theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goursat-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Goursat Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-existence-of-primitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local existence of Primitive
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -711,7 +793,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Functional_Analysis/" class="md-nav__link ">
+            <a href="../../Functional_Analysis/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -744,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Functional_Analysis/Metric_Space/" class="md-nav__link">
+      <a href="../../Functional_Analysis/Metric_Space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -803,7 +885,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../mpm/" class="md-nav__link ">
+            <a href="../../mpm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -836,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mpm/preliminary/" class="md-nav__link">
+      <a href="../../mpm/preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +981,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Numerical_Analysis/" class="md-nav__link ">
+            <a href="../../Numerical_Analysis/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -932,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Numerical_Analysis/MC/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/MC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,7 +1068,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Numerical_Analysis/NA/" class="md-nav__link ">
+            <a href="../../Numerical_Analysis/NA/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1019,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/Solve_Equ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/IntPo_Poly/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Numerical_Analysis/NA/Appro/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/Appro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1082,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Numerical_Analysis/NA/NI/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/NA/NI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Numerical_Analysis/DE/" class="md-nav__link">
+      <a href="../../Numerical_Analysis/DE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,8 +1219,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1173,16 +1253,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../Ordinary_Differential_Equation/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1193,13 +1275,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Ordinary Differential Equation
@@ -1215,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Preliminary/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/Preliminary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="EIM/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/EIM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,7 +1339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="LODEs/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/LODEs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1315,7 +1397,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="General_Theory/" class="md-nav__link ">
+            <a href="../../Ordinary_Differential_Equation/General_Theory/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1348,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1369,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1390,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="General_Theory/Extension_of_Solution/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Extension_of_Solution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1411,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="General_Theory/Comparison_Theorem/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Comparison_Theorem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="General_Theory/Continuous_Dependence/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Continuous_Dependence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="General_Theory/Power_Series/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/General_Theory/Power_Series/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1482,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Lyapunov/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/Lyapunov/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Qualitative_Theory/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/Qualitative_Theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="FstPDE/" class="md-nav__link">
+      <a href="../../Ordinary_Differential_Equation/FstPDE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1593,7 +1675,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Real_Analysis/" class="md-nav__link ">
+            <a href="../../Real_Analysis/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1626,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Real_Analysis/Sets/" class="md-nav__link">
+      <a href="../../Real_Analysis/Sets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Real_Analysis/Lebesgue_Measure/" class="md-nav__link">
+      <a href="../../Real_Analysis/Lebesgue_Measure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1668,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Real_Analysis/Measurable_Func/" class="md-nav__link">
+      <a href="../../Real_Analysis/Measurable_Func/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1689,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Real_Analysis/Lebesgue_Integral/" class="md-nav__link">
+      <a href="../../Real_Analysis/Lebesgue_Integral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1710,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Real_Analysis/Differential_Integral/" class="md-nav__link">
+      <a href="../../Real_Analysis/Differential_Integral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1731,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Real_Analysis/Lp_Space/" class="md-nav__link">
+      <a href="../../Real_Analysis/Lp_Space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1794,7 +1876,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../StochasticProcesses/" class="md-nav__link ">
+            <a href="../../StochasticProcesses/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1827,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../StochasticProcesses/Ele_Prob_Theo/" class="md-nav__link">
+      <a href="../../StochasticProcesses/Ele_Prob_Theo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1848,7 +1930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../StochasticProcesses/Basic_Pro/" class="md-nav__link">
+      <a href="../../StochasticProcesses/Basic_Pro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1869,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../StochasticProcesses/Possion_Pro/" class="md-nav__link">
+      <a href="../../StochasticProcesses/Possion_Pro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1938,7 +2020,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../courses/" class="md-nav__link ">
+            <a href="../../../courses/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2000,7 +2082,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../courses/AIML/" class="md-nav__link ">
+            <a href="../../../courses/AIML/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2066,7 +2148,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../courses/AIML/AI/" class="md-nav__link ">
+            <a href="../../../courses/AIML/AI/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2099,7 +2181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/AIML/AI/Intro/" class="md-nav__link">
+      <a href="../../../courses/AIML/AI/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/AIML/AI/Agent/" class="md-nav__link">
+      <a href="../../../courses/AIML/AI/Agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2141,7 +2223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/AIML/AI/ProblemSolving/" class="md-nav__link">
+      <a href="../../../courses/AIML/AI/ProblemSolving/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2162,7 +2244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/AIML/AI/logic/" class="md-nav__link">
+      <a href="../../../courses/AIML/AI/logic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2222,7 +2304,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../courses/AIML/ML/" class="md-nav__link ">
+            <a href="../../../courses/AIML/ML/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2255,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/AIML/ML/Intro/" class="md-nav__link">
+      <a href="../../../courses/AIML/ML/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2276,7 +2358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/AIML/ML/Concept_Learning/" class="md-nav__link">
+      <a href="../../../courses/AIML/ML/Concept_Learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2297,7 +2379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/AIML/ML/Decision_Tree/" class="md-nav__link">
+      <a href="../../../courses/AIML/ML/Decision_Tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2371,7 +2453,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../courses/cpp/" class="md-nav__link ">
+            <a href="../../../courses/cpp/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2404,7 +2486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/cpp/Elementary/" class="md-nav__link">
+      <a href="../../../courses/cpp/Elementary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2425,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/cpp/Class_Object/" class="md-nav__link">
+      <a href="../../../courses/cpp/Class_Object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2446,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/cpp/Inheritance/" class="md-nav__link">
+      <a href="../../../courses/cpp/Inheritance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2467,7 +2549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/cpp/Dynamic_Alloc/" class="md-nav__link">
+      <a href="../../../courses/cpp/Dynamic_Alloc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2488,7 +2570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/cpp/Exception/" class="md-nav__link">
+      <a href="../../../courses/cpp/Exception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2509,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/cpp/Streams/" class="md-nav__link">
+      <a href="../../../courses/cpp/Streams/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2575,7 +2657,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../courses/Data_Structure%26Algorithm/" class="md-nav__link ">
+            <a href="../../../courses/Data_Structure%26Algorithm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2608,7 +2690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/Data_Structure%26Algorithm/outline/" class="md-nav__link">
+      <a href="../../../courses/Data_Structure%26Algorithm/outline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2629,7 +2711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/Data_Structure%26Algorithm/AlgoAna/" class="md-nav__link">
+      <a href="../../../courses/Data_Structure%26Algorithm/AlgoAna/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2650,7 +2732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
+      <a href="../../../courses/Data_Structure%26Algorithm/Heaps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2671,7 +2753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/Data_Structure%26Algorithm/sorting/" class="md-nav__link">
+      <a href="../../../courses/Data_Structure%26Algorithm/sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2692,7 +2774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
+      <a href="../../../courses/Data_Structure%26Algorithm/Dis_Sets_Class/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2713,7 +2795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../courses/Data_Structure%26Algorithm/Graph/" class="md-nav__link">
+      <a href="../../../courses/Data_Structure%26Algorithm/Graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2767,7 +2849,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../courses/Intro2Visualization/" class="md-nav__link ">
+            <a href="../../../courses/Intro2Visualization/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2845,7 +2927,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ctrl/" class="md-nav__link ">
+            <a href="../../../Ctrl/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2903,7 +2985,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ctrl/Comp_Ctrl_Sys/" class="md-nav__link ">
+            <a href="../../../Ctrl/Comp_Ctrl_Sys/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2970,7 +3052,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ctrl/Manipulators_Modelling/" class="md-nav__link ">
+            <a href="../../../Ctrl/Manipulators_Modelling/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3003,7 +3085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/Manipulators_Modelling/Spatial_Desc/" class="md-nav__link">
+      <a href="../../../Ctrl/Manipulators_Modelling/Spatial_Desc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3024,7 +3106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/Manipulators_Modelling/Kinematics/" class="md-nav__link">
+      <a href="../../../Ctrl/Manipulators_Modelling/Kinematics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3045,7 +3127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/Manipulators_Modelling/Velocities_Forces/" class="md-nav__link">
+      <a href="../../../Ctrl/Manipulators_Modelling/Velocities_Forces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3074,7 +3156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/Modern_Control_Theory/MCT/" class="md-nav__link">
+      <a href="../../../Ctrl/Modern_Control_Theory/MCT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3128,7 +3210,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ctrl/ProcessControl/" class="md-nav__link ">
+            <a href="../../../Ctrl/ProcessControl/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3161,7 +3243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/ProcessControl/Intro/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3182,7 +3264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/ProcessControl/PID/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/PID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3236,7 +3318,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ctrl/ProcessControl/Control_Strategy/" class="md-nav__link ">
+            <a href="../../../Ctrl/ProcessControl/Control_Strategy/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3269,7 +3351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/ProcessControl/Control_Strategy/Cascade_Control/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Cascade_Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3290,7 +3372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/ProcessControl/Control_Strategy/Control_Intension/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Control_Intension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3311,7 +3393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/ProcessControl/Control_Strategy/Multi_Control/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Multi_Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3332,7 +3414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/ProcessControl/Control_Strategy/Feedforward_Control/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Control_Strategy/Feedforward_Control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3361,7 +3443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/ProcessControl/Nonlinear_Compensation/" class="md-nav__link">
+      <a href="../../../Ctrl/ProcessControl/Nonlinear_Compensation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3417,7 +3499,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Ctrl/Sensing%26Detection/" class="md-nav__link ">
+            <a href="../../../Ctrl/Sensing%26Detection/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3450,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ctrl/Sensing%26Detection/Midterm/" class="md-nav__link">
+      <a href="../../../Ctrl/Sensing%26Detection/Midterm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3517,7 +3599,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../blog/" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3550,7 +3632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/MiddleSchool/" class="md-nav__link">
+      <a href="../../../blog/MiddleSchool/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3600,7 +3682,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../blog/Travel/" class="md-nav__link ">
+            <a href="../../../blog/Travel/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3633,7 +3715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/Travel/5th_05_24/" class="md-nav__link">
+      <a href="../../../blog/Travel/5th_05_24/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3681,7 +3763,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../blog/Travel/Mount_Lu/" class="md-nav__link ">
+            <a href="../../../blog/Travel/Mount_Lu/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3714,7 +3796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/Travel/Mount_Lu/Schedule/" class="md-nav__link">
+      <a href="../../../blog/Travel/Mount_Lu/Schedule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3751,7 +3833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3779,7 +3861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../friends/" class="md-nav__link">
+      <a href="../../../friends/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3799,7 +3881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tag/" class="md-nav__link">
+      <a href="../../../tag/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3819,7 +3901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3839,7 +3921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../log/" class="md-nav__link">
+      <a href="../../../log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3879,73 +3961,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preliminary" class="md-nav__link">
+  <a href="#integration-along-curves" class="md-nav__link">
     <span class="md-ellipsis">
-      预备知识 | Preliminary
+      Integration along curves
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#elementary-integration-method" class="md-nav__link">
+  <a href="#cauchys-theorem" class="md-nav__link">
     <span class="md-ellipsis">
-      初等积分法 | Elementary Integration Method
+      Cauchy's Theorem
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#system-of-linear-differential-equations-lodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      线性微分方程组 | System of Linear Differential Equations (LODEs)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-theory-of-ode" class="md-nav__link">
-    <span class="md-ellipsis">
-      微分方程的一般理论 | General Theory of ODE
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="微分方程的一般理论 | General Theory of ODE">
+    <nav class="md-nav" aria-label="Cauchy's Theorem">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#existence-and-uniqueness-theorem" class="md-nav__link">
+  <a href="#goursat-theorem" class="md-nav__link">
     <span class="md-ellipsis">
-      存在唯一性定理 | Existence and Uniqueness Theorem
+      Goursat Theorem
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contraction-mapping-method" class="md-nav__link">
+  <a href="#local-existence-of-primitive" class="md-nav__link">
     <span class="md-ellipsis">
-      压缩映射法 | Contraction Mapping Method
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#method-of-power-series" class="md-nav__link">
-    <span class="md-ellipsis">
-      幂级数解法 | Method of Power Series
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#continuous-dependence-of-solution-on-initial-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      解对初值的连续依赖性 | Continuous Dependence of Solution on Initial Value
+      Local existence of Primitive
     </span>
   </a>
   
@@ -3953,33 +3999,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stability-theory-of-ode" class="md-nav__link">
-    <span class="md-ellipsis">
-      微分方程的稳定性理论 | Stability Theory of ODE
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qualitative-theory-of-ode" class="md-nav__link">
-    <span class="md-ellipsis">
-      微分方程的定性理论 | Qualitative Theory of ODE
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#first-order-pratial-differential-equation" class="md-nav__link">
-    <span class="md-ellipsis">
-      一阶偏微分方程 | First Order Pratial Differential Equation
-    </span>
-  </a>
   
 </li>
       
@@ -3998,25 +4017,310 @@
                   
 
 
-<h1 id="ordinary-differential-equation">Ordinary Differential Equation<a class="headerlink" href="#ordinary-differential-equation" title="Permanent link">&para;</a></h1>
-<div class="admonition reference">
-<p class="admonition-title">Reference</p>
-<ul>
-<li><strong>常微分方程</strong>, <em>柳彬</em></li>
-<li><strong>常微分方程</strong>, <em>方道元</em></li>
-</ul>
+<h1 id="cauchys-integral-theorem">Cauchy's Integral Theorem<a class="headerlink" href="#cauchys-integral-theorem" title="Permanent link">&para;</a></h1>
+<h2 id="integration-along-curves">Integration along curves<a class="headerlink" href="#integration-along-curves" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Parameterized Curve</p>
+<p>A complex function <span class="arithmatex">\(z(t)\)</span> is said to be parametrized curve, if it maps a closed interval <span class="arithmatex">\([a,b]\subset \mathbb{R}\)</span> to <span class="arithmatex">\(D\subset \mathbb{C}\)</span>.</p>
+<p>A parametrized curve is said to be <strong>smooth</strong>, if <span class="arithmatex">\(z'(t)\)</span> exists, <span class="arithmatex">\(z'(t)\neq 0, \forall t\in [a,b]\)</span> and is continuous on <span class="arithmatex">\([a,b]\)</span>. At point <span class="arithmatex">\(t=a,b\)</span>, we intepret continuity and differentiability as one-side limits. (here readers could just view <span class="arithmatex">\(z\)</span> as a function vector with respect to variable <span class="arithmatex">\(t\)</span>). Similar situation for <strong>piecewise-smooth</strong>.</p>
 </div>
-<h2 id="preliminary"><a href="Preliminary/">预备知识 | Preliminary</a><a class="headerlink" href="#preliminary" title="Permanent link">&para;</a></h2>
-<h2 id="elementary-integration-method"><a href="EIM/">初等积分法 | Elementary Integration Method</a><a class="headerlink" href="#elementary-integration-method" title="Permanent link">&para;</a></h2>
-<h2 id="system-of-linear-differential-equations-lodes"><a href="LODEs/">线性微分方程组 | System of Linear Differential Equations (LODEs)</a><a class="headerlink" href="#system-of-linear-differential-equations-lodes" title="Permanent link">&para;</a></h2>
-<h2 id="general-theory-of-ode"><a href="General_Theory/">微分方程的一般理论 | General Theory of ODE</a><a class="headerlink" href="#general-theory-of-ode" title="Permanent link">&para;</a></h2>
-<h3 id="existence-and-uniqueness-theorem"><a href="General_Theory/Existence_Uniqueness_Theorem/">存在唯一性定理 | Existence and Uniqueness Theorem</a><a class="headerlink" href="#existence-and-uniqueness-theorem" title="Permanent link">&para;</a></h3>
-<h3 id="contraction-mapping-method"><a href="General_Theory/Contraction_Mapping_Method/">压缩映射法 | Contraction Mapping Method</a><a class="headerlink" href="#contraction-mapping-method" title="Permanent link">&para;</a></h3>
-<h3 id="method-of-power-series"><a href="General_Theory/Power_Series/">幂级数解法 | Method of Power Series</a><a class="headerlink" href="#method-of-power-series" title="Permanent link">&para;</a></h3>
-<h3 id="continuous-dependence-of-solution-on-initial-value"><a href="General_Theory/Continuous_Dependence/">解对初值的连续依赖性 | Continuous Dependence of Solution on Initial Value</a><a class="headerlink" href="#continuous-dependence-of-solution-on-initial-value" title="Permanent link">&para;</a></h3>
-<h2 id="stability-theory-of-ode"><a href="Lyapunov/">微分方程的稳定性理论 | Stability Theory of ODE</a><a class="headerlink" href="#stability-theory-of-ode" title="Permanent link">&para;</a></h2>
-<h2 id="qualitative-theory-of-ode"><a href="Qualitative_Theory/">微分方程的定性理论 | Qualitative Theory of ODE</a><a class="headerlink" href="#qualitative-theory-of-ode" title="Permanent link">&para;</a></h2>
-<h2 id="first-order-pratial-differential-equation"><a href="FstPDE/">一阶偏微分方程 | First Order Pratial Differential Equation</a><a class="headerlink" href="#first-order-pratial-differential-equation" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Equivalence of parametrized curve</p>
+<p>Two parametrized curves <span class="arithmatex">\(z:[a,b]\mapsto \mathbb{C}\)</span> and <span class="arithmatex">\(\tilde{z}:[c,d]\mapsto \mathbb{C}\)</span> are said to ba equivalent, if there exsits a continuously differentiable bijection <span class="arithmatex">\(t\)</span> <span class="arithmatex">\((t'(s)&gt;0)\)</span> which maps <span class="arithmatex">\([c,d]\)</span> to <span class="arithmatex">\([a,b]\)</span>, such that </p>
+<div class="arithmatex">\[
+\tilde{z}(s)=z(t(s)).
+\]</div>
+</div>
+<p>The above equivalence defines an equivalent family of <span class="arithmatex">\(z(t)\)</span>, the difference of which are the definition domains, varying among any closed interval in <span class="arithmatex">\(\mathbb{R}\)</span>. They are all the same in the range, so we denote the whole of them as <span class="arithmatex">\(\gamma\subset \mathbb{C}\)</span>, called <strong>smooth curve</strong>. Thus, a smooth curve could determine incountable parametrized curves.</p>
+<p>The condition <span class="arithmatex">\((t'(s)&gt;0)\)</span> guarantee the direction of the curve. Later we would see that it determines the sign of integral.</p>
+<div class="admonition success">
+<p class="admonition-title">Reversing the direction</p>
+<p>For a given smooth curve <span class="arithmatex">\(\gamma\)</span>, and its one parametrized curve <span class="arithmatex">\(z:[a,b]\mapsto \mathbb{C}\)</span>, we could obtain one of its reverse curve <span class="arithmatex">\(\gamma^-\)</span>, by </p>
+<div class="arithmatex">\[
+z^-=z(b+a-t).
+\]</div>
+<p>so <span class="arithmatex">\(z^-:[a,b]\mapsto \mathbb{R}\)</span>. In fact, we could formulate infinite number of these equivalent curve, while the above one guarantees the definition domain is kept same as <span class="arithmatex">\(z\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Simple curve, closed curve</p>
+<p>A smooth curve is said to be <strong>simple</strong>, if it is not self-intersecting. Or in mathematical language, <span class="arithmatex">\(z(t)\neq z(s)\)</span> unless <span class="arithmatex">\(s=t\)</span>.</p>
+<p>A smooth curve is said to be <strong>closed</strong>, if <span class="arithmatex">\(z(a)=z(b)\)</span> for any of its parametrizations.</p>
+</div>
+<p>For the following parts, we call the above piecewise-smooth curve a <strong>curve</strong> for brevity.</p>
+<div class="question">
+<p><strong>Example</strong>. Some examples of curves.</p>
+<p>(i) Circle. Set like <span class="arithmatex">\(C_r(z_0)=\{z\in\mathbb{C}:|z-z_0|=r\}.\)</span> are called circle, with its usual parametrization (positive and negative orientation respectively)</p>
+<div class="arithmatex">\[
+z(t)=z_0+re^{i\theta},\quad t\in [0,2\pi],
+\]</div>
+<div class="arithmatex">\[
+z(t)=z_0+re^{-i\theta},\quad t\in [0,2\pi].
+\]</div>
+</div>
+<p>In the following chapters, we denote <span class="arithmatex">\(C\)</span> as a general positive oriented circle.</p>
+<div class="admonition info">
+<p class="admonition-title">Riemann integral of complex function f</p>
+<p>Assume complex function <span class="arithmatex">\(f\)</span> is defined on <span class="arithmatex">\(\gamma\)</span>, where <span class="arithmatex">\(\gamma\)</span> is not necessarily smooth, but must be length-calculatable. For one parametrization <span class="arithmatex">\(z:[a,b]\mapsto \mathbb{C}\)</span>, we have partition </p>
+<div class="arithmatex">\[
+\Delta_n: z(a)=z_0&lt;z_1&lt;\cdots&lt;z_n=z(b)
+\]</div>
+<p>Choose an arbitrary point <span class="arithmatex">\(\xi_k\)</span> on arc from <span class="arithmatex">\(z_{k-1}\)</span> to <span class="arithmatex">\(z_k\)</span>, <span class="arithmatex">\((k=1,\cdots,n)\)</span> we have Riemann summation </p>
+<div class="arithmatex">\[
+\sum_{k=1}^n f(\xi_k)(z_k-z_{k-1}).
+\]</div>
+<p>Denote <span class="arithmatex">\(s_k\)</span> to be the length of arc from <span class="arithmatex">\(z_{k-1}\)</span> to <span class="arithmatex">\(z_k\)</span>. If <span class="arithmatex">\(\lambda=\max\{s_k: 1\leq k\leq n\}\rightarrow 0\)</span>, the above summation has a unique limit, then we call complex function <span class="arithmatex">\(f\)</span> Riemann-integrable. And we denote the <strong>integral of <span class="arithmatex">\(f\)</span> along <span class="arithmatex">\(\gamma\)</span></strong> as </p>
+<div class="arithmatex">\[
+\int_\gamma f(z)dz=\lim_{\lambda\rightarrow 0}\sum_{k=1}^n f(\xi_k)(z_k-z_{k-1}).
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Sufficient condition for Riemann integrability</p>
+<p>If complex function <span class="arithmatex">\(f=u+iv\)</span> is continuous on <span class="arithmatex">\(\gamma\)</span> which is length-integrable, then it is Riemann-integrable on <span class="arithmatex">\(\gamma\)</span>, and </p>
+<div class="arithmatex">\[
+\int_\gamma f(z)dz=\int_\gamma (u dx-vdy)+i\int_\gamma (vdx+udy).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="integration-along-curves-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="integration-along-curves-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Just compose complex number into two real parts.
+Denote <span class="arithmatex">\(z_k=x_k+iy_k\)</span>, <span class="arithmatex">\(\xi_k=\eta_k+i\zeta_k\)</span>, <span class="arithmatex">\(\Delta x_k=x_k-x_{k-1}, \Delta y_k=y_k-y_{k-1}\)</span> then <span class="arithmatex">\(f(\xi_k)=u(\eta_k,\zeta_k)+iv(\eta_k,\zeta_k)\)</span>, so Riemann summation</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=1}^n f(\xi_k)(z_k-z_{k-1})=&amp;\sum_{k-1}^n [u(\eta_k,\zeta_k)+iv(\eta_k,\zeta_k)]\cdot [(x_k-x_{k-1})+i(y_k-y_{k-1})]\\
+=&amp;\sum_{k=1}^n\{ [u(\eta_k,\zeta_k)\Delta x_k-v(\eta_k,\zeta_k)\Delta y_k]+\\
+&amp;i [u(\eta_k,\zeta_k)\Delta y_k+v(\eta_k,\zeta_k)\Delta x_k]\}
+\end{align*}
+\]</div>
+<p>when <span class="arithmatex">\(u, v\)</span> is continuous on <span class="arithmatex">\(\gamma\)</span>, the above summation converges to the needed formula.</p>
+</div>
+</div>
+</div>
+<p>The above formula is easy to know by</p>
+<div class="arithmatex">\[
+f(z)dz=(u+iv)(dx+idy)=udx-vdy+i(udy+vdx).
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Integral along a smooth curve</p>
+<p>Assume smooth curve <span class="arithmatex">\(\gamma\subset \mathbb{C}\)</span> parametrized by <span class="arithmatex">\(z: [a,b]\mapsto \mathbb{C}\)</span>, and <span class="arithmatex">\(f\)</span> is a continuous function on <span class="arithmatex">\(\gamma\)</span>. Then the integral of <span class="arithmatex">\(f\)</span> along <span class="arithmatex">\(\gamma\)</span> </p>
+<div class="arithmatex">\[
+\int_\gamma f(z)dz=\int_a^b f(z(t))z'(t)dt.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="integration-along-curves-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="integration-along-curves-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The logic is simple, even a little rude: Parametrize the four real integral along <span class="arithmatex">\(\gamma\)</span> and then sum them up. That is, <span class="arithmatex">\(f=u+iv\)</span>, <span class="arithmatex">\(z=x+iy\)</span>, then <span class="arithmatex">\(z'(t)=x'(t)+iv'(t)\)</span>.</p>
+<p>Since the real and imaginary parts of integral are</p>
+<div class="arithmatex">\[
+\int_\gamma udx-vdy=\int_a^b [u(x(t),y(t))x'(t)-v(x(t),y(t))y'(t)]dt
+\]</div>
+<div class="arithmatex">\[
+\int_\gamma vdx+udy=\int_a^b [v(x(t),y(t))x'(t)+u(x(t),y(t))y'(t)]dt
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+\int_\gamma f(z)dz=\int_a^b [u(x(t),y(t))+iv(x(t),y(t))][x'(t)+iy(t)]dt=\int_a^b f(z(t))z'(t)dt. 
+\]</div>
+</div>
+</div>
+</div>
+<p><div class="question" markdown>
+<strong>Example</strong>. Calculate </p>
+<p>(i)</p>
+<div class="arithmatex">\[
+\int_\gamma dz=z(b)-z(a)\neq \int_a^b |z'(t)|dt=\text{length}(\gamma)
+\]</div>
+<p>(ii)</p>
+<div class="arithmatex">\[
+\int_\gamma \frac{dz}{(z-z_0)^n},
+\]</div>
+<p>where <span class="arithmatex">\(n\in \mathbb{Z}\)</span>, <span class="arithmatex">\(\gamma=C_r(z_0)\)</span>.
+</div></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="integration-along-curves-answer-for-ii" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="integration-along-curves-answer-for-ii">Answer for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) <span class="arithmatex">\(n=1\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(n\neq 1\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties for Integral of complex function</p>
+<p>If complex function <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> is continuous on <span class="arithmatex">\(\gamma\)</span> which is length-calculatable, then</p>
+<p>(i) <span class="arithmatex">\(\gamma^-\)</span> is the reverse of <span class="arithmatex">\(\gamma\)</span>, </p>
+<div class="arithmatex">\[
+\int_{\gamma^-}f(z)dz=-\int_{\gamma}f(z)dz.
+\]</div>
+<p>(ii) For all <span class="arithmatex">\(\alpha, \beta\in \mathbb{C}\)</span>, </p>
+<div class="arithmatex">\[
+\int_{\gamma} (\alpha f(z)+\beta g(z))dz=\alpha\int_{\gamma}f(z)dz+\beta \int_{\gamma}g(z)dz.
+\]</div>
+<p>(iii) Inequation for absolute estimation</p>
+<div class="arithmatex">\[
+\left|\int_\gamma f(z)dz\right|\leq \sup_{z\in \gamma}|f(z)|\cdot \text{length}(\gamma)
+\]</div>
+</div>
+<h2 id="cauchys-theorem">Cauchy's Theorem<a class="headerlink" href="#cauchys-theorem" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Primitive function</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a function on the open set <span class="arithmatex">\(\Omega\)</span>. A Primitive for <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\(\Omega\)</span> is a function <span class="arithmatex">\(F\)</span> that is holomorphic on <span class="arithmatex">\(\Omega\)</span>, such that <span class="arithmatex">\(F'(z)=f(z),\forall z\in \Omega\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Cauchy's Theorem</p>
+<p>If a continuous function <span class="arithmatex">\(f\)</span> has a primitive <span class="arithmatex">\(F\)</span> on open set <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(\gamma\)</span> is a piecewise-smooth curve begins at <span class="arithmatex">\(\omega_1\)</span> and ends at <span class="arithmatex">\(\omega_2\)</span>, then </p>
+<div class="arithmatex">\[
+\int_\gamma f(z)dz=F(\omega_2)-F(\omega_1).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="cauchys-theorem-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="cauchys-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) For <span class="arithmatex">\(\gamma\)</span> is smooth.</p>
+<p>Choose a parametrization <span class="arithmatex">\(z: [a,b]\mapsto \mathbb{C}\)</span> of <span class="arithmatex">\(\gamma\)</span>, such that <span class="arithmatex">\(z(a)=\omega_1, z(b)=\omega_2\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_\gamma f(z)dz&amp;=\int_a^b f(z(t))z'(t)dt\\
+&amp;=\int_a^b F'(z(t))z'(t)dt\\
+&amp;=\int_a^b \frac{d}{dt}F(z(t))dt\\
+&amp;=F(z(b))-F(z(a))=F(\omega_2)-F(\omega_1).
+\end{align*}
+\]</div>
+<p>where the third "<span class="arithmatex">\(=\)</span>" is by chain rule, and the fouth "<span class="arithmatex">\(=\)</span>" is by fundamental theorem of calculas.</p>
+<p>(ii) For <span class="arithmatex">\(\gamma\)</span> is piecewise-smooth, just add these smooth part up.</p>
+</div>
+</div>
+</div>
+<p>The condition and result of the above theorem could be replaced by the following statement.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="cauchys-theorem-another-language" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="cauchys-theorem-another-language">Another language</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(F\)</span> is holomorphic and <span class="arithmatex">\(F'\)</span> is continuous on <span class="arithmatex">\(\Omega\)</span>, then </p>
+<div class="arithmatex">\[
+\int_\gamma F'(z)dz=F(\omega_2)-F(\omega_1).
+\]</div>
+</div>
+</div>
+</div>
+<p><a id="Corollary: Cauchy's closed curve theorem"> </a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary: Cauchy's closed curve theorem</p>
+<p>If <span class="arithmatex">\(\gamma\)</span> is a closed curve(not necessarily smooth) in an open set <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(f\)</span> is continuous and has a primitive in <span class="arithmatex">\(\Omega\)</span>, then </p>
+<div class="arithmatex">\[
+\int_\gamma f(z)dz=0.
+\]</div>
+</div>
+<p>The condition and result of the above theorem could be replaced by the following statement.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="cauchys-theorem-another-language_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="cauchys-theorem-another-language_1">Another language</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(F\)</span> is holomorphic and <span class="arithmatex">\(F'\)</span> is continuous on <span class="arithmatex">\(\Omega\)</span>, then </p>
+<div class="arithmatex">\[
+\int_\gamma F'(z)dz=0.
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2</p>
+<p>If <span class="arithmatex">\(f\)</span> is holomorphic in a region <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(f'=0\)</span>, then <span class="arithmatex">\(f\)</span> is a constant.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="cauchys-theorem-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="cauchys-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall \omega_0\in \Omega\)</span>, <span class="arithmatex">\(\forall \omega\)</span>,</p>
+<div class="arithmatex">\[
+f(\omega)-f(\omega_0)=\int_\gamma f'(z)dz=0.
+\]</div>
+<p>so <span class="arithmatex">\(f(\omega)=f(\omega_0)\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="goursat-theorem">Goursat Theorem<a class="headerlink" href="#goursat-theorem" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Goursat's Theorem</p>
+<p>Assume <span class="arithmatex">\(\Omega\)</span> is an open set in <span class="arithmatex">\(\mathbb{C}\)</span>. If <span class="arithmatex">\(f\in H(\Omega)\)</span>, then for any a triangle <span class="arithmatex">\(T\subset \Omega\)</span> whose interior is also contained in <span class="arithmatex">\(\Omega\)</span>,  </p>
+<div class="arithmatex">\[
+\int_T f(z)dz=0.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="goursat-theorem-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="goursat-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Bisect <span class="arithmatex">\(\mathscr{T}^0\)</span>, use nested compact set theorem.</p>
+<p>Use holomorphic properties, </p>
+<div class="arithmatex">\[
+f(z)=f(z_0)+f'(z_0)(z-z_0)+\psi(z)(z-z_0)
+\]</div>
+<p>where <span class="arithmatex">\(\lim\limits_{z\rightarrow z_0}\psi(z)=0\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: integral in Rectangle curve</p>
+<p>Assume <span class="arithmatex">\(f\in H(\Omega)\)</span>. For any rectangle <span class="arithmatex">\(R\subset \Omega\)</span> whose interior is also contained in <span class="arithmatex">\(\Omega\)</span>, </p>
+<div class="arithmatex">\[
+\int_T f(z)dz=0.
+\]</div>
+</div>
+<h3 id="local-existence-of-primitive">Local existence of Primitive<a class="headerlink" href="#local-existence-of-primitive" title="Permanent link">&para;</a></h3>
+<p>By constructing method.</p>
+<div class="admonition success">
+<p class="admonition-title">A holomorphic function has a primitive</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a holomorphic function in an open disc, then <span class="arithmatex">\(f\)</span> has a primitive in the disc.</p>
+</div>
+<p>Actually we use Goursat's Theorem and continuity of <span class="arithmatex">\(f\)</span>, without utilizing Holomorphism of <span class="arithmatex">\(f\)</span>. That is, a continuous function on an open set must have a primitive.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="local-existence-of-primitive-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="local-existence-of-primitive-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Define </p>
+<div class="arithmatex">\[
+F(z)=\int_{\gamma_z} f(\omega)d\omega,
+\]</div>
+<p>where <span class="arithmatex">\(\gamma_z\)</span> is a polygomal line from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(z\)</span>.</p>
+<p>by Goursat's Theorem, we can show that</p>
+<div class="arithmatex">\[
+\begin{align}
+F(z+h)-F(z)=\int_\eta f(\omega)d\omega,\label{primitive}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(\eta\)</span> is a straight line from <span class="arithmatex">\(z\)</span> to <span class="arithmatex">\(z+h\)</span>.</p>
+<p>Then use the continuity of <span class="arithmatex">\(f\)</span> in <span class="arithmatex">\(\Omega\)</span>, i.e at point <span class="arithmatex">\(z\)</span>, </p>
+<div class="arithmatex">\[
+f(\omega)=f(z)+\psi(\omega)
+\]</div>
+<p>where <span class="arithmatex">\(\lim\limits_{\omega\rightarrow z}\psi(\omega)=0\)</span>. Substitute in equation <span class="arithmatex">\(\ref{primitive}\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+F(z+h)-F(z)&amp;=f(z)\int_\eta d\omega + \int_\eta \psi(\omega)d\omega.\\
+\frac{F(z+h)-F(z)}{h}&amp;=f(z)+\frac{\int_\eta \psi(\omega)d\omega}{h}
+\end{align*}
+\]</div>
+<p>the latter integral goes to <span class="arithmatex">\(0\)</span> as <span class="arithmatex">\(h\)</span> tend to <span class="arithmatex">\(0\)</span> because</p>
+<div class="arithmatex">\[
+\left|\frac{\int_\eta \psi(\omega)d\omega}{h} \right|\leq \frac{\sup\limits_{\omega\in \eta}|\psi(\omega)|\cdot |h|}{|h|}
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+\lim_{h\rightarrow 0}\frac{F(z+h)-F(z)}{h}=f(z).
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: Cauchy's Theorem for a disc</p>
+<p>Assume <span class="arithmatex">\(D\)</span> is an open disc, and <span class="arithmatex">\(f\in H(D)\)</span>. Then for closed curve <span class="arithmatex">\(\gamma\)</span>,</p>
+<div class="arithmatex">\[
+\int_\gamma f(z)dz=0
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="local-existence-of-primitive-proof_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="local-existence-of-primitive-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By using <a href="Corollary: Cauchy's closed curve theorem">Corollary: Cauchy's closed curve theorem</a>.</p>
+</div>
+</div>
+</div>
 
 
 
@@ -4056,7 +4360,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Numerical_Analysis/DE/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Numerical Solution of Differential Equations">
+          <a href="../Preliminary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Preliminary">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4066,20 +4370,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Numerical Solution of Differential Equations
+                Preliminary
               </div>
             </div>
           </a>
         
         
           
-          <a href="Preliminary/" class="md-footer__link md-footer__link--next" aria-label="Next: Preliminary">
+          <a href="../../Functional_Analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Functional Analysis">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Preliminary
+                Functional Analysis
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4135,26 +4439,26 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["grid", "cards", "announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
   
-      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="../../javascripts/apply-numbering.js"></script>
+        <script src="../../../javascripts/apply-numbering.js"></script>
       
-        <script src="../../javascripts/pdf-viewer.js"></script>
+        <script src="../../../javascripts/pdf-viewer.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
       
     
-  <script src="../../assets/javascripts/custom.4e50d00f.min.js"></script>
+  <script src="../../../assets/javascripts/custom.4e50d00f.min.js"></script>
 
   </body>
 </html>
