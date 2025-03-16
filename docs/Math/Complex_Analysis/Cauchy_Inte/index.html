@@ -739,6 +739,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cauchys-integral-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy's Integral Formula
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4002,6 +4011,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cauchys-integral-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cauchy's Integral Formula
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4125,8 +4143,9 @@ f(z)dz=(u+iv)(dx+idy)=udx-vdy+i(udy+vdx).
 </div>
 </div>
 </div>
-<p><div class="question" markdown>
-<strong>Example</strong>. Calculate </p>
+<p><a id="commen-integral"></a></p>
+<div class="question">
+<p><strong>Example</strong>. Calculate </p>
 <p>(i)</p>
 <div class="arithmatex">\[
 \int_\gamma dz=z(b)-z(a)\neq \int_a^b |z'(t)|dt=\text{length}(\gamma)
@@ -4135,8 +4154,8 @@ f(z)dz=(u+iv)(dx+idy)=udx-vdy+i(udy+vdx).
 <div class="arithmatex">\[
 \int_\gamma \frac{dz}{(z-z_0)^n},
 \]</div>
-<p>where <span class="arithmatex">\(n\in \mathbb{Z}\)</span>, <span class="arithmatex">\(\gamma=C_r(z_0)\)</span>.
-</div></p>
+<p>where <span class="arithmatex">\(n\in \mathbb{Z}\)</span>, <span class="arithmatex">\(\gamma=C_r(z_0)\)</span>.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="integration-along-curves-answer-for-ii" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="integration-along-curves-answer-for-ii">Answer for (ii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4205,7 +4224,7 @@ f(z)dz=(u+iv)(dx+idy)=udx-vdy+i(udy+vdx).
 <p><a id="Corollary: Cauchy's closed curve theorem"> </a></p>
 <div class="admonition success">
 <p class="admonition-title">Corollary: Cauchy's closed curve theorem</p>
-<p>If <span class="arithmatex">\(\gamma\)</span> is a closed curve(not necessarily smooth) in an open set <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(f\)</span> is continuous and has a primitive in <span class="arithmatex">\(\Omega\)</span>, then </p>
+<p>If <span class="arithmatex">\(\gamma\)</span> is a closed smooth curve in an open set <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(f\)</span> is continuous and has a primitive in <span class="arithmatex">\(\Omega\)</span>, then </p>
 <div class="arithmatex">\[
 \int_\gamma f(z)dz=0.
 \]</div>
@@ -4222,7 +4241,7 @@ f(z)dz=(u+iv)(dx+idy)=udx-vdy+i(udy+vdx).
 </div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Corollary 2</p>
+<p class="admonition-title">Corollary 2: zero-derivatives means constant function</p>
 <p>If <span class="arithmatex">\(f\)</span> is holomorphic in a region <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(f'=0\)</span>, then <span class="arithmatex">\(f\)</span> is a constant.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="cauchys-theorem-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="cauchys-theorem-proof_1">Proof</label></div>
@@ -4236,6 +4255,7 @@ f(\omega)-f(\omega_0)=\int_\gamma f'(z)dz=0.
 </div>
 </div>
 </div>
+<p>Actually the above theorems also hold for general curves.</p>
 <h3 id="goursat-theorem">Goursat Theorem<a class="headerlink" href="#goursat-theorem" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Goursat's Theorem</p>
@@ -4247,12 +4267,35 @@ f(\omega)-f(\omega_0)=\int_\gamma f'(z)dz=0.
 <div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="goursat-theorem-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="goursat-theorem-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Bisect <span class="arithmatex">\(\mathscr{T}^0\)</span>, use nested compact set theorem.</p>
-<p>Use holomorphic properties, </p>
+<p>Bisect <span class="arithmatex">\(\mathcal{T}^0\)</span>, we have a sequence of triangles</p>
+<div class="arithmatex">\[
+\mathcal{T}^0\supset \mathcal{T}^1\supset\cdots 
+\]</div>
+<p>use nested compact set theorem to get a point <span class="arithmatex">\(z_0\)</span> in these subtriangles.</p>
+<p>Use properties of holomorphic function, </p>
 <div class="arithmatex">\[
 f(z)=f(z_0)+f'(z_0)(z-z_0)+\psi(z)(z-z_0)
 \]</div>
-<p>where <span class="arithmatex">\(\lim\limits_{z\rightarrow z_0}\psi(z)=0\)</span>.</p>
+<p>where <span class="arithmatex">\(\lim\limits_{z\rightarrow z_0}\psi(z)=0\)</span>. The first and second items of the rightside equation equals zero after integrating over a closed curve, while last item is bounded by a small <span class="arithmatex">\(\varepsilon_n=\sup_{z\in T^{n}}|\psi(z)|\)</span>. That is,</p>
+<div class="arithmatex">\[
+\left|\int_{T^n}fdz\right|=\left|\int_{T^n}\psi (z-z_0) dz\right|\leq \varepsilon_n d^{(n)}p^{(n)}.
+\]</div>
+<p>where <span class="arithmatex">\(d^{(n)}, p^{(n)}\)</span> denote the diameter and perimeter of the <span class="arithmatex">\(n\)</span>th triangles. Each time after bisection, we have</p>
+<div class="arithmatex">\[
+d^{(n+1)}\leq \frac{1}{2}d^{(n)},\quad p^{(n+1)}\leq \frac{1}{2}p^{(n)}
+\]</div>
+<p>and the integral along <span class="arithmatex">\(T^{(n)}\)</span>, must hold for some <span class="arithmatex">\(j\in \{0,1,2,3\}\)</span></p>
+<div class="arithmatex">\[
+\left|\int_{T^{(n)}} f(z)dz\right|\leq 4\left|\int_{T^{(n+1)}_j} f(z)dz\right|
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+\begin{align*}
+\left|\int_{T^{(0)}} f(z)dz\right|&amp;\leq 4^n \left|\int_{T^{(n)}_j} f(z)dz\right|\\
+&amp;\leq 4^n \varepsilon_n d^{(n)}p^{(n)}\\
+&amp;\leq 4^n \varepsilon_n 4^{-n} d^{(0)}p^{(0)}=\varepsilon_n\rightarrow 0(n\rightarrow \infty)
+\end{align*}
+\]</div>
 </div>
 </div>
 </div>
@@ -4269,7 +4312,7 @@ f(z)=f(z_0)+f'(z_0)(z-z_0)+\psi(z)(z-z_0)
 <p class="admonition-title">A holomorphic function has a primitive</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is a holomorphic function in an open disc, then <span class="arithmatex">\(f\)</span> has a primitive in the disc.</p>
 </div>
-<p>Actually we use Goursat's Theorem and continuity of <span class="arithmatex">\(f\)</span>, without utilizing Holomorphism of <span class="arithmatex">\(f\)</span>. That is, a continuous function on an open set must have a primitive.</p>
+<p>Actually we use Goursat's Theorem and continuity of <span class="arithmatex">\(f\)</span>, without utilizing Holomorphism of <span class="arithmatex">\(f\)</span>. That is, a continuous function on an open set must have a primitive, if it satisfies that its integral on every triangle on <span class="arithmatex">\(\Omega\)</span> equals zero. In the following parts, we will show that this equals to holomorphic.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="local-existence-of-primitive-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="local-existence-of-primitive-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4318,6 +4361,43 @@ F(z+h)-F(z)&amp;=f(z)\int_\eta d\omega + \int_\eta \psi(\omega)d\omega.\\
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By using <a href="Corollary: Cauchy's closed curve theorem">Corollary: Cauchy's closed curve theorem</a>.</p>
+</div>
+</div>
+</div>
+<p>Actually, Cauchy's Theorem could apply to any closed curve with unambiguious interior, not just a disc, whose interior is clear.</p>
+<h2 id="cauchys-integral-formula">Cauchy's Integral Formula<a class="headerlink" href="#cauchys-integral-formula" title="Permanent link">&para;</a></h2>
+<p>Using the following integral formula, we could show that holomorphic function has derivatives of arbitrary order <span class="arithmatex">\(n\)</span>, and could be expanded by power series.</p>
+<div class="admonition success">
+<p class="admonition-title">Cauchy's integral formula</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is holomorphic in an open set that contains the closure of a disc <span class="arithmatex">\(D\)</span>. If <span class="arithmatex">\(C\)</span> denotes the boundary circle of this disc with the positive orientation, then for any point <span class="arithmatex">\(z\in D\)</span>, </p>
+<div class="arithmatex">\[
+f(z)=\frac{1}{2\pi i}\int_C \frac{f(\zeta)}{\zeta-z}d\zeta.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="cauchys-integral-formula-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="cauchys-integral-formula-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We could use a "key hole" to prove. Look the following image.</p>
+<p><p align="center">
+<img src="../images/Key_Hole.png" width="35%" />
+</p></p>
+<p>Let <span class="arithmatex">\(F(z)=\frac{f(\zeta)}{\zeta-z}\)</span>, then it is holomorphic away from point <span class="arithmatex">\(z\)</span>, so</p>
+<div class="arithmatex">\[
+\int_{\gamma} F(\zeta)d\zeta=0=\int_{C_\varepsilon^+} F(\zeta)d\zeta + \int_{\Gamma^+}F(\zeta)d\zeta +\int_{\Gamma^-}F(\zeta)d\zeta +\int_{C_r^-}F(\zeta)d\zeta.
+\]</div>
+<p>Let <span class="arithmatex">\(\delta\rightarrow 0\)</span>, we have <span class="arithmatex">\(\int_{\Gamma^+}F(\zeta)d\zeta +\int_{\Gamma^-}F(\zeta)d\zeta=0\)</span>. If we rewrite </p>
+<div class="arithmatex">\[
+F(z)=\frac{f(\zeta)-f(z)}{\zeta-z}+\frac{f(z)}{\zeta-z},
+\]</div>
+<p>and by the example <a href="#commen-integral">commen integral</a>, we know</p>
+<div class="arithmatex">\[
+\int_{C_\varepsilon^+}\frac{f(z)}{\zeta-z}d\zeta=2\pi i f(z),
+\]</div>
+<p>and <span class="arithmatex">\(\frac{f(\zeta)-f(z)}{\zeta-z}\)</span> is bounded, whose integral on <span class="arithmatex">\(C_\varepsilon^+\)</span> converges to <span class="arithmatex">\(0\)</span>. So </p>
+<div class="arithmatex">\[
+\int_{C_\varepsilon^+}F(\zeta)d\zeta = 2\pi i f(z).
+\]</div>
+<p>and we are done.</p>
 </div>
 </div>
 </div>
