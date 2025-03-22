@@ -1878,6 +1878,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Possion Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1887,6 +1898,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#process-of-interval-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process of Interval Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-of-arriving-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process of Arriving Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repair-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repair Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synthesis-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synthesis &amp; Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3882,6 +3948,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#process-of-interval-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process of Interval Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-of-arriving-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process of Arriving Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repair-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repair Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synthesis-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synthesis &amp; Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3930,6 +4040,154 @@
 </div>
 <div class="tabbed-block">
 <p>It is a little hard to prove this direction. For we have to show that <span class="arithmatex">\(X(t+h)-X(t)\)</span> is a Possion distribution.</p>
+</div>
+</div>
+</div>
+<p>Assume <span class="arithmatex">\(S_n\)</span> to denote the arriving time of the <span class="arithmatex">\(n\)</span>th "customer", and <span class="arithmatex">\(T_n\)</span> to denote the time interval of the arriving time of <span class="arithmatex">\(n\)</span>th and <span class="arithmatex">\(n-1\)</span>th customer.</p>
+<h2 id="process-of-interval-time">Process of Interval Time<a class="headerlink" href="#process-of-interval-time" title="Permanent link">&para;</a></h2>
+<p>For <span class="arithmatex">\(T_n\)</span>, we have the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of interval time</p>
+<p>The sequence of interval time <span class="arithmatex">\(\{T_n\}\)</span> in Possion process is an independent sequence with the same distribution, which in particular, follows an exponential distribution with a mean of <span class="arithmatex">\(1/\lambda\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="process-of-interval-time-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="process-of-interval-time-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For <span class="arithmatex">\(T_1\)</span>, we have a simple solution. For <span class="arithmatex">\(t\leq 0\)</span>, <span class="arithmatex">\(P(T_1&lt;t)=0\)</span>; for <span class="arithmatex">\(t&gt;0\)</span>, </p>
+<div class="arithmatex">\[
+P(T_1&lt;t)=P(T_1\leq t)=P(N_t\geq 1)=1-P(N_t=0)=1-e^{-\lambda t},
+\]</div>
+<p>so <span class="arithmatex">\(f(T_1&lt;t)=-\lambda e^{-\lambda t}\)</span>, then <span class="arithmatex">\(T_1\)</span> is an exponential distribution.</p>
+<p>For <span class="arithmatex">\(T_n\)</span>, we have two methods. The first one, is using the conditional probability to show that </p>
+<div class="arithmatex">\[
+P(T_n&lt;t \mid T_1=\tau_1, \cdots, T_{n-1}=\tau_{n-1})
+\]</div>
+<p>is irrelevant to <span class="arithmatex">\(\tau_i\)</span>, <span class="arithmatex">\(i=1,\cdots,n-1\)</span>, so that they are mutually independent.</p>
+<p>The second method is to use induction. The logic is similar.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Actually, the reverse of the above theorem also holds.</p>
+<div class="admonition success">
+<p class="admonition-title">Reverse of theorem of interval time</p>
+<p>Assume <span class="arithmatex">\(\{T_n: n\geq 1\}\)</span> is a sequence of the arriving time, which are independent mutually and follow an exponential distribution of a mean of <span class="arithmatex">\(1/\lambda\)</span>, and let <span class="arithmatex">\(N_t\)</span> to denote the number of customers arriving during time <span class="arithmatex">\([0,t]\)</span>, then <span class="arithmatex">\(N_t\)</span> is a Possion process with a parameter <span class="arithmatex">\(\lambda\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="process-of-interval-time-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="process-of-interval-time-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h2 id="process-of-arriving-time">Process of Arriving Time<a class="headerlink" href="#process-of-arriving-time" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem of arriving time</p>
+<p>The sequence of arriving time <span class="arithmatex">\(\{S_n\}\)</span> in Possion process satisfies <span class="arithmatex">\(S_n\sim \Gamma (n,\lambda)\)</span>, i.e.</p>
+<div class="arithmatex">\[
+f_{S_n}(t)=\begin{cases}
+\displaystyle\frac{\lambda^n x^{n-1}}{\Gamma(n)}e^{-\lambda t},\quad &amp;t&gt;0,\\
+0,\quad &amp;t\leq 0.
+\end{cases}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="process-of-arriving-time-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By <span class="arithmatex">\(S_n=\sum_{i=1}^n T_i\)</span>, and <span class="arithmatex">\(\{T_i\}\)</span> are independent nutually and follow exponential distribution of a mean <span class="arithmatex">\(1/\lambda\)</span>, then using characteristic function</p>
+<div class="arithmatex">\[
+\phi_{S_n}(u)=E(e^{juS_n})=E(e^{ju\sum_i^n T_i})=\prod_{i=1}^n E(e^{ju T_i})=\prod_{i=1}^n \left(1-\frac{ju}{\lambda}\right)^{-1}=\left(1-\frac{ju}{\lambda}\right)^{-n}
+\]</div>
+<p>which is the characteristic function of a <span class="arithmatex">\(\Gamma\)</span> distribution.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>We usually use the following conditional form of <span class="arithmatex">\(S_n\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of conditional probability of arriving time</p>
+<p>Assume <span class="arithmatex">\(N_t\)</span> is a Possion process of a parameter <span class="arithmatex">\(\lambda\)</span>, <span class="arithmatex">\(\{S_n\}\)</span> is its arriving sequence, then</p>
+<p>(i) <strong>Looking forward</strong>. <span class="arithmatex">\(\forall n\)</span>, <span class="arithmatex">\(0&lt;t_1&lt;\cdots&lt;t_n\)</span>, and integers <span class="arithmatex">\(0\leq k_1\leq \cdots \leq k_n\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+P(N_{t_1}=k_1,\cdots, N_{t_n}=k_n)&amp;=P(N_{t_1}=k_1,N_{t_2-t_1}=k_2-k_1,\cdots, N_{t_n-t_{n-1}}=k_n-k_{n-1})\\
+&amp;=P(N_{t_1}=k_1)P(N_{t_2-t_1}=k_2-k_1)\cdots P(N_{t_n-t_{n-1}}=k_n-k_{n-1})\\
+&amp;=e^{\lambda t_1}\frac{(\lambda t_1)^k_1}{k_1 !}\cdot \prod_{i=2}^n e^{-\lambda(t_i-t_{i-1})}\frac{[\lambda (t_i-t_{i-1})]^{k_i-k{i-1}}}{(k_i-k_{i-1})!}.
+\end{align*}
+\]</div>
+<p>(ii) <strong>Looking backward</strong>.  <span class="arithmatex">\(\forall 0&lt;x&lt;t\)</span> and <span class="arithmatex">\(1\leq j\leq n\)</span>, we have</p>
+<div class="arithmatex">\[
+P(S_j&lt;x \mid N_{t}=n)=\sum_{k=j}^nC_m^k \left(\frac{x}{t}\right)^k\left(1-\frac{x}{t}\right)^{n-k}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="process-of-arriving-time-proof-for-ii" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use the formula of conditional probability and apply the result of (i).</p>
+</div>
+</div>
+</div>
+<h2 id="repair-model">Repair Model<a class="headerlink" href="#repair-model" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(N_t\)</span> could be interpreted as a process of number of the update of components. That is, <span class="arithmatex">\(N_t\)</span> could be the number of the components updated during time <span class="arithmatex">\([0,t]\)</span>, and <span class="arithmatex">\(T_n\)</span> could be the lifespan of the <span class="arithmatex">\(n\)</span>th component, <span class="arithmatex">\(\lambda\)</span> means the average number of the components updated in a unit time.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of the ages of components</p>
+<p>For all <span class="arithmatex">\(t&gt;0\)</span>, <span class="arithmatex">\(t\neq S_n\)</span>, <span class="arithmatex">\(n=0,1,\cdots\)</span>, we denote <span class="arithmatex">\(S_0=0\)</span>. Define </p>
+<div class="arithmatex">\[
+\alpha_t=t-S_{N_t}, \quad \beta_t=S_{N_{t}+1}-t
+\]</div>
+<p>to be the age of the component at time <span class="arithmatex">\(t\)</span>, and the rest age of that at time <span class="arithmatex">\(t\)</span>, respectively.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of age</p>
+<p>(i) <span class="arithmatex">\(\alpha_t\)</span> follows</p>
+<div class="arithmatex">\[
+F_{\alpha_t}(x)=\begin{cases}
+0,\quad &amp;x\leq 0,\\
+1-e^{-\lambda x},\quad &amp; 0&lt;x\leq t,\\
+1,\quad &amp; x&gt;t.
+\end{cases}
+\]</div>
+<p>(ii) <span class="arithmatex">\(\beta_t\)</span> is independent of <span class="arithmatex">\(t\)</span>, and follows an exponential distribution of a mean of <span class="arithmatex">\(1/\lambda\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(\alpha_t\)</span> and <span class="arithmatex">\(\beta_t\)</span> are independent.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="repair-model-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="repair-model-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice the following proof is based on a given <span class="arithmatex">\(t\)</span>.</p>
+<p>(i) Whenever <span class="arithmatex">\(x\in [0,t]\)</span>, we have</p>
+<div class="arithmatex">\[
+P(\alpha_t&lt;x)=P(t-S_{N_{t}}&lt;x)=P(S_{N_t}&gt;t-x)=P(N_t-X_{t-x}&gt;0)=1-e^{-\lambda x}.
+\]</div>
+<p>(ii) By definition. </p>
+<div class="arithmatex">\[
+P(\beta_t&lt;x)=P(S_{N_{t}+1}&lt;x)=P(N_{t+x}-N_t\geq 1)=1-e^{-\lambda x}.
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="synthesis-decomposition">Synthesis &amp; Decomposition<a class="headerlink" href="#synthesis-decomposition" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Synthesis of Possion Process</p>
+<p>Assume <span class="arithmatex">\(N_1(t)\)</span> and <span class="arithmatex">\(N_2(t)\)</span> are mutually independent Possion processes, with parameter <span class="arithmatex">\(\lambda_1\)</span> and <span class="arithmatex">\(\lambda_2\)</span> respectively. Then process <span class="arithmatex">\(N(t)=N_1(t)+N_2(t)\)</span> is also a Possion process with parameter <span class="arithmatex">\(\lambda_1+\lambda_2\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="synthesis-decomposition-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="synthesis-decomposition-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
+<p>(ii) <strong>Independent increment property</strong>. Here <span class="arithmatex">\(\forall n\)</span>,</p>
+<div class="arithmatex">\[
+\begin{cases}
+\text{Group 1: }N_1(t_2)-N_1(t_1),\cdots,N_1(t_n)-N_1(t_{n-1}),\\
+\text{Group 2: }N_2(t_2)-N_2(t_1),\cdots,N_2(t_n)-N_2(t_{n-1}),\\
+\end{cases}
+\]</div>
+<p>the independence in group 1 and 2 is apparent. Since <span class="arithmatex">\(N_1(t)\)</span> and <span class="arithmatex">\(N_2(t)\)</span> are mutually independent Possion processes, Group 1 and 2 are also independent with each other. So we have the above random variables independent mutually.</p>
+<p>(iii) <strong>Follows Possion distribution</strong>. We have two methods. The first one is to use properties of Possion distribution. That is, since <span class="arithmatex">\(N_1(t)-N_1(s)\)</span>, <span class="arithmatex">\(N_2(t)-N_2(s)\)</span> follow Possion distribution of <span class="arithmatex">\(\pi (\lambda_1 (t-s))\)</span> and <span class="arithmatex">\(\pi(\lambda_2(t-s))\)</span>, respectively, and they are mutually independent, so by the additivity of Possion distribution, we have</p>
+<div class="arithmatex">\[
+N(t)-N(s)=[N_1(t)-N_1(s)]+[N_2(t)-N_2(s)]\sim \pi((\lambda_1+\lambda_2)(t-s))
+\]</div>
+<p>also follows Possion distribution.</p>
+<p>The second method is to directly use distribution function to show that <span class="arithmatex">\(N(t)-N(s)\)</span> follows Possion distribution. </p>
 </div>
 </div>
 </div>
