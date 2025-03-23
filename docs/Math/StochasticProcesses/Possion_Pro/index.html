@@ -1950,6 +1950,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nonhomogeneous-poisson-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nonhomogeneous Poisson Process
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3027,6 +3036,8 @@
       
         
       
+        
+      
     
     
       
@@ -3126,6 +3137,27 @@
   
   <span class="md-ellipsis">
     Velocities & Forces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Ctrl/Manipulators_Modelling/Dynamics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamics
   </span>
   
 
@@ -3990,6 +4022,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nonhomogeneous-poisson-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nonhomogeneous Poisson Process
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4110,7 +4151,8 @@ f_{S_n}(t)=\begin{cases}
 <p>(i) <strong>Looking forward</strong>. <span class="arithmatex">\(\forall n\)</span>, <span class="arithmatex">\(0&lt;t_1&lt;\cdots&lt;t_n\)</span>, and integers <span class="arithmatex">\(0\leq k_1\leq \cdots \leq k_n\)</span>, we have</p>
 <div class="arithmatex">\[
 \begin{align*}
-P(N_{t_1}=k_1,\cdots, N_{t_n}=k_n)&amp;=P(N_{t_1}=k_1,N_{t_2-t_1}=k_2-k_1,\cdots, N_{t_n-t_{n-1}}=k_n-k_{n-1})\\
+P&amp;(N_{t_1}=k_1,\cdots, N_{t_n}=k_n)\\
+&amp;=P(N_{t_1}=k_1,N_{t_2-t_1}=k_2-k_1,\cdots, N_{t_n-t_{n-1}}=k_n-k_{n-1})\\
 &amp;=P(N_{t_1}=k_1)P(N_{t_2-t_1}=k_2-k_1)\cdots P(N_{t_n-t_{n-1}}=k_n-k_{n-1})\\
 &amp;=e^{\lambda t_1}\frac{(\lambda t_1)^k_1}{k_1 !}\cdot \prod_{i=2}^n e^{-\lambda(t_i-t_{i-1})}\frac{[\lambda (t_i-t_{i-1})]^{k_i-k{i-1}}}{(k_i-k_{i-1})!}.
 \end{align*}
@@ -4127,6 +4169,68 @@ P(S_j&lt;x \mid N_{t}=n)=\sum_{k=j}^nC_m^k \left(\frac{x}{t}\right)^k\left(1-\fr
 </div>
 </div>
 </div>
+<div class="admonition success">
+<p class="admonition-title">Order Statistics</p>
+<p>Assume random variables <span class="arithmatex">\(X_1,\cdot,X_n\)</span> are mutually independent and follow the same distribution, with a density function <span class="arithmatex">\(f\)</span>. If we sort them from small to large in an order, we have</p>
+<div class="arithmatex">\[
+X_{(1)}\leq\cdots\leq X_{(n)},
+\]</div>
+<p>then random vector <span class="arithmatex">\((X_{(1)},\cdots,X_{(n)})\)</span> has a density function </p>
+<div class="arithmatex">\[
+g(x_1,\cdots,x_n)=\begin{cases}
+n! f(x_1)\cdots f(x_2),\quad &amp;x_1&lt;x_2&lt;\cdots&lt;x_n\\
+0,\quad &amp; \text{others}.
+\end{cases}
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="process-of-arriving-time-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By definition of density function.</p>
+<p><span class="arithmatex">\(\forall x_1&lt;\cdots&lt;x_n\)</span>, <span class="arithmatex">\(\exists \varepsilon_i&gt;0 (i=1,c\dots,n-1)\)</span>, such that <span class="arithmatex">\(x_i+\varepsilon_i&lt;x_{i+1}\)</span> and <span class="arithmatex">\(\exists \varepsilon_n&gt;0\)</span>. Then</p>
+<div class="arithmatex">\[
+\begin{align*}
+P&amp;(x_i&lt;X_{(i)}\leq x_i+\varepsilon_i, \forall i\in [1,n])\\
+&amp;=\sum_{\tau \text{ is a permutation} \atop\text{of }\{1,\cdots,n\}}P(x_i&lt;X_{\tau_i}\leq x_i+\varepsilon_i, \forall i\in [1,n])\\
+&amp;=n! P(x_i&lt;X_{i}\leq x_i+\varepsilon_i, \forall i\in [1,n])\\
+&amp;=n!\prod_{i=1}^n P(x_i&lt;X_{i}\leq x_i+\varepsilon_i)\quad \text{by independence}\\
+\Rightarrow \quad g(x_1,\cdots,x_n)&amp;=\lim_{\max\limits_{1\leq i\leq n}\{\varepsilon_i\}\rightarrow 0} \frac{n!\prod\limits_{i=1}^n P(x_i&lt;X_{i}\leq x_i+\varepsilon_i)}{\varepsilon_1\cdots\varepsilon_n}\\
+&amp;=n! \prod_{i=1}^n f(x_i).
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Distribution of arriving vector in conditional probability</p>
+<p>Assume <span class="arithmatex">\(N_t\)</span> is a Possion process, with arriving time <span class="arithmatex">\(S_n\)</span>. <span class="arithmatex">\(\forall t&gt;0\)</span>m <span class="arithmatex">\(n\in \mathbb{N}^+\)</span>, </p>
+<div class="arithmatex">\[
+(S_1,\cdots,S_n \mid N_t=n)\overset{d}{=}(U_{(1)},\cdots,U_{(n)})
+\]</div>
+<p>where <span class="arithmatex">\(U_{(1)},\cdots,U_{(n)}\)</span> are order statistics which are mutually independent and follow the same uniform distribution <span class="arithmatex">\(U(0,t)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="process-of-arriving-time-proof_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall n\in \mathbb{N}^+\)</span>, <span class="arithmatex">\(t_1&lt;s_1&lt;t_2&lt;s_2&lt;\cdots&lt;t_n&lt;s_n\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+P&amp;(S_1\in (t_1,s_1],\cdots,S_n\in (t_n,s_n] \mid N_t=n)\\&amp;=\frac{P(S_i\in (t_i,s_i] (\forall i\in[1,n]), N_t=n)}{P(N_t=n)}\\
+&amp;=\frac{P(N_{(t_i,s_i]}=1(\forall i\in[1,n]), N_{t_1}=0, N_{(t_i,s_{i+1}]=0}(\forall i\in [1,n-1]), N_{(s_{i}, t]}=0}{P(N_t=n)}\\
+&amp;=\frac{\left\{\prod\limits_{i=1}^n P(N_{(t_i,s_i]}=1)\right\} P(N_{t_1}=0) \left\{ \prod\limits_{i=1}^{n-1}P(N_{(s_i,t_{i+1}]}=0)\right\} P(N_{(s_{i}, t]}=0) }{P(N_t=n)}\\
+&amp;=\frac{e^{-\lambda t} \prod\limits_{i=1}^n(\lambda (s_i-t_i))}{e^{-\lambda t} \frac{(\lambda t)^n}{n!}}\\
+&amp;=\frac{n!\prod\limits_{i=1}^n(s_i-t_i)}{t^n}
+\end{align*}
+\]</div>
+<p>So we have density function</p>
+<div class="arithmatex">\[
+g(x_1,\cdots,x_n\mid N_t=n)=\lim_{\max\limits_{1\leq i\leq n}\{t_i-s_i\}\rightarrow 0}\frac{\frac{n!\prod\limits_{i=1}^n(s_i-t_i)}{t^n}}{\prod\limits_{i=1}^n(s_i-t_i)}=\frac{n!}{t^n}
+\]</div>
+<p>which is exactly the distribution of order statistics of uniform distribution.</p>
+</div>
+</div>
+</div>
+<p>Actually, if we do not distinguish <span class="arithmatex">\(S_1,\cdots,S_n\)</span>, then the <span class="arithmatex">\(n\)</span> customers arrive randomly with a distribution of <span class="arithmatex">\(U(0,t)\)</span>, which are mutually independent. </p>
 <h2 id="repair-model">Repair Model<a class="headerlink" href="#repair-model" title="Permanent link">&para;</a></h2>
 <p><span class="arithmatex">\(N_t\)</span> could be interpreted as a process of number of the update of components. That is, <span class="arithmatex">\(N_t\)</span> could be the number of the components updated during time <span class="arithmatex">\([0,t]\)</span>, and <span class="arithmatex">\(T_n\)</span> could be the lifespan of the <span class="arithmatex">\(n\)</span>th component, <span class="arithmatex">\(\lambda\)</span> means the average number of the components updated in a unit time.</p>
 <div class="admonition info">
@@ -4150,7 +4254,7 @@ F_{\alpha_t}(x)=\begin{cases}
 <p>(ii) <span class="arithmatex">\(\beta_t\)</span> is independent of <span class="arithmatex">\(t\)</span>, and follows an exponential distribution of a mean of <span class="arithmatex">\(1/\lambda\)</span>.</p>
 <p>(iii) <span class="arithmatex">\(\alpha_t\)</span> and <span class="arithmatex">\(\beta_t\)</span> are independent.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="repair-model-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="repair-model-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="repair-model-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="repair-model-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Notice the following proof is based on a given <span class="arithmatex">\(t\)</span>.</p>
@@ -4170,7 +4274,7 @@ P(\beta_t&lt;x)=P(S_{N_{t}+1}&lt;x)=P(N_{t+x}-N_t\geq 1)=1-e^{-\lambda x}.
 <p class="admonition-title">Synthesis of Possion Process</p>
 <p>Assume <span class="arithmatex">\(N_1(t)\)</span> and <span class="arithmatex">\(N_2(t)\)</span> are mutually independent Possion processes, with parameter <span class="arithmatex">\(\lambda_1\)</span> and <span class="arithmatex">\(\lambda_2\)</span> respectively. Then process <span class="arithmatex">\(N(t)=N_1(t)+N_2(t)\)</span> is also a Possion process with parameter <span class="arithmatex">\(\lambda_1+\lambda_2\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="synthesis-decomposition-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="synthesis-decomposition-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="synthesis-decomposition-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="synthesis-decomposition-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
@@ -4190,6 +4294,25 @@ N(t)-N(s)=[N_1(t)-N_1(s)]+[N_2(t)-N_2(s)]\sim \pi((\lambda_1+\lambda_2)(t-s))
 <p>The second method is to directly use distribution function to show that <span class="arithmatex">\(N(t)-N(s)\)</span> follows Possion distribution. </p>
 </div>
 </div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Decomposition of Possion Process</p>
+<p>Assume <span class="arithmatex">\(\{N(t)\}\)</span> is a Possion process with a parameter <span class="arithmatex">\(\lambda\)</span>, every customer arrives in different type independently, with each type happening in a probability <span class="arithmatex">\(p_i(i=1,\cdots,n, \sum\limits_{i=1}^n p_i=1)\)</span>, denote <span class="arithmatex">\(N_i(t)\)</span> to be the number of arriving customer of the certain type <span class="arithmatex">\(i\)</span>, then <span class="arithmatex">\(N_i(t)\)</span> is also a Possion process, with a parameter <span class="arithmatex">\(p_i\lambda\)</span>, respectively and they are mutually independent.</p>
+</div>
+<h2 id="nonhomogeneous-poisson-process">Nonhomogeneous Poisson Process<a class="headerlink" href="#nonhomogeneous-poisson-process" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Nonhomogeneous Poisson Process</p>
+<p>A counting process is called a nonhomogeneous Possion process, with an intensity of <span class="arithmatex">\(\lambda(t)\)</span>, if</p>
+<p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(N(t)\)</span> is an independent increment process.</p>
+<p>(iii) <span class="arithmatex">\(P(N(t+h)-N(t)=1)=\lambda(t) h+o(h)\)</span>.</p>
+<p>(iv) <span class="arithmatex">\(P(N(t+h)-N(t)\geq 2)=o(h)\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem of Nonhomogeneous Poisson Process</p>
+<p>A counting process is called a nonhomogeneous Possion process, with an intensity of <span class="arithmatex">\(\lambda(t)\)</span>, iff</p>
+<p>(i) (ii) the same with definition.</p>
+<p>(iii) <span class="arithmatex">\(\forall 0\leq s&lt;t\)</span>, <span class="arithmatex">\(N_t-N_s\sim \pi(\int_s^t \lambda(\mu)d\mu)\)</span>. </p>
 </div>
 
 
