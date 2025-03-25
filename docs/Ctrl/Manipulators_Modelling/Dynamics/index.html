@@ -3108,11 +3108,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supplementary-info-motion-of-a-rigid-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      supplementary info: Motion of a rigid body
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="supplementary info: Motion of a rigid body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#mass-distribution" class="md-nav__link">
     <span class="md-ellipsis">
       Mass Distribution
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moment-of-momentum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moment of Momentum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3146,6 +3170,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterative-dynamic-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterative Dynamic Formulation
+    </span>
+  </a>
   
 </li>
       
@@ -3993,11 +4026,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supplementary-info-motion-of-a-rigid-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      supplementary info: Motion of a rigid body
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="supplementary info: Motion of a rigid body">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#mass-distribution" class="md-nav__link">
     <span class="md-ellipsis">
       Mass Distribution
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moment-of-momentum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moment of Momentum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4031,6 +4088,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterative-dynamic-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterative Dynamic Formulation
+    </span>
+  </a>
   
 </li>
       
@@ -4090,35 +4156,360 @@
 <div class="arithmatex">\[
 \begin{align}
 \nonumber {^A\dot{\Omega}_C}=&amp;{^A\dot{\Omega}_B}+\frac{d}{dt}({^A_BR}{^B\Omega_C})\\
-=&amp;{^A\dot{\Omega}_B}+{^A\Omega_B}\times{^A_BR}{^B\Omega_C}+{^A_BR}{^B\dot{\Omega}_C}.
+=&amp;{^A\dot{\Omega}_B}+{^A\Omega_B}\times{^A_BR}{^B\Omega_C}+{^A_BR}{^B\dot{\Omega}_C}.\label{angular-vel}
 \end{align}
 \]</div>
 </div>
-<h2 id="mass-distribution">Mass Distribution<a class="headerlink" href="#mass-distribution" title="Permanent link">&para;</a></h2>
-<p>We introduce <strong>inertia tensor</strong>, which can be thought of as a generalization of the scalar moment of inertia of an object.</p>
-<div class="admonition info">
-<p class="admonition-title">Definition of the inertia tensor</p>
-<p>The inertia tensor relative to frame <span class="arithmatex">\(\{A\}\)</span> is expressed in the matrix form</p>
+<h2 id="supplementary-info-motion-of-a-rigid-body">supplementary info: Motion of a rigid body<a class="headerlink" href="#supplementary-info-motion-of-a-rigid-body" title="Permanent link">&para;</a></h2>
+<div class="admonition refernce">
+<p class="admonition-title">Refernce</p>
+<p><strong>理论物理学教程</strong>, <em>朗道</em></p>
+</div>
+<p>Here we give a deduction of motion of a rigid body in terms of physics.</p>
+<p>To easily get the result, we view the rigid body as a set of discrete points. As for a continuous body, we change the mass <span class="arithmatex">\(m_i\)</span> of a point <span class="arithmatex">\(i\)</span> into <span class="arithmatex">\(dV\)</span> with unit mass <span class="arithmatex">\(\rho dV\)</span> and then integrate over it.</p>
+<p>We have two basic frames, the fixed one and the moving one. The former one fr1: <span class="arithmatex">\(\{X,Y,Z\}\)</span> is viewed as a global frame in our discussion and the latter one fr2: <span class="arithmatex">\(\{x_1,x_2,x_3\}\)</span> is moving with the rigid, whose origin is usually set in the center of mass. The origin vector of fr2 is expressed in fr1 as <span class="arithmatex">\(\pmb{R}\)</span> and the orientation of fr2 expressed in fr1 is expressed as a rotation matrix, which we would later discuss.</p>
+<p align="center">
+    <img src="../frame.png" width="40%" />
+    </p>
+
+<p>Then the motion can be decomposed into two parts, the first is the translation of center of mass, and the second is the rotation along the center of mass.</p>
+<p>Assume any point <span class="arithmatex">\(P\)</span> on the rigid body, we have its position <span class="arithmatex">\(\pmb{r}\)</span> expressed in fr2 and <span class="arithmatex">\(\pmb{\tau}\)</span> expressed in fr1. Assume is small time, it has a rotation <span class="arithmatex">\(d\pmb{\phi}\times \pmb{r}\)</span>, then </p>
 <div class="arithmatex">\[
-{^AI}=\left[\begin{array}{ccc}
+d\pmb{\tau} = d\pmb{R} + d\pmb{\phi}\times \pmb{r}
+\]</div>
+<p>divide both sides with <span class="arithmatex">\(dt\)</span> we have</p>
+<div class="arithmatex">\[
+\frac{d\pmb{\tau}}{dt}=\frac{d\pmb{R}}{dt}+ \frac{d\pmb{\phi}}{dt}\times \pmb{r}
+\]</div>
+<p>introduce velocity </p>
+<div class="arithmatex">\[
+\pmb{v}=\frac{d\pmb{\tau}}{dt}, \quad \pmb{V}=\frac{d\pmb{R}}{dt},\quad \pmb{\Omega}=\frac{d\pmb{\phi}}{dt}
+\]</div>
+<p>and we have</p>
+<div class="arithmatex">\[
+\begin{equation}
+\pmb{v}=\pmb{V}+\pmb{\Omega}\times \pmb{r}.\label{vel}
+\end{equation}
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">interpretation 1</p>
+<p>Here <span class="arithmatex">\(\pmb{V}\)</span> is the velocity of the origin of center of mass, <span class="arithmatex">\(\pmb{\Omega}\)</span> is the rotation velocity of the rigid body.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">fr2 do not coincide with center of mass</p>
+<p>Assume center of mass if <span class="arithmatex">\(O\)</span> and the origin of fr2 is <span class="arithmatex">\(O'\)</span>, with <span class="arithmatex">\(O'O=\pmb{a}\)</span>. Assume we have velocity of <span class="arithmatex">\(O'\)</span> is <span class="arithmatex">\(\pmb{V}'\)</span>, its rotation velocity is <span class="arithmatex">\(\pmb{\Omega}'\)</span>. </p>
+<p>Then the same point <span class="arithmatex">\(P\)</span> has its position expressed in fr2 is <span class="arithmatex">\(\pmb{r}'\)</span>. So we have <span class="arithmatex">\(\pmb{r}=\pmb{r}'+\pmb{a}\)</span>. From equation <span class="arithmatex">\(\ref{vel}\)</span> we have</p>
+<div class="arithmatex">\[
+\pmb{v}=\pmb{V}+\pmb{\Omega}\times \pmb{r}'+\pmb{\Omega}\times \pmb{a}.
+\]</div>
+<p>However we the same definition we still should have</p>
+<div class="arithmatex">\[
+\pmb{v}=\pmb{V}'+\pmb{\Omega}'\times \pmb{r}'
+\]</div>
+<p>combining the above two we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\pmb{V}'&amp;=\pmb{V}+\pmb{\Omega}\times \pmb{a}\label{vel-translate-relation}\\ 
+\pmb{\Omega}'&amp;=\pmb{\Omega}.\label{vel-angular-relation}
+\end{align}
+\]</div>
+</div>
+<p>The above deduction is important, since equation <span class="arithmatex">\(\ref{vel-angular-relation}\)</span> tells us the rotation velocity is independent of the frame 2. For all the frames, the rigid nody rotates around the axes which are parallel. Equation <span class="arithmatex">\(\ref{vel-translate-relation}\)</span> tells us the following property.</p>
+<div class="admonition success">
+<p class="admonition-title">Relationship of <span class="arithmatex">\(\pmb{V}\)</span> and <span class="arithmatex">\(\pmb{\Omega}\)</span></p>
+<p>If origin <span class="arithmatex">\(O\)</span> is chosen, <span class="arithmatex">\(\pmb{V}\)</span> and <span class="arithmatex">\(\pmb{\Omega}\)</span> are perpendicular, then for all <span class="arithmatex">\(O'\)</span>, its <span class="arithmatex">\(\pmb{V}'\)</span> and <span class="arithmatex">\(\pmb{\Omega}'\)</span> are also perpendicular, since</p>
+<div class="arithmatex">\[
+\pmb{V}'\cdot\pmb{\Omega}'=(\pmb{V}+\pmb{\Omega}\times \pmb{a})\cdot \pmb{\Omega}=0.
+\]</div>
+<p>Easy to check that, in this situation, we the velocity of all points are located on the same plane. Then by equation <span class="arithmatex">\(\ref{vel-translate-relation}\)</span>, we could always find another origin <span class="arithmatex">\(O'\)</span> such that <span class="arithmatex">\(\pmb{V}'=0\)</span>, which means the rigid body is only making rotation motion.</p>
+</div>
+<h3 id="mass-distribution">Mass Distribution<a class="headerlink" href="#mass-distribution" title="Permanent link">&para;</a></h3>
+<p>We introduce <strong>inertia tensor</strong>, which can be thought of as a generalization of the scalar moment of inertia of an object.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="mass-distribution-introduce-with-kinetics" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="mass-distribution-introduce-with-kinetics">Introduce with kinetics</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The kinetics of the rigid body expressed in discrete points, is</p>
+<div class="arithmatex">\[
+T = \sum_{i}\frac{m_i \pmb{v}_i^2}{2}=\sum \frac{m\pmb{v}^2}{2}
+\]</div>
+<p>to simplify we assume the summation is over <span class="arithmatex">\(i\)</span>.</p>
+<p>Substitute equation <span class="arithmatex">\(\ref{vel}\)</span> in and we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+T &amp;= \sum\frac{m}{2}(\pmb{V}+\pmb{\Omega}\times \pmb{r})^2\\
+&amp;=\sum \frac{m}{2}\pmb{V}^2+\sum m\pmb{V}\cdot (\pmb{\Omega}\times \pmb{r})+\sum\frac{m}{2}(\pmb{\Omega}\times \pmb{r})^2
+\end{align*}
+\]</div>
+<p>the first is easy to be written as <span class="arithmatex">\(\frac{\mu\pmb{V}^2}{2}\)</span>, the translation of rigid boty. The second item could be derived by mixed product <span class="arithmatex">\(a\cdot(b\times c)=c\cdot(a\times b)\)</span></p>
+<div class="arithmatex">\[
+\sum m\pmb{V}\cdot (\pmb{\Omega}\times \pmb{r})=\sum m\pmb{r}\cdot (\pmb{V}\times\pmb{\Omega})
+\]</div>
+<p>for all the point in the rigid body, <span class="arithmatex">\(\pmb{V}\)</span> and <span class="arithmatex">\(\pmb{\Omega}\)</span> are of the same, then by definition of center of mass</p>
+<div class="arithmatex">\[
+\sum m\pmb{V}\cdot (\pmb{\Omega}\times \pmb{r})=(\pmb{V}\times\pmb{\Omega})\cdot (\sum m\pmb{r})=0.
+\]</div>
+<p>As for the third part, we have</p>
+<div class="arithmatex">\[
+\sum\frac{m}{2}(\pmb{\Omega}\times \pmb{r})^2=\sum\frac{m}{2} (\pmb{\Omega}^2\pmb{r}^2-(\pmb{\Omega}\cdot\pmb{r})^2),
+\]</div>
+<p>which is called the rotational part of kinetics. To simplify the notation, we use <span class="arithmatex">\(x_i\)</span>, <span class="arithmatex">\(\Omega_k\)</span> to be the coordinate of <span class="arithmatex">\(\pmb{r}\)</span> and <span class="arithmatex">\(\pmb{\Omega}\)</span>, respectively. So </p>
+<div class="arithmatex">\[
+\begin{align*}
+T_{bp}&amp;=\frac{1}{2}\sum m [\Omega_i^2x_l^2-\Omega_ix_i\Omega_kx_k]\\
+&amp;=\frac{1}{2}\sum m [\Omega_i\Omega_k\delta_{ik}x_l^2-\Omega_ix_i\Omega_kx_k]\\
+&amp;=\frac{1}{2}\Omega_i\Omega_k\sum m (x_l^2\delta_{ik}-x_ix_k)\\
+\end{align*}
+\]</div>
+<p>If we introduce tensor</p>
+<div class="arithmatex">\[
+I_{ik}=\sum m (x_l^2\delta_{ik}-x_ix_k)
+\]</div>
+<p>then</p>
+<div class="arithmatex">\[
+T = \frac{\mu \pmb{V}^2}{2} + \frac{1}{2}I_{ik}\Omega_i\Omega_k
+\]</div>
+<p>Define a function called Lagrange function by subtracting <span class="arithmatex">\(T\)</span> with potential energy <span class="arithmatex">\(U\)</span></p>
+<div class="arithmatex">\[
+\begin{align}
+L=T-U=\frac{\mu \pmb{V}^2}{2} + \frac{1}{2}I_{ik}\Omega_i\Omega_k-U.\label{Lagrange-func}
+\end{align}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Inertia Tensor</p>
+<p>(i) <span class="arithmatex">\(I_{ik}=I_{ki}\)</span>.</p>
+<p>(ii) we have the following tensor matrix</p>
+<div class="arithmatex">\[
+I_{ik}=\left[\begin{array}{ccc}
+\sum m (y^2+z^2) &amp; -\sum m xy &amp; -\sum m xz\\
+-\sum m yx &amp; \sum m (x^2+z^2) &amp; -\sum m yz\\
+-\sum m zx &amp; -\sum m zy &amp; \sum m (x^2+y^2)
+\end{array}\right]=\left[\begin{array}{ccc}
 I_{xx} &amp; -I_{xy} &amp; -I_{xz}\\
--I_{xy} &amp; I_{yy} &amp; -I_{yz}\\
--I_{xz} &amp; -I_{yz} &amp; I_{xz}
+-I_{yx} &amp; I_{yy} &amp; -I_{yz}\\
+-I_{zz} &amp; -I_{zy} &amp; I_{zz}
 \end{array}\right].
 \]</div>
-<p>where the scalor elements are given by integrals. <span class="arithmatex">\(I_{xx}\)</span>, <span class="arithmatex">\(I_{yy}\)</span> and <span class="arithmatex">\(I_{zz}\)</span> are called the <strong>mass moments of inertia</strong>, and the other elements, whose integrals over mixed indices are called the <strong>mass products of inertia</strong>.</p>
-</div>
-<h2 id="dynamic-equations">Dynamic Equations<a class="headerlink" href="#dynamic-equations" title="Permanent link">&para;</a></h2>
-<p>If we know the center of mass and the inertia of the link, then its mass distribution is completely characterized. To accelerate or decelerate it, we have to apply forces and torque.</p>
-<h3 id="newtons-equation">Newton's Equation<a class="headerlink" href="#newtons-equation" title="Permanent link">&para;</a></h3>
+<p>where <span class="arithmatex">\(I_{xx}\)</span>, <span class="arithmatex">\(I_{yy}\)</span> and <span class="arithmatex">\(I_{zz}\)</span> are called the <strong>mass moments of inertia</strong>, and the other elements, whose integrals over mixed indices are called the <strong>mass products of inertia</strong>.</p>
+<p>(iii) for each element, we could integrate</p>
 <div class="arithmatex">\[
-F=m\dot{v}_C.
+I_{ik}=\int \rho (x_l^2\delta_{ik}-x_ix_k)dV
 \]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>.  Some typical inertia tensor.
+(i) For planar system, we have <span class="arithmatex">\(x_1,x_2\)</span> in the plane, so <span class="arithmatex">\(x_3=0\)</span> for all particles,</p>
+<div class="arithmatex">\[
+I_1=\sum m x_2^2,\quad I_2=\sum m x_1^2,\quad I_3=I_1+I_2.
+\]</div>
+<p>(ii) For linear system, we have <span class="arithmatex">\(x_3\)</span> in the line, so <span class="arithmatex">\(x_1=x_2=0\)</span>, so</p>
+<div class="arithmatex">\[
+I_1=I_2=\sum m x_3^2, \quad I_3=0.
+\]</div>
+</div>
+<h3 id="moment-of-momentum">Moment of Momentum<a class="headerlink" href="#moment-of-momentum" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Multiple cross product</p>
+<p>Show that </p>
+<div class="arithmatex">\[
+\pmb{a}\times (\pmb{b}\times \pmb{c})=(\pmb{a}\cdot \pmb{c})\pmb{b}-(\pmb{a}\cdot\pmb{b})\pmb{c}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="moment-of-momentum-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="moment-of-momentum-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice that <span class="arithmatex">\(e_i\times (e_j\times e_i)=e_j\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+\pmb{a}\times (\pmb{b}\times \pmb{c})&amp;=\sum a_i b_j c_k(e_i\times(e_j\times e_k))\\
+&amp;=\sum a_i b_j c_i e_j - \sum a_i b_i c_j e_j\\
+&amp;=(\sum a_i c_i)\sum b_je_j-(\sum a_i b_i)\sum c_je_j\\
+&amp;=(\pmb{a}\cdot \pmb{c})\pmb{b}-(\pmb{a}\cdot\pmb{b})\pmb{c}
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>Still, we have the origin of moving frame coincides with the center of mass. Then by definition of moment of momentum</p>
+<div class="arithmatex">\[
+\begin{align*}
+\pmb{M}&amp;=\sum m \pmb{r}\times \pmb{v}\\
+&amp;=\sum m \pmb{r}\times (\pmb{\Omega}\times \pmb{r})\\
+&amp;=\sum m (\pmb{r}\cdot\pmb{r})\pmb{\Omega}-(\pmb{r}\cdot\pmb{\Omega})\pmb{r}.
+\end{align*}
+\]</div>
+<p>Using description of tensor</p>
+<div class="arithmatex">\[
+\begin{align}
+\nonumber M_i&amp;=\sum m (x_l^2\Omega_i-x_ix_k\Omega_k)\\
+\nonumber&amp;=\Omega_k \sum m (x_l^2\delta_{ik}-x_ix_k)\\
+&amp;=\Omega_kI_{ik}.\label{moment-tensor}
+\end{align}
+\]</div>
+<h2 id="dynamic-equations">Dynamic Equations<a class="headerlink" href="#dynamic-equations" title="Permanent link">&para;</a></h2>
+<p>If we know the center of mass and the inertia of the link, then its mass distribution is completely characterized. To accelerate or decelerate it, we have to apply forces and torque. </p>
+<p>To get the equations, we take derivative of <span class="arithmatex">\(\pmb{p}\)</span> and <span class="arithmatex">\(\pmb{M}\)</span> with respect to <span class="arithmatex">\(t\)</span>.</p>
+<h3 id="newtons-equation">Newton's Equation<a class="headerlink" href="#newtons-equation" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Newton's Equation</p>
+<p>(i) For each particle, we have <span class="arithmatex">\(\dot{\pmb{p}}_i=\pmb{f}_i\)</span>, then sum over <span class="arithmatex">\(i\)</span>, and we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\pmb{F}=\mu \dot{V}.\label{eq1}
+\end{align}
+\]</div>
+<p>the force is from the outside of system. </p>
+<p>(ii) And the force <span class="arithmatex">\(\pmb{F}\)</span> could be expressed by the potential energy of the rigid body in the outer field</p>
+<div class="arithmatex">\[
+\pmb{F}=-\frac{\partial U}{\partial \pmb{R}}.
+\]</div>
+<p>(iii) so we have equation <span class="arithmatex">\(\ref{eq1}\)</span> using Lagrange function</p>
+<div class="arithmatex">\[
+\frac{d}{dt}\frac{\partial L}{\partial \pmb{V}}=\frac{\partial L}{\partial \pmb{R}}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="newtons-equation-proof-for-i" name="__tabbed_3" type="radio" /><input id="newtons-equation-proof-for-ii" name="__tabbed_3" type="radio" /><input id="newtons-equation-proof-for-iii" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="newtons-equation-proof-for-i">Proof for (i)</label><label for="newtons-equation-proof-for-ii">Proof for (ii)</label><label for="newtons-equation-proof-for-iii">Proof for (iii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\pmb{F}&amp;=\sum\pmb{f}\\
+&amp;=\frac{d\pmb{P}}{dt}\\
+&amp;:=\sum \frac{\pmb{p}}{dt}\\
+&amp;=\mu \dot{V}.
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p>When the rigid body translates <span class="arithmatex">\(\delta\pmb{R}\)</span>, then the position vector <span class="arithmatex">\(\tau\)</span> of each particle changes, the change of the corresponding potential</p>
+<div class="arithmatex">\[
+\begin{align*}
+\delta U&amp;=\sum \frac{\partial U}{\partial \pmb{\tau}}\cdot \pmb{\tau}\\
+&amp;=\delta \pmb{R}\cdot \sum \frac{\partial U}{\partial \pmb{\tau}}\quad (\delta\pmb{R}=d\pmb{\tau})\\
+&amp;=-\delta \pmb{R}\cdot\sum \pmb{f}\\
+&amp;=-\pmb{F}\cdot \delta \pmb{R}.
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p>By equation <span class="arithmatex">\(\ref{Lagrange-func}\)</span>, we have</p>
+<div class="arithmatex">\[
+\frac{\partial L}{\partial \pmb{V}}=\mu \pmb{V}.
+\]</div>
+<p>and using (ii) we have the result.</p>
+</div>
+</div>
+</div>
 <h3 id="eulers-equation">Euler's Equation<a class="headerlink" href="#eulers-equation" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Lemma</p>
+<p>Assume the center of mass does not move. Then </p>
+<p>(i)</p>
+<div class="arithmatex">\[
+\frac{d\pmb{M}}{dt}=\pmb{K}=\sum \pmb{r}\times \pmb{f}.
+\]</div>
+<p>where <span class="arithmatex">\(\pmb{K}\)</span> is called the torque. </p>
+<p>(ii) Using Lagrange function</p>
+<div class="arithmatex">\[
+\frac{d}{dt}\frac{\partial L}{\partial \pmb{\Omega}}=\frac{\partial L}{\partial \pmb{\varphi}}.
+\]</div>
+<p>(iii) when the origin of the frame translates, we have <span class="arithmatex">\(\pmb{r}=\pmb{r}'+\pmb{a}\)</span>, so </p>
+<div class="arithmatex">\[
+\pmb{K}=\sum \pmb{r}\times \pmb{f}=\sum \pmb{r}'\times \pmb{f}+\sum \pmb{a}\times \pmb{f}=\pmb{K}'+\pmb{a}\times \pmb{F}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="eulers-equation-proof-for-i" name="__tabbed_4" type="radio" /><input id="eulers-equation-proof-for-ii" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="eulers-equation-proof-for-i">Proof for (i)</label><label for="eulers-equation-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Taking derivative of moment of momentum <span class="arithmatex">\(\pmb{M}\)</span></p>
+<div class="arithmatex">\[
+\dot{\pmb{M}}=\frac{d}{dt} \sum \pmb{r}\times \pmb{p}=\sum \dot{\pmb{r}}\times \pmb{p} + \sum \pmb{r}\times \dot{\pmb{p}}.
+\]</div>
+<p>Because <span class="arithmatex">\(\pmb{V}=0\)</span>, we have <span class="arithmatex">\(\dot{\pmb{r}}=\pmb{v}=\dot{\pmb{\tau}}\)</span>. Since <span class="arithmatex">\(\pmb{v}\)</span> and <span class="arithmatex">\(\pmb{p}\)</span> share the same direction, we have <span class="arithmatex">\(\dot{\pmb{r}}\times \pmb{p}=0.\)</span> Replacing <span class="arithmatex">\(\dot{\pmb{p}}\)</span> by <span class="arithmatex">\(\pmb{f}\)</span>, we have</p>
+<div class="arithmatex">\[
+\frac{d\pmb{M}}{dt}=\pmb{K}=\sum \pmb{r}\times \pmb{f}.
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p>Take derivative of Lagrange function, or with respect to the coordinate of <span class="arithmatex">\(\pmb{\Omega}\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial L}{\partial \Omega_i}=I_{ik}\Omega_k=M_i.
+\]</div>
+<p>the same as equation <span class="arithmatex">\(\ref{moment-tensor}\)</span>.</p>
+<p>Then when the rigid body rotates about a small angle <span class="arithmatex">\(\delta \varphi\)</span>, the change of potential </p>
+<div class="arithmatex">\[
+\begin{align*}
+\delta U&amp;=-\sum \pmb{f}\cdot \delta\pmb{\tau}\\
+&amp;=-\sum \pmb{f}\cdot (\delta\pmb{\varphi}\times\pmb{r})\\
+&amp;=-\delta\pmb{\varphi}\sum \pmb{r}\times \pmb{f}\quad \delta\pmb{\varphi}\text{ are the same}\\
+&amp;=-\pmb{K}\cdot \delta\pmb{\varphi}.
+\end{align*}
+\]</div>
+<p>and we are done.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>When <span class="arithmatex">\(\pmb{F}\)</span> and <span class="arithmatex">\(\pmb{K}\)</span> are perpendicular, then we could find a vector <span class="arithmatex">\(\pmb{a}\)</span> such that</p>
+<div class="arithmatex">\[
+\pmb{K}=\pmb{a}\times \pmb{F}, \pmb{K}'=0.
+\]</div>
+<p>The <span class="arithmatex">\(\pmb{a}+\pmb{F}\)</span> is also an acceptable solution. </p>
+<div class="question">
+<p>Example. Uniform force field. The force acting on particle is <span class="arithmatex">\(\pmb{f}=e\pmb{E}\)</span>, then </p>
+<div class="arithmatex">\[
+\pmb{F}=\sum \pmb{f}=\pmb{E}\sum e,\quad \pmb{K}=\sum e\pmb{r}\times \pmb{E}.
+\]</div>
+<p>assume <span class="arithmatex">\(\sum e\neq 0\)</span>, then let the center of 'mass' to be</p>
+<div class="arithmatex">\[
+\pmb{r}_0=\frac{\sum e\pmb{r}}{\sum e}
+\]</div>
+<p>so </p>
+<div class="arithmatex">\[
+\pmb{K}=\pmb{r}_0\times \pmb{F}.
+\]</div>
+</div>
+<p>The above deduction is based on a fixed frame (either not translation or rotation). </p>
+<div class="admonition success">
+<p class="admonition-title">Euler's Equation</p>
+<p>Any vector <span class="arithmatex">\(\pmb{A}\)</span> has a changing velocity with respect to a frame which is <strong>moving</strong>. </p>
+<p>Assume <span class="arithmatex">\(d\pmb{A}/dt\)</span> is the changing velocity of <span class="arithmatex">\(\pmb{A}\)</span> with respect to a fixed frame. If <span class="arithmatex">\(\pmb{A}\)</span> do not change in a rotating frame, then </p>
+<div class="arithmatex">\[
+\frac{d\pmb{A}}{dt}=\pmb{\Omega}\times \pmb{A}.
+\]</div>
+<p>If <span class="arithmatex">\(\pmb{A}\)</span> moves in the rotating frame, then we add <span class="arithmatex">\(d'\pmb{A}}/{dt}\)</span></p>
+<div class="arithmatex">\[
+\frac{d\pmb{A}}{dt}=\frac{d'\pmb{A}}{dt}\pmb{\Omega}\times \pmb{A}.
+\]</div>
+<p>So apply this regulation to <span class="arithmatex">\(\pmb{P}\)</span> and <span class="arithmatex">\(\pmb{M}\)</span>, we have</p>
+<div class="arithmatex">\[
+\frac{d'\pmb{P}}{dt}\pmb{\Omega}\times \pmb{P}=\pmb{F}, \quad \frac{d'\pmb{M}}{dt}\pmb{\Omega}\times \pmb{M}=\pmb{K}.
+\]</div>
+</div>
 <p>For a given rigid body rotating with angular velocity <span class="arithmatex">\(\omega\)</span> and with angular acceleration <span class="arithmatex">\(\dot{\omega}\)</span>, then the needed torque is</p>
 <div class="arithmatex">\[
 N={^CI}\dot{\omega}+{\omega}\times {{^CI}\omega}.
 \]</div>
+<h2 id="iterative-dynamic-formulation">Iterative Dynamic Formulation<a class="headerlink" href="#iterative-dynamic-formulation" title="Permanent link">&para;</a></h2>
+<p>Starting with link <span class="arithmatex">\(1\)</span> and moving successively, link by link, outward to link <span class="arithmatex">\(n\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Deduction</p>
+<p>(i) Rotational velocity.</p>
+<div class="arithmatex">\[
+{^{i+1}\omega_{i+1}}={^{i+1}_i R}{^i\omega_i}+\dot{\theta}_{i+1} ^{i+1}\hat{Z}_{i+1}.
+\]</div>
+<p>from equation <span class="arithmatex">\(\ref{angular-vel}\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\dot{\omega}_{i+1}=\dot{\omega}_{i}+{^0_i}
+\end{align*}
+\]</div>
+</div>
 
 
 
