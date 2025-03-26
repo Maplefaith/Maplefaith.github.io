@@ -4482,13 +4482,29 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 <div class="arithmatex">\[
 \frac{d\pmb{A}}{dt}=\pmb{\Omega}\times \pmb{A}.
 \]</div>
-<p>If <span class="arithmatex">\(\pmb{A}\)</span> moves in the rotating frame, then we add <span class="arithmatex">\(d'\pmb{A}}/{dt}\)</span></p>
+<p>If <span class="arithmatex">\(\pmb{A}\)</span> moves in the rotating frame, then we add <span class="arithmatex">\(d'\pmb{A}/{dt}\)</span></p>
 <div class="arithmatex">\[
-\frac{d\pmb{A}}{dt}=\frac{d'\pmb{A}}{dt}\pmb{\Omega}\times \pmb{A}.
+\frac{d\pmb{A}}{dt}=\frac{d'\pmb{A}}{dt}+\pmb{\Omega}\times \pmb{A}.
 \]</div>
 <p>So apply this regulation to <span class="arithmatex">\(\pmb{P}\)</span> and <span class="arithmatex">\(\pmb{M}\)</span>, we have</p>
 <div class="arithmatex">\[
-\frac{d'\pmb{P}}{dt}\pmb{\Omega}\times \pmb{P}=\pmb{F}, \quad \frac{d'\pmb{M}}{dt}\pmb{\Omega}\times \pmb{M}=\pmb{K}.
+\frac{d'\pmb{P}}{dt}+\pmb{\Omega}\times \pmb{P}=\pmb{F}, \quad \frac{d'\pmb{M}}{dt}+\pmb{\Omega}\times \pmb{M}=\pmb{K}.
+\]</div>
+<p>Project to the coordinate of the moving frame, we have <span class="arithmatex">\(\left(\frac{d'\pmb{P}}{dt}\right)=\frac{dP_1}{dt},\cdots, \left(\frac{d'\pmb{M}}{dt}\right)=\frac{dM_1}{dt}\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+\mu\left(\frac{dV_1}{dt}+\Omega_2V_3-\Omega_3V_2\right)&amp;=F_1,\\
+\mu\left(\frac{dV_2}{dt}+\Omega_3V_1-\Omega_1V_3\right)&amp;=F_1,\\
+\mu\left(\frac{dV_3}{dt}+\Omega_1V_2-\Omega_2V_1\right)&amp;=F_1.\\
+\end{align*}
+\]</div>
+<p>and the mass moments of inertia are along <span class="arithmatex">\(x_1,x_2,x_3\)</span>, then <span class="arithmatex">\(M_1=I_1\Omega_1\)</span>, and so on</p>
+<div class="arithmatex">\[
+\begin{align*}
+I_1\frac{d\Omega_1}{dt}+(I_3-I_2)\Omega_2\Omega_3=K_1,\\
+I_2\frac{d\Omega_2}{dt}+(I_1-I_3)\Omega_3\Omega_1=K_2,\\
+I_3\frac{d\Omega_3}{dt}+(I_2-I_1)\Omega_1\Omega_2=K_3.\\
+\end{align*}
 \]</div>
 </div>
 <p>For a given rigid body rotating with angular velocity <span class="arithmatex">\(\omega\)</span> and with angular acceleration <span class="arithmatex">\(\dot{\omega}\)</span>, then the needed torque is</p>
