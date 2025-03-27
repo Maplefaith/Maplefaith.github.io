@@ -3108,13 +3108,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supplementary-info-motion-of-a-rigid-body" class="md-nav__link">
+  <a href="#supplementary-info-fixed-point-motion-of-a-rigid-body" class="md-nav__link">
     <span class="md-ellipsis">
-      supplementary info: Motion of a rigid body
+      supplementary info: Fixed point motion of a rigid body
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="supplementary info: Motion of a rigid body">
+    <nav class="md-nav" aria-label="supplementary info: Fixed point motion of a rigid body">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3151,18 +3151,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#newtons-equation" class="md-nav__link">
+  <a href="#translation-ode" class="md-nav__link">
     <span class="md-ellipsis">
-      Newton's Equation
+      Translation ODE
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#eulers-equation" class="md-nav__link">
+  <a href="#rotation-ode" class="md-nav__link">
     <span class="md-ellipsis">
-      Euler's Equation
+      Rotation ODE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newton-eulers-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Euler's Equation
     </span>
   </a>
   
@@ -4026,13 +4035,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supplementary-info-motion-of-a-rigid-body" class="md-nav__link">
+  <a href="#supplementary-info-fixed-point-motion-of-a-rigid-body" class="md-nav__link">
     <span class="md-ellipsis">
-      supplementary info: Motion of a rigid body
+      supplementary info: Fixed point motion of a rigid body
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="supplementary info: Motion of a rigid body">
+    <nav class="md-nav" aria-label="supplementary info: Fixed point motion of a rigid body">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4069,18 +4078,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#newtons-equation" class="md-nav__link">
+  <a href="#translation-ode" class="md-nav__link">
     <span class="md-ellipsis">
-      Newton's Equation
+      Translation ODE
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#eulers-equation" class="md-nav__link">
+  <a href="#rotation-ode" class="md-nav__link">
     <span class="md-ellipsis">
-      Euler's Equation
+      Rotation ODE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newton-eulers-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newton-Euler's Equation
     </span>
   </a>
   
@@ -4160,10 +4178,17 @@
 \end{align}
 \]</div>
 </div>
-<h2 id="supplementary-info-motion-of-a-rigid-body">supplementary info: Motion of a rigid body<a class="headerlink" href="#supplementary-info-motion-of-a-rigid-body" title="Permanent link">&para;</a></h2>
-<div class="admonition refernce">
-<p class="admonition-title">Refernce</p>
+<h2 id="supplementary-info-fixed-point-motion-of-a-rigid-body">supplementary info: Fixed point motion of a rigid body<a class="headerlink" href="#supplementary-info-fixed-point-motion-of-a-rigid-body" title="Permanent link">&para;</a></h2>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<ul>
+<li>
+<p><strong>理论力学</strong>, <em>马尔契夫</em></p>
+</li>
+<li>
 <p><strong>理论物理学教程</strong>, <em>朗道</em></p>
+</li>
+</ul>
 </div>
 <p>Here we give a deduction of motion of a rigid body in terms of physics.</p>
 <p>To easily get the result, we view the rigid body as a set of discrete points. As for a continuous body, we change the mass <span class="arithmatex">\(m_i\)</span> of a point <span class="arithmatex">\(i\)</span> into <span class="arithmatex">\(dV\)</span> with unit mass <span class="arithmatex">\(\rho dV\)</span> and then integrate over it.</p>
@@ -4225,7 +4250,7 @@ d\pmb{\tau} = d\pmb{R} + d\pmb{\phi}\times \pmb{r}
 </div>
 <h3 id="mass-distribution">Mass Distribution<a class="headerlink" href="#mass-distribution" title="Permanent link">&para;</a></h3>
 <p>We introduce <strong>inertia tensor</strong>, which can be thought of as a generalization of the scalar moment of inertia of an object.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="mass-distribution-introduce-with-kinetics" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="mass-distribution-introduce-with-kinetics">Introduce with kinetics</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="mass-distribution-introduce-with-kinetics" name="__tabbed_1" type="radio" /><input id="mass-distribution-introduce-with-definition" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="mass-distribution-introduce-with-kinetics">Introduce with kinetics</label><label for="mass-distribution-introduce-with-definition">Introduce with definition</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The kinetics of the rigid body expressed in discrete points, is</p>
@@ -4275,6 +4300,28 @@ L=T-U=\frac{\mu \pmb{V}^2}{2} + \frac{1}{2}I_{ik}\Omega_i\Omega_k-U.\label{Lagra
 \end{align}
 \]</div>
 </div>
+<div class="tabbed-block">
+<p>We define the <strong>inertia od moment</strong> of the system with respect to an axis <span class="arithmatex">\(u\)</span>, </p>
+<div class="arithmatex">\[
+J_u=\sum_{v=1}^N m_v\rho_v^2,
+\]</div>
+<p>where <span class="arithmatex">\(\rho_v\)</span> equals the distance of point <span class="arithmatex">\(P_v\)</span> of the system. Then we focus on passing on difference axes which pass the same point.</p>
+<p><p align="center">
+<img src="../inertia_tensor.png" width="40%" />
+</p>    </p>
+<p>Assume <span class="arithmatex">\(u\)</span> pass the origin of the coordinate <span class="arithmatex">\(Oxyz\)</span>, with its cosine along <span class="arithmatex">\(Ox\)</span>, <span class="arithmatex">\(Oy\)</span>, <span class="arithmatex">\(Oz\)</span> is denoted by <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(\gamma\)</span>, respectively. Then denote <span class="arithmatex">\(e_u=(\alpha, \beta, \gamma)\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\nonumber J_u&amp;=\sum_{v=1}^N m_v \rho_v^2=\sum_{v=1}^N m_v [r_v^2-(r_v\cdot e_u)^2]\\
+\nonumber &amp;=\sum_{v=1}^N m_v[x_v^2+y_v^2+z_v^2- (x_v\alpha+y_v\beta+z_v\gamma)^2]\\
+\nonumber &amp;=\sum_{v=1}^N m_v [(1-\alpha^2)x_v^2+(1-\beta^2)y_v^2+(1-\gamma^2)z_v^2-2\alpha \beta x_vy_v -2\alpha \gamma x_vz_v-2\gamma \beta z_vy_v]\\
+\nonumber &amp;=\sum_{v=1}^N m_v[(\beta^2+\gamma^2)x_v^2+(\alpha^2+\gamma^2)y_v^2+(\alpha^2+\beta^2)z_v^2-2\alpha \beta x_vy_v -2\alpha \gamma x_vz_v-2\gamma \beta z_vy_v]\\
+\nonumber &amp;=\sum_{v=1}^N m_v [(y_v^2+z_v^2)\alpha^2+(x_v^2+z_v^2)\beta^2+(z_v^2+y_v^2)\gamma^2 -2\alpha \beta x_vy_v -2\alpha \gamma x_vz_v-2\gamma \beta z_vy_v]\\
+&amp;=J_x\alpha^2+J_y\beta^2+J_z\gamma^2-2J_{xy}\alpha\beta-2J_{xz}\alpha\gamma-2J_{yz}\beta\gamma\label{expand-expresstion}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(J_x, J_y, J_z\)</span> are the same definition as the following definition.</p>
+</div>
 </div>
 </div>
 <div class="admonition success">
@@ -4282,7 +4329,7 @@ L=T-U=\frac{\mu \pmb{V}^2}{2} + \frac{1}{2}I_{ik}\Omega_i\Omega_k-U.\label{Lagra
 <p>(i) <span class="arithmatex">\(I_{ik}=I_{ki}\)</span>.</p>
 <p>(ii) we have the following tensor matrix</p>
 <div class="arithmatex">\[
-I_{ik}=\left[\begin{array}{ccc}
+\pmb{J}=I_{ik}=\left[\begin{array}{ccc}
 \sum m (y^2+z^2) &amp; -\sum m xy &amp; -\sum m xz\\
 -\sum m yx &amp; \sum m (x^2+z^2) &amp; -\sum m yz\\
 -\sum m zx &amp; -\sum m zy &amp; \sum m (x^2+y^2)
@@ -4292,15 +4339,29 @@ I_{xx} &amp; -I_{xy} &amp; -I_{xz}\\
 -I_{zz} &amp; -I_{zy} &amp; I_{zz}
 \end{array}\right].
 \]</div>
-<p>where <span class="arithmatex">\(I_{xx}\)</span>, <span class="arithmatex">\(I_{yy}\)</span> and <span class="arithmatex">\(I_{zz}\)</span> are called the <strong>mass moments of inertia</strong>, and the other elements, whose integrals over mixed indices are called the <strong>mass products of inertia</strong>.</p>
+<p>where <span class="arithmatex">\(I_{xx}\)</span>, <span class="arithmatex">\(I_{yy}\)</span> and <span class="arithmatex">\(I_{zz}\)</span> are called the <strong>mass moments of inertia</strong>, or <strong>axis moment of inertia</strong>. And the other elements, whose integrals over mixed indices are called the <strong>mass products of inertia</strong>, or <strong>centrifugal moment of inertia</strong>.</p>
 <p>(iii) for each element, we could integrate</p>
 <div class="arithmatex">\[
 I_{ik}=\int \rho (x_l^2\delta_{ik}-x_ix_k)dV
 \]</div>
+<p>(iv) Equation <span class="arithmatex">\(\ref{expand-expresstion}\)</span> has a geometric meaning. That is, if we cut down a segment on axis <span class="arithmatex">\(u\)</span>, denoted by <span class="arithmatex">\(ON\)</span>, satisfies <span class="arithmatex">\(|ON|=1/\sqrt{J_u}\)</span>, then <span class="arithmatex">\(N(x,y,z)\)</span> satisfies</p>
+<div class="arithmatex">\[
+\alpha=\sqrt{J_u}x,\quad \beta=\sqrt{J_u}y,\quad \gamma=\sqrt{J_u}z.
+\]</div>
+<p>substitute in the equation <span class="arithmatex">\(\ref{expand-expresstion}\)</span>, we have</p>
+<div class="arithmatex">\[
+J_x x^2+J_y y^2+J_z z^2-2J_{xy}xy-2J_{xz} xz-2J_{yz} yz=1.
+\]</div>
+<p>which is an ellipsoid. If we choose an appropriate coordinate, we have its expression simplified as</p>
+<div class="arithmatex">\[
+Ax_*^2+By_*^2+Cz_*^2=1.
+\]</div>
+<p>that is, the mass product of moments equal zero. In this case, we call <span class="arithmatex">\(x_*\)</span>, <span class="arithmatex">\(y_*\)</span>, <span class="arithmatex">\(z_*\)</span> the <strong>prinpiple axes</strong>, the corresponding coefficients <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(C\)</span> are called <strong>principle moments of inertia</strong>. </p>
+<p>Actually, <span class="arithmatex">\(A,B,C\)</span> are the eigenvalue of the matrix <span class="arithmatex">\(\pmb{J}\)</span>. If they are distinct, then the principle axis is uniquely determined. </p>
 </div>
 <div class="question">
-<p><strong>Example</strong>.  Some typical inertia tensor.
-(i) For planar system, we have <span class="arithmatex">\(x_1,x_2\)</span> in the plane, so <span class="arithmatex">\(x_3=0\)</span> for all particles,</p>
+<p><strong>Example</strong>.  Some typical inertia tensor.</p>
+<p>(i) For planar system, we have <span class="arithmatex">\(x_1,x_2\)</span> in the plane, so <span class="arithmatex">\(x_3=0\)</span> for all particles,</p>
 <div class="arithmatex">\[
 I_1=\sum m x_2^2,\quad I_2=\sum m x_1^2,\quad I_3=I_1+I_2.
 \]</div>
@@ -4340,7 +4401,9 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 &amp;=\sum m (\pmb{r}\cdot\pmb{r})\pmb{\Omega}-(\pmb{r}\cdot\pmb{\Omega})\pmb{r}.
 \end{align*}
 \]</div>
-<p>Using description of tensor</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="moment-of-momentum-using-description-of-tensor" name="__tabbed_3" type="radio" /><input id="moment-of-momentum-using-description-of-expression" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="moment-of-momentum-using-description-of-tensor">Using description of tensor</label><label for="moment-of-momentum-using-description-of-expression">Using description of expression</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="arithmatex">\[
 \begin{align}
 \nonumber M_i&amp;=\sum m (x_l^2\Omega_i-x_ix_k\Omega_k)\\
@@ -4348,12 +4411,31 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 &amp;=\Omega_kI_{ik}.\label{moment-tensor}
 \end{align}
 \]</div>
+<p>here we have to sum over <span class="arithmatex">\(k\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p>If <span class="arithmatex">\(\pmb{r}=(x_1,x_2,x_3)^T\)</span>, <span class="arithmatex">\(\pmb{\Omega}=(\Omega_1, \Omega_2, \Omega_3)^T\)</span>, then </p>
+<div class="arithmatex">\[
+\begin{align*}
+M_i&amp;=\sum_v m_v (\sum_j x_j^2)\Omega_i - \sum_v m_v (\sum_j x_j\Omega_j)x_i\\
+&amp;=\sum_v m_v (\sum_{j\neq i} x_j^2)\Omega_i- \sum m_v [\sum_{j\neq i} x_ix_j \Omega_j]\\
+&amp;=J_i \Omega_i - \sum_{j\neq i}J_{ij}\Omega_j.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>or in language of matrix</p>
+<div class="arithmatex">\[
+\pmb{M}=\pmb{J}\pmb{\Omega}
+\]</div>
+<p>If <span class="arithmatex">\(Ox\)</span>, <span class="arithmatex">\(Oy\)</span>, <span class="arithmatex">\(Oz\)</span> are the principle axes, then <span class="arithmatex">\(\pmb{J}\)</span> is diagonal, so <span class="arithmatex">\(M_1=J_x\Omega_1\)</span>, <span class="arithmatex">\(M_2=J_y\Omega_2\)</span>, <span class="arithmatex">\(M_3=J_z\Omega_3\)</span>. Generally speaking, the moment of momentum <span class="arithmatex">\(\pmb{M}\)</span> is not parallel to angular velocity <span class="arithmatex">\(\pmb{\Omega}\)</span>, unless <span class="arithmatex">\(\pmb{J}\)</span> is disgomal, or the coordinate is the principle axes, meaning the three directions are <strong>decoupled</strong>.</p>
 <h2 id="dynamic-equations">Dynamic Equations<a class="headerlink" href="#dynamic-equations" title="Permanent link">&para;</a></h2>
 <p>If we know the center of mass and the inertia of the link, then its mass distribution is completely characterized. To accelerate or decelerate it, we have to apply forces and torque. </p>
 <p>To get the equations, we take derivative of <span class="arithmatex">\(\pmb{p}\)</span> and <span class="arithmatex">\(\pmb{M}\)</span> with respect to <span class="arithmatex">\(t\)</span>.</p>
-<h3 id="newtons-equation">Newton's Equation<a class="headerlink" href="#newtons-equation" title="Permanent link">&para;</a></h3>
+<h3 id="translation-ode">Translation ODE<a class="headerlink" href="#translation-ode" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
-<p class="admonition-title">Newton's Equation</p>
+<p class="admonition-title">Translation ODE</p>
 <p>(i) For each particle, we have <span class="arithmatex">\(\dot{\pmb{p}}_i=\pmb{f}_i\)</span>, then sum over <span class="arithmatex">\(i\)</span>, and we have</p>
 <div class="arithmatex">\[
 \begin{align}
@@ -4370,15 +4452,13 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 \frac{d}{dt}\frac{\partial L}{\partial \pmb{V}}=\frac{\partial L}{\partial \pmb{R}}.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="newtons-equation-proof-for-i" name="__tabbed_3" type="radio" /><input id="newtons-equation-proof-for-ii" name="__tabbed_3" type="radio" /><input id="newtons-equation-proof-for-iii" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="newtons-equation-proof-for-i">Proof for (i)</label><label for="newtons-equation-proof-for-ii">Proof for (ii)</label><label for="newtons-equation-proof-for-iii">Proof for (iii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="translation-ode-proof-for-i" name="__tabbed_4" type="radio" /><input id="translation-ode-proof-for-ii" name="__tabbed_4" type="radio" /><input id="translation-ode-proof-for-iii" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="translation-ode-proof-for-i">Proof for (i)</label><label for="translation-ode-proof-for-ii">Proof for (ii)</label><label for="translation-ode-proof-for-iii">Proof for (iii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>Since <span class="arithmatex">\(\pmb{P}=\sum m\pmb{p}=\mu \pmb{V}\)</span>, we have</p>
 <div class="arithmatex">\[
 \begin{align*}
-\pmb{F}&amp;=\sum\pmb{f}\\
-&amp;=\frac{d\pmb{P}}{dt}\\
-&amp;:=\sum \frac{\pmb{p}}{dt}\\
-&amp;=\mu \dot{V}.
+\pmb{F}&amp;=\sum\pmb{f}=\sum \frac{\pmb{p}}{dt}=\mu \dot{\pmb{V}}.
 \end{align*}
 \]</div>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4404,9 +4484,9 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 </div>
 </div>
 </div>
-<h3 id="eulers-equation">Euler's Equation<a class="headerlink" href="#eulers-equation" title="Permanent link">&para;</a></h3>
+<h3 id="rotation-ode">Rotation ODE<a class="headerlink" href="#rotation-ode" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
-<p class="admonition-title">Lemma</p>
+<p class="admonition-title">Rotation ODE</p>
 <p>Assume the center of mass does not move. Then </p>
 <p>(i)</p>
 <div class="arithmatex">\[
@@ -4422,7 +4502,7 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 \pmb{K}=\sum \pmb{r}\times \pmb{f}=\sum \pmb{r}'\times \pmb{f}+\sum \pmb{a}\times \pmb{f}=\pmb{K}'+\pmb{a}\times \pmb{F}.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="eulers-equation-proof-for-i" name="__tabbed_4" type="radio" /><input id="eulers-equation-proof-for-ii" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="eulers-equation-proof-for-i">Proof for (i)</label><label for="eulers-equation-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="rotation-ode-proof-for-i" name="__tabbed_5" type="radio" /><input id="rotation-ode-proof-for-ii" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="rotation-ode-proof-for-i">Proof for (i)</label><label for="rotation-ode-proof-for-ii">Proof for (ii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Taking derivative of moment of momentum <span class="arithmatex">\(\pmb{M}\)</span></p>
@@ -4457,7 +4537,7 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 </div>
 <p>When <span class="arithmatex">\(\pmb{F}\)</span> and <span class="arithmatex">\(\pmb{K}\)</span> are perpendicular, then we could find a vector <span class="arithmatex">\(\pmb{a}\)</span> such that</p>
 <div class="arithmatex">\[
-\pmb{K}=\pmb{a}\times \pmb{F}, \pmb{K}'=0.
+\pmb{K}=\pmb{a}\times \pmb{F}, \quad \pmb{K}'=0.
 \]</div>
 <p>The <span class="arithmatex">\(\pmb{a}+\pmb{F}\)</span> is also an acceptable solution. </p>
 <div class="question">
@@ -4475,14 +4555,23 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 \]</div>
 </div>
 <p>The above deduction is based on a fixed frame (either not translation or rotation). </p>
+<h3 id="newton-eulers-equation">Newton-Euler's Equation<a class="headerlink" href="#newton-eulers-equation" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
-<p class="admonition-title">Euler's Equation</p>
+<p class="admonition-title">Newton-Euler's Equation</p>
+<p>For a fixed point motion of a rigid body, we have translation part ODE and rotation part ODE</p>
+<div class="arithmatex">\[
+\mu\left[\frac{d\pmb{V}}{dt}+\pmb{\Omega}\times \pmb{V}\right]=\pmb{F}, \quad \pmb{J}\frac{d\pmb{\Omega}}{dt}+\pmb{\Omega}\times \pmb{J}\pmb{\Omega}=\pmb{K}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="newton-eulers-equation-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="newton-eulers-equation-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Any vector <span class="arithmatex">\(\pmb{A}\)</span> has a changing velocity with respect to a frame which is <strong>moving</strong>. </p>
 <p>Assume <span class="arithmatex">\(d\pmb{A}/dt\)</span> is the changing velocity of <span class="arithmatex">\(\pmb{A}\)</span> with respect to a fixed frame. If <span class="arithmatex">\(\pmb{A}\)</span> do not change in a rotating frame, then </p>
 <div class="arithmatex">\[
 \frac{d\pmb{A}}{dt}=\pmb{\Omega}\times \pmb{A}.
 \]</div>
-<p>If <span class="arithmatex">\(\pmb{A}\)</span> moves in the rotating frame, then we add <span class="arithmatex">\(d'\pmb{A}/{dt}\)</span></p>
+<p>If <span class="arithmatex">\(\pmb{A}\)</span> moves in the rotating frame, then we add <span class="arithmatex">\(d'\pmb{A}/{dt}\)</span> (we just use the results from fixed frame here)</p>
 <div class="arithmatex">\[
 \frac{d\pmb{A}}{dt}=\frac{d'\pmb{A}}{dt}+\pmb{\Omega}\times \pmb{A}.
 \]</div>
@@ -4490,15 +4579,19 @@ I_1=I_2=\sum m x_3^2, \quad I_3=0.
 <div class="arithmatex">\[
 \frac{d'\pmb{P}}{dt}+\pmb{\Omega}\times \pmb{P}=\pmb{F}, \quad \frac{d'\pmb{M}}{dt}+\pmb{\Omega}\times \pmb{M}=\pmb{K}.
 \]</div>
-<p>Project to the coordinate of the moving frame, we have <span class="arithmatex">\(\left(\frac{d'\pmb{P}}{dt}\right)=\frac{dP_1}{dt},\cdots, \left(\frac{d'\pmb{M}}{dt}\right)=\frac{dM_1}{dt}\)</span></p>
+<p>Project to the coordinate of the moving frame, we have <span class="arithmatex">\(\left(\frac{d'\pmb{P}}{dt}\right)=\frac{dP_1}{dt},\cdots, \left(\frac{d'\pmb{M}}{dt}\right)=(\pmb{J}\frac{d\pmb{\Omega}}{dt})_1\)</span>, so the translation part ODE is</p>
 <div class="arithmatex">\[
 \begin{align*}
 \mu\left(\frac{dV_1}{dt}+\Omega_2V_3-\Omega_3V_2\right)&amp;=F_1,\\
-\mu\left(\frac{dV_2}{dt}+\Omega_3V_1-\Omega_1V_3\right)&amp;=F_1,\\
-\mu\left(\frac{dV_3}{dt}+\Omega_1V_2-\Omega_2V_1\right)&amp;=F_1.\\
+\mu\left(\frac{dV_2}{dt}+\Omega_3V_1-\Omega_1V_3\right)&amp;=F_2,\\
+\mu\left(\frac{dV_3}{dt}+\Omega_1V_2-\Omega_2V_1\right)&amp;=F_3.\\
 \end{align*}
 \]</div>
-<p>and the mass moments of inertia are along <span class="arithmatex">\(x_1,x_2,x_3\)</span>, then <span class="arithmatex">\(M_1=I_1\Omega_1\)</span>, and so on</p>
+<p>and the rotation part ODE is (a little complicated, only present the first line)</p>
+<div class="arithmatex">\[
+I_x \frac{d\Omega_1}{dt}-I_{xy}\frac{d\Omega_2}{dt}-I_{xz}\frac{d\Omega_3}{dt}+ (I_z-I_y)\Omega_2\Omega_3+ I_{yz}(\Omega_3^2-\Omega_2^2)+\Omega_1(I_{xy}\Omega_3-I_{xz}\Omega_2)=K_1,
+\]</div>
+<p>if the coordinate <span class="arithmatex">\(Ox,Oy,Oz\)</span> of moving system are principle axes, then <span class="arithmatex">\(M_i=I_i\Omega_i (i=1,2,3)\)</span>, and <span class="arithmatex">\(I_{ik}=0 (i\neq k)\)</span>, so</p>
 <div class="arithmatex">\[
 \begin{align*}
 I_1\frac{d\Omega_1}{dt}+(I_3-I_2)\Omega_2\Omega_3=K_1,\\
@@ -4507,10 +4600,8 @@ I_3\frac{d\Omega_3}{dt}+(I_2-I_1)\Omega_1\Omega_2=K_3.\\
 \end{align*}
 \]</div>
 </div>
-<p>For a given rigid body rotating with angular velocity <span class="arithmatex">\(\omega\)</span> and with angular acceleration <span class="arithmatex">\(\dot{\omega}\)</span>, then the needed torque is</p>
-<div class="arithmatex">\[
-N={^CI}\dot{\omega}+{\omega}\times {{^CI}\omega}.
-\]</div>
+</div>
+</div>
 <h2 id="iterative-dynamic-formulation">Iterative Dynamic Formulation<a class="headerlink" href="#iterative-dynamic-formulation" title="Permanent link">&para;</a></h2>
 <p>Starting with link <span class="arithmatex">\(1\)</span> and moving successively, link by link, outward to link <span class="arithmatex">\(n\)</span>.</p>
 <div class="admonition success">

@@ -4084,22 +4084,85 @@
 <p>使用贪婪算法。</p>
 <p>核心问题是选择每个节点要测试的属性。如何衡量一个属性具有最好的选择能力？这里使用信息增益。</p>
 <h3 id="_1">信息增益<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>熵</strong></li>
-</ul>
-<p>给定一个样例集，有熵</p>
+<p>For a specific characteristic, we could categorize samples into different kinds. We take an inspiration from entropy.</p>
+<div class="admonition info">
+<p class="admonition-title">Entropy of a random variable</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span> is a discrete random variable, with its distribution </p>
 <div class="arithmatex">\[
-entropy(S)=\sum_{i=1}^c -p_i\log_2 p_i
+P(\xi=x_k)=p_k, (i=1,2,\cdots, K).
 \]</div>
-<p>这里 <span class="arithmatex">\(c\)</span> 表示状态数，<span class="arithmatex">\(p_i\)</span>表示某一分类值得实例占比。可知上式最大值是<span class="arithmatex">\(\log_2 c\)</span>, 当每一个状态数的实例相等的时候，最小是<span class="arithmatex">\(0\)</span>，当其中一个状态占满。</p>
-<ul>
-<li><strong>信息增益</strong>: 是由于使用这个属性分割样例集而导致期望熵的减小</li>
-</ul>
+<p>Then its entropy is defined by</p>
+<div class="arithmatex">\[
+H(\xi)=-\sum_{k=1}^K p_k\log_2 p_k.
+\]</div>
+<p>Note that entropy does not depend direcly on the value of <span class="arithmatex">\(x_k\)</span>, but its probability <span class="arithmatex">\(p_k\)</span>. </p>
+<p>In practive, usually given a sample set <span class="arithmatex">\(S\)</span>, we let <span class="arithmatex">\( K \)</span> denotes the number of <strong>states</strong>, and <span class="arithmatex">\( p_k \)</span> represents the proportion of instances for a certain classification value (estimated using maximum likelihood), then the above calculation gives <strong>empirical entropy</strong>. </p>
+<p>The range of entropy is</p>
+<div class="arithmatex">\[
+0\leq H(S)\leq \log_2 K.
+\]</div>
+<p>The maximum value of entropy is estimated using Jensen's inequality. The minimum value is <span class="arithmatex">\( 0 \)</span>, achieved when all instances belong to a single state, while the maximum is attained when instances are equally distributed among all states.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Conditional Entropy</p>
+<p>Assume two random variables <span class="arithmatex">\(X,Y\)</span> has a unified distribution </p>
+<div class="arithmatex">\[
+P(X=x_i, Y=y_k)=p_{ik},\quad i=1,\cdots, n; \quad k=1,\cdots, K.
+\]</div>
+<p>Given <span class="arithmatex">\(X\)</span>, the entropy of random variable <span class="arithmatex">\(Y\)</span> is</p>
+<div class="arithmatex">\[
+\begin{align}
+H(Y\mid X)&amp;=\sum_{i=1}^n P(X=x_i) H(Y\mid X=x_i)\\
+&amp;=\sum_{i=1}^n p_i \left(-\sum_{k=1}^K p_{ik}\log_2 p_{ik}\right)
+\end{align}
+\]</div>
+<p>In practice, given <span class="arithmatex">\(X\)</span> means given a characteristic <span class="arithmatex">\(A\)</span>, and it has <span class="arithmatex">\(n\)</span> different options. The data set has still <span class="arithmatex">\(K\)</span> categories. The conditional entropy means the entropy under a certain characteristic.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Gain of info</p>
+<p>The gain of infomation of characteristic <span class="arithmatex">\(A\)</span> on data set <span class="arithmatex">\(S\)</span>, is defined by</p>
+<div class="arithmatex">\[
+g(D,A)=H(S)-H(S\mid A)
+\]</div>
+<p>here <span class="arithmatex">\(H(S\mid A)\)</span> is the <strong>empirical conditional entropy</strong>. We could calculate it as follows. </p>
+<p>Data set <span class="arithmatex">\(S\)</span> has <span class="arithmatex">\(|S|\)</span> number of samples with <span class="arithmatex">\(|S_k|\)</span> for category <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\((k=1,\cdots,K)\)</span>. </p>
+<p>For a given characteristic <span class="arithmatex">\(A\)</span>, with <span class="arithmatex">\(n\)</span> values or options, namely <span class="arithmatex">\(\{x_i\}_{1\leq i\leq n}\)</span>. <span class="arithmatex">\(A\)</span> partitions <span class="arithmatex">\(S\)</span> into another <span class="arithmatex">\(n\)</span> parts <span class="arithmatex">\(S_{Ai}\)</span>, with <span class="arithmatex">\(|S_{Ai}|\)</span> number of samples, <span class="arithmatex">\((i=1,\cdots, n)\)</span>. So let <span class="arithmatex">\(X\)</span> to be values of <span class="arithmatex">\(A\)</span> for a sample in <span class="arithmatex">\(S\)</span>, then we have an estimation </p>
+<div class="arithmatex">\[
+P(X=x_i)\approx \frac{|S_{Ai}|}{|S|}, \quad i=1,\cdots,n.
+\]</div>
+<p>Let <span class="arithmatex">\(Y\)</span> to be the categories of a sample in <span class="arithmatex">\(S\)</span>, which has <span class="arithmatex">\(K\)</span> values, then </p>
+<div class="arithmatex">\[
+H(Y)\approx H(S)=-\sum_{k=1}\frac{|S_k|}{|S|}\log_2 \frac{|S_k|}{|S|}.
+\]</div>
+<p>For <span class="arithmatex">\(X=x_i\)</span>, let <span class="arithmatex">\(S_{ik}=S_{A_i}\cap S_k\)</span>, then </p>
+<div class="arithmatex">\[
+H(Y \mid X)\approx H(S\mid A)=\sum_{i=1}^n \frac{|S_{Ai}|}{|S|} \left(-\sum_{k=1}^K \frac{|S_{ik}|}{|S_{Ai}|}\log_2 \frac{|S_{ik}|}{|S_{Ai}|}\right).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="_1-in-chinese" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="_1-in-chinese">In Chinese</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>这里用期望，表明一个属性的不同值对做出样例集划分后，要加权求平均来表达总体的熵减情况。</p>
 <div class="arithmatex">\[
-gain(S,A) = entropy(S) - \sum_{v\in value(A)}\frac{|S_v|}{|S|}entropy(S_v)
+g(S,A) = H(S) - \sum_{v\in value(A)}\frac{|S_v|}{|S|}H(S_v)
 \]</div>
-<p>注意后面的熵<span class="arithmatex">\(entropy(S_v)\)</span>是条件熵，基于<span class="arithmatex">\(S_v\)</span>来计算后续别的属性的熵.</p>
+<p>注意后面的熵<span class="arithmatex">\(H(S_v)\)</span>是条件熵，基于<span class="arithmatex">\(S_v\)</span>来计算后续别的属性的熵.</p>
+</div>
+</div>
+</div>
+<p>Usually <span class="arithmatex">\(\frac{|S_{Ai}|}{|S|}\)</span> causes the algorithm to <strong>prefer</strong> the characteristic which has more samples in <span class="arithmatex">\(S\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Information gain ratio</p>
+<p>Define the entropy with respect to characteristic <span class="arithmatex">\(A\)</span> </p>
+<div class="arithmatex">\[
+H_A(S)=-\sum_{i=1}^n \frac{|S_{Ai}|}{|S|}\log_2 \frac{|S_{Ai}|}{|S|},
+\]</div>
+<p>then information gain ratio is </p>
+<div class="arithmatex">\[
+g_R(D,A)=\frac{g(D, A)}{H_A(D)}.
+\]</div>
+<p>We currently do not have theoretical analysis for this.</p>
+</div>
 <p>递归调用。当样例个数为0或熵为0时，确定叶子节点的属性。已被树的较高节点测试的属性被排除在外。</p>
 <div class="admonition info">
 <p class="admonition-title">ID3 算法的优劣</p>
