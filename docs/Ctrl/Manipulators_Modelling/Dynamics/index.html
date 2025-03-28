@@ -4150,8 +4150,7 @@
 <p>apply first "<span class="arithmatex">\(=\)</span>" of equation <span class="arithmatex">\(\ref{linear-vel}\)</span> to the brackets, we have</p>
 <div class="arithmatex">\[
 \begin{align}
-\nonumber{^A\dot{V}_Q}&amp;\\
-\nonumber=&amp;{^A_BR}{^B\dot{V}_Q}+{^A\Omega_B}\times{^A_BR}{^BV_Q}+{^A\dot{\Omega}_B}\times {^A_BR {^BQ}}\\
+\nonumber{^A\dot{V}_Q}=&amp;{^A_BR}{^B\dot{V}_Q}+{^A\Omega_B}\times{^A_BR}{^BV_Q}+{^A\dot{\Omega}_B}\times {^A_BR {^BQ}}\\
 \nonumber&amp;+{^A\Omega_B}\times({^A_BR}{^BV_Q}+{^A\Omega_B}\times {^A_BR}{^BQ})+{^A\dot{V}_B}\\
 \nonumber=&amp;{^A_BR}{^B\dot{V}_Q}+2{^A\Omega_B}\times{^A_BR}{^BV_Q}+{^A\dot{\Omega}_B}\times {^A_BR {^BQ}}\\
 &amp;+{^A\Omega_B}\times{^A\Omega_B}\times {^A_BR}{^BQ}+{^A\dot{V}_B}.\label{linear-vel-general}
@@ -4605,17 +4604,78 @@ I_3\frac{d\Omega_3}{dt}+(I_2-I_1)\Omega_1\Omega_2=K_3.\\
 <h2 id="iterative-dynamic-formulation">Iterative Dynamic Formulation<a class="headerlink" href="#iterative-dynamic-formulation" title="Permanent link">&para;</a></h2>
 <p>Starting with link <span class="arithmatex">\(1\)</span> and moving successively, link by link, outward to link <span class="arithmatex">\(n\)</span>.</p>
 <div class="admonition success">
-<p class="admonition-title">Deduction</p>
+<p class="admonition-title">Deduction: Outward</p>
 <p>(i) Rotational velocity.</p>
 <div class="arithmatex">\[
-{^{i+1}\omega_{i+1}}={^{i+1}_i R}{^i\omega_i}+\dot{\theta}_{i+1} ^{i+1}\hat{Z}_{i+1}.
+{^{i+1}\omega_{i+1}}={^{i+1}_i R}{^i\omega_i}+\dot{\theta}_{i+1} {^{i+1}\hat{Z}_{i+1}}.
 \]</div>
 <p>from equation <span class="arithmatex">\(\ref{angular-vel}\)</span>, we have</p>
 <div class="arithmatex">\[
 \begin{align*}
-\dot{\omega}_{i+1}=\dot{\omega}_{i}+{^0_i}
+\dot{\omega}_{i+1}&amp;=\dot{\omega}_{i}+{^0_iR} {^i \dot{\Omega}_{i+1}}+\omega_i\times {^0_iR}{^i\Omega_{i+1}}\\
+&amp;=\dot{\omega}_{i}+{^0_iR}(\ddot{\theta}_{i+1} {^i_{i+1}R}{^{i+1}\hat{Z}}_{i+1})+\omega_i\times {^0_iR}(\dot{\theta}_{i+1} {^i_{i+1}R}{^{i+1}\hat{Z}}_{i+1})\\
+&amp;=\dot{\omega}_{i}+\ddot{\theta}_{i+1}{^0_{i+1}R}{^{i+1}\hat{Z}_{i+1}}+\omega_i\times (\dot{\theta}_{i+1} {^0_{i+1}R}{^{i+1}\hat{Z}_{i+1}})\\
+\Rightarrow \quad {^{i+1}\dot{\omega}_{i+1}}&amp;={^{i+1}_i R}{^i\dot{\omega}_{i}}+\ddot{\theta}_{i+1}{^{i+1}\hat{Z}_{i+1}}+{^{i+1}_i R}{^i\omega_i}\times \dot{\theta}_{i+1}{^{i+1}\hat{Z}_{i+1}}.
 \end{align*}
 \]</div>
+<p>For prismatic, we have <span class="arithmatex">\(\dot{\theta}_{i+1}=\ddot{\theta}_{i+1}=0\)</span>, so we only have the first item.</p>
+<p>(ii) Linear velocity.</p>
+<p>from equation <span class="arithmatex">\(\ref{linear-vel-general}\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\dot{v}_{i+1}&amp;=\dot{v}_i + {^0_iR} {^i\dot{V}_{i+1}}+2\omega_i\times {^0_iR}{^iV_{i+1}} + \dot{\omega}_i\times {^0_iR}  {^iO_{i+1}}+\omega_i\times (\omega_i \times {^0_iR}{^iO_{i+1}})\\
+&amp;={^{i+1}_i R}[{^i\dot{v}_i}+{^i\dot{\omega}_i}\times {^iO_{i+1}}+{^i\omega_i}\times ({^i\omega_i} \times {^iO_{i+1}})]+{^{i+1}_i R}[{^i\dot{V}_{i+1}}+2{^i\omega_i}\times {^iV_{i+1}}].
+\end{align*}
+\]</div>
+<p>For prismatic, we have the second item with its corresonding change</p>
+<div class="arithmatex">\[
+\begin{align*}
+{^{i+1}_i R}[{^i\dot{V}_{i+1}}+2{^i\omega_i}\times {^iV_{i+1}}]&amp;= \ddot{d}_{i+1}{^{i+1}\hat{Z}_{i+1}}+{^{i+1}_i R}{^i\omega_i}\times \dot{d}_{i+1}{^{i+1}\hat{Z}_{i+1}}\\
+&amp;=\ddot{d}_{i+1}{^{i+1}\hat{Z}_{i+1}}+ {^{i+1}\omega_{i+1}}\times \dot{d}_{i+1}{^{i+1}\hat{Z}_{i+1}}.
+\end{align*}
+\]</div>
+<p>For revolute, <span class="arithmatex">\(^iV_{i+1}={^i\dot{V}_{i+1}}=0\)</span>, so we only have the first item.</p>
+<p>(iii) Acceleration of center of mass of link</p>
+<p>Still from equation <span class="arithmatex">\(\ref{linear-vel-general}\)</span>, we have the second and third item equal zero</p>
+<div class="arithmatex">\[
+\begin{align*}
+\dot{v}_{C_i}&amp;=\dot{v}_i + {^0_iR} {^i\dot{V}_{C_i}}+2\omega_i\times {^0_iR}{^iV_{C_i}} + \dot{\omega}_i\times {^0_iR}  {^iO_{C_i}}+\omega_i\times (\omega_i \times {^0_iR}{^iO_{C_i}})\\
+&amp;=\dot{v}_i +\dot{\omega}_i\times {^0_iR}  {^iO_{C_i}}+\omega_i\times (\omega_i \times {^0_iR}{^iO_{C_i}})\\
+\Rightarrow \quad {^i\dot{v}_{C_i}}&amp;={^i\dot{v}_i} +{^i\dot{\omega}_i}\times {^iO_{C_i}}+{^i\omega_i}\times ({^i\omega_i} \times {^iO_{C_i}}).
+\end{align*}
+\]</div>
+<p>(iv) force and torque</p>
+<p>From <a href="#newton-eulers-equation">Newton-Euler's Equation</a>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+F_i&amp;=m\dot{v}_{C_i},\\ 
+{^{C_i}N_i}&amp;={^{C_i}I}{^{C_i}\dot{\omega}_i}+ {^{C_i}{\omega}_i}\times {^{C_i}I}{^{C_i}{\omega}_i}\\
+&amp;={^{C_i}I}{^{i}\dot{\omega}_i}+ {^{i}{\omega}_i}\times {^{C_i}I}{^{i}{\omega}_i}.
+\end{align*}
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Deduction: Inward</p>
+<p>With forces and torques acting on links, we have to calculate joint torques that would result in these net forces and torques on the links. Here we denote <span class="arithmatex">\(f_i\)</span> as force exerted on link <span class="arithmatex">\(i\)</span> by link <span class="arithmatex">\(i-1\)</span>, <span class="arithmatex">\(n_i\)</span> as torque exerted on link <span class="arithmatex">\(i\)</span> by link <span class="arithmatex">\(i-1\)</span>.</p>
+<p><p align="center">
+<img src="../dynamic_force.png" width="40%" />
+</p></p>
+<p>Apparently net force on link <span class="arithmatex">\(i\)</span> is</p>
+<div class="arithmatex">\[
+\begin{align*}
+{^iF_i}&amp;={^if_i}-{^i_{i+1}R}{^{i+1}f_{i+1}}.\\
+\Rightarrow \quad {^if_i}&amp;={^iF_i}+{^i_{i+1}R}{^{i+1}f_{i+1}}.
+\end{align*}
+\]</div>
+<p>and for torque we substitute the above force relationship in</p>
+<div class="arithmatex">\[
+\begin{align*}
+{^iN_i}&amp;={^in_i}-{^in_{i+1}} +(-{^iO_{C_i}})\times {^if_i}+({^iO_{i+1}}-{^iO_{C_i}})\times (-{^if_{i+1}})\\
+\Rightarrow {^in_i} &amp;={^iN_i}+{^i_{i+1}R}{^{i+1}n_{i+1}}+{^iO_{C_i}}\times {^if_i}+({^iO_{i+1}}-{^iO_{C_i}})\times {^if_{i+1}}\\
+&amp;={^iN_i}+{^i_{i+1}R}{^{i+1}n_{i+1}}+{^iO_{C_i}}\times {^iF_i}+{^iO_{i+1}}\times {^i_{i+1}R}{^{i+1}f_{i+1}}.
+\end{align*}
+\]</div>
+<p>For revolute, <span class="arithmatex">\(\tau_i={^in_i^T}{^i\hat{Z}_i}\)</span>, and for prismatic, <span class="arithmatex">\(\tau_i={^if_i^T}{^i\hat{Z}_i}\)</span>.</p>
 </div>
 
 
