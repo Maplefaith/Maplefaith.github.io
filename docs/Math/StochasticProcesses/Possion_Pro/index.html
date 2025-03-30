@@ -14,7 +14,7 @@
         <link rel="prev" href="../Basic_Pro/">
       
       
-        <link rel="next" href="../../../courses/">
+        <link rel="next" href="../Markov/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -1774,6 +1774,8 @@
       
         
       
+        
+      
     
     
       
@@ -1915,6 +1917,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mathematical-characteristic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Characteristic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#process-of-interval-time" class="md-nav__link">
     <span class="md-ellipsis">
       Process of Interval Time
@@ -1959,10 +1970,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#filtered-poisson-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtered Poisson Process
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Markov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markov Process
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3987,6 +4028,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mathematical-characteristic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Characteristic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#process-of-interval-time" class="md-nav__link">
     <span class="md-ellipsis">
       Process of Interval Time
@@ -4026,6 +4076,15 @@
   <a href="#nonhomogeneous-poisson-process" class="md-nav__link">
     <span class="md-ellipsis">
       Nonhomogeneous Poisson Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtered-poisson-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtered Poisson Process
     </span>
   </a>
   
@@ -4084,6 +4143,42 @@
 </div>
 </div>
 </div>
+<h2 id="mathematical-characteristic">Mathematical Characteristic<a class="headerlink" href="#mathematical-characteristic" title="Permanent link">&para;</a></h2>
+<p>Here we use generating function to deduce its mathematical characteristics. Recall that for random variable <span class="arithmatex">\(\xi\)</span> which follows Possion distribution with para <span class="arithmatex">\(\lambda\)</span>, we have </p>
+<div class="arithmatex">\[
+\psi_\xi(s)=e^{\lambda (s-1)}.
+\]</div>
+<p>Note that for ME, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+E(s^\xi)&amp;=\psi_\xi(s)=e^{\lambda (s-1)},\\
+E(\xi s^{\xi-1})&amp;=\psi'_\xi(s)=\lambda e^{\lambda (s-1)}\\
+E[\xi (\xi-1) s^{\xi-2}]&amp;=\psi''_\xi(s)=\lambda^2 e^{\lambda (s-1)}\\
+\end{align*}
+\]</div>
+<p>Using Levy Theorem, we let <span class="arithmatex">\(s\nearrow 1\)</span>, then <span class="arithmatex">\(E(\xi)=\lambda\)</span>, <span class="arithmatex">\(E(\xi^2-\xi)=\lambda^2\)</span>, so <span class="arithmatex">\(D(\xi)=\lambda\)</span>. As for Possion process, we have</p>
+<div class="admonition success">
+<p class="admonition-title">Mathematical characteristic of Possion Process</p>
+<p>(i) <span class="arithmatex">\(EN_t=\lambda t\)</span>, <span class="arithmatex">\(DN_t=\lambda t\)</span>.</p>
+<p>(ii) for <span class="arithmatex">\(s&lt;t\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align*}
+r_N(t,s)&amp;=E(N_t N_s)\\
+&amp;=E(N_s^2)+E(N_{t-s})E(N_s)\\
+&amp;=\lambda^2 s^2+\lambda s+\lambda^2 s(t-s)\\
+&amp;=\lambda^2 ts+\lambda s.
+\end{align*}
+\]</div>
+<p>so for arbitrary <span class="arithmatex">\(s,t\)</span>, <span class="arithmatex">\(r_N(t,s)=\lambda \min\{t,s\}+\lambda^2 ts\)</span>.</p>
+<p>(iii) for <span class="arithmatex">\(s,t\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+C_N(t,s)&amp;=E(N_tN_s)-E(N_t)E(N_s)\\
+&amp;=\min\{t,s\}+\lambda^2 ts - \lambda^2 ts\\
+&amp;=\min\{t,s\}.
+\end{align*}
+\]</div>
+</div>
 <p>Assume <span class="arithmatex">\(S_n\)</span> to denote the arriving time of the <span class="arithmatex">\(n\)</span>th "customer", and <span class="arithmatex">\(T_n\)</span> to denote the time interval of the arriving time of <span class="arithmatex">\(n\)</span>th and <span class="arithmatex">\(n-1\)</span>th customer.</p>
 <h2 id="process-of-interval-time">Process of Interval Time<a class="headerlink" href="#process-of-interval-time" title="Permanent link">&para;</a></h2>
 <p>For <span class="arithmatex">\(T_n\)</span>, we have the following theorem.</p>
@@ -4098,7 +4193,7 @@
 <div class="arithmatex">\[
 P(T_1&lt;t)=P(T_1\leq t)=P(N_t\geq 1)=1-P(N_t=0)=1-e^{-\lambda t},
 \]</div>
-<p>so <span class="arithmatex">\(f(T_1&lt;t)=-\lambda e^{-\lambda t}\)</span>, then <span class="arithmatex">\(T_1\)</span> is an exponential distribution.</p>
+<p>so <span class="arithmatex">\(f(T_1&lt;t)=\lambda e^{-\lambda t}\)</span>, then <span class="arithmatex">\(T_1\)</span> is an exponential distribution.</p>
 <p>For <span class="arithmatex">\(T_n\)</span>, we have two methods. The first one, is using the conditional probability to show that </p>
 <div class="arithmatex">\[
 P(T_n&lt;t \mid T_1=\tau_1, \cdots, T_{n-1}=\tau_{n-1})
@@ -4112,22 +4207,35 @@ P(T_n&lt;t \mid T_1=\tau_1, \cdots, T_{n-1}=\tau_{n-1})
 <p>Actually, the reverse of the above theorem also holds.</p>
 <div class="admonition success">
 <p class="admonition-title">Reverse of theorem of interval time</p>
-<p>Assume <span class="arithmatex">\(\{T_n: n\geq 1\}\)</span> is a sequence of the arriving time, which are independent mutually and follow an exponential distribution of a mean of <span class="arithmatex">\(1/\lambda\)</span>, and let <span class="arithmatex">\(N_t\)</span> to denote the number of customers arriving during time <span class="arithmatex">\([0,t]\)</span>, then <span class="arithmatex">\(N_t\)</span> is a Possion process with a parameter <span class="arithmatex">\(\lambda\)</span>.</p>
+<p>Assume <span class="arithmatex">\(\{T_n: n\geq 1\}\)</span> is a sequence of the arriving time, which are independent mutually and follow an exponential distribution of a mean of <span class="arithmatex">\(1/\lambda\)</span>, and let <span class="arithmatex">\(N_t\)</span> to denote the number of customers arriving during time <span class="arithmatex">\([0,t]\)</span>, i.e.</p>
+<div class="arithmatex">\[
+N_t:=\max\{n\geq 1: \sum_{i=1}^n T_i\leq t\}.
+\]</div>
+<p>then <span class="arithmatex">\(N_t\)</span> is a Possion process with a parameter <span class="arithmatex">\(\lambda\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="process-of-interval-time-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="process-of-interval-time-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>We would use <a href="#Theorem of arriving time">Theorem of arriving time</a>. <span class="arithmatex">\(S_n=\sum_{i=1}^n T_i\)</span>.</p>
+<p>For <span class="arithmatex">\(t&gt;0\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+P(N_t=k)&amp;=P(S_k\leq t&lt;S_{k+1})\\
+&amp;=P(S_k\leq t&lt;s \mid S_{k+1}=s)P(S_{k+1}=s)\\
+\end{align*}
+\]</div>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
 <h2 id="process-of-arriving-time">Process of Arriving Time<a class="headerlink" href="#process-of-arriving-time" title="Permanent link">&para;</a></h2>
+<p><a id="Theorem of arriving time"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem of arriving time</p>
 <p>The sequence of arriving time <span class="arithmatex">\(\{S_n\}\)</span> in Possion process satisfies <span class="arithmatex">\(S_n\sim \Gamma (n,\lambda)\)</span>, i.e.</p>
 <div class="arithmatex">\[
 f_{S_n}(t)=\begin{cases}
-\displaystyle\frac{\lambda^n x^{n-1}}{\Gamma(n)}e^{-\lambda t},\quad &amp;t&gt;0,\\
+\displaystyle\frac{\lambda^n t^{n-1}}{\Gamma(n)}e^{-\lambda t}=\frac{\lambda^n t^{n-1}}{(n-1)!}e^{-\lambda t},\quad &amp;t&gt;0,\\
 0,\quad &amp;t\leq 0.
 \end{cases}
 \]</div>
@@ -4215,8 +4323,9 @@ P&amp;(x_i&lt;X_{(i)}\leq x_i+\varepsilon_i, \forall i\in [1,n])\\
 <p><span class="arithmatex">\(\forall n\in \mathbb{N}^+\)</span>, <span class="arithmatex">\(t_1&lt;s_1&lt;t_2&lt;s_2&lt;\cdots&lt;t_n&lt;s_n\)</span>, we have</p>
 <div class="arithmatex">\[
 \begin{align*}
-P&amp;(S_1\in (t_1,s_1],\cdots,S_n\in (t_n,s_n] \mid N_t=n)\\&amp;=\frac{P(S_i\in (t_i,s_i] (\forall i\in[1,n]), N_t=n)}{P(N_t=n)}\\
-&amp;=\frac{P(N_{(t_i,s_i]}=1(\forall i\in[1,n]), N_{t_1}=0, N_{(t_i,s_{i+1}]=0}(\forall i\in [1,n-1]), N_{(s_{i}, t]}=0}{P(N_t=n)}\\
+P&amp;(S_1\in (t_1,s_1],\cdots,S_n\in (t_n,s_n] \mid N_t=n)\\
+&amp;=\frac{P(S_i\in (t_i,s_i] (\forall i\in[1,n]), N_t=n)}{P(N_t=n)}\\
+&amp;=\frac{P[N_{(t_i,s_i]}=1(\forall i\in[1,n]), N_{t_1}=0, N_{(t_i,s_{i+1}]}=0(\forall i\in [1,n-1]), N_{(s_{i}, t]}=0]}{P(N_t=n)}\\
 &amp;=\frac{\left\{\prod\limits_{i=1}^n P(N_{(t_i,s_i]}=1)\right\} P(N_{t_1}=0) \left\{ \prod\limits_{i=1}^{n-1}P(N_{(s_i,t_{i+1}]}=0)\right\} P(N_{(s_{i}, t]}=0) }{P(N_t=n)}\\
 &amp;=\frac{e^{-\lambda t} \prod\limits_{i=1}^n(\lambda (s_i-t_i))}{e^{-\lambda t} \frac{(\lambda t)^n}{n!}}\\
 &amp;=\frac{n!\prod\limits_{i=1}^n(s_i-t_i)}{t^n}
@@ -4314,6 +4423,41 @@ N(t)-N(s)=[N_1(t)-N_1(s)]+[N_2(t)-N_2(s)]\sim \pi((\lambda_1+\lambda_2)(t-s))
 <p>(i) (ii) the same with definition.</p>
 <p>(iii) <span class="arithmatex">\(\forall 0\leq s&lt;t\)</span>, <span class="arithmatex">\(N_t-N_s\sim \pi(\int_s^t \lambda(\mu)d\mu)\)</span>. </p>
 </div>
+<h2 id="filtered-poisson-process">Filtered Poisson Process<a class="headerlink" href="#filtered-poisson-process" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of filtered possion process</p>
+<p>Assume stochastic process <span class="arithmatex">\(\{Y(t): t\geq 0\}\)</span> is a filtered possion process, if </p>
+<div class="arithmatex">\[
+Y(t)=\sum_{n=1}^{N(t)}W(t, S_n, X_n), \quad t\geq 0.
+\]</div>
+<p>where <span class="arithmatex">\(\{N(t): t\geq 0\}\)</span> is a possion process with parameter <span class="arithmatex">\(\lambda\)</span>, <span class="arithmatex">\(S_n\)</span> are arriving time of <span class="arithmatex">\(n\)</span>th event, <span class="arithmatex">\(\{X_n: n\geq 1\}\)</span> are mutually independent random variables, and independent with <span class="arithmatex">\(N(t)\)</span>, <span class="arithmatex">\(W(t, S_n, X_n)\)</span> are three-variable function, called <strong>response function</strong>.</p>
+</div>
+<p>Usually <span class="arithmatex">\(X_n\)</span> is the magnitude of a signal associated with <span class="arithmatex">\(n\)</span>th event, and <span class="arithmatex">\(W\)</span> represents the response of signal with magnitude <span class="arithmatex">\(X_n\)</span> at time <span class="arithmatex">\(t\)</span>, which starts from <span class="arithmatex">\(S_n\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Common form of response function</p>
+<p>We denote <span class="arithmatex">\(W(t,\tau,x)=W_0(t-\tau,x)\)</span>, then</p>
+<p>(i)</p>
+<div class="arithmatex">\[
+W_0(s,x)=\begin{cases}
+1,\quad &amp;0&lt;s&lt;x,\\
+0,\quad &amp;\text{others}.
+\end{cases}
+\]</div>
+<p>(ii)</p>
+<div class="arithmatex">\[
+W_0(s,x)=\begin{cases}
+x-s,\quad &amp;0&lt;s&lt;x,\\
+0,\quad &amp;\text{others}.
+\end{cases}
+\]</div>
+<p>(iii)</p>
+<div class="arithmatex">\[
+W_0(s,x)=\begin{cases}
+xW_1(x),\quad &amp;0\leq s,\\
+0,\quad &amp;s&lt;0.
+\end{cases}
+\]</div>
+</div>
 
 
 
@@ -4370,13 +4514,13 @@ N(t)-N(s)=[N_1(t)-N_1(s)]+[N_2(t)-N_2(s)]\sim \pi((\lambda_1+\lambda_2)(t-s))
         
         
           
-          <a href="../../../courses/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+          <a href="../Markov/" class="md-footer__link md-footer__link--next" aria-label="Next: Markov Process">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Content
+                Markov Process
               </div>
             </div>
             <div class="md-footer__button md-icon">

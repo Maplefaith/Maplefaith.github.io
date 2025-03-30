@@ -1774,6 +1774,8 @@
       
         
       
+        
+      
     
     
       
@@ -2017,6 +2019,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-of-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function of random variables
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2106,6 +2117,27 @@
   
   <span class="md-ellipsis">
     Possion Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Markov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markov Process
   </span>
   
 
@@ -4278,6 +4310,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-of-random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function of random variables
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4630,9 +4671,26 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 <p class="admonition-title">Region irrelevance of ME for simple RV</p>
 <p>If <span class="arithmatex">\(x_1,\cdots,x_n\in \mathbb{R}\)</span>, and <span class="arithmatex">\(\Omega_1,\cdots,\Omega_n\)</span> are finite partition of <span class="arithmatex">\(\Omega\)</span>, then</p>
 <div class="arithmatex">\[
-\mathbb{E}\left(\sum_{i=1}^n x1_{\Omega_i}\right)=\sum_{i=1}^nx_i\mathbb{P}(\Omega_i).
+\mathbb{E}\left(\sum_{i=1}^n x_i 1_{\Omega_i}\right)=\sum_{i=1}^nx_i\mathbb{P}(\Omega_i).
 \]</div>
 <p>Note here <span class="arithmatex">\(\sum\limits_{i=1}^n\mathbb{P}(\Omega_n)=1\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="mathematical-expectation-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="mathematical-expectation-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use the intersection to achieve transition from partition of range to partition os definition domain. Let <span class="arithmatex">\(\xi=\sum_i x_i 1_{\Omega_i}\)</span>, then</p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{E}\xi&amp;=\sum_{y\in R(\xi)}y\mathbb{P}(\xi=y)\\
+&amp;=\sum_{y\in R(\xi)} y\sum_{i=1}^n \mathbb{P}(\xi=y, \Omega_i)\\
+&amp;=\sum_{i=1}^n\sum_{y\in R(\xi)} y \mathbb{P}(\xi=y, \Omega_i)\\
+&amp;=\sum_{i=1}^n x_i \mathbb{P}(\xi=x_i, \Omega_i)\quad \text{ for } j\neq i, \mathbb{P}(\xi=x_j, \Omega_i)=0\\
+&amp;=\sum_{i=1}^n x_i \mathbb{P}(\Omega_i).
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
 </div>
 <p><a id="Properties-of-simple-RV"> </a></p>
 <div class="admonition success">
@@ -4670,7 +4728,7 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 <p>(ii) If a sequence of non-negative random variables <span class="arithmatex">\(\{\xi_n\}_{n\geq 1}\)</span> monotinically increase and converge to <span class="arithmatex">\(\xi\)</span>, then <span class="arithmatex">\(\lim\limits_{n\rightarrow\infty}\mathbb{E}\xi_n=\mathbb{E}\xi\)</span>.</p>
 <p>(iii) Non-negative random variables could always be represented by the limit of s sequence of non-negative random variables.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="mathematical-expectation-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="mathematical-expectation-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="mathematical-expectation-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="mathematical-expectation-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4737,6 +4795,13 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 \mathbb{E}(\xi)=\sum_{x\in R(\xi)}x\mathbb{P}(\xi=x)&lt;\infty.
 \]</div>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="calculations-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="calculations-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using Levy Theorem. Note <span class="arithmatex">\(\xi&gt;0\)</span>, <span class="arithmatex">\(R(\xi)=\{x_n\}_{n\geq 1}\)</span>, so <span class="arithmatex">\(\xi_n=\sum_{i=1}^n x_i 1_{\{\xi=x_i\}}\nearrow \xi\)</span>.</p>
+</div>
+</div>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Corollary: ME for function of discrete random variable</p>
 <p>Assume <span class="arithmatex">\(\xi\)</span> is a discrete random variable, and <span class="arithmatex">\(\phi:\mathbb{R}\rightarrow \mathbb{R}\)</span>. Then <span class="arithmatex">\(\phi(\xi)\)</span> is integrable, iff</p>
@@ -4748,11 +4813,23 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 \mathbb{E}\phi(\xi)=\sum_{x\in R(\xi)}\phi(x)\mathbb{P}(\xi=x).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="calculations-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="calculations-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="calculations-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="calculations-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Easy to show that <span class="arithmatex">\(\phi(\xi)\)</span> is also a discrete random variable. 
-<p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+<p>Easy to show that <span class="arithmatex">\(\phi(\xi)\)</span> is also a discrete random variable. <span class="arithmatex">\(\{\phi^{-1}(\{y\}): y\in R(\phi(\xi))\}\)</span> is a partition of <span class="arithmatex">\(R(\xi)\)</span>. So for <span class="arithmatex">\(y\in R(\phi(\xi))\)</span>,</p>
+<div class="arithmatex">\[
+\mathbb{P}(\phi(\xi)=y)=\sum_{x\in \phi^{-1}(y)}\mathbb{P}(\xi=x).
+\]</div>
+<p>Since </p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{x\in R(\xi)}|\phi(x)|\mathbb{P}(\xi=x)&amp;=\sum_{y\in R(\phi(\xi))}\sum_{x\in \phi^{-1}(y)}|\phi(x)|\mathbb{P}(\xi=x)\quad \text{ using partition of }R(\xi)\\
+&amp;=\sum_{y\in R(\phi(\xi))}|y| \sum_{x\in \phi^{-1}(y)}\mathbb{P}(\xi=x)\\
+&amp;=\sum_{y\in R(\phi(\xi))}|y|\mathbb{P}(\phi(\xi)=y)&lt;\infty.
+\end{align*}
+\]</div>
+<p>So actual integral without absolute sign, would follow inversely.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
@@ -4762,6 +4839,32 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 <div class="arithmatex">\[
 \mathbb{E}\phi(\xi)=\int_\mathbb{R}\phi(x)dF(x).
 \]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="calculations-proof_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="calculations-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Assume <span class="arithmatex">\(\phi\geq 0\)</span>. We first prove in finite intervals <span class="arithmatex">\([a,b]\)</span>. </p>
+<p>(Actually we could only prove in measurable function) Assume $\Delta: a=x_1&lt;\cdots&lt;x_n=b $ is a partition of <span class="arithmatex">\([a,b]\)</span>, let <span class="arithmatex">\(m_i=\inf\limits_{x\in(x_{-1},x_{i}]}\phi\)</span>, <span class="arithmatex">\(g^\Delta:=\sum\limits_{i=1}^n m_i 1_{(x_{i-1},x_i]}\)</span>, <span class="arithmatex">\(\lambda=\max\limits_{1\leq i\leq n}{|x_{i}-x_{i-1}|}\)</span>. So</p>
+<div class="arithmatex">\[
+g^\Delta\rightarrow \phi\cdot 1_{(a,b]} \quad(\lambda\rightarrow 0)
+\]</div>
+<p>so </p>
+<div class="arithmatex">\[
+g^\Delta (\xi) \rightarrow \phi(\xi)\cdot 1_{(a,b]}(\xi)\quad (\lambda\rightarrow 0)
+\]</div>
+<p>Since <span class="arithmatex">\(g^\Delta (\xi)\)</span> is a simple random variable, then its limit is also random variable and </p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{E}\phi(\xi)\cdot 1_{(a,b]}(\xi)&amp;=\lim_{\lambda\rightarrow 0}\mathbb{E}g^\Delta (\xi)\\
+&amp;=\lim_{\lambda\rightarrow 0}\sum_{i=1}^n m_i \mathbb{E} 1_{(x_{i-1},x_i]}(\xi)\\
+&amp;=\lim_{\lambda\rightarrow 0} \sum_{i=1}^n m_i \mathbb{P}(x_{i-1}&lt;\xi\leq x_i)\\
+&amp;=\lim_{\lambda\rightarrow 0} \sum_{i=1}^n m_i (F(x_i)-F(x_{i-1}))=\int_{(a,b]} \phi(x)dF(x).
+\end{align*}
+\]</div>
+<p>Then for <span class="arithmatex">\(\mathbb{R}\)</span>, we use <span class="arithmatex">\(\phi(\xi)\cdot 1_{(-n,n]}(\xi)\nearrow \phi(\xi)\)</span>, and let <span class="arithmatex">\(n\rightarrow \infty\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
 </div>
 <h3 id="variance">Variance<a class="headerlink" href="#variance" title="Permanent link">&para;</a></h3>
 <p>The following inequation is essentially the same as we have discussed in Real analysis.
@@ -4773,7 +4876,7 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 \mathbb{P}(|\xi|&gt;m)\leq \frac{1}{m^\alpha}\mathbb{E}|\xi|^\alpha. 
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="variance-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="variance-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="variance-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="variance-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By definition</p>
@@ -4790,7 +4893,7 @@ F_\xi(x):=\mathbb{P}(\xi\leq x)
 |\mathbb{E}\xi\eta|^2\leq \mathbb{E}\xi^2\cdot \mathbb{E}\eta^2.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="variance-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="variance-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="variance-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="variance-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Just as the most popular method, i.e. using quadratic function.</p>
@@ -4818,7 +4921,7 @@ D\xi:=\mathbb{E}(\xi-\mathbb{E}\xi)^2.
 \]</div>
 <p>which means that <span class="arithmatex">\(\eta_n=\frac{\xi_n}{n}\)</span> converges to <span class="arithmatex">\(p\)</span> in a sense of probability.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="bernoullis-law-of-large-numbers-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="bernoullis-law-of-large-numbers-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="bernoullis-law-of-large-numbers-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="bernoullis-law-of-large-numbers-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using <a href="#Chebyshev-Inequation">Chebyshev Inequation</a>.</p>
@@ -4907,7 +5010,7 @@ f^{-1}\left(\bigcup_{\lambda\in\Lambda}B_\lambda\right)&amp;=\bigcup_{\lambda\in
 \]</div>
 <p>to be the inverse of family set <span class="arithmatex">\(\mathscr{B}_0\)</span>. Then if <span class="arithmatex">\(\mathscr{B}_0\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra, then <span class="arithmatex">\(\xi^{-1}(\mathscr{B}_0)\)</span> is also a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="measurability-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="measurability-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="measurability-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="measurability-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using the properties of inverse, and transform the problem into image.</p>
@@ -4921,7 +5024,7 @@ f^{-1}\left(\bigcup_{\lambda\in\Lambda}B_\lambda\right)&amp;=\bigcup_{\lambda\in
 \xi^{-1}(\mathscr{B})\subset \mathscr{F}.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="measurability-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="measurability-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="measurability-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="measurability-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4990,7 +5093,7 @@ f^{-1}\left(\bigcup_{\lambda\in\Lambda}B_\lambda\right)&amp;=\bigcup_{\lambda\in
 <p class="admonition-title">Theorem for achievement of DF</p>
 <p>An arbitrary distribution function <span class="arithmatex">\(F\)</span> on <span class="arithmatex">\(\mathbb{R}\)</span> could be achieved.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="achievement-of-distribution-function-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="achievement-of-distribution-function-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="achievement-of-distribution-function-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="achievement-of-distribution-function-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using generalized inverse. The above proof is not applicable to multi-dimension distribution function.</p>
@@ -5017,9 +5120,13 @@ F(x)=\int_{-\infty}^x f(t)dt.
 <h2 id="random-vector">Random Vector<a class="headerlink" href="#random-vector" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Definition of joint distribution function</p>
-<p>A joint distribution function of random vector <span class="arithmatex">\(X=(\xi_1,\cdot,\xi_n)\)</span> is deinfed by</p>
+<p>A joint distribution function of random vector <span class="arithmatex">\(X=(\xi_1,\cdot,\xi_n)\)</span> is defined by</p>
 <div class="arithmatex">\[
 F_X(x_1,\cdots,x_n)=\mathbb{P}(\xi_1\leq x_1,\cdots,\xi_n\leq x_n).
+\]</div>
+<p>if <span class="arithmatex">\(\phi\)</span> is a continuous function on <span class="arithmatex">\(\mathbb{R}^n\)</span>, and <span class="arithmatex">\(\phi(X)\)</span> is integrable, then </p>
+<div class="arithmatex">\[
+\mathbb{E}\phi(X)=\int_{\mathbb{R}^n}\phi(x_1,\cdots,x_n)d_n F(x_1,\cdots,x_n).
 \]</div>
 </div>
 <div class="admonition success">
@@ -5083,7 +5190,7 @@ F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
 <p class="admonition-title">Properties of Covariance Matrix of a random vector <span class="arithmatex">\(X\)</span></p>
 <p>Assume cov<span class="arithmatex">\((X,X)\)</span> is a covariance matrix of <span class="arithmatex">\(X=(\xi_1,\cdots,\xi_n)\)</span>, then cov<span class="arithmatex">\((X,X)\)</span> is a symmetric non-negative definite matrix.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="covariance-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="covariance-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="covariance-proof" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="covariance-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(\forall (x_1,\cdots,x_n)\in\mathbb{R}^n\)</span>, </p>
@@ -5092,6 +5199,38 @@ F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
 \]</div>
 </div>
 </div>
+</div>
+<h3 id="function-of-random-variables">Function of random variables<a class="headerlink" href="#function-of-random-variables" title="Permanent link">&para;</a></h3>
+<p>We focus on random variables with density functions. </p>
+<div class="admonition success">
+<p class="admonition-title">Fubini Theorem</p>
+<p>For Borel measurable function <span class="arithmatex">\(h\)</span> defined on <span class="arithmatex">\(\mathbb{R}\times \mathbb{R}\)</span>, we have</p>
+<div class="arithmatex">\[
+\int_{\mathbb{R}^2}h(x,y) dF_\xi(x) dF_\eta(y)=\int_{\mathbb{R}}dF_\xi(x) \int_{\mathbb{R}} h(x,y)dF_\eta(y).
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">sum of random variable</p>
+<p>Assume <span class="arithmatex">\(\xi\)</span>, <span class="arithmatex">\(\eta\)</span> are two independent random variables, with distribution function <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(G\)</span>, then by Fubini Theorem, </p>
+<div class="arithmatex">\[
+\mathbb{P}(\xi+\eta\leq x)=\int_\mathbb{R}dG(v)\int_{u+v\leq x} dF(u)=\int_\mathbb{R} F(x-v)dG(v).
+\]</div>
+<p>If <span class="arithmatex">\(\xi\)</span> and <span class="arithmatex">\(\eta\)</span> are continuous random variables, with its density function <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(g\)</span>, then </p>
+<div class="arithmatex">\[
+\begin{align*}
+\mathbb{P}(\xi+\eta\leq x)&amp;=\int_{-\infty}^\infty g(v)dv\int_{-\infty}^{x-v} f(u) du\\
+&amp;=\int_{-\infty}^\infty g(v)dv\int_{-\infty}^{x} f(z-v) dz\\
+&amp;=\int_{-\infty}^{x} dz \int_{-\infty}^\infty g(v)f(z-v) dv
+\end{align*}
+\]</div>
+<p>so the density function of <span class="arithmatex">\(\xi+\eta\)</span> is </p>
+<div class="arithmatex">\[
+f * g (x)= \int_{-\infty}^\infty g(v)f(x-v) dv.
+\]</div>
+<p>Actually, if only one of <span class="arithmatex">\(\xi\)</span> and <span class="arithmatex">\(\eta\)</span> are continuous, let <span class="arithmatex">\(G\)</span> has a density function <span class="arithmatex">\(g\)</span>, then the density function of <span class="arithmatex">\(\xi+\eta\)</span> is</p>
+<div class="arithmatex">\[
+\int_{-\infty}^\infty g(x-v)dF(v).
+\]</div>
 </div>
 <h2 id="convergence-for-sequence-of-random-variables">Convergence for Sequence of random variables<a class="headerlink" href="#convergence-for-sequence-of-random-variables" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
@@ -5172,7 +5311,7 @@ F_X(x_1,\cdots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n).
 (\mathbb{E}|\xi|^a)^{\frac{1}{a}}\leq (\mathbb{E}|\xi|^b)^{\frac{1}{b}}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="uniform-convergence-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="uniform-convergence-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="uniform-convergence-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="uniform-convergence-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using H&ouml;lder inequation, let <span class="arithmatex">\(p=\frac{a}{b}\)</span>.</p>
