@@ -1971,6 +1971,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compound-possion-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Possion Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#filtered-poisson-process" class="md-nav__link">
     <span class="md-ellipsis">
       Filtered Poisson Process
@@ -4082,6 +4091,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compound-possion-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Possion Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#filtered-poisson-process" class="md-nav__link">
     <span class="md-ellipsis">
       Filtered Poisson Process
@@ -4108,41 +4126,53 @@
 <h1 id="possion-process">Possion Process<a class="headerlink" href="#possion-process" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Definition of Possion Process</p>
-<p>Assume Stachostic process <span class="arithmatex">\(\{X_t: t\geq 0\}\)</span> has state space <span class="arithmatex">\(S=\mathbb{N}^+\)</span>. If it satisfies</p>
-<p>(i) <span class="arithmatex">\(X(0)=0\)</span>.</p>
+<p>Assume Stachostic process <span class="arithmatex">\(\{N_t: t\geq 0\}\)</span> has state space <span class="arithmatex">\(S=\mathbb{N}^+\)</span>. If it satisfies</p>
+<p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
 <p>(ii) independent increment (additive).</p>
-<p>(iii) <span class="arithmatex">\(\forall s,t\geq 0\)</span>, <span class="arithmatex">\(X(s+t)-X(s) \sim \pi(\lambda t),\lambda&gt;0\)</span>,</p>
-<p>then we call <span class="arithmatex">\(\{X_t\}\)</span> is a <strong>Possion Process</strong>.</p>
+<p>(iii) <span class="arithmatex">\(\forall s,t\geq 0\)</span>, <span class="arithmatex">\(N(s+t)-N(s) \sim \pi(\lambda t),\lambda&gt;0\)</span>,</p>
+<p>then we call <span class="arithmatex">\(\{N_t\}\)</span> is a <strong>Possion Process</strong>.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Equivalent Definition of Possion Process</p>
-<p>Assume Stachostic process <span class="arithmatex">\(\{X_t: t\geq 0\}\)</span> is a Possion process, iff it satisfies </p>
-<p>(i) <span class="arithmatex">\(X(0)=0\)</span>.</p>
+<p>Assume Stachostic process <span class="arithmatex">\(\{N_t: t\geq 0\}\)</span> is a Possion process, iff it satisfies </p>
+<p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
 <p>(ii) independent increment (additive).</p>
-<p>(iii) <span class="arithmatex">\(\mathbb{P}(X(h+t)-X(t)=1)=\lambda h + o(h),\quad h&gt;0\)</span>.</p>
-<p>(iv) <span class="arithmatex">\(\mathbb{P}(X(h+t)-X(t)\geq 2)=o(h), \quad h&gt;0\)</span>.</p>
+<p>(iii) <span class="arithmatex">\(\mathbb{P}(N(h+t)-N(t)=1)=\lambda h + o(h),\quad h&gt;0\)</span>.</p>
+<p>(iv) <span class="arithmatex">\(\mathbb{P}(N(h+t)-N(t)\geq 2)=o(h), \quad h&gt;0\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="possion-process-proof-for-rightarrow" name="__tabbed_1" type="radio" /><input id="possion-process-proof-for-leftarrow" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="possion-process-proof-for-rightarrow">Proof for <span class="arithmatex">\(\Rightarrow\)</span></label><label for="possion-process-proof-for-leftarrow">Proof for <span class="arithmatex">\(\Leftarrow\)</span></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Easy to see. Use <span class="arithmatex">\(e^{-\lambda h}=1-\lambda h+o(h)\)</span>, we have</p>
 <div class="arithmatex">\[
-\mathbb{P}(X(h+t)-X(t)=1)=e^{-\lambda h} \frac{(\lambda h)^1}{1}=\lambda h (1-\lambda h + o(h))=\lambda h +o(h),
+\mathbb{P}(N(h+t)-N(t)=1)=e^{-\lambda h} \frac{(\lambda h)^1}{1}=\lambda h (1-\lambda h + o(h))=\lambda h +o(h),
 \]</div>
 <p>and </p>
 <div class="arithmatex">\[
 \begin{align*}
-\mathbb{P}(X(h+t)-X(t)\geq 1)&amp;= 1-\mathbb{P}(X(h+t)-X(t)\leq 1)\\
+\mathbb{P}(N(h+t)-N(t)\geq 1)&amp;= 1-\mathbb{P}(N(h+t)-N(t)\leq 1)\\
 &amp;=1-e^{-\lambda h}(1+\lambda h)\\
 &amp;=1-(1-\lambda h + o(h))(1+\lambda h)=o(h).
 \end{align*}
 \]</div>
 </div>
 <div class="tabbed-block">
-<p>It is a little hard to prove this direction. For we have to show that <span class="arithmatex">\(X(t+h)-X(t)\)</span> is a Possion distribution.</p>
+<p>It is a little hard to prove this direction. For we have to show that <span class="arithmatex">\(N(t+h)-N(t)\)</span> is a Possion distribution.</p>
 </div>
 </div>
 </div>
+<p>Notice the following theorem for continuous random variables.</p>
+<div class="admonition success">
+<p class="admonition-title">Probability at a point equals zero</p>
+<div class="arithmatex">\[
+\begin{align*}
+P(N_{(t,t+h]}=0)&amp;=P(N_{[0,t+h]}-N_{[0,t]}=0)\\
+&amp;=1-\lambda h +o(h)\rightarrow 1 (h\rightarrow 0).
+\end{align*}
+\]</div>
+<p>which means <span class="arithmatex">\(P(N_{[0,t)}=N_{[0,t]})=1\)</span>.</p>
+</div>
+<p>Later, we focus on the number on intervals without considering carefully about the boundary.</p>
 <h2 id="mathematical-characteristic">Mathematical Characteristic<a class="headerlink" href="#mathematical-characteristic" title="Permanent link">&para;</a></h2>
 <p>Here we use generating function to deduce its mathematical characteristics. Recall that for random variable <span class="arithmatex">\(\xi\)</span> which follows Possion distribution with para <span class="arithmatex">\(\lambda\)</span>, we have </p>
 <div class="arithmatex">\[
@@ -4189,17 +4219,30 @@ C_N(t,s)&amp;=E(N_tN_s)-E(N_t)E(N_s)\\
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="process-of-interval-time-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="process-of-interval-time-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>For <span class="arithmatex">\(T_1\)</span>, we have a simple solution. For <span class="arithmatex">\(t\leq 0\)</span>, <span class="arithmatex">\(P(T_1&lt;t)=0\)</span>; for <span class="arithmatex">\(t&gt;0\)</span>, </p>
+<ul>
+<li>For <span class="arithmatex">\(T_1\)</span>, we have a simple solution. For <span class="arithmatex">\(t\leq 0\)</span>, <span class="arithmatex">\(P(T_1&lt;t)=0\)</span>; for <span class="arithmatex">\(t&gt;0\)</span>, </li>
+</ul>
 <div class="arithmatex">\[
-P(T_1&lt;t)=P(T_1\leq t)=P(N_t\geq 1)=1-P(N_t=0)=1-e^{-\lambda t},
+P(T_1\leq t)=P(N_{[0,t)}\geq 1)=P(N_{[0,t]}\geq 1)=1-P(N_{[0,t]}=0)=1-e^{-\lambda t},
 \]</div>
-<p>so <span class="arithmatex">\(f(T_1&lt;t)=\lambda e^{-\lambda t}\)</span>, then <span class="arithmatex">\(T_1\)</span> is an exponential distribution.</p>
-<p>For <span class="arithmatex">\(T_n\)</span>, we have two methods. The first one, is using the conditional probability to show that </p>
+<p>so <span class="arithmatex">\(f(T_1\leq t)=\lambda e^{-\lambda t}\)</span>, then <span class="arithmatex">\(T_1\)</span> is an exponential distribution.</p>
+<ul>
+<li>For <span class="arithmatex">\(T_n\)</span>, we have two methods. The first one, is using the conditional probability to show that </li>
+</ul>
 <div class="arithmatex">\[
-P(T_n&lt;t \mid T_1=\tau_1, \cdots, T_{n-1}=\tau_{n-1})
+P(T_n\leq t \mid T_1=\tau_1, \cdots, T_{n-1}=\tau_{n-1})
 \]</div>
-<p>is irrelevant to <span class="arithmatex">\(\tau_i\)</span>, <span class="arithmatex">\(i=1,\cdots,n-1\)</span>, so that they are mutually independent.</p>
-<p>The second method is to use induction. The logic is similar.</p>
+<p>is irrelevant to <span class="arithmatex">\(\tau_i\)</span>, <span class="arithmatex">\(i=1,\cdots,n-1\)</span>, so that they are mutually independent. Actually, For <span class="arithmatex">\(t, s&gt;0\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+P(T_n&gt;t \mid S_{n-1}=s)&amp;=P(N_{[0,s+t]}\leq n-1\mid N_{[0,s]}=n-1, N_{[0,s)}\leq n-2)\\
+&amp;=P(N_{(s,s+t]}=0)\\
+&amp;=P(N_{[s,s+t]}=0)=e^{-\lambda t}.
+\end{align*}
+\]</div>
+<ul>
+<li>The second method is to use induction. The logic is similar.</li>
+</ul>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
@@ -4217,14 +4260,27 @@ N_t:=\max\{n\geq 1: \sum_{i=1}^n T_i\leq t\}.
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We would use <a href="#Theorem of arriving time">Theorem of arriving time</a>. <span class="arithmatex">\(S_n=\sum_{i=1}^n T_i\)</span>.</p>
-<p>For <span class="arithmatex">\(t&gt;0\)</span>,</p>
+<p>For <span class="arithmatex">\(t&gt;0\)</span>, we use total probability formula in continuous form,</p>
 <div class="arithmatex">\[
 \begin{align*}
 P(N_t=k)&amp;=P(S_k\leq t&lt;S_{k+1})\\
-&amp;=P(S_k\leq t&lt;s \mid S_{k+1}=s)P(S_{k+1}=s)\\
+&amp;=P(S_{k}\leq t, t&lt; T_{k+1}+S_k)\\
+&amp;=\int_{0}^t P(t&lt;T_{k+1}+s \mid S_{k}=s)f_{S_k}(s)ds\quad \text{tpf for } S_k\in[0,t]\\
+&amp;=\int_{0}^tP(t-s&lt;T_{k+1})f_{S_k}(s)ds \quad \text{independence}\\
+&amp;=\int_{0}^t e^{-\lambda (t-s)}\frac{\lambda^n s^{k-1}}{(k-1)!}e^{-\lambda s}ds\\
+&amp;=e^{-\lambda t}\frac{\lambda^k t^{k}}{k!}
 \end{align*}
 \]</div>
-<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+<p>which is exactly Possion distribution with para <span class="arithmatex">\(\lambda t\)</span>.</p>
+<p>Then we prove that <span class="arithmatex">\(N_t\)</span> satisfies independent increment and stationary increment. For <span class="arithmatex">\(t,s\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+P(N_t-N_s=n)&amp;=\sum_{k=1}^\infty P(N_t-N_s=n, N_s=k)\\
+&amp;=\sum_{k=1}^\infty P(N_t=n+k, N_s=k)
+\end{align*}
+\]</div>
+<p>still follows Possion distribution.
+<p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
@@ -4240,7 +4296,7 @@ f_{S_n}(t)=\begin{cases}
 \end{cases}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="process-of-arriving-time-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="process-of-arriving-time-proof-using-characteristic-func" name="__tabbed_4" type="radio" /><input id="process-of-arriving-time-proof-using-distribution-func" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof-using-characteristic-func">Proof using characteristic func</label><label for="process-of-arriving-time-proof-using-distribution-func">Proof using distribution func</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By <span class="arithmatex">\(S_n=\sum_{i=1}^n T_i\)</span>, and <span class="arithmatex">\(\{T_i\}\)</span> are independent nutually and follow exponential distribution of a mean <span class="arithmatex">\(1/\lambda\)</span>, then using characteristic function</p>
@@ -4248,6 +4304,26 @@ f_{S_n}(t)=\begin{cases}
 \phi_{S_n}(u)=E(e^{juS_n})=E(e^{ju\sum_i^n T_i})=\prod_{i=1}^n E(e^{ju T_i})=\prod_{i=1}^n \left(1-\frac{ju}{\lambda}\right)^{-1}=\left(1-\frac{ju}{\lambda}\right)^{-n}
 \]</div>
 <p>which is the characteristic function of a <span class="arithmatex">\(\Gamma\)</span> distribution.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p>For <span class="arithmatex">\(t&gt;0\)</span>, we consider </p>
+<div class="arithmatex">\[
+\begin{align*}
+P(S_n\leq t)&amp;=1-P(S_n&gt;t)\\
+&amp;=1-P(N_t\leq n-1)\\
+&amp;=1-\sum_{i=0}^{n-1}P(N_t=i)\\
+&amp;=1-\sum_{i=0}^{n-1}\frac{e^{-\lambda t}(\lambda t)^{i}}{i!}
+\end{align*}
+\]</div>
+<p>taking derivative, and we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+f_{S_n}(t)&amp;=-e^{-\lambda t}\sum_{i=0}^{n-1}\left(\frac{-\lambda^{i+1}t^i}{i!}+\frac{\lambda^it^{i-1}}{(i-1)!}\right)\quad\text{denote }t^{0-1}=0 \\
+&amp;=e^{-\lambda t}\sum_{i=0}^{n-1}\left(\frac{\lambda^{i+1}t^i}{i!}-\frac{\lambda^it^{i-1}}{(i-1)!}\right)\\
+&amp;=e^{-\lambda t}\frac{\lambda^n t^{n-1}}{(n-1)!}.
+\end{align*}
+\]</div>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
@@ -4267,13 +4343,21 @@ P&amp;(N_{t_1}=k_1,\cdots, N_{t_n}=k_n)\\
 \]</div>
 <p>(ii) <strong>Looking backward</strong>.  <span class="arithmatex">\(\forall 0&lt;x&lt;t\)</span> and <span class="arithmatex">\(1\leq j\leq n\)</span>, we have</p>
 <div class="arithmatex">\[
-P(S_j&lt;x \mid N_{t}=n)=\sum_{k=j}^nC_m^k \left(\frac{x}{t}\right)^k\left(1-\frac{x}{t}\right)^{n-k}.
+P(S_j&lt;x \mid N_{t}=n)=\sum_{k=j}^nC_n^k \left(\frac{x}{t}\right)^k\left(1-\frac{x}{t}\right)^{n-k}.
 \]</div>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="process-of-arriving-time-proof-for-ii" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof-for-ii">Proof for (ii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Use the formula of conditional probability and apply the result of (i).</p>
+<div class="arithmatex">\[
+\begin{align*}
+P(S_j&lt;x\mid N(t)=n)&amp;=\frac{P(S_j\leq x, N(t)=n)}{P(N(t)=n)}\\
+&amp;=P(N(x)\geq j, N(t)=n)/P(N(t)=n)\\
+&amp;=\sum_{k=j}^n \frac{(\lambda x)^k}{k!} \frac{[\lambda(t-x)]^{n-k}}{(n-k)!}/\frac{(\lambda t)^n}{n!}\\
+&amp;=\sum_{k=j}^n C_n^k \left(\frac{x}{t}\right)^k\left(1-\frac{x}{t}\right)^k.
+\end{align*}
+\]</div>
 </div>
 </div>
 </div>
@@ -4291,7 +4375,7 @@ n! f(x_1)\cdots f(x_2),\quad &amp;x_1&lt;x_2&lt;\cdots&lt;x_n\\
 \end{cases}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="process-of-arriving-time-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="process-of-arriving-time-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By definition of density function.</p>
@@ -4317,7 +4401,7 @@ P&amp;(x_i&lt;X_{(i)}\leq x_i+\varepsilon_i, \forall i\in [1,n])\\
 \]</div>
 <p>where <span class="arithmatex">\(U_{(1)},\cdots,U_{(n)}\)</span> are order statistics which are mutually independent and follow the same uniform distribution <span class="arithmatex">\(U(0,t)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="process-of-arriving-time-proof_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="process-of-arriving-time-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="process-of-arriving-time-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(\forall n\in \mathbb{N}^+\)</span>, <span class="arithmatex">\(t_1&lt;s_1&lt;t_2&lt;s_2&lt;\cdots&lt;t_n&lt;s_n\)</span>, we have</p>
@@ -4421,7 +4505,139 @@ N(t)-N(s)=[N_1(t)-N_1(s)]+[N_2(t)-N_2(s)]\sim \pi((\lambda_1+\lambda_2)(t-s))
 <p class="admonition-title">Theorem of Nonhomogeneous Poisson Process</p>
 <p>A counting process is called a nonhomogeneous Possion process, with an intensity of <span class="arithmatex">\(\lambda(t)\)</span>, iff</p>
 <p>(i) (ii) the same with definition.</p>
-<p>(iii) <span class="arithmatex">\(\forall 0\leq s&lt;t\)</span>, <span class="arithmatex">\(N_t-N_s\sim \pi(\int_s^t \lambda(\mu)d\mu)\)</span>. </p>
+<p>(iii) <span class="arithmatex">\(\forall 0\leq s&lt;t\)</span>, </p>
+<div class="arithmatex">\[
+N_t-N_s\sim \pi\left(\int_s^t \lambda(\tau)d\tau\right).
+\]</div>
+</div>
+<p>Apparently, nonhomogeneous Possion process does not follow stationary increment, but still follow independent increment.</p>
+<div class="admonition success">
+<p class="admonition-title">Time transfer</p>
+<p>If <span class="arithmatex">\(\{Y(t)\}\)</span> is a homogeneous Possion process with para <span class="arithmatex">\(\lambda=1\)</span>, <span class="arithmatex">\(\Lambda(t)=\int_0^t \lambda(\tau)d\tau\)</span>, then </p>
+<div class="arithmatex">\[
+X(t)=Y(\Lambda(t)),\quad t\geq 0,
+\]</div>
+<p>is a nonhomogeneous Possion process, with intensity function <span class="arithmatex">\(\lambda(t)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="nonhomogeneous-poisson-process-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="nonhomogeneous-poisson-process-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Note for <span class="arithmatex">\(t,s\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+X(t)-X(s)&amp;=Y(\Lambda(t))-Y(\Lambda(s))\\
+&amp;\sim \pi \left[1\cdot(\Lambda(t)-\Lambda(s))\right]\\
+&amp;=\pi\left(\int_s^t \lambda(\tau)d\tau\right).
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="compound-possion-process">Compound Possion Process<a class="headerlink" href="#compound-possion-process" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Compound Possion process</p>
+<p>Assume <span class="arithmatex">\(N_t\)</span> is a Possion process with para <span class="arithmatex">\(\lambda\)</span>. We call the following process <span class="arithmatex">\(Y(t)\)</span> <strong>compound Possion Process</strong>, if </p>
+<div class="arithmatex">\[
+Y(t):=\sum_{n=1}^{N(t)}X_n
+\]</div>
+<p>where <span class="arithmatex">\(\{X_n\}\)</span> following the same distribution, are independent mutually and with <span class="arithmatex">\(N(t)\)</span>, which is usually called <strong>Jump Sizes</strong>. </p>
+</div>
+<p><a id="Distribution of compound Possion process"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Distribution of compound Possion process</p>
+<p>For <span class="arithmatex">\(t,s\geq 0\)</span>, the characteristic function of <span class="arithmatex">\(Y(t)-Y(s)\)</span> is </p>
+<div class="arithmatex">\[
+\phi_{Y(t)-Y(s)}(u)=e^{-\lambda(t-s)}e^{\lambda (t-s)\phi_{X_1}(u)}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="compound-possion-process-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="compound-possion-process-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+\phi_{Y(t)-Y(s)}&amp;=E(e^{iu[Y(t)-Y(s)]})\\
+\displaystyle &amp;=E\left(e^{iu\left(\sum\limits_{i=N(s)}^{N(t)} X_i\right)}\right)\\
+&amp;=\sum_{n=1}^\infty E\left(e^{iu\left(\sum\limits_{i=1}^{n} X_i\right)}\right) P(N(t)-N(s)=n)\\
+&amp;=\sum_{n=1}^\infty [\phi_{X_1}(u)]^n \frac{e^{-\lambda(t-s)}[\lambda(t-s)]^n}{n!}\\
+&amp;=e^{\lambda(t-s)(\phi_{X_1}(u)-1)}
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of Compound Possion Process</p>
+<p><span class="arithmatex">\(Y(t)\)</span> is stationary increment and independent incerment.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="compound-possion-process-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="compound-possion-process-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Independent increment. Easy to see, by definition. <span class="arithmatex">\(\forall n\)</span>, <span class="arithmatex">\(0&lt;t_1&lt;t_2&lt;\cdots&lt;t_n\)</span>, </li>
+</ul>
+<div class="arithmatex">\[
+Y(t_2)-Y(t_1),\quad \cdots, \quad Y(t_n)-Y(t_{n-1})
+\]</div>
+<p>i.e.</p>
+<div class="arithmatex">\[
+\sum_{i=N(t_1)}^{N(t_2)}X_i,\quad \cdots, \quad\sum_{i=N(t_{n-1})}^{N(t_n)}X_i
+\]</div>
+<p>are mutually independent because none of the above random variable has a common <span class="arithmatex">\(X_n\)</span>.</p>
+<ul>
+<li>Stationary increment. Use Characteristic function. From <a href="#Distribution of compound Possion process">Distribution of compound Possion process</a>, we could see that its characteristic function is only dependent on <span class="arithmatex">\(t-s\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">ME of Compound Possion Process</p>
+<p>If <span class="arithmatex">\(E(X_1^2)&lt;\infty\)</span>, denote <span class="arithmatex">\(\mu=E(X_1)\)</span>, <span class="arithmatex">\(\sigma^2=D(X_1)\)</span>, then </p>
+<div class="arithmatex">\[
+E(Y(t))=\lambda t E(X_1)=\mu \lambda t, \quad D(Y(t))=\lambda t E(X_1^2)=(\mu^2+\sigma^2)\lambda t,
+\]</div>
+<p>and for <span class="arithmatex">\(t,s\)</span>,</p>
+<div class="arithmatex">\[
+R_Y(t,s)=E(X_1^2)[\lambda \min(t,s)+\lambda^2ts],\quad C_Y(t,s)=E(X_1^2)\lambda \min(t,s).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="compound-possion-process-proof_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="compound-possion-process-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+E(Y(t))&amp;=E\left(\sum_{n=0}^{N(t)}X_n\right)\\
+&amp;=E\left(E\left(\sum_{n=0}^{N(t)}X_n \mid N(t)\right)\right)\\
+&amp;=\sum_{n=0}^\infty E\left(\sum_{i=1}^{n}X_i \mid N(t)=n\right)P(N(t)=n)\\
+&amp;=\sum_{n=0}^\infty nE(X_1)\frac{e^{-\lambda t}(\lambda t)^n}{n!}\\
+&amp;=E(X_1)e^{-\lambda t} \lambda t \sum_{n=1}^\infty \frac{(\lambda t)^{n-1}}{(n-1)!}\\
+&amp;=E(X_1)\lambda t.
+\end{align*}
+\]</div>
+<p>Similarly, </p>
+<div class="arithmatex">\[
+\begin{align*}
+E(Y^2(t))
+\end{align*}
+\]</div>
+<p>or use conditional variance</p>
+<div class="arithmatex">\[
+\begin{align*}
+D(Y(t))&amp;=E(D(Y(t)\mid N(t)))+D(E(Y(t)\mid N(t)))\\
+&amp;=\sum_{n=0}^\infty D\left(\sum_{i=1}^{n}X_i \mid N(t)=n\right)P(N(t)=n)+D(N(t)E(X_1))\\
+&amp;=\sum_{n=0}^\infty n\sigma^2P(N(t)=n) + E^2(X_1)\lambda t\\
+&amp;=\sigma^2\lambda t+\mu^2 \lambda t.
+\end{align*}
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+\begin{align*}
+R_Y(t,s)&amp;=E(Y(t)Y(s))\\
+&amp;=E\left( \right)
+\end{align*}
+\]</div>
+</div>
+</div>
 </div>
 <h2 id="filtered-poisson-process">Filtered Poisson Process<a class="headerlink" href="#filtered-poisson-process" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
