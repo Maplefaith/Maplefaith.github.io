@@ -3214,6 +3214,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#structure-of-a-manipulators-dynamic-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure of a manipulator's dynamic equations
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4141,6 +4150,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#structure-of-a-manipulators-dynamic-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure of a manipulator's dynamic equations
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4699,6 +4717,44 @@ F_i&amp;=m\dot{v}_{C_i},\\
 \end{align*}
 \]</div>
 <p>For revolute, <span class="arithmatex">\(\tau_i={^in_i^T}{^i\hat{Z}_i}\)</span>, and for prismatic, <span class="arithmatex">\(\tau_i={^if_i^T}{^i\hat{Z}_i}\)</span>.</p>
+</div>
+<h2 id="structure-of-a-manipulators-dynamic-equations">Structure of a manipulator's dynamic equations<a class="headerlink" href="#structure-of-a-manipulators-dynamic-equations" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">State-space equation</p>
+<p>The above Newton-Euler equations apply for any manipulators, and this yields a dynamic equation which could be written in the following form</p>
+<div class="arithmatex">\[
+\begin{align}
+\tau=M(\Theta)\ddot{\Theta}+V(\Theta,\dot{\Theta})\dot{\Theta}+G(\Theta),\label{state-space}
+\end{align}
+\]</div>
+<p>or for every row with <span class="arithmatex">\(\Theta=(\theta_1,\cdots,\theta_n)^T\)</span>,</p>
+<div class="arithmatex">\[
+\tau_i=\sum_{j=1}^N m_{ij} \ddot{\theta_j}+\sum_{j,k=1}^Nc_{kji}\dot{\theta}_{k}\dot{\theta}_{j}-\sum_{j=1}^N m_j {^0\pmb{g}^T}\frac{\partial O_{C_j}}{\partial \theta_i}
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+c_{kji}=\frac{1}{2}\left(\frac{\partial m_{ij}}{\partial \theta_k} + \frac{\partial m_{ik}}{\partial \theta_j}-\frac{\partial m_{kj}}{\partial \theta_i} \right)=c_{jki}
+\]</div>
+<p>are called the first Christoffel sign, <span class="arithmatex">\(j\)</span> and <span class="arithmatex">\(k\)</span> are of equal state. </p>
+<p>equation <span class="arithmatex">\(\ref{state-space}\)</span> are called <strong>state-space equation</strong>, <span class="arithmatex">\(M(\Theta)_{N\times N}\)</span> is called <strong>mass matrix</strong> of the manipulator, <span class="arithmatex">\(V(\Theta,\dot{\Theta})_{n\times 1}\)</span> is called vector of centrifugal and Coriolis terms, which is where the main idea of the formula come from.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Configuration-space equation</p>
+<p>Rewrite the velocity-dependent term <span class="arithmatex">\(V(\Theta, \dot{\Theta})\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\tau=M(\Theta)\ddot{\Theta}+B(\Theta)[\dot{\Theta}\dot{\Theta}]+C(\Theta)\dot{\Theta}^2+G(\Theta),\label{configuration-space}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(B(\Theta)_{n\times n(n-1)/2}\)</span> is a matrix of Coriolis coefficients, <span class="arithmatex">\([\dot{\Theta}\dot{\Theta}]_{n(n-1)/2\times 1}\)</span> is a vector of joint velocity products given by</p>
+<div class="arithmatex">\[
+[\dot{\Theta}\dot{\Theta}]=[\dot{\theta}_1\dot{\theta}_2, \dot{\theta}_1\dot{\theta}_3,\cdots,\dot{\theta}_{n-1}\dot{\theta}_n]^T.
+\]</div>
+<p><span class="arithmatex">\(C(\Theta)_{n\times n}\)</span> is an matrix of centrifugal coefficients, and <span class="arithmatex">\(\dot{\Theta}^2_{n\times 1}\)</span> is a vector given by</p>
+<div class="arithmatex">\[
+\dot{\Theta}^2=[\dot{\theta}_1^2, \dot{\theta}_2^2,\cdots, \dot{\theta}_n^2].
+\]</div>
+<p>Equation <span class="arithmatex">\(\ref{configuration-space}\)</span> is called configuration-space equation because of <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(C\)</span>.</p>
 </div>
 
 
