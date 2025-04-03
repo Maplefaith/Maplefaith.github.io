@@ -14,7 +14,7 @@
         <link rel="prev" href="../Velocities_Forces/">
       
       
-        <link rel="next" href="../../Modern_Control_Theory/MCT/">
+        <link rel="next" href="../Motion_Control/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -2960,6 +2960,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -3223,10 +3227,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dynamics-in-cartesian-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamics in Cartesian Space
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Motion_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motion Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Force_Control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Force Control
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4159,6 +4214,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dynamics-in-cartesian-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamics in Cartesian Space
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4756,6 +4820,40 @@ c_{kji}=\frac{1}{2}\left(\frac{\partial m_{ij}}{\partial \theta_k} + \frac{\part
 \]</div>
 <p>Equation <span class="arithmatex">\(\ref{configuration-space}\)</span> is called configuration-space equation because of <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(C\)</span>.</p>
 </div>
+<h2 id="dynamics-in-cartesian-space">Dynamics in Cartesian Space<a class="headerlink" href="#dynamics-in-cartesian-space" title="Permanent link">&para;</a></h2>
+<p>From equation <span class="arithmatex">\(\ref{state-space}\)</span>, which is in joint space, we could get the corresponding result in terms of the acceleration of end-effector expressed in Cartesian space.</p>
+<div class="admonition success">
+<p class="admonition-title">Dynamics</p>
+<p>From <a href="../Velocities_Forces/#jacobians-in-the-force-domain">Force-torque relationship</a>, we know</p>
+<div class="arithmatex">\[
+\tau=J(\Theta)^T \mathcal{F}.
+\]</div>
+<p>and </p>
+<div class="arithmatex">\[
+\begin{align*}
+\dot{\mathcal{X}}&amp;=J\dot{\Theta}.\\
+\Rightarrow \quad \ddot{\mathcal{X}}&amp;=\dot{J}\dot{\Theta}+J\ddot{\Theta}\\
+\Rightarrow \quad \ddot{\Theta}&amp;=J^{-1}\ddot{\mathcal{X}}-J^{-1}\dot{J}\dot{\Theta}
+\end{align*}
+\]</div>
+<p>So equation <span class="arithmatex">\(\ref{state-space}\)</span> becomes</p>
+<div class="arithmatex">\[
+\begin{align*}
+J^{-T}\tau&amp;=J^{-T}[M(\Theta)\ddot{\Theta}+V(\Theta,\dot{\Theta})\dot{\Theta}+G(\Theta)]\\
+\mathcal{F}&amp;=J^{-T}M(\Theta)[J^{-1}\ddot{\mathcal{X}}-J^{-1}\dot{J}\dot{\Theta}]+J^{-T}V(\Theta,\dot{\Theta})\dot{\Theta}+J^{-T}G(\Theta)\\
+\mathcal{F}&amp;=J^{-T}M(\Theta)J^{-1}\ddot{\mathcal{X}}-J^{-T}J^{-1}\dot{J}\dot{\Theta}+J^{-T}V(\Theta,\dot{\Theta})\dot{\Theta}+J^{-T}G(\Theta)\\
+\mathcal{F}&amp;=M_{\mathcal{X}}(\Theta)\ddot{\mathcal{X}}+V_{\mathcal{X}}(\Theta)+G_{\mathcal{X}}(\Theta)
+\end{align*}
+\]</div>
+<p>where </p>
+<div class="arithmatex">\[
+\begin{cases}
+M_{\mathcal{X}}(\Theta)=J^{-T}M(\Theta)J^{-1}\\
+V_{\mathcal{X}}(\Theta)=-J^{-T}J^{-1}\dot{J}\dot{\Theta}+J^{-T}V(\Theta,\dot{\Theta})\dot{\Theta}\\
+G_{\mathcal{X}}(\Theta)=J^{-T}G(\Theta).
+\end{cases}
+\]</div>
+</div>
 
 
 
@@ -4812,13 +4910,13 @@ c_{kji}=\frac{1}{2}\left(\frac{\partial m_{ij}}{\partial \theta_k} + \frac{\part
         
         
           
-          <a href="../../Modern_Control_Theory/MCT/" class="md-footer__link md-footer__link--next" aria-label="Next: Modern Control Theory">
+          <a href="../Motion_Control/" class="md-footer__link md-footer__link--next" aria-label="Next: Motion Control">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Modern Control Theory
+                Motion Control
               </div>
             </div>
             <div class="md-footer__button md-icon">
