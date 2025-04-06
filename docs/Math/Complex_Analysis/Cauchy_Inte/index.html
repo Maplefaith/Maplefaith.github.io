@@ -749,9 +749,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-series-sxpansion" class="md-nav__link">
+  <a href="#power-series-expansion" class="md-nav__link">
     <span class="md-ellipsis">
-      Power series sxpansion
+      Power Series Expansion
     </span>
   </a>
   
@@ -794,6 +794,8 @@
       
         
           
+        
+      
         
       
         
@@ -858,6 +860,27 @@
   
   <span class="md-ellipsis">
     Metric Space
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/Banach_Space/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Banach Space
   </span>
   
 
@@ -4131,9 +4154,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-series-sxpansion" class="md-nav__link">
+  <a href="#power-series-expansion" class="md-nav__link">
     <span class="md-ellipsis">
-      Power series sxpansion
+      Power Series Expansion
     </span>
   </a>
   
@@ -4537,6 +4560,7 @@ f'(z),\quad &amp;\zeta=z
 </div>
 </div>
 </div>
+<p>The following theorem is amazing, called <strong>regularity</strong>.</p>
 <p><a id="Cauchy-integral-formula"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Corollary: Cauchy integral formula with Infinitely many derivatives</p>
@@ -4545,11 +4569,37 @@ f'(z),\quad &amp;\zeta=z
 <div class="arithmatex">\[
 f^{(n)}(z)=\frac{n!}{2\pi i}\int_C \frac{f(\zeta)}{(\zeta-z)^{n+1}}d\zeta.
 \]</div>
+<p>for all <span class="arithmatex">\(z\)</span> in the interior of <span class="arithmatex">\(C\)</span></p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="cauchys-integral-formula-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="cauchys-integral-formula-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>By induction.</p>
+<p>By induction on <span class="arithmatex">\(n\)</span>. The theorem holds for <span class="arithmatex">\(n=0\)</span> by Cauchy's integral formula.</p>
+<p>Assume it holds for <span class="arithmatex">\(n=k\)</span>, i.e.</p>
+<div class="arithmatex">\[
+f^{(k)}(z)=\frac{k!}{2\pi i}\int_C \frac{f(\zeta)}{(\zeta-z)^{k+1}}d\zeta.
+\]</div>
+<p>Then we have its quotient</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{f^{(k)}(z+h)-f^{(k)}(z)}{h}&amp;=\frac{k!}{2\pi i h}\int_C f(\zeta) \left[\frac{1}{(\zeta-z-h)^{k+1}} -\frac{1}{(\zeta-z)^{k+1}}\right] d\zeta.\label{quotient}
+\end{align}
+\]</div>
+<p>Notice that <span class="arithmatex">\(A^{k+1}-B^{k+1}=(A-B)\left(\sum_{i=0}^{k} A^i B^{k-i}\right)\)</span>, with </p>
+<div class="arithmatex">\[
+A-B = \frac{1}{\zeta-z-h} -\frac{1}{\zeta-z}=\frac{h}{(\zeta-z-h)(\zeta-z)}
+\]</div>
+<p>so if we choose <span class="arithmatex">\(h\)</span> small enough, then equation <span class="arithmatex">\(\ref{quotient}\)</span> becomes</p>
+<div class="arithmatex">\[
+\begin{align*}
+\lim_{h\rightarrow 0}\frac{f^{(k)}(z+h)-f^{(k)}(z)}{h}&amp;=\lim_{h\rightarrow 0}\frac{k!}{2\pi i h}\int_C f(\zeta) \frac{h}{(\zeta-z-h)(\zeta-z)} \left[\sum_{i=0}^{k} \left(\frac{1}{\zeta-z-h}\right)^i \left(\frac{1}{\zeta-z}\right)^{k-i}\right] d\zeta\\
+&amp;=\lim_{h\rightarrow 0}\frac{k!}{2\pi i}\int_C f(\zeta) \frac{1}{(\zeta-z-h)(\zeta-z)} \left[\sum_{i=0}^{k} \left(\frac{1}{\zeta-z-h}\right)^i \left(\frac{1}{\zeta-z}\right)^{k-i}\right] d\zeta\\
+&amp;=\frac{k!}{2\pi i}\int_C \lim_{h\rightarrow 0}f(\zeta) \frac{1}{(\zeta-z-h)(\zeta-z)} \left[\sum_{i=0}^{k} \left(\frac{1}{\zeta-z-h}\right)^i \left(\frac{1}{\zeta-z}\right)^{k-i}\right] d\zeta\\
+&amp;=\frac{k!}{2\pi i}\int_C \frac{1}{(\zeta-z)^2} \frac{k+1}{(\zeta-z)^{k}}d\zeta\\
+&amp;=\frac{(k+1)!}{2\pi i}\int_C \frac{f(\zeta)}{(\zeta-z)^{k+2}}d\zeta.
+\end{align*}
+\]</div>
+<p>The third "<span class="arithmatex">\(=\)</span>" holds because when <span class="arithmatex">\(h\rightarrow 0\)</span>, the integrated function converges uniformly whenever <span class="arithmatex">\(\zeta\in C\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4578,7 +4628,7 @@ f^{(n)}(z)=\frac{n!}{2\pi i}\int_C \frac{f(\zeta)}{(\zeta-z)^{n+1}}d\zeta.
 </div>
 </div>
 </div>
-<h2 id="power-series-sxpansion">Power series sxpansion<a class="headerlink" href="#power-series-sxpansion" title="Permanent link">&para;</a></h2>
+<h2 id="power-series-expansion">Power Series Expansion<a class="headerlink" href="#power-series-expansion" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
 <p class="admonition-title">Theorem of holomorphic function with power series expansion</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is holomorphic in an open set <span class="arithmatex">\(\Omega\)</span>. If <span class="arithmatex">\(D_R(z_0)\)</span> is a disc centered at <span class="arithmatex">\(z_0\)</span>, whose closure is contained in <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(f\)</span> has a power series expansion at <span class="arithmatex">\(z_0\)</span></p>
@@ -4590,7 +4640,7 @@ f(z)=\sum_{n=0}^\infty a_n (z-z_0)^n,\quad \forall z\in D_R(z_0)
 a_n=\frac{f^{(n)}(z_0)}{n!},\quad n\geq 0.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="power-series-sxpansion-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="power-series-sxpansion-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="power-series-expansion-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="power-series-expansion-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Fix <span class="arithmatex">\(z\in D\)</span>. From <a href="#cauchys-integral-formula">Cauchy's integral formula</a>, we have</p>
@@ -4623,7 +4673,7 @@ f(z)&amp;=\frac{1}{2\pi i}\int_{\partial D}\frac{f(\zeta)}{(\zeta-z_0)} \sum_{n=
 <p class="admonition-title">Liouville's Theorem</p>
 <p>If <span class="arithmatex">\(f\)</span> is entire and bounded, then <span class="arithmatex">\(f\)</span> is constant.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="power-series-sxpansion-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="power-series-sxpansion-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="power-series-expansion-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="power-series-expansion-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>For arbitrary <span class="arithmatex">\(z\in \mathbb{C}\)</span> and arbitrary <span class="arithmatex">\(R&gt;0\)</span> (D_R(z)), using <a href="#Cauchy Inequalities">Cauchy Inequalities</a></p>
@@ -4670,7 +4720,7 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 </div>
 <div class="admonition info">
 <p class="admonition-title">Definition of Analytic Continuation</p>
-<p>Given a pair of functions <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f\)</span>, which are holomorphic in region <span class="arithmatex">\(\Omega\)</span> and <span class="arithmatex">\(Omega'\)</span>, respectively. If <span class="arithmatex">\(f=F\)</span> on <span class="arithmatex">\(\Omega\)</span>, then we say <span class="arithmatex">\(F\)</span> is a analytic continuation of <span class="arithmatex">\(f\)</span> into the region <span class="arithmatex">\(\Omega'\)</span>.</p>
+<p>Given a pair of functions <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f\)</span>, which are holomorphic in region <span class="arithmatex">\(\Omega\)</span> and <span class="arithmatex">\(\Omega'\)</span>, respectively. If <span class="arithmatex">\(f=F\)</span> on <span class="arithmatex">\(\Omega\)</span>, then we say <span class="arithmatex">\(F\)</span> is a analytic continuation of <span class="arithmatex">\(f\)</span> into the region <span class="arithmatex">\(\Omega'\)</span>.</p>
 </div>
 
 
