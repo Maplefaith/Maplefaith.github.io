@@ -1924,6 +1924,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Markov Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1933,6 +1944,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c-k-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      C-K Equation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-of-state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decomposition of State Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#period-of-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Period of State
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergodicity-of-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ergodicity of State
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3997,6 +4078,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c-k-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      C-K Equation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Space
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-of-state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decomposition of State Space
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#period-of-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Period of State
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergodicity-of-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ergodicity of State
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4030,11 +4170,11 @@ P&amp;(X(t_n)&lt;x_n\mid X(t_0)=x_0,\cdots X(t_{n-1})=x_{n-1})\\&amp;=P(X(t_n)&l
 F(t_{n-1}, x_{n-1}; t_n, x_n)=P(X(t_n)&lt;x_n\mid X(t_{n-1})=x_{n-1}).
 \]</div>
 <p><strong>trransition probability distribution</strong>.</p>
-<p>For discrete Markov chain, <span class="arithmatex">\(\forall n,m \in T\)</span>, <span class="arithmatex">\(i,j \in S\)</span>, we define transition probability</p>
+<p>For discrete Markov chain, <span class="arithmatex">\(\forall n,m \in T\)</span>, <span class="arithmatex">\(i,j \in S\)</span>, we define <strong>transition probability</strong></p>
 <div class="arithmatex">\[
 p_{ij}(m,n)=P(X(n)=j\mid X(m)=i)
 \]</div>
-<p>which means the probability of transit from state <span class="arithmatex">\(i\)</span> at time <span class="arithmatex">\(m\)</span> to state <span class="arithmatex">\(j\)</span> at time <span class="arithmatex">\(n\)</span>. Apparently, we have <span class="arithmatex">\(p_{ij}(m,n)\geq 0\)</span> and </p>
+<p>which means the probability of transiting from state <span class="arithmatex">\(i\)</span> at time <span class="arithmatex">\(m\)</span> to state <span class="arithmatex">\(j\)</span> at time <span class="arithmatex">\(n\)</span>. Apparently, we have <span class="arithmatex">\(p_{ij}(m,n)\geq 0\)</span> and </p>
 <div class="arithmatex">\[
 \sum_{j=1}^\infty p_{ij}(m,n)=1. 
 \]</div>
@@ -4042,7 +4182,291 @@ p_{ij}(m,n)=P(X(n)=j\mid X(m)=i)
 <div class="arithmatex">\[
 P(m,m+n)= [p_{ij}(m, m+n)]_{|S|\times |S|}
 \]</div>
-<p>Specifically, we focus on transition matrix of one step. If <span class="arithmatex">\(P(m,m+1)\)</span> is irrelevant with <span class="arithmatex">\(m\)</span>, then we call the above Markov chain <strong>time-homogeneous</strong>. So we have <span class="arithmatex">\(p_{ij}=p_{ij}(m,m+1)\)</span>.</p>
+<p>Specifically, we focus on transition matrix of one step. If <span class="arithmatex">\(P(m,m+1)\)</span> is irrelevant with <span class="arithmatex">\(m\)</span>, then we call the above Markov chain <strong>time-homogeneous</strong>. So we denote </p>
+<div class="arithmatex">\[
+p_{ij}=p_{ij}(1)=p_{ij}(m,m+1).
+\]</div>
+</div>
+<h2 id="c-k-equation">C-K Equation<a class="headerlink" href="#c-k-equation" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Chapman-Kolmogorov Equation</p>
+<p>Assume <span class="arithmatex">\(\{X_n\}\)</span> is a discrete Markov Chain, and its state space is <span class="arithmatex">\(S\)</span>. Then <span class="arithmatex">\(\forall h,l\in \mathbb{N}^+\)</span>, and <span class="arithmatex">\(\forall m\in \mathbb{N}\)</span>, </p>
+<div class="arithmatex">\[
+p_{ij}(m,m+h+l)=\sum_{r=0}^\infty p_{ir}(m,m+h) \cdot p_{rj}(m+h,m+h+l).
+\]</div>
+<p>which is called <strong>Chapman-Kolmogorov Equation</strong>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="c-k-equation-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="c-k-equation-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By definition,</p>
+<div class="arithmatex">\[
+\begin{align*}
+p_{ij}&amp;(m,m+h+l)\\
+&amp;=P(X_{m+h+l}=j\mid X_m=i)\\
+&amp;=\frac{P(X_{m+h+l}=j, X_m=i)}{P(X_m=i)}\\
+&amp;=\frac{\sum_{r=0}^\infty P(X_{m+h+l}=j, X_{m+h}=r, X_m=i)}{P(X_m=i)}\\
+&amp;=\sum_{r=0}^\infty \frac{P(X_{m+h+l}=j, X_{m+h}=r, X_m=i)}{P(X_{m+h}=r, X_m=i)}\frac{P(X_{m+h}=r, X_m=i)}{P(X_m=i)}\\
+&amp;=\sum_{r=0}^\infty P(X_{m+h+l}=j\mid X_{m+h}=r, X_m=i)\cdot P(X_{m+h}=r\mid X_m=i)\quad \text{Totel probability formula}\\
+&amp;=\sum_{r=0}^\infty P(X_{m+h+l}=j\mid X_{m+h}=r) P(X_{m+h}=r\mid X_m=i)\quad\text{By Markov property}\\
+&amp;=\sum_{r=0}^\infty p_{ir}(m,m+h) \cdot p_{rj}(m+h,m+h+l).
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: Multiple transition Probability</p>
+<p>Transition probablity of one step of a discrete Markov chain could determine the transition probability of multiple steps.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="c-k-equation-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="c-k-equation-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By induction. For <span class="arithmatex">\(h=2\)</span>, we have</p>
+<div class="arithmatex">\[
+p_{ij}(m,m+2)=\sum_{r=0}^\infty p_{ir}(m,m+1)\cdot p_{rj}(m+1,m+2).
+\]</div>
+<p>Assume for <span class="arithmatex">\(h=k\)</span>, the theorem holds. Then for <span class="arithmatex">\(h=k+1\)</span>, we have</p>
+<div class="arithmatex">\[
+p_{ij}(m,m+k+1)=\sum_{r=0}^\infty p_{ir}(m, m+k)\cdot p_{rj}(m+k, m+k+1).
+\]</div>
+<p>If we write a matrix, then </p>
+<div class="arithmatex">\[
+P(m,m+k+1)=P(m,m+k)P(m+k,m+k+l).
+\]</div>
+<p>Note here is the premultiplication of matrices.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Determination of the distribution of discrete Markov Chain</p>
+<p>Assume <span class="arithmatex">\(\{X_n\}\)</span> is a discrete Markov Chain, and its state space is <span class="arithmatex">\(S\)</span>. The finite distribution of <span class="arithmatex">\(X_n\)</span> is determined if all the transition probability of one step <span class="arithmatex">\(p_{ij}(m,m+1)\)</span> and the initial distribution <span class="arithmatex">\(p_i=P(X_0=i)\)</span> is determined. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="c-k-equation-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="c-k-equation-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(\forall k\in \mathbb{N}^+\)</span>, <span class="arithmatex">\(\forall 0&lt;m_1&lt;\cdots&lt;x_k\in T\)</span>, and <span class="arithmatex">\(i_1,\cdots,i_k\in S\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+P(&amp;X_{m_k}=i_k,\cdots,X_{m_1}=i_1)\\
+&amp;=\sum_{i=0}^\infty P(X_{m_k}=i_k,\cdots,X_{m_1}=i_1, X_{0}=i)\\
+&amp;=\sum_{i=0}^\infty P(X_{m_k}=i_k\mid X_{m_{k-1}}=i_{k-1}, \cdots, X_{m_1}=i_1, X_{0}=i)\cdot P(X_{m_{k-1}}=i_{k-1},\cdots,X_{m_1}=i_1, X_{0}=i)\\
+&amp;=\sum_{i=0}^\infty p_{i_{k-1}i_{k}} (m_{k-1}, m_k) \cdot P(X_{m_{k-1}}=i_{k-1} \mid X_{m_{k-2}}=i_{k-2}\cdots,X_{m_1}=i_1, X_{0}=i)\\
+&amp;=\sum_{i=0}^\infty p_i \cdot p_{i i_1}(0,m_1)\cdot \prod_{j=1}^{k-1} p_{i_j i_{j+1}}(m_{j}, m_{j+1}) 
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="state-space">State Space<a class="headerlink" href="#state-space" title="Permanent link">&para;</a></h2>
+<p>Now we focus on time-homogeneous discrete Markov Chain.</p>
+<div class="admonition success">
+<p class="admonition-title">Invariance of Time</p>
+<p>Assume <span class="arithmatex">\(X_n\)</span> is a time-homogeneous discrete Markov Chain, then its transition probability of <span class="arithmatex">\(h\)</span> steps</p>
+<div class="arithmatex">\[
+p_{ij}(m,m+h)
+\]</div>
+<p>is irrelevant with time <span class="arithmatex">\(m\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="state-space-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="state-space-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use C-K equation</p>
+<div class="arithmatex">\[
+\begin{align*}
+p_{ij}(m,m+h)&amp;=\sum_{r_1=0}^\infty p_{ir_1}(m,m+1)\cdot p_{r_1j}(m+1,m+h)\\
+&amp;=\sum_{r_1=0}^\infty p_{ir_1} \sum_{r_2=0}^\infty p_{r_1r_2}\cdot  p_{r_2j}(m+2,m+h)\\
+&amp;=\sum_{r_1=0}^\infty p_{ir_1}\sum_{r_2=0}^\infty p_{r_1r_2}\cdots \sum_{r_{h-1}=0}^\infty p_{r_{h-1}r_{h}}
+\end{align*}
+\]</div>
+<p>which is only dependent on steps <span class="arithmatex">\(h\)</span>. This is similar to stationary increment property.</p>
+</div>
+</div>
+</div>
+<h3 id="decomposition-of-state-space">Decomposition of State Space<a class="headerlink" href="#decomposition-of-state-space" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Accessibility of state</p>
+<p>If there exsits <span class="arithmatex">\(N&gt;0\)</span> such that <span class="arithmatex">\(p_{ij}(N)&gt;0\)</span>, then we call that state <span class="arithmatex">\(i\)</span> could <strong>access</strong> state <span class="arithmatex">\(j\)</span>, denoted by</p>
+<div class="arithmatex">\[
+i\rightarrow j.
+\]</div>
+<p>If <span class="arithmatex">\(i\rightarrow j\)</span> and <span class="arithmatex">\(j\rightarrow i\)</span>, then we call <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(j\)</span> <strong>communicate</strong>, denoted by </p>
+<div class="arithmatex">\[
+i\leftrightarrow j.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of accessibility</p>
+<p>(i) If <span class="arithmatex">\(i\rightarrow j\)</span> and <span class="arithmatex">\(j\rightarrow k\)</span>, then <span class="arithmatex">\(i\rightarrow k\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(i\leftrightarrow j\)</span>, then <span class="arithmatex">\(j\leftrightarrow i\)</span>.</p>
+<p>(iii) If <span class="arithmatex">\(i\leftrightarrow j\)</span> and <span class="arithmatex">\(j\leftrightarrow i\)</span>, then <span class="arithmatex">\(i\leftrightarrow i\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="decomposition-of-state-space-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) There exsits <span class="arithmatex">\(N_1,N_2&gt;0\)</span>, s.t. <span class="arithmatex">\(p_{ij}(N_1)&gt;0\)</span> and <span class="arithmatex">\(p_{jk}(N_2)&gt;0\)</span>, then by C-K equation</p>
+<div class="arithmatex">\[
+p_{ik}(N_1+N_2)=\sum_{r=0}^\infty p_{ir}(N_1)p_{rk}(N_2)\geq p_{ij}(N_1)p_{jk}(N_2)&gt;0.
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Communicating class</p>
+<p>We denote <span class="arithmatex">\(C(j)\)</span> to be the communicating class of state <span class="arithmatex">\(j\)</span>, which is actually the collection of all states mutually accessible from <span class="arithmatex">\(j\)</span>.</p>
+<p>If <span class="arithmatex">\(C(j)=\varnothing\)</span>, then we call <span class="arithmatex">\(j\)</span> a <strong>transient state</strong>.</p>
+<p>If <span class="arithmatex">\(C(j)\neq \varnothing\)</span>, then we call <span class="arithmatex">\(j\)</span> a <strong>recurrent state</strong>.</p>
+</div>
+<p><a id="Property of communicating class"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Property of communicating class</p>
+<p>If <span class="arithmatex">\(i\leftrightarrow j\)</span>, then <span class="arithmatex">\(C(i)=C(j)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="decomposition-of-state-space-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Easy to see. <span class="arithmatex">\(\forall k\in C(i)\)</span>, we have <span class="arithmatex">\(k\leftrightarrow i\)</span>. Since <span class="arithmatex">\(i\leftrightarrow j\)</span>, we have <span class="arithmatex">\(k\leftrightarrow j\)</span>, so <span class="arithmatex">\(k\in C(j)\)</span>. The other direction is the same.</p>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Closed state class</p>
+<p>We call set of state <span class="arithmatex">\(C\)</span> a closed state set, if for all state <span class="arithmatex">\(j\not\in C\)</span>, and <span class="arithmatex">\(i\in C\)</span>, <span class="arithmatex">\(j\not\leftrightarrow i\)</span>.</p>
+<p>If a closed state set has only one element <span class="arithmatex">\(j\)</span>, then we call <span class="arithmatex">\(j\)</span> an <strong>absorbing state</strong>.</p>
+<p>If any two states of a state space <span class="arithmatex">\(S\)</span> communicate, then we call the Markov chain <strong>irreducible</strong>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for communicating class</p>
+<p>If two state set <span class="arithmatex">\(C_1\)</span>, <span class="arithmatex">\(C_2\)</span> are communicating classes, then either <span class="arithmatex">\(C_1=C_2\)</span> or <span class="arithmatex">\(C_1\cap C_2=\varnothing\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="decomposition-of-state-space-proof_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By definition of communicating class, there exists <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(j\)</span> such that </p>
+<div class="arithmatex">\[
+C_1=C(i),\quad C_2=C(j).
+\]</div>
+<p>If <span class="arithmatex">\(C_1\cap C_2\neq \varnothing\)</span>, then choose one <span class="arithmatex">\(g\in C_1\cap C_2\)</span>, which satisfies <span class="arithmatex">\(g\leftrightarrow i\)</span> and <span class="arithmatex">\(g\leftrightarrow j\)</span>. So</p>
+<div class="arithmatex">\[
+i\leftrightarrow j.
+\]</div>
+<p>which means <span class="arithmatex">\(C_1=C(i)=C(j)=C_2\)</span> by <a href="#Property of communicating class">Property of communicating class</a>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">decomposition of Markov Chain</p>
+<p>The state space <span class="arithmatex">\(S\)</span> of Markov chain could be decomposed into denumerable mutually disjoint state sets, i.e.</p>
+<div class="arithmatex">\[
+S=C_1\cup C_2\cup \cdots\cup C_n,
+\]</div>
+<p>where <span class="arithmatex">\(C_i\cap C_j=\varnothing\)</span> whenever <span class="arithmatex">\(i\neq j\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="decomposition-of-state-space-proof_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Iterate over all elements of <span class="arithmatex">\(S\)</span>. Arbitrarily choose a state <span class="arithmatex">\(j_1\in S\)</span>, let <span class="arithmatex">\(C_1=C(j_1)\)</span>, if <span class="arithmatex">\(j_1\)</span> is a recurrent state; otherwise let <span class="arithmatex">\(C_1=\{j_1\}\)</span>, i.e. <span class="arithmatex">\(j_1\)</span> is a transient state. Next round, Arbitrarily choose a state <span class="arithmatex">\(j_2\in S-C_1\)</span>, let <span class="arithmatex">\(C_2=C(j_2)\)</span>, if <span class="arithmatex">\(j_2\)</span> is a recurrent state; otherwise let <span class="arithmatex">\(C_2=\{j_2\}\)</span>, i.e. <span class="arithmatex">\(j_2\)</span> is a transient state.</p>
+<p>Continue until <span class="arithmatex">\(S-C_1-C_2-\cdots=\varnothing\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="period-of-state">Period of State<a class="headerlink" href="#period-of-state" title="Permanent link">&para;</a></h3>
+<p>Now we focus on <strong>recurrent state</strong>, other than <strong>absorbing state</strong> or <strong>transient state</strong>, since both of which does not have periodical phenomenon.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of period of state</p>
+<p>We denote <span class="arithmatex">\(d(j)\)</span> to be the period of a recurrent state <span class="arithmatex">\(j\)</span>, defined by</p>
+<div class="arithmatex">\[
+d(j)=gcd\{n: p_{jj}(n)&gt;0, n\geq 1\}.
+\]</div>
+<p>if <span class="arithmatex">\(d(j)=1\)</span>, we call <span class="arithmatex">\(j\)</span> <strong>non-periodical state</strong>, which includes the aborbing state <span class="arithmatex">\(k\)</span>, whose <span class="arithmatex">\(d(k)=1\)</span>.</p>
+</div>
+<p>Usually, if state <span class="arithmatex">\(i\)</span> has <span class="arithmatex">\(d(i)=d\)</span>, then for all <span class="arithmatex">\(n\neq 0(\text{mod} d)\)</span>, we have <span class="arithmatex">\(p_{ii}(n)=0\)</span>. Conversely speaking, if <span class="arithmatex">\(n\equiv 0(\text{mod} d)\)</span>, <span class="arithmatex">\(p_{ii}(n)&gt;0\)</span> do not hold nacessarily.</p>
+<p>To be elaborate, we have the following theorem.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for period</p>
+<p>If state <span class="arithmatex">\(i\)</span> has a period <span class="arithmatex">\(d\)</span>, then there exsits <span class="arithmatex">\(M\in\mathbb{N}^+\)</span>, such that for all <span class="arithmatex">\(n&gt;M\)</span>, </p>
+<div class="arithmatex">\[
+p_{ii}(nd)&gt;0.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Transition of period</p>
+<p>If <span class="arithmatex">\(i\leftrightarrow j\)</span>, then <span class="arithmatex">\(d(i)=d(j)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="period-of-state-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="period-of-state-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use a special loop. Since <span class="arithmatex">\(i\leftrightarrow j\)</span>, so there exsits <span class="arithmatex">\(n,m&gt;0\)</span> such that <span class="arithmatex">\(p_{ij}(n)&gt;0\)</span> and <span class="arithmatex">\(p_{ji}(m)&gt;0\)</span>, so</p>
+<div class="arithmatex">\[
+p_{ii}(n+m)\geq p_{ij}(n)p_{ji}(m)&gt;0.
+\]</div>
+<p>So <span class="arithmatex">\(d(i)\mid n+m\)</span>.</p>
+<p>By definition of <span class="arithmatex">\(d(j)=gcd\{n_1,n_2,\cdots,n_k,\cdots\}\)</span>, we have <span class="arithmatex">\(p_{jj}(n_k)&gt;0\)</span> for all <span class="arithmatex">\(k=1,\cdots\)</span>. So for each <span class="arithmatex">\(k\)</span>,</p>
+<div class="arithmatex">\[
+p_{ii}(n+m+n_k)\geq p_{ij}(n)p_{jj}(n_k)p_{ji}(m)&gt;0.
+\]</div>
+<p>So <span class="arithmatex">\(d(i)\mid n+m+n_k\)</span>. Combined with the above two, we have <span class="arithmatex">\(d(i)\mid n_k\)</span>, which means <span class="arithmatex">\(d(i)\mid d(j)\)</span>.</p>
+<p>Similarly we have <span class="arithmatex">\(d(j)\mid d(i)\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="ergodicity-of-state">Ergodicity of State<a class="headerlink" href="#ergodicity-of-state" title="Permanent link">&para;</a></h3>
+<p>Here we dig deeper into the probability itself for recurrent states. Notice some recurrent state is possible not to return, while others is always possible to return.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of passage probability of State</p>
+<p>Define the <strong>first-passage probability</strong> from state <span class="arithmatex">\(i\)</span> to <span class="arithmatex">\(j\)</span> after <span class="arithmatex">\(n\)</span> steps.</p>
+<div class="arithmatex">\[
+f_{ij}(n)=P(X_n=j,X_{n-1}\neq j,\cdots, X_1\neq j \mid X_0=i).
+\]</div>
+<p>Define <strong>Ultimate probability</strong> from state <span class="arithmatex">\(i\)</span> to <span class="arithmatex">\(j\)</span></p>
+<div class="arithmatex">\[
+f_{ij}=P(X_m=j,\exists m\mid X_0=i).
+\]</div>
+<p>Note that </p>
+<div class="arithmatex">\[
+f_{ij}=\sum_{n=0}^\infty f_{ij}(n),
+\]</div>
+<p>which is the core of our analysis.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for passage probability</p>
+<p>For any state <span class="arithmatex">\(i,j\in S\)</span>, <span class="arithmatex">\(\forall n\geq 1\)</span>, </p>
+<div class="arithmatex">\[
+p_{ij}(n)=\sum_{m=1}^n f_{ij}(m) p_{ij}(n-m).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="ergodicity-of-state-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="ergodicity-of-state-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+p_{ij}(n)&amp;=P(X_n=j\mid X_0=i)\\
+&amp;=\sum_{m=1}^n P(X_n=j,X_m=j,X_{m-1}\neq j,\cdots, X_1\neq j\mid X_0=i)\quad \text{This is a partition}\\
+&amp;=\sum_{m=1}^n \frac{P(X_n=j,X_m=j,X_{m-1}\neq j,\cdots, X_1\neq j, X_0=i)}{P(X_0=i)}\\
+&amp;=\sum_{m=1}^n P(X_n=j\mid X_m=j,X_{m-1}\neq j,\cdots, X_1\neq j, X_0=i)\cdot P(X_m=j, \cdots,X_1\neq j \mid X_0=i)\\
+&amp;=\sum_{m=1}^n p_{jj}(n-m) f_{ij}(m).
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Recurrent State</p>
+<p>If <span class="arithmatex">\(f_{ii}=1\)</span>, state <span class="arithmatex">\(i\)</span> is called <strong>recurrent state</strong>.</p>
+<p>If <span class="arithmatex">\(f_{ii}&lt;1\)</span>, state <span class="arithmatex">\(i\)</span> is called <strong>transient state</strong>.</p>
+<p>For recurrent state <span class="arithmatex">\(i\)</span>, we have <span class="arithmatex">\(\sum_{n=1}^\infty f_{ii}(n)=1\)</span>. So <span class="arithmatex">\(f_{ii}(n)\)</span> becomes a discrete distribution.</p>
+</div>
+<p>Now we could talk about the mathematical characteristics of the above distribution and its practical meaning. That is, let <span class="arithmatex">\(\xi_i\)</span> to be the steps from state <span class="arithmatex">\(i\)</span> to <span class="arithmatex">\(i\)</span> at the first passage, then </p>
+<div class="arithmatex">\[
+P(\xi_i=n)=f_{ii}(n), \quad n=1,2,\cdots.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Mean Recurrence Time</p>
+<p><strong>Mean recurrence time</strong> is defined as ME of <span class="arithmatex">\(\xi_i\)</span></p>
+<div class="arithmatex">\[
+\mu_i=E(\xi_i)=\sum_{i=1}^\infty nf_{ii}(n).
+\]</div>
+<p>For recurrent state <span class="arithmatex">\(i\)</span>, if <span class="arithmatex">\(\mu_i&lt;+\infty\)</span>, then <span class="arithmatex">\(i\)</span> is called <strong>Positive recurrent state</strong>. If <span class="arithmatex">\(\mu_i=+\infty\)</span>, then <span class="arithmatex">\(i\)</span> is called <strong>Null recurrent state</strong>.</p>
 </div>
 
 

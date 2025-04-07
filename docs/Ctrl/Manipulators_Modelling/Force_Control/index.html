@@ -3191,9 +3191,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#natural-artificial-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural &amp; Artificial Constraints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hybrid-positionforce-control" class="md-nav__link">
     <span class="md-ellipsis">
       Hybrid Position/Force Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-with-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact with environment
     </span>
   </a>
   
@@ -4034,9 +4052,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#natural-artificial-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural &amp; Artificial Constraints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hybrid-positionforce-control" class="md-nav__link">
     <span class="md-ellipsis">
       Hybrid Position/Force Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-with-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact with environment
     </span>
   </a>
   
@@ -4058,7 +4094,84 @@
 
 
 <h1 id="force-control">Force Control<a class="headerlink" href="#force-control" title="Permanent link">&para;</a></h1>
+<h2 id="natural-artificial-constraints">Natural &amp; Artificial Constraints<a class="headerlink" href="#natural-artificial-constraints" title="Permanent link">&para;</a></h2>
+<p>We use <span class="arithmatex">\(\xi=(v^T, \omega^T)^T\)</span> to represent the instantaneous linear and angular velocity of end-effector, <span class="arithmatex">\(F=(f^T, n^T)^T\)</span> to represent the instantaneous force and torque acting on the end-effector. Easy to show that <span class="arithmatex">\(\xi\)</span> and <span class="arithmatex">\(F\)</span> belongs to linear space which is a subspace of <span class="arithmatex">\(\mathbb{R^6}\)</span>, and denoted by <span class="arithmatex">\(\mathcal{M}\)</span> and <span class="arithmatex">\(\mathcal{F}\)</span>.</p>
+<p>We form a compliance frame <span class="arithmatex">\(o_cx_cy_cz_c\)</span> at the end-effector.</p>
+<div class="admonition success">
+<p class="admonition-title">Relationship of Two constraints</p>
+<p>Define Admissible Motion Space <span class="arithmatex">\(V_a\subset \mathbb{R}^6\)</span>, to be all the possible motion which satisfies the geometric constraints. Define <span class="arithmatex">\(V_c=V_a^{\perp}\)</span>.</p>
+<p>Assume <span class="arithmatex">\(F\in \mathcal{F}\)</span>, <span class="arithmatex">\(\xi\in \mathcal{M}\)</span>, then the work done by end-effector is</p>
+<div class="arithmatex">\[
+W=F^T \xi.
+\]</div>
+<p>Partition <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(\xi\)</span> into two subspace <span class="arithmatex">\(V_a\)</span> and <span class="arithmatex">\(V_c\)</span></p>
+<div class="arithmatex">\[
+F=F_a+F_c,\quad \xi=\xi_a+\xi_c,
+\]</div>
+<p>where <span class="arithmatex">\(F_a,\xi_a\in V_a\)</span> and <span class="arithmatex">\(F_c,\xi_c\in V_c\)</span>. Substitute in and </p>
+<div class="arithmatex">\[
+W=F_a^T\xi_a +F_c^T \xi_c.
+\]</div>
+<p>In <span class="arithmatex">\(V_c\)</span>, we must have <span class="arithmatex">\(\xi_c=0\)</span> then the motion is admissible. Then the above equation is reduced to virtual work. However, since the system is kept in static equivalence, we must have the virtual work to be zero for all virtual motion <span class="arithmatex">\(\xi_a\)</span>. So <span class="arithmatex">\(F_a=0\)</span>.</p>
+<p>Actually, we have <span class="arithmatex">\(\mathcal{M}=V_a\)</span> and <span class="arithmatex">\(\mathcal{F}=V_c\)</span>.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Write down the natural and artificial constraints in the end-effector of the following manipulator.</p>
+<p align="center">
+    <img src="../images/turning_crank.png" width="40%" />
+    </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="natural-artificial-constraints-answer" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="natural-artificial-constraints-answer">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For <span class="arithmatex">\(\mathcal{M}\)</span>, we have</p>
+<div class="arithmatex">\[
+v_x=0,v_z=0,\omega_x=0,\omega_y=0.\quad v_y=\alpha_1, \omega_z=\alpha_2.
+\]</div>
+<p>For <span class="arithmatex">\(\mathcal{F}\)</span>, we have</p>
+<div class="arithmatex">\[
+f_y=0, n_z=0.\quad f_x=f_z=n_x=n_y=\alpha_3=0.
+\]</div>
+</div>
+</div>
+</div>
 <h2 id="hybrid-positionforce-control">Hybrid Position/Force Control<a class="headerlink" href="#hybrid-positionforce-control" title="Permanent link">&para;</a></h2>
+<h2 id="contact-with-environment">Contact with environment<a class="headerlink" href="#contact-with-environment" title="Permanent link">&para;</a></h2>
+<p>In considering forces of contact, we assume our system is rigid and the environment has some stiffness <span class="arithmatex">\(k_e\)</span> (劲度).</p>
+<p>Consider the control of a mass attached to a spring.</p>
+<p align="center">
+    <img src="../images/mass-spring.png" width="40%" />
+    </p>
+
+<p>The variable we wish to control is the force acting on the environment <span class="arithmatex">\(f_e\)</span>, which is also the force acting in the spring</p>
+<div class="arithmatex">\[
+f_e=k_e x.
+\]</div>
+<p>We also include other forces, like <span class="arithmatex">\(f_{dist}\)</span> from unknown friction or cogging in the manipulator's gearing. </p>
+<div class="arithmatex">\[
+\begin{align*}
+f&amp;=m\ddot{x}+k_ex+f_{dist}\\
+&amp;=mk_e^{-1}\ddot{f_e}+f_e+f_{dist}.
+\end{align*}
+\]</div>
+<p>Choose <span class="arithmatex">\(\alpha=mk_e^{-1}\)</span> and <span class="arithmatex">\(\beta=f_e\)</span>, so the control law is</p>
+<div class="arithmatex">\[
+f=\alpha f+\beta. 
+\]</div>
+<p>with closed loop system </p>
+<div class="arithmatex">\[
+\ddot{e}_f+k_{vf}\dot{e}_f+k_{pf}e_f=0,
+\]</div>
+<p>where <span class="arithmatex">\(e_f=f_d-f_e\)</span>. Notice the above control law do not have knowledge of <span class="arithmatex">\(f_{dist}\)</span>, so we have a steady error by setting all derivatives to zero</p>
+<div class="arithmatex">\[
+e_f=\frac{f_{dist}}{\alpha}=\frac{f_{dist}}{mk_e^{-1}k_{pf}}
+\]</div>
+<p>if we use <span class="arithmatex">\(\beta=f_D\)</span> in the control law, we have</p>
+<div class="arithmatex">\[
+e_f=\frac{f_{dist}}{1+\alpha}
+\]</div>
+<p>when the environment is stiff, <span class="arithmatex">\(\alpha\)</span> could be small, so the above control law effectively reduce the noise.</p>
+<p>In practice, force trajectory is usually constant, so <span class="arithmatex">\(\ddot{f}_d=\dot{f}_d=0\)</span>. Another reality is that sensed force are quite "noisy", and differentiation of <span class="arithmatex">\(\dot{f}_e\)</span> is ill-advised. We could get <span class="arithmatex">\(\dot{f}_e=k_e \dot{x}\)</span>, if we could obtain good measures of velocity.</p>
 
 
 
