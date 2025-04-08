@@ -2006,6 +2006,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#transfinite-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transfinite Probability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit Theorem
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4130,6 +4148,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#transfinite-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transfinite Probability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limit Theorem
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4380,7 +4416,7 @@ d(j)=gcd\{n: p_{jj}(n)&gt;0, n\geq 1\}.
 \]</div>
 <p>if <span class="arithmatex">\(d(j)=1\)</span>, we call <span class="arithmatex">\(j\)</span> <strong>non-periodical state</strong>, which includes the aborbing state <span class="arithmatex">\(k\)</span>, whose <span class="arithmatex">\(d(k)=1\)</span>.</p>
 </div>
-<p>Usually, if state <span class="arithmatex">\(i\)</span> has <span class="arithmatex">\(d(i)=d\)</span>, then for all <span class="arithmatex">\(n\neq 0(\text{mod} d)\)</span>, we have <span class="arithmatex">\(p_{ii}(n)=0\)</span>. Conversely speaking, if <span class="arithmatex">\(n\equiv 0(\text{mod} d)\)</span>, <span class="arithmatex">\(p_{ii}(n)&gt;0\)</span> do not hold nacessarily.</p>
+<p>Usually, if state <span class="arithmatex">\(i\)</span> has <span class="arithmatex">\(d(i)=d\)</span>, then for all <span class="arithmatex">\(n\neq 0(\text{mod } d)\)</span>, we have <span class="arithmatex">\(p_{ii}(n)=0\)</span>. Conversely speaking, if <span class="arithmatex">\(n\equiv 0(\text{mod } d)\)</span>, <span class="arithmatex">\(p_{ii}(n)&gt;0\)</span> do not hold nacessarily.</p>
 <p>To be elaborate, we have the following theorem.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for period</p>
@@ -4428,14 +4464,36 @@ f_{ij}=\sum_{n=0}^\infty f_{ij}(n),
 \]</div>
 <p>which is the core of our analysis.</p>
 </div>
+<p><a id="Another version using First Hitting Time"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="ergodicity-of-state-another-version-using-first-hitting-time" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="ergodicity-of-state-another-version-using-first-hitting-time">Another version using First Hitting Time</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We define </p>
+<div class="arithmatex">\[
+T_j=\inf\{n\geq 1: X_n=j\}
+\]</div>
+<p>to be <strong>First Hitting Time</strong> of <span class="arithmatex">\(j\)</span>.</p>
+<p>Then </p>
+<div class="arithmatex">\[
+P(T_j=n\mid X_0=i)=f_{ij}(n).
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+P(T_j&lt;\infty\mid X_0=i)=f_{ij}.
+\]</div>
+<p>Notice that the above "<span class="arithmatex">\(&lt;\infty\)</span>" means the chain could reach state <span class="arithmatex">\(j\)</span> from <span class="arithmatex">\(i\)</span> in finitely many steps.</p>
+</div>
+</div>
+</div>
+<p><a id="Theorem for relationship between first-passage probability and passage probability"></a></p>
 <div class="admonition success">
-<p class="admonition-title">Theorem for passage probability</p>
+<p class="admonition-title">Theorem for relationship between first-passage probability and passage probability</p>
 <p>For any state <span class="arithmatex">\(i,j\in S\)</span>, <span class="arithmatex">\(\forall n\geq 1\)</span>, </p>
 <div class="arithmatex">\[
 p_{ij}(n)=\sum_{m=1}^n f_{ij}(m) p_{ij}(n-m).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="ergodicity-of-state-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="ergodicity-of-state-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="ergodicity-of-state-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="ergodicity-of-state-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="arithmatex">\[
@@ -4451,22 +4509,257 @@ p_{ij}(n)&amp;=P(X_n=j\mid X_0=i)\\
 </div>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Definition of Recurrent State</p>
-<p>If <span class="arithmatex">\(f_{ii}=1\)</span>, state <span class="arithmatex">\(i\)</span> is called <strong>recurrent state</strong>.</p>
-<p>If <span class="arithmatex">\(f_{ii}&lt;1\)</span>, state <span class="arithmatex">\(i\)</span> is called <strong>transient state</strong>.</p>
+<p class="admonition-title">Definition of Recurrent State, self-reachable</p>
+<p>If <span class="arithmatex">\(f_{ii}=1\)</span>, or <span class="arithmatex">\(P(T_i&lt;\infty\mid X_0=i)=1\)</span>, then state <span class="arithmatex">\(i\)</span> is called <strong>recurrent state</strong>.</p>
+<p>If <span class="arithmatex">\(f_{ii}&lt;1\)</span>, or <span class="arithmatex">\(P(T_i&lt;\infty\mid X_0=i)&lt;1\)</span>, then state <span class="arithmatex">\(i\)</span> is called <strong>transient state</strong>.</p>
 <p>For recurrent state <span class="arithmatex">\(i\)</span>, we have <span class="arithmatex">\(\sum_{n=1}^\infty f_{ii}(n)=1\)</span>. So <span class="arithmatex">\(f_{ii}(n)\)</span> becomes a discrete distribution.</p>
 </div>
-<p>Now we could talk about the mathematical characteristics of the above distribution and its practical meaning. That is, let <span class="arithmatex">\(\xi_i\)</span> to be the steps from state <span class="arithmatex">\(i\)</span> to <span class="arithmatex">\(i\)</span> at the first passage, then </p>
+<p>Now we could talk about the mathematical characteristics of the above distribution and its practical meaning. That is, let <span class="arithmatex">\(T_i\)</span> to be the steps (time) from state <span class="arithmatex">\(i\)</span> to <span class="arithmatex">\(i\)</span> at the first passage, which is actually first hitting time in <a href="#Another version using First Hitting Time">Another version of first-passage probability</a>. Then </p>
 <div class="arithmatex">\[
-P(\xi_i=n)=f_{ii}(n), \quad n=1,2,\cdots.
+P(T_i=n)=f_{ii}(n), \quad n=1,2,\cdots
 \]</div>
 <div class="admonition info">
 <p class="admonition-title">Definition of Mean Recurrence Time</p>
-<p><strong>Mean recurrence time</strong> is defined as ME of <span class="arithmatex">\(\xi_i\)</span></p>
+<p><strong>Mean recurrence time</strong> is defined as ME of <span class="arithmatex">\(T_i\)</span></p>
 <div class="arithmatex">\[
-\mu_i=E(\xi_i)=\sum_{i=1}^\infty nf_{ii}(n).
+\mu_i=E(T_i)=\sum_{i=1}^\infty nf_{ii}(n).
 \]</div>
 <p>For recurrent state <span class="arithmatex">\(i\)</span>, if <span class="arithmatex">\(\mu_i&lt;+\infty\)</span>, then <span class="arithmatex">\(i\)</span> is called <strong>Positive recurrent state</strong>. If <span class="arithmatex">\(\mu_i=+\infty\)</span>, then <span class="arithmatex">\(i\)</span> is called <strong>Null recurrent state</strong>.</p>
+<p>A non-periodic positive recurrent state is also called <strong>Ergodic state</strong>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="ergodicity-of-state-another-version-using-an-equation" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="ergodicity-of-state-another-version-using-an-equation">Another version using an equation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Define <span class="arithmatex">\(r_0=1\)</span>, <span class="arithmatex">\(r_k=P(T_i&gt;k\mid X_0=i)\)</span>, <span class="arithmatex">\(k\geq 1\)</span>, then</p>
+<div class="arithmatex">\[
+\mu_i=E(T_i\mid X_0=i)=\sum_{k=0}^\infty r_k.
+\]</div>
+<p>This could be explained by this. We use the definition of expectation. Since</p>
+<div class="arithmatex">\[
+P(T_i&gt;k\mid X_0=i)=\sum_{n=k+1}^\infty P(T_i=n\mid X_0=i)=\sum_{n=k+1}^\infty f_{ii}(n)
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=0}^\infty r_k&amp;=\sum_{k=0}^\infty P(T_i&gt;k\mid X_0=i)\\
+&amp;=\sum_{k=0}^\infty \sum_{n=k+1}^\infty f_{ii}(n)\\
+&amp;=\sum_{n=0}^\infty n f_{ii}(n)\quad \text{by triangle choice}\\
+&amp;=\mu_i
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<p>Actually, it is really hard to calculate <span class="arithmatex">\(f_{ii}(n)\)</span> in some complex Markov chain. So we have to give another description of recurrent state.</p>
+<h3 id="transfinite-probability">Transfinite Probability<a class="headerlink" href="#transfinite-probability" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Transfinite Probability</p>
+<p>Define <strong>transfinite probability</strong></p>
+<div class="arithmatex">\[
+Q_{ij}(n)=P(\forall N\geq n, \exists \{m_i\}_{1\leq i\leq N}, m_i\geq 1, s.t. X_{m_i}=j\mid X_0=i)
+\]</div>
+<p>which means the probability for the chain to pass <span class="arithmatex">\(i\)</span> in at least <span class="arithmatex">\(n\)</span> times with initial state <span class="arithmatex">\(i\)</span>. Then we have</p>
+<div class="arithmatex">\[
+f_{ij}=Q_{ij}(1).
+\]</div>
+<p>and define <span class="arithmatex">\(Q_{ij}:=\lim\limits_{n\rightarrow \infty}Q_{ij}(n)\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Properties of transfinite probability</p>
+<p>(i) <strong>Monotonically decreasing</strong>.</p>
+<div class="arithmatex">\[
+Q_{ij}(1)\geq Q_{ij}(2)\geq \cdots
+\]</div>
+<p>(ii) If <span class="arithmatex">\(Q_{ij}=1\)</span>, which means starting from state <span class="arithmatex">\(i\)</span>, we would reach state <span class="arithmatex">\(j\)</span> infinitely many times. So by property (i), we have <span class="arithmatex">\(Q_{ij}(n)=1.\)</span></p>
+<p>(iii) If <span class="arithmatex">\(Q_{ii}=1\)</span>, then <span class="arithmatex">\(Q_{ii}(1)=f_{ii}=1\)</span>, state <span class="arithmatex">\(i\)</span> is a recurrent state.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Relationship between <span class="arithmatex">\(f_{ij}\)</span> and <span class="arithmatex">\(Q_{ij}\)</span></p>
+<p>For any state <span class="arithmatex">\(i,j\in S\)</span>, and parameter <span class="arithmatex">\(n\geq 1\)</span>, we have</p>
+<p>(i) <span class="arithmatex">\(Q_{ij}(m+1)=f_{ij} Q_{jj}(m)\)</span>;</p>
+<p>(ii) <span class="arithmatex">\(Q_{ij}=f_{ij}Q_{jj}\)</span>;</p>
+<p>(iii) <span class="arithmatex">\(Q_{jj}=\lim\limits_{n\rightarrow \infty}(f_{jj})^n\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="transfinite-probability-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="transfinite-probability-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Still use first-passage to partition the space.</p>
+<div class="arithmatex">\[
+\begin{align*}
+Q_{ij}(m+1)&amp;=P(\forall N\geq m+1, \exists \{m_i\}_{1\leq i\leq N}, m_i\geq 1, s.t. X_{m_i}=j\mid X_0=i)\\
+&amp;=\sum_{n=1}^\infty P(\forall N\geq m, \exists \{m_i\}_{1\leq i\leq N}, m_i\geq n+1, s.t. X_{m_i}=j, X_n=j, X_{n-1}\neq j,\cdots, X_1\neq j \mid X_0=i)\\
+&amp;=\sum_{n=1}^\infty P(\forall N\geq m, \exists \{m_i\}_{1\leq i\leq N}, m_i\geq n+1, s.t. X_{m_i}=j \mid X_n=j )\cdot \\
+&amp;\quad P(X_n=j, X_{n-1}\neq j,\cdots, X_1\neq j \mid X_0=i)\quad \text{by Markov property}\\
+&amp;=\sum_{n=1}^\infty P(\forall N\geq m, \exists \{m_i\}_{1\leq i\leq N}, m_i\geq 1, s.t. X_{m_i}=j \mid X_0=j ) f_{ij}(n)\quad\text{by time-homogeneous}\\
+&amp;=\sum_{n=1}^\infty Q_{jj}(m)f_{ij}(n)=f_{ij}Q_{jj}(m).
+\end{align*}
+\]</div>
+<p>(ii) By (i) and take a limit.</p>
+<p>(iii) Apply (i) to <span class="arithmatex">\(Q_{jj}(m)\)</span> iteratively.</p>
+<div class="arithmatex">\[
+Q_{jj}(m)=f_{jj} Q_{jj}(m-1)=\cdots=(f_{jj})^{m-1} Q_{jj}(1)=(f_{jj})^{m}.
+\]</div>
+</div>
+</div>
+</div>
+<p><a id="Recurrent state description with passage probability"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Recurrent state description with passage probability</p>
+<p>(i) State <span class="arithmatex">\(j\)</span> is a recurrent state, iff <span class="arithmatex">\(\sum\limits_{n=1}^\infty p_{jj}(n)=+\infty\)</span>.</p>
+</div>
+<p><a id="another perspective"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="transfinite-probability-another-perspective" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="transfinite-probability-another-perspective">Another Perspective</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We could take another perspective. Notice</p>
+<div class="arithmatex">\[
+\sum_{i=1}^\infty P(A_i)=E\sum_{i=1}^\infty 1_{A_i}
+\]</div>
+<p>So the above summation in the ME is actually the total number of events <span class="arithmatex">\(A_1,\cdots,A_i,\cdots\)</span> happening. In our Markov chain, we have</p>
+<div class="arithmatex">\[
+N_j=\sum_{i=1}^\infty Y_i= \sum_{i=1}^\infty 1_{A_i}
+\]</div>
+<p>to denote the number of time the chain reach state <span class="arithmatex">\(j\)</span> from initial state <span class="arithmatex">\(j\)</span> (for steps iterating form <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(\infty\)</span>). <span class="arithmatex">\(A_i\)</span> denotes the event that the chain reach state <span class="arithmatex">\(j\)</span> from state <span class="arithmatex">\(j\)</span> in <span class="arithmatex">\(n\)</span> steps, <span class="arithmatex">\(Y_i\)</span> denotes whether the chain reaches <span class="arithmatex">\(j\)</span> in exactly <span class="arithmatex">\(i\)</span> steps. </p>
+<p>Note that <span class="arithmatex">\(A_i\)</span> are not necessarily mutually disjoint.</p>
+<p>So</p>
+<div class="arithmatex">\[
+\sum\limits_{n=1}^\infty p_{jj}(n)=EN_j 
+\]</div>
+<p>If we write explicitely the initial state, then </p>
+<div class="arithmatex">\[
+\sum\limits_{n=1}^\infty p_{ij}(n)=E(N_{ij} \mid X_0=i).
+\]</div>
+</div>
+</div>
+</div>
+<p><a id="Recurrent state under communicating class"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Recurrent state under communicating class</p>
+<p>If state <span class="arithmatex">\(i\leftrightarrow j\)</span>, and <span class="arithmatex">\(j\)</span> is a recurrent state, then <span class="arithmatex">\(i\)</span> is also a recurrent state.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="transfinite-probability-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="transfinite-probability-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Since <span class="arithmatex">\(i\leftrightarrow j\)</span>, <span class="arithmatex">\(\exists m,n\geq 1\)</span>, such that</p>
+<div class="arithmatex">\[
+p_{ij}(m)&gt;0, \quad p_{ji}(n)&gt;0.
+\]</div>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=1}^\infty p_{ii}(k)&amp;\geq \sum_{k=1}^\infty p_{ii}(n+m+k)\\
+&amp;\geq \sum_{k=1}^\infty p_{ij}(m)p_{jj}(k)p_{ji}(n)\\
+&amp;= p_{ij}(m)p_{ji}(n) \sum_{k=1}^\infty p_{jj}(k)=+\infty.
+\end{align*}
+\]</div>
+<p>By <a href="#Recurrent state under communicating class">Recurrent state under communicating class</a>, we are done.</p>
+</div>
+</div>
+</div>
+<h3 id="limit-theorem">Limit Theorem<a class="headerlink" href="#limit-theorem" title="Permanent link">&para;</a></h3>
+<p>We now focus on the outer characteristics of recurrent, transient and ergodic state.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for transient state</p>
+<p>If <span class="arithmatex">\(j\)</span> is a transient state, then</p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}p_{ij}(n)=0,\quad i\in S.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="limit-theorem-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="limit-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By <a href="#Recurrent state description with passage probability">Recurrent state description with passage probability</a>, since <span class="arithmatex">\(j\)</span> is a transient state, we have</p>
+<div class="arithmatex">\[
+\sum_{n=1}^\infty p_{jj}(n)&lt;\infty.
+\]</div>
+<p>So by <a href="#Theorem for relationship between first-passage probability and passage probability">Theorem for relationship between first-passage probability and passage probability</a>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{n=1}^\infty p_{jj}(n) &amp;= \sum_{n=1}^\infty \sum_{m=1}^n f_{ij}(m)p_{jj}(n-m)\\
+&amp;=\sum_{m=1}^\infty \sum_{n=m}^\infty  f_{ij}(m)p_{jj}(n-m) \quad\text{triangle choice}\\
+&amp;=\sum_{m=1}^\infty f_{ij}(m) \sum_{n=m}^\infty p_{jj}(n-m)\\
+&amp;=\sum_{m=1}^\infty f_{ij}(m) \sum_{n=0}^\infty p_{jj}(n)\quad\text{by adjusting index}\\
+&amp;=f_{ij} \sum_{n=0}^\infty p_{jj}(n)\leq \sum_{n=0}^\infty p_{jj}(n)&lt;\infty.
+\end{align*}
+\]</div>
+<p>so <span class="arithmatex">\(\lim\limits_{n\rightarrow\infty}p_{ij}(n)=0\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for limit of passage probability of three states</p>
+<p>(i) If state <span class="arithmatex">\(j\)</span> is a non-periodic recurrent state, then </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}p_{jj}(n)=\frac{1}{\mu_j}
+\]</div>
+<p>(ii) If state <span class="arithmatex">\(j\)</span> is a recurrent state with period <span class="arithmatex">\(d\)</span>, then </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}p_{jj}(nd)=\frac{d}{\mu_j},
+\]</div>
+<p>(iii) If state <span class="arithmatex">\(j\)</span> is null recurrent state, then </p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty}p_{jj}(n)=0.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="limit-theorem-proof-for-i" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="limit-theorem-proof-for-i">Proof for (i)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We first define some variables. </p>
+<p>Define <span class="arithmatex">\(N_j(n)\)</span> to be the number of reaching <span class="arithmatex">\(j\)</span> in <span class="arithmatex">\(\{X_1,\cdots,X_n\}\)</span>, also called <strong>Sojourn Time</strong>.</p>
+<p>Define <span class="arithmatex">\(T_1\)</span> to be the number of steps for reaching <span class="arithmatex">\(j\)</span> at the first time. <span class="arithmatex">\(T_k\)</span> to be the number of steps for reaching <span class="arithmatex">\(j\)</span> at <span class="arithmatex">\(k\)</span> times after reaching <span class="arithmatex">\(j\)</span> at <span class="arithmatex">\(k-1\)</span> times. So by time-homogeneous property, we have <span class="arithmatex">\(T_1,\cdots,T_k,\cdots\)</span> are mutually independent and follow the same distribution, i.e. first hitting time <span class="arithmatex">\(T_j\)</span>, that is,</p>
+<div class="arithmatex">\[
+P(T_k=n)=f_{jj}(n), \quad n=1,2,\cdots,\forall k=1,2,\cdots
+\]</div>
+<p>and satisfies <span class="arithmatex">\(E(T_k)=\mu_j\)</span>.</p>
+<p>Define accumulated time <span class="arithmatex">\(S_k=\sum_{i=1}^k T_i\)</span>. Then we have the relationship </p>
+<div class="arithmatex">\[
+N_j(n)=\max\{k\geq 1: S_k \leq n\}.
+\]</div>
+<p>or </p>
+<div class="arithmatex">\[
+S_k=\min\{n\geq 1: N_j(n)=k\}
+\]</div>
+<p>Note that the above relationship also holds in Possion Process.</p>
+<ul>
+<li>Prove first <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty} \frac{N_j(n)}{n}=\frac{1}{\mu_j}\)</span></li>
+</ul>
+<p>Notice their relationship</p>
+<div class="arithmatex">\[
+S_{N_j(n)}\leq n\leq S_{N_j(n)+1}
+\]</div>
+<p>so </p>
+<div class="arithmatex">\[
+\frac{S_{N_j(n)}}{N_j(n)}\leq \frac{n}{N_j(n)}\leq \frac{S_{N_j(n)+1}}{{N_j(n)+1}}\frac{{N_j(n)+1}}{N_j(n)}.
+\]</div>
+<p>By <a href="../Ele_Prob_Theo/#Law of large numbers">Strong law of large number</a>, we have <span class="arithmatex">\(\frac{S_n}{n}\rightarrow \mu_j, a.s.\)</span>, and since <span class="arithmatex">\(N_j(n)\rightarrow \infty\)</span> as <span class="arithmatex">\(n\rightarrow \infty\)</span> (recurrent state),</p>
+<div class="arithmatex">\[
+\frac{n}{N_j(n)}\rightarrow \mu_j\quad a.s.
+\]</div>
+<p>and we have </p>
+<div class="arithmatex">\[
+\frac{N_j(n)}{n}\rightarrow \frac{1}{\mu_j}\quad a.s.
+\]</div>
+<ul>
+<li>Prove second <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty} \frac{1}{n}\sum_{m=1}^n p_{jj}(m)=\frac{1}{\mu_j}\)</span>.</li>
+</ul>
+<p>By definition of sojourn time, we have</p>
+<div class="arithmatex">\[
+N_j(n)=\sum_{m=1}^n Y_m,\quad Y_m\sim B(1,p_{jj}(m))
+\]</div>
+<p>Actually <span class="arithmatex">\(Y_m\)</span> denotes whether chain reaches <span class="arithmatex">\(j\)</span> in exactly <span class="arithmatex">\(m\)</span> steps, if so, <span class="arithmatex">\(Y_m=1\)</span>, otherwise <span class="arithmatex">\(Y_m=0\)</span>. This is actually the same with <a href="#another perspective">another perspective for the description of recurrent state</a>, i.e.</p>
+<div class="arithmatex">\[
+N_j=\lim\limits_{n\rightarrow\infty} N_j(n),\quad N_{ij}=\lim\limits_{n\rightarrow\infty} N_{ij}(n).
+\]</div>
+<p>So</p>
+<div class="arithmatex">\[
+E\frac{N_j(n)}{n}=\sum_{m=1}^n \frac{EY_m}{n}=\frac{1}{n}p_{jj}(n),
+\]</div>
+<p>take the limit and we have the result.</p>
+<ul>
+<li>Prove the proposition.</li>
+</ul>
+<p>Easy to check, just assume <span class="arithmatex">\(\lim_{n\rightarrow \infty}p_{jj}(n)=\frac{1}{\mu_j}+\delta\)</span>, substitute in the above result and we have <span class="arithmatex">\(\delta=0\)</span>.</p>
+</div>
+</div>
 </div>
 
 
