@@ -766,6 +766,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moreras-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Morera's Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-of-holomorphic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence of holomorphic functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4171,6 +4204,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moreras-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Morera's Theorem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence-of-holomorphic-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence of holomorphic functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4721,6 +4787,50 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 <div class="admonition info">
 <p class="admonition-title">Definition of Analytic Continuation</p>
 <p>Given a pair of functions <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f\)</span>, which are holomorphic in region <span class="arithmatex">\(\Omega\)</span> and <span class="arithmatex">\(\Omega'\)</span>, respectively. If <span class="arithmatex">\(f=F\)</span> on <span class="arithmatex">\(\Omega\)</span>, then we say <span class="arithmatex">\(F\)</span> is a analytic continuation of <span class="arithmatex">\(f\)</span> into the region <span class="arithmatex">\(\Omega'\)</span>.</p>
+</div>
+<h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
+<h3 id="moreras-theorem">Morera's Theorem<a class="headerlink" href="#moreras-theorem" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Morera's Theorem</p>
+<p>Suppose <span class="arithmatex">\(f\)</span> is a continuous function on a open disc <span class="arithmatex">\(D\)</span> such that for any triangle <span class="arithmatex">\(T\)</span> contained in <span class="arithmatex">\(D\)</span>,</p>
+<div class="arithmatex">\[
+\int_T f(z)dz=0,
+\]</div>
+<p>then <span class="arithmatex">\(f\)</span> is holomorphic on <span class="arithmatex">\(D\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="moreras-theorem-proof" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="moreras-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Just use the proof process in <a href="#local-existence-of-primitive">Local existence of Primitive</a>.</p>
+</div>
+</div>
+</div>
+<h3 id="sequence-of-holomorphic-functions">Sequence of holomorphic functions<a class="headerlink" href="#sequence-of-holomorphic-functions" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Sequence of holomorphic functions</p>
+<p>Assume <span class="arithmatex">\(\{f_n\}\)</span> is a sequence of holomorphic functions that converges uniformly to a function <span class="arithmatex">\(f\)</span> in every compact subset of <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(f\)</span> is holomorphic in <span class="arithmatex">\(\Omega\)</span>.</p>
+<p>Moreover, sequence <span class="arithmatex">\(\{f'_n\}\)</span> converges uniformly to <span class="arithmatex">\(f'\)</span> on every compact subset of <span class="arithmatex">\(\Omega\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="sequence-of-holomorphic-functions-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="sequence-of-holomorphic-functions-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Notice "compact" guarantee <span class="arithmatex">\(f\)</span> is also in <span class="arithmatex">\(\Omega\)</span>.</p>
+<p>Use Goursat's Theorem, we have for any triangle <span class="arithmatex">\(T\)</span> in a closed disc <span class="arithmatex">\(D\)</span> contained in <span class="arithmatex">\(\Omega\)</span> </p>
+<div class="arithmatex">\[
+\int_T f_n(z)dz=0.
+\]</div>
+<p>By mathematical analysis, since <span class="arithmatex">\(f_n\rightrightarrows f\)</span>, <span class="arithmatex">\(f\)</span> is continuous, we could change the order of limit and integral</p>
+<div class="arithmatex">\[
+\int_T f(z)dz =\lim_{n\rightarrow \infty}\int_T f_n(z)dz=0.
+\]</div>
+<p>By <a href="#moreras-theorem">Morera's Theorem</a>, <span class="arithmatex">\(f\)</span> is holomorphic.</p>
+<p>For additional parts, we have to show that </p>
+<div class="arithmatex">\[
+\sup_{z\in \Omega_\delta}|F'(z)|\leq \frac{1}{\delta}\sup_{\xi\in\Omega}|F(\xi)|
+\]</div>
+<p>where <span class="arithmatex">\(\Omega_\delta=\{z\in \Omega: \overline{D}_\delta(z)\in \Omega\}\)</span>.</p>
+</div>
+</div>
 </div>
 
 
