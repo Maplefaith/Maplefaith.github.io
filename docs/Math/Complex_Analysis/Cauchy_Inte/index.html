@@ -14,7 +14,7 @@
         <link rel="prev" href="../Preliminary/">
       
       
-        <link rel="next" href="../../Functional_Analysis/">
+        <link rel="next" href="../Meromophic/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -578,6 +578,8 @@
       
         
       
+        
+      
     
     
       
@@ -794,8 +796,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#in-terms-of-integrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      In terms of Integrals
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homotopies-and-simply-connected-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homotopies and simply connected domains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complex-logarithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The complex Logarithm
+    </span>
+  </a>
   
 </li>
       
@@ -803,6 +832,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Meromophic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meromorphic Function
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4232,8 +4282,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#in-terms-of-integrals" class="md-nav__link">
+    <span class="md-ellipsis">
+      In terms of Integrals
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#homotopies-and-simply-connected-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homotopies and simply connected domains
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-complex-logarithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      The complex Logarithm
+    </span>
+  </a>
   
 </li>
       
@@ -4751,9 +4828,10 @@ f(z)&amp;=\frac{1}{2\pi i}\int_{\partial D}\frac{f(\zeta)}{(\zeta-z_0)} \sum_{n=
 </div>
 </div>
 <h2 id="analytic-continuation">Analytic Continuation<a class="headerlink" href="#analytic-continuation" title="Permanent link">&para;</a></h2>
-<p>The genetic code of a holomorphic function is determined if we know its values on appropriate arbitrarily small subsets.</p>
+<p>The genetic code of a holomorphic function is determined if we know its values on appropriate arbitrarily small subsets.
+<a id="Theorem for zero accumulation"></a></p>
 <div class="admonition success">
-<p class="admonition-title">Theorem for analytic continuation</p>
+<p class="admonition-title">Theorem for zero accumulation</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is a holomorphic function in a region <span class="arithmatex">\(\Omega\)</span>, and <span class="arithmatex">\(f\)</span> vanishes on a sequence of distinct points with a limit point in <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(f\)</span> is identically zero.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="analytic-continuation-proof" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="analytic-continuation-proof">Proof</label></div>
@@ -4832,6 +4910,168 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 </div>
 </div>
 </div>
+<p>We usually construct a holomorphic function using</p>
+<div class="arithmatex">\[
+F(z)=\sum_{i=1}^\infty f_i(n).
+\]</div>
+<p>If <span class="arithmatex">\(f_i\)</span> is holomorphic, and the above series converges uniformly to <span class="arithmatex">\(F\)</span>, then <span class="arithmatex">\(F\)</span> is holomorphic.</p>
+<h3 id="in-terms-of-integrals">In terms of Integrals<a class="headerlink" href="#in-terms-of-integrals" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Holomorphic function in terms of integrals</p>
+<p>Assume <span class="arithmatex">\(F(z,s)\)</span> defined on <span class="arithmatex">\(\Omega\times [0,1]\)</span>, satisfies</p>
+<p>(i) <span class="arithmatex">\(F(z,s)\)</span> is holomorphic with respect to <span class="arithmatex">\(z\)</span> for each fixed <span class="arithmatex">\(s\)</span>;</p>
+<p>(ii) <span class="arithmatex">\(F(z,s)\)</span> is continuous in <span class="arithmatex">\(\Omega\times [0,1]\)</span>;</p>
+<p>then a function <span class="arithmatex">\(f\)</span> defined by</p>
+<div class="arithmatex">\[
+f=\int_0^1 F(z,s)ds
+\]</div>
+<p>is holomorphic on <span class="arithmatex">\(\Omega\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="in-terms-of-integrals-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="in-terms-of-integrals-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We could use <a href="#sequence-of-holomorphic-functions">Sequence of holomorphic functions</a>.</p>
+<p>Define Riemann summation</p>
+<div class="arithmatex">\[
+f_n(z):=\frac{1}{n}\sum_{i=1}^n F(z,\frac{i}{n})
+\]</div>
+<p>which is holomorphic on <span class="arithmatex">\(\Omega\)</span>. We claim <span class="arithmatex">\(f\)</span> is a uniform convergence of <span class="arithmatex">\(f_n\)</span>. We could use continuous function in a compact set is uniformly continuous, i.e. <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall |s_1-s_2|\leq \delta\)</span>, <span class="arithmatex">\(\forall\)</span> disc <span class="arithmatex">\(D\subset \Omega\)</span>,</p>
+<div class="arithmatex">\[
+|F(z, s_1)-F(z,s_2)|&lt;\varepsilon,\quad \forall z\in D.
+\]</div>
+<p>Actually</p>
+<div class="arithmatex">\[
+\begin{align*}
+\left|f_n-f\right|&amp;=\left|\sum_{i=1}^{n}\int_\frac{i-1}{n}^\frac{i}{n} \left[F\left(z,\frac{i}{n}\right)-F(z,s)\right]ds\right|\\
+&amp;\leq \sum_{i=1}^{n}\int_\frac{i-1}{n}^\frac{i}{n} \left|F\left(z,\frac{i}{n}\right)-F(z,s)\right|ds\\
+&amp;\leq \sum_{i=1}^{n} \frac{\varepsilon}{n}=\varepsilon.
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="homotopies-and-simply-connected-domains">Homotopies and simply connected domains<a class="headerlink" href="#homotopies-and-simply-connected-domains" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Homotopies</p>
+<p>Assume two continuous curves <span class="arithmatex">\(\gamma_0\)</span>, <span class="arithmatex">\(\gamma_1\)</span> defined on an open set <span class="arithmatex">\(\Omega\)</span>, are given by a parametrization <span class="arithmatex">\(\gamma_0(t)\)</span> and <span class="arithmatex">\(\gamma_1(t)\)</span>, <span class="arithmatex">\(t\in [a,b]\)</span>, with common end-points</p>
+<div class="arithmatex">\[
+\gamma_0(a)=\gamma_1(a)=\alpha,\quad \gamma_0(b)=\gamma_1(b)=\beta
+\]</div>
+<p>then the above curve are said to be homotopic if <span class="arithmatex">\(\forall s\in [0,1]\)</span>, there exsits another curve <span class="arithmatex">\(\gamma_s\subset \Omega\)</span>, parametrized with <span class="arithmatex">\(\gamma_s(t)\)</span>, <span class="arithmatex">\(t\in [a,b]\)</span>, such that</p>
+<div class="arithmatex">\[
+\gamma_s(a)=\alpha, \quad \gamma_s(b)=\beta,
+\]</div>
+<p>and <span class="arithmatex">\(\gamma_s(t)|_{s=0}=\gamma_0(t)\)</span>, and <span class="arithmatex">\(\gamma_s(t)|_{s=1}=\gamma_1(t)\)</span>. Moreover, <span class="arithmatex">\(\gamma_s(t)\)</span> is continuous jointly on <span class="arithmatex">\(s\in [0,1]\)</span> and <span class="arithmatex">\(t\in [a,b]\)</span>.</p>
+</div>
+<p>Loosely speaking, two curves are homotopic if one curve could be continuously deformed into the other without leaving <span class="arithmatex">\(\Omega\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for homotopic curves</p>
+<p>Assume two curves <span class="arithmatex">\(\gamma_0\)</span> and <span class="arithmatex">\(\gamma_1\)</span> with same end-points are homotopic in an open set <span class="arithmatex">\(\Omega\)</span>, <span class="arithmatex">\(f\)</span> is holomorphic on <span class="arithmatex">\(\Omega\)</span>, then </p>
+<div class="arithmatex">\[
+\int_{\gamma_0}f(z)dz=\int_{\gamma_1}f(z)dz.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition of Simply connected region</p>
+<p>A region (connected) <span class="arithmatex">\(\Omega\)</span> is said to be simply connected, if for all two curves <span class="arithmatex">\(\gamma_0,\gamma_1\subset \Omega\)</span> with same end-points, they are homotopic.</p>
+</div>
+<p><a id="Theorem for primitives on simply connected region"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for primitives on simply connected region</p>
+<p>Every function on a simply connected region has a primitive.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="homotopies-and-simply-connected-domains-proof" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="homotopies-and-simply-connected-domains-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>just the same logic as our proof in <a href="#local-existence-of-primitive">Local existence of Primitive</a>, where we use rectangular to formulate a primitive. Here we just use a continuous curve.</p>
+</div>
+</div>
+</div>
+<p>The punctured plane is not simply connected, since on which <span class="arithmatex">\(f=\frac{1}{z}\)</span> is holomorphic, however <span class="arithmatex">\(\int_{C_\varepsilon}\frac{1}{z}dz=2\pi i\neq 0\)</span>. This means <span class="arithmatex">\(f\)</span> does not have a primitive on <span class="arithmatex">\(D_\delta(0)-\{0\}\)</span>, which implies it is not simply connected.</p>
+<h2 id="the-complex-logarithm">The complex Logarithm<a class="headerlink" href="#the-complex-logarithm" title="Permanent link">&para;</a></h2>
+<p>Simply connected region guarantees the uniqueness of complex logarithm,</p>
+<div class="arithmatex">\[
+\log z=\log r+ i\theta.
+\]</div>
+<p>with <span class="arithmatex">\(z=re^{i\theta}\)</span>.</p>
+<p>The following theorem makes use of the inspiration that <span class="arithmatex">\(\log z\)</span> is a primitive of <span class="arithmatex">\(\frac{1}{z}\)</span> on a simply connected region. So we could construct a logarithm function.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for complex logarithm</p>
+<p>Assume <span class="arithmatex">\(\Omega\)</span> is a simply connected region with <span class="arithmatex">\(1\in \Omega\)</span> and <span class="arithmatex">\(0\not\in \Omega\)</span>. Then there exsits a holomorphic function <span class="arithmatex">\(F(z)=\log (z)\)</span>, such that</p>
+<p>(i) <span class="arithmatex">\(F\)</span> is holomorphic on <span class="arithmatex">\(\Omega\)</span>;</p>
+<p>(ii) <span class="arithmatex">\(e^{F(z)}=z\)</span> for all <span class="arithmatex">\(z\in \Omega\)</span>,</p>
+<p>(iii) <span class="arithmatex">\(F(r)=\log r, \forall r\)</span> whenever <span class="arithmatex">\(r\)</span> is a real number and near <span class="arithmatex">\(1\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="the-complex-logarithm-proof" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="the-complex-logarithm-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Assume <span class="arithmatex">\(\gamma\subset \Omega\)</span> starts from <span class="arithmatex">\(1\)</span> and ends at <span class="arithmatex">\(z\)</span>, define </p>
+<div class="arithmatex">\[
+F(z):=\int_\gamma \frac{1}{w}dw.
+\]</div>
+<p>arguing as <a href="#Theorem for primitives on simply connected region">Theorem for primitives on simply connected region</a>, since <span class="arithmatex">\(\frac{1}{z}\)</span> is holomorphic on <span class="arithmatex">\(\Omega\)</span>, we have <span class="arithmatex">\(F\)</span> is a primitive of <span class="arithmatex">\(\frac{1}{z}\)</span> and </p>
+<div class="arithmatex">\[
+F'=\frac{1}{z}.
+\]</div>
+<p>(ii) Equivalently, we have to prove </p>
+<div class="arithmatex">\[
+e^{-F(z)}z=1.
+\]</div>
+<p>Actually, <span class="arithmatex">\(\frac{d}{dz}e^{-F(z)}z=e^{-F(z)}(1-F'(z)z)=0\)</span>, so by <a href="#zero-derivatives means constant function">zero-derivatives means constant function</a>, we have <span class="arithmatex">\(e^{-F(z)}z=C\)</span>. Given the initial value <span class="arithmatex">\(F(1)=0\)</span>, we have <span class="arithmatex">\(c=1\)</span> and we prove (ii).</p>
+<p>(iii) Still by definition <span class="arithmatex">\(F(r)=\int_1^r\frac{1}{w}dw=\log r\)</span>.</p>
+</div>
+</div>
+</div>
+<p>Choose <span class="arithmatex">\(\Omega=\mathbb{C}-(-\infty, 0]\)</span>, then we have the principle branch of logarithm</p>
+<div class="arithmatex">\[
+\log z=\log r+i\theta
+\]</div>
+<p>with <span class="arithmatex">\(|\theta|&lt;\pi\)</span>. We define it by a specific curve, which starts from <span class="arithmatex">\(1\)</span>, firstly goes straight to <span class="arithmatex">\(r\)</span> and then rotate about <span class="arithmatex">\(\theta\)</span> positively.</p>
+<div class="arithmatex">\[
+\log z=\int_1^r\frac{1}{w}dw+\int_0^\theta \frac{1}{re^{it}}rie^{it}dt=\log r+o\theta.
+\]</div>
+<p>If <span class="arithmatex">\(g=\log f\)</span>, then <span class="arithmatex">\(g'=\frac{f'}{f}\)</span>. So we could construct a primitive using integral of <span class="arithmatex">\(\frac{f'}{f}\)</span> to get <span class="arithmatex">\(g\)</span> from a arbitrary function which is holomorphic on a simply connected region.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for generating logarithm of a function</p>
+<p>Assume <span class="arithmatex">\(\Omega\)</span> is a simply connected region, <span class="arithmatex">\(f\)</span> is holomorphic on <span class="arithmatex">\(\Omega\)</span> and does not vanish, then there exists a holomorphic function such that <span class="arithmatex">\(e^{g(z)}=f(z)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="the-complex-logarithm-proof_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="the-complex-logarithm-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Still the same logic of constructing a primitive of <span class="arithmatex">\(\frac{f'}{f}\)</span>.</p>
+<p>Define</p>
+<div class="arithmatex">\[
+g(z)=\int_\gamma \frac{f'(w)}{f(w)}dw+c_0
+\]</div>
+<p>where <span class="arithmatex">\(\gamma\subset \Omega\)</span> starts from <span class="arithmatex">\(z_0\in \Omega\)</span> and ends at <span class="arithmatex">\(z\)</span>, and <span class="arithmatex">\(c_0\)</span> is used for compensation such that <span class="arithmatex">\(e^g(z_0)=f(z_0)=e^{c_0}\)</span>. Arguing as <a href="#Theorem for primitives on simply connected region">Theorem for primitives on simply connected region</a>, we have <span class="arithmatex">\(g(z)\)</span> is holomorphic and</p>
+<div class="arithmatex">\[
+g'(z)=\frac{f'(z)}{f(z)}.
+\]</div>
+<p>To prove <span class="arithmatex">\(e^{g(z)}=f(z)\)</span> we only need to prove <span class="arithmatex">\(f(z)e^{-g(z)}=1\)</span>. Actually</p>
+<div class="arithmatex">\[
+\frac{d}{dz}\left[f(z)e^{-g(z)}\right]=e^{-g(z)}(f'(z)-g'(z)f(z))=0
+\]</div>
+<p>so <span class="arithmatex">\(f(z)e^{-g(z)}=c\)</span>. Notice that <span class="arithmatex">\(g(z_0)=c_0\)</span>, so we have <span class="arithmatex">\(c=f(z_0)e^{-c_0}=1\)</span>. So <span class="arithmatex">\(e^{g(z)}=f(z)\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(f(z)=1+z\)</span>, use</p>
+<div class="arithmatex">\[
+\frac{f'}{f}=\frac{1}{1+z}=\sum_{n=0}^\infty (-1)^n z^n.
+\]</div>
+<p>near <span class="arithmatex">\(z=0\)</span> to show that</p>
+<div class="arithmatex">\[
+\log(1+z)=\sum_{n=0}^\infty \frac{(-1)^n z^{n+1}}{n+1}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="the-complex-logarithm-proof_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="the-complex-logarithm-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We know from the above theorem there exists a function <span class="arithmatex">\(g\)</span> such that <span class="arithmatex">\(e^{g(z)}=1+z\)</span>. We have to prove that <span class="arithmatex">\(\log(1+z)\)</span> is primitive of <span class="arithmatex">\(\frac{1}{1+z}\)</span>. Just take a derivative on both sides of the desired equaiton and show that they equal by condition. So they actually differ by a constant. Then use initial value at <span class="arithmatex">\(z=0\)</span> to show that the constant is <span class="arithmatex">\(0\)</span>.</p>
+</div>
+</div>
+</div>
 
 
 
@@ -4888,13 +5128,13 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
         
         
           
-          <a href="../../Functional_Analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Functional Analysis">
+          <a href="../Meromophic/" class="md-footer__link md-footer__link--next" aria-label="Next: Meromorphic Function">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Functional Analysis
+                Meromorphic Function
               </div>
             </div>
             <div class="md-footer__button md-icon">
