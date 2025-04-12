@@ -852,9 +852,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#density-seperability" class="md-nav__link">
+  <a href="#density-separability" class="md-nav__link">
     <span class="md-ellipsis">
-      Density &amp; Seperability
+      Density &amp; Separability
     </span>
   </a>
   
@@ -4220,9 +4220,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#density-seperability" class="md-nav__link">
+  <a href="#density-separability" class="md-nav__link">
     <span class="md-ellipsis">
-      Density &amp; Seperability
+      Density &amp; Separability
     </span>
   </a>
   
@@ -4371,7 +4371,7 @@ u^{\frac{1}{p}}\cdot v^{\frac{1}{q}}\leq \frac{1}{p}u+\frac{1}{q}v, \quad \frac{
 \]</div>
 <p>(ii) For <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(g\)</span> satisfies <span class="arithmatex">\(\int_E |f(x)|^pdx&lt;\infty\)</span>, <span class="arithmatex">\(\int_E |g(x)|^qdx&lt;\infty\)</span>, we have</p>
 <div class="arithmatex">\[
-\int_E |f(x)g(x)|dx\leq \left(\int_E |f(x)|^pdx\right)^{\frac{1}{p}}\cdot \left(\int_E |g(x)|^qdx\right)^{\frac{1}{g}}.
+\int_E |f(x)g(x)|dx\leq \left(\int_E |f(x)|^pdx\right)^{\frac{1}{p}}\cdot \left(\int_E |g(x)|^qdx\right)^{\frac{1}{q}}.
 \]</div>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="important-equations-proof-for-i" name="__tabbed_2" type="radio" /><input id="important-equations-proof-for-ii" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="important-equations-proof-for-i">Proof for (i)</label><label for="important-equations-proof-for-ii">Proof for (ii)</label></div>
@@ -4416,6 +4416,7 @@ v=\frac{|g(x)|^q}{\left(\int_E |g(x)|^q dx\right)},
 </div>
 </div>
 </div>
+<p><a id="Minkowski Inequation"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Minkowski Inequation</p>
 <p>Assume <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(q\)</span> satisfies conjugate condition <span class="arithmatex">\(\frac{1}{p}+\frac{1}{q}=1\)</span>, then </p>
@@ -4498,10 +4499,32 @@ v=\frac{|g(x)|^q}{\left(\int_E |g(x)|^q dx\right)},
 \rho(f,g)=\max_{t\in[a,b]}|f(t)-g(t)|.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="basic-concepts-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="basic-concepts-proof-for-i" name="__tabbed_4" type="radio" /><input id="basic-concepts-proof-for-ii" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof-for-i">Proof for (i)</label><label for="basic-concepts-proof-for-ii">Proof for (ii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>(i) Use Cauchy inequation.</p>
+<p>Use Cauchy inequation.</p>
+<div class="arithmatex">\[
+\left(\sum_{i=1}^n a_ib_i\right)^2\leq \left(\sum_{i=1}^n a_i^2\right) \left(\sum_{i=1}^n b_i^2\right)
+\]</div>
+<p>So we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{i=1}^n (a_i+b_i)^2&amp;= \sum_{i=1}^n a_i^2 + 2\sum_{i=1}^n a_ib_i +\sum_{i=1}^n b_i^2 \\
+&amp;\leq \sum_{i=1}^n a_i^2 + 2 \left(\sum_{i=1}^n a_i^2\right)^\frac{1}{2} \left(\sum_{i=1}^n b_i^2\right)^\frac{1}{2} +\sum_{i=1}^n b_i^2 \\
+&amp;=\left[ \left(\sum_{i=1}^n a_i^2\right)^\frac{1}{2}+ \left(\sum_{i=1}^n b_i^2\right)^\frac{1}{2}\right]^2.
+\end{align*}
+\]</div>
+<p>So we lat <span class="arithmatex">\(a_i=\xi_i-\zeta_i, b_i=\zeta_i-\eta_i\)</span>, we have the triangle inequation.</p>
+</div>
+<div class="tabbed-block">
+<p>By</p>
+<div class="arithmatex">\[
+\begin{align*}
+|x(t)+y(t)|&amp;\leq |x(t)|+|y(t)|,\quad t\in [a,b]\\
+&amp;\leq \max_{t\in [a,b]} |x(t)|+\max_{t\in [a,b]} |y(t)|\\
+\Rightarrow \quad \max_{t\in [a,b]} |x(t)+y(t)|&amp;\leq\max_{t\in [a,b]} |x(t)|+\max_{t\in [a,b]} |y(t)|.
+\end{align*}
+\]</div>
 </div>
 </div>
 </div>
@@ -4524,9 +4547,12 @@ l^\infty:=\{\{\xi_n\}_{n\geq 1}: \exists M&gt;0, \text{ s.t } |\xi_n|\leq M,\for
 \rho(x,y)=\sup_{n}|\xi_n-\eta_n|.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="basic-concepts-proof_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="basic-concepts-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof">Proof</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>(i) Using <a href="#Minkowski Inequation">Minkowski Inequation</a>.</p>
+<p>(ii) Similar to the previous example.</p>
+</div>
 </div>
 </div>
 <div class="question">
@@ -4548,10 +4574,27 @@ L^\infty:=\{\text{measurable } f : \exists M&gt;0, \exists E_0\subset  E, \text{
 \rho(f,g)=\inf_{m(E_0)=0,\atop E_0\subset E}\left\{\sup_{t\in E-E_0}|f(t)-g(t)|\right\}.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="basic-concepts-proof_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="basic-concepts-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="basic-concepts-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>(i) </p>
+<p>(i) By <a href="#Minkowski Inequation">Minkowski Inequation</a>.</p>
+<p>(ii) Here the definition of the metric is to emit the unboundedness on zero-measure set. By infimum, <span class="arithmatex">\(\forall a(t),b(t), t\in E\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists E_1,E_2\subset F\)</span> and <span class="arithmatex">\(m(E_1)=m(E_2)=0\)</span>, s.t.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sup_{t\in E-E_1} |a(t)|\leq \inf_{m(E_0)=0,\atop E_0\subset E}\left\{\sup_{t\in E-E_0}|a(t)|\right\} + \frac{\varepsilon}{2},\\
+\sup_{t\in E-E_1} |b(t)|\leq \inf_{m(E_0)=0,\atop E_0\subset E}\left\{\sup_{t\in E-E_0}|b(t)|\right\} + \frac{\varepsilon}{2}.
+\end{align*}
+\]</div>
+<p>So since <span class="arithmatex">\(m(E_1\cup E_2)=0\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align*}
+\inf_{m(E_0)=0,\atop E_0\subset E}\left\{\sup_{t\in E-E_0}|a(t)+b(t)|\right\}&amp;\leq\sup_{t\in E-(E_1+E_2)} |a(t)+b(t)|\\
+&amp;\leq \sup_{t\in E-(E_1+E_2)} |a(t)| +\sup_{t\in E-(E_1+E_2)} |b(t)|\\
+&amp;\leq \sup_{t\in E-E_1} |a(t)|+\sup_{t\in E-E_2} |b(t)|\\
+&amp;\leq \inf_{m(E_0)=0,\atop E_0\subset E}\left\{\sup_{t\in E-E_0}|a(t)|\right\} +\inf_{m(E_0)=0,\atop E_0\subset E}\left\{\sup_{t\in E-E_0}|b(t)|\right\} +\varepsilon.
+\end{align*}
+\]</div>
+<p>Let <span class="arithmatex">\(\varepsilon\rightarrow 0\)</span>, and we have the result.</p>
 </div>
 </div>
 </div>
@@ -4636,7 +4679,7 @@ B(x_0, \varepsilon)\cap (G-\{x_0\})\neq \varnothing,
 <p>Assume metric space <span class="arithmatex">\((M,\rho)\)</span>, <span class="arithmatex">\(A,B\subset X\)</span>, then</p>
 <p>(i) <span class="arithmatex">\(A\subset \overline{A}\)</span>, (ii) <span class="arithmatex">\(\overline{\overline{A}}=\overline{A}\)</span>, (iii) <span class="arithmatex">\(\overline{A\cup B}=\overline{A}\cup \overline{B}\)</span>, (iv) <span class="arithmatex">\(\overline{\varnothing}=\varnothing\)</span>.</p>
 </div>
-<h3 id="density-seperability">Density &amp; Seperability<a class="headerlink" href="#density-seperability" title="Permanent link">&para;</a></h3>
+<h3 id="density-separability">Density &amp; Separability<a class="headerlink" href="#density-separability" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definition of Density</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A,B\subset X\)</span>. If <span class="arithmatex">\(\overline{B}\supset A\)</span>, then <span class="arithmatex">\(B\)</span> is dense in <span class="arithmatex">\(A\)</span>.</p>
@@ -4649,7 +4692,7 @@ B(x_0, \varepsilon)\cap (G-\{x_0\})\neq \varnothing,
 <p>(iii) <span class="arithmatex">\(\forall x\in A\)</span>, <span class="arithmatex">\(\exists \{x_n\}\in B\)</span>, such that <span class="arithmatex">\(\lim\limits_{n\rightarrow\infty}x_n=x\)</span>.</p>
 <p>(iv) <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(A\subset \bigcup\limits_{x\in B}B(x, \varepsilon)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="density-seperability-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="density-seperability-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="density-separability-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="density-separability-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4672,8 +4715,36 @@ B(x_0, \varepsilon)\cap (G-\{x_0\})\neq \varnothing,
 </div>
 </div>
 <div class="admonition info">
-<p class="admonition-title">Definition of Seperability</p>
-<p>Assume <span class="arithmatex">\(X\)</span> is a metric space. If there exists denumerable set <span class="arithmatex">\(B\subset X\)</span>, <span class="arithmatex">\(B\)</span> is dense in <span class="arithmatex">\(X\)</span>, then <span class="arithmatex">\(X\)</span> is seperable.</p>
+<p class="admonition-title">Definition of Separability</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space. If there exists denumerable set <span class="arithmatex">\(B\subset X\)</span>, <span class="arithmatex">\(B\)</span> is dense in <span class="arithmatex">\(X\)</span>, then <span class="arithmatex">\(X\)</span> is separable. This is an essential difference between finite-dimension and infinite-dimension space.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Prove <span class="arithmatex">\(L^\infty[a,b]\)</span> is not separable in metric </p>
+<div class="arithmatex">\[
+\inf_{F_0\subset [a,b]\atop m(F_0)=0}\sup_{t\in [a,b]-F_0 }|x(t)-y(t)|.
+\]</div>
+<p>Actually, <span class="arithmatex">\(F=[a,b]\)</span>, which means we have a non-denumerable set, we could find a set with the distance of all its elements not really small.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="density-separability-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="density-separability-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Choose element </p>
+<div class="arithmatex">\[
+f_s(t)=\chi_{[a,s]},\quad s\in [a,b]
+\]</div>
+<p>So if <span class="arithmatex">\(t\neq s\in [a,b]\)</span>, we have </p>
+<div class="arithmatex">\[
+\rho(f_t,f_s)=1.
+\]</div>
+<p>We construct set <span class="arithmatex">\(A\)</span> to be all the functions above.</p>
+<p>We prove the proposition by contradiction. If it is separable, then there exists a dense denumberable subset <span class="arithmatex">\(A_0\)</span> of <span class="arithmatex">\(L^\infty [a,b]\)</span>, such that <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(L^\infty [a,b]\subset \bigcup\limits_{x\in A_0}B(x,\varepsilon)\)</span>. Choose <span class="arithmatex">\(\varepsilon=\frac{1}{3}\)</span>. </p>
+<p>Since <span class="arithmatex">\(A\)</span> has non-denumerable elements, so there exists 2 elements <span class="arithmatex">\(f_t,f_s \in A\)</span>, <span class="arithmatex">\(\exists g_0\in A_0\)</span>, such that <span class="arithmatex">\(f_t,f_s\in B(g_0,\frac{1}{3})\)</span>, so</p>
+<div class="arithmatex">\[
+\rho(f_t,f_s)\leq \rho(f_t,g_0)+\rho(g_0,f_s)&lt;\frac{2}{3}&lt;1,
+\]</div>
+<p>which contradicts!</p>
+</div>
+</div>
 </div>
 <h3 id="continuous-mapping">Continuous Mapping<a class="headerlink" href="#continuous-mapping" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
@@ -4687,7 +4758,7 @@ B(x_0, \varepsilon)\cap (G-\{x_0\})\neq \varnothing,
 <p><strong>Example</strong>. (i) Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(x_0\in X\)</span>, mapping <span class="arithmatex">\(T(x)=\rho(x,x_0), (x\in X)\)</span> is a continuous functional from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
 <p>(ii) Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(F\subset X\)</span>, mapping <span class="arithmatex">\(T(x)=\inf\limits_{y\in F}\rho(x,y), (x\in X)\)</span> is continuous functional from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(\mathbb{R}\)</span>. </p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="continuous-mapping-proof-for-i" name="__tabbed_9" type="radio" /><input id="continuous-mapping-proof-for-ii" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-proof-for-i">Proof for (i)</label><label for="continuous-mapping-proof-for-ii">Proof for (ii)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="continuous-mapping-proof-for-i" name="__tabbed_10" type="radio" /><input id="continuous-mapping-proof-for-ii" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-proof-for-i">Proof for (i)</label><label for="continuous-mapping-proof-for-ii">Proof for (ii)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4712,7 +4783,7 @@ B(x_0, \varepsilon)\cap (G-\{x_0\})\neq \varnothing,
 \forall \text{ closed set } F\in Y, T^{-1}(F) \text{ is a closed set.}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="continuous-mapping-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="continuous-mapping-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4750,6 +4821,52 @@ Tx=y.
 <div class="question">
 <p><strong>Example</strong>. Basic space <span class="arithmatex">\(\mathbb{R}\)</span> and <span class="arithmatex">\(C[a,b]\)</span> are complete.</p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="completeness-proof" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="completeness-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For <span class="arithmatex">\(\mathbb{R}\)</span>, it is done in mathematical analysis.</p>
+<p>For <span class="arithmatex">\(C[a,b]\)</span>, we have prove it actually in series of functions. By definition of metric, <span class="arithmatex">\(\forall\text{ Cauchy's Seq } \{x_n\}\subset C[a,b]\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, <span class="arithmatex">\(\forall n,m&gt;N\)</span>, </p>
+<div class="arithmatex">\[
+\sup_{t\in [a,b]}|x_m(t)-x_n(t)|&lt;\varepsilon.
+\]</div>
+<p>So </p>
+<div class="arithmatex">\[
+\begin{align}
+|x_m(t)-x_n(t)|&lt;\varepsilon,\quad \forall t\in [a,b].\label{uniform-convergence}
+\end{align}
+\]</div>
+<p>which means for fixed <span class="arithmatex">\(t\in [a,b]\)</span>, <span class="arithmatex">\(x_m(t), x_n(t)\)</span> are cauchy sequence on <span class="arithmatex">\(\mathbb{R}\)</span>, so by completeness of <span class="arithmatex">\(\mathbb{R}\)</span>, we have their convergent function <span class="arithmatex">\(x(t)\)</span>. Let <span class="arithmatex">\(n,t\)</span> fixed and let <span class="arithmatex">\(m\rightarrow \infty\)</span> in inequation <span class="arithmatex">\(\ref{uniform-convergence}\)</span>, we have</p>
+<div class="arithmatex">\[
+|x_n(t)-x(t)|\leq \varepsilon, \quad \forall t\in [a,b].
+\]</div>
+<p>So <span class="arithmatex">\(x_n(t)\)</span> converges to <span class="arithmatex">\(x(t)\)</span> uniformly, so by conclusion of mathematical analysis, we have <span class="arithmatex">\(x(t)\)</span> is continuous and thus <span class="arithmatex">\(x(t)\in C[a,b]\)</span>. So from above, we take a supremum, which gives <span class="arithmatex">\(\rho(x_n, x)\leq \varepsilon\)</span>. So <span class="arithmatex">\(x_n\)</span> converges to an element in <span class="arithmatex">\(C[a,b]\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(S\)</span> is a space composed by functions defined on a finite-measure set <span class="arithmatex">\(F\)</span>, which is finite-valued almost everywhere. Define metric</p>
+<div class="arithmatex">\[
+\rho(x,y)=\int_F \frac{|x(t)-y(t)|}{1+|x(t)+y(t)|}dt,\quad x,y\in S.
+\]</div>
+<p>Prove <span class="arithmatex">\(S\)</span> is complete.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="completeness-proof_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="completeness-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(s\)</span> is a space composed by sequences <span class="arithmatex">\(x=\{\xi_1,\cdots,\xi_n,\cdots\}\)</span>. Define metric</p>
+<div class="arithmatex">\[
+\rho(x,y)=\sum_{k=1}^\infty \frac{1}{2^k}\frac{|\xi_k-\eta_k|}{1+|\xi_k+\eta_k|}
+\]</div>
+<p>Prove <span class="arithmatex">\(s\)</span> is complete.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="completeness-proof_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="completeness-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <h3 id="meager-sets">Meager sets<a class="headerlink" href="#meager-sets" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definition of nowhere dense sets</p>
@@ -4762,7 +4879,7 @@ Tx=y.
 \forall \text{ open ball }S(x_0,r), \exists \text{ open ball }S(y_0,r')\subset S(x_0,r), s.t. A\cap S(y_0,r')=\varnothing.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="meager-sets-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="meager-sets-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4779,16 +4896,60 @@ A=\bigcup_{n=1}^\infty F_n.
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem of Nested Closed Balls</p>
-<p>Metric Space <span class="arithmatex">\(X\)</span> is complete, iff $\forall $ nested closed ball <span class="arithmatex">\(\{K_n=\overline{S}(x_n,r_n)\}_{n\geq 1}\)</span>, which satisfies </p>
+<p>Metric Space <span class="arithmatex">\(X\)</span> is complete, iff <span class="arithmatex">\(\forall\)</span> nested closed ball <span class="arithmatex">\(\{K_n=\overline{S}(x_n,r_n)\}_{n\geq 1}\)</span>, which satisfies </p>
 <div class="arithmatex">\[
 \overline{S}(x_1,r_1)\supset \overline{S}(x_2,r_2)\supset \cdots,
 \]</div>
 <p>and <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}r_n=0\)</span>, then there exists a unique point <span class="arithmatex">\(x_0\in X\)</span>, such that <span class="arithmatex">\(x_0\in \bigcap_{n=1}^\infty \overline{S}(x_n,r_n)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="meager-sets-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="meager-sets-proof_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+<ul>
+<li>Sufficient. </li>
+</ul>
+<p>Assume <span class="arithmatex">\(X\)</span> is complete. Choose a sequence <span class="arithmatex">\(\{x_n\}\)</span>, just the center of each closed ball, then for each <span class="arithmatex">\(n\geq 1\)</span>, <span class="arithmatex">\(\forall m&gt;n\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align}
+\rho(x_n, x_{m})&lt;r_n.\label{nested}
+\end{align}
+\]</div>
+<p><span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, such that <span class="arithmatex">\(\forall n&gt;N\)</span>, <span class="arithmatex">\(r_n&lt;\varepsilon\)</span>. Choose <span class="arithmatex">\(\forall m&gt;n&gt;N\)</span>, <span class="arithmatex">\(\rho(x_n, x_{m})&lt;\varepsilon\)</span>.</p>
+<p>So <span class="arithmatex">\(x_n\)</span> is a Cauchy sequence. By completeness of <span class="arithmatex">\(X\)</span>, there exists a point <span class="arithmatex">\(x\in X\)</span>, such that <span class="arithmatex">\(x_n\rightarrow n\)</span>. Because for each <span class="arithmatex">\(n\geq 1\)</span>, <span class="arithmatex">\(x_k\subset \overline{S}(x_n,r_n)\)</span> for <span class="arithmatex">\(k\geq n\)</span>, so <span class="arithmatex">\(x\in K_n\)</span>. So <span class="arithmatex">\(x=\bigcup_{n=1}^\infty K_n\)</span>. In inequation <span class="arithmatex">\(\ref{nested}\)</span>, fix <span class="arithmatex">\(n\)</span> and let <span class="arithmatex">\(m\rightarrow \infty\)</span>, by continuity of metric, we have</p>
+<div class="arithmatex">\[
+\rho(x_n, n)\leq r_n, 
+\]</div>
+<p>which means <span class="arithmatex">\(x\subset K_n\)</span> for each n.</p>
+<p>To prove the uniqueness, we assume there exists another point <span class="arithmatex">\(y\in \bigcup_{n=1}^\infty K_n\)</span>. If <span class="arithmatex">\(x\neq y\)</span>, then <span class="arithmatex">\(\rho(x,y)&gt;0\)</span>, which contradicts <span class="arithmatex">\(r_n\rightarrow 0\)</span>!
+<p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+<ul>
+<li>Necessary.</li>
+</ul>
+<p>Assume <span class="arithmatex">\(\{x_n\}\subset X\)</span> is a Cauchy sequence, choose a subsequence which converges much faster. Since <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, <span class="arithmatex">\(\forall n,m&gt;N\)</span>, we have <span class="arithmatex">\(\rho(x_n,x_m)&lt;\varepsilon\)</span>. Let <span class="arithmatex">\(\varepsilon_1=\frac{1}{2}\)</span>, <span class="arithmatex">\(\exists N_1&gt;0\)</span>, choose <span class="arithmatex">\(n_1&gt;N_1\)</span>, and <span class="arithmatex">\(\forall m_1&gt;N_1\)</span>, we have</p>
+<div class="arithmatex">\[
+\rho(x_{n_1}, x_{m_1})&lt;\frac{1}{2}.
+\]</div>
+<p>Choose <span class="arithmatex">\(\varepsilon_2=\frac{1}{2^2}\)</span>, <span class="arithmatex">\(\exists N_2&gt;0\)</span>, choose <span class="arithmatex">\(n_2&gt;\max\{N_1,N_2\}\)</span>, and <span class="arithmatex">\(\forall m_2\)</span>, we have</p>
+<div class="arithmatex">\[
+\rho(x_{n_2}, x_{m_2})&lt;\frac{1}{2^2}.
+\]</div>
+<p>Since <span class="arithmatex">\(n_2&gt;N_1\)</span>, so we have </p>
+<div class="arithmatex">\[
+\rho(x_{n_2},x_{n_1})&lt;\frac{1}{2}.
+\]</div>
+<p>Follow the same routine, we choose <span class="arithmatex">\(\varepsilon_k=\frac{1}{2^k}\)</span>, then <span class="arithmatex">\(\exists N_k&gt;0\)</span>, choose <span class="arithmatex">\(n_k&gt;\max\{N_k,N_{k-1},\cdots, N_1\}\)</span>, and we have </p>
+<div class="arithmatex">\[
+\rho(x_{n_k},x_{n_{k-1}})&lt;\frac{1}{2^{k-1}}.
+\]</div>
+<p>Construct nested closed ball <span class="arithmatex">\(K_k=\overline{S}(x_{n_k}, \frac{1}{2^{k}})\)</span>. <span class="arithmatex">\(\forall x\in K_{k+1}\)</span>, we have</p>
+<div class="arithmatex">\[
+\rho(x_{k},x)\leq \rho(x_k,x_{k+1}) +\rho(x_{k+1}, x)&lt;\frac{1}{2^{k}}+\frac{1}{2^{k}}=\frac{1}{2^{k-1}}.
+\]</div>
+<p>So <span class="arithmatex">\(x\in K_k\)</span>. By condition of the proposition, we have a unique point <span class="arithmatex">\(x\in \bigcup_{k=1}^\infty K_k\)</span>. Since <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, s.t. <span class="arithmatex">\(\frac{1}{2^{N-1}}&lt;\varepsilon\)</span>, and for <span class="arithmatex">\(n, n_k&gt;N\)</span>,</p>
+<div class="arithmatex">\[
+\rho(x_n, x)\leq \rho(x_n, x_{n_k})+\rho(x_{n_k}, x)&lt;\frac{1}{2^{N}}+\frac{1}{2^{N}}&lt;\varepsilon.
+\]</div>
+<p>So <span class="arithmatex">\(x_n\rightarrow x\in X\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4796,7 +4957,7 @@ A=\bigcup_{n=1}^\infty F_n.
 <p class="admonition-title">Baire Theorem</p>
 <p>Every complete space is a set of the second category.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="meager-sets-proof_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="meager-sets-proof_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="meager-sets-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4819,7 +4980,7 @@ A=\bigcup_{n=1}^\infty F_n.
 <p>(ii) Assume <span class="arithmatex">\(A\subset X\)</span> is a relative compact set, then <span class="arithmatex">\(\forall B\subset A\)</span>, <span class="arithmatex">\(B\)</span> is also a relative compact set.</p>
 <p>(iii) Assume <span class="arithmatex">\(A\subset X\)</span> is a compact set, then <span class="arithmatex">\(\forall \text{ closed set }B\subset A\)</span>, <span class="arithmatex">\(B\)</span> is also a compact set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="compact-sets-proof" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="compact-sets-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="compact-sets-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="compact-sets-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(ii) By definition. <span class="arithmatex">\(\forall \{x_n\}_{n\geq 1}\subset B\subset A\)</span>, so <span class="arithmatex">\(\exists \{n_k\}_{k\geq 1}\)</span> and <span class="arithmatex">\(x\in X\)</span>, such that <span class="arithmatex">\(\lim\limits_{k\rightarrow \infty}x_{n_k}=x\)</span>, so <span class="arithmatex">\(B\)</span> is a relative compact set.</p>
@@ -4845,7 +5006,7 @@ A=\bigcup_{n=1}^\infty F_n.
 <p>(ii) Assume <span class="arithmatex">\(A\subset X\)</span> is a totally bounded set, then <span class="arithmatex">\(\forall B\subset A\)</span>, <span class="arithmatex">\(B\)</span> is also a totally bounded set.</p>
 <p>(iii) Assume <span class="arithmatex">\(A\subset X\)</span> is a totally bounded set, then <span class="arithmatex">\(\forall\varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists B\subset A\)</span>, s.t <span class="arithmatex">\(B\)</span> is a <span class="arithmatex">\(\varepsilon\)</span>-net of <span class="arithmatex">\(A\)</span>. </p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="relative-compact-set-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="relative-compact-set-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="relative-compact-set-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="relative-compact-set-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) Choose the set itself as an <span class="arithmatex">\(\varepsilon\)</span>-net, which has finite number of elements.</p>
@@ -4860,9 +5021,9 @@ A=\bigcup_{n=1}^\infty F_n.
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem for totally bounded set</p>
-<p>Totally bounded set is bounded and seperable.</p>
+<p>Totally bounded set is bounded and separable.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="relative-compact-set-proof_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="relative-compact-set-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="relative-compact-set-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="relative-compact-set-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) easy to see it is bounded. Choose one element of an <span class="arithmatex">\(\varepsilon\)</span>-net as center of ball, estimate the sufficient radious of the ball.</p>
@@ -4876,12 +5037,12 @@ A=\bigcup_{n=1}^\infty F_n.
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space with metric <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(A\subset X\)</span> is a relative compact set, then <span class="arithmatex">\(A\)</span> is totally bounded set.</p>
 <p>On the other hand, If <span class="arithmatex">\(X\)</span> is a complete metric space, if <span class="arithmatex">\(A\subset X\)</span> is a totally bounded set, then <span class="arithmatex">\(A\)</span> is also a relative compact set.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="relative-compact-set-proof_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="relative-compact-set-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="relative-compact-set-proof_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="relative-compact-set-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
 </div>
-<p>The following theorem is useful in proof. Because it is hard to find an <span class="arithmatex">\(\varepsilon\)</span>-net which proved to be finite number, but easy to show it is relative compact.</p>
+<p>The following theorem is useful in proof. Because it is hard to find an <span class="arithmatex">\(\varepsilon\)</span>-net which proved to have finite number, but easy to show it is relative compact.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for relative compact set</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a complete metric space, <span class="arithmatex">\(A\subset X\)</span> is a relative compact set, iff <span class="arithmatex">\(A\)</span> has a relative compact <span class="arithmatex">\(\varepsilon\)</span>-net.</p>
@@ -4891,7 +5052,7 @@ A=\bigcup_{n=1}^\infty F_n.
 <p class="admonition-title">Compact set is complete</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space, if <span class="arithmatex">\(U\subset X\)</span> is a compact set, then <span class="arithmatex">\(U\)</span> is complete.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="compact-set-description-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="compact-set-description-proof" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By definition. For all Cauchy's sequence <span class="arithmatex">\(\{x_n\}\in U\)</span>, it has a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> converging to a point <span class="arithmatex">\(x\in U\)</span>, then since</p>
@@ -4910,7 +5071,7 @@ K_1\supset K_2\supset \cdots\supset K_n\supset \cdots
 \]</div>
 <p>then <span class="arithmatex">\(\bigcap_{n=1}^\infty K_n\neq \varnothing\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="compact-set-description-proof_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="compact-set-description-proof_1" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Choose a point <span class="arithmatex">\(x_n\in K_n\)</span> and we have a sequence <span class="arithmatex">\(\{x_n\}\subset K_1\)</span>. Since <span class="arithmatex">\(K_1\)</span> is a compact set, <span class="arithmatex">\(\exists \{x_{n_k}\}\rightarrow x\in K_1\)</span>. </p>
@@ -4938,7 +5099,7 @@ A\subset \bigcup_{c\in J}G_c
 <p class="admonition-title">Open Covering Theorem</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(A\)</span> is a comapct set, iff for any open covering <span class="arithmatex">\(\{G_c\}_{c\in J}\)</span> of <span class="arithmatex">\(A\)</span>, we could choose a finitely open covering from it.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="compact-set-description-proof_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="compact-set-description-proof_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4991,7 +5152,7 @@ x_n \not\in \bigcup_{l=1}^L B_{\delta_{y_l}}(y_l),\quad\text{ whenever } n\geq N
 <p>Assume <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span> are metric space, with metric <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(\rho'\)</span>, respectively. <span class="arithmatex">\(A\subset X\)</span> is a compact set, <span class="arithmatex">\(T\)</span> is a continuous mapping from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>, then the image of <span class="arithmatex">\(T\)</span>, denoted as <span class="arithmatex">\(T(A)\)</span> is also a compact set in <span class="arithmatex">\(Y\)</span>.</p>
 <p>Moreover, the above condition could give us stronger condition, which is, continuous mapping on compact set is also uniformly continuous. That is, <span class="arithmatex">\(T\)</span> is a uniformly continuous on <span class="arithmatex">\(A\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(\forall \{y_n\}\subset Y\)</span>, there exsits <span class="arithmatex">\(\{x_n\}\)</span> such that <span class="arithmatex">\(Tx_n=y_n\)</span>. Since <span class="arithmatex">\(A\)</span> is a compact set, <span class="arithmatex">\(\{x_n\}\)</span> has a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> converging to a point <span class="arithmatex">\(x\in X\)</span>, then by continuity of <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall x_{n_k}\in B_\delta(x)\)</span>,</p>
@@ -5021,7 +5182,7 @@ x_n \not\in \bigcup_{l=1}^L B_{\delta_{y_l}}(y_l),\quad\text{ whenever } n\geq N
 <p class="admonition-title">Corollary: Continuous functional</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space, and <span class="arithmatex">\(A\subset X\)</span> is a compact set. <span class="arithmatex">\(f\)</span> is a continuous functional on <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(f\)</span> is bounded, and could arrive at its infimum and supremum.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(f\)</span> maps a compact set <span class="arithmatex">\(A\)</span> into <span class="arithmatex">\(T(A)\subset \mathbb{R}\)</span>, which is closed and bounded.</p>
