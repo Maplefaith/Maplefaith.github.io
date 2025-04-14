@@ -963,6 +963,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#contraction-mapping-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contraction Mapping Method
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4331,6 +4340,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#contraction-mapping-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contraction Mapping Method
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5211,7 +5229,7 @@ B=\bigcup_{n=1}^\infty B_n
 </div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Theorem for relative compact description</p>
+<p class="admonition-title">Hausdorff's Theorem for relative compact description</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space with metric <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(A\subset X\)</span> is a relative compact set, then <span class="arithmatex">\(A\)</span> is totally bounded set.</p>
 <p>On the other hand, If <span class="arithmatex">\(X\)</span> is a complete metric space, if <span class="arithmatex">\(A\subset X\)</span> is a totally bounded set, then <span class="arithmatex">\(A\)</span> is also a relative compact set.</p>
 </div>
@@ -5228,13 +5246,13 @@ B=\bigcup_{n=1}^\infty B_n
 </li>
 </ul>
 <p>If <span class="arithmatex">\(A\)</span> is totally bounded set, then <span class="arithmatex">\(\exists\)</span> finite-number <span class="arithmatex">\(\varepsilon\)</span>-net for <span class="arithmatex">\(A\)</span>. Choose an arbitrary sequence <span class="arithmatex">\(x_n\subset A\)</span>. </p>
-<p>For <span class="arithmatex">\(1\)</span>-net <span class="arithmatex">\(B_1=\{y_{j_1}\}_{1\leq j_1\leq J_1}\)</span>, we have <span class="arithmatex">\(\bigcup_{j\in B_1}B(y_{j_1}, 1) \supset \{x_n\}\)</span> , so <span class="arithmatex">\(\exists y_1\in B_1\)</span> such that <span class="arithmatex">\(B(y_1,1)\cap \{x_n\}\)</span> has infinitely many number. Choose <span class="arithmatex">\(x_{n_1}\in B(y_1,1)\cap \{x_n\}\)</span>, which satisfies <span class="arithmatex">\(\rho(x_{n_1}, y_1)&lt;1\)</span>. </p>
-<p>For <span class="arithmatex">\(\frac{1}{2}\)</span>-net, <span class="arithmatex">\(B_2=\{y_{j_2}\}_{1\leq j_2\leq J_2}\)</span>, we have <span class="arithmatex">\(\bigcup_{j_2\in B_2}B(y_{j_2}, \frac{1}{2}) \supset \{x_n\}\)</span> and <span class="arithmatex">\(\bigcup_{j_2\in B_2}B(y_{j_2},\frac{1}{2}) \cap B(y_1,1) \cap \{x_n\}\)</span> has infinitely many number. So <span class="arithmatex">\(\exists y_2\in B_2\)</span> such that <span class="arithmatex">\(B(y_2,\frac{1}{2})\cap B(y_1,1)\)</span> has infinitely many number of <span class="arithmatex">\(\{x_n\}\)</span>. Choose <span class="arithmatex">\(n_2&gt;n_1\)</span>, <span class="arithmatex">\(x_{n_2}\in B(y_2,\frac{1}{2})\cap \{x_n\}\)</span>, which satisfies <span class="arithmatex">\(\rho(x_{n_2}, y_2)&lt;\frac{1}{2}\)</span>. </p>
+<p>For <span class="arithmatex">\(1\)</span>-net <span class="arithmatex">\(B_1=\{y_{j_1}\}_{1\leq j_1\leq J_1}\)</span>, we have <span class="arithmatex">\(\bigcup\limits_{j\in B_1}B(y_{j_1}, 1) \supset \{x_n\}\)</span> , so <span class="arithmatex">\(\exists y_1\in B_1\)</span> such that <span class="arithmatex">\(B(y_1,1)\cap \{x_n\}\)</span> has infinitely many number. Choose <span class="arithmatex">\(x_{n_1}\in B(y_1,1)\cap \{x_n\}\)</span>, which satisfies <span class="arithmatex">\(\rho(x_{n_1}, y_1)&lt;1\)</span>. </p>
+<p>For <span class="arithmatex">\(\frac{1}{2}\)</span>-net, <span class="arithmatex">\(B_2=\{y_{j_2}\}_{1\leq j_2\leq J_2}\)</span>, we have <span class="arithmatex">\(\bigcup\limits_{j_2\in B_2}B(y_{j_2}, \frac{1}{2}) \supset \{x_n\}\)</span> and <span class="arithmatex">\(\bigcup\limits_{j_2\in B_2}B(y_{j_2},\frac{1}{2}) \cap B(y_1,1) \cap \{x_n\}\)</span> has infinitely many number. So <span class="arithmatex">\(\exists y_2\in B_2\)</span> such that <span class="arithmatex">\(B(y_2,\frac{1}{2})\cap B(y_1,1)\)</span> has infinitely many number of <span class="arithmatex">\(\{x_n\}\)</span>. Choose <span class="arithmatex">\(n_2&gt;n_1\)</span>, <span class="arithmatex">\(x_{n_2}\in B(y_2,\frac{1}{2})\cap \{x_n\}\)</span>, which satisfies <span class="arithmatex">\(\rho(x_{n_2}, y_2)&lt;\frac{1}{2}\)</span>. </p>
 <p>Continue this routine, we have for each <span class="arithmatex">\(k\)</span>,</p>
 <div class="arithmatex">\[
 \bigcap_{i=1}^k B(y_i, \frac{1}{i})
 \]</div>
-<p>has infinitely many number of <span class="arithmatex">\(\{x_n\}\)</span>. Choose <span class="arithmatex">\(n_k&gt;n_{k-1}\)</span>, <span class="arithmatex">\(x_{n_k}\in \bigcap_{i=1}^k B(y_i, \frac{1}{i})\)</span>. So a subsequence <span class="arithmatex">\(\{x_{n_k}\}_{k\geq 1}\)</span> is chosen, which satisfies <span class="arithmatex">\(\forall n&gt;k\)</span></p>
+<p>has infinitely many number of <span class="arithmatex">\(\{x_n\}\)</span>. Choose <span class="arithmatex">\(n_k&gt;n_{k-1}\)</span>, <span class="arithmatex">\(x_{n_k}\in \bigcap\limits_{i=1}^k B(y_i, \frac{1}{i})\)</span>. So a subsequence <span class="arithmatex">\(\{x_{n_k}\}_{k\geq 1}\)</span> is chosen, which satisfies <span class="arithmatex">\(\forall n&gt;k\)</span></p>
 <div class="arithmatex">\[
 \rho(x_{n_k}, x_{n})\leq \rho(x_{n_k}, y_k)+\rho(y_k,x_{n})\leq \frac{1}{k}+\frac{1}{k}=\frac{2}{k}.
 \]</div>
@@ -5243,11 +5261,28 @@ B=\bigcup_{n=1}^\infty B_n
 <ul>
 <li>Sufficient.</li>
 </ul>
+<p>Choose a point <span class="arithmatex">\(x_1\in A\)</span>, if <span class="arithmatex">\(O(x_1,1)\supset A\)</span>, then <span class="arithmatex">\(A\)</span> is a totally bounded set. Otherwise, <span class="arithmatex">\(A-O(x_1,1)\neq \varnothing\)</span>, choose <span class="arithmatex">\(x_2\in A-O(x_1,1)\)</span>，if <span class="arithmatex">\(O(x_1,1)\cup O(x_2，1) \supset A\)</span>, then <span class="arithmatex">\(A\)</span> is a totally bounded set. Otherwise, <span class="arithmatex">\(A-O(x_1,1)-O(x_2,1)\neq \varnothing\)</span>. Continue this routine, if </p>
+<div class="arithmatex">\[
+A-\bigcup_{k=1}^n O(x_k,1)\neq \varnothing,
+\]</div>
+<p>we choose a point <span class="arithmatex">\(x_{n+1}\)</span> to check whether </p>
+<div class="arithmatex">\[
+\bigcup_{k=1}^{n+1}O(x_k,1)\supset A.
+\]</div>
+<p>If we could not end in finite steps, we have a sequence <span class="arithmatex">\(\{x_n\}\)</span>, which satisfies <span class="arithmatex">\(\rho(x_i, x_j)\geq 1\)</span> for <span class="arithmatex">\(i\neq j\)</span>. However by assumption, this sequence must have a Cauchy subsequence, which contradicts!</p>
+<p>In this proof we could see that if for all sequence of <span class="arithmatex">\(A\)</span>, it has a convergent subsequence, then it must be totally bounded set. </p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 <div class="tabbed-block">
 <ul>
 <li>Necessary.</li>
 </ul>
+<p>If <span class="arithmatex">\(A\)</span> is a relative compact set, then any sequence <span class="arithmatex">\(\{x_n\}\)</span> must have a convergent subsequence, <span class="arithmatex">\(\{x_{n_k}\}\)</span>, which is also a Cauchy sequence, so by lemma <span class="arithmatex">\(A\)</span> is totally bounded set.</p>
+<ul>
+<li>Sufficient.</li>
+</ul>
+<p>If <span class="arithmatex">\(A\)</span> is a totally bounded set, then for any sequence <span class="arithmatex">\(\{x_n\}\)</span>, it must have a Cauchy subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span>. Since <span class="arithmatex">\(X\)</span> is complete, <span class="arithmatex">\(\{x_{n_k}\}\)</span> must converge to a point <span class="arithmatex">\(x\in X\)</span>, which means <span class="arithmatex">\(A\)</span> is relative compact set.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
@@ -5256,12 +5291,28 @@ B=\bigcup_{n=1}^\infty B_n
 <p class="admonition-title">Theorem for relative compact set</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a complete metric space, <span class="arithmatex">\(A\subset X\)</span> is a relative compact set, iff <span class="arithmatex">\(A\)</span> has a relative compact <span class="arithmatex">\(\varepsilon\)</span>-net.</p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="relative-compact-set-proof_3" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="relative-compact-set-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Necessary. </li>
+</ul>
+<p>If <span class="arithmatex">\(A\)</span> is a relative compact set, <span class="arithmatex">\(A\)</span> itself is a relative compact <span class="arithmatex">\(\varepsilon\)</span>-net. Or we could do as follows.</p>
+<p>We know <span class="arithmatex">\(A\)</span> is also totally bounded, so there exists a finite-number <span class="arithmatex">\(\frac{\varepsilon}{2}\)</span>-net <span class="arithmatex">\(B\)</span> for <span class="arithmatex">\(A\)</span>. Since <span class="arithmatex">\(B\)</span> could be covered by a <span class="arithmatex">\(\varepsilon\)</span>-net of itself, so <span class="arithmatex">\(B\)</span> is totally bounded, since <span class="arithmatex">\(X\)</span> is complete, <span class="arithmatex">\(B\)</span> is relative compact.</p>
+<ul>
+<li>Sufficient.</li>
+</ul>
+<p>If <span class="arithmatex">\(A\)</span> has a relative compact <span class="arithmatex">\(\frac{\varepsilon}{2}\)</span>-net <span class="arithmatex">\(B\)</span>, then <span class="arithmatex">\(B\)</span> is totally bounded, so <span class="arithmatex">\(B\)</span> could be covered by finite-number <span class="arithmatex">\(\frac{\varepsilon}{2}\)</span>-net <span class="arithmatex">\(B'\subset B\)</span>, then <span class="arithmatex">\(B'\)</span> is a finite-number <span class="arithmatex">\(\varepsilon\)</span>-net for <span class="arithmatex">\(A\)</span>, so <span class="arithmatex">\(A\)</span> is totally bounded, since <span class="arithmatex">\(X\)</span> is complete, <span class="arithmatex">\(A\)</span> is relative compact. </p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 <h3 id="compact-set-description">Compact set description<a class="headerlink" href="#compact-set-description" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Compact set is complete</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space, if <span class="arithmatex">\(U\subset X\)</span> is a compact set, then <span class="arithmatex">\(U\)</span> is complete.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="compact-set-description-proof" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="compact-set-description-proof" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By definition. For all Cauchy's sequence <span class="arithmatex">\(\{x_n\}\in U\)</span>, it has a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> converging to a point <span class="arithmatex">\(x\in U\)</span>, then since</p>
@@ -5280,7 +5331,7 @@ K_1\supset K_2\supset \cdots\supset K_n\supset \cdots
 \]</div>
 <p>then <span class="arithmatex">\(\bigcap_{n=1}^\infty K_n\neq \varnothing\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="compact-set-description-proof_1" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="compact-set-description-proof_1" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Choose a point <span class="arithmatex">\(x_n\in K_n\)</span> and we have a sequence <span class="arithmatex">\(\{x_n\}\subset K_1\)</span>. Since <span class="arithmatex">\(K_1\)</span> is a compact set, <span class="arithmatex">\(\exists \{x_{n_k}\}\rightarrow x\in K_1\)</span>. </p>
@@ -5296,19 +5347,20 @@ x\in \bigcap_{n=1}^\infty K_n.
 </div>
 </div>
 </div>
+<p>In <span class="arithmatex">\(\mathbb{R}\)</span>, bounded set is described by Balzano-Weierstrass Theorem, and closed interval is described by Heine-Borel finite-covering Theorem. Corresponding to closed interval, compact set could be described by Open-covering Theorem.</p>
 <div class="admonition info">
 <p class="admonition-title">Definition of Open Covering</p>
-<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(\{G_c\}\)</span>_{c\in J} is a family of open sets in <span class="arithmatex">\(X\)</span>. If </p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(\{G_c\}_{c\in J}\)</span> is a family of open sets in <span class="arithmatex">\(X\)</span>. If </p>
 <div class="arithmatex">\[
 A\subset \bigcup_{c\in J}G_c
 \]</div>
-<p>then <span class="arithmatex">\(\{G_c\}_{c\in J}\)</span> is called an <strong>open covering</strong> of <span class="arithmatex">\(A\)</span>. If <span class="arithmatex">\(J\)</span> has finitely namy number, then <span class="arithmatex">\(\{G_c\}\)</span>_{c\in J}$ is called a <strong>finitely open covering</strong> of <span class="arithmatex">\(A\)</span>.</p>
+<p>then <span class="arithmatex">\(\{G_c\}_{c\in J}\)</span> is called an <strong>open covering</strong> of <span class="arithmatex">\(A\)</span>. If <span class="arithmatex">\(J\)</span> has finitely namy number, then <span class="arithmatex">\(\{G_c\}_{c\in J}\)</span> is called a <strong>finitely open covering</strong> of <span class="arithmatex">\(A\)</span>.</p>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Open Covering Theorem</p>
+<p class="admonition-title">Gross's Open Covering Theorem</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space, <span class="arithmatex">\(A\subset X\)</span>. <span class="arithmatex">\(A\)</span> is a comapct set, iff for any open covering <span class="arithmatex">\(\{G_c\}_{c\in J}\)</span> of <span class="arithmatex">\(A\)</span>, we could choose a finitely open covering from it.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="compact-set-description-proof_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="compact-set-description-proof_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="compact-set-description-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -5355,13 +5407,14 @@ x_n \not\in \bigcup_{l=1}^L B_{\delta_{y_l}}(y_l),\quad\text{ whenever } n\geq N
 </div>
 </div>
 </div>
+<p>Here any open covering allow the open set to be strange, usually converges to a point, so we could not choose a finite-number of the sets to cover if it is only totally bounded.</p>
 <h3 id="continuous-mapping-on-compact-set">Continuous mapping on compact set<a class="headerlink" href="#continuous-mapping-on-compact-set" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Image of continuous mapping</p>
 <p>Assume <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span> are metric space, with metric <span class="arithmatex">\(\rho\)</span>, <span class="arithmatex">\(\rho'\)</span>, respectively. <span class="arithmatex">\(A\subset X\)</span> is a compact set, <span class="arithmatex">\(T\)</span> is a continuous mapping from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span>, then the image of <span class="arithmatex">\(T\)</span>, denoted as <span class="arithmatex">\(T(A)\)</span> is also a compact set in <span class="arithmatex">\(Y\)</span>.</p>
 <p>Moreover, the above condition could give us stronger condition, which is, continuous mapping on compact set is also uniformly continuous. That is, <span class="arithmatex">\(T\)</span> is a uniformly continuous on <span class="arithmatex">\(A\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(\forall \{y_n\}\subset Y\)</span>, there exsits <span class="arithmatex">\(\{x_n\}\)</span> such that <span class="arithmatex">\(Tx_n=y_n\)</span>. Since <span class="arithmatex">\(A\)</span> is a compact set, <span class="arithmatex">\(\{x_n\}\)</span> has a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> converging to a point <span class="arithmatex">\(x\in X\)</span>, then by continuity of <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, <span class="arithmatex">\(\forall x_{n_k}\in B_\delta(x)\)</span>,</p>
@@ -5369,6 +5422,7 @@ x_n \not\in \bigcup_{l=1}^L B_{\delta_{y_l}}(y_l),\quad\text{ whenever } n\geq N
 \rho'(y_{n_k}, Tx)=\rho'(Tx_{n_k}, Tx)&lt;\varepsilon.
 \]</div>
 <p>So <span class="arithmatex">\(Tx\)</span> is a converging point of <span class="arithmatex">\(\{y_{n_k}\}\)</span>, and <span class="arithmatex">\(Tx\in T(A)\)</span>. </p>
+<p>We could also use open sets in image, by continuous function, its preimage open sets have finite-number covering <span class="arithmatex">\(A\)</span>, so image itself has finite-number covering <span class="arithmatex">\(T(A)\)</span>.</p>
 <ul>
 <li>For uniformly continuity. We use contradiction. <span class="arithmatex">\(\exists \varepsilon_0&gt;0\)</span>, <span class="arithmatex">\(\forall \delta_n=\frac{1}{n}&gt;0\)</span>, <span class="arithmatex">\(\exists x_n, y_n\in A\)</span>, such that </li>
 </ul>
@@ -5384,6 +5438,18 @@ x_n \not\in \bigcup_{l=1}^L B_{\delta_{y_l}}(y_l),\quad\text{ whenever } n\geq N
 \rho'(Tx_{n_k}, Ty_{n_k})\leq \rho'(Tx_{n_k}, Tx)+\rho'(Tx, Ty_{n_k})\rightarrow 0 (k\rightarrow \infty),
 \]</div>
 <p>which contradicts!</p>
+<p>We could also use finite-open covering to prove. That is, choose a open covering <span class="arithmatex">\(\bigcup_{x\in A}B(x,\varepsilon_0)\supset A\)</span>, then there exsits finite-number <span class="arithmatex">\({x_n}_{1\leq n\leq N}\)</span> such that </p>
+<div class="arithmatex">\[
+\bigcup_{n=1}^N B(x_n, \varepsilon_0)\supset A.
+\]</div>
+<p><span class="arithmatex">\(\forall x,x'\in A\)</span>, let <span class="arithmatex">\(\rho(x,x')&lt;\varepsilon_0\)</span>, then they must lie in same open ball <span class="arithmatex">\(B(x_{0}, \varepsilon_0)\)</span>. By continuous mapping, <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, choose <span class="arithmatex">\(\varepsilon_0&lt;\delta\)</span>, we have</p>
+<div class="arithmatex">\[
+\rho'(Tx, Tx_{0})&lt;\frac{\varepsilon}{2},\quad \rho'(Tx', Tx_{0})&lt;\frac{\varepsilon}{2},
+\]</div>
+<p>so</p>
+<div class="arithmatex">\[
+\rho'(Tx,Tx')&lt;\rho'(Tx, Tx_{0})+\rho'(Tx', Tx_{0})&lt;\varepsilon.
+\]</div>
 </div>
 </div>
 </div>
@@ -5391,10 +5457,113 @@ x_n \not\in \bigcup_{l=1}^L B_{\delta_{y_l}}(y_l),\quad\text{ whenever } n\geq N
 <p class="admonition-title">Corollary: Continuous functional</p>
 <p>Assume <span class="arithmatex">\(X\)</span> is a metric space, and <span class="arithmatex">\(A\subset X\)</span> is a compact set. <span class="arithmatex">\(f\)</span> is a continuous functional on <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(f\)</span> is bounded, and could arrive at its infimum and supremum.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="continuous-mapping-on-compact-set-proof_1" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="continuous-mapping-on-compact-set-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(f\)</span> maps a compact set <span class="arithmatex">\(A\)</span> into <span class="arithmatex">\(T(A)\subset \mathbb{R}\)</span>, which is closed and bounded.</p>
+</div>
+</div>
+</div>
+<h2 id="contraction-mapping-method">Contraction Mapping Method<a class="headerlink" href="#contraction-mapping-method" title="Permanent link">&para;</a></h2>
+<p>We have already give an introduction of contraction mapping in proving the <a href="../../Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/">existence and uniqueness of solution to an ODE</a>. Now we give a more detailed discussion. </p>
+<p><a id="Theorem for contraction mapping"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem for contraction mapping</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a complete metric space, with metric <span class="arithmatex">\(\rho\)</span>. <span class="arithmatex">\(T\)</span> is a mapping from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(X\)</span>, and satisfies <span class="arithmatex">\(\forall x,y\in X\)</span></p>
+<div class="arithmatex">\[
+\rho(Tx,Ty)\leq \theta \rho(x,y),
+\]</div>
+<p>where <span class="arithmatex">\(\theta\in [0,1)\)</span> is constant. Then <span class="arithmatex">\(T\)</span> has a unique fixed point in <span class="arithmatex">\(X\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:1"><input checked="checked" id="contraction-mapping-method-proof" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-method-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Actually, the above definition guarantees that starting from an arbitrary point, we could construct a Cauchy sequence. Choose <span class="arithmatex">\(x_0\in X\)</span>, </p>
+<div class="arithmatex">\[
+x_1=Tx_0,x_2=Tx_1,\quad x_n=Tx_{n-1},
+\]</div>
+<p>easy to show that <span class="arithmatex">\(\{x_n\}\)</span> is a Cauchy sequence. Let <span class="arithmatex">\(k=\rho(x_1,x_0)\)</span>, so <span class="arithmatex">\(\rho(x_2,x_1)\leq \theta\rho(x_1,x_0)=k\theta\)</span>, by induction we have</p>
+<div class="arithmatex">\[
+\rho(x_n, x_{n-1})\leq k\theta^{n-1}.
+\]</div>
+<p>So <span class="arithmatex">\(\forall \varepsilon&gt;0\)</span>, choose <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(k\frac{\theta^{n-1}}{1-\theta}&lt;\varepsilon\)</span>, then </p>
+<div class="arithmatex">\[
+\begin{align*}
+\rho(x_n,x_{n+k})&amp;\leq \rho(x_n, x_{n+1})+\cdots, \rho(x_{n+k-1}, x_{n+k})\\
+&amp;\leq (1+\theta+\cdots+\theta^{k-1})k\theta^{n-1}\\
+&amp;=\frac{1-\theta^{k}}{1-\theta}k\theta^{n-1}\\
+&amp;\leq \frac{1}{1-\theta}k\theta^{n-1}&lt;\varepsilon.
+\end{align*}
+\]</div>
+<p>Then by <span class="arithmatex">\(X\)</span> is complete, <span class="arithmatex">\(\{x_n\}\)</span> has a convergent point <span class="arithmatex">\(x\in X\)</span>. Now we show that it is a fixed point.</p>
+<div class="arithmatex">\[
+x=\lim_{n\rightarrow \infty}x_{n+1}= \lim_{n\rightarrow \infty}T^n x_0=T\lim_{n\rightarrow \infty}T^n x_0=Tx.
+\]</div>
+<p>it is unique, since for two fixed points <span class="arithmatex">\(x,y\)</span>, we have</p>
+<div class="arithmatex">\[
+\rho(x,y)=\rho(Tx,Ty)\leq \theta\rho(x,y)
+\]</div>
+<p>which means <span class="arithmatex">\(\rho(x,y)=0\)</span>, so <span class="arithmatex">\(x=y\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Prove the following intergal equation has a unique solution when <span class="arithmatex">\(\lambda\)</span> is sufficiently small.</p>
+<div class="arithmatex">\[
+x(t)=f(t)+\lambda \int_a^b K(t,s)x(s)ds
+\]</div>
+<p>where <span class="arithmatex">\(f(t)\in L^2[a,b]\)</span> and <span class="arithmatex">\(K(t,s)\)</span> is kernel function defined on <span class="arithmatex">\([a,b]\times [a,b]\)</span>, which satisfies</p>
+<div class="arithmatex">\[
+\int_a^b\int_a^b |K(t,s)|^2ds dt&lt;\infty.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="contraction-mapping-method-proof_1" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-method-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Show that under metric </li>
+</ul>
+<div class="arithmatex">\[
+\rho(x,y)=\left(\int_a^b|x(t)-y(t)|^2dt\right)^{\frac{1}{2}}
+\]</div>
+<p>the mapping <span class="arithmatex">\(T\)</span></p>
+<div class="arithmatex">\[
+(Tx)(t)=f(t)+\lambda \int_a^b K(t,s)x(s)ds 
+\]</div>
+<p>is a mapping from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(X\)</span>, or to be more specific, <span class="arithmatex">\(Tx\in L^2[a,b]\)</span>. Notice we only have to show that the latter in the integral equation is L2-integrable. Actually</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_a^b dt\left|\int_a^b K(t,s)x(s)ds\right|^2&amp;\leq \int_a^b dt \left[\int_a^b |K(t,s)|^2 ds \int_a^b |x(s)|^2 ds\right]\\
+&amp;=\int_a^b |x(s)|^2 ds \int_a^b dt \int_a^b |K(t,s)|^2 ds&lt;\infty.
+\end{align*}
+\]</div>
+<p>Choose <span class="arithmatex">\(\lambda\)</span> such that <span class="arithmatex">\(|\lambda|\left[\int_a^b dt\int_a^b |K(t,s)|^2 ds\right]^\frac{1}{2}&lt;1\)</span>, then</p>
+<div class="arithmatex">\[
+\begin{align*}
+\rho(Tx,Ty)&amp;=\left(\int_a^b  |\lambda|\left|\int_a^b K(t,s)[x(s)-y(s)]ds\right|^2 dt\right)^\frac{1}{2}\\
+&amp;\leq \left(\int_a^b  |\lambda| \left[\int_a^b |K(t,s)|^2 ds\right] \left[\int_a^b |x(s)-y(s)|^2 ds\right] dt\right)^\frac{1}{2}\\
+&amp;= |\lambda| \left[\int_a^b |x(s)-y(s)|^2 ds\right]^\frac{1}{2}  \left(\int_a^b \left[\int_a^b |K(t,s)|^2 ds\right] dt\right)^\frac{1}{2}\\
+&amp;\leq |\lambda|\left[\int_a^b dt\int_a^b |K(t,s)|^2 ds\right]^\frac{1}{2}\rho(x,y)
+\end{align*}
+\]</div>
+<p>means <span class="arithmatex">\(T\)</span> is a contraction mapping.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Extended Contraction mapping theorem</p>
+<p>Assume <span class="arithmatex">\(X\)</span> is a complete metric space, with metric <span class="arithmatex">\(\rho\)</span>. <span class="arithmatex">\(T\)</span> is a mapping from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(X\)</span>. If two constants <span class="arithmatex">\(\exists n_0&gt;0\)</span>, <span class="arithmatex">\(\theta\in [0,1)\)</span>, such that</p>
+<div class="arithmatex">\[
+\rho(T^{n_0}x,T^{n_0}y)\leq \theta \rho(x,y),\quad \forall x,y\in X,
+\]</div>
+<p>then <span class="arithmatex">\(T\)</span> has a unique fixed point in <span class="arithmatex">\(X\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="contraction-mapping-method-proof_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="contraction-mapping-method-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>If we view <span class="arithmatex">\(T^{n_0}\)</span> as a mapping <span class="arithmatex">\(T'\)</span>, then apply <a href="#Theorem for contraction mapping">Theorem for contraction mapping</a>, we have a unique fixed point <span class="arithmatex">\(x\in X\)</span>, such that <span class="arithmatex">\(x=T'x\)</span>. We show that this is also the unique fixed point of <span class="arithmatex">\(T\)</span>.</p>
+<p>Since <span class="arithmatex">\(Tx=T T'x=T T^{n_0}x=T^{x_0+1}x=T' (Tx)\)</span>, so <span class="arithmatex">\(Tx\)</span> is a fixed point of <span class="arithmatex">\(T'\)</span>. By uniqueness of fixed point, we have <span class="arithmatex">\(x=Tx\)</span>. </p>
+<p>If <span class="arithmatex">\(T\)</span> has another fixed point <span class="arithmatex">\(y\)</span> of <span class="arithmatex">\(T\)</span>, then <span class="arithmatex">\(Ty=y\)</span>. So by iterating over <span class="arithmatex">\(n_0\)</span>, <span class="arithmatex">\(T^{n_0}y=T^{n_0-1}Ty=T^{n_0-1}y=\cdots=y\)</span>, we have <span class="arithmatex">\(y\)</span> is a fixed point of <span class="arithmatex">\(T^{n_0}\)</span>, by uniqueness of fixed point for <span class="arithmatex">\(T^{n_0}\)</span>, we have <span class="arithmatex">\(x=y\)</span>.</p>
 </div>
 </div>
 </div>

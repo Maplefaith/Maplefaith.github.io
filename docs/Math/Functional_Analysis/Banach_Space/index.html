@@ -4188,6 +4188,91 @@ x_n+y_n\rightarrow x+y.
 </div>
 </div>
 <p>A normed linear space is called <strong>Banach Space</strong> if it is complete.</p>
+<div class="question">
+<p><strong>Example</strong>. Assume space <span class="arithmatex">\(C^k[a,b]\)</span> is composed by functions with <span class="arithmatex">\(k\)</span>-th continuous derivatives. Define norm</p>
+<div class="arithmatex">\[
+\|x\|=\sum_{i=0}^k \max_{t\in [a,b]}|x^{(i)}(t)|.
+\]</div>
+<p>Then in this norm the above space is Banach space.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="normed-linear-space-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="normed-linear-space-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>It is easy to show that norm satisfies triangle inequation.</p>
+<p>We now show it is complete. For all Cauchy sequence <span class="arithmatex">\(\{x_n\}\subset C^k[a,b]\)</span>, <span class="arithmatex">\(\forall \varepsilon\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, <span class="arithmatex">\(\forall n,m&gt;N\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align}
+\|x_n-x_m\|=\sum_{i=0}^k \max_{t\in [a,b]}|x_n^{(i)}(t)-x_n^{(i)}(t)|&lt;\varepsilon.\label{Cauchy-continuous-k}
+\end{align}
+\]</div>
+<p>So for each <span class="arithmatex">\(i\)</span>, we have  </p>
+<div class="arithmatex">\[
+|x_n^{(i)}(t)-x_m^{(i)}(t)|&lt;\varepsilon,\quad \forall t\in [a,b].
+\]</div>
+<p>So <span class="arithmatex">\(x_n^{(i)}\)</span> is a Cauchy sequence, by mathematical analysis, we have a convergent function <span class="arithmatex">\(x_i(t), (i=0,\cdots,k)\)</span>, such that </p>
+<div class="arithmatex">\[
+x_n^{(i)}(t)\rightrightarrows x_i(t),\quad i=0,1,\cdots,k
+\]</div>
+<p>and satisfy <span class="arithmatex">\(x^{(i)}(t)=x_i(t)\)</span> for each <span class="arithmatex">\(i\)</span>. So <span class="arithmatex">\(x(t)\in C^k[a,b]\)</span>. We show that <span class="arithmatex">\(x_n(t)\)</span> converges to <span class="arithmatex">\(x(t)\)</span> in this norm.</p>
+<p>In equation <span class="arithmatex">\(\ref{Cauchy-continuous-k}\)</span>, fix <span class="arithmatex">\(n\)</span>, let <span class="arithmatex">\(m\rightarrow \infty\)</span>, and we have the result. </p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. <span class="arithmatex">\(L^p(E)\)</span> is a Banach space.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="normed-linear-space-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="normed-linear-space-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>From a Cauchy sequence in this metric to get a Cauchy sequence in measure. </li>
+</ul>
+<p>For all Cauchy sequence <span class="arithmatex">\(\{x_n\}\)</span>, <span class="arithmatex">\(\forall \varepsilon, \sigma&gt;0\)</span>, <span class="arithmatex">\(\exists N&gt;0\)</span>, <span class="arithmatex">\(\forall n,m&gt;N\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+\varepsilon&gt;&amp;\|x_n,x_m\|\\
+&amp;=\left(\int_E |x_n(t)-x_m(t)|^p dt\right)^{\frac{1}{p}}\\
+&amp;\geq \left(\int_{\{|x_n(t)-x_m(t)|\geq \sigma\}} |x_n(t)-x_m(t)|^p dt\right)^{\frac{1}{p}}\\
+&amp;\geq \left(\int_{\{|x_n(t)-x_m(t)|\geq \sigma\}} \sigma^p dt\right)^{\frac{1}{p}}\\
+&amp;\geq \sigma m(\{|x_n(t)-x_m(t)|\geq \sigma\})^{\frac{1}{p}}
+\end{align*}
+\]</div>
+<p>which means <span class="arithmatex">\(x_n\)</span> is a Cauchy sequence in measure. </p>
+<ul>
+<li>From a Cauchy sequence in measure to get a convergent function in usual metric <span class="arithmatex">\(||\)</span>.</li>
+</ul>
+<p>One method is, by what we have learned, there exists a finite-valued function <span class="arithmatex">\(x\)</span> a.e. on <span class="arithmatex">\(E\)</span> such that <span class="arithmatex">\(x_n\)</span> converges to <span class="arithmatex">\(x\)</span> in measure. By Riesz Theorem, there exists a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> such that <span class="arithmatex">\(x_{n_k}\)</span> converges to <span class="arithmatex">\(x\)</span> a.e. on <span class="arithmatex">\(E\)</span>.</p>
+<p>Or we take another version inspired by <a href="../../Real_Analysis/Lp_Space/#completeness">Lemma for summation in <span class="arithmatex">\(L^p\)</span> space</a>. Since <span class="arithmatex">\(x_n\)</span> is a Cauchy sequence in <span class="arithmatex">\(L^p(E)\)</span>, <span class="arithmatex">\(\forall k&gt;0\)</span>, there exists a subsequence <span class="arithmatex">\(x_{n_k}\)</span> such that </p>
+<div class="arithmatex">\[
+\left(\int_E|x_{n_k}-x_{n_{k+1}}|^p dt\right)^\frac{1}{p}=\|x_{n_k}-x_{n_{k+1}}\|&lt;\frac{1}{2^k}
+\]</div>
+<p>So by H&ouml;lder inequation, <span class="arithmatex">\(1\in L^q\)</span>, <span class="arithmatex">\(q=\frac{p}{p-1}\)</span>,</p>
+<div class="arithmatex">\[
+\int_E |x_{n_k}-x_{n_{k+1}}| \cdot 1 dt\leq (\int_E |x_{n_k}-x_{n_{k+1}}|^p dt)^\frac{1}{p}m(E)^\frac{1}{q}&lt;\frac{1}{2^k} m(E)^\frac{1}{q}
+\]</div>
+<p>So by Levy Theorem, <span class="arithmatex">\(f_n=\sum_{k=1}^n |x_{n_k}-x_{n_{k+1}}|\)</span> is controlled by <span class="arithmatex">\(f\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E \sum_{k=1}^\infty |x_{n_k}-x_{n_{k+1}}| dt &amp;= \lim_{k\rightarrow \infty}\int_E \sum_{k=1}^K |x_{n_k}-x_{n_{k+1}}| dt \\
+&amp;\leq \lim_{k\rightarrow \infty} \sum_{k=1}^K \int_E |x_{n_k}-x_{n_{k+1}}| dt&lt;\infty.
+\end{align*}
+\]</div>
+<ul>
+<li>Use Fatau theorem to change the order of limit &amp; integral.</li>
+</ul>
+<p>By Fatau theorem, <span class="arithmatex">\(\forall n_k&gt;N\)</span>, we still have <span class="arithmatex">\(\left(\int_E |x_n(t)-x_{n_k}(t)|^p dt\right)^{\frac{1}{p}}&lt;\varepsilon\)</span>, so</p>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E |x_n-x|^pdt &amp;= \int_E \lim_{k\rightarrow \infty}|x_n-x_{n_k}|^pdt\\
+&amp;\leq \underline{\lim}\limits_{k\rightarrow \infty} \int_R |x_n-x_{n_k}|^pdt\\
+&amp;\leq \varepsilon^p.
+\end{align*}
+\]</div>
+<p>So <span class="arithmatex">\(x_n\)</span> converges to <span class="arithmatex">\(x\)</span> in the above metric. Then by Minkowski inequation, we have <span class="arithmatex">\(\|x\|\leq \|x_n-x\|+\|x_n\|&lt;\infty\)</span>, so <span class="arithmatex">\(x\in L^p(E)\)</span>.</p>
+</div>
+</div>
+</div>
 <h2 id="quotient-space">Quotient Space<a class="headerlink" href="#quotient-space" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Equivalence of two points</p>
@@ -4201,7 +4286,7 @@ x_n+y_n\rightarrow x+y.
 </div>
 <p>The above property tells us equivalence mod <span class="arithmatex">\(F\)</span> is an equivalence relation, meaning we could divide <span class="arithmatex">\(X\)</span> into distinct equivalence classes mod <span class="arithmatex">\(F\)</span>, denoted as </p>
 <div class="arithmatex">\[
-\xi:=x+F=\{x+y: y\in F\}$, where $x\in \xi.
+\xi:=x+F=\{x+y: y\in F\},\text{ where } x\in \xi.
 \]</div>
 <p>The whole equivalence relation compose a set <span class="arithmatex">\(X / F\)</span>. If we define proper linear operations on <span class="arithmatex">\(X/F\)</span>, we could show that it is also a linear space.</p>
 <div class="admonition info">
@@ -4216,7 +4301,7 @@ x_n+y_n\rightarrow x+y.
 \]</div>
 <p>we have to show that the above definition is irrelevant with the choice of <span class="arithmatex">\(x\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="quotient-space-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="quotient-space-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="quotient-space-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="quotient-space-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><span class="arithmatex">\(\forall x'\in \xi,y'\in \eta\)</span>, </p>
@@ -4242,7 +4327,7 @@ x'+y'+F&amp;=x+(x'-x)+y+(y'-y)+F\\
 \]</div>
 <p>then the above definition is a norm and <span class="arithmatex">\(X/F\)</span> is a normed linear space.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="quotient-space-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="quotient-space-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="quotient-space-proof_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="quotient-space-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) Positive and definive.</p>
