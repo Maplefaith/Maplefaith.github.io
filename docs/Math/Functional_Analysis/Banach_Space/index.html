@@ -4245,19 +4245,20 @@ x_n^{(i)}(t)\rightrightarrows x_i(t),\quad i=0,1,\cdots,k
 <p>One method is, by what we have learned, there exists a finite-valued function <span class="arithmatex">\(x\)</span> a.e. on <span class="arithmatex">\(E\)</span> such that <span class="arithmatex">\(x_n\)</span> converges to <span class="arithmatex">\(x\)</span> in measure. By Riesz Theorem, there exists a subsequence <span class="arithmatex">\(\{x_{n_k}\}\)</span> such that <span class="arithmatex">\(x_{n_k}\)</span> converges to <span class="arithmatex">\(x\)</span> a.e. on <span class="arithmatex">\(E\)</span>.</p>
 <p>Or we take another version inspired by <a href="../../Real_Analysis/Lp_Space/#completeness">Lemma for summation in <span class="arithmatex">\(L^p\)</span> space</a>. Since <span class="arithmatex">\(x_n\)</span> is a Cauchy sequence in <span class="arithmatex">\(L^p(E)\)</span>, <span class="arithmatex">\(\forall k&gt;0\)</span>, there exists a subsequence <span class="arithmatex">\(x_{n_k}\)</span> such that </p>
 <div class="arithmatex">\[
-\left(\int_E|x_{n_k}-x_{n_{k+1}}|^p dt\right)^\frac{1}{p}=\|x_{n_k}-x_{n_{k+1}}\|&lt;\frac{1}{2^k}
+\left(\int_E|x_{n_k}-x_{n_{k-1}}|^p dt\right)^\frac{1}{p}=\|x_{n_k}-x_{n_{k-1}}\|&lt;\frac{1}{2^k}
 \]</div>
 <p>So by H&ouml;lder inequation, <span class="arithmatex">\(1\in L^q\)</span>, <span class="arithmatex">\(q=\frac{p}{p-1}\)</span>,</p>
 <div class="arithmatex">\[
-\int_E |x_{n_k}-x_{n_{k+1}}| \cdot 1 dt\leq (\int_E |x_{n_k}-x_{n_{k+1}}|^p dt)^\frac{1}{p}m(E)^\frac{1}{q}&lt;\frac{1}{2^k} m(E)^\frac{1}{q}
+\int_E |x_{n_k}-x_{n_{k-1}}| \cdot 1 dt\leq (\int_E |x_{n_k}-x_{n_{k-1}}|^p dt)^\frac{1}{p}m(E)^\frac{1}{q}&lt;\frac{1}{2^k} m(E)^\frac{1}{q}
 \]</div>
-<p>So by Levy Theorem, <span class="arithmatex">\(f_n=\sum_{k=1}^n |x_{n_k}-x_{n_{k+1}}|\)</span> is controlled by <span class="arithmatex">\(f\)</span>.</p>
+<p>So by Levy Theorem, <span class="arithmatex">\(f_n=\sum_{k=1}^n |x_{n_k}-x_{n_{k-1}}|\)</span> converges to <span class="arithmatex">\(x\)</span>.</p>
 <div class="arithmatex">\[
 \begin{align*}
-\int_E \sum_{k=1}^\infty |x_{n_k}-x_{n_{k+1}}| dt &amp;= \lim_{k\rightarrow \infty}\int_E \sum_{k=1}^K |x_{n_k}-x_{n_{k+1}}| dt \\
-&amp;\leq \lim_{k\rightarrow \infty} \sum_{k=1}^K \int_E |x_{n_k}-x_{n_{k+1}}| dt&lt;\infty.
+\int_E \sum_{k=1}^\infty |x_{n_k}-x_{n_{k-1}}| dt &amp;= \lim_{k\rightarrow \infty}\int_E \sum_{k=1}^K |x_{n_k}-x_{n_{k-1}}| dt \\
+&amp;\leq \lim_{k\rightarrow \infty} \sum_{k=1}^K \int_E |x_{n_k}-x_{n_{k-1}}| dt&lt;\infty.
 \end{align*}
 \]</div>
+<p>So <span class="arithmatex">\(x_n=\sum_{k=1}^\infty x_{n_k}- x_{n_{k-1}}+x_i\)</span> converges to <span class="arithmatex">\(x\)</span>. </p>
 <ul>
 <li>Use Fatau theorem to change the order of limit &amp; integral.</li>
 </ul>
