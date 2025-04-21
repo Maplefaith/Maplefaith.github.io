@@ -4896,6 +4896,7 @@ p_{ii}(m+n+kd)\geq p_{ij}(m)p_{jj}(kd)p_{ji}(n)
 </div>
 </div>
 <p>Now the following theorem gives a limit situation for different initial states.</p>
+<p><a id="Theorem for transient state from different initial state"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for transient state from different initial state</p>
 <p>(i) If <span class="arithmatex">\(j\)</span> is a non-periodic positive recurrent state, then <span class="arithmatex">\(\forall\)</span> state <span class="arithmatex">\(i\)</span>,</p>
@@ -4919,17 +4920,17 @@ p_{ij}(n)=\sum_{m=1}^n f_{ij}(m)p_{jj}(n-m)
 <div class="arithmatex">\[
 \begin{align*}
 p_{ij}(n)&amp;=\sum_{m=1}^M f_{ij}(m)p_{jj}(n-m) + \sum_{m=M+1}^n f_{ij}(m)p_{jj}(n-m)\\
-&amp;\leq \sum_{m=1}^M f_{ij}(m)p_{jj}(n-m) \sum_{m=M+1}^n f_{ij}(m)
+&amp;\leq \sum_{m=1}^M f_{ij}(m)p_{jj}(n-m) +\sum_{m=M+1}^n f_{ij}(m)
 \end{align*}
 \]</div>
 <p>let <span class="arithmatex">\(n\rightarrow \infty\)</span>, and let <span class="arithmatex">\(M\rightarrow \infty\)</span>, we have</p>
 <div class="arithmatex">\[
 \begin{align*}
-\lim_{n\rightarrow \infty}p_{ij}(n)&amp;\leq \sum_{m=1}^M f_{ij}(m)\frac{1}{\mu_j} \sum_{m=M+1}^\infty f_{ij}(m)\\
+\lim_{n\rightarrow \infty}p_{ij}(n)&amp;\leq \sum_{m=1}^M f_{ij}(m)\frac{1}{\mu_j} +\sum_{m=M+1}^\infty f_{ij}(m)\\
 \lim_{M\rightarrow \infty}\lim_{n\rightarrow \infty}p_{ij}(n)&amp;\leq \frac{f_{ij}}{\mu_j}+0.
 \end{align*}
 \]</div>
-<p>For the other direction, we just decrease the number of summation items, and let <span class="arithmatex">\(M, n\rightarrow \infty\)</span>, we have</p>
+<p>For the other direction, we just leave out <span class="arithmatex">\(n-M\)</span> number of summation items, and let <span class="arithmatex">\(M, n\rightarrow \infty\)</span>, we have</p>
 <div class="arithmatex">\[
 \begin{align*}
 p_{ij}(n)&amp;\geq \sum_{m=1}^M f_{ij}(m)p_{jj}(n-m)\\
@@ -4963,7 +4964,7 @@ By <a href="#Recurrent state description with passage probability">Recurrent sta
 <p>So by <a href="#Theorem for relationship between first-passage probability and passage probability">Theorem for relationship between first-passage probability and passage probability</a>,</p>
 <div class="arithmatex">\[
 \begin{align*}
-\sum_{n=1}^\infty p_{jj}(n) &amp;= \sum_{n=1}^\infty \sum_{m=1}^n f_{ij}(m)p_{jj}(n-m)\\
+\sum_{n=1}^\infty p_{ij}(n) &amp;= \sum_{n=1}^\infty \sum_{m=1}^n f_{ij}(m)p_{jj}(n-m)\\
 &amp;=\sum_{m=1}^\infty \sum_{n=m}^\infty  f_{ij}(m)p_{jj}(n-m) \quad\text{triangle choice}\\
 &amp;=\sum_{m=1}^\infty f_{ij}(m) \sum_{n=m}^\infty p_{jj}(n-m)\\
 &amp;=\sum_{m=1}^\infty f_{ij}(m) \sum_{n=0}^\infty p_{jj}(n)\quad\text{by adjusting index}\\
@@ -5036,18 +5037,58 @@ p_j(n)&amp;=P(X_n=j)\\
 <div class="arithmatex">\[
 p_k(0)=\pi_k,\quad k\geq 0
 \]</div>
-<p>where <span class="arithmatex">\(p_k(0)=P(X_0=k)\)</span>, <span class="arithmatex">\(\{\pi_k\}\)</span> is a stationary distribution of the Markov chain. Then for all <span class="arithmatex">\(n\geq 1\)</span>, we have</p>
+<p>where <span class="arithmatex">\(p_k(0)=P(X_0=k)\)</span>, <span class="arithmatex">\(\{\pi_k\}\)</span> is a stationary distribution of the Markov chain, then for all <span class="arithmatex">\(n\geq 1\)</span>, we have</p>
 <div class="arithmatex">\[
-p_k(n)=\pi_k.
+p_k(n)=P(X_n=k)=\pi_k.
 \]</div>
 </div>
-<p>Now we could talk </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="limit-distribution-proof_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Since <span class="arithmatex">\(\pi_k=\sum_{j=0}^\infty \pi_j p_{jk}\)</span>, then </p>
+<div class="arithmatex">\[
+p_{k}(1)=\sum_{j=0}^\infty p_j(0)p_{jk}=\sum_{j=0}^\infty \pi_j p_{jk}=\pi_k.
+\]</div>
+<p>By induction, or Markov characteristic, we are done.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Now we could talk about the relationship between limit distribution and stationary distribution.</p>
+<p><a id="Lemma: First-passage probability with transitivity"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: First-passage probability with transitivity</p>
+<p>If state <span class="arithmatex">\(i\rightarrow j\)</span>, <span class="arithmatex">\(i\)</span> is a recurrent state, then <span class="arithmatex">\(f_{ij}=1\)</span> and <span class="arithmatex">\(j\rightarrow i\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="limit-distribution-proof_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="arithmatex">\(j\rightarrow i\)</span> is apparent because after reaching <span class="arithmatex">\(j\)</span>, <span class="arithmatex">\(\exists n'&gt;0\)</span> such that <span class="arithmatex">\(p_{ji}(n')&gt;0\)</span>. It is a little hard to prove <span class="arithmatex">\(f_{ij}=1\)</span>, i.e. we could reach <span class="arithmatex">\(j\)</span> in finite many times.</p>
+<p>A lot of proof could be used here. We give two versions. The first, in my opinion, is the simplest.</p>
+<p>Assume <span class="arithmatex">\(X_0=i\)</span>, since <span class="arithmatex">\(i\rightarrow j\)</span>, <span class="arithmatex">\(\exists n&gt;0\)</span>, such that <span class="arithmatex">\(p_{ij}(n)&gt;0\)</span>. Now we make use of the properties of recurrent state <span class="arithmatex">\(i\)</span>. We check the number of failure for reaching <span class="arithmatex">\(j\)</span>. </p>
+<p>If <span class="arithmatex">\(X_n\neq j\)</span>, then <span class="arithmatex">\(\exists T_1=\min\{k\geq n: X_k=i\}\)</span> (we fail to reach <span class="arithmatex">\(j\)</span>, but afterwards we could still reach <span class="arithmatex">\(i\)</span>). Check if <span class="arithmatex">\(X_{T_1+n}\neq j\)</span>, then <span class="arithmatex">\(\exists T_2=\min\{k\geq n+T_1: X_k=i\}\)</span>. Follow this routine, we define </p>
+<div class="arithmatex">\[
+T_l=\min\{k\geq n+ T_{l-1} : X_k=i\},\quad l=1,2,\cdots
+\]</div>
+<p>and <span class="arithmatex">\(T_0=0\)</span> as default. Define <span class="arithmatex">\(\zeta=\#\{l\geq 0: X_{T_l+n}\neq j\}\)</span>, which is the number of failing reaching state <span class="arithmatex">\(j\)</span> before success after <span class="arithmatex">\(T_l+n\)</span> steps (if successfully reaching <span class="arithmatex">\(j\)</span>, then we stop the routine and return <span class="arithmatex">\(l\)</span>). Then easy to see that </p>
+<div class="arithmatex">\[
+P(\zeta=k)=(1-p_{ij}(n))^k p_{ij}(n)
+\]</div>
+<p>(fail <span class="arithmatex">\(k\)</span> times and success at the end). This random variable is reasonable, because <span class="arithmatex">\(i\)</span> is recurrent. So <span class="arithmatex">\(\zeta\)</span> follows geometric distribution and </p>
+<div class="arithmatex">\[
+E\zeta=\frac{1-p_{ij}(n)}{p_{ij}(n)}&lt;\infty.
+\]</div>
+<p>which means in average, we fail in finite many times, and <span class="arithmatex">\(\zeta&lt;\infty\)</span> a.s. or <span class="arithmatex">\((P(\zeta=\infty)=0)\)</span>. So <span class="arithmatex">\(\exists T&lt;\infty\)</span> such that <span class="arithmatex">\(X_{T}=j\)</span>, which means <span class="arithmatex">\(f_{ij}=1\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Theorem: Relationship between stationary and limit distribution</p>
 <p>For irreducible Markov chain, all of its state are positive recurrent, iff it has a unique stationsary distribution, and it equals the limit distribution.</p>
 <p>If it is non-periodical, then for all state <span class="arithmatex">\(i,j\)</span>, <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}p_{ij}(n)=\pi_j\)</span>, which means it is also irrelevant with initial state.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="limit-distribution-proof_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="limit-distribution-proof_3" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -5055,12 +5096,52 @@ p_k(n)=\pi_k.
 </ul>
 <p>Assume it has a unique stationary distribution, then </p>
 <div class="arithmatex">\[
-\pi_k=\sum_{j=0}^\infty \pi_j p_{jk},\quad k\geq 1.
+\pi_k=\sum_{j=0}^\infty \pi_j p_{jk}=\sum_{j=0}^\infty \pi_j p_{ik}(n),\quad k\geq 1.
 \]</div>
-<p>Let <span class="arithmatex">\(n\rightarrow \infty\)</span>, </p>
+<p>Let <span class="arithmatex">\(n\rightarrow \infty\)</span>, exchange the order of limit and summation, we have </p>
+<div class="arithmatex">\[
+\pi_k=\lim_{n\rightarrow \infty}\sum_{j=0}^\infty \pi_j p_{ik}(n)=\sum_{j=0}^\infty  \pi_j \lim_{n\rightarrow \infty} p_{ik}(n) =\sum_{j=0}^\infty  \pi_j \cdot 0=0
+\]</div>
+<p>for null recurrent state and transient state, which contradicts! Since it is irreducible, then all the state is recurrent state.</p>
 <ul>
-<li>Necessary.</li>
+<li>Necessary. </li>
 </ul>
+<p>We focus on the limit of <span class="arithmatex">\(p_{ij}(n)\)</span> in formulating stationary distribution.</p>
+<p>Since <span class="arithmatex">\(i\leftrightarrow j\)</span>, by <a href="#Lemma: First-passage probability with transitivity">Lemma: First-passage probability with transitivity</a> <span class="arithmatex">\(f_{ij}=1\)</span>. Since all the states are positive recurrent, by <a href="#Theorem for transient state from different initial state">Theorem for transient state from different initial state</a></p>
+<div class="arithmatex">\[
+\lim_{n\rightarrow \infty} p_{ij}(n)=\frac{f_{ij}}{\mu_j}=\frac{1}{\mu_j}, 
+\]</div>
+<p>We want to prove that <span class="arithmatex">\(\{\frac{1}{\mu_j}, j\geq 0\}\)</span> is the stationary distribution.</p>
+<p>Firstly, since <span class="arithmatex">\(\sum\limits_{j=0}^\infty p_{ij}(n)=1\)</span>, we want to take limit of <span class="arithmatex">\(n\)</span> to get <span class="arithmatex">\(\frac{1}{\mu_j}\)</span>, i.e. by Fatou Lemma, </p>
+<div class="arithmatex">\[
+\sum_{j=0}^\infty \frac{1}{\mu_j} =\sum_{j=0}^\infty \lim_{n\rightarrow \infty} p_{ij}(n)\leq \lim_{n\rightarrow \infty} \sum_{j=0}^\infty p_{ij}(n)=1.
+\]</div>
+<p>Secondly, since </p>
+<div class="arithmatex">\[
+p_{ij}(n+1)=\sum_{k=0}^\infty p_{ik}(n)p_{kj}(1)
+\]</div>
+<p>still by Fatou lemma, we have</p>
+<div class="arithmatex">\[
+\frac{1}{\mu_j}=\lim_{n\rightarrow \infty} \sum_{k=0}^\infty p_{ik}(n)p_{kj}(1)\geq \sum_{k=0}^\infty\lim_{n\rightarrow \infty} p_{ik}(n) p_{kj}(1)=\sum_{k=0}^\infty \frac{1}{\mu_k} p_{kj}.
+\]</div>
+<p>Actually, for a stationary distribution, we shoule prove <span class="arithmatex">\(\frac{1}{\mu_j}=\sum_{k=0}^\infty \frac{1}{\mu_k} p_{ik}\)</span>. We show this by contradiction. If <span class="arithmatex">\(\exists j_0\)</span> such that </p>
+<div class="arithmatex">\[
+\frac{1}{\mu_{j_0}}&gt;\sum_{k=0}^\infty \frac{1}{\mu_k} p_{kj_0}
+\]</div>
+<p>then</p>
+<div class="arithmatex">\[
+\sum_{j=0}^\infty \frac{1}{\mu_j}&gt;\sum_{j=0}^\infty\sum_{k=0}^\infty \frac{1}{\mu_k} p_{kj}=\sum_{k=0}^\infty\frac{1}{\mu_k} \sum_{j=0}^\infty p_{kj}=\sum_{k=0}^\infty\frac{1}{\mu_k}
+\]</div>
+<p>which contradicts!</p>
+<p>Lastly, we prove that <span class="arithmatex">\(\{\frac{1}{\mu_j},j\geq 0\}\)</span> is a distribution, i.e. <span class="arithmatex">\(\sum_{j=0}^\infty \frac{1}{\mu_j}=1\)</span>. With the same result, we have <span class="arithmatex">\(\frac{1}{\mu_j}=\sum_{k=0}^\infty \frac{1}{\mu_k} p_{kj} (m)\)</span> (iteratively, proved by readers). So</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{1}{\mu_j} &amp;= \lim_{m\rightarrow \infty} \sum_{k=0}^\infty \frac{1}{\mu_k} p_{kj} (m)\\
+&amp;= \sum_{k=0}^\infty  \frac{1}{\mu_k} \lim_{m\rightarrow \infty} p_{kj} (m)\\
+&amp;= \sum_{k=0}^\infty  \frac{1}{\mu_k} \frac{1}{\mu_j}\\
+\Rightarrow \quad \sum_{j=0}^\infty \frac{1}{\mu_j} &amp;= \sum_{k=0}^\infty \frac{1}{\mu_k} \sum_{j=0}^\infty \frac{1}{\mu_j}\leq \sum_{j=0}^\infty \frac{1}{\mu_j}.
+\end{align*}
+\]</div>
 </div>
 </div>
 </div>
@@ -5068,11 +5149,11 @@ p_k(n)=\pi_k.
 <p class="admonition-title">Theorem for mean recurrence time</p>
 <p>Assume <span class="arithmatex">\(X_n\)</span> is a non-periodic irreducible Markov chain, then </p>
 <div class="arithmatex">\[
-pi_j=\frac{1}{\tau_j},\quad j\in S,
+p_{ij}=\frac{1}{\tau_j},\quad j\in S,
 \]</div>
-<p>where <span class="arithmatex">\(tau_j=ET_j\)</span> is the mean recurrence time of state <span class="arithmatex">\(j\)</span>.</p>
+<p>where <span class="arithmatex">\(\tau_j=ET_j\)</span> is the mean recurrence time of state <span class="arithmatex">\(j\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="limit-distribution-proof_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="limit-distribution-proof_4" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_4">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>

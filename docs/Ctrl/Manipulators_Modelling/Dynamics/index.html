@@ -4857,7 +4857,7 @@ F_i&amp;=m\dot{v}_{C_i},\\
 <p>The above Newton-Euler equations apply for any manipulators, and this yields a dynamic equation which could be written in the following form</p>
 <div class="arithmatex">\[
 \begin{align}
-\tau=M(\Theta)\ddot{\Theta}+V(\Theta,\dot{\Theta})\dot{\Theta}+G(\Theta),\label{state-space}
+\tau=M(\Theta)\ddot{\Theta}+V(\Theta,\dot{\Theta})+G(\Theta),\label{state-space}
 \end{align}
 \]</div>
 <p>or for every row with <span class="arithmatex">\(\Theta=(\theta_1,\cdots,\theta_n)^T\)</span>,</p>
@@ -4869,7 +4869,7 @@ F_i&amp;=m\dot{v}_{C_i},\\
 c_{kji}=\frac{1}{2}\left(\frac{\partial m_{ij}}{\partial \theta_k} + \frac{\partial m_{ik}}{\partial \theta_j}-\frac{\partial m_{kj}}{\partial \theta_i} \right)=c_{jki}
 \]</div>
 <p>are called the first Christoffel sign, <span class="arithmatex">\(j\)</span> and <span class="arithmatex">\(k\)</span> are of equal state. </p>
-<p>equation <span class="arithmatex">\(\ref{state-space}\)</span> are called <strong>state-space equation</strong>, <span class="arithmatex">\(M(\Theta)_{N\times N}\)</span> is called <strong>mass matrix</strong> of the manipulator, <span class="arithmatex">\(V(\Theta,\dot{\Theta})_{n\times 1}\)</span> is called vector of centrifugal and Coriolis terms, which is where the main idea of the formula come from.</p>
+<p>equation <span class="arithmatex">\(\ref{state-space}\)</span> are called <strong>state-space equation</strong>, <span class="arithmatex">\(M(\Theta)_{N\times N}\)</span> is called <strong>mass matrix</strong> of the manipulator, <span class="arithmatex">\(V(\Theta,\dot{\Theta})_{N\times 1}\)</span> is called vector of centrifugal and Coriolis terms, which is where the main idea of the formula come from.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Configuration-space equation</p>
@@ -4908,9 +4908,9 @@ c_{kji}=\frac{1}{2}\left(\frac{\partial m_{ij}}{\partial \theta_k} + \frac{\part
 <p>So equation <span class="arithmatex">\(\ref{state-space}\)</span> becomes</p>
 <div class="arithmatex">\[
 \begin{align*}
-J^{-T}\tau&amp;=J^{-T}[M(\Theta)\ddot{\Theta}+V(\Theta,\dot{\Theta})\dot{\Theta}+G(\Theta)]\\
-\mathcal{F}&amp;=J^{-T}M(\Theta)[J^{-1}\ddot{\mathcal{X}}-J^{-1}\dot{J}\dot{\Theta}]+J^{-T}V(\Theta,\dot{\Theta})\dot{\Theta}+J^{-T}G(\Theta)\\
-\mathcal{F}&amp;=J^{-T}M(\Theta)J^{-1}\ddot{\mathcal{X}}-J^{-T}J^{-1}\dot{J}\dot{\Theta}+J^{-T}V(\Theta,\dot{\Theta})\dot{\Theta}+J^{-T}G(\Theta)\\
+J^{-T}\tau&amp;=J^{-T}[M(\Theta)\ddot{\Theta}+V(\Theta,\dot{\Theta})+G(\Theta)]\\
+\mathcal{F}&amp;=J^{-T}M(\Theta)[J^{-1}\ddot{\mathcal{X}}-J^{-1}\dot{J}\dot{\Theta}]+J^{-T}V(\Theta,\dot{\Theta})+J^{-T}G(\Theta)\\
+\mathcal{F}&amp;=J^{-T}M(\Theta)J^{-1}\ddot{\mathcal{X}}-J^{-T}J^{-1}\dot{J}\dot{\Theta}+J^{-T}V(\Theta,\dot{\Theta})+J^{-T}G(\Theta)\\
 \mathcal{F}&amp;=M_{\mathcal{X}}(\Theta)\ddot{\mathcal{X}}+V_{\mathcal{X}}(\Theta)+G_{\mathcal{X}}(\Theta)
 \end{align*}
 \]</div>
@@ -4918,7 +4918,7 @@ J^{-T}\tau&amp;=J^{-T}[M(\Theta)\ddot{\Theta}+V(\Theta,\dot{\Theta})\dot{\Theta}
 <div class="arithmatex">\[
 \begin{cases}
 M_{\mathcal{X}}(\Theta)=J^{-T}M(\Theta)J^{-1}\\
-V_{\mathcal{X}}(\Theta)=-J^{-T}J^{-1}\dot{J}\dot{\Theta}+J^{-T}V(\Theta,\dot{\Theta})\dot{\Theta}\\
+V_{\mathcal{X}}(\Theta)=-J^{-T}J^{-1}\dot{J}\dot{\Theta}+J^{-T}V(\Theta,\dot{\Theta})\\
 G_{\mathcal{X}}(\Theta)=J^{-T}G(\Theta).
 \end{cases}
 \]</div>
