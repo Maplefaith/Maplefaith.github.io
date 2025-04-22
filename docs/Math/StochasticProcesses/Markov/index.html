@@ -2026,9 +2026,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#decomposition-of-state-space" class="md-nav__link">
+  <a href="#accessibility-communicating-class" class="md-nav__link">
     <span class="md-ellipsis">
-      Decomposition of State Space
+      Accessibility &amp; Communicating Class
     </span>
   </a>
   
@@ -2053,9 +2053,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#transfinite-probability" class="md-nav__link">
+  <a href="#n-visit-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Transfinite Probability
+      n-visit Probability
     </span>
   </a>
   
@@ -2074,6 +2074,15 @@
   <a href="#limit-distribution" class="md-nav__link">
     <span class="md-ellipsis">
       Limit distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverse-markov-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Markov Chain
     </span>
   </a>
   
@@ -4177,9 +4186,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#decomposition-of-state-space" class="md-nav__link">
+  <a href="#accessibility-communicating-class" class="md-nav__link">
     <span class="md-ellipsis">
-      Decomposition of State Space
+      Accessibility &amp; Communicating Class
     </span>
   </a>
   
@@ -4204,9 +4213,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#transfinite-probability" class="md-nav__link">
+  <a href="#n-visit-probability" class="md-nav__link">
     <span class="md-ellipsis">
-      Transfinite Probability
+      n-visit Probability
     </span>
   </a>
   
@@ -4225,6 +4234,15 @@
   <a href="#limit-distribution" class="md-nav__link">
     <span class="md-ellipsis">
       Limit distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverse-markov-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Markov Chain
     </span>
   </a>
   
@@ -4383,7 +4401,7 @@ p_{ij}(m,m+h)&amp;=\sum_{r_1=0}^\infty p_{ir_1}(m,m+1)\cdot p_{r_1j}(m+1,m+h)\\
 </div>
 </div>
 </div>
-<h3 id="decomposition-of-state-space">Decomposition of State Space<a class="headerlink" href="#decomposition-of-state-space" title="Permanent link">&para;</a></h3>
+<h3 id="accessibility-communicating-class">Accessibility &amp; Communicating Class<a class="headerlink" href="#accessibility-communicating-class" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Accessibility of state</p>
 <p>If there exsits <span class="arithmatex">\(N&gt;0\)</span> such that <span class="arithmatex">\(p_{ij}(N)&gt;0\)</span>, then we call that state <span class="arithmatex">\(i\)</span> could <strong>access</strong> state <span class="arithmatex">\(j\)</span>, denoted by</p>
@@ -4401,7 +4419,7 @@ i\leftrightarrow j.
 <p>(ii) If <span class="arithmatex">\(i\leftrightarrow j\)</span>, then <span class="arithmatex">\(j\leftrightarrow i\)</span>.</p>
 <p>(iii) If <span class="arithmatex">\(i\leftrightarrow j\)</span> and <span class="arithmatex">\(j\leftrightarrow i\)</span>, then <span class="arithmatex">\(i\leftrightarrow i\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="decomposition-of-state-space-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="accessibility-communicating-class-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="accessibility-communicating-class-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) There exsits <span class="arithmatex">\(N_1,N_2&gt;0\)</span>, s.t. <span class="arithmatex">\(p_{ij}(N_1)&gt;0\)</span> and <span class="arithmatex">\(p_{jk}(N_2)&gt;0\)</span>, then by C-K equation</p>
@@ -4414,15 +4432,16 @@ p_{ik}(N_1+N_2)=\sum_{r=0}^\infty p_{ir}(N_1)p_{rk}(N_2)\geq p_{ij}(N_1)p_{jk}(N
 <div class="admonition info">
 <p class="admonition-title">Definition of Communicating class</p>
 <p>We denote <span class="arithmatex">\(C(j)\)</span> to be the communicating class of state <span class="arithmatex">\(j\)</span>, which is actually the collection of all states mutually accessible from <span class="arithmatex">\(j\)</span>.</p>
-<p>If <span class="arithmatex">\(C(j)=\varnothing\)</span>, then we call <span class="arithmatex">\(j\)</span> a <strong>transient state</strong>.</p>
-<p>If <span class="arithmatex">\(C(j)\neq \varnothing\)</span>, then we call <span class="arithmatex">\(j\)</span> a <strong>recurrent state</strong>.</p>
+<p>If <span class="arithmatex">\(C(j)=\varnothing\)</span>, then we call <span class="arithmatex">\(j\)</span> a <strong>return state</strong>.</p>
+<p>If <span class="arithmatex">\(C(j)\neq \varnothing\)</span>, then we call <span class="arithmatex">\(j\)</span> a <strong>non-return state</strong>.</p>
 </div>
+<p>In further study, we would see a non-return state must be a transient state, but a return state should be decomposed carefully.</p>
 <p><a id="Property of communicating class"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Property of communicating class</p>
 <p>If <span class="arithmatex">\(i\leftrightarrow j\)</span>, then <span class="arithmatex">\(C(i)=C(j)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="decomposition-of-state-space-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="accessibility-communicating-class-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="accessibility-communicating-class-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Easy to see. <span class="arithmatex">\(\forall k\in C(i)\)</span>, we have <span class="arithmatex">\(k\leftrightarrow i\)</span>. Since <span class="arithmatex">\(i\leftrightarrow j\)</span>, we have <span class="arithmatex">\(k\leftrightarrow j\)</span>, so <span class="arithmatex">\(k\in C(j)\)</span>. The other direction is the same.</p>
@@ -4439,7 +4458,7 @@ p_{ik}(N_1+N_2)=\sum_{r=0}^\infty p_{ir}(N_1)p_{rk}(N_2)\geq p_{ij}(N_1)p_{jk}(N
 <p class="admonition-title">Theorem for communicating class</p>
 <p>If two state set <span class="arithmatex">\(C_1\)</span>, <span class="arithmatex">\(C_2\)</span> are communicating classes, then either <span class="arithmatex">\(C_1=C_2\)</span> or <span class="arithmatex">\(C_1\cap C_2=\varnothing\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="decomposition-of-state-space-proof_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="accessibility-communicating-class-proof_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="accessibility-communicating-class-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By definition of communicating class, there exists <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\(j\)</span> such that </p>
@@ -4462,7 +4481,7 @@ S=C_1\cup C_2\cup \cdots\cup C_n,
 \]</div>
 <p>where <span class="arithmatex">\(C_i\cap C_j=\varnothing\)</span> whenever <span class="arithmatex">\(i\neq j\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="decomposition-of-state-space-proof_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="decomposition-of-state-space-proof_3">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="accessibility-communicating-class-proof_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="accessibility-communicating-class-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Iterate over all elements of <span class="arithmatex">\(S\)</span>. Arbitrarily choose a state <span class="arithmatex">\(j_1\in S\)</span>, let <span class="arithmatex">\(C_1=C(j_1)\)</span>, if <span class="arithmatex">\(j_1\)</span> is a recurrent state; otherwise let <span class="arithmatex">\(C_1=\{j_1\}\)</span>, i.e. <span class="arithmatex">\(j_1\)</span> is a transient state. Next round, Arbitrarily choose a state <span class="arithmatex">\(j_2\in S-C_1\)</span>, let <span class="arithmatex">\(C_2=C(j_2)\)</span>, if <span class="arithmatex">\(j_2\)</span> is a recurrent state; otherwise let <span class="arithmatex">\(C_2=\{j_2\}\)</span>, i.e. <span class="arithmatex">\(j_2\)</span> is a transient state.</p>
@@ -4615,10 +4634,10 @@ P(T_i&gt;k\mid X_0=i)=\sum_{n=k+1}^\infty P(T_i=n\mid X_0=i)=\sum_{n=k+1}^\infty
 </div>
 </div>
 <p>Actually, it is really hard to calculate <span class="arithmatex">\(f_{ii}(n)\)</span> in some complex Markov chain. So we have to give another description of recurrent state.</p>
-<h3 id="transfinite-probability">Transfinite Probability<a class="headerlink" href="#transfinite-probability" title="Permanent link">&para;</a></h3>
+<h3 id="n-visit-probability">n-visit Probability<a class="headerlink" href="#n-visit-probability" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p class="admonition-title">Transfinite Probability</p>
-<p>Define <strong>transfinite probability</strong></p>
+<p class="admonition-title">n-visit Probability</p>
+<p>Define <strong>n-visit probability</strong></p>
 <div class="arithmatex">\[
 Q_{ij}(n)=P(\forall N\geq n, \exists \{m_i\}_{1\leq i\leq N}, m_i\geq 1, s.t. X_{m_i}=j\mid X_0=i)
 \]</div>
@@ -4644,7 +4663,7 @@ Q_{ij}(1)\geq Q_{ij}(2)\geq \cdots
 <p>(ii) <span class="arithmatex">\(Q_{ij}=f_{ij}Q_{jj}\)</span>;</p>
 <p>(iii) <span class="arithmatex">\(Q_{jj}=\lim\limits_{n\rightarrow \infty}(f_{jj})^n\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="transfinite-probability-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="transfinite-probability-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="n-visit-probability-proof" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="n-visit-probability-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) Still use first-passage to partition the space.</p>
@@ -4672,7 +4691,7 @@ Q_{jj}(m)=f_{jj} Q_{jj}(m-1)=\cdots=(f_{jj})^{m-1} Q_{jj}(1)=(f_{jj})^{m}.
 <p>(i) State <span class="arithmatex">\(j\)</span> is a recurrent state, iff <span class="arithmatex">\(\sum\limits_{n=1}^\infty p_{jj}(n)=+\infty\)</span>.</p>
 <p>(ii) State <span class="arithmatex">\(j\)</span> is a transient state, iff <span class="arithmatex">\(\sum\limits_{n=1}^\infty p_{jj}(n)&lt;+\infty\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="transfinite-probability-proof_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="transfinite-probability-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="n-visit-probability-proof_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="n-visit-probability-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The proof is done by leveraging <a href="#Theorem for relationship between first-passage probability and passage probability">Theorem for relationship between first-passage probability and passage probability</a>.</p>
@@ -4722,7 +4741,7 @@ p_{jj}(n)&amp;=\sum_{m=1}^n f_{jj}(m)p_{jj}(n-m)\\
 </div>
 </div>
 <p><a id="another perspective"></a></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="transfinite-probability-another-perspective" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="transfinite-probability-another-perspective">Another Perspective</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="n-visit-probability-another-perspective" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="n-visit-probability-another-perspective">Another Perspective</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>We could take another perspective. Notice</p>
@@ -4751,7 +4770,7 @@ N_j=\sum_{i=1}^\infty Y_i= \sum_{i=1}^\infty 1_{A_i}
 <p class="admonition-title">Corollary: Transitivity of Recurrent state</p>
 <p>If state <span class="arithmatex">\(i\leftrightarrow j\)</span>, and <span class="arithmatex">\(j\)</span> is a recurrent state, then <span class="arithmatex">\(i\)</span> is also a recurrent state.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="transfinite-probability-proof_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="transfinite-probability-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="n-visit-probability-proof_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="n-visit-probability-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Since <span class="arithmatex">\(i\leftrightarrow j\)</span>, <span class="arithmatex">\(\exists m,n\geq 1\)</span>, such that</p>
@@ -4771,14 +4790,19 @@ p_{ij}(m)&gt;0, \quad p_{ji}(n)&gt;0.
 </div>
 </div>
 <h3 id="limit-theorem">Limit Theorem<a class="headerlink" href="#limit-theorem" title="Permanent link">&para;</a></h3>
-<p>We now focus on the outer characteristics of recurrent, transient and ergodic state.</p>
+<p>We now focus on the outer characteristics of recurrent, transient and ergodic state, the limit of <span class="arithmatex">\(p_{jj}(n)\)</span>.</p>
+<p>The following theorem has considered the influence of period. If a positive recurrent state has a period, it might not have the limit of <span class="arithmatex">\(p_{jj}(n)\)</span>, but just a convergent subsequence. So a more general statement of the following (i) and (ii) is </p>
+<div class="arithmatex">\[
+\limsup_{n\rightarrow\infty}p_{jj}(n)&gt;0
+\]</div>
+<p>for positive recurrent state, without considering period.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for limit of passage probability of three states</p>
-<p>(i) If state <span class="arithmatex">\(j\)</span> is a non-periodic recurrent state, then </p>
+<p>(i) If state <span class="arithmatex">\(j\)</span> is a non-periodic positive recurrent state (ergodic), then </p>
 <div class="arithmatex">\[
 \lim_{n\rightarrow \infty}p_{jj}(n)=\frac{1}{\mu_j}
 \]</div>
-<p>(ii) If state <span class="arithmatex">\(j\)</span> is a recurrent state with period <span class="arithmatex">\(d\)</span>, then </p>
+<p>(ii) If state <span class="arithmatex">\(j\)</span> is a positive recurrent state with period <span class="arithmatex">\(d\)</span>, then </p>
 <div class="arithmatex">\[
 \lim_{n\rightarrow \infty}p_{jj}(nd)=\frac{d}{\mu_j},
 \]</div>
@@ -5085,14 +5109,22 @@ E\zeta=\frac{1-p_{ij}(n)}{p_{ij}(n)}&lt;\infty.
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem: Relationship between stationary and limit distribution</p>
-<p>For irreducible Markov chain, all of its state are positive recurrent, iff it has a unique stationsary distribution, and it equals the limit distribution.</p>
-<p>If it is non-periodical, then for all state <span class="arithmatex">\(i,j\)</span>, <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}p_{ij}(n)=\pi_j\)</span>, which means it is also irrelevant with initial state.</p>
+<p>Assume <span class="arithmatex">\(\{X_n\}\)</span> is an irreducible Markov chain.</p>
+<p>(i) it has a unique stationsary distribution, iff all of its state are positive recurrent, and</p>
+<div class="arithmatex">\[
+\lim\limits_{n\rightarrow \infty}\frac{1}{n}\sum_{k=1}^n p_{ij}(k) = \pi_j.
+\]</div>
+<p>(ii) if <span class="arithmatex">\(X_n\)</span> is ergodic, then its stationary distribution equals the limit distribution, i.e. for all state <span class="arithmatex">\(i,j\)</span>, </p>
+<div class="arithmatex">\[
+\lim\limits_{n\rightarrow \infty}p_{ij}(n)=\pi_j
+\]</div>
+<p>which means it is also irrelevant with initial state.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="limit-distribution-proof_3" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_3">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="limit-distribution-proof-for-i" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof-for-i">Proof for (i)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li>Sufficient.</li>
+<li>Necessary. </li>
 </ul>
 <p>Assume it has a unique stationary distribution, then </p>
 <div class="arithmatex">\[
@@ -5102,11 +5134,11 @@ E\zeta=\frac{1-p_{ij}(n)}{p_{ij}(n)}&lt;\infty.
 <div class="arithmatex">\[
 \pi_k=\lim_{n\rightarrow \infty}\sum_{j=0}^\infty \pi_j p_{ik}(n)=\sum_{j=0}^\infty  \pi_j \lim_{n\rightarrow \infty} p_{ik}(n) =\sum_{j=0}^\infty  \pi_j \cdot 0=0
 \]</div>
-<p>for null recurrent state and transient state, which contradicts! Since it is irreducible, then all the state is recurrent state.</p>
+<p>for null recurrent state and transient state, which contradicts! Since it is irreducible, then all the state is positive recurrent.</p>
 <ul>
-<li>Necessary. </li>
+<li>Sufficient.
+We focus on the limit of <span class="arithmatex">\(p_{ij}(n)\)</span> in formulating stationary distribution.</li>
 </ul>
-<p>We focus on the limit of <span class="arithmatex">\(p_{ij}(n)\)</span> in formulating stationary distribution.</p>
 <p>Since <span class="arithmatex">\(i\leftrightarrow j\)</span>, by <a href="#Lemma: First-passage probability with transitivity">Lemma: First-passage probability with transitivity</a> <span class="arithmatex">\(f_{ij}=1\)</span>. Since all the states are positive recurrent, by <a href="#Theorem for transient state from different initial state">Theorem for transient state from different initial state</a></p>
 <div class="arithmatex">\[
 \lim_{n\rightarrow \infty} p_{ij}(n)=\frac{f_{ij}}{\mu_j}=\frac{1}{\mu_j}, 
@@ -5153,9 +5185,64 @@ p_{ij}=\frac{1}{\tau_j},\quad j\in S,
 \]</div>
 <p>where <span class="arithmatex">\(\tau_j=ET_j\)</span> is the mean recurrence time of state <span class="arithmatex">\(j\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="limit-distribution-proof_4" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_4">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="limit-distribution-proof_3" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="limit-distribution-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
+</div>
+</div>
+<h3 id="inverse-markov-chain">Inverse Markov Chain<a class="headerlink" href="#inverse-markov-chain" title="Permanent link">&para;</a></h3>
+<p>Check whether the following Markov property holds?</p>
+<div class="arithmatex">\[
+P(X_{n}=j\mid X_{n+1}=i,X_{n+2}=i_{n+2},\cdots, X_N=i_N)=P(X_{n}=j\mid X_{n+1}=i)
+\]</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="inverse-markov-chain-proof" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="inverse-markov-chain-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{align*}
+P(X_{n}=j\mid X_{n+1}=i) &amp;= \frac{P(X_n=j)}{P(X_{n+1}=i)}p_{ji}
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Actually, we need some special condition to interpret.</p>
+<p>The first is to making use of stationary distribution. That is, if the initial distribution is <span class="arithmatex">\(\pi\)</span>, then <span class="arithmatex">\(p_{j}(n)=\pi_j\)</span>, <span class="arithmatex">\(p_{i}(n+1)=\pi_i\)</span>, and </p>
+<div class="arithmatex">\[
+\frac{P(X_n=j)}{P(X_{n+1}=i)}p_{ji}=\frac{\pi_j}{\pi_i}p_{ji}
+\]</div>
+<p>which is irrelevant with time.</p>
+<p>Now we have a new but natural idea of a special term: <strong>Inverse distribution</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of inverse distribution</p>
+<p>If</p>
+<div class="arithmatex">\[
+(X_1,X_0)\overset{d}{=}(X_0,X_1),
+\]</div>
+<p>i.e.</p>
+<div class="arithmatex">\[
+\pi_i p_{ij}=\pi_j p_{ji}
+\]</div>
+<p>then the whole Markov chain is inversible.</p>
+</div>
+<p>Actually, having a stationary distribution is a necessary condition for a Markov chain to be inverse.</p>
+<div class="admonition success">
+<p class="admonition-title">Kolmogorov Criterion</p>
+<p>Assume <span class="arithmatex">\(X_n\)</span> is a irreducible stationary Markov chain, then it is inversible iff for all closed path </p>
+<div class="arithmatex">\[
+i_0,i_1,\cdots,i_{m-1}, i_m=i_0
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+p_{i_0i_1}p_{i_1i_2}\cdots p_{i_{m-1}i_0}=p_{i_0 i_{m-1}}\cdots p_{i_2i_1}p_{i_1i_0}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="inverse-markov-chain-proof_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="inverse-markov-chain-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
 </div>
 </div>
 
