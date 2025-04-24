@@ -22,7 +22,7 @@
     
     
       
-        <title>Possion Process - MapleBlog</title>
+        <title>Poisson Process - MapleBlog</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#possion-process" class="md-skip">
+        <a href="#poisson-process" class="md-skip">
           Skip to content
         </a>
       
@@ -152,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Possion Process
+              Poisson Process
             
           </span>
         </div>
@@ -1953,7 +1953,7 @@
           
   
   <span class="md-ellipsis">
-    Possion Process
+    Poisson Process
   </span>
   
 
@@ -1964,7 +1964,7 @@
         
   
   <span class="md-ellipsis">
-    Possion Process
+    Poisson Process
   </span>
   
 
@@ -2040,9 +2040,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compound-possion-process" class="md-nav__link">
+  <a href="#compound-poisson-process" class="md-nav__link">
     <span class="md-ellipsis">
-      Compound Possion Process
+      Compound Poisson Process
     </span>
   </a>
   
@@ -4206,9 +4206,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#compound-possion-process" class="md-nav__link">
+  <a href="#compound-poisson-process" class="md-nav__link">
     <span class="md-ellipsis">
-      Compound Possion Process
+      Compound Poisson Process
     </span>
   </a>
   
@@ -4238,24 +4238,24 @@
                   
 
 
-<h1 id="possion-process">Possion Process<a class="headerlink" href="#possion-process" title="Permanent link">&para;</a></h1>
+<h1 id="poisson-process">Poisson Process<a class="headerlink" href="#poisson-process" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
-<p class="admonition-title">Definition of Possion Process</p>
+<p class="admonition-title">Definition of Poisson Process</p>
 <p>Assume Stachostic process <span class="arithmatex">\(\{N_t: t\geq 0\}\)</span> has state space <span class="arithmatex">\(S=\mathbb{N}^+\)</span>. If it satisfies</p>
 <p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
 <p>(ii) independent increment (additive).</p>
 <p>(iii) <span class="arithmatex">\(\forall s,t\geq 0\)</span>, <span class="arithmatex">\(N(s+t)-N(s) \sim \pi(\lambda t),\lambda&gt;0\)</span>,</p>
-<p>then we call <span class="arithmatex">\(\{N_t\}\)</span> is a <strong>Possion Process</strong>.</p>
+<p>then we call <span class="arithmatex">\(\{N_t\}\)</span> is a <strong>Poisson Process</strong>.</p>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Equivalent Definition of Possion Process</p>
-<p>Assume Stachostic process <span class="arithmatex">\(\{N_t: t\geq 0\}\)</span> is a Possion process, iff it satisfies </p>
+<p class="admonition-title">Equivalent Definition of Poisson Process</p>
+<p>Assume Stachostic process <span class="arithmatex">\(\{N_t: t\geq 0\}\)</span> is a Poisson process, iff it satisfies </p>
 <p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
 <p>(ii) independent increment (additive).</p>
 <p>(iii) <span class="arithmatex">\(\mathbb{P}(N(h+t)-N(t)=1)=\lambda h + o(h),\quad h&gt;0\)</span>.</p>
 <p>(iv) <span class="arithmatex">\(\mathbb{P}(N(h+t)-N(t)\geq 2)=o(h), \quad h&gt;0\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="possion-process-proof-for-rightarrow" name="__tabbed_1" type="radio" /><input id="possion-process-proof-for-leftarrow" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="possion-process-proof-for-rightarrow">Proof for <span class="arithmatex">\(\Rightarrow\)</span></label><label for="possion-process-proof-for-leftarrow">Proof for <span class="arithmatex">\(\Leftarrow\)</span></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="poisson-process-proof-for-rightarrow" name="__tabbed_1" type="radio" /><input id="poisson-process-proof-for-leftarrow" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="poisson-process-proof-for-rightarrow">Proof for <span class="arithmatex">\(\Rightarrow\)</span></label><label for="poisson-process-proof-for-leftarrow">Proof for <span class="arithmatex">\(\Leftarrow\)</span></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Easy to see. Use <span class="arithmatex">\(e^{-\lambda h}=1-\lambda h+o(h)\)</span>, we have</p>
@@ -4272,7 +4272,7 @@
 \]</div>
 </div>
 <div class="tabbed-block">
-<p>It is a little hard to prove this direction. For we have to show that <span class="arithmatex">\(N(t+h)-N(t)\)</span> is a Possion distribution.</p>
+<p>It is a little hard to prove this direction. For we have to show that <span class="arithmatex">\(N(t+h)-N(t)\)</span> is a Poisson distribution.</p>
 </div>
 </div>
 </div>
@@ -4289,7 +4289,7 @@ P(N_{(t,t+h]}=0)&amp;=P(N_{[0,t+h]}-N_{[0,t]}=0)\\
 </div>
 <p>Later, we focus on the number on intervals without considering carefully about the boundary.</p>
 <h2 id="mathematical-characteristic">Mathematical Characteristic<a class="headerlink" href="#mathematical-characteristic" title="Permanent link">&para;</a></h2>
-<p>Here we use generating function to deduce its mathematical characteristics. Recall that for random variable <span class="arithmatex">\(\xi\)</span> which follows Possion distribution with para <span class="arithmatex">\(\lambda\)</span>, we have </p>
+<p>Here we use generating function to deduce its mathematical characteristics. Recall that for random variable <span class="arithmatex">\(\xi\)</span> which follows Poisson distribution with para <span class="arithmatex">\(\lambda\)</span>, we have </p>
 <div class="arithmatex">\[
 \psi_\xi(s)=e^{\lambda (s-1)}.
 \]</div>
@@ -4301,9 +4301,9 @@ E(\xi s^{\xi-1})&amp;=\psi'_\xi(s)=\lambda e^{\lambda (s-1)}\\
 E[\xi (\xi-1) s^{\xi-2}]&amp;=\psi''_\xi(s)=\lambda^2 e^{\lambda (s-1)}\\
 \end{align*}
 \]</div>
-<p>Using Levy Theorem, we let <span class="arithmatex">\(s\nearrow 1\)</span>, then <span class="arithmatex">\(E(\xi)=\lambda\)</span>, <span class="arithmatex">\(E(\xi^2-\xi)=\lambda^2\)</span>, so <span class="arithmatex">\(D(\xi)=\lambda\)</span>. As for Possion process, we have</p>
+<p>Using Levy Theorem, we let <span class="arithmatex">\(s\nearrow 1\)</span>, then <span class="arithmatex">\(E(\xi)=\lambda\)</span>, <span class="arithmatex">\(E(\xi^2-\xi)=\lambda^2\)</span>, so <span class="arithmatex">\(D(\xi)=\lambda\)</span>. As for Poisson process, we have</p>
 <div class="admonition success">
-<p class="admonition-title">Mathematical characteristic of Possion Process</p>
+<p class="admonition-title">Mathematical characteristic of Poisson Process</p>
 <p>(i) <span class="arithmatex">\(EN_t=\lambda t\)</span>, <span class="arithmatex">\(DN_t=\lambda t\)</span>.</p>
 <p>(ii) for <span class="arithmatex">\(s&lt;t\)</span>, </p>
 <div class="arithmatex">\[
@@ -4329,7 +4329,7 @@ C_N(t,s)&amp;=E(N_tN_s)-E(N_t)E(N_s)\\
 <p>For <span class="arithmatex">\(T_n\)</span>, we have the following theorem.</p>
 <div class="admonition success">
 <p class="admonition-title">Theorem of interval time</p>
-<p>The sequence of interval time <span class="arithmatex">\(\{T_n\}\)</span> in Possion process is an independent sequence with the same distribution, which in particular, follows an exponential distribution with a mean of <span class="arithmatex">\(1/\lambda\)</span>.</p>
+<p>The sequence of interval time <span class="arithmatex">\(\{T_n\}\)</span> in Poisson process is an independent sequence with the same distribution, which in particular, follows an exponential distribution with a mean of <span class="arithmatex">\(1/\lambda\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="process-of-interval-time-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="process-of-interval-time-proof">Proof</label></div>
 <div class="tabbed-content">
@@ -4369,7 +4369,7 @@ P(T_n&gt;t \mid S_{n-1}=s)&amp;=P(N_{[0,s+t]}\leq n-1\mid N_{[0,s]}=n-1, N_{[0,s
 <div class="arithmatex">\[
 N_t:=\max\{n\geq 1: \sum_{i=1}^n T_i\leq t\}.
 \]</div>
-<p>then <span class="arithmatex">\(N_t\)</span> is a Possion process with a parameter <span class="arithmatex">\(\lambda\)</span>.</p>
+<p>then <span class="arithmatex">\(N_t\)</span> is a Poisson process with a parameter <span class="arithmatex">\(\lambda\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="process-of-interval-time-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="process-of-interval-time-proof_1">Proof</label></div>
 <div class="tabbed-content">
@@ -4386,7 +4386,7 @@ P(N_t=k)&amp;=P(S_k\leq t&lt;S_{k+1})\\
 &amp;=e^{-\lambda t}\frac{\lambda^k t^{k}}{k!}
 \end{align*}
 \]</div>
-<p>which is exactly Possion distribution with para <span class="arithmatex">\(\lambda t\)</span>.</p>
+<p>which is exactly Poisson distribution with para <span class="arithmatex">\(\lambda t\)</span>.</p>
 <p>Then we prove that <span class="arithmatex">\(N_t\)</span> satisfies independent increment and stationary increment. For <span class="arithmatex">\(t,s\)</span>,</p>
 <div class="arithmatex">\[
 \begin{align*}
@@ -4394,7 +4394,7 @@ P(N_t-N_s=n)&amp;=\sum_{k=1}^\infty P(N_t-N_s=n, N_s=k)\\
 &amp;=\sum_{k=1}^\infty P(N_t=n+k, N_s=k)
 \end{align*}
 \]</div>
-<p>still follows Possion distribution.
+<p>still follows Poisson distribution.
 <p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
@@ -4403,7 +4403,7 @@ P(N_t-N_s=n)&amp;=\sum_{k=1}^\infty P(N_t-N_s=n, N_s=k)\\
 <p><a id="Theorem of arriving time"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem of arriving time</p>
-<p>The sequence of arriving time <span class="arithmatex">\(\{S_n\}\)</span> in Possion process satisfies <span class="arithmatex">\(S_n\sim \Gamma (n,\lambda)\)</span>, i.e.</p>
+<p>The sequence of arriving time <span class="arithmatex">\(\{S_n\}\)</span> in Poisson process satisfies <span class="arithmatex">\(S_n\sim \Gamma (n,\lambda)\)</span>, i.e.</p>
 <div class="arithmatex">\[
 f_{S_n}(t)=\begin{cases}
 \displaystyle\frac{\lambda^n t^{n-1}}{\Gamma(n)}e^{-\lambda t}=\frac{\lambda^n t^{n-1}}{(n-1)!}e^{-\lambda t},\quad &amp;t&gt;0,\\
@@ -4446,7 +4446,7 @@ f_{S_n}(t)&amp;=-e^{-\lambda t}\sum_{i=0}^{n-1}\left(\frac{-\lambda^{i+1}t^i}{i!
 <p>We usually use the following conditional form of <span class="arithmatex">\(S_n\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Properties of conditional probability of arriving time</p>
-<p>Assume <span class="arithmatex">\(N_t\)</span> is a Possion process of a parameter <span class="arithmatex">\(\lambda\)</span>, <span class="arithmatex">\(\{S_n\}\)</span> is its arriving sequence, then</p>
+<p>Assume <span class="arithmatex">\(N_t\)</span> is a Poisson process of a parameter <span class="arithmatex">\(\lambda\)</span>, <span class="arithmatex">\(\{S_n\}\)</span> is its arriving sequence, then</p>
 <p>(i) <strong>Looking forward</strong>. <span class="arithmatex">\(\forall n\)</span>, <span class="arithmatex">\(0&lt;t_1&lt;\cdots&lt;t_n\)</span>, and integers <span class="arithmatex">\(0\leq k_1\leq \cdots \leq k_n\)</span>, we have</p>
 <div class="arithmatex">\[
 \begin{align*}
@@ -4510,7 +4510,7 @@ P&amp;(x_i&lt;X_{(i)}\leq x_i+\varepsilon_i, \forall i\in [1,n])\\
 </div>
 <div class="admonition success">
 <p class="admonition-title">Distribution of arriving vector in conditional probability</p>
-<p>Assume <span class="arithmatex">\(N_t\)</span> is a Possion process, with arriving time <span class="arithmatex">\(S_n\)</span>. <span class="arithmatex">\(\forall t&gt;0\)</span>m <span class="arithmatex">\(n\in \mathbb{N}^+\)</span>, </p>
+<p>Assume <span class="arithmatex">\(N_t\)</span> is a Poisson process, with arriving time <span class="arithmatex">\(S_n\)</span>. <span class="arithmatex">\(\forall t&gt;0\)</span>m <span class="arithmatex">\(n\in \mathbb{N}^+\)</span>, </p>
 <div class="arithmatex">\[
 (S_1,\cdots,S_n \mid N_t=n)\overset{d}{=}(U_{(1)},\cdots,U_{(n)})
 \]</div>
@@ -4579,8 +4579,8 @@ P(\beta_t&lt;x)=P(S_{N_{t}+1}&lt;x)=P(N_{t+x}-N_t\geq 1)=1-e^{-\lambda x}.
 </div>
 <h2 id="synthesis-decomposition">Synthesis &amp; Decomposition<a class="headerlink" href="#synthesis-decomposition" title="Permanent link">&para;</a></h2>
 <div class="admonition success">
-<p class="admonition-title">Synthesis of Possion Process</p>
-<p>Assume <span class="arithmatex">\(N_1(t)\)</span> and <span class="arithmatex">\(N_2(t)\)</span> are mutually independent Possion processes, with parameter <span class="arithmatex">\(\lambda_1\)</span> and <span class="arithmatex">\(\lambda_2\)</span> respectively. Then process <span class="arithmatex">\(N(t)=N_1(t)+N_2(t)\)</span> is also a Possion process with parameter <span class="arithmatex">\(\lambda_1+\lambda_2\)</span>.</p>
+<p class="admonition-title">Synthesis of Poisson Process</p>
+<p>Assume <span class="arithmatex">\(N_1(t)\)</span> and <span class="arithmatex">\(N_2(t)\)</span> are mutually independent Poisson processes, with parameter <span class="arithmatex">\(\lambda_1\)</span> and <span class="arithmatex">\(\lambda_2\)</span> respectively. Then process <span class="arithmatex">\(N(t)=N_1(t)+N_2(t)\)</span> is also a Poisson process with parameter <span class="arithmatex">\(\lambda_1+\lambda_2\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="synthesis-decomposition-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="synthesis-decomposition-proof">Proof</label></div>
 <div class="tabbed-content">
@@ -4593,24 +4593,24 @@ P(\beta_t&lt;x)=P(S_{N_{t}+1}&lt;x)=P(N_{t+x}-N_t\geq 1)=1-e^{-\lambda x}.
 \text{Group 2: }N_2(t_2)-N_2(t_1),\cdots,N_2(t_n)-N_2(t_{n-1}),\\
 \end{cases}
 \]</div>
-<p>the independence in group 1 and 2 is apparent. Since <span class="arithmatex">\(N_1(t)\)</span> and <span class="arithmatex">\(N_2(t)\)</span> are mutually independent Possion processes, Group 1 and 2 are also independent with each other. So we have the above random variables independent mutually.</p>
-<p>(iii) <strong>Follows Possion distribution</strong>. We have two methods. The first one is to use properties of Possion distribution. That is, since <span class="arithmatex">\(N_1(t)-N_1(s)\)</span>, <span class="arithmatex">\(N_2(t)-N_2(s)\)</span> follow Possion distribution of <span class="arithmatex">\(\pi (\lambda_1 (t-s))\)</span> and <span class="arithmatex">\(\pi(\lambda_2(t-s))\)</span>, respectively, and they are mutually independent, so by the additivity of Possion distribution, we have</p>
+<p>the independence in group 1 and 2 is apparent. Since <span class="arithmatex">\(N_1(t)\)</span> and <span class="arithmatex">\(N_2(t)\)</span> are mutually independent Poisson processes, Group 1 and 2 are also independent with each other. So we have the above random variables independent mutually.</p>
+<p>(iii) <strong>Follows Poisson distribution</strong>. We have two methods. The first one is to use properties of Poisson distribution. That is, since <span class="arithmatex">\(N_1(t)-N_1(s)\)</span>, <span class="arithmatex">\(N_2(t)-N_2(s)\)</span> follow Poisson distribution of <span class="arithmatex">\(\pi (\lambda_1 (t-s))\)</span> and <span class="arithmatex">\(\pi(\lambda_2(t-s))\)</span>, respectively, and they are mutually independent, so by the additivity of Poisson distribution, we have</p>
 <div class="arithmatex">\[
 N(t)-N(s)=[N_1(t)-N_1(s)]+[N_2(t)-N_2(s)]\sim \pi((\lambda_1+\lambda_2)(t-s))
 \]</div>
-<p>also follows Possion distribution.</p>
-<p>The second method is to directly use distribution function to show that <span class="arithmatex">\(N(t)-N(s)\)</span> follows Possion distribution. </p>
+<p>also follows Poisson distribution.</p>
+<p>The second method is to directly use distribution function to show that <span class="arithmatex">\(N(t)-N(s)\)</span> follows Poisson distribution. </p>
 </div>
 </div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Decomposition of Possion Process</p>
-<p>Assume <span class="arithmatex">\(\{N(t)\}\)</span> is a Possion process with a parameter <span class="arithmatex">\(\lambda\)</span>, every customer arrives in different type independently, with each type happening in a probability <span class="arithmatex">\(p_i(i=1,\cdots,n, \sum\limits_{i=1}^n p_i=1)\)</span>, denote <span class="arithmatex">\(N_i(t)\)</span> to be the number of arriving customer of the certain type <span class="arithmatex">\(i\)</span>, then <span class="arithmatex">\(N_i(t)\)</span> is also a Possion process, with a parameter <span class="arithmatex">\(p_i\lambda\)</span>, respectively and they are mutually independent.</p>
+<p class="admonition-title">Decomposition of Poisson Process</p>
+<p>Assume <span class="arithmatex">\(\{N(t)\}\)</span> is a Poisson process with a parameter <span class="arithmatex">\(\lambda\)</span>, every customer arrives in different type independently, with each type happening in a probability <span class="arithmatex">\(p_i(i=1,\cdots,n, \sum\limits_{i=1}^n p_i=1)\)</span>, denote <span class="arithmatex">\(N_i(t)\)</span> to be the number of arriving customer of the certain type <span class="arithmatex">\(i\)</span>, then <span class="arithmatex">\(N_i(t)\)</span> is also a Poisson process, with a parameter <span class="arithmatex">\(p_i\lambda\)</span>, respectively and they are mutually independent.</p>
 </div>
 <h2 id="nonhomogeneous-poisson-process">Nonhomogeneous Poisson Process<a class="headerlink" href="#nonhomogeneous-poisson-process" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Definition of Nonhomogeneous Poisson Process</p>
-<p>A counting process is called a nonhomogeneous Possion process, with an intensity of <span class="arithmatex">\(\lambda(t)\)</span>, if</p>
+<p>A counting process is called a nonhomogeneous Poisson process, with an intensity of <span class="arithmatex">\(\lambda(t)\)</span>, if</p>
 <p>(i) <span class="arithmatex">\(N(0)=0\)</span>.</p>
 <p>(ii) <span class="arithmatex">\(N(t)\)</span> is an independent increment process.</p>
 <p>(iii) <span class="arithmatex">\(P(N(t+h)-N(t)=1)=\lambda(t) h+o(h)\)</span>.</p>
@@ -4618,21 +4618,21 @@ N(t)-N(s)=[N_1(t)-N_1(s)]+[N_2(t)-N_2(s)]\sim \pi((\lambda_1+\lambda_2)(t-s))
 </div>
 <div class="admonition success">
 <p class="admonition-title">Theorem of Nonhomogeneous Poisson Process</p>
-<p>A counting process is called a nonhomogeneous Possion process, with an intensity of <span class="arithmatex">\(\lambda(t)\)</span>, iff</p>
+<p>A counting process is called a nonhomogeneous Poisson process, with an intensity of <span class="arithmatex">\(\lambda(t)\)</span>, iff</p>
 <p>(i) (ii) the same with definition.</p>
 <p>(iii) <span class="arithmatex">\(\forall 0\leq s&lt;t\)</span>, </p>
 <div class="arithmatex">\[
 N_t-N_s\sim \pi\left(\int_s^t \lambda(\tau)d\tau\right).
 \]</div>
 </div>
-<p>Apparently, nonhomogeneous Possion process does not follow stationary increment, but still follow independent increment.</p>
+<p>Apparently, nonhomogeneous Poisson process does not follow stationary increment, but still follow independent increment.</p>
 <div class="admonition success">
 <p class="admonition-title">Time transfer</p>
-<p>If <span class="arithmatex">\(\{Y(t)\}\)</span> is a homogeneous Possion process with para <span class="arithmatex">\(\lambda=1\)</span>, <span class="arithmatex">\(\Lambda(t)=\int_0^t \lambda(\tau)d\tau\)</span>, then </p>
+<p>If <span class="arithmatex">\(\{Y(t)\}\)</span> is a homogeneous Poisson process with para <span class="arithmatex">\(\lambda=1\)</span>, <span class="arithmatex">\(\Lambda(t)=\int_0^t \lambda(\tau)d\tau\)</span>, then </p>
 <div class="arithmatex">\[
 X(t)=Y(\Lambda(t)),\quad t\geq 0,
 \]</div>
-<p>is a nonhomogeneous Possion process, with intensity function <span class="arithmatex">\(\lambda(t)\)</span>.</p>
+<p>is a nonhomogeneous Poisson process, with intensity function <span class="arithmatex">\(\lambda(t)\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="nonhomogeneous-poisson-process-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="nonhomogeneous-poisson-process-proof">Proof</label></div>
 <div class="tabbed-content">
@@ -4648,24 +4648,24 @@ X(t)-X(s)&amp;=Y(\Lambda(t))-Y(\Lambda(s))\\
 </div>
 </div>
 </div>
-<h2 id="compound-possion-process">Compound Possion Process<a class="headerlink" href="#compound-possion-process" title="Permanent link">&para;</a></h2>
+<h2 id="compound-poisson-process">Compound Poisson Process<a class="headerlink" href="#compound-poisson-process" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
-<p class="admonition-title">Definition of Compound Possion process</p>
-<p>Assume <span class="arithmatex">\(N_t\)</span> is a Possion process with para <span class="arithmatex">\(\lambda\)</span>. We call the following process <span class="arithmatex">\(Y(t)\)</span> <strong>compound Possion Process</strong>, if </p>
+<p class="admonition-title">Definition of Compound Poisson process</p>
+<p>Assume <span class="arithmatex">\(N_t\)</span> is a Poisson process with para <span class="arithmatex">\(\lambda\)</span>. We call the following process <span class="arithmatex">\(Y(t)\)</span> <strong>compound Poisson Process</strong>, if </p>
 <div class="arithmatex">\[
 Y(t):=\sum_{n=1}^{N(t)}X_n
 \]</div>
 <p>where <span class="arithmatex">\(\{X_n\}\)</span> following the same distribution, are independent mutually and with <span class="arithmatex">\(N(t)\)</span>, which is usually called <strong>Jump Sizes</strong>. </p>
 </div>
-<p><a id="Distribution of compound Possion process"></a></p>
+<p><a id="Distribution of compound Poisson process"></a></p>
 <div class="admonition success">
-<p class="admonition-title">Distribution of compound Possion process</p>
+<p class="admonition-title">Distribution of compound Poisson process</p>
 <p>For <span class="arithmatex">\(t,s\geq 0\)</span>, the characteristic function of <span class="arithmatex">\(Y(t)-Y(s)\)</span> is </p>
 <div class="arithmatex">\[
 \phi_{Y(t)-Y(s)}(u)=e^{-\lambda(t-s)}e^{\lambda (t-s)\phi_{X_1}(u)}.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="compound-possion-process-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="compound-possion-process-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="compound-poisson-process-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="compound-poisson-process-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="arithmatex">\[
@@ -4682,10 +4682,10 @@ Y(t):=\sum_{n=1}^{N(t)}X_n
 </div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Properties of Compound Possion Process</p>
+<p class="admonition-title">Properties of Compound Poisson Process</p>
 <p><span class="arithmatex">\(Y(t)\)</span> is stationary increment and independent incerment.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="compound-possion-process-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="compound-possion-process-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="compound-poisson-process-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="compound-poisson-process-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -4700,13 +4700,13 @@ Y(t_2)-Y(t_1),\quad \cdots, \quad Y(t_n)-Y(t_{n-1})
 \]</div>
 <p>are mutually independent because none of the above random variable has a common <span class="arithmatex">\(X_n\)</span>.</p>
 <ul>
-<li>Stationary increment. Use Characteristic function. From <a href="#Distribution of compound Possion process">Distribution of compound Possion process</a>, we could see that its characteristic function is only dependent on <span class="arithmatex">\(t-s\)</span>.</li>
+<li>Stationary increment. Use Characteristic function. From <a href="#Distribution of compound Poisson process">Distribution of compound Poisson process</a>, we could see that its characteristic function is only dependent on <span class="arithmatex">\(t-s\)</span>.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">ME of Compound Possion Process</p>
+<p class="admonition-title">ME of Compound Poisson Process</p>
 <p>If <span class="arithmatex">\(E(X_1^2)&lt;\infty\)</span>, denote <span class="arithmatex">\(\mu=E(X_1)\)</span>, <span class="arithmatex">\(\sigma^2=D(X_1)\)</span>, then </p>
 <div class="arithmatex">\[
 E(Y(t))=\lambda t E(X_1)=\mu \lambda t, \quad D(Y(t))=\lambda t E(X_1^2)=(\mu^2+\sigma^2)\lambda t,
@@ -4716,7 +4716,7 @@ E(Y(t))=\lambda t E(X_1)=\mu \lambda t, \quad D(Y(t))=\lambda t E(X_1^2)=(\mu^2+
 R_Y(t,s)=E(X_1^2)[\lambda \min(t,s)+\lambda^2ts],\quad C_Y(t,s)=E(X_1^2)\lambda \min(t,s).
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="compound-possion-process-proof_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="compound-possion-process-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="compound-poisson-process-proof_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="compound-poisson-process-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="arithmatex">\[
@@ -4756,12 +4756,12 @@ R_Y(t,s)&amp;=E(Y(t)Y(s))\\
 </div>
 <h2 id="filtered-poisson-process">Filtered Poisson Process<a class="headerlink" href="#filtered-poisson-process" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
-<p class="admonition-title">Definition of filtered possion process</p>
-<p>Assume stochastic process <span class="arithmatex">\(\{Y(t): t\geq 0\}\)</span> is a filtered possion process, if </p>
+<p class="admonition-title">Definition of filtered Poisson process</p>
+<p>Assume stochastic process <span class="arithmatex">\(\{Y(t): t\geq 0\}\)</span> is a filtered Poisson process, if </p>
 <div class="arithmatex">\[
 Y(t)=\sum_{n=1}^{N(t)}W(t, S_n, X_n), \quad t\geq 0.
 \]</div>
-<p>where <span class="arithmatex">\(\{N(t): t\geq 0\}\)</span> is a possion process with parameter <span class="arithmatex">\(\lambda\)</span>, <span class="arithmatex">\(S_n\)</span> are arriving time of <span class="arithmatex">\(n\)</span>th event, <span class="arithmatex">\(\{X_n: n\geq 1\}\)</span> are mutually independent random variables, and independent with <span class="arithmatex">\(N(t)\)</span>, <span class="arithmatex">\(W(t, S_n, X_n)\)</span> are three-variable function, called <strong>response function</strong>.</p>
+<p>where <span class="arithmatex">\(\{N(t): t\geq 0\}\)</span> is a Poisson process with parameter <span class="arithmatex">\(\lambda\)</span>, <span class="arithmatex">\(S_n\)</span> are arriving time of <span class="arithmatex">\(n\)</span>th event, <span class="arithmatex">\(\{X_n: n\geq 1\}\)</span> are mutually independent random variables, and independent with <span class="arithmatex">\(N(t)\)</span>, <span class="arithmatex">\(W(t, S_n, X_n)\)</span> are three-variable function, called <strong>response function</strong>.</p>
 </div>
 <p>Usually <span class="arithmatex">\(X_n\)</span> is the magnitude of a signal associated with <span class="arithmatex">\(n\)</span>th event, and <span class="arithmatex">\(W\)</span> represents the response of signal with magnitude <span class="arithmatex">\(X_n\)</span> at time <span class="arithmatex">\(t\)</span>, which starts from <span class="arithmatex">\(S_n\)</span>.</p>
 <div class="admonition info">

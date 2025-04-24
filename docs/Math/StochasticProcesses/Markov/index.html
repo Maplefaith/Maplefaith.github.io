@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../Possion_Pro/">
+        <link rel="prev" href="../Poisson_Pro/">
       
       
         <link rel="next" href="../../../courses/">
@@ -1940,11 +1940,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Possion_Pro/" class="md-nav__link">
+      <a href="../Poisson_Pro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Possion Process
+    Poisson Process
   </span>
   
 
@@ -5200,7 +5200,10 @@ P(X_{n}=j\mid X_{n+1}=i,X_{n+2}=i_{n+2},\cdots, X_N=i_N)=P(X_{n}=j\mid X_{n+1}=i
 <div class="tabbed-block">
 <div class="arithmatex">\[
 \begin{align*}
-P(X_{n}=j\mid X_{n+1}=i) &amp;= \frac{P(X_n=j)}{P(X_{n+1}=i)}p_{ji}
+P(X_{n}=j&amp; \mid X_{n+1}=i,X_{n+2}=i_{n+2},\cdots, X_N=i_N)\\
+&amp;=\frac{p_j(n)p_{ji} p_{i i_{n+2}}\cdots p_{i_{N-1}i_{N}}}{p_{i}(n+1)p_{ii_{n+2}}\cdots p_{i_{N-1}i_{N}}}\\
+&amp;= \frac{P(X_n=j)}{P(X_{n+1}=i)}p_{ji}\\
+&amp;=P(X_{n}=j\mid X_{n+1}=i).
 \end{align*}
 \]</div>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -5241,6 +5244,41 @@ p_{i_0i_1}p_{i_1i_2}\cdots p_{i_{m-1}i_0}=p_{i_0 i_{m-1}}\cdots p_{i_2i_1}p_{i_1
 <div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="inverse-markov-chain-proof_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="inverse-markov-chain-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<ul>
+<li>necessary.</li>
+</ul>
+<p>If <span class="arithmatex">\(X\)</span> is inversible, then <span class="arithmatex">\(\forall i,j\in S\)</span>, <span class="arithmatex">\(\pi_ip_{ij}=\pi_jp_{ji}\)</span>. So</p>
+<div class="arithmatex">\[
+\begin{align*}
+\pi_{i_0} p_{i_0i_1}p_{i_1i_2}\cdots p_{i_{m-1}i_m}&amp;=\pi_{i_1} p_{i_1i_0}p_{i_1i_2}\cdots p_{i_{m-1}i_m}\\
+&amp;=p_{i_1i_0}\pi_{i_1} p_{i_1i_2}\cdots p_{i_{m-1}i_m}\\
+&amp;=p_{i_1i_0} p_{i_2i_1}\pi_{i_2}\cdots p_{i_{m-1}i_m}\\
+&amp;=p_{i_1i_0} p_{i_2i_1}\cdots \pi_{i_{m-1}} p_{i_{m-1}i_m}\\
+&amp;=p_{i_1i_0} p_{i_2i_1}\cdots  p_{i_m i_{m-1}} \pi_{i_{m}}\\
+&amp;=p_{i_1i_0} p_{i_2i_1}\cdots  p_{i_0 i_{m-1}} \pi_{i_{0}}\\
+&amp;=\pi_{i_0}p_{i_0 i_{m-1}}\cdots p_{i_2i_1}p_{i_1i_0}.
+\end{align*}
+\]</div>
+<ul>
+<li>Sufficient. This is similar to a curve integral.</li>
+</ul>
+<p>Fix a state <span class="arithmatex">\(j_0\)</span>, by assumption, for any state <span class="arithmatex">\(j\)</span>, there must be a path <span class="arithmatex">\(j, j_n, j_{n-1},\cdots, j_{1},j_0\)</span> such that </p>
+<div class="arithmatex">\[
+p_{jj_n}p_{j_nj_{n-1}}\cdots p_{j_1j_0}&gt;0
+\]</div>
+<p>and then we could define</p>
+<div class="arithmatex">\[
+\pi_j=\frac{1}{Z}\frac{p_{j_0j_1}\cdots p_{j_{n} j}}{p_{j_n j}\cdots p_{j_1j_0}}
+\]</div>
+<p>where <span class="arithmatex">\(Z\)</span> is made for <span class="arithmatex">\(\sum_{j}\pi_j=1\)</span>. Then it is easy to show that the above definition is well-defined, and for stationary distribution, we have to show for <span class="arithmatex">\(j,k \in S\)</span>,</p>
+<div class="arithmatex">\[
+\pi_jp_{jk}=\pi_kp_{kj}.
+\]</div>
+<p>If <span class="arithmatex">\(p_{jk}=p_{kj}=0\)</span>, then the above holds naturally. If <span class="arithmatex">\(p_{jk}\neq 0\)</span>, then by assumption, we could define </p>
+<div class="arithmatex">\[
+\pi_k:=\frac{1}{Z}\frac{p_{j_0j_1}\cdots p_{j_{n} j}p_{jk}}{p_{kj}p_{j_n j}\cdots p_{j_1j_0}}
+\]</div>
+<p>and it also holds.</p>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
@@ -5284,7 +5322,7 @@ p_{i_0i_1}p_{i_1i_2}\cdots p_{i_{m-1}i_0}=p_{i_0 i_{m-1}}\cdots p_{i_2i_1}p_{i_1
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Possion_Pro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Possion Process">
+          <a href="../Poisson_Pro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Poisson Process">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5294,7 +5332,7 @@ p_{i_0i_1}p_{i_1i_2}\cdots p_{i_{m-1}i_0}=p_{i_0 i_{m-1}}\cdots p_{i_2i_1}p_{i_1
                 Previous
               </span>
               <div class="md-ellipsis">
-                Possion Process
+                Poisson Process
               </div>
             </div>
           </a>
