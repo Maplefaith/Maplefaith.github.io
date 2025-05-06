@@ -582,6 +582,8 @@
       
         
       
+        
+      
     
     
       
@@ -881,6 +883,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gamma_Zeta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gamma & Zeta Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -900,6 +923,8 @@
       
         
           
+        
+      
         
       
         
@@ -1010,6 +1035,27 @@
   
   <span class="md-ellipsis">
     Hilbert Space
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/BL_Operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bounded Linear Operator
   </span>
   
 
@@ -2035,6 +2081,8 @@
       
         
       
+        
+      
     
     
       
@@ -2158,6 +2206,27 @@
   
   <span class="md-ellipsis">
     Markov Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../StochasticProcesses/Brownian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brownian Motion
   </span>
   
 
@@ -4895,7 +4964,7 @@ f(z)=\sum_{n=0}^\infty a_n (z-z_0)^n,\quad \forall z\in D_r(z_0).
 <div class="arithmatex">\[
 f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 \]</div>
-<p>where <span class="arithmatex">\(g(z-z_0)\rightarrow 0 (z\rightarrow z_0)\)</span>. Since <span class="arithmatex">\(z_0\)</span> is a limit point, then no matter how small <span class="arithmatex">\(r\)</span> is, <span class="arithmatex">\(\exists w_K\in B_r(z_0)\)</span>, such that <span class="arithmatex">\(w_K\neq z_0\)</span>, <span class="arithmatex">\(f(w_k)=0\)</span>, but <span class="arithmatex">\(w_K-z_0\neq 0\)</span> and <span class="arithmatex">\(1+g(w_K-z_0)\neq 0\)</span>, contradicting!</p>
+<p>where <span class="arithmatex">\(g(z-z_0)\rightarrow 0 (z\rightarrow z_0)\)</span>. Since <span class="arithmatex">\(z_0\)</span> is a limit point, then no matter how small <span class="arithmatex">\(r\)</span> is, <span class="arithmatex">\(\exists w_K\in B_r(z_0)\)</span>, such that <span class="arithmatex">\(w_K\neq z_0\)</span>, <span class="arithmatex">\(f(w_K)=0\)</span>, but <span class="arithmatex">\(w_K-z_0\neq 0\)</span> and <span class="arithmatex">\(1+g(w_K-z_0)\neq 0\)</span>, contradicting!</p>
 <p>Actually, <span class="arithmatex">\(f(z)=(z-z_0)^m h(z)\)</span>, here <span class="arithmatex">\(h(z_0)=a_m\neq 0\)</span>. By continuity of <span class="arithmatex">\(f\)</span> in <span class="arithmatex">\(D_r(z_0)\)</span>, we have <span class="arithmatex">\(f(z)\neq 0\)</span> for <span class="arithmatex">\(z\in D_\delta(z_0)\)</span>. But we could always find a point of <span class="arithmatex">\(w_K\in D_\delta(z_0)\)</span> such that <span class="arithmatex">\(f(w_K)=0\)</span> which contradicts!</p>
 <ul>
 <li>Extend to the whole region <span class="arithmatex">\(\Omega\)</span> using <strong>connectedness</strong>. One method is by iterating the above process, since after one round, we have more points which satisfies <span class="arithmatex">\(f(z)=0\)</span>. We continue this extension until the boundary of the region. Another method is by the following trick.</li>
@@ -4912,6 +4981,7 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 <p class="admonition-title">Definition of Analytic Continuation</p>
 <p>Given a pair of functions <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(f\)</span>, which are holomorphic in region <span class="arithmatex">\(\Omega\)</span> and <span class="arithmatex">\(\Omega'\)</span>, respectively. If <span class="arithmatex">\(f=F\)</span> on <span class="arithmatex">\(\Omega\)</span>, then we say <span class="arithmatex">\(F\)</span> is a analytic continuation of <span class="arithmatex">\(f\)</span> into the region <span class="arithmatex">\(\Omega'\)</span>.</p>
 </div>
+<p>In the following chapters, we would formulate a equation of a function. If the righthand formula is defined larger then the lefthand formula, then we could say the righthand function is an analytic continuation of the lefthand formula.</p>
 <h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
 <h3 id="moreras-theorem">Morera's Theorem<a class="headerlink" href="#moreras-theorem" title="Permanent link">&para;</a></h3>
 <div class="admonition success">
@@ -4930,6 +5000,7 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 </div>
 </div>
 <h3 id="sequence-of-holomorphic-functions">Sequence of holomorphic functions<a class="headerlink" href="#sequence-of-holomorphic-functions" title="Permanent link">&para;</a></h3>
+<p>Note we only talk about the uniform convergence on a compact subset of an open set <span class="arithmatex">\(\Omega\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Sequence of holomorphic functions</p>
 <p>Assume <span class="arithmatex">\(\{f_n\}\)</span> is a sequence of holomorphic functions that converges uniformly to a function <span class="arithmatex">\(f\)</span> in every compact subset of <span class="arithmatex">\(\Omega\)</span>, then <span class="arithmatex">\(f\)</span> is holomorphic in <span class="arithmatex">\(\Omega\)</span>.</p>
@@ -4938,7 +5009,7 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 <div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="sequence-of-holomorphic-functions-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="sequence-of-holomorphic-functions-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Notice "compact" guarantee <span class="arithmatex">\(f\)</span> is also in <span class="arithmatex">\(\Omega\)</span>.</p>
+<p>Notice "compact" guarantees <span class="arithmatex">\(f\)</span> is also in <span class="arithmatex">\(\Omega\)</span>.</p>
 <p>Use Goursat's Theorem, we have for any triangle <span class="arithmatex">\(T\)</span> in a closed disc <span class="arithmatex">\(D\)</span> contained in <span class="arithmatex">\(\Omega\)</span> </p>
 <div class="arithmatex">\[
 \int_T f_n(z)dz=0.
@@ -4952,7 +5023,7 @@ f(z)=\sum_{n=m}^\infty a_n (z-z_0)^n=a_m(z-z_0)^m(1+g(z-z_0)).
 <div class="arithmatex">\[
 \sup_{z\in \Omega_\delta}|F'(z)|\leq \frac{1}{\delta}\sup_{\xi\in\Omega}|F(\xi)|
 \]</div>
-<p>where <span class="arithmatex">\(\Omega_\delta=\{z\in \Omega: \overline{D}_\delta(z)\in \Omega\}\)</span>.</p>
+<p>where <span class="arithmatex">\(\Omega_\delta=\{z\in \Omega: \overline{D}_\delta(z)\in \Omega\}\)</span>. Since for every compact subset <span class="arithmatex">\(K\)</span> of <span class="arithmatex">\(\Omega\)</span>, there exsits <span class="arithmatex">\(\delta\)</span> such that <span class="arithmatex">\(\Omega_\delta\supset K\)</span>.</p>
 </div>
 </div>
 </div>
@@ -5077,6 +5148,7 @@ e^{-F(z)}z=1.
 \log z=\int_1^r\frac{1}{w}dw+\int_0^\theta \frac{1}{re^{it}}rie^{it}dt=\log r+o\theta.
 \]</div>
 <p>If <span class="arithmatex">\(g=\log f\)</span>, then <span class="arithmatex">\(g'=\frac{f'}{f}\)</span>. So we could construct a primitive using integral of <span class="arithmatex">\(\frac{f'}{f}\)</span> to get <span class="arithmatex">\(g\)</span> from a arbitrary function which is holomorphic on a simply connected region.</p>
+<p><a id="Theorem for generating logarithm of a function"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for generating logarithm of a function</p>
 <p>Assume <span class="arithmatex">\(\Omega\)</span> is a simply connected region, <span class="arithmatex">\(f\)</span> is holomorphic on <span class="arithmatex">\(\Omega\)</span> and does not vanish, then there exists a holomorphic function such that <span class="arithmatex">\(e^{g(z)}=f(z)\)</span>.</p>

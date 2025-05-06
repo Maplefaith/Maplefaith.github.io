@@ -14,7 +14,7 @@
         <link rel="prev" href="../Meromophic/">
       
       
-        <link rel="next" href="../../Functional_Analysis/">
+        <link rel="next" href="../Gamma_Zeta/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -582,6 +582,8 @@
       
         
       
+        
+      
     
     
       
@@ -752,10 +754,82 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#function-of-finite-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function of finite order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infinite-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infinite Product
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infinite Product">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weierstass-infinite-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weierstass Infinite Product
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hadamards-factorization-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hadamard's factorization theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gamma_Zeta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gamma & Zeta Function
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -780,6 +854,8 @@
       
         
           
+        
+      
         
       
         
@@ -890,6 +966,27 @@
   
   <span class="md-ellipsis">
     Hilbert Space
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/BL_Operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bounded Linear Operator
   </span>
   
 
@@ -1915,6 +2012,8 @@
       
         
       
+        
+      
     
     
       
@@ -2038,6 +2137,27 @@
   
   <span class="md-ellipsis">
     Markov Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../StochasticProcesses/Brownian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brownian Motion
   </span>
   
 
@@ -4120,6 +4240,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#function-of-finite-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function of finite order
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infinite-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infinite Product
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infinite Product">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weierstass-infinite-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weierstass Infinite Product
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hadamards-factorization-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hadamard's factorization theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4139,8 +4310,353 @@
 <p>Could an entire function be determined by its zeros?</p>
 <p>This is the core problem we would focus in this chapter. </p>
 <h2 id="jensens-formula">Jensen's Formula<a class="headerlink" href="#jensens-formula" title="Permanent link">&para;</a></h2>
+<p><a id="Mean value Theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Mean value Theorem</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is holomorphic on a disc <span class="arithmatex">\(D_R(z_0)\)</span>, and vanishes nowhere on the circle <span class="arithmatex">\(C_R\)</span>, then </p>
+<div class="arithmatex">\[
+f(z_0)=\frac{1}{2\pi}\int_0^{2\pi} f(z_0+Re^{i\theta})d\theta.
+\]</div>
+<p>Since taking a real part and integration could be exchanged, so </p>
+<div class="arithmatex">\[
+\text{Re } f(z_0)=\frac{1}{2\pi}\int_0^{2\pi} \text{Re } f(z_0+Re^{i\theta})d\theta.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="jensens-formula-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="jensens-formula-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Rewrite the Cauchy's integral formula with <span class="arithmatex">\(\zeta=z_0+Re^{i\theta}\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary</p>
+<p>Assume a holomorphic function <span class="arithmatex">\(g\)</span> on <span class="arithmatex">\(D_R(z)\)</span> that vanishes nowhere in the closure of <span class="arithmatex">\(D_R(z_0)\)</span> (not vanish on the integral circle), then </p>
+<div class="arithmatex">\[
+\log |g(z_0)|=\frac{1}{2\pi}\int_0^{2\pi}\log |g(z_0+Re^{i\theta})|d\theta.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="jensens-formula-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="jensens-formula-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Just by <a href="../Cauchy_Inte/#Theorem for generating logarithm of a function">Theorem for generating logarithm of a function</a>, and we have <span class="arithmatex">\(g(z)=e^{h(z)}\)</span>, apply <a href="#Mean value Theorem">Mean value Theorem</a> to <span class="arithmatex">\({\text{Re }h(z)}\)</span>. Notice <span class="arithmatex">\(\log |g(z)|={\text{Re }h(z)}\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Jensen's Formula</p>
+<p>Let <span class="arithmatex">\(\Omega\)</span> be an open set that contains the closure of a disc <span class="arithmatex">\(D_R\)</span> and suppose <span class="arithmatex">\(f\)</span> is holomorphic in <span class="arithmatex">\(\Omega\)</span>, <span class="arithmatex">\(f(0)\neq 0\)</span> and <span class="arithmatex">\(f\)</span> vanishes nowhere on the circle <span class="arithmatex">\(C_R\)</span>. If <span class="arithmatex">\(z_1,\cdots, z_n\)</span> denote the zeros of <span class="arithmatex">\(f\)</span> inside the disc (counted with multiplicities), then </p>
+<div class="arithmatex">\[
+\log |f(0)|=\sum_{k=1}^N \log \left(\frac{|z_k|}{R}\right)+\frac{1}{2\pi}\int_0^{2\pi} \log|f(Re^{i\theta})|d\theta.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="jensens-formula-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="jensens-formula-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Show that if <span class="arithmatex">\(f_1\)</span> and <span class="arithmatex">\(f_2\)</span> satisfies the above theorem, then <span class="arithmatex">\(f_1f_2\)</span> also satisfies. </p>
+</li>
+<li>
+<p>Decompose <span class="arithmatex">\(f\)</span> into </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+f(z)=\prod_{k=1}^n(z-z_k) g(z)
+\]</div>
+<p>where <span class="arithmatex">\(g(z)\)</span> vanishes nowhere in the closure of <span class="arithmatex">\(D_R(z_0)\)</span>. Show that Jensen's Formula holds for function <span class="arithmatex">\(g\)</span> and <span class="arithmatex">\(z-z_k\)</span>.</p>
+<ul>
+<li>
+<p>For <span class="arithmatex">\(g(z)\)</span>, apply the above corollary with the same radius.</p>
+</li>
+<li>
+<p>For <span class="arithmatex">\(F(z)=z-w\)</span>, where <span class="arithmatex">\(|w|&lt;|R|\)</span>. </p>
+</li>
+</ul>
+<p>We only need to prove that </p>
+<div class="arithmatex">\[
+0=\int_{0}^{2\pi} \log |e^{i\theta}-a|d\theta=\int_{0}^{2\pi} \log |1-ae^{i\theta}|d\theta
+\]</div>
+<p>where <span class="arithmatex">\(a=w/R\)</span>. Define <span class="arithmatex">\(h(z)=1-az\)</span>, which vanishes nowhere in the closure of <span class="arithmatex">\(D_R(z_0)\)</span>. Apply the above corollary to it with integration path of unit circle and find that <span class="arithmatex">\(\log |h(0)|=0\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p> </p>
+</div>
+</div>
+</div>
+<p>The Jensen's Formula connects the number of zeros of a holomorphic function <span class="arithmatex">\(f\)</span> (in disc <span class="arithmatex">\(D_R\)</span>) inside a circle. We define <span class="arithmatex">\(\mathscr{n} (r)\)</span> the number of zeros of <span class="arithmatex">\(f\)</span> inside the circle <span class="arithmatex">\(C_r\)</span> where <span class="arithmatex">\(0&lt;r&lt;R\)</span>. Apparently, <span class="arithmatex">\(\mathscr{n}(r)\)</span> is non-decreasing of <span class="arithmatex">\(r\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: number of zeros expressed by Characteristic function</p>
+<p>If <span class="arithmatex">\(z_1,\cdots,z_N\)</span> are the zeros of <span class="arithmatex">\(f\)</span> inside the disc <span class="arithmatex">\(D_R\)</span>, then</p>
+<div class="arithmatex">\[
+\int_0^R \mathscr{n}(r)\frac{dr}{r}=\sum_{k=1}^N \log \left|\frac{R}{z_k}\right|.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="jensens-formula-proof_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="jensens-formula-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Note the real logarithm and change the integral domain</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=1}^N \log \left|\frac{R}{z_k}\right|&amp;=\sum_{k=1}^N \log R - \log |z_k|\\
+&amp;=\sum_{k=1}^N \int_{|z_k|}^R \frac{dr}{r}\\
+&amp;=\sum_{k=1}^N \int_0^R 1_{\{r&gt;z_k\}}\frac{dr}{r}\\
+&amp;=\int_0^R \sum_{k=1}^N 1_{\{r&gt;z_k\}}\frac{dr}{r}\\
+&amp;=\int_0^R \mathscr{n}(r)\frac{dr}{r}.
+\end{align*}
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>By the above lemma and Jensen's formula, we have</p>
+<div class="arithmatex">\[
+\begin{align}
+\int_0^R \mathscr{n}(r)\frac{dr}{r}=\frac{1}{2\pi}\int_0^{2\pi}f(Re^{i\theta})d\theta - \log|f(0)|.\label{Jensen-number of zeros}
+\end{align}
+\]</div>
+<p>for <span class="arithmatex">\(f(0)\neq 0\)</span> and <span class="arithmatex">\(f\)</span> does not vanish on the circle <span class="arithmatex">\(C_R\)</span>. Readers could check the following estimate for <span class="arithmatex">\(\mathscr{n}(r)\)</span>.</p>
+<h2 id="function-of-finite-order">Function of finite order<a class="headerlink" href="#function-of-finite-order" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of finite order</p>
+<p>Let <span class="arithmatex">\(f\)</span> be an entire function. If there exists a positive number <span class="arithmatex">\(\rho\)</span> and constants <span class="arithmatex">\(A,B&gt;0\)</span>, such that </p>
+<div class="arithmatex">\[
+|f(z)|\leq Ae^{B|z|^\rho},\quad \forall z\in \mathbb{C}
+\]</div>
+<p>then <span class="arithmatex">\(f\)</span> is called to have an order of growth <span class="arithmatex">\(\leq \rho\)</span>. Its order of growth id defined by</p>
+<div class="arithmatex">\[
+\rho_f =\inf \rho.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem </p>
+<p>If <span class="arithmatex">\(f\)</span> is an entire function that has an order of growth <span class="arithmatex">\(\leq \rho\)</span>, then</p>
+<p>(i) <span class="arithmatex">\(\mathscr{n}(r)\leq Cr^\rho\)</span> for some <span class="arithmatex">\(C&gt;0\)</span> and all sufficiently large <span class="arithmatex">\(r\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(\{z_k\}_{k\geq 1}\)</span> denotes the zeros of <span class="arithmatex">\(f\)</span>, with <span class="arithmatex">\(z_k\neq 0\)</span>, then for all <span class="arithmatex">\(s&gt;\rho\)</span>, we have</p>
+<div class="arithmatex">\[
+\sum_{k=1}^\infty \frac{1}{|z_k|^s}&lt;\infty.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="function-of-finite-order-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="function-of-finite-order-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) By equation <span class="arithmatex">\(\ref{Jensen-number of zeros}\)</span>, if <span class="arithmatex">\(f(0)\neq 0\)</span>, we have </p>
+<div class="arithmatex">\[
+\int_0^R\mathscr{n}(x)\frac{dx}{x}=\frac{1}{2\pi}\int_0^{2\pi} \log |f(Re^{i\theta})|d\theta - \log |f(0)|
+\]</div>
+<p>If <span class="arithmatex">\(f(0)=0\)</span>, we let <span class="arithmatex">\(F(z)=\frac{f(z)}{z^l}\)</span>, where <span class="arithmatex">\(l\)</span> is the order of zeros at <span class="arithmatex">\(z=0\)</span>, then <span class="arithmatex">\(F(0)\neq 0\)</span>, and we could still use the above formula.</p>
+<p>The following is a common trick. For a fixed <span class="arithmatex">\(r\)</span>, let <span class="arithmatex">\(R=2r\)</span>, then we have</p>
+<div class="arithmatex">\[
+\int_0^R\mathscr{n}(x)\frac{dx}{x}\geq \int_r^{2r}\mathscr{n}(x)\frac{dx}{x}\geq \mathscr{n}(r)\int_r^{2r}\frac{dx}{x}=\mathscr{n}(r)\log 2 .
+\]</div>
+<p>Then on the other hand, since <span class="arithmatex">\(|f(z)|\leq A e^{B|z|^\rho}\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{1}{2\pi}\int_0^{2\pi} \log |f(Re^{i\theta})|d\theta&amp;\leq \frac{1}{2\pi}\int_0^{2\pi} \log |Ae^{BR^\rho}|d\theta=\log |A|+B2^\rho r^\rho\leq C' r^\rho.
+\end{align*}
+\]</div>
+<p>Combining the above two inequations, we are done.</p>
+<p>(ii) We use a bisection method like we used in proving the convergence of <span class="arithmatex">\(\sum_{k=1}^\infty \frac{1}{k^2}\)</span>.</p>
+<div class="arithmatex">\[
+\begin{align*}
+\sum_{k=1}^\infty \frac{1}{|z_k|^s}&amp;=\sum_{j=0}^\infty\left(\sum_{2^j\leq |z_k|&lt; 2^{j+1}} \frac{1}{|z_k|^s}\right)\\
+&amp;\leq \sum_{j=0}^\infty\left(\sum_{2^j\leq |z_k|&lt; 2^{j+1}} \frac{1}{|2^j|^s}\right)\\
+&amp;\leq \sum_{j=0}^\infty\left(\sum_{|z_k|&lt; 2^{j+1}} \frac{1}{2^{js}}\right)\\
+&amp;\leq \sum_{j=0}^\infty\left(\mathscr{n}(2^{j+1})\frac{1}{2^{js}}\right)\\
+&amp;\leq \sum_{j=0}^\infty \left(C2^{(j+1)\rho}\frac{1}{2^{js}}\right)\\
+&amp;\leq C 2^\rho\sum_{j=0}^\infty 2^{(\rho-s)j}&lt;\infty.\\
+\end{align*}
+\]</div>
+</div>
+</div>
+</div>
+<h2 id="infinite-product">Infinite Product<a class="headerlink" href="#infinite-product" title="Permanent link">&para;</a></h2>
+<p>Now let us focus on constructing a function with given zeros <span class="arithmatex">\(\{z_k\}\)</span>, where <span class="arithmatex">\(\lim\limits_{k\rightarrow\infty}|z_k|=\infty\)</span> (otherwise zeros would accumulate and cause the function to be zero identically). A naive guess is to define</p>
+<div class="arithmatex">\[
+\begin{align}
+f(z)=\prod_{k=1}^\infty (z-z_k).\label{naive-version}
+\end{align}
+\]</div>
+<p>Weierstrass gave a condition, and added an factor into the infinite product, for which to be convergent and no more zeros introduced.</p>
+<h3 id="generalities">Generalities<a class="headerlink" href="#generalities" title="Permanent link">&para;</a></h3>
+<p>We first link the convergence of infinite products with that of series. In standard language, we focus on </p>
+<div class="arithmatex">\[
+\prod_{n=1}^\infty (1+a_n).
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Convergence of infinite product of standard form</p>
+<p>If <span class="arithmatex">\(\sum_n|a_n|&lt;\infty\)</span>, then the product </p>
+<div class="arithmatex">\[
+\prod_{n=1}^\infty (1+a_n)
+\]</div>
+<p>converges. Moreover, it converges to <span class="arithmatex">\(0\)</span> iff one of its factors is <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="generalities-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="generalities-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Just use the logarithm to transfer the product into series. For <span class="arithmatex">\(1+a_n\neq 0\)</span>, we have</p>
+<div class="arithmatex">\[
+\prod_{n=1}^N(1+a_n)=\prod_{n=1}^N e^{\log (1+a_n)}=\exp \left(\sum_{n=1}^N \log (1+a_n)\right)
+\]</div>
+<p>Since exponential function is continuous, we only need to show the convergence of <span class="arithmatex">\(\sum\limits_{n=1}^N \log (1+a_n)\)</span>. Note that </p>
+<div class="arithmatex">\[
+\log |1+a_n|\leq |\log (1+a_n)|
+\]</div>
+<p>we could not use <span class="arithmatex">\(\log |1+a_n|\leq |a_n|\)</span> to prove. Rather, we have to show that</p>
+<div class="arithmatex">\[
+\begin{align}
+|\log (1+a_n)|\leq C|a_n|\label{tangent scaling}
+\end{align}\]</div>
+<p>for some <span class="arithmatex">\(a_n\)</span>. Then the above infinite product converges. Actually, if we dig further, we find that </p>
+<div class="arithmatex">\[
+\begin{align*}
+|\log(1+z)|&amp;=\left|-\sum_{k=1}^\infty (-1)^k\frac{z^k}{k}\right|\\
+&amp;\leq\sum_{k=1}^\infty \frac{|z|^k}{k}\quad \text{triangle inequation}\\
+&amp;=|z|\sum_{k=0}^\infty \frac{|z|^k}{k+1}\\
+&amp;\leq |z|\sum_{k=0}^\infty |z|^k\\
+\end{align*}
+\]</div>
+<p>we try to let the rest series to converge, so just let <span class="arithmatex">\(|z|\leq \delta&lt;1\)</span> and we have <span class="arithmatex">\(|\log(1+z)|\leq C |z|\)</span> for <span class="arithmatex">\(C=\frac{1}{1-\delta}\)</span>. In the above case, for large <span class="arithmatex">\(n\)</span>, we must have <span class="arithmatex">\(|a_n|&lt;\delta\)</span>. So inequation <span class="arithmatex">\(\ref{tangent scaling}\)</span> holds, if we just disregard the finitely many terms.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>More generally, we could consider the convergence of products of holomorphic functions. Note its convergence is also uniform, i.e. regardless of <span class="arithmatex">\(z\)</span>.</p>
+<p><a id="Products of holomorphic functions"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Products of holomorphic functions</p>
+<p>Assume a sequence of holomorphic functions <span class="arithmatex">\(\{F_n\}\)</span> on an open set <span class="arithmatex">\(\Omega\)</span>. If <span class="arithmatex">\(\exists c_n&gt;0\)</span> such that <span class="arithmatex">\(\sum_{n}c_n&lt;\infty\)</span> and</p>
+<div class="arithmatex">\[
+|F_n-1|\leq c_n,\quad \forall n,
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+\prod_{n=1}^\infty F_n(z)
+\]</div>
+<p>converges uniformly in <span class="arithmatex">\(\Omega\)</span> to a holomorphic function <span class="arithmatex">\(F(z)\)</span>. Moreover, if for each <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(F_n(z)\)</span> does not vanish, then we have the logarithm derivative additivity holds</p>
+<div class="arithmatex">\[
+\frac{F'(z)}{F(z)}=\sum_{n=1}^\infty \frac{F_n'(z)}{F_n(z)}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="generalities-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="generalities-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The uniform convergence is apparent according to Weierstrass test. Check that <span class="arithmatex">\(a_n(z)=F_n(z)-1\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align*}
+\left|\prod_{n=1}^N F_n(z)\right|&amp;\leq \exp\left|\sum_{n=1}^N \log F_n(z)\right|\\
+&amp;\leq \exp\left(\sum_{n=1}^N \left|\log F_n(z) \right|\right)\\
+&amp;\leq \exp \left(\sum_{n=1}^N \left|F_n(z)-1 \right|\right)\\
+&amp;\leq \exp \left(\sum_{n=1}^N |a_n|\right)\leq  \exp \left(\sum_{n=1}^N c_n\right)&lt;\infty,\quad \forall z\in \Omega.
+\end{align*}
+\]</div>
+<p>Define </p>
+<div class="arithmatex">\[
+G_N(z)=\prod_{n=1}^N f_n(z)
+\]</div>
+<p>then <span class="arithmatex">\(G_N(z)\)</span> converges uniformly to <span class="arithmatex">\(F(z)\)</span> in <span class="arithmatex">\(\Omega\)</span>. So for an arbitrary compact subset <span class="arithmatex">\(K\subset \Omega\)</span>, by <a href="../Cauchy_Inte/#sequence-of-holomorphic-functions">Sequence of holomorphic functions</a>, <span class="arithmatex">\(G_N'(z)\)</span> converges to <span class="arithmatex">\(F'(z)\)</span> in <span class="arithmatex">\(K\)</span>. So <span class="arithmatex">\(\frac{G_N'}{G_N}\)</span> converges to <span class="arithmatex">\(\frac{F'}{F}\)</span> in <span class="arithmatex">\(K\)</span>. Expand <span class="arithmatex">\(\frac{G_N'}{G_N}\)</span> by <a href="../Meromophic/#A simple fact: Additivity of Logarithm derivatives">additicity of logarithm</a>, i.e.</p>
+<div class="arithmatex">\[
+\frac{G_N'(z)}{G_N(z)}=\sum_{n=1}^N \frac{F_n'(z)}{F_n(z)}
+\]</div>
+<p>Let <span class="arithmatex">\(N\rightarrow \infty\)</span> and we are done.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Show that</p>
+<div class="arithmatex">\[
+\frac{\sin \pi z}{\pi}=z \prod_{n=1}^\infty \left(1-\frac{z^2}{n^2}\right).
+\]</div>
+</div>
+<h3 id="weierstass-infinite-product">Weierstass Infinite Product<a class="headerlink" href="#weierstass-infinite-product" title="Permanent link">&para;</a></h3>
+<p>We fucos on adding the following factors into the vaive version of infinite product <span class="arithmatex">\(\ref{naive-version}\)</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Canonical Factors</p>
+<p>For each <span class="arithmatex">\(k\geq 0\)</span>, we define the Canonical factors to be</p>
+<div class="arithmatex">\[
+E_0(z)=1-z, E_k(z)=(1-z)\exp\left(\sum_{n=1}^k z^n/n\right).
+\]</div>
+</div>
+<p><a id="Lemma: order esstimate of canonical factors"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: order esstimate of canonical factors</p>
+<p>If <span class="arithmatex">\(|z|&lt;\frac{1}{2}\)</span>, then <span class="arithmatex">\(|1-E_k(z)|\leq c|z|^{k+1}\)</span> for some constant <span class="arithmatex">\(c\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="weierstass-infinite-product-proof" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="weierstass-infinite-product-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Similar as we talked in <a href="#Products of holomorphic functions">Products of holomorphic functions</a>. Using Taylor expansion of <span class="arithmatex">\(\log (1-z)\)</span>, we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+(1-z)\exp\left(\sum_{n=1}^k z^n/n\right)&amp;=\exp\left(\log (1-z)+\sum_{n=1}^k z^n/n\right)\\
+&amp;=\exp\left(-\sum_{n=1}^\infty z^n/n+\sum_{n=1}^k z^n/n\right)\\
+&amp;=\exp\left(-\sum_{n=k+1}^\infty z^n/n\right)
+\end{align*}
+\]</div>
+<p>Define <span class="arithmatex">\(w=\log (1-z)+\sum_{n=1}^k z^n/n\)</span>. So</p>
+<div class="arithmatex">\[
+\begin{align*}
+\left|w\right|&amp;=\left|\left(-\sum_{n=k+1}^\infty z^n/n\right)\right|\\
+&amp;\leq \left|-\sum_{n=k+1}^\infty z^n/n\right|\\
+&amp;\leq \left(\sum_{n=k+1}^\infty |z|^n/n\right)\\
+&amp;\leq \left(|z|^{k+1}\sum_{n=0}^\infty |z|^n\right)\\
+&amp;\leq {2|z|^{k+1}}\quad \text{using } |z|&lt;\frac{1}{2}&lt;1
+\end{align*}
+\]</div>
+<p>And apply Taylor's expansion to <span class="arithmatex">\(1-e^w\)</span> again</p>
+<div class="arithmatex">\[
+\begin{align*}
+|1-E_k(z)|&amp;=|1-e^w|\\
+&amp;=\left|1-\sum_{n=0}^\infty w^n/n!\right|\\
+&amp;=\left|-\sum_{n=1}^\infty w^n/n!\right|\\
+&amp;\leq \sum_{n=1}^\infty |w|^n/n!\\
+&amp;\leq |w|\sum_{n=0}^\infty |w|^n/(n+1)!&lt;e|w|,\quad \text{for } |w|&lt;1.\\
+&amp;\leq 2e|z|^{k+1}.
+\end{align*}
+\]</div>
+<p>where <span class="arithmatex">\(c=2e\)</span>. </p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Weierstass Infinite Product</p>
+<p>Given any sequence <span class="arithmatex">\(\{a_n\}\)</span> of complex number with <span class="arithmatex">\(|a_n|\rightarrow \infty\)</span> as <span class="arithmatex">\(n\rightarrow\infty\)</span>, there exists an entire function <span class="arithmatex">\(f\)</span> that vanishes at all <span class="arithmatex">\(z=a_n\)</span> and nowhere else. Any other such function is of the form <span class="arithmatex">\(f(z)e^{g(z)}\)</span>, where <span class="arithmatex">\(g(z)\)</span> is an entire function.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="weierstass-infinite-product-proof_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="weierstass-infinite-product-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Suppose <span class="arithmatex">\(f\)</span> has an order <span class="arithmatex">\(m\)</span> of zeros at <span class="arithmatex">\(z=0\)</span>, and other zeros <span class="arithmatex">\(\{z_n\}\)</span>, define Weierstrass infinite product</p>
+<div class="arithmatex">\[
+f(z)=z^m \prod_{n=1}^\infty E_n(z/z_n).
+\]</div>
+<p>We only need to show that it is convergent, which vanishes nowhere else. The Proof is a common trick, which partition the product into two separate parts. We only need to prove the convergence in open set <span class="arithmatex">\(\{|z|&lt;R\}\)</span> for each fixed <span class="arithmatex">\(R\)</span>. </p>
+<div class="arithmatex">\[
+\prod_{n=1}^\infty E_n(z/z_n)=\prod_{|a_n|&lt; 2R}E_n(z/z_n)\cdot \prod_{|a_n|\geq 2R} E_n(z/z_n).
+\]</div>
+<p>For the former part of the righthand side, we have finite many terms, which converges, and has a zeros of the desired.</p>
+<p>For the latter part of the righthand side, we have <span class="arithmatex">\(|z|/|a_n|&lt;\frac{R}{2R}&lt;\frac{1}{2}\)</span>, and by <a href="#Lemma: order esstimate of canonical factors">Lemma: order esstimate of canonical factors</a>, <span class="arithmatex">\(|1-E_n(z/a_n)|\leq c|z/a_n|^{n+1}&lt;c (1/2)^{n+1}\)</span>, by <a href="#Products of holomorphic functions">Products of holomorphic functions</a>, it converges to a holomorphic function.</p>
+<ul>
+<li>For two functions that satisfies the above condition, denoted by <span class="arithmatex">\(f_1\)</span>, <span class="arithmatex">\(f_2\)</span>, then <span class="arithmatex">\(f_1/f_2\)</span> has removable singularies at <span class="arithmatex">\(\{z_n\}\)</span>, so it is entire and vanish nowhere, by <a href="../Cauchy_Inte/#Theorem for generating logarithm of a function">Theorem for generating logarithm of a function</a>, <span class="arithmatex">\(\exists g(z)\)</span> that is holomorphic on <span class="arithmatex">\(\mathbb{C}\)</span>(thus entire), such that </li>
+</ul>
+<div class="arithmatex">\[
+\frac{f_1}{f_2}=e^{g(z)}.
+\]</div>
+<p>So <span class="arithmatex">\(f_1=f_2e^{g(z)}\)</span>.</p>
+</div>
+</div>
+</div>
+<h3 id="hadamards-factorization-theorem">Hadamard's factorization theorem<a class="headerlink" href="#hadamards-factorization-theorem" title="Permanent link">&para;</a></h3>
+<p>Hadamard gives a refinement of Weierstrass's Theorem about infinite products by fixing the degree of canonical factors and prove <span class="arithmatex">\(g(z)\)</span> is a polynomial when <span class="arithmatex">\(f\)</span> is of finite order of growth.
+<a id="Hadamard's factorization theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Hadamard's factorization theorem</p>
+<p>Assume <span class="arithmatex">\(\{a_n\}\)</span> are a sequence of points with <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}|a_n|=\infty\)</span>. For an entire function <span class="arithmatex">\(f\)</span> with zeros <span class="arithmatex">\(\{a_n\}\)</span> and order of growth <span class="arithmatex">\(\rho_0\)</span>, there exsits <span class="arithmatex">\(k\)</span> such that <span class="arithmatex">\(k\leq \rho_0&lt;k+1\)</span>, and </p>
+<div class="arithmatex">\[
+f(z)=e^{g(z)}z^m\prod_{n=1}^\infty E_k(z/a_n)
+\]</div>
+<p>where <span class="arithmatex">\(g(z)\)</span> is a polynomial of degree less then <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(m\)</span> is the order of the zero of <span class="arithmatex">\(f\)</span> at <span class="arithmatex">\(z=0\)</span>.</p>
 </div>
 
 
@@ -4198,13 +4714,13 @@
         
         
           
-          <a href="../../Functional_Analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Functional Analysis">
+          <a href="../Gamma_Zeta/" class="md-footer__link md-footer__link--next" aria-label="Next: Gamma &amp; Zeta Function">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Functional Analysis
+                Gamma & Zeta Function
               </div>
             </div>
             <div class="md-footer__button md-icon">
