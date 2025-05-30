@@ -517,6 +517,8 @@
       
         
       
+        
+      
     
     
       
@@ -1004,6 +1006,15 @@
   <a href="#closed-image-theorem" class="md-nav__link">
     <span class="md-ellipsis">
       Closed image theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual Space
     </span>
   </a>
   
@@ -2182,6 +2193,70 @@
           
         
       
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Riemannian_Geometry/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Riemannian Geometry
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            Riemannian Geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
         
       
         
@@ -2211,7 +2286,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
         
           
           
@@ -2227,14 +2302,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
             <span class="md-nav__icon md-icon"></span>
             Stochastic Processes
           </label>
@@ -4510,6 +4585,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dual-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dual Space
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4699,7 +4783,7 @@ y=L_nx: y(t)=\sum_{k=1}^n x_k l_k(t).
 \|L_n\|=\max_{t\in [a,b]}\sum_{k=1}^n |l_k(t)|
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="norm-of-bounded-linear-operator-proof_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="norm-of-bounded-linear-operator-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="norm-of-bounded-linear-operator-proof_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="norm-of-bounded-linear-operator-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4938,6 +5022,55 @@ K_2\|x\|_1 \leq \|x\|_2 \leq K_1\|x\|_1.
 </ul>
 <p>We make use of the continuity of <span class="arithmatex">\(T\)</span> when it is bounded. For <span class="arithmatex">\((x,y)\in E\oplus E_1\)</span>, <span class="arithmatex">\(\exists x_n\subset E\)</span>, <span class="arithmatex">\(x_n \rightarrow x\)</span>, <span class="arithmatex">\(Tx_n \rightarrow y\)</span>. By continuity of <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(Tx_n\rightarrow Tx\)</span>, so by uniqueness of limit, <span class="arithmatex">\(Tx=y\)</span>, so <span class="arithmatex">\(T\)</span> is bounded.</p>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h2 id="dual-space">Dual Space<a class="headerlink" href="#dual-space" title="Permanent link">&para;</a></h2>
+<p>For a bounded linear operator space <span class="arithmatex">\(\mathcal{B}(E,E_1)\)</span> is complete, if <span class="arithmatex">\(E_1\)</span> is complete. So Let <span class="arithmatex">\(E_1=K\)</span>, the number domain, then <span class="arithmatex">\(\mathcal{B}(E,K)\)</span>, space composed by all the bounded linear functional, is naturally complete.</p>
+<div class="admonition info">
+<p class="admonition-title">Dual Space</p>
+<p>Denote the dual space of <span class="arithmatex">\(E\)</span> to be <span class="arithmatex">\(E^*=\mathcal{B}(E,K)\)</span>.</p>
+</div>
+<p>Now we first dive into the relationship between <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(E^{**}\)</span>.</p>
+<p>Assume <span class="arithmatex">\(x\in E\)</span>, <span class="arithmatex">\(f\in E^*\)</span>. Define <span class="arithmatex">\(x^{**}\)</span> to be <span class="arithmatex">\(x^{**}(f)=f(x)\)</span>, then by linearity on <span class="arithmatex">\(E^*\)</span>, <span class="arithmatex">\(x^{**}\)</span> is also a linear functional. It is also bounded, since</p>
+<div class="arithmatex">\[
+\begin{align}
+|x^{**}(f)|=|f(x)|\leq \|x\|\|f\|\label{boudnedness-1}
+\end{align}
+\]</div>
+<p>so <span class="arithmatex">\(x^{**}\in E^**\)</span>. For each <span class="arithmatex">\(x\in E\)</span>, we could get a corresponding <span class="arithmatex">\(x^{**}\)</span>. We could discuss about the space spanned by <span class="arithmatex">\(x^**\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Properties of <span class="arithmatex">\(x\mapsto x^{**}\)</span>, <strong>canonical mapping</strong></p>
+<p>(i) <strong>Linearity</strong>. For <span class="arithmatex">\(x_1^{**}\)</span>, <span class="arithmatex">\(x_2^{**}\)</span>, we have</p>
+<div class="arithmatex">\[
+(\alpha x_1+\beta x_2)^{**}=\alpha x_1^{**} + \beta x_2^{**}.
+\]</div>
+<p>(ii) <strong>Isometry</strong>. <span class="arithmatex">\(\|x^{**}\|=\|x\|\)</span>, then <span class="arithmatex">\(x^{**}\)</span> is injective.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="dual-space-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="dual-space-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) Easy to show.</p>
+<p>(ii) From the estimation <span class="arithmatex">\(\ref{boudnedness-1}\)</span>, we have <span class="arithmatex">\(\|x^{**}\|\leq \|x\|\)</span>. Then on the other hand, we choose <span class="arithmatex">\(f_0\in E^*\)</span>, such that </p>
+<div class="arithmatex">\[
+\|f_0\|=1,|f_0(x)|=\|x\|.
+\]</div>
+<p>So the proposition holds.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>If <span class="arithmatex">\(T: x\mapsto x^{**}\)</span> is surjective, then we call <span class="arithmatex">\(E\)</span> is a <strong>reflexive</strong> Space.</p>
+<p>We could say <span class="arithmatex">\(T(E)\)</span> is a subspace of <span class="arithmatex">\(E^**\)</span>, if <span class="arithmatex">\(T(E)=E^**\)</span>, then <span class="arithmatex">\(E\)</span> is a reflexive space.</p>
+<div class="question">
+<p><strong>Example</strong>. </p>
+<p>(i) The dual space of <span class="arithmatex">\(L^p[a,b](1 &lt; p &lt; \infty)\)</span> is <span class="arithmatex">\(L^q[a,b]\)</span>.</p>
+<p>(ii) The dual space of <span class="arithmatex">\(l^p(1 &lt; p &lt; \infty)\)</span> is <span class="arithmatex">\(l^q\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="dual-space-proof_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="dual-space-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For </p>
 </div>
 </div>
 </div>

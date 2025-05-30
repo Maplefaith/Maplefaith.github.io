@@ -517,6 +517,8 @@
       
         
       
+        
+      
     
     
       
@@ -2064,6 +2066,70 @@
           
         
       
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Riemannian_Geometry/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Riemannian Geometry
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            Riemannian Geometry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
         
       
         
@@ -2093,7 +2159,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
         
           
           
@@ -2109,14 +2175,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2_11" id="__nav_2_11_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
             <span class="md-nav__icon md-icon"></span>
             Stochastic Processes
           </label>
@@ -4308,6 +4374,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gaussian-mixture-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gaussian Mixture Model
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4356,7 +4439,7 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Lie Algebra</p>
-<p>Lie algebra <span class="arithmatex">\(\mathcal{m}\)</span> of a Liw group <span class="arithmatex">\(\mathcal{M}\)</span> is defined to be the tangent space at the identity. </p>
+<p>Lie algebra <span class="arithmatex">\(\mathcal{m}\)</span> of a Lie group <span class="arithmatex">\(\mathcal{M}\)</span> is defined to be the tangent space at the identity. </p>
 <div class="arithmatex">\[
 \mathcal{m}=T_{\mathcal{E}}\mathcal{M}
 \]</div>
@@ -4369,7 +4452,18 @@
 <p>where <span class="arithmatex">\(\mathcal{X}\)</span> is chosen at <span class="arithmatex">\(t=0\)</span> or identity.</p>
 <div class="admonition info">
 <p class="admonition-title">Exponential map</p>
+<p><span class="arithmatex">\(\mathfrak{n}\)</span></p>
 </div>
+<h2 id="gaussian-mixture-model">Gaussian Mixture Model<a class="headerlink" href="#gaussian-mixture-model" title="Permanent link">&para;</a></h2>
+<p>Use this model to estimate a relatively complex distribution of data, which could be multi-dimensional.</p>
+<div class="arithmatex">\[
+\mathcal{N}_\mathcal{M} (\pmb{x}\mid \pmb{\mu} , \Sigma)=(2\pi |\Sigma|)^{-1/2} \exp\left(\frac{1}{2}\log_{\pmb{\mu}} (\pmb{x})\Sigma^{-1} \log_{\pmb{\mu}} (\pmb{x}) \right)
+\]</div>
+<p>where <span class="arithmatex">\(\pmb{x}\in \mathcal{M}\)</span>, and <span class="arithmatex">\(\pmb{\mu} \in \mathcal{M}\)</span> is the mean of the distribution, <span class="arithmatex">\(\Sigma\in \mathcal{T}_{\pmb{\mu}}\mathcal{M}\)</span> is the covariance matrix defined on the tangent space.</p>
+<p>A mixture model is defined by</p>
+<div class="arithmatex">\[
+p(\pmb{x}\mid \theta)=\sum_{k=1}^K \pi_k \mathcal{N}_\mathcal{M}(\pmb{x}\mid \pmb{\mu}_k, \Sigma_k).
+\]</div>
 
 
 
