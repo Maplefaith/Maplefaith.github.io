@@ -1020,6 +1020,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#existence-of-functional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existence of functional
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Existence of functional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hahn-banach-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hahn-Banach Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4594,6 +4618,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#existence-of-functional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existence of functional
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Existence of functional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hahn-banach-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hahn-Banach Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4783,7 +4831,7 @@ y=L_nx: y(t)=\sum_{k=1}^n x_k l_k(t).
 \|L_n\|=\max_{t\in [a,b]}\sum_{k=1}^n |l_k(t)|
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="norm-of-bounded-linear-operator-proof_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="norm-of-bounded-linear-operator-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="norm-of-bounded-linear-operator-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="norm-of-bounded-linear-operator-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -5038,7 +5086,7 @@ K_2\|x\|_1 \leq \|x\|_2 \leq K_1\|x\|_1.
 |x^{**}(f)|=|f(x)|\leq \|x\|\|f\|\label{boudnedness-1}
 \end{align}
 \]</div>
-<p>so <span class="arithmatex">\(x^{**}\in E^**\)</span>. For each <span class="arithmatex">\(x\in E\)</span>, we could get a corresponding <span class="arithmatex">\(x^{**}\)</span>. We could discuss about the space spanned by <span class="arithmatex">\(x^**\)</span>.</p>
+<p>so <span class="arithmatex">\(x^{**}\in E^{**}\)</span>. For each <span class="arithmatex">\(x\in E\)</span>, we could get a corresponding <span class="arithmatex">\(x^{**}\)</span>. We could discuss about the space spanned by <span class="arithmatex">\(x^{**}\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Properties of <span class="arithmatex">\(x\mapsto x^{**}\)</span>, <strong>canonical mapping</strong></p>
 <p>(i) <strong>Linearity</strong>. For <span class="arithmatex">\(x_1^{**}\)</span>, <span class="arithmatex">\(x_2^{**}\)</span>, we have</p>
@@ -5061,7 +5109,7 @@ K_2\|x\|_1 \leq \|x\|_2 \leq K_1\|x\|_1.
 </div>
 </div>
 <p>If <span class="arithmatex">\(T: x\mapsto x^{**}\)</span> is surjective, then we call <span class="arithmatex">\(E\)</span> is a <strong>reflexive</strong> Space.</p>
-<p>We could say <span class="arithmatex">\(T(E)\)</span> is a subspace of <span class="arithmatex">\(E^**\)</span>, if <span class="arithmatex">\(T(E)=E^**\)</span>, then <span class="arithmatex">\(E\)</span> is a reflexive space.</p>
+<p>We could say <span class="arithmatex">\(T(E)\)</span> is a subspace of <span class="arithmatex">\(E^{**}\)</span>, if <span class="arithmatex">\(T(E)=E^{**}\)</span>, then <span class="arithmatex">\(E\)</span> is a reflexive space.</p>
 <div class="question">
 <p><strong>Example</strong>. </p>
 <p>(i) The dual space of <span class="arithmatex">\(L^p[a,b](1 &lt; p &lt; \infty)\)</span> is <span class="arithmatex">\(L^q[a,b]\)</span>.</p>
@@ -5073,6 +5121,153 @@ K_2\|x\|_1 \leq \|x\|_2 \leq K_1\|x\|_1.
 <p>For </p>
 </div>
 </div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. (Riesz Representation Theorem) The dual space of Hilbert space <span class="arithmatex">\(\mathscr{U}\)</span> is itself. That is, for any bounded linear functional <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\(\mathscr{U}\)</span>, there exists a unique element <span class="arithmatex">\(u\in \mathscr{U}\)</span> such that </p>
+<div class="arithmatex">\[
+f(x)= \langle x,u \rangle, \quad \|f\|=\|u\|.
+\]</div>
+<p>Conversely, for a given <span class="arithmatex">\(u\in \mathscr{U}\)</span>, <span class="arithmatex">\(\langle x,u \rangle\)</span> defines a linear bounded functional on <span class="arithmatex">\(\mathscr{U}\)</span>, and satisfies the isometric property.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="dual-space-proof_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="dual-space-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Sufficient. If <span class="arithmatex">\(f=\theta\)</span>, then choose <span class="arithmatex">\(x=\theta\)</span> and we are done. Suppose <span class="arithmatex">\(f\neq \theta\)</span>, then define its kernel </li>
+</ul>
+<div class="arithmatex">\[
+L=\{x: f(x)=\theta\}.
+\]</div>
+<p>which is a nonempty, pure and closed subset. (why?)</p>
+<p>Choose <span class="arithmatex">\(x_0\neq \theta\in L^\perp\)</span>, and let <span class="arithmatex">\(\|x_0\|=1\)</span>. Then by a lemma, we have a direct product decomposition,</p>
+<div class="arithmatex">\[
+\mathscr{U}=L \oplus \{\alpha x_0\}.
+\]</div>
+<p>which is actually a orthogonal decomposition with <span class="arithmatex">\(x=y+\langle x, x_0\rangle x_0\)</span> where <span class="arithmatex">\(\langle x, x_0\rangle x_0\in L^\perp\)</span> is the orthogonal projection of <span class="arithmatex">\(x\)</span> on <span class="arithmatex">\(\{alpha x_0\}\)</span>. Then apply <span class="arithmatex">\(f\)</span> we have</p>
+<div class="arithmatex">\[
+f(x)=f(y)+\langle x, x_0\rangle f(x_0)=\langle x, \overline{f}(x_0) x_0\rangle.
+\]</div>
+<p>so choose <span class="arithmatex">\(u=\overline{f}(x_0)x_0\)</span>.</p>
+<ul>
+<li>Prove uniqueness.</li>
+</ul>
+<p>Assume <span class="arithmatex">\(u'\in \mathscr{U}\)</span> also satisfies the condition, then <span class="arithmatex">\(f(x)=\langle x, u'\rangle=\langle x, u\rangle\)</span> which implies <span class="arithmatex">\(\langle x, u'-u\rangle=0\)</span>, so <span class="arithmatex">\(u'-u=\theta\)</span>.</p>
+<ul>
+<li>Prove isometry.</li>
+</ul>
+<p>By Schwarz inequation we have</p>
+<div class="arithmatex">\[
+|f(x)|=|\langle x, u\rangle|\leq \|x\|\|u\|,
+\]</div>
+<p>so <span class="arithmatex">\(\|f\|\leq \|u\|\)</span>. On the other hand, we have choose <span class="arithmatex">\(x=u\)</span>, we achieve </p>
+<div class="arithmatex">\[
+|f(u)|=|\langle u,u \rangle|=\|u\|\|u\|
+\]</div>
+<p>so <span class="arithmatex">\(\|f\|\geq \|u\|\)</span>.</p>
+<ul>
+<li>Prove Necessary.</li>
+</ul>
+<p>We only need to prove <span class="arithmatex">\(f(x)=\langle x,u\rangle\)</span> is a linear bounded operator, which is by the lineariry of inner product and Schwarz inequation.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h2 id="existence-of-functional">Existence of functional<a class="headerlink" href="#existence-of-functional" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Extension of functional</p>
+<p>Assume <span class="arithmatex">\(E\)</span> is a vector space, and linear functionals <span class="arithmatex">\(f_1,f_2\in E^*\)</span> defined on subspace <span class="arithmatex">\(G_1, G_2\subset E\)</span> respectively. If <span class="arithmatex">\(G_1\subset G_2\)</span> and </p>
+<div class="arithmatex">\[
+f_1(x)=f_2(x),\quad \forall x\in G_1
+\]</div>
+<p>then we call <span class="arithmatex">\(f_2\)</span> is an extension of <span class="arithmatex">\(f_1\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">subadditive and positive-homogeneous functional (SP functional)</p>
+<p>A functional <span class="arithmatex">\(f\in E^*\)</span> is <strong>subadditive</strong> if for <span class="arithmatex">\(x,y\in E\)</span></p>
+<div class="arithmatex">\[
+f(x+y)\leq f(x)+f(y).
+\]</div>
+<p>It is <strong>positive-homogeneous</strong> if for positive real number <span class="arithmatex">\(\alpha\)</span>, </p>
+<div class="arithmatex">\[
+f(\alpha x)=\alpha f(x).
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem for extension of SP functional</p>
+<p>Assume <span class="arithmatex">\(G\)</span> is a subspace of linear space <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(f\)</span> is a real functional on <span class="arithmatex">\(G\)</span>, and <span class="arithmatex">\(p(x)\)</span> is a SP functional on <span class="arithmatex">\(E\)</span>, and thay satisfies</p>
+<div class="arithmatex">\[
+f(x)\leq p(x),\quad \forall x\in G.
+\]</div>
+<p>Then there exists a real functional <span class="arithmatex">\(f_0\)</span> on <span class="arithmatex">\(E\)</span> which is an extension of <span class="arithmatex">\(f\)</span> and holds the boundedness of <span class="arithmatex">\(p\)</span>, i.e. </p>
+<div class="arithmatex">\[
+f_0(x)\leq p(x),\quad x\in E.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="existence-of-functional-proof" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="existence-of-functional-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Prove extension of one dimension.</li>
+</ul>
+<p>define <span class="arithmatex">\(G_1=\{\alpha x\}\oplus G\)</span> for <span class="arithmatex">\(x\in E-G\)</span>, </p>
+<div class="arithmatex">\[
+f(y+\alpha x)=f(y)+c\alpha 
+\]</div>
+<p>where <span class="arithmatex">\(c\)</span> satisfies</p>
+<div class="arithmatex">\[
+\sup_{x'\in G} {-p(-x'-x)-f(x')}\leq c\leq \inf_{x''\in G} \{p(x''+x)-f(x'')\}
+\]</div>
+<p>this is because we want to let the following inequation holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+f(y+\alpha x)&amp;=f(y)+c\alpha \leq p(y+\alpha x)\\
+\alpha c&amp;\leq p(y+\alpha x)-f(y)
+\end{align*}
+\]</div>
+<p>if <span class="arithmatex">\(\alpha =0\)</span> it holds naturally. If <span class="arithmatex">\(\alpha&gt;0\)</span>, we have to let <span class="arithmatex">\(c\leq p(y/\alpha +x)-f(y/\alpha)\)</span>. If <span class="arithmatex">\(\alpha&lt;0\)</span>, then we have to let <span class="arithmatex">\(-p(-y/\alpha -x)-f(y/\alpha)\leq c\)</span>. The above two gives the estimation. We have to show that the estimation holds because <span class="arithmatex">\(\forall y_1,y_2\in G\)</span>, </p>
+<div class="arithmatex">\[
+\begin{align*}
+f(y_2)-f(y_1)&amp;=f(y_2-y_1)\leq p(y_2-y_1)\\
+&amp;= p(y_2+x-y_1-x)\\
+&amp;\leq p(y_2+x)+p(-y_1-x)\\
+\Rightarrow \quad -p(-y_1-x)-f(y_1)&amp;\leq p(y_2+x)-f(y_2).
+\end{align*}
+\]</div>
+<ul>
+<li>Use Zorn's Lemma. It states that a partially ordered set containing upper bound for every totally ordered subset necessarily contains at least one maximal element. </li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="hahn-banach-theorem">Hahn-Banach Theorem<a class="headerlink" href="#hahn-banach-theorem" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Lemma: Complexification of functional</p>
+<p>Assume <span class="arithmatex">\(f\)</span> is a complex bounded linear functional on <span class="arithmatex">\(E\)</span>, define </p>
+<div class="arithmatex">\[
+\varphi(x)=\text{Re}(f(x)),\quad x\in E,
+\]</div>
+<p>then <span class="arithmatex">\(\varphi\)</span> is a real bounded linear functional on <span class="arithmatex">\(E\)</span> and satisfies</p>
+<div class="arithmatex">\[
+f(x)=\varphi(x)-i\varphi(ix).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="hahn-banach-theorem-proof" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="hahn-banach-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Assume <span class="arithmatex">\(f(x)=\varphi(x)+i\psi(x)\)</span>, then</p>
+<div class="arithmatex">\[
+\varphi(ix)+i\psi(ix)=f(ix)=if(x)=i(\varphi(x)+i\psi(x))=-\psi(x)+i\varphi(x).
+\]</div>
+<p>so we have <span class="arithmatex">\(\psi(x)=-\varphi(ix)\)</span>. And for boundedness</p>
+<div class="arithmatex">\[
+|\varphi(x)|\leq |f(x)|
+\]</div>
+<p>so <span class="arithmatex">\(\|\varphi\|\leq \|f\|\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Hahn-Banach Theorem</p>
 </div>
 </div>
 
