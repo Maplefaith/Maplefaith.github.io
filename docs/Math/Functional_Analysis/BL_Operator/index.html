@@ -1044,6 +1044,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uniform-boundedness-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniform Boundedness Principle
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4642,6 +4651,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uniform-boundedness-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uniform Boundedness Principle
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4831,7 +4849,7 @@ y=L_nx: y(t)=\sum_{k=1}^n x_k l_k(t).
 \|L_n\|=\max_{t\in [a,b]}\sum_{k=1}^n |l_k(t)|
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="norm-of-bounded-linear-operator-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="norm-of-bounded-linear-operator-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="norm-of-bounded-linear-operator-proof_1" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="norm-of-bounded-linear-operator-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -5133,7 +5151,7 @@ f(x)= \langle x,u \rangle, \quad \|f\|=\|u\|.
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
-<li>Sufficient. If <span class="arithmatex">\(f=\theta\)</span>, then choose <span class="arithmatex">\(x=\theta\)</span> and we are done. Suppose <span class="arithmatex">\(f\neq \theta\)</span>, then define its kernel </li>
+<li>Necessary. If <span class="arithmatex">\(f=\theta\)</span>, then choose <span class="arithmatex">\(x=\theta\)</span> and we are done. Suppose <span class="arithmatex">\(f\neq \theta\)</span>, then define its kernel </li>
 </ul>
 <div class="arithmatex">\[
 L=\{x: f(x)=\theta\}.
@@ -5165,7 +5183,7 @@ f(x)=f(y)+\langle x, x_0\rangle f(x_0)=\langle x, \overline{f}(x_0) x_0\rangle.
 \]</div>
 <p>so <span class="arithmatex">\(\|f\|\geq \|u\|\)</span>.</p>
 <ul>
-<li>Prove Necessary.</li>
+<li>Prove Sufficient.</li>
 </ul>
 <p>We only need to prove <span class="arithmatex">\(f(x)=\langle x,u\rangle\)</span> is a linear bounded operator, which is by the lineariry of inner product and Schwarz inequation.</p>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -5192,6 +5210,7 @@ f(x+y)\leq f(x)+f(y).
 f(\alpha x)=\alpha f(x).
 \]</div>
 </div>
+<p><a id="Theorem for extension of SP functional"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Theorem for extension of SP functional</p>
 <p>Assume <span class="arithmatex">\(G\)</span> is a subspace of linear space <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(f\)</span> is a real functional on <span class="arithmatex">\(G\)</span>, and <span class="arithmatex">\(p(x)\)</span> is a SP functional on <span class="arithmatex">\(E\)</span>, and thay satisfies</p>
@@ -5240,6 +5259,7 @@ f(y_2)-f(y_1)&amp;=f(y_2-y_1)\leq p(y_2-y_1)\\
 </div>
 </div>
 <h3 id="hahn-banach-theorem">Hahn-Banach Theorem<a class="headerlink" href="#hahn-banach-theorem" title="Permanent link">&para;</a></h3>
+<p><a id="Lemma: Complexification of functional"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Lemma: Complexification of functional</p>
 <p>Assume <span class="arithmatex">\(f\)</span> is a complex bounded linear functional on <span class="arithmatex">\(E\)</span>, define </p>
@@ -5268,6 +5288,160 @@ f(x)=\varphi(x)-i\varphi(ix).
 </div>
 <div class="admonition success">
 <p class="admonition-title">Hahn-Banach Theorem</p>
+<p>Assume <span class="arithmatex">\(G\)</span> is a subset of vector space <span class="arithmatex">\(E\)</span>. <span class="arithmatex">\(f\)</span> is a bounded linear functional on <span class="arithmatex">\(G\)</span>, then <span class="arithmatex">\(f\)</span> could be extended to <span class="arithmatex">\(E\)</span> and keep norm. That is, there exists  a bounded linear operator <span class="arithmatex">\(f_0\)</span> such that </p>
+<div class="arithmatex">\[
+f_0(x)=f(x),\quad x\in G.
+\]</div>
+<p>and <span class="arithmatex">\(\|f_0\|=\|f\|_G\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="hahn-banach-theorem-proof_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="hahn-banach-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Suppose <span class="arithmatex">\(f\)</span> is complex-valued, and we shall first talk about <span class="arithmatex">\(\varphi\)</span>. Define control functional</p>
+<div class="arithmatex">\[
+p(x)=\|f\|_G \|x\|
+\]</div>
+<p>then <span class="arithmatex">\(\varphi(x)\leq |f(x)|\leq \|f\|_G \|x\|\)</span>. <span class="arithmatex">\(p(x)\)</span> is a SP functional so by <a href="#Theorem for extension of SP functional">Theorem for extension of SP functional</a>, we could extend <span class="arithmatex">\(\varphi\)</span> to <span class="arithmatex">\(E\)</span> and keep its norm, denoted by <span class="arithmatex">\(\varphi_0\)</span>. By <a href="#Lemma: Complexification of functional">Lemma: Complexification of functional</a>, we define </p>
+<div class="arithmatex">\[
+f_0(x)=\varphi_0(x)-i\varphi_0(ix).
+\]</div>
+<p>which is a bounded linear functional, since it satisfies </p>
+<div class="arithmatex">\[
+f_0(ix)=\varphi_0(ix)- i \varphi_0(-x)=\varphi_0(ix)+i\varphi_0(x)=i[\varphi_0(x)-i\varphi_0(ix)]=if(ix).
+\]</div>
+<p>and let <span class="arithmatex">\(\alpha\)</span> to be the argument of <span class="arithmatex">\(f_0(x)\)</span>, so by rotation,</p>
+<div class="arithmatex">\[
+|f_0(x)|=e^{-i\alpha}f_0(x)= f(e^{-i\alpha}x)=\varphi_0(e^{-i\alpha }x)\leq p(e^{-i\alpha}x)=\|f\|_G \|x\|.
+\]</div>
+<p>So <span class="arithmatex">\(\|f_0\|\leq \|f\|_G\)</span>. On the other hand, since <span class="arithmatex">\(f_0\)</span> is an extension of <span class="arithmatex">\(f\)</span>, then <span class="arithmatex">\(\|f_0\|\geq \|f\|\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p><a id="Corollary 1: generate functional by extend one dimension subspace"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 1: generate functional by extend one dimension subspace</p>
+<p>Assume <span class="arithmatex">\(G\)</span> is a subspace of <span class="arithmatex">\(E\)</span>, choose <span class="arithmatex">\(x\in E-G\)</span>, if <span class="arithmatex">\(d(x_0,G)=\delta&gt;0\)</span>, then there exists a bounded linear functional <span class="arithmatex">\(f\)</span> such that </p>
+<div class="arithmatex">\[
+\|f\|=\frac{1}{\delta},\quad f(x_0)=1,\quad f(x)=0,\forall x\in G.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="hahn-banach-theorem-proof_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="hahn-banach-theorem-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Extend <span class="arithmatex">\(G\)</span> to <span class="arithmatex">\(G_1=\{\alpha x_0+x: \alpha\in K, x\in G\}\)</span>. Let</p>
+<div class="arithmatex">\[
+f(\alpha x_0+x)=\alpha
+\]</div>
+<p>which is a linear functional and satisfies <span class="arithmatex">\(f(x_0)=1\)</span>, <span class="arithmatex">\(f(x)=0,\forall x\in G\)</span>. It is also bounded since</p>
+<div class="arithmatex">\[
+\|\alpha x_0+x\|=\left\|\alpha(x_0+x/\alpha)\right\|\geq \alpha \delta,
+\]</div>
+<p>so</p>
+<div class="arithmatex">\[
+|f(\alpha x_0+x)|=|\alpha|\leq\frac{1}{\alpha}\|\alpha x_0+x\|.
+\]</div>
+<p>meaning <span class="arithmatex">\(\|f\|_{G_1}\leq \frac{1}{\delta}\)</span>.</p>
+<p>Now we give proof of another direction. Since <span class="arithmatex">\(G\)</span> might not be closed, we have to use a sequence of points. That is, assume <span class="arithmatex">\(\{x_n\}\subset G\)</span> and <span class="arithmatex">\(\|x_n-x_0\|\rightarrow \delta\)</span>, so</p>
+<div class="arithmatex">\[
+1=f(x_0-x_n)\leq \|f\|_{G_1}\|x_0-x_n\|.
+\]</div>
+<p>which implies <span class="arithmatex">\(\|f\|_{G_1}\geq \frac{1}{\|x_0-x_n\|}\)</span> and take limit. </p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p><a id="Corollary 2"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary 2</p>
+<p>Assume <span class="arithmatex">\(G\)</span> is a subspace of <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(x_0\in \overline{G}\)</span> iff for all bounded linear functional <span class="arithmatex">\(f\)</span> on <span class="arithmatex">\(E\)</span> which satisfies <span class="arithmatex">\(f(x)=0, \quad \forall x\in G\)</span>, <span class="arithmatex">\(f(x_0)=0\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="hahn-banach-theorem-proof_3" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="hahn-banach-theorem-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Sufficient. Assume <span class="arithmatex">\(x_0\not\in \overline{G}\)</span>, then by <a href="#Corollary 1: generate functional by extend one dimension subspace">Corollary 1: generate functional by extend one dimension subspace</a>, there exists a bounded linear functional <span class="arithmatex">\(f\)</span> such that <span class="arithmatex">\(f(x_0)=1\)</span> contradicts!</p>
+</li>
+<li>
+<p>Necessary. Choose <span class="arithmatex">\(\{x_n\}\subset G\)</span>, such that <span class="arithmatex">\(x_n\rightarrow x_0\)</span>, so by continuity of <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(f(x_0)=\lim\limits_{n\rightarrow \infty}f(x_n)=0\)</span>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 3</p>
+<p>Assume <span class="arithmatex">\(A\)</span> is a subset of <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(x_0\in E\)</span>. Then <span class="arithmatex">\(x_0\)</span> could be approximated by combination of elements in <span class="arithmatex">\(A\)</span>, iff for all bounded linear functional <span class="arithmatex">\(f\)</span>, with <span class="arithmatex">\(f(x)=0\)</span> for <span class="arithmatex">\(x\in A\)</span>, satisfies <span class="arithmatex">\(f(x_0)=0\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="hahn-banach-theorem-proof_4" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="hahn-banach-theorem-proof_4">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Here we let <span class="arithmatex">\(G\)</span> to be the subspace generated by <span class="arithmatex">\(A\)</span>.</p>
+<p>there exsits <span class="arithmatex">\(\{x_n\}\subset G\)</span>, <span class="arithmatex">\(x_n\rightarrow x_0\)</span>, iff <span class="arithmatex">\(x_0\in \overline{G}\)</span>, by <a href="#Corollary 2">Corollary 2</a> we are done.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 4</p>
+<p>Choose <span class="arithmatex">\(G=\{\theta\}\)</span> and <span class="arithmatex">\(E\neq \{\theta\}\)</span>, then for <span class="arithmatex">\(x_0\in E-G\)</span>, there exists bounded linear functional <span class="arithmatex">\(f\)</span> such that</p>
+<div class="arithmatex">\[
+\|f\|=1, \quad f(x_0)=d(x_0,G)=\|x_0\|.
+\]</div>
+</div>
+<p>For any normed vector space, once <span class="arithmatex">\(E\neq \{\theta\}\)</span>, then it has sufficient number of functionals.</p>
+<div class="question">
+<p><strong>Example</strong>. Extenstion of functional on <span class="arithmatex">\(\mathbb{R}^2\)</span>. Show that the extensions are not unique, and the number must be no less than <span class="arithmatex">\(\aleph\)</span>.</p>
+</div>
+<h2 id="uniform-boundedness-principle">Uniform Boundedness Principle<a class="headerlink" href="#uniform-boundedness-principle" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Banach-Steinhaus Theorem: Uniform Boundedness Principle</p>
+<p>Assume <span class="arithmatex">\(E\)</span> is a Banach space and <span class="arithmatex">\(E_1\)</span> is a normed vector space. <span class="arithmatex">\(\{T_\alpha\}_{\alpha \in \mathscr{A}}\subset \mathcal{B}(E,E_1)\)</span>. If for every <span class="arithmatex">\(x\in E\)</span>, define point-wisely</p>
+<div class="arithmatex">\[
+p(x)=\sup_{\alpha \in \mathcal{A}}\|T_\alpha x\|
+\]</div>
+<p>which satisfies <span class="arithmatex">\(p(x)&lt;\infty\)</span>, then <span class="arithmatex">\(\|T_\alpha\|&lt;\infty\)</span> for all <span class="arithmatex">\(\alpha \in \mathcal{A}\)</span>, i.e. <span class="arithmatex">\(T_\alpha\)</span> is uniformly bounded.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="uniform-boundedness-principle-proof" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="uniform-boundedness-principle-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>Now we talk about strong operator topology. The first is about its description.</p>
+<p><a id="Description of strong operator topology"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Description of strong operator topology</p>
+<p>Assume <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(E_1\)</span> are Banach spaces, then sequence of bounded linear operators <span class="arithmatex">\(\{T_n\}\)</span> converges in a sense of strong operator topology, iff</p>
+<p>(i) <span class="arithmatex">\(\{T_n\}\)</span> is uniformly bounded,</p>
+<p>(ii) There exsits a subset <span class="arithmatex">\(G\)</span> which is dense in <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\forall x\in G\)</span>, <span class="arithmatex">\(\{T_n x\}\)</span> is convergent in <span class="arithmatex">\(E_1\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="uniform-boundedness-principle-proof_1" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="uniform-boundedness-principle-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>Now we a description about the convergent point of bounded linear operator, i.e. completeness with respect to strong operator topology.</p>
+<div class="admonition success">
+<p class="admonition-title">Completeness with respect to strong operator topology</p>
+<p>Assume <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(E_1\)</span> are banach spaces, then <span class="arithmatex">\(\mathcal{B}(E,E_1)\)</span> is complete with respect to strong operator topology.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Approximation of integral formula.</p>
+<p>Assume <span class="arithmatex">\(f\in C[0,1]\)</span> is an unknown function, to estimate <span class="arithmatex">\(I(f)=\int_0^1 f(t)dt\)</span>, we use a sequence of functional on <span class="arithmatex">\(C[0,1]\)</span></p>
+<div class="arithmatex">\[
+F_n(f)=\sum_{k=0}^n f(t^{(n)}_k ) A_k^{(n)}
+\]</div>
+<p>where <span class="arithmatex">\(\{t^{(n)}_k\}_{0\leq k\leq n}\)</span> is a partion of <span class="arithmatex">\([0,1]\)</span>. Show that </p>
+<div class="arithmatex">\[
+F_n(f)\rightarrow I(f),\quad \forall f\in C[0,1].
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="uniform-boundedness-principle-proof_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="uniform-boundedness-principle-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>This is an example using strong operator topology. Using <a href="#Description of strong operator topology">Description of strong operator topology</a>.</p>
+</div>
+</div>
 </div>
 </div>
 
