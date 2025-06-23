@@ -775,9 +775,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-disc-upper-half-plane" class="md-nav__link">
+  <a href="#the-upper-half-plane-disc" class="md-nav__link">
     <span class="md-ellipsis">
-      The disc &amp; Upper half-plane
+      The Upper half-plane &amp; disc
     </span>
   </a>
   
@@ -813,6 +813,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riemann-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riemann Mapping Theorem
+    </span>
+  </a>
   
 </li>
       
@@ -4486,9 +4495,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-disc-upper-half-plane" class="md-nav__link">
+  <a href="#the-upper-half-plane-disc" class="md-nav__link">
     <span class="md-ellipsis">
-      The disc &amp; Upper half-plane
+      The Upper half-plane &amp; disc
     </span>
   </a>
   
@@ -4527,6 +4536,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#riemann-mapping-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riemann Mapping Theorem
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4543,21 +4561,68 @@
 
 
 <h1 id="conformal-mappings">Conformal Mappings<a class="headerlink" href="#conformal-mappings" title="Permanent link">&para;</a></h1>
-<p>A bijective holomorphic function <span class="arithmatex">\(f: U\rightarrow V\)</span> is called a <strong>conformal map</strong> or <strong>biholomorphism</strong>. Given such a mapping <span class="arithmatex">\(f\)</span>, we call <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are <strong>conformally equivalent</strong>, or <strong>simply biholomorphic</strong>.</p>
+<p>A bijective holomorphic function <span class="arithmatex">\(f: U\rightarrow V\)</span> is called a <strong>conformal map</strong> or <strong>biholomorphism</strong>. Given such a mapping <span class="arithmatex">\(f\)</span>, we call <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are <strong>conformally equivalent</strong>, or simply <strong>biholomorphic</strong>.</p>
 <p>If A holomorphic function is injective, whose inverse is automatically holomorphic.</p>
+<p><a id="Holomorphism of the inverse of a conformal mapping"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Holomorphism of the inverse of a conformal mapping</p>
-<p>Assume <span class="arithmatex">\(f:U\rightarrow V\)</span> is a holomorphic function which is injective, then <span class="arithmatex">\(f'(z)\neq 0\)</span> for all <span class="arithmatex">\(z\in U\)</span>.</p>
+<p>Assume a holomorphic function <span class="arithmatex">\(f:U\rightarrow V\)</span> is injective, then <span class="arithmatex">\(f'(z)\neq 0\)</span> for all <span class="arithmatex">\(z\in U\)</span>. Moreover, the inverse of <span class="arithmatex">\(f\)</span> defined on its range is holomorphic.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="conformal-mappings-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="conformal-mappings-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="conformal-mappings-hints" name="__tabbed_1" type="radio" /><input id="conformal-mappings-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="conformal-mappings-hints">Hints</label><label for="conformal-mappings-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Show by contrsdiction.</p>
+<p>Using power series expansion and contradiction of injection.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Show the first proposition. Show by contrsdiction.</li>
+</ul>
+<p>If not, there exists <span class="arithmatex">\(z_0\in U\)</span> such that <span class="arithmatex">\(f'(z_0)=0\)</span> and assume <span class="arithmatex">\(f'(z)\neq 0\)</span> for all <span class="arithmatex">\(z\in U\)</span> except <span class="arithmatex">\(z_0\)</span>. Then expand <span class="arithmatex">\(f\)</span> using power series</p>
+<div class="arithmatex">\[
+f(z)-f(z_0)=a(z-z_0)^k +G(z)
+\]</div>
+<p>where <span class="arithmatex">\(a\neq 0, k\geq 2\)</span> and <span class="arithmatex">\(G(z)\)</span> vanishes to order <span class="arithmatex">\(k+1\)</span> at <span class="arithmatex">\(z_0\)</span>. For sufficiently small <span class="arithmatex">\(w\)</span> (significant, for two distinct zeros, not multiple roots), write</p>
+<div class="arithmatex">\[
+f(z)-f(z_0) - w :=F(z)+G(z), \quad F(z):=a(z-z_0)^k-w
+\]</div>
+<p>Choose a small enough circle centered at <span class="arithmatex">\(z_0\)</span> such that <span class="arithmatex">\(|F(z)|&gt;|G(z)|\)</span>. Since <span class="arithmatex">\(F(z)\)</span> has at least <span class="arithmatex">\(2\)</span> zeros inside the circle, by Rouch&eacute; Theorem <span class="arithmatex">\(f(z)-f(z_0)-w\)</span> has at least <span class="arithmatex">\(2\)</span> zeros inside the circle. We claim the zeros of <span class="arithmatex">\(f(z)-f(z_0)-w\)</span> is distinct, hence <span class="arithmatex">\(f\)</span> is not injective. Indeed, since <span class="arithmatex">\(f'(z)\neq z\)</span> for all <span class="arithmatex">\(z\neq z_0\)</span>, <span class="arithmatex">\(z_0\)</span> is not a zero of <span class="arithmatex">\(f(z)-f(z_0)-w\)</span>, so sufficiently close to <span class="arithmatex">\(z_0\)</span>, it follows <span class="arithmatex">\(f(z)-f(z_0)-w\)</span> has two distinct roots, hence <span class="arithmatex">\(f\)</span> is not injective.</p>
+<ul>
+<li>Prove inverse of <span class="arithmatex">\(f\)</span> defined on its range is holomorphic.</li>
+</ul>
+<p>Let <span class="arithmatex">\(g=f^{-1}\)</span> be the inverse of <span class="arithmatex">\(f\)</span> defined on <span class="arithmatex">\(f(U)\)</span>, which we assume is <span class="arithmatex">\(V\)</span>. Then for <span class="arithmatex">\(w_0\in V\)</span>, <span class="arithmatex">\(w\)</span> is close to <span class="arithmatex">\(w_0\)</span>. Write <span class="arithmatex">\(w=f(z)\)</span> and <span class="arithmatex">\(w_0=f(z_0)\)</span>. So</p>
+<div class="arithmatex">\[
+\frac{g(w)-g(w_0)}{w-w_0}=\frac{1}{\frac{f(z)-f(z_0)}{z-z_0}}
+\]</div>
+<p>let <span class="arithmatex">\(z\rightarrow z_0\)</span>, we have <span class="arithmatex">\(w\rightarrow w_0\)</span>, so <span class="arithmatex">\(g'(w_0)=1/f'(g(w_0))\)</span>.</p>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
-<h2 id="the-disc-upper-half-plane">The disc &amp; Upper half-plane<a class="headerlink" href="#the-disc-upper-half-plane" title="Permanent link">&para;</a></h2>
+<p>From the above theorem, we could show that </p>
+<p><a id="Corollary: method of proving conformal equivalence of two open sets"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary: method of proving conformal equivalence of two open sets</p>
+<p>Two open sets <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are conformally equivalent if and only if there exsits two holomorphic and injective functions <span class="arithmatex">\(f:U\rightarrow V\)</span> and <span class="arithmatex">\(g: V\rightarrow U\)</span> with <span class="arithmatex">\(g(f(z))=z\)</span> and <span class="arithmatex">\(f(g(w))=w\)</span> for all <span class="arithmatex">\(z\in U\)</span> and <span class="arithmatex">\(w\in V\)</span>.</p>
+</div>
+<p>Actually some books define a conformal map <span class="arithmatex">\(f:U\rightarrow V\)</span> if <span class="arithmatex">\(f'(z)\neq 0\)</span> for all <span class="arithmatex">\(z\in U\)</span>. This is a weaker condition, since <span class="arithmatex">\(f(z)=z^2\)</span> is not injective but satisfies <span class="arithmatex">\(f(z)\neq 0\)</span> for all <span class="arithmatex">\(z\in \mathbb{C}-\{0\}\)</span>. See the following example for further description.</p>
+<div class="question">
+<p><strong>Example</strong>. A holomorphic function <span class="arithmatex">\(f: U\rightarrow V\)</span> is a <strong>local bijection</strong> on <span class="arithmatex">\(U\)</span> if for all <span class="arithmatex">\(z\in U\)</span>, there exists a disc centered at <span class="arithmatex">\(z\)</span> such that <span class="arithmatex">\(f:D\rightarrow f(D)\)</span> is bijective (actually <span class="arithmatex">\(f\)</span> is injective on <span class="arithmatex">\(D\)</span>). </p>
+<p>Prove <span class="arithmatex">\(f\)</span> is a local bijection on <span class="arithmatex">\(U\)</span> if and only if <span class="arithmatex">\(f'(z)\neq 0\)</span> for all <span class="arithmatex">\(z\in U\)</span>. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="conformal-mappings-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="conformal-mappings-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The same logic as we show in the proof of <a href="#Holomorphism of the inverse of a conformal mapping">Holomorphism of the inverse of a conformal mapping</a>.</p>
+</div>
+</div>
+</div>
+<p>A holomorphic function satisfying the above condition preserve angles. Check the following example.</p>
+<div class="question">
+<p><strong>Example</strong>. A holomorphic function <span class="arithmatex">\(f\)</span> defined near <span class="arithmatex">\(z_0\)</span> is said to <strong>preserve angles</strong> at <span class="arithmatex">\(z_0\)</span> if for any smooth curves <span class="arithmatex">\(\gamma\)</span> and <span class="arithmatex">\(\eta\)</span> intersecting at <span class="arithmatex">\(z_0\)</span>, the angle formed between <span class="arithmatex">\(\gamma\)</span> and <span class="arithmatex">\(\eta\)</span> at <span class="arithmatex">\(z_0\)</span> equals the angle formed between <span class="arithmatex">\(f\circ \gamma\)</span> and <span class="arithmatex">\(f\circ \eta\)</span> at <span class="arithmatex">\(f(z_0)\)</span>.</p>
+<p>Prove a complex-valued function <span class="arithmatex">\(f:\Omega \rightarrow \mathbb{C}\)</span> is holomorphic and <span class="arithmatex">\(f'(z_0)\neq 0\)</span> if and only if <span class="arithmatex">\(f\)</span> preserves angles. </p>
+</div>
+<h2 id="the-upper-half-plane-disc">The Upper half-plane &amp; disc<a class="headerlink" href="#the-upper-half-plane-disc" title="Permanent link">&para;</a></h2>
+<p>We give a demonstration of the conformal equivalence between the unit disc and the upper plane.</p>
 <p>Denote the upper half-plane <span class="arithmatex">\(\mathbb{H}\)</span> to be</p>
 <div class="arithmatex">\[
 \mathbb{H}=\{z\in \mathbb{C}:\text{Im}(z)&gt;0\}
@@ -4567,9 +4632,34 @@
 <p class="admonition-title">Conformal function between disc &amp; upper half-plane</p>
 <p>Let</p>
 <div class="arithmatex">\[
-F(w)=\frac{i-z}{i+z},\quad G(w)=i\frac{1-w}{1+w}
+F(z)=\frac{i-z}{i+z},\quad G(w)=i\frac{1-w}{1+w}
 \]</div>
 <p>Then <span class="arithmatex">\(F: \mathbb{H}\rightarrow \mathbb{D}\)</span> is a conformal map with inverse <span class="arithmatex">\(G: \mathbb{D}\rightarrow \mathbb{H}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="the-upper-half-plane-disc-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="the-upper-half-plane-disc-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Show that both are holomorphic in their respective domains. Easy to show that <span class="arithmatex">\(|F(z)|&lt;1\)</span> so the range of <span class="arithmatex">\(F\)</span> is <span class="arithmatex">\(\mathbb{D}\)</span>. To show that <span class="arithmatex">\(G\)</span> maps <span class="arithmatex">\(\mathbb{D}\)</span> into <span class="arithmatex">\(\mathbb{H}\)</span>, let <span class="arithmatex">\(w=u+iv\)</span>, and calculate the imaginary part</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+G(w)&amp;=i\frac{1-u-iv}{1+u+iv}\\
+&amp;=i\frac{(1-u-iv)(1+u-iv)}{|1+w|^2}\\
+&amp;=\frac{2v+i(1-u^2-v^2)}{|1+w|^2}.
+\end{align*}
+\]</div>
+<p>so <span class="arithmatex">\(\text{Im}(G(w))&gt;0\)</span>. And </p>
+<div class="arithmatex">\[
+F(G(w))=\frac{i-i\frac{1-w}{1+w}}{i+i\frac{1-w}{1+w}}=\frac{2w}{2}=w,\quad \forall w\in \mathbb{D},
+\]</div>
+<div class="arithmatex">\[
+G(F(z))=i\frac{1-\frac{i-z}{i+z}}{1+\frac{i-z}{i+z}}=i\frac{2z}{2i}=z,\quad \forall z\in \mathbb{H}.
+\]</div>
+<p>and we are done by <a href="#Corollary: method of proving conformal equivalence of two open sets">Corollary: method of proving conformal equivalence of two open sets</a>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
 </div>
 <p>Mappings of the form </p>
 <div class="arithmatex">\[
@@ -4585,42 +4675,194 @@ z\mapsto \frac{az+b}{cz+d}
 <p>(ii) If there exists <span class="arithmatex">\(z_0\in \mathbb{D}\)</span> such that <span class="arithmatex">\(f(z_0)=z_0\)</span>, then <span class="arithmatex">\(f\)</span> is a rotation.</p>
 <p>(iii) <span class="arithmatex">\(|f'(0)|\leq 1\)</span>, and if the equation holds, then <span class="arithmatex">\(f\)</span> is a rotation. </p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="schwarz-lemma-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="schwarz-lemma-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="schwarz-lemma-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="schwarz-lemma-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p>(i) Expand <span class="arithmatex">\(f\)</span> using power series</p>
 <div class="arithmatex">\[
-\frac{|f(z)|}{|z|}\leq 1
+f(z)=a_1z + \cdots
 \]</div>
-</div>
-</div>
-</div>
-<p>A conformal map from an open set <span class="arithmatex">\(\Omega\)</span> to itself is called <strong>Automorphism</strong>. The set of all automorphisim of <span class="arithmatex">\(\Omega\)</span> is called <span class="arithmatex">\(Aut(\Omega)\)</span>, and carries the structure of group.</p>
-<h3 id="automorphisms-of-the-disc">Automorphisms of the disc<a class="headerlink" href="#automorphisms-of-the-disc" title="Permanent link">&para;</a></h3>
-<p>In homework, we have known that </p>
+<p><span class="arithmatex">\(f(z)/z\)</span> has removable singularity at <span class="arithmatex">\(0\)</span>, so </p>
 <div class="arithmatex">\[
-F_\alpha (z)=\frac{\alpha -z}{1-\overline{\alpha}z},\quad \alpha \in \mathbb{D}
+\left|\frac{f(z)}{z}\right|\leq \frac{1}{r},\quad |z|=r&lt;1, 
 \]</div>
-<p>is a bijection from <span class="arithmatex">\(\mathbb{D}\)</span> to itself, and interchanges <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(\alpha\)</span> by</p>
-<div class="arithmatex">\[
-F_\alpha(0)=\alpha,\quad F_\alpha(\alpha)=0.
-\]</div>
-<div class="admonition success">
-<p class="admonition-title">Expression of all automorphism of disc</p>
-<p>If <span class="arithmatex">\(f\)</span> is a automorphism of the disc, then there exist <span class="arithmatex">\(\theta\in \mathbb{R}\)</span> and <span class="arithmatex">\(\alpha \in \mathbb{D}\)</span>, such that </p>
-<div class="arithmatex">\[
-f(z)=e^{i\theta}\frac{\alpha -z}{1-\overline{\alpha }z}.
-\]</div>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="automorphisms-of-the-disc-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="automorphisms-of-the-disc-proof">Proof</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Using <a href="#Schwarz Lemma">Schwarz Lemma</a>.</p>
+<p>By Maximum modulus principle, the above holds for <span class="arithmatex">\(|z|\leq r\)</span>. Let <span class="arithmatex">\(r\rightarrow 1\)</span> and we have the result.</p>
+<p>(ii) By assuption, <span class="arithmatex">\(f(z)/z\)</span> reaches the maximum modulus inside the circle, so <span class="arithmatex">\(f(z)/z\)</span> is a constant, i.e. <span class="arithmatex">\(f(z)=cz\)</span>. Substituting <span class="arithmatex">\((z_0, f(z_0))\)</span> and taking the absolute value, we have <span class="arithmatex">\(|c|=1\)</span>, so <span class="arithmatex">\(c=e^{i\theta}\)</span>, that is, <span class="arithmatex">\(f\)</span> is a rotation.</p>
+<p>(iii) Let <span class="arithmatex">\(g(z)=f(z)/z\)</span>, then <span class="arithmatex">\(|g(z)|\leq 1\)</span> for all <span class="arithmatex">\(z\in \mathbb{D}\)</span>. Since <span class="arithmatex">\(f'(0)=\lim\limits_{z\rightarrow 0}\frac{f(z)-f(0)}{z-0}=\lim\limits_{z\rightarrow 0}\frac{f(z)}{z}=g(0)\)</span>, so <span class="arithmatex">\(|f'(0)|=|g(0)|\leq 1\)</span>. </p>
+<p>Moreover, if <span class="arithmatex">\(|f'(0)|=1\)</span>, then still by maximum modulus principle, <span class="arithmatex">\(g\)</span> is a constant, and is also a rotation.</p>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
+<p>A conformal map from an open set <span class="arithmatex">\(\Omega\)</span> to itself is called <strong>Automorphism</strong>. The set of all automorphisim of <span class="arithmatex">\(\Omega\)</span> is called <span class="arithmatex">\(Aut(\Omega)\)</span>, and carries the structure of group. Recall definition of group in <a href="../../Ordinary_Differential_Equation/General_Theory/Contraction_Mapping_Method/#Definition of Group">Definition of group</a>. </p>
+<p>Here the group operation is the composition of map "<span class="arithmatex">\(\circ\)</span>", the identity is the map <span class="arithmatex">\(z\mapsto z\)</span>, and the inverses are simply the inverse function. For inverse and composition, we have</p>
+<div class="arithmatex">\[
+(f\circ g)^{-1}=g^{-1}\circ f^{-1}.
+\]</div>
+<h3 id="automorphisms-of-the-disc">Automorphisms of the disc<a class="headerlink" href="#automorphisms-of-the-disc" title="Permanent link">&para;</a></h3>
+<p>In homework, we have known that the <span class="arithmatex">\(\psi\)</span> function</p>
+<div class="arithmatex">\[
+\psi_\alpha (z)=\frac{\alpha -z}{1-\overline{\alpha}z},\quad \alpha \in \mathbb{D}
+\]</div>
+<p>is a bijection from <span class="arithmatex">\(\mathbb{D}\)</span> to itself, thus is an automorphism of <span class="arithmatex">\(\mathbb{D}\)</span>. Interestingly, <span class="arithmatex">\(\psi_\alpha\)</span> interchanges <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(\alpha\)</span> by</p>
+<div class="arithmatex">\[
+\psi_\alpha(0)=\alpha,\quad \psi_\alpha(\alpha)=0.
+\]</div>
+<p><a id="Expression of all automorphism of disc"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Expression of all automorphism of disc</p>
+<p>If <span class="arithmatex">\(f\)</span> is an automorphism of the disc, then there exist <span class="arithmatex">\(\theta\in \mathbb{R}\)</span> and <span class="arithmatex">\(\alpha \in \mathbb{D}\)</span>, such that </p>
+<div class="arithmatex">\[
+f(z)=e^{i\theta}\frac{\alpha -z}{1-\overline{\alpha }z}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="automorphisms-of-the-disc-hints" name="__tabbed_5" type="radio" /><input id="automorphisms-of-the-disc-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="automorphisms-of-the-disc-hints">Hints</label><label for="automorphisms-of-the-disc-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using <a href="#Schwarz Lemma">Schwarz Lemma</a>.</p>
+</div>
+<div class="tabbed-block">
+<p>By property of automorphism, there exists a unique <span class="arithmatex">\(\alpha\)</span> such that <span class="arithmatex">\(f(\alpha)=0\)</span>. So by operation of group, define another automorphism <span class="arithmatex">\(g=f\circ \psi_\alpha\)</span>, which satisfies <span class="arithmatex">\(g(0)=0\)</span>, and <span class="arithmatex">\(g^{-1}(0)=0\)</span> i.e. normalization. Applying <a href="#Schwarz Lemma">Schwarz Lemma</a> to <span class="arithmatex">\(g\)</span> and <span class="arithmatex">\(g^{-1}\)</span>, we have</p>
+<div class="arithmatex">\[
+|g(z)|\leq |z|, |g^{-1}(w)|\leq |w|,\quad \forall z,w\in \mathbb{D}
+\]</div>
+<p>which gives <span class="arithmatex">\(|g(z)|\leq|z|=|g^{-1}(w)|\leq |w|=|g(z)|\)</span>. So also by <a href="#Schwarz Lemma">Schwarz Lemma</a>, <span class="arithmatex">\(g\)</span> is a rotation, i.e. <span class="arithmatex">\(g=e^{i\theta}z\)</span>. Replacing <span class="arithmatex">\(z\)</span> by <span class="arithmatex">\(\psi_\alpha(z)\)</span> and we have <span class="arithmatex">\(g\circ \psi_\alpha =f\circ\psi_\alpha\circ\psi_\alpha=f\)</span>, which gives the result.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p><a id="Corollary: automorphisms that fix the origin"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Corollary: automorphisms that fix the origin</p>
+<p>The only automorphism of the unit disc that fix the origin is rotation.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="automorphisms-of-the-disc-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="automorphisms-of-the-disc-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Setting <span class="arithmatex">\(\alpha=0\)</span> in <a href="#Expression of all automorphism of disc">Expression of all automorphism of disc</a>.</p>
+</div>
+</div>
+</div>
+<p>We could see that the group of automorphism acts transitively, in the sense that given <span class="arithmatex">\(\alpha, \beta\in \mathbb{D}\)</span>, there is an automorphism <span class="arithmatex">\(\psi\)</span> mapping <span class="arithmatex">\(\alpha\)</span> to <span class="arithmatex">\(\beta\)</span> by <span class="arithmatex">\(\psi=\psi_\beta\circ \psi_\alpha\)</span>.</p>
 <h3 id="automorphism-of-the-upper-half-plane">Automorphism of the upper half-plane<a class="headerlink" href="#automorphism-of-the-upper-half-plane" title="Permanent link">&para;</a></h3>
-<p>By using <a href="#Conformal function between disc &amp; upper half-plane">Conformal function between disc &amp; upper half-plane</a>, we could determine the automorphism of the upper half-plane <span class="arithmatex">\(\text{Aut}(\mathbb{H})\)</span>.</p>
+<p>By using <span class="arithmatex">\(F:\mathbb{H}\rightarrow \mathbb{D}\)</span> in <a href="#Conformal function between disc &amp; upper half-plane">Conformal function between disc &amp; upper half-plane</a> and automorphism of the disc, we could determine the automorphism of the upper half-plane <span class="arithmatex">\(\text{Aut}(\mathbb{H})\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Construction of automorphism of the upper plane</p>
+<p>Consider map</p>
+<div class="arithmatex">\[
+\Gamma: \text{Aut}(\mathbb{D})\rightarrow \text{Aut}(\mathbb{H})
+\]</div>
+<p>defined by</p>
+<div class="arithmatex">\[
+\Gamma(\varphi) = F^{-1}\circ \varphi\circ F, \quad \varphi\in \text{Aut}(\mathbb{D}).
+\]</div>
+<p>Actually <span class="arithmatex">\(\Gamma\)</span> is an isomorphism between <span class="arithmatex">\(\text{Aut}(\mathbb{D})\)</span> and <span class="arithmatex">\(\text{Aut}(\mathbb{H})\)</span>, that is,</p>
+<div class="arithmatex">\[
+\begin{align*}
+\Gamma(\varphi_1\circ \varphi_2)&amp;=F^{-1}\circ \varphi_1\circ \varphi_2\circ F\\
+&amp;=F^{-1}\circ \varphi_1\circ F\circ F^{-1}\circ \varphi_2\circ F\\
+&amp;=\Gamma(\varphi_1)\circ \Gamma(\varphi_2)
+\end{align*}
+\]</div>
+<p>and <span class="arithmatex">\(\phi\)</span> itself is a bijection.</p>
+</div>
+<p>Now we give a description of automorphism of the upper plane.</p>
+<p>Denote <span class="arithmatex">\(SL_2(\mathbb{R})\)</span> as the group of all <span class="arithmatex">\(2\times 2\)</span> matrices with real entries and determinant <span class="arithmatex">\(1\)</span>, namely </p>
+<div class="arithmatex">\[
+SL_2(\mathbb{R}) = \left\{ M=\left[\begin{array}{cc} a&amp; b\\ c&amp;d\end{array}\right]:\quad a,b,c,d\in \mathbb{R}, \quad ad-bc=1\right\}
+\]</div>
+<p>which is called the <strong>special linear group</strong>.</p>
+<p>Given a matrix <span class="arithmatex">\(M\in SL_2(\mathbb{R})\)</span>, define the mapping <span class="arithmatex">\(f_M\)</span> by</p>
+<div class="arithmatex">\[
+f_M = \frac{az+b}{cz+d}.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Expression of automorphism of the upper plane</p>
+<p>Every automorphism of <span class="arithmatex">\(\mathbb{H}\)</span> takes the form <span class="arithmatex">\(f_M\)</span> for some <span class="arithmatex">\(M\in SL_2(\mathbb{R})\)</span>. Conversely, every map of his form is an automorphism on <span class="arithmatex">\(\mathbb{H}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="automorphism-of-the-upper-half-plane-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="automorphism-of-the-upper-half-plane-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Show that <span class="arithmatex">\(\forall M\in SL_2(\mathbb{R})\)</span>, <span class="arithmatex">\(f_M\)</span> maps to from <span class="arithmatex">\(\mathbb{H}\)</span> to itself.</p>
+</li>
+<li>
+<p>Show that <span class="arithmatex">\(f_M \circ f_{M'}=f_{MM'}\)</span>.</p>
+</li>
+<li>
+<p>Show that using elements in <span class="arithmatex">\(SL_2(\mathbb{R})\)</span>, we could map any <span class="arithmatex">\(z\in \mathbb{H}\)</span> to <span class="arithmatex">\(i\)</span>.</p>
+</li>
+<li>
+<p>Show that </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+M_\theta=\left[\begin{array}{cc} \cos \theta &amp; -\sin \theta\\ \sin\theta &amp; \cos \theta \end{array}\right]
+\]</div>
+<p>belongs to <span class="arithmatex">\(SL_2(\mathbb{R})\)</span>, <span class="arithmatex">\(F\circ f_{M_\theta}\circ F^{-1}\)</span> corresponds to the rotation of angle <span class="arithmatex">\(-2\theta\)</span> in the disc.</p>
+<ul>
+<li>Complete the proof.</li>
+</ul>
+<p>Suppose that <span class="arithmatex">\(f\)</span> is a automorphism of <span class="arithmatex">\(\mathbb{H}\)</span>, then there exists a unique <span class="arithmatex">\(\beta\)</span> such that <span class="arithmatex">\(f(\beta)=i\)</span>, and consider a matrix <span class="arithmatex">\(N\in SL_2(\mathbb{R})\)</span> such that <span class="arithmatex">\(f_N(i)=\beta\)</span>, then <span class="arithmatex">\(g=f\circ f_N\)</span> satisfies <span class="arithmatex">\(g(i)=i\)</span>, therefore <span class="arithmatex">\(F\circ g\circ F^{-1}\)</span> is a automorphism of the unit disc that fixes origin. So <span class="arithmatex">\(F\circ g\circ F^{-1}\)</span> is a rotation, by step 4 there exists <span class="arithmatex">\(\theta\)</span> such that</p>
+<div class="arithmatex">\[
+F\circ f_{M_\theta}\circ F^{-1}=F\circ g\circ F^{-1}.
+\]</div>
+<p>Hence <span class="arithmatex">\(g = f_{M_\theta}\)</span>, so <span class="arithmatex">\(f=g\circ f^{-1}_{N}=f_{M_\theta N^{-1}}\)</span>, which is of the desired form.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h2 id="riemann-mapping-theorem">Riemann Mapping Theorem<a class="headerlink" href="#riemann-mapping-theorem" title="Permanent link">&para;</a></h2>
+<p>The basic problem lies in determining the condition for existence of <span class="arithmatex">\(F:\Omega\rightarrow \mathbb{D}\)</span>. Here we give some observations.</p>
+<p>Firstly, <span class="arithmatex">\(\Omega\neq \mathbb{C}\)</span>. Since, otherwise <span class="arithmatex">\(F\)</span> is entire and bounded (by definition), then by Liouville's theorem <span class="arithmatex">\(F\)</span> is constant, thus is not conformal. Then, since <span class="arithmatex">\(\mathbb{D}\)</span> is connected, then we must also impose the requirement that <span class="arithmatex">\(\Omega\)</span> is connected. The following example gives another condition.</p>
+<div class="question">
+<p><strong>Example</strong>. Suppose <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are conformally equivalent. Prove that if <span class="arithmatex">\(U\)</span> is simply connected, then so is <span class="arithmatex">\(V\)</span>.</p>
+</div>
+<p>For brevity, we shall call <span class="arithmatex">\(\Omega\)</span> proper, if it is non-empty and not the whole of <span class="arithmatex">\(\mathbb{C}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Riemann Mapping Theorem</p>
+<p>Suppose <span class="arithmatex">\(\Omega\)</span> is proper, and simply connected. If <span class="arithmatex">\(z_0\in \Omega\)</span>, then there exists a unique conformal map <span class="arithmatex">\(F:\Omega \rightarrow \mathbb{D}\)</span> such that </p>
+<div class="arithmatex">\[
+F(z_0)=0,\quad F'(z_0)&gt;0.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="riemann-mapping-theorem-proof-for-uniqueness" name="__tabbed_8" type="radio" /><input id="riemann-mapping-theorem-montels-theorem" name="__tabbed_8" type="radio" /><input id="riemann-mapping-theorem-lemma" name="__tabbed_8" type="radio" /><input id="riemann-mapping-theorem-proof-for-existence" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="riemann-mapping-theorem-proof-for-uniqueness">Proof for uniqueness</label><label for="riemann-mapping-theorem-montels-theorem">Montel's Theorem</label><label for="riemann-mapping-theorem-lemma">Lemma</label><label for="riemann-mapping-theorem-proof-for-existence">Proof for existence</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(F,G\)</span> satisfies the above conditions. Then <span class="arithmatex">\(H=F\circ G^{-1}\)</span> is an automorphism of <span class="arithmatex">\(\mathbb{D}\)</span> that fix the origin. Therefore by <a href="#Corollary: automorphisms that fix the origin">Corollary: automorphisms that fix the origin</a>, <span class="arithmatex">\(H(z)=e^{-i\theta}z\)</span>. Since <span class="arithmatex">\(H'(0)&gt;0\)</span> we must have <span class="arithmatex">\(e^{i\theta}=1\)</span>, which gives <span class="arithmatex">\(F=G\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p>Check <a href="../../Functional_Analysis/Metric_Space/#relative-compact-set">relative compect set description</a>. Here we only need uniform boundedness and equicontinuity. That is, </p>
+<p>Suppose a famliy <span class="arithmatex">\(\mathcal{F}\)</span> of holomorphic functions on an open set <span class="arithmatex">\(\Omega\)</span>. If it is uniformly bounded on every compact subset of <span class="arithmatex">\(\Omega\)</span>, then it is equicontinuous and thus normal(every sequence of <span class="arithmatex">\(\mathcal{F}\)</span> has a subsequence that converges uniformly on every compect subset of <span class="arithmatex">\(\Omega\)</span>.)</p>
+<p>Similar to our proof in <a href="../../Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/#AA">Ascoli-Arzel&agrave; Theorem</a>.</p>
+</div>
+<div class="tabbed-block">
+<p>Any open set <span class="arithmatex">\(\Omega\)</span> in the complex plane has an exhaustion.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Consider all injective holomorphic functions <span class="arithmatex">\(F:\Omega\rightarrow \mathbb{D}\)</span> with <span class="arithmatex">\(f(z_0)=0\)</span>, and find an <span class="arithmatex">\(f\)</span> from these functions whose image fills out all of <span class="arithmatex">\(\mathbb{D}\)</span>, by making <span class="arithmatex">\(f'(z_0)\)</span> as large as possible.</p>
+</li>
+<li>
+<p>Extract this function as a limit from a sequence of functions.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary of RMT</p>
+<p>Any proper simply connected open subsets in <span class="arithmatex">\(\mathbb{C}\)</span> is conformally equivalent.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="riemann-mapping-theorem-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="riemann-mapping-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 
 
 
