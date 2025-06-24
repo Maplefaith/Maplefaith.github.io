@@ -825,6 +825,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conformal-mappings-onto-polygons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conformal mappings onto Polygons
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4545,6 +4554,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conformal-mappings-onto-polygons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conformal mappings onto Polygons
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4827,18 +4845,37 @@ F\circ f_{M_\theta}\circ F^{-1}=F\circ g\circ F^{-1}.
 F(z_0)=0,\quad F'(z_0)&gt;0.
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:4"><input checked="checked" id="riemann-mapping-theorem-proof-for-uniqueness" name="__tabbed_8" type="radio" /><input id="riemann-mapping-theorem-montels-theorem" name="__tabbed_8" type="radio" /><input id="riemann-mapping-theorem-lemma" name="__tabbed_8" type="radio" /><input id="riemann-mapping-theorem-proof-for-existence" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="riemann-mapping-theorem-proof-for-uniqueness">Proof for uniqueness</label><label for="riemann-mapping-theorem-montels-theorem">Montel's Theorem</label><label for="riemann-mapping-theorem-lemma">Lemma</label><label for="riemann-mapping-theorem-proof-for-existence">Proof for existence</label></div>
+<p><a id="Montel's Theorem"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="riemann-mapping-theorem-montels-theorem" name="__tabbed_8" type="radio" /><input id="riemann-mapping-theorem-lemma-for-montals-theorem" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="riemann-mapping-theorem-montels-theorem">Montel's Theorem</label><label for="riemann-mapping-theorem-lemma-for-montals-theorem">Lemma for Montal's Theorem</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
-<p>Let <span class="arithmatex">\(F,G\)</span> satisfies the above conditions. Then <span class="arithmatex">\(H=F\circ G^{-1}\)</span> is an automorphism of <span class="arithmatex">\(\mathbb{D}\)</span> that fix the origin. Therefore by <a href="#Corollary: automorphisms that fix the origin">Corollary: automorphisms that fix the origin</a>, <span class="arithmatex">\(H(z)=e^{-i\theta}z\)</span>. Since <span class="arithmatex">\(H'(0)&gt;0\)</span> we must have <span class="arithmatex">\(e^{i\theta}=1\)</span>, which gives <span class="arithmatex">\(F=G\)</span>.</p>
-</div>
 <div class="tabbed-block">
 <p>Check <a href="../../Functional_Analysis/Metric_Space/#relative-compact-set">relative compect set description</a>. Here we only need uniform boundedness and equicontinuity. That is, </p>
 <p>Suppose a famliy <span class="arithmatex">\(\mathcal{F}\)</span> of holomorphic functions on an open set <span class="arithmatex">\(\Omega\)</span>. If it is uniformly bounded on every compact subset of <span class="arithmatex">\(\Omega\)</span>, then it is equicontinuous and thus normal(every sequence of <span class="arithmatex">\(\mathcal{F}\)</span> has a subsequence that converges uniformly on every compect subset of <span class="arithmatex">\(\Omega\)</span>.)</p>
 <p>Similar to our proof in <a href="../../Ordinary_Differential_Equation/General_Theory/Existence_Uniqueness_Theorem/#AA">Ascoli-Arzel&agrave; Theorem</a>.</p>
 </div>
 <div class="tabbed-block">
-<p>Any open set <span class="arithmatex">\(\Omega\)</span> in the complex plane has an exhaustion.</p>
+<p>We give a definition of exhaustion. Assume <span class="arithmatex">\(\Omega\)</span> is an open set. A sequence <span class="arithmatex">\(\{K_l\}_{l=1}^\infty\)</span> of compact subsets of <span class="arithmatex">\(\Omega\)</span> is called an <strong>exhaustion</strong> of <span class="arithmatex">\(\Omega\)</span>, if </p>
+<p>(i) <span class="arithmatex">\(K_l\)</span> is contained in the interior of <span class="arithmatex">\(K_{l+1}\)</span>, for each <span class="arithmatex">\(l=1,2,\cdots\)</span></p>
+<p>(ii) Every compact subset of <span class="arithmatex">\(\Omega\)</span> is contained in some <span class="arithmatex">\(K_l\)</span> for some <span class="arithmatex">\(l\)</span>. In particular <span class="arithmatex">\(\Omega = \bigcup_{l=1}^\infty K_l\)</span>.</p>
+<p>Now we give a lemma for open subset <span class="arithmatex">\(\Omega\)</span> of the complex plane, that is, Any open set <span class="arithmatex">\(\Omega\)</span> in the complex plane has an exhaustion.</p>
+<p>The proof is by construction. If <span class="arithmatex">\(\Omega\)</span> is bounded, we let <span class="arithmatex">\(K_l\)</span> denote the set of all points in <span class="arithmatex">\(\Omega\)</span> at distance <span class="arithmatex">\(\geq 1/l\)</span> from the boundary of <span class="arithmatex">\(\Omega\)</span>. If not, the above construction would cause <span class="arithmatex">\(K_l\)</span> to be non-compact, so we add for each <span class="arithmatex">\(l\)</span>, <span class="arithmatex">\(K_l'=K_l\cap \{z:|z|\leq l\}\)</span>.</p>
+</div>
+</div>
+</div>
+<p><a id="Lemma 2 for limit function of injective holomorphic functions"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="riemann-mapping-theorem-proposition" name="__tabbed_9" type="radio" /><input id="riemann-mapping-theorem-hints" name="__tabbed_9" type="radio" /><input id="riemann-mapping-theorem-proof-for-rmt" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="riemann-mapping-theorem-proposition">Proposition</label><label for="riemann-mapping-theorem-hints">Hints</label><label for="riemann-mapping-theorem-proof-for-rmt">Proof for RMT</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>If <span class="arithmatex">\(\Omega\)</span> is a connected open subset of <span class="arithmatex">\(\mathbb{C}\)</span>, and <span class="arithmatex">\(\{f_n\}\)</span> a sequence of injective holomorphic functions on <span class="arithmatex">\(\Omega\)</span> that converges uniformly on every compact subset of <span class="arithmatex">\(\Omega\)</span> to a holomorphic function <span class="arithmatex">\(f\)</span>, then <span class="arithmatex">\(f\)</span> is either injective or constant.</p>
+<p>The proof is by contradiction. If the convergent function <span class="arithmatex">\(f\)</span> is not injective, so there exists two complex number <span class="arithmatex">\(z_1,z_2\)</span> such that <span class="arithmatex">\(f(z_1)=f(z_2)\)</span>. Now we define a sequence of functions <span class="arithmatex">\(g_n(z)=f_n(z)-f_n(z_1)\)</span>, which has no other zeros besides <span class="arithmatex">\(z_1\)</span>, since <span class="arithmatex">\(\{f_n\}\)</span> is injective. By condition, <span class="arithmatex">\(\{g_n\}\)</span> converges uniformly on every compact subset of <span class="arithmatex">\(\Omega\)</span> to <span class="arithmatex">\(g(z)=f(z)-f(z_1)\)</span>. If <span class="arithmatex">\(g(z)\)</span> is not identically zero, then <span class="arithmatex">\(z_2\)</span> is another isolated zero. Using <a href="../Meromophic/#Augument Principle">Augument Principle</a>, </p>
+<div class="arithmatex">\[
+\frac{1}{2\pi i}\int_\gamma \frac{g'(\zeta)}{g(\zeta)}d\zeta = 1
+\]</div>
+<p>for <span class="arithmatex">\(\gamma\)</span> is a small circle centered at <span class="arithmatex">\(z_2\)</span> such that <span class="arithmatex">\(g\)</span> does not vanish on <span class="arithmatex">\(\gamma\)</span> and its interior. Therefore, <span class="arithmatex">\(1/g_n\)</span> converges uniformly to <span class="arithmatex">\(1/g\)</span> on <span class="arithmatex">\(\gamma\)</span>. Since <span class="arithmatex">\(g'_n\)</span> converges uniformly to <span class="arithmatex">\(g'\)</span> on <span class="arithmatex">\(\gamma\)</span> we have</p>
+<div class="arithmatex">\[
+\frac{1}{2\pi i}\int_\gamma \frac{g'_n(\zeta)}{g_n(\zeta)}d\zeta \rightarrow \frac{1}{2\pi i}\int_\gamma \frac{g'(\zeta)}{g(\zeta)}d\zeta
+\]</div>
+<p>However the leeft hand side equals <span class="arithmatex">\(0\)</span> since <span class="arithmatex">\(g_n\)</span> contains no zero inside <span class="arithmatex">\(\gamma\)</span>. </p>
 </div>
 <div class="tabbed-block">
 <ul>
@@ -4850,18 +4887,108 @@ F(z_0)=0,\quad F'(z_0)&gt;0.
 </li>
 </ul>
 </div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Prove Uniqueness. Let <span class="arithmatex">\(F,G\)</span> satisfies the above conditions. Then <span class="arithmatex">\(H=F\circ G^{-1}\)</span> is an automorphism of <span class="arithmatex">\(\mathbb{D}\)</span> that fix the origin. Therefore by <a href="#Corollary: automorphisms that fix the origin">Corollary: automorphisms that fix the origin</a>, <span class="arithmatex">\(H(z)=e^{-i\theta}z\)</span>. Since <span class="arithmatex">\(H'(0)&gt;0\)</span> we must have <span class="arithmatex">\(e^{i\theta}=1\)</span>, which gives <span class="arithmatex">\(F=G\)</span>.</p>
+</li>
+<li>
+<p>Suppose <span class="arithmatex">\(\Omega\)</span> is a proper simply connected open subset of <span class="arithmatex">\(\mathbb{C}\)</span>. We claim that <span class="arithmatex">\(\Omega\)</span> is conformally equivalent to a open subset of <span class="arithmatex">\(\mathbb{D}\)</span> that contains the origin.</p>
+</li>
+</ul>
+<p>Indeed, choose a complex number <span class="arithmatex">\(\alpha \in \mathbb{C}-\Omega\)</span>, then <span class="arithmatex">\(z-\alpha\)</span> does not vanish in <span class="arithmatex">\(\Omega\)</span>, so define</p>
+<div class="arithmatex">\[
+f(z)=\log (z-\alpha)
+\]</div>
+<p>so <span class="arithmatex">\(e^{f(z)}=z-\alpha\)</span>, which is apparently injective. So we claim that choose <span class="arithmatex">\(w\in \Omega\)</span>, </p>
+<div class="arithmatex">\[
+f(z)\neq f(w)+2\pi i,\quad \forall z\in \Omega. 
+\]</div>
+<p>Since it is injective. So there exists a small circle centered at <span class="arithmatex">\(f(w)+2\pi i\)</span> of radius <span class="arithmatex">\(r\)</span> such that <span class="arithmatex">\(S_r(f(w)+2\pi i)\)</span> does not contain <span class="arithmatex">\(f(\Omega)\)</span>. Otherwise choose a sequence <span class="arithmatex">\(\{z_n\}\)</span> such that <span class="arithmatex">\(f(z_n)\rightarrow f(w)+2\pi i\)</span>, then exponentiating it we have <span class="arithmatex">\(z_n \rightarrow w\)</span>, so we have <span class="arithmatex">\(f(z_n)\rightarrow w\)</span>.</p>
+<p>Define </p>
+<div class="arithmatex">\[
+F(z)=\frac{1}{f(z)-(f(w)+2\pi i)},\quad z\in \Omega,
+\]</div>
+<p>which is a conformal function that maps <span class="arithmatex">\(\Omega\)</span> to <span class="arithmatex">\(F(\Omega)\)</span>, a subset of <span class="arithmatex">\(\mathbb{D}\)</span>. Since <span class="arithmatex">\(f\)</span> is injective, so is <span class="arithmatex">\(F\)</span>. <span class="arithmatex">\(F\)</span> is uniformly bounded on <span class="arithmatex">\(\Omega\)</span>, so we could translate and rescale <span class="arithmatex">\(F\)</span> in order to get the result function <span class="arithmatex">\(F'\)</span>.</p>
+<ul>
+<li>By step one, we assume <span class="arithmatex">\(\Omega\)</span> is an open subset of <span class="arithmatex">\(\mathbb{D}\)</span> with <span class="arithmatex">\(0\in \Omega\)</span>. Consider the family <span class="arithmatex">\(\mathcal{F}\)</span> of all injective holomorphic functions on <span class="arithmatex">\(\Omega\)</span> that map into <span class="arithmatex">\(\mathbb{D}\)</span> and fix the origin, i.e.</li>
+</ul>
+<div class="arithmatex">\[
+\mathcal{F}=\{f: f\in H(\Omega)\text{ and injective}, \quad f(0)=0 \}.
+\]</div>
+<p>and extract function out the desired function. Note the set is non-empty since <span class="arithmatex">\(z\mapsto z\)</span> is contained. By Cauchy's integral formula, we have</p>
+<div class="arithmatex">\[
+|f'(0)|=\frac{1}{2\pi}\left|\int_\gamma \frac{f(\zeta)}{\zeta^2}d\zeta\right|\leq \frac{1}{r}
+\]</div>
+<p>for some circle <span class="arithmatex">\(\gamma\)</span> centered at the origin with radius <span class="arithmatex">\(r\)</span>, so <span class="arithmatex">\(|f'(0)|\)</span> is uniformly bounded for all <span class="arithmatex">\(f\in \mathcal{F}\)</span>.</p>
+<p>Define</p>
+<div class="arithmatex">\[
+s=\sup_{f\in \mathcal{F}}|f'(0)|
+\]</div>
+<p>Choose a sequence of <span class="arithmatex">\(\{f_n\}\in \mathcal{F}\)</span> such that <span class="arithmatex">\(|f_n'(0)|\rightarrow s\)</span>. <span class="arithmatex">\(f_n\)</span> is uniformly bounded on compact subset of <span class="arithmatex">\(\mathbb{D}\)</span>, so by <a href="#Montel's Theorem">Montel's Theorem</a>, we have a subsequence <span class="arithmatex">\(f_{n_k}\)</span> converges uniformly to <span class="arithmatex">\(f\)</span> on the sompact subset. Since <span class="arithmatex">\(|f_n'(0)|\geq 1\)</span> (<span class="arithmatex">\(z\mapsto z\)</span> gives the minimum value of <span class="arithmatex">\(s\)</span>), so <span class="arithmatex">\(|f'(0)|\geq 1\)</span>, and <span class="arithmatex">\(f\)</span> is non-constant. By <a href="#Lemma 2 for limit function of injective holomorphic functions">Lemma 2 for limit function of injective holomorphic functions</a>, <span class="arithmatex">\(f\)</span> is injective. </p>
+<p>Apparantly <span class="arithmatex">\(f(0)=0\)</span>. And <span class="arithmatex">\(|f(z)|\leq 1\)</span> since it is the limit function, and by maximum modulus principle, <span class="arithmatex">\(|f(z)|&lt;1\)</span>. So <span class="arithmatex">\(f\in \mathcal{F}\)</span>, then <span class="arithmatex">\(|f_n'(0)|=s\)</span>.</p>
+<ul>
+<li>Prove the limit function <span class="arithmatex">\(f\)</span> is a conformal function from <span class="arithmatex">\(\Omega\)</span> to <span class="arithmatex">\(\mathbb{D}\)</span>, i.e. prove <span class="arithmatex">\(f\)</span> is surjective. We prove by contradiction. </li>
+</ul>
+<p>If <span class="arithmatex">\(f\)</span> is not surjective, then there exsits <span class="arithmatex">\(\alpha \in \mathbb{D}\)</span> such that <span class="arithmatex">\(f(z)\neq \alpha\)</span> for all <span class="arithmatex">\(z\in \Omega\)</span>. Choose <span class="arithmatex">\(\psi_\alpha\)</span>, an automorphism of <span class="arithmatex">\(\mathbb{D}\)</span>, such that <span class="arithmatex">\(\psi_\alpha\circ f\)</span> does not contain the origin. Use square root function <span class="arithmatex">\(g(z)=e^{\frac{1}{2}\log z}\)</span> to define</p>
+<div class="arithmatex">\[
+F=\psi_{g(\alpha)}\circ g\circ \psi_\alpha \circ f,
+\]</div>
+<p>which is injective and maps into <span class="arithmatex">\(\mathbb{D}\)</span>, since all the components are injective and map into <span class="arithmatex">\(\mathbb{D}\)</span>, and satisfies <span class="arithmatex">\(F(0)=0\)</span>. Let <span class="arithmatex">\(h(z)=z^2\)</span> to be the inverse of <span class="arithmatex">\(g\)</span>, then </p>
+<div class="arithmatex">\[
+f=\psi_\alpha^{-1}\circ h\circ \psi_{g(\alpha)}^{-1}\circ F:=\Phi\circ F
+\]</div>
+<p><span class="arithmatex">\(\Phi\)</span> also maps <span class="arithmatex">\(\mathbb{D}\)</span> into <span class="arithmatex">\(\mathbb{D}\)</span>, <span class="arithmatex">\(\Phi(0)=0\)</span>. But <span class="arithmatex">\(\Phi\)</span> is not injective since <span class="arithmatex">\(h\)</span> is not, so it is not a rotation, then by <a href="#Schwarz Lemma">Schwarz Lemma</a>, <span class="arithmatex">\(|\Phi'(0)|&lt;1\)</span>. So </p>
+<div class="arithmatex">\[
+|f'(0)|=|\Phi'(F(0))|\cdot |F'(0)|&lt;|F'(0)|
+\]</div>
+<p>which contradicts! (<span class="arithmatex">\(|f'(0)|=s\)</span> matters!)</p>
+<p>Then let <span class="arithmatex">\(\beta\)</span> to be the augument of <span class="arithmatex">\(f'(0)\)</span>, and let <span class="arithmatex">\(f_{rot}=e^{-i\beta}f\)</span> and we have <span class="arithmatex">\(f_{rot}'(0)&gt;0\)</span>. </p>
 </div>
 </div>
+</div>
+<p>Note that simple-connectivity occurs in using the logarithm.</p>
 <div class="admonition success">
 <p class="admonition-title">Corollary of RMT</p>
 <p>Any proper simply connected open subsets in <span class="arithmatex">\(\mathbb{C}\)</span> is conformally equivalent.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="riemann-mapping-theorem-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="riemann-mapping-theorem-proof">Proof</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+<h2 id="conformal-mappings-onto-polygons">Conformal mappings onto Polygons<a class="headerlink" href="#conformal-mappings-onto-polygons" title="Permanent link">&para;</a></h2>
+<div class="question">
+<p><strong>Example</strong>. Conformal mapping <span class="arithmatex">\(f(z)=z^\alpha\)</span> from <span class="arithmatex">\(\mathbb{H}\)</span> to sector, i.e.</p>
+<div class="arithmatex">\[
+\{z: 0&lt; \arg z&lt;\alpha \pi\},\quad \alpha\in (0,2).
+\]</div>
+<p>Write it as</p>
+<div class="arithmatex">\[
+z^\alpha=f(z)=\int_0^z f'(\zeta)d\zeta=\alpha \int_0^z \zeta^{-\beta}d\zeta.
+\]</div>
+<p>where <span class="arithmatex">\(\alpha+\beta=1\)</span>, and the integral is taken along any path in the upper half-plane.</p>
 </div>
+<div class="question">
+<p><strong>Example</strong>. Conformal mapping </p>
+<div class="arithmatex">\[
+f(z)=\int_0^z \frac{d\zeta}{(1-\zeta^2)^{1/2}},\quad z\in \mathbb{H}.
+\]</div>
+<p>where the integral is taken from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(z\)</span> along any path in the closed upper half-plane. We choose the branch for square root of <span class="arithmatex">\((1-\zeta^2)\)</span> that makes it holomorphic in the upper half-plane and positive when <span class="arithmatex">\(\zeta\in (-1,1)\)</span>. This is actually the inverse of <span class="arithmatex">\(\sin z\)</span>.</p>
 </div>
+<div class="question">
+<p><strong>Example</strong>. Consider <strong>Elliptic integrals</strong></p>
+<div class="arithmatex">\[
+f(z)=\int_0^z \frac{d\zeta}{[(1-\zeta^2)(1-k^2\zeta^2)]^{1/2}},\quad z\in \mathbb{H},
+\]</div>
+<p>where <span class="arithmatex">\(k\in (0,1)\)</span> and the branch is chosen to make it positive when <span class="arithmatex">\(\zeta\in (-1,1)\)</span>.</p>
+</div>
+<p>Using the above examples, we could define the Schwarz-Christoffel integral and prove it maps the real line to a polygonal line.</p>
+<div class="admonition info">
+<p class="admonition-title">General Schwarz-Christoffel integral</p>
+<p>Define Schwarz-Christoffel integral as</p>
+<div class="arithmatex">\[
+\begin{align}
+S(z)=\int_0^z \frac{d\zeta}{(\zeta-A_1)^{\beta_1}\cdots(\zeta-A_n)^{\beta_n}},\label{SC-integral}
+\end{align}
+\]</div>
+<p>where <span class="arithmatex">\(A_1&lt;\cdots&lt;A_n\)</span> are <span class="arithmatex">\(n\)</span> distinct points on the real axis. The exponents <span class="arithmatex">\(\beta_k\)</span> will be assumed to satisfy the conditions <span class="arithmatex">\(\beta_k&lt;1\)</span> for each <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(1&lt;\sum_{k=1}^n \beta_k\)</span>. </p>
+<p>The integrand in <span class="arithmatex">\(\ref{SC-integral}\)</span> is defined as follows. <span class="arithmatex">\((z-A_k)^{\beta_k}\)</span> is that branch which is positive when <span class="arithmatex">\(z=x\)</span> is real and <span class="arithmatex">\(x&gt;A_k\)</span>.</p>
 </div>
 
 
