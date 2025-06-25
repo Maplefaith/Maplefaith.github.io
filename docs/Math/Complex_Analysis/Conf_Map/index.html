@@ -832,6 +832,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Conformal mappings onto Polygons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boundary-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boundary behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mapping-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      The mapping formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4561,6 +4585,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Conformal mappings onto Polygons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boundary-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boundary behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mapping-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      The mapping formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4972,7 +5020,7 @@ f(z)=\int_0^z \frac{d\zeta}{(1-\zeta^2)^{1/2}},\quad z\in \mathbb{H}.
 <p>where the integral is taken from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(z\)</span> along any path in the closed upper half-plane. We choose the branch for square root of <span class="arithmatex">\((1-\zeta^2)\)</span> that makes it holomorphic in the upper half-plane and positive when <span class="arithmatex">\(\zeta\in (-1,1)\)</span>. This is actually the inverse of <span class="arithmatex">\(\sin z\)</span>.</p>
 </div>
 <div class="question">
-<p><strong>Example</strong>. Consider <strong>Elliptic integrals</strong></p>
+<p><strong>Example</strong>. Consider <strong>Elliptic integrals</strong> (varients of this kind occur in the calculation of arc-length of an ellipse) </p>
 <div class="arithmatex">\[
 f(z)=\int_0^z \frac{d\zeta}{[(1-\zeta^2)(1-k^2\zeta^2)]^{1/2}},\quad z\in \mathbb{H},
 \]</div>
@@ -4988,7 +5036,120 @@ S(z)=\int_0^z \frac{d\zeta}{(\zeta-A_1)^{\beta_1}\cdots(\zeta-A_n)^{\beta_n}},\l
 \end{align}
 \]</div>
 <p>where <span class="arithmatex">\(A_1&lt;\cdots&lt;A_n\)</span> are <span class="arithmatex">\(n\)</span> distinct points on the real axis. The exponents <span class="arithmatex">\(\beta_k\)</span> will be assumed to satisfy the conditions <span class="arithmatex">\(\beta_k&lt;1\)</span> for each <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(1&lt;\sum_{k=1}^n \beta_k\)</span>. </p>
-<p>The integrand in <span class="arithmatex">\(\ref{SC-integral}\)</span> is defined as follows. <span class="arithmatex">\((z-A_k)^{\beta_k}\)</span> is that branch which is positive when <span class="arithmatex">\(z=x\)</span> is real and <span class="arithmatex">\(x&gt;A_k\)</span>.</p>
+<p>The integrand in <span class="arithmatex">\(\ref{SC-integral}\)</span> is defined as follows. <span class="arithmatex">\((z-A_k)^{\beta_k}\)</span> is that branch which is positive when <span class="arithmatex">\(z=x\)</span> is real and <span class="arithmatex">\(x&gt;A_k\)</span>. That is, </p>
+<div class="arithmatex">\[
+(z-A_k)^{-\beta_k}= \begin{cases}(x-A_k)^{-\beta_k},\quad &amp;x&gt;A_k\\ (A_k - x)^{-\beta_k}e^{-i\pi \beta_k} ,\quad &amp;x&lt;A_k\end{cases}
+\]</div>
+<p><span class="arithmatex">\(\beta_k&lt;1\)</span> allows <span class="arithmatex">\((x-A_k)^{-\beta_k}\)</span> is integral near <span class="arithmatex">\(A_k\)</span>, so the integral <span class="arithmatex">\(S(x)\)</span> is continuous on the whole real axis. The simple connectedness of <span class="arithmatex">\(S'(z)\)</span> in <span class="arithmatex">\(\mathbb{C}-\bigcup_{k=1}^n\{A_k+iy: y\leq 0\}\)</span> allows it to have primitive and <span class="arithmatex">\(S(z)\)</span> is holomorphic in the region. The continuity of <span class="arithmatex">\(S\)</span> implies the integral path can be taken along any path in <span class="arithmatex">\(\mathbb{C}-\bigcup_{k=1}^n\{A_k+iy: y&lt; 0\}\)</span>.</p>
+<p>And estimation of growth order gives</p>
+<div class="arithmatex">\[
+\left|\prod_{k=1}^n\frac{1}{(z-A_k)^{-\beta_k}}\right|\leq c |z|^{-\sum_{k=1}^n \beta_k}
+\]</div>
+<p>so the condition <span class="arithmatex">\(\sum \beta_k&gt;1\)</span> allows the integral to converge at infinity, which is also independent of argument <span class="arithmatex">\(\theta\)</span>. We call the limit <span class="arithmatex">\(a_\infty\)</span>. Define <span class="arithmatex">\(a_k=S(A_k)\)</span> for each <span class="arithmatex">\(k\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Image of Schwarz-Christoffel integral</p>
+<p>For the above integral <span class="arithmatex">\(\ref{SC-integral}\)</span>, we have</p>
+<p>(i) If <span class="arithmatex">\(\sum \beta_k =2\)</span>, then the image is the polygonal region <span class="arithmatex">\(P\)</span> with polygon <span class="arithmatex">\(\mathfrak{p}\)</span> whose vertices are <span class="arithmatex">\(a_1,\cdots,a_n\)</span>, and <span class="arithmatex">\(a_\infty\)</span> lies on <span class="arithmatex">\([a_n, a_1]\)</span>. Moreover, the interior angle at <span class="arithmatex">\(a_k\)</span> is <span class="arithmatex">\(\pi \alpha_k\)</span> with <span class="arithmatex">\(\alpha_k=\pi(1-\beta_k)\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(\sum \beta_k \in (1,2)\)</span>, then the image is the polygonal region <span class="arithmatex">\(P\)</span> with polygon <span class="arithmatex">\(\mathfrak{p}\)</span> whose vertices are <span class="arithmatex">\(a_1,\cdots,a_n,a_\infty\)</span>. The interior angle at <span class="arithmatex">\(a_k\)</span> for <span class="arithmatex">\(k=1,\cdots,n\)</span> are the same as above, and the interior angle at <span class="arithmatex">\(a_\infty\)</span> is <span class="arithmatex">\(\pi \alpha_\infty\)</span> with <span class="arithmatex">\(\alpha_\infty=2-\sum \beta_k\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="conformal-mappings-onto-polygons-proof" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="conformal-mappings-onto-polygons-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We prove for <span class="arithmatex">\(\sum_k \beta_k=2\)</span>. For <span class="arithmatex">\(x\in [A_k,A_{k+1}]\)</span>, <span class="arithmatex">\(k=1,\cdots,k-1\)</span>, we consider the argument of <span class="arithmatex">\(S'(x)\)</span>, that is, </p>
+<div class="arithmatex">\[
+\arg S'(x)=\arg \left(\prod_{j&gt;k} (x-A_k)^{-\beta_k}\right)=\arg e^{-i \pi\sum \beta_k}=-\pi \sum \beta_k.
+\]</div>
+<p>So the image of <span class="arithmatex">\(S\)</span> on <span class="arithmatex">\([A_k,A_{k+1}]\)</span> is the linear line <span class="arithmatex">\([a_k, a_{k+1}]\)</span> with argument <span class="arithmatex">\(-\pi \sum \beta_k\)</span>. As for <span class="arithmatex">\(x&gt;A_n\)</span>, the above argument equals <span class="arithmatex">\(-2\pi\)</span>, so <span class="arithmatex">\([A_n,\infty]\)</span> is mapped into a linear line parallel to <span class="arithmatex">\(x\)</span> axis. Similar for <span class="arithmatex">\(x\in [-\infty, A_1]\)</span>.</p>
+<p>Same logic for <span class="arithmatex">\(\sum \beta_k&lt;2\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h3 id="boundary-behavior">Boundary behavior<a class="headerlink" href="#boundary-behavior" title="Permanent link">&para;</a></h3>
+<p>We consider a <strong>polygonal region</strong> <span class="arithmatex">\(P\)</span>, namely a bounded, simply connected open set whose boundary is a polygonal line <span class="arithmatex">\(\mathfrak{p}\)</span>. We refer to this <span class="arithmatex">\(\mathfrak{p}\)</span> as a <strong>polygon</strong>. To study conformal maps from <span class="arithmatex">\(\mathbb{H}\)</span> to <span class="arithmatex">\(P\)</span>, we first consider the conformal maps from <span class="arithmatex">\(\mathbb{D}\)</span> to <span class="arithmatex">\(P\)</span> and their boundary behavior.</p>
+<p><a id="Theorem of the boundary behavior of conformal map from the unit disc to polygon"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Theorem of the boundary behavior of conformal map from the unit disc to polygon</p>
+<p>If <span class="arithmatex">\(F:\mathbb{D}\rightarrow P\)</span> is a conformal mapping, then <span class="arithmatex">\(F\)</span> extends to a continuous bijection from the closure <span class="arithmatex">\(\overline{\mathbb{D}}\)</span> of the disc to the closure <span class="arithmatex">\(\overline{P}\)</span> of the polygon. In particular, <span class="arithmatex">\(F\)</span> gives rise to a bijection from the boundary of <span class="arithmatex">\(\mathbb{D}\)</span> to the boundary of <span class="arithmatex">\(P\)</span>.</p>
+</div>
+<p>To prove this, we have to make use of the following lemma.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma 1: </p>
+<p>Suppose <span class="arithmatex">\(z_0\)</span> is on the unit circle, for all small <span class="arithmatex">\(r\in (0,1/2)\)</span>, define <span class="arithmatex">\(C_r\)</span> be the circle centered at <span class="arithmatex">\(z_0\)</span> with radius <span class="arithmatex">\(r\)</span>. Given two points <span class="arithmatex">\(z_r\)</span> and <span class="arithmatex">\(z_r'\)</span> on <span class="arithmatex">\(C_r\)</span> and contained in the unit disc, let <span class="arithmatex">\(\rho(r)=|f(z_r)-f(z_r')|\)</span>, then there exsits a sequence of <span class="arithmatex">\(\{r_n\}\)</span> of radii tending to zero, and <span class="arithmatex">\(\lim\limits_{n\rightarrow \infty}\rho(r_n)=0\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="boundary-behavior-proof" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="boundary-behavior-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Show by contradiction.</p>
+<p>If not, then there exsit <span class="arithmatex">\(c&gt;0\)</span> and <span class="arithmatex">\(R\in (0,1/2)\)</span>, such that <span class="arithmatex">\(\rho(r)&gt;c\)</span> for all <span class="arithmatex">\(r\in (0,R]\)</span>. Choose a <span class="arithmatex">\(r\)</span>, and have a corresponding <span class="arithmatex">\(z_r\)</span> and <span class="arithmatex">\(z_r'\)</span> on the circle <span class="arithmatex">\(C_r\)</span> and contained in the unit disc. Define <span class="arithmatex">\(\alpha\subset C_r\)</span> to be the arc connecting <span class="arithmatex">\(z_r\)</span> and <span class="arithmatex">\(z_r'\)</span>, and parameterize it as <span class="arithmatex">\(z=z_0+re^{i\theta}\)</span>, with <span class="arithmatex">\(\theta\in (\theta_1(r), \theta_2(r))\)</span>, we have</p>
+<div class="arithmatex">\[
+f(z_r)-f(z_r')=\int_\alpha f'(\zeta)d\zeta=\int_{\theta_1{r}}^{\theta_2(r)} |f'(z_0+re^{i\theta})|re^{i\theta}d\theta. 
+\]</div>
+<p>Take an absolute value and by Cauchy-Schwarz inequation</p>
+<div class="arithmatex">\[
+\begin{align*}
+\rho(r)&amp;\leq \int_{\theta_1{r}}^{\theta_2(r)} |f'(z)|rd\theta\\
+&amp; \leq \left(\int_{\theta_1{r}}^{\theta_2(r)} |f'(z)|^2 rd\theta\right)^{1/2}\left(\int_{\theta_1{r}}^{\theta_2(r)} rd\theta\right)^{1/2}\\
+\frac{\rho(r)^2}{r} &amp;\leq \left(\int_{\theta_1{r}}^{\theta_2(r)} |f'(z)|^2 d\theta\right)\left(\int_{\theta_1{r}}^{\theta_2(r)} d\theta\right)\\
+&amp;\leq 2\pi \int_{\theta_1{r}}^{\theta_2(r)} |f'(z)|^2 d\theta\\
+\int_0^R \frac{\rho(r)^2}{r} dr &amp;\leq 2\pi \int_0^Rdr\int_{\theta_1{r}}^{\theta_2(r)} |f'(z)|^2 d\theta\\
+&amp;\leq 2\pi \int_0^Rdr\int_0^{2\pi} |f'(z)|^2 d\theta=\iint_{f(D_r)}dxdy.
+\end{align*}
+\]</div>
+<p>The left hand side is larger than <span class="arithmatex">\(c^2\int_0^R \frac{1}{r}dr=\infty\)</span>, while the right hand side is a finite number (actually the area of <span class="arithmatex">\(f(D_r)\)</span>), which contradicts!</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Lemma 2: Existence of value on the boundary of unit disc</p>
+<p>Suppose <span class="arithmatex">\(z_0\)</span> is on the unit circle, and <span class="arithmatex">\(\{z_n\}_{n\geq 1}\subset \mathbb{D}\)</span> tend to <span class="arithmatex">\(z_0\)</span>, then <span class="arithmatex">\(\{F(z_n)\}\)</span> has a limit on the boundary of <span class="arithmatex">\(P\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="boundary-behavior-proof_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="boundary-behavior-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Show by contradiction.</p>
+<p>If not, then there exist <span class="arithmatex">\(\{z_n\}\)</span> and <span class="arithmatex">\(\{z_n'\}\)</span> that both converges to <span class="arithmatex">\(z_0\)</span> but <span class="arithmatex">\(\{F(z_n)\}\)</span> and <span class="arithmatex">\(\{F(z_n')\}\)</span> converges to two distinct values, denoted by <span class="arithmatex">\(\zeta\)</span> and <span class="arithmatex">\(\zeta'\)</span> respectively. Since <span class="arithmatex">\(F\)</span> is conformal, then <span class="arithmatex">\(\zeta\)</span> and <span class="arithmatex">\(\zeta'\)</span> lie on the boundary of <span class="arithmatex">\(P\)</span>. Choose two two small isolated disc <span class="arithmatex">\(D\)</span> and <span class="arithmatex">\(D'\)</span> with a distance <span class="arithmatex">\(d&gt;0\)</span> that centered at <span class="arithmatex">\(\zeta\)</span> and <span class="arithmatex">\(\zeta'\)</span>. For <span class="arithmatex">\(n\)</span> large enough, <span class="arithmatex">\(F(z_n)\in D\)</span> and <span class="arithmatex">\(F(z_n')\in D'\)</span>. There must exist two smooth curve <span class="arithmatex">\(\gamma\)</span> which connect all <span class="arithmatex">\(F(z_n)\)</span> and ends at <span class="arithmatex">\(\zeta\)</span>, and similar to curve <span class="arithmatex">\(\gamma'\)</span>. </p>
+<p>Let <span class="arithmatex">\(\lambda=F^{-1}(\gamma)\)</span> and <span class="arithmatex">\(\lambda'=F^{-1}(\gamma')\)</span>, both of which are smooth and contain infinitely many points of <span class="arithmatex">\(\{z_n\}\)</span> and <span class="arithmatex">\(\{z_n'\}\)</span> respectively. For small enough <span class="arithmatex">\(r\)</span>, let <span class="arithmatex">\(z_r=\lambda \cap C_r\)</span>, <span class="arithmatex">\(z_r'=\lambda'\cap C_r\)</span>, so by lemma 1, we have <span class="arithmatex">\(\rho(r)\rightarrow 0\)</span> as <span class="arithmatex">\(r\rightarrow 0\)</span>, which contradicts <span class="arithmatex">\(|F(z_n)-F(z_n')|&gt;d\)</span> for large <span class="arithmatex">\(n\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Now we have prove the existence of </p>
+<div class="arithmatex">\[
+\lim_{z\rightarrow z_0}F(z)
+\]</div>
+<p>for <span class="arithmatex">\(z_0\)</span> on the unit circle. Then we define <span class="arithmatex">\(F(z_0)\)</span> to be the above limit value.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma 3</p>
+<p>The conformal mapping <span class="arithmatex">\(F\)</span> extends to a continuous function from <span class="arithmatex">\(\overline{\mathbb{D}}\)</span> to <span class="arithmatex">\(\overline{P}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="boundary-behavior-proof_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="boundary-behavior-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We only consider the continuity of <span class="arithmatex">\(F\)</span> from <span class="arithmatex">\(\overline{\mathbb{D}}\)</span> to <span class="arithmatex">\(\overline{P}\)</span>. By continuity of <span class="arithmatex">\(F\)</span> on <span class="arithmatex">\(\mathbb{D}\)</span>, <span class="arithmatex">\(\forall z_0\)</span> on the unit circle, <span class="arithmatex">\(\forall \epsilon&gt;0\)</span>, <span class="arithmatex">\(\exists \delta&gt;0\)</span>, such that <span class="arithmatex">\(|F(z_0)-F(z)|&lt;\varepsilon/2\)</span> whenever <span class="arithmatex">\(z\in \mathbb{D}\cap D_\delta(z_0)\)</span>. So for <span class="arithmatex">\(z\)</span> on the boundary of the disc, we also choose <span class="arithmatex">\(z\in \partial \mathbb{D}\cap D_\delta(z_0)\)</span>, then there must exist <span class="arithmatex">\(w\in \mathbb{D}\cap D_\delta(z_0)\cap D_\delta(z)\)</span>, such that <span class="arithmatex">\(|F(z)-F(w)|&lt;\varepsilon/2\)</span> and <span class="arithmatex">\(|F(z_0)-F(w)|&lt;\varepsilon\)</span>. Then by triangle inequation we complete the proof.</p>
+</div>
+</div>
+</div>
+<p>Now we give the proof of <a href="#Theorem of the boundary behavior of conformal map from the unit disc to polygon">Theorem of the boundary behavior of conformal map from the unit disc to polygon</a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="boundary-behavior-proof-for-theorem-of-the-boundary-behavior-of-conformal-map-from-the-unit-disc-to-polygon" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="boundary-behavior-proof-for-theorem-of-the-boundary-behavior-of-conformal-map-from-the-unit-disc-to-polygon">Proof for Theorem of the boundary behavior of conformal map from the unit disc to polygon</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We could apply the same logic to the inverse <span class="arithmatex">\(G\)</span> of <span class="arithmatex">\(F\)</span>, to show that <span class="arithmatex">\(G\)</span> could extend to a continuous bijection from <span class="arithmatex">\(\overline{P}\)</span> to <span class="arithmatex">\(\overline{\mathbb{D}}\)</span>. Then we only need to show that the extension of <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(G\)</span> are the inverse of each other. Given <span class="arithmatex">\(z_0\in \partial \mathbb{D}\)</span>, there exsit <span class="arithmatex">\(\{z_k\}\subset \mathbb{D}\)</span>, such that <span class="arithmatex">\(z_k\rightarrow z_0\)</span>, and we have <span class="arithmatex">\(G(F(z_k))=z_k\)</span>, and then take the limit we have <span class="arithmatex">\(G(f(z_0))=z_0\)</span>. The same logic for <span class="arithmatex">\(F(G(w_k))\rightarrow F(G(w_0))=w_0\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h3 id="the-mapping-formula">The mapping formula<a class="headerlink" href="#the-mapping-formula" title="Permanent link">&para;</a></h3>
+<p>Now we turn to the actual formula for a conformal map from <span class="arithmatex">\(\mathbb{H}\)</span> to <span class="arithmatex">\(P\)</span>. The existence for <span class="arithmatex">\(F\)</span> is guaranteed by <a href="#riemann-mapping-theorem">Riemann Mapping Theorem</a>. Here known info is the given <span class="arithmatex">\(P\)</span> with its boundary <span class="arithmatex">\(\mathfrak{p}\)</span>, whose vertices ordered consecutively <span class="arithmatex">\(a_1,\cdots, a_n\)</span>, with <span class="arithmatex">\(n\geq 3\)</span>. Now we </p>
+<div class="admonition success">
+<p class="admonition-title">Formula</p>
+<p>There exist complex number <span class="arithmatex">\(c_1\)</span> and <span class="arithmatex">\(c_2\)</span> such that for a known conformal map <span class="arithmatex">\(F:\mathbb{H}\rightarrow P\)</span> could be given by</p>
+<div class="arithmatex">\[
+F(z)=c_1S(z)+c_2,
+\]</div>
+<p>where <span class="arithmatex">\(S(z)\)</span> is the Schwarz-Christoffel integral formula <span class="arithmatex">\(\ref{SC-integral}\)</span>.</p>
 </div>
 
 
