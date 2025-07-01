@@ -2289,6 +2289,8 @@
       
         
       
+        
+      
     
     
       
@@ -2454,6 +2456,27 @@
   
   <span class="md-ellipsis">
     Stationary Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../StochasticProcesses/Martingale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingale
   </span>
   
 
@@ -5040,7 +5063,7 @@ S(z)=\int_0^z \frac{d\zeta}{(\zeta-A_1)^{\beta_1}\cdots(\zeta-A_n)^{\beta_n}},\l
 <div class="arithmatex">\[
 (z-A_k)^{-\beta_k}= \begin{cases}(x-A_k)^{-\beta_k},\quad &amp;x&gt;A_k\\ (A_k - x)^{-\beta_k}e^{-i\pi \beta_k} ,\quad &amp;x&lt;A_k\end{cases}
 \]</div>
-<p><span class="arithmatex">\(\beta_k&lt;1\)</span> allows <span class="arithmatex">\((x-A_k)^{-\beta_k}\)</span> is integral near <span class="arithmatex">\(A_k\)</span>, so the integral <span class="arithmatex">\(S(x)\)</span> is continuous on the whole real axis. The simple connectedness of <span class="arithmatex">\(S'(z)\)</span> in <span class="arithmatex">\(\mathbb{C}-\bigcup_{k=1}^n\{A_k+iy: y\leq 0\}\)</span> allows it to have primitive and <span class="arithmatex">\(S(z)\)</span> is holomorphic in the region. The continuity of <span class="arithmatex">\(S\)</span> implies the integral path can be taken along any path in <span class="arithmatex">\(\mathbb{C}-\bigcup_{k=1}^n\{A_k+iy: y&lt; 0\}\)</span>.</p>
+<p><span class="arithmatex">\(\beta_k&lt;1\)</span> allows <span class="arithmatex">\((x-A_k)^{-\beta_k}\)</span> is integral near <span class="arithmatex">\(A_k\)</span>, so the integral <span class="arithmatex">\(S(x)\)</span> is continuous on the whole real axis. The simple connectivity of <span class="arithmatex">\(S'(z)\)</span> in <span class="arithmatex">\(\mathbb{C}-\bigcup_{k=1}^n\{A_k+iy: y\leq 0\}\)</span> allows it to have primitive and <span class="arithmatex">\(S(z)\)</span> is holomorphic in the region. The continuity of <span class="arithmatex">\(S\)</span> implies the integral path can be taken along any path in <span class="arithmatex">\(\mathbb{C}-\bigcup_{k=1}^n\{A_k+iy: y&lt; 0\}\)</span>.</p>
 <p>And estimation of growth order gives</p>
 <div class="arithmatex">\[
 \left|\prod_{k=1}^n\frac{1}{(z-A_k)^{-\beta_k}}\right|\leq c |z|^{-\sum_{k=1}^n \beta_k}
@@ -5142,7 +5165,8 @@ f(z_r)-f(z_r')=\int_\alpha f'(\zeta)d\zeta=\int_{\theta_1{r}}^{\theta_2(r)} |f'(
 </div>
 </div>
 <h3 id="the-mapping-formula">The mapping formula<a class="headerlink" href="#the-mapping-formula" title="Permanent link">&para;</a></h3>
-<p>Now we turn to the actual formula for a conformal map from <span class="arithmatex">\(\mathbb{H}\)</span> to <span class="arithmatex">\(P\)</span>. The existence for <span class="arithmatex">\(F\)</span> is guaranteed by <a href="#riemann-mapping-theorem">Riemann Mapping Theorem</a>. Here known info is the given <span class="arithmatex">\(P\)</span> with its boundary <span class="arithmatex">\(\mathfrak{p}\)</span>, whose vertices ordered consecutively <span class="arithmatex">\(a_1,\cdots, a_n\)</span>, with <span class="arithmatex">\(n\geq 3\)</span>. Now we </p>
+<p>Now we turn to the actual formula for a conformal map from <span class="arithmatex">\(\mathbb{H}\)</span> to <span class="arithmatex">\(P\)</span>. The existence for <span class="arithmatex">\(F\)</span> is guaranteed by <a href="#riemann-mapping-theorem">Riemann Mapping Theorem</a>. For <span class="arithmatex">\(f:\mathbb{D}\rightarrow \mathbb{H}\)</span>, <span class="arithmatex">\(f(w)=i(1-w)/(1+w)\)</span>, the point at <span class="arithmatex">\(-1\)</span> on the unit circle corresponds to <span class="arithmatex">\(\infty\)</span> on the upper half-plane. Here known info is the given <span class="arithmatex">\(P\)</span> with its boundary <span class="arithmatex">\(\mathfrak{p}\)</span>, whose vertices ordered consecutively <span class="arithmatex">\(a_1,\cdots, a_n\)</span>, with <span class="arithmatex">\(n\geq 3\)</span>.</p>
+<p>In <a href="#boundary-behavior">Boundary behavior</a>, we have discuss the boundary behavior of a conformal mapping from <span class="arithmatex">\(\mathbb{H}\rightarrow P\)</span>. We first consider <span class="arithmatex">\(P\)</span> polygon <span class="arithmatex">\(\mathfrak{p}\)</span>, of which none of the vertices correspond to the point at infinity. Therefore, there exist real number <span class="arithmatex">\(A_1,\cdots, A_n\)</span> such that <span class="arithmatex">\(F(A_k)=a_k\)</span>. Since</p>
 <div class="admonition success">
 <p class="admonition-title">Formula</p>
 <p>There exist complex number <span class="arithmatex">\(c_1\)</span> and <span class="arithmatex">\(c_2\)</span> such that for a known conformal map <span class="arithmatex">\(F:\mathbb{H}\rightarrow P\)</span> could be given by</p>
@@ -5150,6 +5174,45 @@ f(z_r)-f(z_r')=\int_\alpha f'(\zeta)d\zeta=\int_{\theta_1{r}}^{\theta_2(r)} |f'(
 F(z)=c_1S(z)+c_2,
 \]</div>
 <p>where <span class="arithmatex">\(S(z)\)</span> is the Schwarz-Christoffel integral formula <span class="arithmatex">\(\ref{SC-integral}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="the-mapping-formula-proof" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="the-mapping-formula-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using Schwarz reflection principle to extend the upper half-plane to the two-way strip. We aim to formulate a linear line on real axis. </p>
+<p>For two segment <span class="arithmatex">\([A_{k-1}, A_{k}]\)</span> and <span class="arithmatex">\([A_{k}, A_{k+1}]\)</span> on the real axis, their image of <span class="arithmatex">\(F\)</span> is two line with vertices <span class="arithmatex">\(a_{k-1}, a_{k}\)</span> and <span class="arithmatex">\(a_{k+1}\)</span> with inner angle <span class="arithmatex">\(\alpha_k\)</span> at <span class="arithmatex">\(a_k\)</span>. Use</p>
+<div class="arithmatex">\[
+h_k(z)=(F(z)-a_k)^{1/\alpha_k}.
+\]</div>
+<p>Then this function maps <span class="arithmatex">\([A_{k-1}, A_{k}]\)</span> and <span class="arithmatex">\([A_{k}, A_{k+1}]\)</span> to a single line <span class="arithmatex">\(L_k\)</span>. By reflection, <span class="arithmatex">\(h_k\)</span> is holomorphic in the whole strip <span class="arithmatex">\(\text{Re}(A_{k-1})&lt;\text{Re}(z)&lt;\text{Re}(A_k+1)\)</span>. We claim first <span class="arithmatex">\(h_k'\)</span> does not vanish on the whole strip. Since <span class="arithmatex">\(F'(z)\neq 0\)</span> on the upper strip, then by</p>
+<div class="arithmatex">\[
+h_k'(z)=1/\alpha_k (F(z)-a_k)^{1/\alpha_k-1}F'(z),
+\]</div>
+<p><span class="arithmatex">\(h'(z)\neq 0\)</span> holds for all <span class="arithmatex">\(z\)</span> in the upper strip. Since <span class="arithmatex">\(F\)</span> is injective up to the real axis, so is <span class="arithmatex">\(h_k\)</span>, which guarantees <span class="arithmatex">\(h'(x)\neq 0\)</span> on real line <span class="arithmatex">\([A_{k-1}, A_{k+1}]\)</span>. </p>
+<p>By taking derivative, we have <span class="arithmatex">\(F=h_k^{\alpha_k}+a_k\)</span>, <span class="arithmatex">\(F'=\alpha_k h_k^{\alpha_k-1}h'_k\)</span>, <span class="arithmatex">\(F'' =\alpha_k h_k^{\alpha_k-1}h''_k+\alpha_k  (\alpha_k-1) h_k^{\alpha_k-2}h'^2_k\)</span>.</p>
+<p>so </p>
+<div class="arithmatex">\[
+\frac{F''(z)}{F'(z)}=\frac{h''_k}{h'_k} + \frac{(\alpha_k-1)h'_k}{h_k}
+\]</div>
+<p>we rewrite it as (single pole at <span class="arithmatex">\(A_k\)</span> and use argument principle)</p>
+<div class="arithmatex">\[
+\frac{F''(z)}{F'(z)}=\frac{\alpha_k-1}{z-A_k} + E_k(z)
+\]</div>
+<p>where <span class="arithmatex">\(E_k(z)\)</span> is a holomorphic function on the corresponding strip. So </p>
+<div class="arithmatex">\[
+\frac{F''(z)}{F'(z)} + \sum_{k=1}^n\frac{1-\alpha_k}{z-A_k}
+\]</div>
+<p>is an entire function, then by Liouville's theorem, we have </p>
+<div class="arithmatex">\[
+\frac{F''(z)}{F'(z)} = - \sum_{k=1}^n\frac{\beta_k}{z-A_k}
+\]</div>
+<p>Denote <span class="arithmatex">\(Q(z)=c(z-A_1)^{-\beta_1}\cdots (z-A_n)^{-\beta_n}\)</span>, then <span class="arithmatex">\(\frac{Q'(z)}{Q(z)}\)</span> also equal the right hand side of the above equation. So</p>
+<div class="arithmatex">\[
+\frac{d}{dz}\left(\frac{F'(z)}{Q(z)}\right)=0
+\]</div>
+<p>And an integration gives the result.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
 </div>
 
 
