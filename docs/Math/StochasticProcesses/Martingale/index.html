@@ -2394,6 +2394,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#radon-nikodym-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radon-Nikodym Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conditional-expectation" class="md-nav__link">
     <span class="md-ellipsis">
       Conditional Expectation
@@ -4476,6 +4485,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#radon-nikodym-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radon-Nikodym Theorem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conditional-expectation" class="md-nav__link">
     <span class="md-ellipsis">
       Conditional Expectation
@@ -4507,6 +4525,32 @@
 </ul>
 </div>
 <p>If you choose to stop playing at some bounded time <span class="arithmatex">\(N\)</span>, then your expected winnings <span class="arithmatex">\(EX_N\)</span> are equal to your initial fortune <span class="arithmatex">\(X_0\)</span>.</p>
+<h2 id="radon-nikodym-theorem">Radon-Nikodym Theorem<a class="headerlink" href="#radon-nikodym-theorem" title="Permanent link">&para;</a></h2>
+<p>We shall talk about signed measure, which differs from measure in that it takes values on <span class="arithmatex">\((-\infty,\infty]\)</span> or <span class="arithmatex">\([-\infty,\infty)\)</span>. It cannot be both <span class="arithmatex">\(-\infty\)</span> or <span class="arithmatex">\(\infty\)</span> since it would cause <span class="arithmatex">\(\alpha(A)+\alpha(B)\)</span> to be ambiguous. We ingore the second situation for simplicity.</p>
+<p>Here gives some examples about signed measure.</p>
+<div class="question">
+<p><strong>Example</strong>. </p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. </p>
+</div>
+<p>A set <span class="arithmatex">\(A\)</span> is positive if for all its subset <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\alpha(E)\geq 0\)</span>. A set <span class="arithmatex">\(A\)</span> is positive if for all its subset <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\alpha(E)\leq 0\)</span>. </p>
+<div class="admonition success">
+<p class="admonition-title">Hahn decomposition</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="radon-nikodym-theorem-proof" name="__tabbed_1" type="radio" /><input id="radon-nikodym-theorem-lemma-1" name="__tabbed_1" type="radio" /><input id="radon-nikodym-theorem-lemma-2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof">Proof</label><label for="radon-nikodym-theorem-lemma-1">Lemma 1</label><label for="radon-nikodym-theorem-lemma-2">Lemma 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Jordan decomposition</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Lebesgue decomposition</p>
+</div>
 <h2 id="conditional-expectation">Conditional Expectation<a class="headerlink" href="#conditional-expectation" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Definition</p>
@@ -4515,6 +4559,34 @@
 <p>(ii) for all <span class="arithmatex">\(A\in \mathcal{F}\)</span>, <span class="arithmatex">\(\int_A XdP=\int_A Y dP\)</span>.</p>
 </div>
 <p>The first thing to be settled is that the conditional expectation exists and is unique.</p>
+<div class="admonition success">
+<p class="admonition-title">Existence &amp; Uniqueness</p>
+<p><span class="arithmatex">\(E(X|\mathcal{F})\)</span> exists and is unique.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="conditional-expectation-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="conditional-expectation-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(i) We show that <span class="arithmatex">\(Y=E(X|\mathcal{F})\)</span> is <span class="arithmatex">\(\mathcal{F}\)</span> integrable. Let <span class="arithmatex">\(A=\{Y&gt;0\}\in \mathcal{F}\)</span>, then</p>
+<div class="arithmatex">\[
+\int_A YdP = \int_A X dP \leq \int_A |X| dP
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\int_{A^c} -Y dP = \int_{A^c} -XdP\leq \int_{A^c} |X|dP
+\]</div>
+<p>adding both together, we have <span class="arithmatex">\(E|Y|\leq E|X|&lt;\infty\)</span>.</p>
+<p>(ii) Assume <span class="arithmatex">\(Y'\)</span> also satisfies the above definition. Let <span class="arithmatex">\(A=\{Y-Y'\geq \varepsilon&gt;0\}\in \mathcal{F}\)</span>, then </p>
+<div class="arithmatex">\[
+0=\int_A X-XdP=\int_A Y-Y'dP\geq \varepsilon P(A)
+\]</div>
+<p>which gives <span class="arithmatex">\(P(A)=0\)</span>, meaning <span class="arithmatex">\(Y\leq Y'\)</span>, a.s., and another direction gives <span class="arithmatex">\(Y=Y'\)</span>, a.s.. So the uniqueness is an equivalent category in a sense of zero-measure. </p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary: </p>
+<p>If <span class="arithmatex">\(X_1=X_2\)</span> on <span class="arithmatex">\(B\in \mathcal{F}\)</span>, then <span class="arithmatex">\(E(X_1|\mathcal{F})=E(X_2|\mathcal{F})\)</span> a.e. on <span class="arithmatex">\(B\)</span>.</p>
+</div>
 
 
 
