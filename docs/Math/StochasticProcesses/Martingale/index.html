@@ -4526,30 +4526,83 @@
 </div>
 <p>If you choose to stop playing at some bounded time <span class="arithmatex">\(N\)</span>, then your expected winnings <span class="arithmatex">\(EX_N\)</span> are equal to your initial fortune <span class="arithmatex">\(X_0\)</span>.</p>
 <h2 id="radon-nikodym-theorem">Radon-Nikodym Theorem<a class="headerlink" href="#radon-nikodym-theorem" title="Permanent link">&para;</a></h2>
-<p>We shall talk about signed measure, which differs from measure in that it takes values on <span class="arithmatex">\((-\infty,\infty]\)</span> or <span class="arithmatex">\([-\infty,\infty)\)</span>. It cannot be both <span class="arithmatex">\(-\infty\)</span> or <span class="arithmatex">\(\infty\)</span> since it would cause <span class="arithmatex">\(\alpha(A)+\alpha(B)\)</span> to be ambiguous. We ingore the second situation for simplicity.</p>
+<p>We shall talk about signed measure, which differs from measure in that it takes values on <span class="arithmatex">\((-\infty,\infty]\)</span> or <span class="arithmatex">\([-\infty,\infty)\)</span>. It cannot be both <span class="arithmatex">\(-\infty\)</span> or <span class="arithmatex">\(\infty\)</span> since it would cause <span class="arithmatex">\(\alpha(A)+\alpha(B)\)</span> to be ambiguous. We ignore the second situation for simplicity.</p>
 <p>Here gives some examples about signed measure.</p>
+<p><a id="integral-signed-measure"></a></p>
 <div class="question">
-<p><strong>Example</strong>. </p>
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(\mu\)</span> is a measure, <span class="arithmatex">\(f\)</span> is a function with <span class="arithmatex">\(\int_A f^- d\mu&lt;\infty\)</span>, define </p>
+<div class="arithmatex">\[
+\alpha(A):=\int_A f d\mu.
+\]</div>
+<p>Show that <span class="arithmatex">\(\alpha\)</span> is a signed measure.</p>
 </div>
 <div class="question">
-<p><strong>Example</strong>. </p>
+<p><strong>Example</strong>. Assume <span class="arithmatex">\(\mu_1\)</span> and <span class="arithmatex">\(\mu_2\)</span> are measures with <span class="arithmatex">\(\mu_2(\Omega)&lt;\infty\)</span>, define </p>
+<div class="arithmatex">\[
+\alpha(A):=\mu_1(A)-\mu_2(A).
+\]</div>
+<p>Show that <span class="arithmatex">\(\alpha\)</span> is a signed measure.</p>
 </div>
 <p>A set <span class="arithmatex">\(A\)</span> is positive if for all its subset <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\alpha(E)\geq 0\)</span>. A set <span class="arithmatex">\(A\)</span> is positive if for all its subset <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\alpha(E)\leq 0\)</span>. </p>
+<div class="question">
+<p><strong>Example</strong>. Show that In <a href="#integral-signed-measure">Example for integral-signed-measure</a>, <span class="arithmatex">\(A\)</span> is positive iff </p>
+<div class="arithmatex">\[
+\mu(A\cap \{f(x)&lt;0\})=0.
+\]</div>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Hahn decomposition</p>
+<p>Assume <span class="arithmatex">\(\alpha\)</span> is a signed measure. There exists a positive set <span class="arithmatex">\(A\)</span> and a negative set <span class="arithmatex">\(B\)</span> such that <span class="arithmatex">\(\Omega=A\cup B\)</span> and <span class="arithmatex">\(A\cap B=\varnothing\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="radon-nikodym-theorem-proof" name="__tabbed_1" type="radio" /><input id="radon-nikodym-theorem-lemma-1" name="__tabbed_1" type="radio" /><input id="radon-nikodym-theorem-lemma-2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof">Proof</label><label for="radon-nikodym-theorem-lemma-1">Lemma 1</label><label for="radon-nikodym-theorem-lemma-2">Lemma 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>(i) Every subset of a positive set is positive.</p>
+<p>(ii) If <span class="arithmatex">\(\{A_n\}_{n\geq 1}\subset \Omega\)</span> are positive sets, then <span class="arithmatex">\(A:=\bigcup_{n} A_n\)</span> is also a postive set.</p>
+</div>
+<div class="tabbed-block">
+<p>Assume <span class="arithmatex">\(E\)</span> is a measurable set with <span class="arithmatex">\(\alpha(E)&lt;0\)</span>, then there exists a subset of <span class="arithmatex">\(E\)</span>, denoted by <span class="arithmatex">\(F\)</span>, which satisfies <span class="arithmatex">\(F\)</span> is a negative set with <span class="arithmatex">\(\alpha(F)&lt;0\)</span>.</p>
 </div>
 </div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Show that in <a href="#integral-signed-measure">example for integral-signed-measure</a>, <span class="arithmatex">\(A\)</span> could be</p>
+<div class="arithmatex">\[
+\{f(x)&gt;0\}\subset A \subset \{f(x)\geq 0\}. \quad a.e.
+\]</div>
+</div>
+<p>Two measures <span class="arithmatex">\(\mu_1\)</span>, <span class="arithmatex">\(\mu_2\)</span> are said to be singular with each other, if there exsits a set <span class="arithmatex">\(A\)</span> with <span class="arithmatex">\(\mu_1(A)=0\)</span> and <span class="arithmatex">\(\mu_2(A^c)=0\)</span>.</p>
 <div class="admonition success">
 <p class="admonition-title">Jordan decomposition</p>
+<p>Assume <span class="arithmatex">\(\alpha\)</span> is a signed measure, then there exist unique measures <span class="arithmatex">\(\alpha_+\)</span> and <span class="arithmatex">\(\alpha_-\)</span> such that <span class="arithmatex">\(\alpha=\alpha_+-\alpha_-\)</span> with <span class="arithmatex">\(\alpha_+\)</span> and <span class="arithmatex">\(\alpha_-\)</span> mutually singular. </p>
 </div>
+<p><a id="Lebesgue decomposition"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Lebesgue decomposition</p>
+<p>Assume <span class="arithmatex">\(\nu\)</span>, <span class="arithmatex">\(\mu\)</span> are <span class="arithmatex">\(\sigma\)</span>-finite measure, then there exsits <span class="arithmatex">\(\nu_r\)</span> and <span class="arithmatex">\(\nu_s\)</span> such that <span class="arithmatex">\(\nu=\nu_r+\nu_s\)</span>, <span class="arithmatex">\(\nu_s\)</span> is singular with respect to <span class="arithmatex">\(\mu\)</span>, and </p>
+<div class="arithmatex">\[
+\nu_r(E)=\int_E g d\mu.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="radon-nikodym-theorem-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>We call measure <span class="arithmatex">\(\nu\)</span> is absolutely continuous with measure <span class="arithmatex">\(\mu\)</span>, if <span class="arithmatex">\(\mu(E)=0\)</span> implies <span class="arithmatex">\(\nu(E)=0\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Radon-Nikodym Theorem</p>
+<p>Assume <span class="arithmatex">\(\nu\)</span>, <span class="arithmatex">\(\mu\)</span> are <span class="arithmatex">\(\sigma\)</span>-finite measure, and <span class="arithmatex">\(\nu\)</span> is absolutely continuous with respect to <span class="arithmatex">\(\mu\)</span>, then there exists a <span class="arithmatex">\(g&gt;0\)</span>, such that <span class="arithmatex">\(\nu(E)=\int_E g\mu\)</span>. And for uniqueness, it is a equivalent category that <span class="arithmatex">\(g=h\)</span>, <span class="arithmatex">\(\mu, a.e.\)</span></p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="radon-nikodym-theorem-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By <a href="#Lebesgue decomposition">Lebesgue decomposition</a>, we have two measure <span class="arithmatex">\(\nu_r\)</span> and <span class="arithmatex">\(\nu_s\)</span>, with <span class="arithmatex">\(\nu_s\)</span> singular with respect to <span class="arithmatex">\(\mu\)</span>, <span class="arithmatex">\(\nu_r(E)=\int_E g d\mu\)</span>. </p>
+<p>We first show that <span class="arithmatex">\(\mu_s\equiv 0\)</span>. Indeed, since <span class="arithmatex">\(\nu\)</span> is absolutely continuous with <span class="arithmatex">\(\mu\)</span>, then for <span class="arithmatex">\(A\)</span> which follows that <span class="arithmatex">\(\nu_s(A^c)=0\)</span> and <span class="arithmatex">\(\mu(A)=0\)</span>, it follows that <span class="arithmatex">\(\nu(A)=0\)</span>, so <span class="arithmatex">\(\nu_s(A)=0\)</span>, meaning <span class="arithmatex">\(\nu_s\equiv 0\)</span>. So <span class="arithmatex">\(\nu=\nu_r\)</span>. </p>
+<p>For uniqueness, suppose <span class="arithmatex">\(g\)</span> and <span class="arithmatex">\(h\)</span> both follows that <span class="arithmatex">\(\nu(E)=\int_E g d\mu=\int_E h d\mu\)</span>, then <span class="arithmatex">\(\int_E g-h d\mu\)</span>. Choose <span class="arithmatex">\(E=\{g&lt;h, g\leq n\}\)</span> for each <span class="arithmatex">\(n\)</span>, then we have <span class="arithmatex">\(\mu(g&lt;h, g\leq n)=0\)</span> for each <span class="arithmatex">\(n\)</span>. Similar logic gives <span class="arithmatex">\(\mu(g&gt;h, h\leq n)=0\)</span> for each <span class="arithmatex">\(n\)</span>. By union together, and gives the result.</p>
+</div>
+</div>
 </div>
 <h2 id="conditional-expectation">Conditional Expectation<a class="headerlink" href="#conditional-expectation" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
@@ -4563,7 +4616,7 @@
 <p class="admonition-title">Existence &amp; Uniqueness</p>
 <p><span class="arithmatex">\(E(X|\mathcal{F})\)</span> exists and is unique.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="conditional-expectation-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="conditional-expectation-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="conditional-expectation-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="conditional-expectation-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>(i) We show that <span class="arithmatex">\(Y=E(X|\mathcal{F})\)</span> is <span class="arithmatex">\(\mathcal{F}\)</span> integrable. Let <span class="arithmatex">\(A=\{Y&gt;0\}\in \mathcal{F}\)</span>, then</p>
