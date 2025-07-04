@@ -4526,7 +4526,14 @@
 </div>
 <p>If you choose to stop playing at some bounded time <span class="arithmatex">\(N\)</span>, then your expected winnings <span class="arithmatex">\(EX_N\)</span> are equal to your initial fortune <span class="arithmatex">\(X_0\)</span>.</p>
 <h2 id="radon-nikodym-theorem">Radon-Nikodym Theorem<a class="headerlink" href="#radon-nikodym-theorem" title="Permanent link">&para;</a></h2>
-<p>We shall talk about signed measure, which differs from measure in that it takes values on <span class="arithmatex">\((-\infty,\infty]\)</span> or <span class="arithmatex">\([-\infty,\infty)\)</span>. It cannot be both <span class="arithmatex">\(-\infty\)</span> or <span class="arithmatex">\(\infty\)</span> since it would cause <span class="arithmatex">\(\alpha(A)+\alpha(B)\)</span> to be ambiguous. We ignore the second situation for simplicity.</p>
+<p>We shall talk about signed measure, which differs from measure in that it takes values on <span class="arithmatex">\((-\infty,\infty]\)</span> or <span class="arithmatex">\([-\infty,\infty)\)</span>. It cannot be both <span class="arithmatex">\(-\infty\)</span> or <span class="arithmatex">\(\infty\)</span> since it would cause <span class="arithmatex">\(\alpha(A)+\alpha(B)\)</span> to be ambiguous. We ignore the second situation for simplicity. </p>
+<div class="admonition success">
+<p class="admonition-title">definition of signed measure</p>
+<p><span class="arithmatex">\(\alpha\)</span> is said to be a signed measure if </p>
+<p>(i) it takes values on <span class="arithmatex">\((-\infty, +\infty]\)</span>, </p>
+<p>(ii) <span class="arithmatex">\(\alpha(\varnothing)=0\)</span>,</p>
+<p>(iii) if <span class="arithmatex">\(E=\bigcup_n E_n\)</span> is a disjoint union then <span class="arithmatex">\(\alpha(E)=\sum_n \alpha(E_n)\)</span>.</p>
+</div>
 <p>Here gives some examples about signed measure.</p>
 <p><a id="integral-signed-measure"></a></p>
 <div class="question">
@@ -4543,6 +4550,14 @@
 \]</div>
 <p>Show that <span class="arithmatex">\(\alpha\)</span> is a signed measure.</p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="radon-nikodym-theorem-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The above conclusion holds by sigma-additivity of integral and measure. The only work is left to show that disjoint additivity holds at <span class="arithmatex">\(\alpha(E)=\infty\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 <p>A set <span class="arithmatex">\(A\)</span> is positive if for all its subset <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\alpha(E)\geq 0\)</span>. A set <span class="arithmatex">\(A\)</span> is positive if for all its subset <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\alpha(E)\leq 0\)</span>. </p>
 <div class="question">
 <p><strong>Example</strong>. Show that In <a href="#integral-signed-measure">Example for integral-signed-measure</a>, <span class="arithmatex">\(A\)</span> is positive iff </p>
@@ -4550,19 +4565,78 @@
 \mu(A\cap \{f(x)&lt;0\})=0.
 \]</div>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="radon-nikodym-theorem-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Necessary. Choose subset <span class="arithmatex">\(A\cap \{f(x)&lt;0\}\)</span> yields the result.</p>
+</li>
+<li>
+<p>Sufficient. Decompose any subset <span class="arithmatex">\(E\)</span> with <span class="arithmatex">\(E\cap \{f(x)&lt;0\}\)</span> and <span class="arithmatex">\(E\cap \{f(x)\geq 0\}\)</span> and complete the proof.</p>
+</li>
+</ul>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p><a id="Hahn decomposition"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Hahn decomposition</p>
 <p>Assume <span class="arithmatex">\(\alpha\)</span> is a signed measure. There exists a positive set <span class="arithmatex">\(A\)</span> and a negative set <span class="arithmatex">\(B\)</span> such that <span class="arithmatex">\(\Omega=A\cup B\)</span> and <span class="arithmatex">\(A\cap B=\varnothing\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="radon-nikodym-theorem-proof" name="__tabbed_1" type="radio" /><input id="radon-nikodym-theorem-lemma-1" name="__tabbed_1" type="radio" /><input id="radon-nikodym-theorem-lemma-2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof">Proof</label><label for="radon-nikodym-theorem-lemma-1">Lemma 1</label><label for="radon-nikodym-theorem-lemma-2">Lemma 2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="radon-nikodym-theorem-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_2">Proof</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
+<p>Let <span class="arithmatex">\(c=\inf\{\alpha(B): B \text{ is negative}\}\leq 0\)</span>. Choose <span class="arithmatex">\(\{B_n\}\)</span> such that <span class="arithmatex">\(\alpha(B_n)\searrow c\)</span>. Thus <span class="arithmatex">\(B=\bigcup_n B_n\)</span> is a negative set by <a href="#Lemma 1: Property of positive/negative set">Lemma 1: Property of positive/negative set</a>. We claim <span class="arithmatex">\(A:=\Omega-B\)</span> is a positive set. We show by contradiction. If not, then there exists a subset <span class="arithmatex">\(E\)</span> of <span class="arithmatex">\(A\)</span>, with <span class="arithmatex">\(\alpha(E)&lt;0\)</span>. Then by <a href="#Lemma 2: Non-positive set must have a pure-negative subset">Lemma 2: Non-positive set must have a pure-negative subset</a>, there exsits a negative set <span class="arithmatex">\(F\subset E\subset A\)</span> with <span class="arithmatex">\(\alpha(F)&lt;0\)</span>. So <span class="arithmatex">\(B\cup F\)</span> is also a negative set by Lemma 1. Thus</p>
+<div class="arithmatex">\[
+\alpha(B\cup F)=\alpha(B)+\alpha(F) &lt; c,
+\]</div>
+<p>which contradicts!</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p><a id="Lemma 1: Property of positive/negative set"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="radon-nikodym-theorem-lemma-1-property-of-positivenegative-set" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-lemma-1-property-of-positivenegative-set">Lemma 1: Property of positive/negative set</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The following result is the same for negative sets.</p>
 <p>(i) Every subset of a positive set is positive.</p>
 <p>(ii) If <span class="arithmatex">\(\{A_n\}_{n\geq 1}\subset \Omega\)</span> are positive sets, then <span class="arithmatex">\(A:=\bigcup_{n} A_n\)</span> is also a postive set.</p>
+<ul>
+<li>Proof. (i) is trivial. For (ii), We have to use disjoint decomposition of <span class="arithmatex">\(A\)</span> to decompose any subset <span class="arithmatex">\(E\)</span>, thus gives the result using sigma-additivity. Indeed, let </li>
+</ul>
+<div class="arithmatex">\[
+B_n=A_n-\left(\bigcup_{i=1}^{n-1}A_n\right)\subset A_n
+\]</div>
+<p>so we have <span class="arithmatex">\(B_n\)</span> is still a positive set by (i) and mutually disjoint. We have <span class="arithmatex">\(\bigcup_n A_n =\bigcup_n B_n\)</span>. For any subset <span class="arithmatex">\(E\)</span> of <span class="arithmatex">\(A\)</span>, let <span class="arithmatex">\(E_n = E\cap B_n\)</span> is also a positive set, and <span class="arithmatex">\(E=\bigcup_n E_n\)</span>. By sigma-additivity, we have</p>
+<div class="arithmatex">\[
+\alpha(E)=\bigcup_n \alpha(E_n)\geq 0.
+\]</div>
+<p>Notice that subadditivity gives an opposite direction, which fails here.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p> </p>
 </div>
+</div>
+</div>
+<p><a id="Lemma 2: Non-positive set must have a pure-negative subset"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="radon-nikodym-theorem-lemma-2-non-positive-set-must-have-a-pure-negative-subset" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-lemma-2-non-positive-set-must-have-a-pure-negative-subset">Lemma 2: Non-positive set must have a pure-negative subset</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
-<p>Assume <span class="arithmatex">\(E\)</span> is a measurable set with <span class="arithmatex">\(\alpha(E)&lt;0\)</span>, then there exists a subset of <span class="arithmatex">\(E\)</span>, denoted by <span class="arithmatex">\(F\)</span>, which satisfies <span class="arithmatex">\(F\)</span> is a negative set with <span class="arithmatex">\(\alpha(F)&lt;0\)</span>.</p>
+<p>Assume <span class="arithmatex">\(E\)</span> is a measurable set with <span class="arithmatex">\(\alpha(E) &lt; 0\)</span>, then there exists a subset of <span class="arithmatex">\(E\)</span>, denoted by <span class="arithmatex">\(F\)</span>, which satisfies <span class="arithmatex">\(F\)</span> is a negative set with $\alpha(F)&lt; 0 $.</p>
+<p>Remark here that <span class="arithmatex">\(\alpha(F)\)</span> is strictly less than <span class="arithmatex">\(0\)</span>, which is given by <span class="arithmatex">\(\alpha(E)&lt;0\)</span>.</p>
+<ul>
+<li>Proof. If <span class="arithmatex">\(E\)</span> is nagative, we are done. Suppose <span class="arithmatex">\(E\)</span> is not a negative set, which means <span class="arithmatex">\(\exists E_1\subset E\)</span> s.t. <span class="arithmatex">\(\alpha(F_1)&gt; 0\)</span>. Choose a smallest integer <span class="arithmatex">\(n_1\)</span> such that <span class="arithmatex">\(\alpha(E_1)&gt;1/n_1\)</span> holds for a plus-sign set <span class="arithmatex">\(E_1\subset E\)</span>. Let <span class="arithmatex">\(F_1=E-E_1\)</span>. If <span class="arithmatex">\(F_1\)</span> is a negative set, we are done. Otherwise, choose a smallest integer <span class="arithmatex">\(n_2\)</span> such that <span class="arithmatex">\(\alpha(E_2)&gt;1/n_2\)</span> holds for a plus-sign <span class="arithmatex">\(E_2\subset F_1\)</span>. Continue the procedure, we have</li>
+</ul>
+<div class="arithmatex">\[
+F_n=E-\bigcup_{i=1}^{n} E_i
+\]</div>
+<p>with <span class="arithmatex">\(n_1&gt;n_2&gt;\cdots\)</span>. Let <span class="arithmatex">\(n\rightarrow \infty\)</span>, we have a limit set <span class="arithmatex">\(F=E-\bigcup_n E_n\)</span>. By construction, we have <span class="arithmatex">\(E_i\cap E_j=\varepsilon\)</span> for <span class="arithmatex">\(i\neq j\)</span>. So by sigma-additivity (definition of signed measure),</p>
+<div class="arithmatex">\[
+\alpha(E)=\alpha(F)+\sum_{n} \alpha(E_n).
+\]</div>
+<p>Thus <span class="arithmatex">\(\alpha(F)\leq \alpha(E)&lt;0\)</span>. Since <span class="arithmatex">\(E\)</span> is finite-measure, so <span class="arithmatex">\(\sum_{n} \alpha(E_n)\)</span> converges, therefore <span class="arithmatex">\(\alpha(E_n) \rightarrow 0\)</span> and <span class="arithmatex">\(n_i \rightarrow \infty\)</span> as <span class="arithmatex">\(i\rightarrow \infty\)</span>. Now we claim <span class="arithmatex">\(F\)</span> is a negative set, for if not, we choose an integer <span class="arithmatex">\(N\)</span> for a plus-sign subset <span class="arithmatex">\(F'\)</span>, which contradicts!</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
@@ -4572,35 +4646,104 @@
 \{f(x)&gt;0\}\subset A \subset \{f(x)\geq 0\}. \quad a.e.
 \]</div>
 </div>
-<p>Two measures <span class="arithmatex">\(\mu_1\)</span>, <span class="arithmatex">\(\mu_2\)</span> are said to be singular with each other, if there exsits a set <span class="arithmatex">\(A\)</span> with <span class="arithmatex">\(\mu_1(A)=0\)</span> and <span class="arithmatex">\(\mu_2(A^c)=0\)</span>.</p>
+<p>Two measures <span class="arithmatex">\(\mu_1\)</span>, <span class="arithmatex">\(\mu_2\)</span> are said to be singular with each other, if there exsits a set <span class="arithmatex">\(A\)</span> with <span class="arithmatex">\(\mu_1(A)=0\)</span> and <span class="arithmatex">\(\mu_2(A^c)=0\)</span>. Now the following theorem gives the uniqueness for a signed measure, which is a subtraction of two mutually singular measures.</p>
 <div class="admonition success">
 <p class="admonition-title">Jordan decomposition</p>
 <p>Assume <span class="arithmatex">\(\alpha\)</span> is a signed measure, then there exist unique measures <span class="arithmatex">\(\alpha_+\)</span> and <span class="arithmatex">\(\alpha_-\)</span> such that <span class="arithmatex">\(\alpha=\alpha_+-\alpha_-\)</span> with <span class="arithmatex">\(\alpha_+\)</span> and <span class="arithmatex">\(\alpha_-\)</span> mutually singular. </p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="radon-nikodym-theorem-proof_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Existence. According to a signed measure <span class="arithmatex">\(\alpha\)</span>, we have <span class="arithmatex">\(\Omega=A\cup B\)</span> by <a href="#Hahn decomposition">Hahn decomposition</a>. Define </li>
+</ul>
+<div class="arithmatex">\[
+\alpha_+(E) = \alpha(E\cap A),\quad \alpha_- = -\alpha(E\cap B),
+\]</div>
+<p>which turn out to be measures. Choose <span class="arithmatex">\(A\)</span> and we have <span class="arithmatex">\(\alpha_+(A^c) = 0\)</span> and <span class="arithmatex">\(\alpha_-(A)=0\)</span>, therefore <span class="arithmatex">\(\alpha_+\)</span> and <span class="arithmatex">\(\alpha_-\)</span> are mutually singular.</p>
+<ul>
+<li>Uniqueness. Here the uniqueness is given by equivalence of measure, disregarding zero-measure situation. Assume <span class="arithmatex">\(\alpha=\nu_1-\nu_2\)</span>, and one corresponding set pair <span class="arithmatex">\(C, D\)</span> for its Hahn decomposition <span class="arithmatex">\(\Omega=C\cup D\)</span>. Let <span class="arithmatex">\(\nu_1(C)=0\)</span>. So we have <span class="arithmatex">\(A\cap D\)</span>, <span class="arithmatex">\(B\cap C\)</span> are null set, meaning <span class="arithmatex">\(\alpha_+(A\cap D)=\alpha(A\cap D)=0\)</span>. Thus </li>
+</ul>
+<div class="arithmatex">\[
+\alpha_+(E\cap A)=\alpha_+(E\cap (A\cup C))=\alpha_+(E\cap C),
+\]</div>
+<p>which gives <span class="arithmatex">\(\alpha_+=\nu_1\)</span>. Similar logic gives <span class="arithmatex">\(\alpha_-=\nu_2\)</span> and we complete the proof.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Now the following construction of <span class="arithmatex">\(g\)</span> and decomposition of <span class="arithmatex">\(\nu\)</span> plays an important role in the proof of the final theorem.</p>
 <p><a id="Lebesgue decomposition"></a></p>
 <div class="admonition success">
 <p class="admonition-title">Lebesgue decomposition</p>
-<p>Assume <span class="arithmatex">\(\nu\)</span>, <span class="arithmatex">\(\mu\)</span> are <span class="arithmatex">\(\sigma\)</span>-finite measure, then there exsits <span class="arithmatex">\(\nu_r\)</span> and <span class="arithmatex">\(\nu_s\)</span> such that <span class="arithmatex">\(\nu=\nu_r+\nu_s\)</span>, <span class="arithmatex">\(\nu_s\)</span> is singular with respect to <span class="arithmatex">\(\mu\)</span>, and </p>
+<p>Assume <span class="arithmatex">\(\nu\)</span>, <span class="arithmatex">\(\mu\)</span> are <span class="arithmatex">\(\sigma\)</span>-finite measure, then there exsits <span class="arithmatex">\(\nu_r\)</span> and <span class="arithmatex">\(\nu_s\)</span> such that <span class="arithmatex">\(\nu=\nu_r+\nu_s\)</span>, where <span class="arithmatex">\(\nu_s\)</span> is singular with respect to <span class="arithmatex">\(\mu\)</span>, and </p>
 <div class="arithmatex">\[
-\nu_r(E)=\int_E g d\mu.
+\begin{align}
+\nu_r(E)=\int_E g d\mu.\label{nu-r-mu}
+\end{align}
 \]</div>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="radon-nikodym-theorem-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="radon-nikodym-theorem-proof_4" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_4">Proof</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>Since <span class="arithmatex">\(\Omega=\bigcup_n \Omega_n\)</span> and by condition, we assume without loss of generality, <span class="arithmatex">\(\nu\)</span> and <span class="arithmatex">\(\mu\)</span> are finite measure on <span class="arithmatex">\(\Omega\)</span>. Let </p>
+<div class="arithmatex">\[
+\mathcal{G}=\{g\geq 0: \int_E g d\mu \leq \nu(E),\forall E\subset \Omega\}.
+\]</div>
+<ul>
+<li>We first claim that if <span class="arithmatex">\(g,h\in \mathcal{G}\)</span>, then <span class="arithmatex">\(g\lor h\in \mathcal{G}\)</span>. Indeed, let <span class="arithmatex">\(A=\{g&lt;h\}\)</span>, then for each <span class="arithmatex">\(E\subset \Omega\)</span>,</li>
+</ul>
+<div class="arithmatex">\[
+\int_E g \lor h d\mu = \int_{E\cap A} h d\mu + \int_{E\cap A^c} g d\mu\leq \nu(E\cap A)+\nu(E\cap A^c)=\nu(E).
+\]</div>
+<ul>
+<li>Then we formulate a function <span class="arithmatex">\(h\)</span> and define the correponding measure <span class="arithmatex">\(\nu_r\)</span> like in <span class="arithmatex">\(\ref{nu-r-mu}\)</span>. Actually, for each <span class="arithmatex">\(E\)</span>, define <span class="arithmatex">\(\mathbb{k}=\sup\{\int_E g d\mu: g\in \mathcal{G}\}\)</span>. Choose <span class="arithmatex">\(\{g_n\}\)</span> such that <span class="arithmatex">\(\int_E gd\mu \geq \mathbb{k}-\frac{1}{n}\)</span>. Define <span class="arithmatex">\(h_n=g_1\lor\cdots\lor g_n\)</span>. Then <span class="arithmatex">\(h_n\geq g_n\)</span> and <span class="arithmatex">\(h_n\nearrow h\)</span>. By Levy's Theorem, we have</li>
+</ul>
+<div class="arithmatex">\[
+\mathbb{k}=\int_E h d\mu=\lim_{n\rightarrow \infty} \int_E h_n d\mu\geq  \lim_{n\rightarrow \infty} \int_E g_n d\mu=\mathbb{k}.
+\]</div>
+<p>Now we let <span class="arithmatex">\(\nu_r=\int_E h d\mu\)</span> and <span class="arithmatex">\(\nu_s=\nu-\nu_r\)</span>.</p>
+<ul>
+<li>We finally have to show that <span class="arithmatex">\(\nu_s\)</span> is singular with respect to <span class="arithmatex">\(\mu\)</span>. This is a little tricky. For all <span class="arithmatex">\(\varepsilon\)</span>, by <a href="#Hahn decomposition">Hahn decomposition</a>, we have <span class="arithmatex">\(\Omega=A_\varepsilon \cup B_\varepsilon\)</span> with respect to signed measure <span class="arithmatex">\(\nu_s-\varepsilon \mu\)</span> (Let <span class="arithmatex">\(\nu_s-\varepsilon \mu(A_\varepsilon)\geq 0\)</span>). We contend that <span class="arithmatex">\(\mu(A_\varepsilon)=0\)</span>. Indeed, let <span class="arithmatex">\(k=h +\varepsilon 1_{A_\varepsilon}\)</span>, then </li>
+</ul>
+<div class="arithmatex">\[
+\int_E k d\mu = \int_E h d\mu + \varepsilon \mu(A_\varepsilon)\leq \nu_r(E) + \nu_s(E\cap A_\varepsilon)\leq \nu(E)
+\]</div>
+<p>which means <span class="arithmatex">\(k\in \mathcal{G}\)</span>. However, <span class="arithmatex">\(h\)</span> has reached the superium, so <span class="arithmatex">\(\mu(A_\varepsilon)=0\)</span>. </p>
+<p>Choose <span class="arithmatex">\(\varepsilon_n=1/n\)</span>, and define <span class="arithmatex">\(A=\bigcup_n A_n\)</span>. We show that <span class="arithmatex">\(A\)</span> makes the singularity of <span class="arithmatex">\(\nu_s\)</span> and <span class="arithmatex">\(\mu\)</span>. Since <span class="arithmatex">\(\mu(A)\leq \sum_n \mu(A_{1/n})\)</span> we have <span class="arithmatex">\(\mu(A)=0\)</span>. We claim that <span class="arithmatex">\(\nu_s(A^c)=0\)</span> for if not, <span class="arithmatex">\(\nu_s(A^c)&gt;0\)</span>, then <span class="arithmatex">\((\nu_s-\varepsilon \mu)(A^c)&gt;0\)</span> for some <span class="arithmatex">\(\epsilon\)</span>, which contradicts, since <span class="arithmatex">\(A^c\subset B_\varepsilon\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
-<p>We call measure <span class="arithmatex">\(\nu\)</span> is absolutely continuous with measure <span class="arithmatex">\(\mu\)</span>, if <span class="arithmatex">\(\mu(E)=0\)</span> implies <span class="arithmatex">\(\nu(E)=0\)</span>.</p>
+</div>
+<p>We call measure <span class="arithmatex">\(\nu\)</span> is absolutely continuous with measure <span class="arithmatex">\(\mu\)</span>, denoted by <span class="arithmatex">\(\nu \ll \mu\)</span>, if <span class="arithmatex">\(\mu(E)=0\)</span> implies <span class="arithmatex">\(\nu(E)=0\)</span>. <a href="#integral-signed-measure">Example for integral-signed-measure</a> gives a method to define a measure which is absolutely continuous with respect to another measure, which we would use in <a href="#Proof for existence of CE">existence of conditional expectation</a>.</p>
 <div class="admonition success">
 <p class="admonition-title">Radon-Nikodym Theorem</p>
-<p>Assume <span class="arithmatex">\(\nu\)</span>, <span class="arithmatex">\(\mu\)</span> are <span class="arithmatex">\(\sigma\)</span>-finite measure, and <span class="arithmatex">\(\nu\)</span> is absolutely continuous with respect to <span class="arithmatex">\(\mu\)</span>, then there exists a <span class="arithmatex">\(g&gt;0\)</span>, such that <span class="arithmatex">\(\nu(E)=\int_E g\mu\)</span>. And for uniqueness, it is a equivalent category that <span class="arithmatex">\(g=h\)</span>, <span class="arithmatex">\(\mu, a.e.\)</span></p>
+<p>Assume <span class="arithmatex">\(\nu\)</span>, <span class="arithmatex">\(\mu\)</span> are <span class="arithmatex">\(\sigma\)</span>-finite measure, and <span class="arithmatex">\(\nu\)</span> is absolutely continuous with respect to <span class="arithmatex">\(\mu\)</span>, then there exists a <span class="arithmatex">\(g\geq 0\)</span>, such that <span class="arithmatex">\(\nu(E)=\int_E g d\mu\)</span>. And for uniqueness, it is a equivalent category that <span class="arithmatex">\(g=h\)</span>, <span class="arithmatex">\(\mu, a.e.\)</span></p>
+<p>The function <span class="arithmatex">\(g\)</span> is usually denoted by <span class="arithmatex">\(d\nu/d\mu\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="radon-nikodym-theorem-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="radon-nikodym-theorem-proof_5" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_5">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>By <a href="#Lebesgue decomposition">Lebesgue decomposition</a>, we have two measure <span class="arithmatex">\(\nu_r\)</span> and <span class="arithmatex">\(\nu_s\)</span>, with <span class="arithmatex">\(\nu_s\)</span> singular with respect to <span class="arithmatex">\(\mu\)</span>, <span class="arithmatex">\(\nu_r(E)=\int_E g d\mu\)</span>. </p>
 <p>We first show that <span class="arithmatex">\(\mu_s\equiv 0\)</span>. Indeed, since <span class="arithmatex">\(\nu\)</span> is absolutely continuous with <span class="arithmatex">\(\mu\)</span>, then for <span class="arithmatex">\(A\)</span> which follows that <span class="arithmatex">\(\nu_s(A^c)=0\)</span> and <span class="arithmatex">\(\mu(A)=0\)</span>, it follows that <span class="arithmatex">\(\nu(A)=0\)</span>, so <span class="arithmatex">\(\nu_s(A)=0\)</span>, meaning <span class="arithmatex">\(\nu_s\equiv 0\)</span>. So <span class="arithmatex">\(\nu=\nu_r\)</span>. </p>
-<p>For uniqueness, suppose <span class="arithmatex">\(g\)</span> and <span class="arithmatex">\(h\)</span> both follows that <span class="arithmatex">\(\nu(E)=\int_E g d\mu=\int_E h d\mu\)</span>, then <span class="arithmatex">\(\int_E g-h d\mu\)</span>. Choose <span class="arithmatex">\(E=\{g&lt;h, g\leq n\}\)</span> for each <span class="arithmatex">\(n\)</span>, then we have <span class="arithmatex">\(\mu(g&lt;h, g\leq n)=0\)</span> for each <span class="arithmatex">\(n\)</span>. Similar logic gives <span class="arithmatex">\(\mu(g&gt;h, h\leq n)=0\)</span> for each <span class="arithmatex">\(n\)</span>. By union together, and gives the result.</p>
+<p>For uniqueness, suppose <span class="arithmatex">\(g\)</span> and <span class="arithmatex">\(h\)</span> both follows that <span class="arithmatex">\(\nu(E)=\int_E g d\mu=\int_E h d\mu\)</span>, then <span class="arithmatex">\(\int_E g-h d\mu\)</span>. Choose finite-measure set <span class="arithmatex">\(E\subset \{g&gt;h, g\leq n\}\)</span> for each <span class="arithmatex">\(n\)</span>, then we have <span class="arithmatex">\(\mu(g&gt;h, g\leq n)=0\)</span> for each <span class="arithmatex">\(n\)</span>. So <span class="arithmatex">\(\mu(g&gt;h)=0\)</span>. Similar logic gives <span class="arithmatex">\(\mu(g&lt;h)=0\)</span> and complete the proof.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Show that the jacobi function <span class="arithmatex">\(d\nu/d\mu\)</span> has the following properties.</p>
+<p>(i) Linearity. If <span class="arithmatex">\(\nu_1 \ll \mu\)</span> and <span class="arithmatex">\(\nu_2\ll \mu\)</span>, then <span class="arithmatex">\(\nu_1+\nu_2\ll \mu\)</span> and <span class="arithmatex">\(d{(\nu_1 +\nu_2)}/d\mu = d\nu_1/d\mu + d\nu_2/d\mu\)</span>.</p>
+<p>(ii) If <span class="arithmatex">\(\nu \ll \mu\)</span> and <span class="arithmatex">\(f\geq 0\)</span>, then <span class="arithmatex">\(\int_E f d\nu=\int_E f \frac{d\nu}{d\mu}d\mu\)</span>.</p>
+<p>(iii) Transitivity. If <span class="arithmatex">\(\pi\ll \nu \ll \mu\)</span>, then <span class="arithmatex">\(d\pi/d\mu=d\pi/d\nu \cdot d\nu/d\mu\)</span>.</p>
+<p>(iv) Dual property. If <span class="arithmatex">\(\nu\ll \mu\)</span> and <span class="arithmatex">\(\mu\ll\\nu\)</span>, then <span class="arithmatex">\(d\nu/d\mu = (d\mu/d\nu)^{-1}\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="radon-nikodym-theorem-proof_6" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="radon-nikodym-theorem-proof_6">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For (ii), use characteristic function, simple function and then for non-negative measurable function.</p>
+<p>For (iii), use (ii). For (iv), use (iii).</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
@@ -4616,10 +4759,13 @@
 <p class="admonition-title">Existence &amp; Uniqueness</p>
 <p><span class="arithmatex">\(E(X|\mathcal{F})\)</span> exists and is unique.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="conditional-expectation-proof" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="conditional-expectation-proof">Proof</label></div>
+<p><a id="Proof for existence of CE"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="conditional-expectation-proof-for-existence" name="__tabbed_10" type="radio" /><input id="conditional-expectation-proof-for-uniqueness" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="conditional-expectation-proof-for-existence">Proof for existence</label><label for="conditional-expectation-proof-for-uniqueness">Proof for uniqueness</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>(i) We show that <span class="arithmatex">\(Y=E(X|\mathcal{F})\)</span> is <span class="arithmatex">\(\mathcal{F}\)</span> integrable. Let <span class="arithmatex">\(A=\{Y&gt;0\}\in \mathcal{F}\)</span>, then</p>
+<ul>
+<li>We first show that CE <span class="arithmatex">\(Y\)</span> is integrable. That is, if <span class="arithmatex">\(Y=E(X|\mathcal{F})\)</span> is <span class="arithmatex">\(\mathcal{F}\)</span> integrable. Let <span class="arithmatex">\(A=\{Y&gt;0\}\in \mathcal{F}\)</span>, then</li>
+</ul>
 <div class="arithmatex">\[
 \int_A YdP = \int_A X dP \leq \int_A |X| dP
 \]</div>
@@ -4628,7 +4774,32 @@
 \int_{A^c} -Y dP = \int_{A^c} -XdP\leq \int_{A^c} |X|dP
 \]</div>
 <p>adding both together, we have <span class="arithmatex">\(E|Y|\leq E|X|&lt;\infty\)</span>.</p>
-<p>(ii) Assume <span class="arithmatex">\(Y'\)</span> also satisfies the above definition. Let <span class="arithmatex">\(A=\{Y-Y'\geq \varepsilon&gt;0\}\in \mathcal{F}\)</span>, then </p>
+<ul>
+<li>We assume <span class="arithmatex">\(X\geq 0\)</span>, then define</li>
+</ul>
+<div class="arithmatex">\[
+\nu(E):=\int_E X dP,\quad E\in \mathcal{F}
+\]</div>
+<p>which is a measure by <a href="../../Real_Analysis/Lebesgue_Integral/#Corollary 3: Theorem of denumberable additivity of LDCT">Corollary 3: Theorem of denumberable additivity of LDCT</a>. Naturally <span class="arithmatex">\(\nu\ll P\)</span>. Then by <a href="#radon-nikodym-theorem">Radon Nikodym Theorem</a>, there exsits a measurable function <span class="arithmatex">\(d\nu/dP\)</span> such that</p>
+<div class="arithmatex">\[
+\int_E X dP = \int_E \frac{d\nu}{dP} dP.
+\]</div>
+<p>Let <span class="arithmatex">\(E=\Omega\)</span> and we have <span class="arithmatex">\(d\nu/dP\)</span> is integrable, which is a version of <span class="arithmatex">\(E(X|\mathcal{F})\)</span>.</p>
+<ul>
+<li>General case. That is, <span class="arithmatex">\(X=X^+ - X^-\)</span> with <span class="arithmatex">\(Y^+=E(X^+|\mathcal{F})\)</span> and <span class="arithmatex">\(Y^-=E(X^-|\mathcal{F})\)</span>. Then <span class="arithmatex">\(Y^+ - Y^-\)</span> is integrable by the former discussion. Then for all <span class="arithmatex">\(E\in \mathcal{F}\)</span>,</li>
+</ul>
+<div class="arithmatex">\[
+\begin{align*}
+\int_E X dP &amp;= \int_E X^+ - X^- dP\\ 
+&amp;= \int_E Y^+ - \int_E Y^- dP\\
+&amp;= \int_E (Y^+ - Y^-) dP
+\end{align*}
+\]</div>
+<p>thus <span class="arithmatex">\(Y^+-Y^-\)</span> could be one version of <span class="arithmatex">\(E(X|\mathcal{F})\)</span> and complete the proof.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+<div class="tabbed-block">
+<p>Assume <span class="arithmatex">\(Y'\)</span> also satisfies the above definition. Let <span class="arithmatex">\(A=\{Y-Y'\geq \varepsilon&gt;0\}\in \mathcal{F}\)</span>, then </p>
 <div class="arithmatex">\[
 0=\int_A X-XdP=\int_A Y-Y'dP\geq \varepsilon P(A)
 \]</div>
