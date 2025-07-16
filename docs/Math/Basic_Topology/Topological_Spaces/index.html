@@ -586,6 +586,8 @@
       
         
       
+        
+      
     
     
       
@@ -753,6 +755,27 @@
   
   <span class="md-ellipsis">
     Connectedness & Compactness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Count_Sepa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Countability & Separation Axioms
   </span>
   
 
@@ -990,6 +1013,8 @@
           
         
       
+        
+      
     
     
       
@@ -1022,6 +1047,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
@@ -1031,6 +1061,27 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Differential_Geometry/Curves/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curves
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -4695,7 +4746,6 @@
 
 
 <h1 id="topological-space">Topological Space<a class="headerlink" href="#topological-space" title="Permanent link">&para;</a></h1>
-<h2 id="basis-for-a-topology">Basis for a topology<a class="headerlink" href="#basis-for-a-topology" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">Definition of Topology</p>
 <p>Suppose set <span class="arithmatex">\(X\)</span>, and a family set <span class="arithmatex">\(\tau\)</span> of <span class="arithmatex">\(X\)</span> is said to be a topology if</p>
@@ -4704,42 +4754,155 @@
 <p>(iii) if <span class="arithmatex">\(\{U_n\}_{1\leq n\leq N} \subset \tau\)</span>, then <span class="arithmatex">\(\bigcap\limits_{1\leq n\leq N}U_n\in \tau\)</span>.</p>
 <p>The element of <span class="arithmatex">\(\tau\)</span> is called <strong>an open set</strong>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Topology basis</p>
-<p>A family set <span class="arithmatex">\(\mathcal{B}\)</span> of <span class="arithmatex">\(X\)</span> is said to be a topological <strong>basis</strong>, if</p>
-<p>(i) <span class="arithmatex">\(\forall x\in X\)</span>, <span class="arithmatex">\(\exists B\in\mathcal{B}\)</span> s.t. <span class="arithmatex">\(x\in B\)</span>,</p>
-<p>(ii) <span class="arithmatex">\(\forall B_1,B_2\in \mathcal{B}\)</span>, <span class="arithmatex">\(\forall x\in B_1\cap B_2\)</span>, <span class="arithmatex">\(\exists B\in\mathcal{B}\)</span> such that <span class="arithmatex">\(x\in B\)</span> and <span class="arithmatex">\(B\subset B_1\cap B_2\)</span>.</p>
+<div class="question">
+<p><strong>Example</strong>. Two common topologies on a set <span class="arithmatex">\(X\)</span>.</p>
+<p>(i) discrete topology <span class="arithmatex">\(2^{X}\)</span>.</p>
+<p>(ii) indiscrete/trivial topology <span class="arithmatex">\(\{\varnothing, X\}\)</span>.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. The topologies on <span class="arithmatex">\(\mathcal{R}\)</span>.</p>
+<p>(i) finite-complement topology <span class="arithmatex">\(\tau_f\)</span>.</p>
+<p>(ii) countable-complement topology <span class="arithmatex">\(\tau_c\)</span>.</p>
+<p>(iii) Euclidean topology <span class="arithmatex">\(\tau_e\)</span>, and we denote the space as <span class="arithmatex">\(\mathbb{E}^1=(\mathbb{R}, \tau_e)\)</span>.</p>
 </div>
 <div class="admonition info">
+<p class="admonition-title">Comparison of topologies</p>
+<p>Suppose <span class="arithmatex">\(\tau\)</span>, <span class="arithmatex">\(\tau'\)</span> are two topologies on <span class="arithmatex">\(X\)</span>. We say <span class="arithmatex">\(\tau'\)</span> is <strong>finer</strong> than <span class="arithmatex">\(\tau\)</span> (or bigger), if</p>
+<div class="arithmatex">\[
+\tau\subset \tau'.
+\]</div>
+<p>And at this time the two topologies is comparable.</p>
+</div>
+<h2 id="basis-for-a-topology">Basis for a topology<a class="headerlink" href="#basis-for-a-topology" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Basis for a topology</p>
+<p>A family set <span class="arithmatex">\(\mathcal{B}\)</span> of <span class="arithmatex">\(X\)</span> is said to be a topological <strong>basis</strong>, if</p>
+<p>(i) <span class="arithmatex">\(\forall x\in X\)</span>, <span class="arithmatex">\(\exists B\in\mathcal{B}\)</span> s.t. <span class="arithmatex">\(x\in B\)</span>. Or equivalently, <span class="arithmatex">\(X=\bigcup\limits_{B\in \mathcal{B}}B\)</span>.</p>
+<p>(ii) <span class="arithmatex">\(\forall B_1,B_2\in \mathcal{B}\)</span>, <span class="arithmatex">\(\forall x\in B_1\cap B_2\)</span>, <span class="arithmatex">\(\exists B\in\mathcal{B}\)</span> such that <span class="arithmatex">\(x\in B\)</span> and <span class="arithmatex">\(B\subset B_1\cap B_2\)</span>.</p>
+</div>
+<p>We now define a collection of subsets of <span class="arithmatex">\(X\)</span> by a basis for a topology, which turns out to be a topology.    </p>
+<div class="admonition success">
 <p class="admonition-title">Topology Generated by basis</p>
-<p>A subset <span class="arithmatex">\(U\subset X\)</span> is said to be an open set (i.e. to be an element of <span class="arithmatex">\(\tau\)</span>), if <span class="arithmatex">\(\forall x\in U\)</span>, <span class="arithmatex">\(\exists B\in \mathcal{B}\)</span> s.t. <span class="arithmatex">\(x\in B\)</span> and <span class="arithmatex">\(B\subset U\)</span>.</p>
+<p>A collection <span class="arithmatex">\(\tau_B\)</span> of subsets of <span class="arithmatex">\(X\)</span> is defined as follows. A subset <span class="arithmatex">\(U\subset X\)</span> belongs to <span class="arithmatex">\(\tau_B\)</span>, if <span class="arithmatex">\(\forall x\in U\)</span>, <span class="arithmatex">\(\exists B\in \mathcal{B}\)</span> s.t. <span class="arithmatex">\(x\in B\)</span> and <span class="arithmatex">\(B\subset U\)</span>. Then <span class="arithmatex">\(\tau_B\)</span> is a topology on <span class="arithmatex">\(X\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="basis-for-a-topology-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="basis-for-a-topology-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Check this by definition. Note that <span class="arithmatex">\(\varnothing\in \tau\)</span> and <span class="arithmatex">\(X\in \tau\)</span>. </p>
+<p>Check this by definition. Note that <span class="arithmatex">\(\varnothing\in \tau\)</span> and <span class="arithmatex">\(X\in \tau\)</span> (by def (i) of basis for a topology). </p>
 <p>(ii) For <span class="arithmatex">\(\{U_\lambda\}_{\lambda\in\Lambda}\subset \tau\)</span>, by definition, <span class="arithmatex">\(\exists B_\lambda\in\mathcal{B}\)</span>, s.t. <span class="arithmatex">\(\forall x\in U_\lambda\)</span>, <span class="arithmatex">\(x\in B_\lambda\)</span> and <span class="arithmatex">\(B_\lambda\in U_\lambda\)</span>.
 So for </p>
 <div class="arithmatex">\[
 U:=\bigcup_{\lambda\in\Lambda} U_\lambda 
 \]</div>
 <p><span class="arithmatex">\(x\in U\)</span>, <span class="arithmatex">\(\exists \lambda_0\)</span> such that <span class="arithmatex">\(x\in U_{\lambda_0}\)</span>, then <span class="arithmatex">\(\exists B_{\lambda_0}\subset U_{\lambda_0}\subset U\)</span> such that <span class="arithmatex">\(x\in B_\lambda\)</span>.</p>
-<p>(iii) Use the condition two. We only prove if <span class="arithmatex">\(U_1,U_2\in \tau\)</span>, then <span class="arithmatex">\(U_1\cap U_2 \in \tau\)</span>.</p>
+<p>(iii) Use the condition (ii) of the definition. We only prove if <span class="arithmatex">\(U_1,U_2\in \tau\)</span>, then <span class="arithmatex">\(U_1\cap U_2 \in \tau\)</span>.</p>
 </div>
 </div>
 </div>
 <div class="admonition success">
-<p class="admonition-title">Composition of generated topology</p>
-<p>Suppoese <span class="arithmatex">\(\tau\)</span> is a topology space generated by <span class="arithmatex">\(\mathcal{B}\)</span>, then <span class="arithmatex">\(\forall U\in \tau\)</span>, there exsits <span class="arithmatex">\(\mathcal{B}_1\subset \mathcal{B}\)</span> such that </p>
+<p class="admonition-title">Generation by a union of basis for a topology</p>
+<p>Suppose <span class="arithmatex">\(\tau\)</span> is a topology space generated by <span class="arithmatex">\(\mathcal{B}\)</span>, then <span class="arithmatex">\(\forall U\in \tau\)</span>, there exsits <span class="arithmatex">\(\mathcal{B}_1\subset \mathcal{B}\)</span> such that </p>
 <div class="arithmatex">\[
 U=\bigcup_{B\in\mathcal{B}_1} B.
 \]</div>
+<p>Conversely, a collection <span class="arithmatex">\(\tau\)</span> defined by the above expression is a topology generated by basis <span class="arithmatex">\(\mathcal{B}\)</span>. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="basis-for-a-topology-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="basis-for-a-topology-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Sufficient. Easy to check by definition.</p>
+</li>
+<li>
+<p>necessary.</p>
+</li>
+</ul>
+<p>For each <span class="arithmatex">\(U\in \tau\)</span>, by definition, for each <span class="arithmatex">\(x\in U\)</span>, there exists <span class="arithmatex">\(B_x\in \mathcal{B}\)</span>, s.t. <span class="arithmatex">\(x\in B_x\subset U\)</span>. </p>
+<p>So choose <span class="arithmatex">\(\mathcal{B}_1=\{B_x: x\in U\}\)</span>, and we have</p>
+<div class="arithmatex">\[
+U = \bigcup_{B\in\mathcal{B}_1}B=\bigcup_{x\in U}B_x.
+\]</div>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p>  </p>
+</div>
+</div>
 </div>
 <p>This expression for <span class="arithmatex">\(U\)</span> is not unique.</p>
+<p>Given a topology <span class="arithmatex">\(\tau\)</span>, we could check whether it is generated by a specific topological basis.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: find a topological basis from a topology</p>
+<p>Suppose <span class="arithmatex">\(\tau\)</span> is a topology on <span class="arithmatex">\(X\)</span>, a collection <span class="arithmatex">\(\mathcal{C}\)</span> of (open) subsets of <span class="arithmatex">\(X\)</span> is said to be a topological basis of <span class="arithmatex">\(\tau\)</span>, if for each open set <span class="arithmatex">\(U\)</span> and each <span class="arithmatex">\(x\in U\)</span>, there exsits <span class="arithmatex">\(C\in\mathcal{C}\)</span> such that <span class="arithmatex">\(x\in C\subset U\)</span>. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="basis-for-a-topology-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="basis-for-a-topology-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>We shall check <span class="arithmatex">\(\mathcal{C}\)</span> is a basis for a topology.</p>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(\tau'\)</span> to denote the topology generated by the basis <span class="arithmatex">\(\mathcal{C}\)</span>. By definition, we have <span class="arithmatex">\(\tau'\subset \tau\)</span> (Readers could check). For the other direction, we have for each open set <span class="arithmatex">\(U\)</span>, choose <span class="arithmatex">\(\mathcal{C}_1=\{C_x: x\in C_x\subset \mathcal{C}\}\)</span>, then </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+U=\bigcup_{C \in \mathcal{C}_1}C\subset \tau'.
+\]</div>
+</div>
+</div>
+</div>
+<p>Now we could give a criterion for comparing two topologies generated by two basis.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma: criterion for comparing two topologies generated by two basis</p>
+<p>Suppose <span class="arithmatex">\(\mathcal{B}\)</span> and <span class="arithmatex">\(\mathcal{B}'\)</span> are two basis for topologies <span class="arithmatex">\(\tau\)</span> and <span class="arithmatex">\(\tau'\)</span>, respectively. Then <span class="arithmatex">\(\tau'\)</span> is finer than <span class="arithmatex">\(\tau\)</span>, iff for each <span class="arithmatex">\(x\in X\)</span> and <span class="arithmatex">\(B\in\mathcal{B}\)</span> with <span class="arithmatex">\(x\in B\)</span>, there exists <span class="arithmatex">\(B'\in\mathcal{B}'\)</span> such that <span class="arithmatex">\(x\in B'\subset B\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="basis-for-a-topology-proof_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="basis-for-a-topology-proof_3">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Show by definition.</li>
+</ul>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Ball basis and triangular basis generate the same topology on <span class="arithmatex">\(\mathbb{R}^2\)</span>.</p>
+</div>
 <h3 id="product-topology">Product Topology<a class="headerlink" href="#product-topology" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">Definition of product topology on <span class="arithmatex">\(X\times Y\)</span></p>
-<p>Suppose <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are topological spaces, the <strong>product topology</strong> on <span class="arithmatex">\(X\times Y\)</span> is a family set generated by basis <span class="arithmatex">\(\mathcal{B}\)</span>, where <span class="arithmatex">\(\mathcal{B}=\{U\times V: U\in\tau_X, V\in \tau_V\}\)</span>.  </p>
+<p>Suppose <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are topological spaces, the <strong>product topology</strong> on <span class="arithmatex">\(X\times Y\)</span> is a collection of subsets of <span class="arithmatex">\(X\)</span> generated by basis <span class="arithmatex">\(\mathcal{B}\)</span>, where <span class="arithmatex">\(\mathcal{B}=\{U\times V: U\in\tau_X, V\in \tau_Y\}\)</span>. </p>
+</div>
+<p>We shall show that the above <span class="arithmatex">\(\mathcal{B}\)</span> is a topological basis.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="product-topology-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="product-topology-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>using </p>
+<div class="arithmatex">\[
+(U_1\times V_1)\cap (U_2\times V_2)=(U_1\cap U_2)\times (V_1\cap V_2).
+\]</div>
+</div>
+</div>
+</div>
+<p>Note that <span class="arithmatex">\(\mathcal{B}\)</span> itself is not a topology of <span class="arithmatex">\(X\times Y\)</span>.</p>
+<p>When does a collection of subsets of <span class="arithmatex">\(X\times Y\)</span> becomes a basis for the topology on <span class="arithmatex">\(X\times Y\)</span>?</p>
+<div class="admonition success">
+<p class="admonition-title">Basis for a topology on <span class="arithmatex">\(X\times Y\)</span></p>
+<p>Suppose <span class="arithmatex">\(\mathcal{B}\)</span>, <span class="arithmatex">\(\mathcal{C}\)</span> are topological basis on <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>, respectively. Then </p>
+<div class="arithmatex">\[
+\mathcal{D}=\{B\times C: B\in \mathcal{B}, C\in\mathcal{C}\}
+\]</div>
+<p>is a basis for a topology on <span class="arithmatex">\(X\times Y\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="product-topology-proof_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="product-topology-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>Now we make use of projection function to show some relationships.</p>
+<div class="admonition info">
+<p class="admonition-title">Projections</p>
+<p>We call a map <span class="arithmatex">\(\pi_1:X\times Y\rightarrow X\)</span></p>
 </div>
 <h2 id="continuous-functions">Continuous functions<a class="headerlink" href="#continuous-functions" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
@@ -4770,7 +4933,7 @@ U=\bigcup_{B\in\mathcal{B}_1} B.
 <div class="question">
 <p><strong>Example</strong>. Suppose <span class="arithmatex">\(X\simeq X'\)</span>, <span class="arithmatex">\(Y\simeq Y'\)</span>, then <span class="arithmatex">\(X\times Y\simeq X'\times Y'\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="homeomorphism-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="homeomorphism-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="homeomorphism-proof" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="homeomorphism-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>From a homeomorphism <span class="arithmatex">\(f:X\rightarrow X'\)</span>, <span class="arithmatex">\(g:Y\rightarrow Y'\)</span>, define </p>
