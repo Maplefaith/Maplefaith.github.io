@@ -4849,6 +4849,31 @@ s=\int_{t_0}^t |\alpha'(\tau)|d\tau,
 \]</div>
 </div>
 <p>To proceed with the local analysis of curves, we assume <span class="arithmatex">\(\alpha''(s)\neq 0\)</span> (the singular point of order <span class="arithmatex">\(1\)</span>, and <span class="arithmatex">\(\alpha'(s)=0\)</span> is called the singular point of order <span class="arithmatex">\(0\)</span>).</p>
+<p>For a plane curve, we have the following description.</p>
+<div class="question">
+<p><strong>Example</strong>. Assume that <span class="arithmatex">\(\alpha(I) \subset \mathbb{E}^2\)</span> and give <span class="arithmatex">\(k\)</span> a sign as in the text. </p>
+<p>Transport the vectors <span class="arithmatex">\(t(s)\)</span> parallel to themselves in such a way that the origins of <span class="arithmatex">\(t(s)\)</span> agree with the origin of <span class="arithmatex">\(\mathbb{E}^2\)</span>; the end points of <span class="arithmatex">\(t(s)\)</span> then describe a parametrized curve <span class="arithmatex">\(s \rightarrow t(s)\)</span> called the <strong>indicatrix</strong> of tangents of <span class="arithmatex">\(\alpha\)</span>. </p>
+<p>Let <span class="arithmatex">\(\theta(s)\)</span> be the angle from <span class="arithmatex">\(e_1\)</span> to <span class="arithmatex">\(t(s)\)</span> in the orientation of <span class="arithmatex">\(\mathbb{E}^2\)</span>. notice that we are assuming that <span class="arithmatex">\(k \neq 0\)</span>. Show that</p>
+<p>(a) The indicatrix of tangents is a regular parametrized curve.</p>
+<p>(b) <span class="arithmatex">\(dt/ds = (d\theta/ds)n\)</span>, that is, <span class="arithmatex">\(k = d\theta/ds\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="curvature-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="curvature-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>(a) Easy to see since <span class="arithmatex">\(|t'(s)|=|k(s)|\neq 0\)</span>.</p>
+<p>(b) Let </p>
+<div class="arithmatex">\[
+t(s)=[\cos \theta(s), \sin \theta(s)],
+\]</div>
+<p>then </p>
+<div class="arithmatex">\[
+t'(s)=[-\sin \theta(s), \cos\theta(s) ]\theta'(s)=\theta'(s)n,
+\]</div>
+<p>since we have <span class="arithmatex">\(n = j t\)</span> (rotation by <span class="arithmatex">\(\pi/2\)</span>).</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
 <h3 id="tortion">Tortion<a class="headerlink" href="#tortion" title="Permanent link">&para;</a></h3>
 <p>Already we have <span class="arithmatex">\(t'=kn\)</span>. Now we do not check <span class="arithmatex">\(n'\)</span>, but check <span class="arithmatex">\(b(s):=t(s)\times n(s)\)</span>, which is called <strong>binormal vector</strong> at <span class="arithmatex">\(s\)</span>, also a unit vector representing the osculating plane. <span class="arithmatex">\(|b'(s)|\)</span> meausres the rate of change of the neighboring osculating plane. We claim that <span class="arithmatex">\(b'(s)\)</span> is parallel with <span class="arithmatex">\(n(s)\)</span>. Indeed,</p>
 <div class="arithmatex">\[
@@ -4874,7 +4899,7 @@ n'=b'\times t + b\times t'=-\tau b -k t.
 <p>Given differentiable functions <span class="arithmatex">\(k(s)&gt;0\)</span> and <span class="arithmatex">\(\tau(s)\)</span>, <span class="arithmatex">\(s\in I\)</span>, there exsits a regular parametrized curve <span class="arithmatex">\(\alpha: I\rightarrow \mathbb{E}^3\)</span> such that <span class="arithmatex">\(s\)</span> is the arc length, <span class="arithmatex">\(k(s)\)</span> is the curvature, and <span class="arithmatex">\(\tau(s)\)</span> is the tortion of <span class="arithmatex">\(\alpha\)</span>.</p>
 <p>Moreover, any other curve <span class="arithmatex">\(\overline{\alpha}\)</span>, which satisfies the same condition, differs from <span class="arithmatex">\(\alpha\)</span> by a <strong>rigid motion</strong>. That is, there exists a orthonormal map <span class="arithmatex">\(\rho\)</span> with positive determinant, and a translation vector <span class="arithmatex">\(c\)</span>, such that <span class="arithmatex">\(\overline{\alpha}=\rho \circ \alpha +c\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="frenet-trihedron-proof-for-uniqueness" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="frenet-trihedron-proof-for-uniqueness">Proof for uniqueness</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="frenet-trihedron-proof-for-uniqueness" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="frenet-trihedron-proof-for-uniqueness">Proof for uniqueness</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -4887,6 +4912,7 @@ n'=b'\times t + b\times t'=-\tau b -k t.
 \]</div>
 <p>where <span class="arithmatex">\(\theta(s)=\int k(s)ds + \varphi\)</span>. The curve is determined up to a translation of the vector <span class="arithmatex">\((a,b)\)</span> and a rotation of the angle <span class="arithmatex">\(\varphi\)</span>.</p>
 </div>
+<!-- $$k'(s) = \frac{dk}{ds} = \frac{|\alpha'(s)|^2 ((\alpha'(s) \times \alpha''(s)) \cdot (\alpha'(s) \times \alpha'''(s)))}{|\alpha'(s)|^5 |\alpha'(s) \times \alpha''(s)|}$$代入 $|\alpha'(s)| = 1$，得到：$$\frac{dk}{ds} = \frac{(\alpha'(s) \times \alpha''(s)) \cdot (\alpha'(s) \times \alpha'''(s))}{|\alpha'(s) \times \alpha''(s)|}$$ -->
 
 
 

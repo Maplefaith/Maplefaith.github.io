@@ -746,6 +746,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#urysohn-lemma-its-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Urysohn Lemma &amp; its applications
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4670,6 +4679,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#urysohn-lemma-its-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Urysohn Lemma &amp; its applications
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4692,8 +4710,8 @@
 <p>Suppose <span class="arithmatex">\(X\)</span> is a topological space, we have the following four separation axioms.</p>
 <p>(i) <strong><span class="arithmatex">\(T_1\)</span> separation axiom</strong>. <span class="arithmatex">\(\forall x\neq y\in X\)</span>, there exsits a neighborhood <span class="arithmatex">\(U\)</span> of <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(y\not\in U\)</span>. </p>
 <p>(ii) <strong><span class="arithmatex">\(T_2\)</span> separation axiom</strong>. <span class="arithmatex">\(\forall x\neq y\in X\)</span>, there exsit neighborhood <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span>, respectively, such that <span class="arithmatex">\(U\cap V=\varnothing\)</span>.</p>
-<p>(iii) <strong><span class="arithmatex">\(T_3\)</span> separation axiom</strong>. <span class="arithmatex">\(\forall x\in X\)</span> and closed set <span class="arithmatex">\(A\subset X\)</span>, there exist neighborhood <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(U\cap V=\varnothing\)</span>.</p>
-<p>(iv) <strong><span class="arithmatex">\(T_4\)</span> separation axiom</strong>. For every two disjoint closed set <span class="arithmatex">\(A,B\subset X\)</span>, there exist neighborhood <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> such that <span class="arithmatex">\(U\cap V=\varnothing\)</span>. </p>
+<p>(iii) <strong><span class="arithmatex">\(T_3\)</span> separation axiom</strong> (regular). <span class="arithmatex">\(\forall x\in X\)</span> and closed set <span class="arithmatex">\(A\subset X\)</span>, there exist neighborhood <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(U\cap V=\varnothing\)</span>.</p>
+<p>(iv) <strong><span class="arithmatex">\(T_4\)</span> separation axiom</strong> (normal). For every two disjoint closed set <span class="arithmatex">\(A,B\subset X\)</span>, there exist neighborhood <span class="arithmatex">\(U\)</span>, <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> such that <span class="arithmatex">\(U\cap V=\varnothing\)</span>. </p>
 <p>A space that satisfies <span class="arithmatex">\(T_2\)</span> axiom is called a <strong>Hausdorff space</strong>, which turned out to have good properties for analysis.</p>
 </div>
 <div class="admonition success">
@@ -4719,6 +4737,67 @@
 <p>(i) <strong><span class="arithmatex">\(C_1\)</span> countability axiom</strong>. <span class="arithmatex">\(\forall x\in X\)</span>, there exsits a countable collection <span class="arithmatex">\(\mathcal{B}\)</span> of neighborhoods of <span class="arithmatex">\(x\)</span>, such that every neighborhood of <span class="arithmatex">\(x\)</span> contains some <span class="arithmatex">\(B\in \mathcal{B}\)</span>. </p>
 <p>We also call <span class="arithmatex">\(X\)</span> has a countable basis at <span class="arithmatex">\(x\)</span>.</p>
 <p>(ii) <strong><span class="arithmatex">\(C_2\)</span> countability axiom</strong>. <span class="arithmatex">\(X\)</span> has a countable basis for its topology.</p>
+</div>
+<p><span class="arithmatex">\(C_2\)</span> axiom is stronger than <span class="arithmatex">\(C_1\)</span>, and some metric space could not satisfy the condition.</p>
+<div class="question">
+<p><strong>Example</strong>. In <span class="arithmatex">\(\mathbb{R}\)</span>, define metric </p>
+<div class="arithmatex">\[
+d(x,y)=\delta_{xy}.
+\]</div>
+<p>Show that every point of the above space is its open set and contains uncountable basis for its topology.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="countability-axioms-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="countability-axioms-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Choose open ball</p>
+<div class="arithmatex">\[
+B(x, 1/2)=\{x\},
+\]</div>
+<p>which is the smallest element of basis for its topology, and thus is uncountable.</p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Separable metric space is <span class="arithmatex">\(C_2\)</span>. Thus <span class="arithmatex">\(\mathbb{E}^n\)</span>, Hilbert space <span class="arithmatex">\(\mathbb{E}^\omega\)</span> are <span class="arithmatex">\(C_2\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Lindel&ouml;f Theorem</p>
+<p>If a topological space satisfies <span class="arithmatex">\(C_2\)</span> and <span class="arithmatex">\(T_3\)</span>, then it is also <span class="arithmatex">\(T_4\)</span>. Or in some terms, A regular space with countable basis for its topology is normal.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="countability-axioms-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="countability-axioms-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Choose a countable basis for its topology <span class="arithmatex">\(\mathcal{B}\)</span>. Suppose <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(F'\)</span> are disjoint closed subsets. </p>
+<p>Since the space is <span class="arithmatex">\(T_3\)</span>, so for each <span class="arithmatex">\(x\in F\)</span>, there exist open sets <span class="arithmatex">\(U_x\)</span> <span class="arithmatex">\(V_x\)</span> such that <span class="arithmatex">\(x\in U_x\)</span>, <span class="arithmatex">\(F'\subset V_x\)</span> and <span class="arithmatex">\(U_x\cap V_x=\varnothing\)</span>. Thus we have <span class="arithmatex">\(\overline{U_x}\cap F'=\varnothing\)</span>. For each <span class="arithmatex">\(U_x\)</span>, choose an open set <span class="arithmatex">\(B_x\in \mathcal{B}\)</span> such that <span class="arithmatex">\(B_x\subset U_x\)</span> and thus <span class="arithmatex">\(\overline{B_x}\cap F'=\varnothing\)</span>. Since <span class="arithmatex">\(\mathcal{B}\)</span> is countable, we have</p>
+<div class="arithmatex">\[
+\{B_n\}_{n=1}^\infty,\quad \{B_n'\}_{n=1}^\infty
+\]</div>
+<p>such that for each <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(\overline{B_n}\cap F'=\varnothing\)</span> and <span class="arithmatex">\(\overline{B_n}'\cap F=\varnothing\)</span>, and <span class="arithmatex">\(F\subset \bigcup_{n} B_n\)</span> and <span class="arithmatex">\(F'\subset \bigcup_n B_n'\)</span>.</p>
+<p>Define open sets</p>
+<div class="arithmatex">\[
+U_n=B_n-\bigcup_{i=1}^n B_i', \quad V_n = B_n' -\bigcup_{i=1}^n B_i
+\]</div>
+<p>So we have <span class="arithmatex">\(U_n\cap V_m=\varnothing\)</span> for all <span class="arithmatex">\(n,m\geq 1\)</span>. Let</p>
+<div class="arithmatex">\[
+U:=\bigcup_{n=1}^\infty U_n, \quad V:=\bigcup_{n=1}^\infty V_n, 
+\]</div>
+<p>so </p>
+<div class="arithmatex">\[
+U\cap V = \bigcup_{n=1}^\infty (U_n\cap V_n)=\varnothing.
+\]</div>
+<p>Easy to show that <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are the desired open sets that separate <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(F'\)</span>.</p>
+</div>
+</div>
+</div>
+<h2 id="urysohn-lemma-its-applications">Urysohn Lemma &amp; its applications<a class="headerlink" href="#urysohn-lemma-its-applications" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Urysohn Lemma</p>
+<p>Assume topological space <span class="arithmatex">\(X\)</span> is <span class="arithmatex">\(T_4\)</span>, then for any two disjoint closed sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, there exists a continuous function defined on <span class="arithmatex">\(X\)</span> such that <span class="arithmatex">\(f|_A=0\)</span> and <span class="arithmatex">\(f|_B=1\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="urysohn-lemma-its-applications-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="urysohn-lemma-its-applications-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
 </div>
 
 

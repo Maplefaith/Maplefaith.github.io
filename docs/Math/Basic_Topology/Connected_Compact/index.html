@@ -4909,11 +4909,23 @@ X=\bigcup_{A \in \mathcal{A}}A.
 <p><a id="closedness of compact subspace of Hausdorff space"></a></p>
 <div class="admonition success">
 <p class="admonition-title">closedness of compact subspace of Hausdorff space</p>
-<p>Every compact subspace of a Hausdorff space is closed. That is, for a compact subspace <span class="arithmatex">\(A\)</span> of a Hausdorff space <span class="arithmatex">\(X\)</span>, choose <span class="arithmatex">\(x\not\in A\)</span>, then there exsit disjoint open set <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span>, such that <span class="arithmatex">\(x\in U\)</span> and <span class="arithmatex">\(Y\subset V\)</span>.</p>
+<p>Every compact subspace of a Hausdorff space is closed. </p>
+<p>That is, for a compact subspace <span class="arithmatex">\(A\)</span> of a Hausdorff space <span class="arithmatex">\(X\)</span>, choose <span class="arithmatex">\(x\not\in A\)</span>, then there exsit disjoint open set <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span>, such that <span class="arithmatex">\(x\in U\)</span> and <span class="arithmatex">\(Y\subset V\)</span>.</p>
 </div>
+<!-- !!! success "Compact subset of Hausdorff Space"
+    Suppse $X$ is a Hausdorff space and $A\subset X$ is a compact set, then $A$ is closed. -->
+
 <div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="compact-subspace-of-hausdorff-space-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="compact-subspace-of-hausdorff-space-proof">Proof</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>We give a proof by showing that for all <span class="arithmatex">\(x\in A^c\)</span>, <span class="arithmatex">\(x\)</span> has a neighborhood <span class="arithmatex">\(U\)</span> such that <span class="arithmatex">\(U\cap A=\varnothing\)</span>, i.e. <span class="arithmatex">\(x\in U\subset A^c\)</span>, so <span class="arithmatex">\(A^c\)</span> is open, so <span class="arithmatex">\(A\)</span> is closed.</p>
+<p>Notice for all <span class="arithmatex">\(y\in A\)</span>, since <span class="arithmatex">\(X\)</span> is Hausdorff, there exists open set <span class="arithmatex">\(U_y\)</span> and <span class="arithmatex">\(V_y\)</span> s.t. <span class="arithmatex">\(x\in U_y\)</span>, <span class="arithmatex">\(y\in V_y\)</span> and <span class="arithmatex">\(U_y\cap V_y=\varnothing\)</span>. Also notice that <span class="arithmatex">\(\bigcup_{y\in A}V_y\)</span> is an open covering of <span class="arithmatex">\(A\)</span>. Since <span class="arithmatex">\(A\)</span> is compact, there exsits finite number <span class="arithmatex">\(N\)</span> such that <span class="arithmatex">\(Y\subset \bigcup_{i=1}^N V_{y_i}\)</span>. Let</p>
+<div class="arithmatex">\[
+U_x = \bigcap_{i=1}^N U_{y_i}, \quad V = \bigcup_{i=1}^N V_{y_i},
+\]</div>
+<p>which are still open sets, and <span class="arithmatex">\(U_x\cap A=\varnothing\)</span>. <span class="arithmatex">\(U_x\)</span> is the open set that we want.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
 </div>
 </div>
 <p>The following theorem is a useful tool to show whether a map is a homeomorphism. The proof is done by transfering closedness and compactness.</p>
