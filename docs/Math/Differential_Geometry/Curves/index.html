@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../Functional_Analysis/">
+        <link rel="next" href="../Surfaces/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -929,6 +929,8 @@
       
         
       
+        
+      
     
     
       
@@ -1082,8 +1084,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculations
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-local-canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      The local canonical form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classical-form-of-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classical form of curves
+    </span>
+  </a>
   
 </li>
       
@@ -1091,6 +1120,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Surfaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Surfaces
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4749,8 +4799,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculations
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-local-canonical-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      The local canonical form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classical-form-of-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classical form of curves
+    </span>
+  </a>
   
 </li>
       
@@ -4814,7 +4891,7 @@ s=\int_{t_0}^t |\alpha'(\tau)|d\tau,
 <p>(i) Observe that <span class="arithmatex">\((u\times v)\cdot (u\times v)=|u\times v|^2&gt;0\)</span>, so the determinant of <span class="arithmatex">\((u,v,u\times v)\)</span> is positive and it could be a basis.</p>
 <p>(ii) Prove that</p>
 <div class="arithmatex">\[
-(u\times v)\cdot(x\times y)=\left[\begin{array}{cc}u\cdot x&amp; v\cdot x\\u\cdot y&amp; v\cdot y\end{array}\right]
+(u\times v)\cdot(x\times y)=\left|\begin{array}{cc}u\cdot x&amp; v\cdot x\\u\cdot y&amp; v\cdot y\end{array}\right|
 \]</div>
 <p>where <span class="arithmatex">\(u,v,x,y\)</span> are arbitrary vectors. Check for basis.</p>
 <p>and show that </p>
@@ -4834,7 +4911,7 @@ s=\int_{t_0}^t |\alpha'(\tau)|d\tau,
 <p class="admonition-title">Curvature of a curve</p>
 <p>Let <span class="arithmatex">\(\alpha:I\rightarrow \mathbb{E}^3\)</span> be a curve parametrized be arc length <span class="arithmatex">\(s\in I\)</span>. The number <span class="arithmatex">\(\kappa(s):=|\alpha''(s)|\)</span> is called the curvature of <span class="arithmatex">\(\alpha\)</span> at <span class="arithmatex">\(s\)</span>.</p>
 </div>
-<p>Easy to show that for straight line, <span class="arithmatex">\(\alpha=us+v\)</span>, if and only if <span class="arithmatex">\(k(s)=0\)</span>.</p>
+<p>Easy to show that for straight line, <span class="arithmatex">\(\alpha=us+v\)</span>, if and only if <span class="arithmatex">\(k(s)=0\)</span>. If we have <span class="arithmatex">\(k(s)\neq 0\)</span> unless for <span class="arithmatex">\(s=s_0\)</span>, we could still find its curvature by leveraging the limit. If for its neighborhood, <span class="arithmatex">\(k(s)=0\)</span>, then it is a straight line.</p>
 <p>When change the direction, we have tangent vector changes but the curvature does not. This is because, let <span class="arithmatex">\(\beta(s)=\alpha(-s)\)</span>, then </p>
 <div class="arithmatex">\[
 \frac{d\beta(s)}{ds}=\frac{d\alpha(-s)}{ds}=(-1)\frac{d\alpha(-s)}{(-s)}.
@@ -4899,9 +4976,12 @@ n'=b'\times t + b\times t'=-\tau b -k t.
 <p>Given differentiable functions <span class="arithmatex">\(k(s)&gt;0\)</span> and <span class="arithmatex">\(\tau(s)\)</span>, <span class="arithmatex">\(s\in I\)</span>, there exsits a regular parametrized curve <span class="arithmatex">\(\alpha: I\rightarrow \mathbb{E}^3\)</span> such that <span class="arithmatex">\(s\)</span> is the arc length, <span class="arithmatex">\(k(s)\)</span> is the curvature, and <span class="arithmatex">\(\tau(s)\)</span> is the tortion of <span class="arithmatex">\(\alpha\)</span>.</p>
 <p>Moreover, any other curve <span class="arithmatex">\(\overline{\alpha}\)</span>, which satisfies the same condition, differs from <span class="arithmatex">\(\alpha\)</span> by a <strong>rigid motion</strong>. That is, there exists a orthonormal map <span class="arithmatex">\(\rho\)</span> with positive determinant, and a translation vector <span class="arithmatex">\(c\)</span>, such that <span class="arithmatex">\(\overline{\alpha}=\rho \circ \alpha +c\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="frenet-trihedron-proof-for-uniqueness" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="frenet-trihedron-proof-for-uniqueness">Proof for uniqueness</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="frenet-trihedron-proof-for-uniqueness" name="__tabbed_2" type="radio" /><input id="frenet-trihedron-proof-for-existence" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="frenet-trihedron-proof-for-uniqueness">Proof for uniqueness</label><label for="frenet-trihedron-proof-for-existence">Proof for existence</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>This is by ODEs theory.</p>
+</div>
 </div>
 </div>
 <p>For plane curve, we could have a simpler version of the above theorem.</p>
@@ -4913,6 +4993,69 @@ n'=b'\times t + b\times t'=-\tau b -k t.
 <p>where <span class="arithmatex">\(\theta(s)=\int k(s)ds + \varphi\)</span>. The curve is determined up to a translation of the vector <span class="arithmatex">\((a,b)\)</span> and a rotation of the angle <span class="arithmatex">\(\varphi\)</span>.</p>
 </div>
 <!-- $$k'(s) = \frac{dk}{ds} = \frac{|\alpha'(s)|^2 ((\alpha'(s) \times \alpha''(s)) \cdot (\alpha'(s) \times \alpha'''(s)))}{|\alpha'(s)|^5 |\alpha'(s) \times \alpha''(s)|}$$代入 $|\alpha'(s)| = 1$，得到：$$\frac{dk}{ds} = \frac{(\alpha'(s) \times \alpha''(s)) \cdot (\alpha'(s) \times \alpha'''(s))}{|\alpha'(s) \times \alpha''(s)|}$$ -->
+<h3 id="calculations">Calculations<a class="headerlink" href="#calculations" title="Permanent link">&para;</a></h3>
+<p>For general regular parametrized curve <span class="arithmatex">\(\alpha(t)\)</span>, we have the following formula for calculating the geometric variables.</p>
+<div class="admonition success">
+<p class="admonition-title">Calculations of curvature</p>
+<p>(i) generally speaking, we have</p>
+<div class="arithmatex">\[
+\kappa(t) = \frac{|\alpha'(t)\times \alpha''(t)|}{|\alpha'(t)|^3}.
+\]</div>
+<p>(ii) for plane curve <span class="arithmatex">\(\alpha'(t)=[x(t), y(t)]\)</span>, we have signed curvature</p>
+<div class="arithmatex">\[
+\kappa(t) = \frac{x'y''-y'x''}{|x'^2+y'^2|^{3/2}}.
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Calculation of tortion</p>
+<p>Generally speaking, we have</p>
+<div class="arithmatex">\[
+\tau(t)=-\frac{(\alpha'(t), \alpha''(t), \alpha'''(t))}{|\alpha'(t)\times \alpha''(t)|^2}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="calculations-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="calculations-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="the-local-canonical-form">The local canonical form<a class="headerlink" href="#the-local-canonical-form" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(\alpha:I\rightarrow\mathbb{E}^3\)</span> be a curve parametrized by arc length without singular points of order <span class="arithmatex">\(1\)</span>. We now consider the equations in a neighborhood of <span class="arithmatex">\(s_0\)</span> using the trihedron <span class="arithmatex">\(t(s_0)\)</span>, <span class="arithmatex">\(n(s_0)\)</span>, <span class="arithmatex">\(b(s_0)\)</span> as a basis for <span class="arithmatex">\(\mathbb{E}^3\)</span>. We may assume without loss of generality, that <span class="arithmatex">\(s_0=0\)</span>, and consider Taylor expansion </p>
+<div class="arithmatex">\[
+\alpha(s)-\alpha(0)=\alpha'(0)s + \frac{1}{2}\alpha''(0)s^2 + \frac{1}{6}\alpha'''(0)s^3 + R(s),
+\]</div>
+<p>where <span class="arithmatex">\(R(s)/s^3\rightarrow \pmb{0}\)</span> as <span class="arithmatex">\(s\rightarrow 0\)</span>. Using <span class="arithmatex">\(\alpha'(0)=t\)</span>, <span class="arithmatex">\(\alpha''(0)=kn\)</span>, and <span class="arithmatex">\(\alpha'''(0)=(kn)'=k'n-k^2t-k\tau b\)</span>, we rewrite the above equation sorted by <span class="arithmatex">\(t,n,b\)</span></p>
+<div class="arithmatex">\[
+\alpha(s)-\alpha(0)=\left(s-\frac{1}{6}k^2s^3\right)t + \left(\frac{1}{2}ks^2-\frac{1}{6}k's^3\right)n -\frac{1}{6}k\tau s^3 b+ R(s),
+\]</div>
+<p>with</p>
+<div class="arithmatex">\[
+\begin{cases}
+x(s)&amp;=s-\frac{1}{6}k^2s^3 + R_x\\
+y(s)&amp;=\frac{1}{2}ks^2-\frac{1}{6}k's^3 + R_y\\
+z(s)&amp;=-\frac{1}{6}k\tau s^3 + R_z
+\end{cases}
+\]</div>
+<p>which is called the local canonical form of <span class="arithmatex">\(\alpha\)</span>.</p>
+<h2 id="classical-form-of-curves">Classical form of curves<a class="headerlink" href="#classical-form-of-curves" title="Permanent link">&para;</a></h2>
+<div class="question">
+<p><strong>Example</strong>. Given the parametrized curve </p>
+<div class="arithmatex">\[
+\alpha(s)=\left(a\cos \frac{s}{c}, a\sin \frac{s}{c}, b\frac{s}{c}\right)
+\]</div>
+<p>where <span class="arithmatex">\(c^2=a^2+b^2\)</span>. Show that</p>
+<p>(a) <span class="arithmatex">\(s\)</span> is the arc length. (i.e. <span class="arithmatex">\(|\alpha'(s)|=1\)</span>).</p>
+<p>(b) </p>
+<div class="arithmatex">\[
+\kappa(s)=\frac{|a|}{c^2},\quad \tau(s)=\frac{b}{c^2}.
+\]</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. A curve <span class="arithmatex">\(\alpha\)</span> is called a <em>helix</em> if the tangent line of <span class="arithmatex">\(\alpha\)</span> make a constant angle with a fixed direction. Assume <span class="arithmatex">\(\tau(s)\neq 0\)</span>, <span class="arithmatex">\(s\in I\)</span>, show the following statements are equivalent:</p>
+<p>(i) <span class="arithmatex">\(\alpha\)</span> is a helix,</p>
+<p>(ii) <span class="arithmatex">\(\kappa/\tau=const\)</span>.</p>
+<p>(iii) the lines containing <span class="arithmatex">\(n(s)\)</span> and passing <span class="arithmatex">\(\alpha(s)\)</span> are parallel to a fixed plane.</p>
+<p>(iv) the lines containing <span class="arithmatex">\(b(s)\)</span> and passing <span class="arithmatex">\(\alpha(s)\)</span> make a constant angle with a fixed direction.</p>
+</div>
 
 
 
@@ -4969,13 +5112,13 @@ n'=b'\times t + b\times t'=-\tau b -k t.
         
         
           
-          <a href="../../Functional_Analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Functional Analysis">
+          <a href="../Surfaces/" class="md-footer__link md-footer__link--next" aria-label="Next: Surfaces">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Functional Analysis
+                Surfaces
               </div>
             </div>
             <div class="md-footer__button md-icon">
