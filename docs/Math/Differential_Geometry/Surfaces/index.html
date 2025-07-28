@@ -1057,6 +1057,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Regular surfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4673,6 +4688,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Regular surfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Images
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4702,6 +4732,70 @@
 <p>whose component functions have continuous partial derivatives of all orders in <span class="arithmatex">\(U\)</span>.</p>
 <p>(ii) <span class="arithmatex">\(\pmb{x}\)</span> is a homeomorphism. </p>
 <p>(iii) <strong>regularity condition</strong>. For each <span class="arithmatex">\(q\in U\)</span>, the differential <span class="arithmatex">\(d\pmb{x}_q: \mathbb{E}^2\rightarrow \mathbb{E}^3\)</span> is one-to-one.</p>
+</div>
+<p>Condition (i) is necessary if we want to do some geometric ananlysis on <span class="arithmatex">\(S\)</span>. The homeomorphism in Condition (ii) prevents the self-intersections in regular surfaces, otherwise it would induce ambiguous tangent plane at the intersection point. Consition (iii) guarantee the existence of a tangent plane at all points of <span class="arithmatex">\(S\)</span>. 
+A more familiar form of condition (iii) is given as follows.</p>
+<p><a id="Interpretation of condition (iii)"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Interpretation of condition (iii)</p>
+<p>Let us compute the matrix of the linear map <span class="arithmatex">\(d\pmb{x}_q\)</span> in the canonical bases <span class="arithmatex">\(e_1, e_2\)</span> of <span class="arithmatex">\(\mathbb{R}^2\)</span> with coordinate <span class="arithmatex">\((u,v)\)</span> and <span class="arithmatex">\(f_1, f_2, f_3\)</span> of <span class="arithmatex">\(\mathbb{R}^3\)</span> with coordinate <span class="arithmatex">\((x,y,z)\)</span>.</p>
+<p>Let <span class="arithmatex">\(q=(u_0,v_0)\)</span>, then <span class="arithmatex">\(e_1=(1,0)\)</span> is tangent to the curve <span class="arithmatex">\(u\mapsto (u, v_0)\)</span> on <span class="arithmatex">\(\mathbb{R}^2\)</span> whose image is <span class="arithmatex">\(u\mapsto (x(u,v_0), y(u, v_0), z(u,v_0))\)</span> (This image curve is called the coordinate curve <span class="arithmatex">\(v=v_0\)</span>, or with ODE <span class="arithmatex">\(dv=0\)</span>), which lies on <span class="arithmatex">\(S\)</span> and has a tangent vector at <span class="arithmatex">\(\pmb{x}_q\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial \pmb{x}}{\partial u}=\left(\frac{\partial x}{\partial u},\frac{\partial y}{\partial u}, \frac{\partial z}{\partial u} \right)^T
+=d\pmb{x}_q (e_1).
+\]</div>
+<p>Similarly, we have </p>
+<div class="arithmatex">\[
+\frac{\partial \pmb{x}}{\partial v}=\left(\frac{\partial x}{\partial v},\frac{\partial y}{\partial v}, \frac{\partial z}{\partial v} \right)^T
+=d\pmb{x}_q (e_2).
+\]</div>
+<p>So we could write the matrix of <span class="arithmatex">\(d\pmb{x}_q\)</span></p>
+<div class="arithmatex">\[
+\displaystyle{\left[\begin{array}{cc}
+\displaystyle\frac{\partial x}{\partial u} &amp; \displaystyle\frac{\partial x}{\partial v} \\
+\displaystyle\frac{\partial y}{\partial u} &amp; \displaystyle\frac{\partial y}{\partial v} \\
+\displaystyle\frac{\partial z}{\partial u} &amp; \displaystyle\frac{\partial z}{\partial v}.
+\end{array}\right]}
+\]</div>
+<p>condition (iii) requires the matrix to be full rank. Equivalently speaking, we need <span class="arithmatex">\(\frac{\partial \pmb{x}}{\partial u}\times \frac{\partial \pmb{x}}{\partial v}\neq 0\)</span>; or one of the minors of order <span class="arithmatex">\(2\)</span> of the matrix of <span class="arithmatex">\(d\pmb{x}_q\)</span>, that is, one of the Jacobian determinants</p>
+<div class="arithmatex">\[
+\frac{\partial (x,y)}{\partial (u,v)},\quad \frac{\partial (y,z)}{\partial (u,v)},\quad \frac{\partial (x,z)}{\partial (u,v)}
+\]</div>
+<p>does not vanish at <span class="arithmatex">\(q\)</span>.</p>
+</div>
+<p>Actually, it would be tiresome if we test all the three conditions one by one. The following theorems gives a cheaper method to the testing by utilizing the image of a multi-variable function.</p>
+<h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">images </p>
+<p>If <span class="arithmatex">\(f:U\rightarrow \mathbb{E}\in C^1(U)\)</span> where <span class="arithmatex">\(U\subset \mathbb{E}^2\)</span> is an open set, then the graph of <span class="arithmatex">\(f\)</span>, viewed in <span class="arithmatex">\(\mathbb{E}^3\)</span>, i.e. the subset of <span class="arithmatex">\(\mathbb{E}^3\)</span> given by <span class="arithmatex">\((x,y,f(x,y))\)</span> for <span class="arithmatex">\((x,y)\in U\)</span> is a regular surface.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="images-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="images-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>Now we give some definitions about the following application.</p>
+<div class="admonition info">
+<p class="admonition-title">regular point, critical point</p>
+<p>Given a differentiable map <span class="arithmatex">\(F:U\subset \mathbb{E}^n\rightarrow \mathbb{E}^m\)</span> where <span class="arithmatex">\(U\)</span> is open, a point <span class="arithmatex">\(p\in U\)</span> is called a <strong>critical point</strong> of <span class="arithmatex">\(F\)</span> if the differential <span class="arithmatex">\(dF_p:\mathbb{E}^n\rightarrow \mathbb{E}^m\)</span> is not a surjective mapping. </p>
+<p>The image <span class="arithmatex">\(F(p)\in\mathbb{E}^m\)</span> of a <strong>critical point</strong> is called the critical value of <span class="arithmatex">\(F\)</span>. A non-critical value of <span class="arithmatex">\(\mathbb{E}^m\)</span> is called the <strong>regular value</strong> of <span class="arithmatex">\(F\)</span>.</p>
+</div>
+<p>The above terminology is inspired by a real-valued function of a real variable.</p>
+<p>Now particularly we consider <span class="arithmatex">\(f:U\subset \mathbb{E}^3\rightarrow \mathbb{E}\)</span>, which takes <span class="arithmatex">\(m=1,n=3\)</span>. With a similar logic as we have in <a href="#Interpretation of condition (iii)">Interpretation of condition (iii)</a>, for canonical bases <span class="arithmatex">\(f_1,f_2,f_3\)</span>, we have the matrix form</p>
+<div class="arithmatex">\[
+df_p = (f_x, f_y, f_z).
+\]</div>
+<p>In this case, <span class="arithmatex">\(df_p\)</span> is not surjective at <span class="arithmatex">\(p\)</span>, iff <span class="arithmatex">\(f_x=f_y=f_z=0\)</span> at <span class="arithmatex">\(p\)</span>. </p>
+<div class="admonition success">
+<p class="admonition-title">regular surfaces by images</p>
+<p>If <span class="arithmatex">\(f:U\subset \mathbb{E}^3\rightarrow \mathbb{E}\)</span> is a differentiable function and <span class="arithmatex">\(a\in f(U)\)</span> is a regular value of <span class="arithmatex">\(f\)</span>, then <span class="arithmatex">\(f^{-1}(a)\)</span> is a regular surface in <span class="arithmatex">\(\mathbb{E}^3\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="images-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="images-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
 </div>
 
 
