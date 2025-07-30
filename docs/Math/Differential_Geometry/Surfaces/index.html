@@ -4722,6 +4722,7 @@
 
 <h1 id="surfaces">Surfaces<a class="headerlink" href="#surfaces" title="Permanent link">&para;</a></h1>
 <h2 id="regular-surfaces">Regular surfaces<a class="headerlink" href="#regular-surfaces" title="Permanent link">&para;</a></h2>
+<p><a id="defintion of regular surfaces"></a></p>
 <div class="admonition info">
 <p class="admonition-title">defintion of regular surfaces</p>
 <p>A subset <span class="arithmatex">\(S\subset \mathbb{E}^3\)</span> is a regular surface if for each <span class="arithmatex">\(p\in S\)</span>, there exsits a neighborhood <span class="arithmatex">\(V\)</span> in <span class="arithmatex">\(\mathbb{E}^3\)</span> and a map <span class="arithmatex">\(\pmb{x}: U\rightarrow V\cap S\)</span> of an open set <span class="arithmatex">\(U\in \mathbb{E}^2\)</span> onto <span class="arithmatex">\(V\cap S\subset \mathbb{E}^3\)</span> such that</p>
@@ -4765,8 +4766,9 @@ A more familiar form of condition (iii) is given as follows.</p>
 </div>
 <p>Actually, it would be tiresome if we test all the three conditions one by one. The following theorems gives a cheaper method to the testing by utilizing the image of a multi-variable function.</p>
 <h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
+<p><a id="images implies regularity"></a></p>
 <div class="admonition success">
-<p class="admonition-title">images </p>
+<p class="admonition-title">images implies regularity</p>
 <p>If <span class="arithmatex">\(f:U\rightarrow \mathbb{E}\in C^1(U)\)</span> where <span class="arithmatex">\(U\subset \mathbb{E}^2\)</span> is an open set, then the graph of <span class="arithmatex">\(f\)</span>, viewed in <span class="arithmatex">\(\mathbb{E}^3\)</span>, i.e. the subset of <span class="arithmatex">\(\mathbb{E}^3\)</span> given by <span class="arithmatex">\((x,y,f(x,y))\)</span> for <span class="arithmatex">\((x,y)\in U\)</span> is a regular surface.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="images-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="images-proof">Proof</label></div>
@@ -4781,16 +4783,64 @@ A more familiar form of condition (iii) is given as follows.</p>
 <p>The image <span class="arithmatex">\(F(p)\in\mathbb{E}^m\)</span> of a <strong>critical point</strong> is called the critical value of <span class="arithmatex">\(F\)</span>. A non-critical value of <span class="arithmatex">\(\mathbb{E}^m\)</span> is called the <strong>regular value</strong> of <span class="arithmatex">\(F\)</span>.</p>
 </div>
 <p>The above terminology is inspired by a real-valued function of a real variable.</p>
+<p><a id="special case for function on E3"></a></p>
+<div class="question">
 <p>Now particularly we consider <span class="arithmatex">\(f:U\subset \mathbb{E}^3\rightarrow \mathbb{E}\)</span>, which takes <span class="arithmatex">\(m=1,n=3\)</span>. With a similar logic as we have in <a href="#Interpretation of condition (iii)">Interpretation of condition (iii)</a>, for canonical bases <span class="arithmatex">\(f_1,f_2,f_3\)</span>, we have the matrix form</p>
 <div class="arithmatex">\[
 df_p = (f_x, f_y, f_z).
 \]</div>
 <p>In this case, <span class="arithmatex">\(df_p\)</span> is not surjective at <span class="arithmatex">\(p\)</span>, iff <span class="arithmatex">\(f_x=f_y=f_z=0\)</span> at <span class="arithmatex">\(p\)</span>. </p>
+</div>
 <div class="admonition success">
 <p class="admonition-title">regular surfaces by images</p>
 <p>If <span class="arithmatex">\(f:U\subset \mathbb{E}^3\rightarrow \mathbb{E}\)</span> is a differentiable function and <span class="arithmatex">\(a\in f(U)\)</span> is a regular value of <span class="arithmatex">\(f\)</span>, then <span class="arithmatex">\(f^{-1}(a)\)</span> is a regular surface in <span class="arithmatex">\(\mathbb{E}^3\)</span>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="images-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="images-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(p=(x_0,y_0,z_0)\)</span> be a point of <span class="arithmatex">\(f^{-1}(a)\)</span>. Since <span class="arithmatex">\(a\)</span> is a regular value of <span class="arithmatex">\(f\)</span>, we may assume without loss of generality that <span class="arithmatex">\(f_z\neq 0\)</span> at <span class="arithmatex">\(p\)</span>. Then define a map like an image</p>
+<div class="arithmatex">\[
+F(x,y,z)=(x,y,f(x,y,z))^T
+\]</div>
+<p>and we indicate by <span class="arithmatex">\((u,v,t)\)</span> the coordinates of a point in <span class="arithmatex">\(\mathbb{E}^3\)</span> where <span class="arithmatex">\(F\)</span> takes its values. The matrix of the differential map <span class="arithmatex">\(dF_p\)</span> is given by</p>
+<div class="arithmatex">\[
+dF_p=\left[\begin{array}{ccc}1 &amp; 0 &amp; 0\\
+0&amp; 1&amp; 0\\
+f_x &amp; f_y &amp; f_z
+\end{array}\right]
+\]</div>
+<p>as we illustrated in <a href="#special case for function on E3">special case for function on <span class="arithmatex">\(\mathbb{E}^3\)</span></a>. Whence <span class="arithmatex">\(det(dF_P)=f_z\neq 0\)</span>. We may apply the inverse function theorem, which guarantees the existence of neighborhood <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(W\)</span> of <span class="arithmatex">\(F(p)\)</span> such that <span class="arithmatex">\(F:V\rightarrow W\)</span> is invertible, and the inverse <span class="arithmatex">\(F^{-1}:W\rightarrow V\)</span> is differentiable. It follows that </p>
+<div class="arithmatex">\[
+x=u, \quad y=v, \quad z=g(u,v,t),\quad (u,v,t)\in W
+\]</div>
+<p>are differentiable. In particular, <span class="arithmatex">\(z=g(u,v,t=a)=h(x,y)\)</span> is differentiable defined in the projection of <span class="arithmatex">\(V\)</span> onto <span class="arithmatex">\(xy\)</span> plane. Since</p>
+<div class="arithmatex">\[
+F(f^{-1}(a)\cap V)=\{(u,v,t): t=a\}\cap W
+\]</div>
+<p>we conclude that the graph of <span class="arithmatex">\(h\)</span> (i.e. <span class="arithmatex">\(z\)</span>) is <span class="arithmatex">\(f^{-1}(a)\cap V\)</span>. By <a href="#images implies regularity">images implies regularity</a>, we have <span class="arithmatex">\(f^{-1}(a)\cap V\)</span> is a coordinate neighborhood of <span class="arithmatex">\(p\)</span>. Therefore, every point <span class="arithmatex">\(p\in f^{-1}(a)\)</span> can be covered by a coordinate neighborhood and <span class="arithmatex">\(f^{-1}(a)\)</span> is a regular surface.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>It would be good if readers could recall the implicit function theorem and its application -- inverse function theorem.</p>
+<p>The following proposition shows that any regular surface is locally the graph of a differeniable function.</p>
+<div class="admonition success">
+<p class="admonition-title">Find differentiable function using projection</p>
+<p>Let <span class="arithmatex">\(S\subset \mathbb{E}^3\)</span> is a regular surface, and <span class="arithmatex">\(p\in S\)</span>. Then there exsits a neighborhood <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(p\)</span> in <span class="arithmatex">\(S\)</span> such that <span class="arithmatex">\(V\)</span> is the graph of a differentiable function, which belongs to one of the three forms <span class="arithmatex">\(z=f(x,y), y=g(x,z), x=h(y,z)\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="images-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="images-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Using projection and by inverse function theorem.</p>
+</div>
+</div>
+</div>
+<p>Using the above proposition, we claim that, for a regular surface, and any other parametrization <span class="arithmatex">\(\pmb{x}\)</span>, we do not need to test continuity of <span class="arithmatex">\(\pmb{x}^{-1}\)</span>, provided that the other conditions hold.</p>
+<div class="admonition success">
+<p class="admonition-title">omit the test of continuity of inverse map</p>
+<p>Let <span class="arithmatex">\(p\in S\)</span> be a point of a regular surface <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(\pmb{x}:U\subset \mathbb{E}^2\rightarrow \mathbb{E}^3\)</span> is a parametrization with <span class="arithmatex">\(p\in \pmb{x}(U)\)</span> such that condition 1 and 3 of <a href="#defintion of regular surfaces">defintion of regular surfaces</a> hold. Assume <span class="arithmatex">\(\pmb{x}\)</span> is one-to-one, then <span class="arithmatex">\(\pmb{x}^{-1}\)</span> is continuous.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="images-proof_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="images-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
