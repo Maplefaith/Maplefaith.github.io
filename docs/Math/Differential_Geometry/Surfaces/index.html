@@ -1074,6 +1074,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#change-of-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change of parameters
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4705,6 +4714,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#change-of-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change of parameters
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4755,8 +4773,8 @@ A more familiar form of condition (iii) is given as follows.</p>
 \displaystyle{\left[\begin{array}{cc}
 \displaystyle\frac{\partial x}{\partial u} &amp; \displaystyle\frac{\partial x}{\partial v} \\
 \displaystyle\frac{\partial y}{\partial u} &amp; \displaystyle\frac{\partial y}{\partial v} \\
-\displaystyle\frac{\partial z}{\partial u} &amp; \displaystyle\frac{\partial z}{\partial v}.
-\end{array}\right]}
+\displaystyle\frac{\partial z}{\partial u} &amp; \displaystyle\frac{\partial z}{\partial v}
+\end{array}\right]}.
 \]</div>
 <p>condition (iii) requires the matrix to be full rank. Equivalently speaking, we need <span class="arithmatex">\(\frac{\partial \pmb{x}}{\partial u}\times \frac{\partial \pmb{x}}{\partial v}\neq 0\)</span>; or one of the minors of order <span class="arithmatex">\(2\)</span> of the matrix of <span class="arithmatex">\(d\pmb{x}_q\)</span>, that is, one of the Jacobian determinants</p>
 <div class="arithmatex">\[
@@ -4764,6 +4782,7 @@ A more familiar form of condition (iii) is given as follows.</p>
 \]</div>
 <p>does not vanish at <span class="arithmatex">\(q\)</span>.</p>
 </div>
+<p>Condition (iii) is also of great importance for <span class="arithmatex">\(\pmb{x}^{-1}\)</span> to be a so-called differentiable function, that is, if we lift its range to three dimension, then the map is differentiable. Details could be found in <a href="#change-of-parameters">Change of parameters</a>.</p>
 <p>Actually, it would be tiresome if we test all the three conditions one by one. The following theorems gives a cheaper method to the testing by utilizing the image of a multi-variable function.</p>
 <h3 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h3>
 <p><a id="images implies regularity"></a></p>
@@ -4843,6 +4862,23 @@ F(f^{-1}(a)\cap V)=\{(u,v,t): t=a\}\cap W
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="images-proof_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="images-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h2 id="change-of-parameters">Change of parameters<a class="headerlink" href="#change-of-parameters" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Differentiability of change of parameters</p>
+<p>Let <span class="arithmatex">\(p\)</span> be a point in a regular surface <span class="arithmatex">\(S\subset \mathbb{E}^3\)</span>, and two parametrizations <span class="arithmatex">\(\pmb{x}:U\subset \mathbb{E}^2\rightarrow \mathbb{E}^3\)</span> and <span class="arithmatex">\(\pmb{y}:V\subset \mathbb{E}^2\rightarrow \mathbb{E}^3\)</span>, parametrized by <span class="arithmatex">\((u,v)\)</span> and <span class="arithmatex">\((\xi, \eta)\)</span>, respectively. Suppose <span class="arithmatex">\(p\in \pmb{x}(U)\cap \pmb{y}(V)=W\)</span>. Then the change of parameters <span class="arithmatex">\(h=\pmb{x}^{-1}\circ \pmb{y}: \pmb{y}^{-1}(W)\rightarrow \pmb{x}^{-1}(W)\)</span> is a diffeomorphism.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="change-of-parameters-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="change-of-parameters-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Utilizing the map</p>
+<div class="arithmatex">\[
+F(u,v, t)\rightarrow (x(u,v), y(u,v), z(u,v)+t),\quad (u,v)\in U
+\]</div>
+<p>is a diffeomorphism by condition (iii). Restrict the map on a slice <span class="arithmatex">\(U\times {0}\)</span> and <span class="arithmatex">\(F^{-1}\)</span> is differentiable.</p>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
