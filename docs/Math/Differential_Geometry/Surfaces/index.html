@@ -1083,6 +1083,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-tangent-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tangent plane
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-first-fundamental-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      The first fundamental form
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4723,6 +4741,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-tangent-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      The tangent plane
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-first-fundamental-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      The first fundamental form
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4740,6 +4776,44 @@
 
 <h1 id="surfaces">Surfaces<a class="headerlink" href="#surfaces" title="Permanent link">&para;</a></h1>
 <h2 id="regular-surfaces">Regular surfaces<a class="headerlink" href="#regular-surfaces" title="Permanent link">&para;</a></h2>
+<p>Before stepping into the definition of regular curves, we have to define a <strong>differential of a map</strong>.</p>
+<p><a id="Definition of a differential of a map"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Definition of a differential of a map</p>
+<p>Let <span class="arithmatex">\(F: U\subset \mathbb{E}^n\rightarrow \mathbb{E}^m\)</span> be a differentiable map, i.e. each component function has continuous partial derivatives w.r.t each variable. <span class="arithmatex">\(p\in U\)</span>. A linear map <span class="arithmatex">\(dF_p: \mathbb{E}^n\rightarrow \mathbb{E}^m\)</span> is called the <strong>differential</strong> of <span class="arithmatex">\(F\)</span> at <span class="arithmatex">\(p\)</span>, and is defined as follows.</p>
+<p><p align="center">
+<img src="../images/def_differential.png" width="70%"/>
+</p></p>
+<p>Let <span class="arithmatex">\(w\in \mathbb{E}^n\)</span> and <span class="arithmatex">\(\alpha: (-\varepsilon, +\varepsilon)\rightarrow U\)</span> is a differentiable curve such that <span class="arithmatex">\(\alpha(0)=p\)</span>, <span class="arithmatex">\(\alpha'(0)=w\)</span>. Then by chain rule, <span class="arithmatex">\(\beta=F\circ \alpha: (-\varepsilon, +\varepsilon)\rightarrow \mathbb{E}^m\)</span> is also differentiable. Then </p>
+<div class="arithmatex">\[
+dF_p(w) := \beta'(0).
+\]</div>
+</div>
+<p><a id="Differential of a map is independent of choice of curves"> </a></p>
+<div class="admonition success">
+<p class="admonition-title">Differential of a map is independent of choice of curves</p>
+<p>The above definition of <span class="arithmatex">\(dF_p\)</span> does not depend on the choice of the curve which passes through <span class="arithmatex">\(p\)</span> with tangent vector <span class="arithmatex">\(w\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="regular-surfaces-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="regular-surfaces-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We porve the case when <span class="arithmatex">\(n=2, m=3\)</span>. Let <span class="arithmatex">\(\alpha(t)=(u(t), v(t))^T\)</span>, and <span class="arithmatex">\(F(u,v)=(x(u,v), y(u,v), z(u,v))^T\)</span>, then </p>
+<div class="arithmatex">\[
+\beta'(0)=\left[\begin{array}{cc}
+\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial v}\\
+\frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial v}\\
+\frac{\partial z}{\partial u} &amp; \frac{\partial z}{\partial v}
+\end{array}\right]
+\left[\begin{array}{c}
+\frac{\partial u}{\partial t} \\
+\frac{\partial v}{\partial t} \\
+\end{array}\right]=dF_p(w).
+\]</div>
+<p>which is a linear map.</p>
+<p>Actually the above map has a matrix in canonical bases, which is usually called the <strong>Jacobian matrix</strong>.</p>
+</div>
+</div>
+</div>
 <p><a id="defintion of regular surfaces"></a></p>
 <div class="admonition info">
 <p class="admonition-title">defintion of regular surfaces</p>
@@ -4790,7 +4864,7 @@ A more familiar form of condition (iii) is given as follows.</p>
 <p class="admonition-title">images implies regularity</p>
 <p>If <span class="arithmatex">\(f:U\rightarrow \mathbb{E}\in C^1(U)\)</span> where <span class="arithmatex">\(U\subset \mathbb{E}^2\)</span> is an open set, then the graph of <span class="arithmatex">\(f\)</span>, viewed in <span class="arithmatex">\(\mathbb{E}^3\)</span>, i.e. the subset of <span class="arithmatex">\(\mathbb{E}^3\)</span> given by <span class="arithmatex">\((x,y,f(x,y))\)</span> for <span class="arithmatex">\((x,y)\in U\)</span> is a regular surface.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="images-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="images-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="images-proof" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="images-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -4814,7 +4888,7 @@ df_p = (f_x, f_y, f_z).
 <p class="admonition-title">regular surfaces by images</p>
 <p>If <span class="arithmatex">\(f:U\subset \mathbb{E}^3\rightarrow \mathbb{E}\)</span> is a differentiable function and <span class="arithmatex">\(a\in f(U)\)</span> is a regular value of <span class="arithmatex">\(f\)</span>, then <span class="arithmatex">\(f^{-1}(a)\)</span> is a regular surface in <span class="arithmatex">\(\mathbb{E}^3\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="images-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="images-proof_1">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="images-proof_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="images-proof_1">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Let <span class="arithmatex">\(p=(x_0,y_0,z_0)\)</span> be a point of <span class="arithmatex">\(f^{-1}(a)\)</span>. Since <span class="arithmatex">\(a\)</span> is a regular value of <span class="arithmatex">\(f\)</span>, we may assume without loss of generality that <span class="arithmatex">\(f_z\neq 0\)</span> at <span class="arithmatex">\(p\)</span>. Then define a map like an image</p>
@@ -4847,7 +4921,7 @@ F(f^{-1}(a)\cap V)=\{(u,v,t): t=a\}\cap W
 <p class="admonition-title">Find differentiable function using projection</p>
 <p>Let <span class="arithmatex">\(S\subset \mathbb{E}^3\)</span> is a regular surface, and <span class="arithmatex">\(p\in S\)</span>. Then there exsits a neighborhood <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(p\)</span> in <span class="arithmatex">\(S\)</span> such that <span class="arithmatex">\(V\)</span> is the graph of a differentiable function, which belongs to one of the three forms <span class="arithmatex">\(z=f(x,y), y=g(x,z), x=h(y,z)\)</span>.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="images-proof_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="images-proof_2">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="images-proof_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="images-proof_2">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using projection and by inverse function theorem.</p>
@@ -4859,7 +4933,7 @@ F(f^{-1}(a)\cap V)=\{(u,v,t): t=a\}\cap W
 <p class="admonition-title">omit the test of continuity of inverse map</p>
 <p>Let <span class="arithmatex">\(p\in S\)</span> be a point of a regular surface <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(\pmb{x}:U\subset \mathbb{E}^2\rightarrow \mathbb{E}^3\)</span> is a parametrization with <span class="arithmatex">\(p\in \pmb{x}(U)\)</span> such that condition 1 and 3 of <a href="#defintion of regular surfaces">defintion of regular surfaces</a> hold. Assume <span class="arithmatex">\(\pmb{x}\)</span> is one-to-one, then <span class="arithmatex">\(\pmb{x}^{-1}\)</span> is continuous.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="images-proof_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="images-proof_3">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="images-proof_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="images-proof_3">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
@@ -4871,7 +4945,7 @@ F(f^{-1}(a)\cap V)=\{(u,v,t): t=a\}\cap W
 <p class="admonition-title">Differentiability of change of parameters</p>
 <p>Let <span class="arithmatex">\(p\)</span> be a point in a regular surface <span class="arithmatex">\(S\subset \mathbb{E}^3\)</span>, and two parametrizations <span class="arithmatex">\(\pmb{x}:U\subset \mathbb{E}^2\rightarrow \mathbb{E}^3\)</span> and <span class="arithmatex">\(\pmb{y}:V\subset \mathbb{E}^2\rightarrow \mathbb{E}^3\)</span>, parametrized by <span class="arithmatex">\((u,v)\)</span> and <span class="arithmatex">\((\xi, \eta)\)</span>, respectively. Suppose <span class="arithmatex">\(p\in \pmb{x}(U)\cap \pmb{y}(V)=W\)</span>. Then the change of parameters <span class="arithmatex">\(h=\pmb{x}^{-1}\circ \pmb{y}: \pmb{y}^{-1}(W)\rightarrow \pmb{x}^{-1}(W)\)</span> is a diffeomorphism.</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="change-of-parameters-proof" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="change-of-parameters-proof">Proof</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="change-of-parameters-proof" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="change-of-parameters-proof">Proof</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Utilizing the map</p>
@@ -4879,10 +4953,127 @@ F(f^{-1}(a)\cap V)=\{(u,v,t): t=a\}\cap W
 F(u,v, t)\rightarrow (x(u,v), y(u,v), z(u,v)+t),\quad (u,v)\in U
 \]</div>
 <p>is a diffeomorphism by condition (iii). Restrict the map on a slice <span class="arithmatex">\(U\times {0}\)</span> and <span class="arithmatex">\(F^{-1}\)</span> is differentiable.</p>
+<p>Check the following figure.</p>
+<p><p align="center">
+<img src="../images/change_params.png" width="70%" />
+</p></p>
 <p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
 </div>
 </div>
 </div>
+<p>The definition of differentiability could be extended to mappings between surfaces by utilizing the differentiability of maps between plane parameters.</p>
+<div class="admonition info">
+<p class="admonition-title">differentiability of maps between surfaces</p>
+<p>A continuous map <span class="arithmatex">\(\varphi: V_1 \subset S_1 \rightarrow S_2\)</span> of an open set <span class="arithmatex">\(V_1\)</span> of a regular surface <span class="arithmatex">\(S_1\)</span> to a regular surface <span class="arithmatex">\(S_2\)</span>, is said to be <strong>differentiable</strong> at <span class="arithmatex">\(p\in V_1\)</span>, if for given parametrization</p>
+<div class="arithmatex">\[
+\pmb{x}_1:U_1\subset \mathbb{E}^2\rightarrow S_1,\quad \pmb{x}_2: U_2\subset \mathbb{E}^2 \rightarrow S_2,
+\]</div>
+<p>with <span class="arithmatex">\(p\in \pmb{x}_1(U_1)\)</span> and <span class="arithmatex">\(\varphi(\pmb{x}_1(U_1))\subset \pmb{x}_2(U_2)\)</span>, the map composition</p>
+<div class="arithmatex">\[
+\pmb{x}^{-1}_2 \circ \varphi \circ \pmb{x}_1: U_1\rightarrow U_2
+\]</div>
+<p>is differentiable at <span class="arithmatex">\(q = \pmb{x}^{-1}_1 (p)\)</span>.</p>
+<p><p align="center">
+<img src="../images/differentiability_maps_surfaces.png" width="70%"/>
+</p></p>
+<p>Two surfaces <span class="arithmatex">\(S_1\)</span> and <span class="arithmatex">\(S_2\)</span> are <strong>diffeomorphic</strong>, if there exsits a differentiable map <span class="arithmatex">\(\varphi: S_1\rightarrow S_2\)</span> with a differentiable inverse <span class="arithmatex">\(\varphi^{-1} S_2\rightarrow S_1\)</span>. Such a map <span class="arithmatex">\(\varphi\)</span> is called a <strong>diffeomorphism</strong> between <span class="arithmatex">\(S_1\)</span> and <span class="arithmatex">\(S_2\)</span>.</p>
+</div>
+<p><a id="differentiability of parametrization"></a></p>
+<div class="question">
+<p><strong>Example</strong>. If <span class="arithmatex">\(\pmb{x}: U\subset \mathbb{E}^2\rightarrow S\)</span> is a parametrization, then <span class="arithmatex">\(\pmb{x}^{-1}: \pmb{x}(U)\rightarrow \mathbb{E}^2\)</span> is differentiable. This means <strong>every regular surface is locally diffeomorphic to a plane</strong>. This is useful in manifold learning.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="change-of-parameters-proof_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="change-of-parameters-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Just check the differentiability of the map <span class="arithmatex">\(I\circ\pmb{x}^{-1}\circ \pmb{y}\)</span> for any two given parametrizations.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="question">
+<p><strong>Example</strong>. Let <span class="arithmatex">\(S_1\)</span> and <span class="arithmatex">\(S_2\)</span> be regular surfaces. Assume that <span class="arithmatex">\(S_1\subset V\subset \mathbb{E}^3\)</span>, <span class="arithmatex">\(V\)</span> is an open set of <span class="arithmatex">\(\mathbb{E}^3\)</span>. Suppose <span class="arithmatex">\(\varphi: V\rightarrow \mathbb{E}^3\)</span> is a differentiable map such that <span class="arithmatex">\(\varphi(S_1)\subset S_2\)</span>. Then the restriction <span class="arithmatex">\(\varphi_{|_{S_1}}: S_1\rightarrow S_2\)</span> is a differentiable map. The followings are some applications.</p>
+<p>(i) <strong>Symmetry</strong>. <span class="arithmatex">\(S\)</span> is a symmetric surface relative to <span class="arithmatex">\(xy\)</span> plane. Then the differentiable map <span class="arithmatex">\(\sigma: \mathbb{E}^3\rightarrow \mathbb{E}^3\)</span> defined by</p>
+<div class="arithmatex">\[
+\sigma(x, y, z)=(x, y, -z)
+\]</div>
+<p>is differentiable restricted on <span class="arithmatex">\(S\)</span>.</p>
+<p>(ii) <strong>Rotations</strong>.<span class="arithmatex">\(S\)</span> is a regular surface invariant by rotation <span class="arithmatex">\(R_{z,\theta}\)</span>, which denotes a rotation of angle <span class="arithmatex">\(\theta\)</span> about <span class="arithmatex">\(z\)</span> axis. Then the restriction </p>
+<div class="arithmatex">\[
+R_{z,\theta}: S\rightarrow S
+\]</div>
+<p>is differentiable.</p>
+<p>(iii) <strong>Stretching operation</strong>. Let <span class="arithmatex">\(\varphi: \mathbb{E}^3\rightarrow \mathbb{E}^3\)</span> is a stretching map given by</p>
+<div class="arithmatex">\[
+\varphi(x,y,z)=(ax, by, cz), \quad a, b, c \neq 0.
+\]</div>
+<p>Then <span class="arithmatex">\(\varphi: S^2\rightarrow \text{ellipsoid}\)</span></p>
+<div class="arithmatex">\[
+\left\{(x,y,z)\in \mathbb{E}^3: \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\right\}
+\]</div>
+<p>is differentiable.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="change-of-parameters-proof_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="change-of-parameters-proof_2">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Now we could define a regular curve using concept of maps.</p>
+<div class="admonition info">
+<p class="admonition-title">definition of regular curve</p>
+<p>A <strong>regular curve</strong> in <span class="arithmatex">\(\mathbb{E}^3\)</span> is a subset <span class="arithmatex">\(C\subset \mathbb{E}^3\)</span> with the following properties. For each <span class="arithmatex">\(p\in C\)</span>, there exsits a neighborhood <span class="arithmatex">\(V\subset \mathbb{E}^3\)</span> of <span class="arithmatex">\(p\)</span> and a differentiable map <span class="arithmatex">\(\alpha: I\subset \mathbb{E}\rightarrow C\cap V\)</span> such that the differential <span class="arithmatex">\(d_{\alpha_t}\)</span> is one-to-one for each <span class="arithmatex">\(t\in I\)</span>.</p>
+<p>It is of the same logic to show that change of parameters of curves is given by a diffeomorphism. </p>
+</div>
+<p>By change of parameters, we could find properties independent of parameters, that is, the geometric properties.</p>
+<h2 id="the-tangent-plane">The tangent plane<a class="headerlink" href="#the-tangent-plane" title="Permanent link">&para;</a></h2>
+<p>Note in the following, <span class="arithmatex">\(q\)</span> is at the plane, <span class="arithmatex">\(p\)</span> is on the regular surface in <span class="arithmatex">\(\mathbb{E}^2\)</span>, and <span class="arithmatex">\(w\)</span> is a velocity vector of a regular surface at <span class="arithmatex">\(p\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Two ways of viewing tangent plane, definition of tangent plane is independent of parameters</p>
+<p>Let <span class="arithmatex">\(\pmb{x}: U\subset\mathbb{E}^2\rightarrow S\)</span> be a parametrization of a regular surface, <span class="arithmatex">\(q\in U\)</span> is on the plane. The vector subspace of dimension <span class="arithmatex">\(2\)</span>, </p>
+<div class="arithmatex">\[
+d\pmb{x}_q (\mathbb{E}^2) \subset \mathbb{E}^3
+\]</div>
+<p>coincides with the set of tangent vectors to <span class="arithmatex">\(S\)</span> at <span class="arithmatex">\(\pmb{x}_q\)</span>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="the-tangent-plane-proof" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="the-tangent-plane-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Let <span class="arithmatex">\(w\)</span> be a tangent vector at <span class="arithmatex">\(\pmb{x}(q)\)</span>, i.e. <span class="arithmatex">\(w=\alpha'(0)\)</span>, where <span class="arithmatex">\(\alpha: (-\varepsilon, +\varepsilon) \rightarrow \pmb{x}(U)\subset S\)</span> is differentiable and <span class="arithmatex">\(\alpha (0)=\pmb{x} (q)\)</span>. By <a href="#differentiability of parametrization">differentiability of parametrization</a>, we have the composition <span class="arithmatex">\(\beta=\pmb{x}^{-1}\circ \alpha: (-\varepsilon, +\varepsilon) \rightarrow U\)</span> is differentiable. Take a differential, and we have <span class="arithmatex">\(d\pmb{x}_q (\beta'(0))=w\)</span>, so <span class="arithmatex">\(w\in d\pmb{x}_q (\mathbb{E}^2)\)</span>.</p>
+<p><p align="center">
+<img src="../images/tangent_plane_def.png" width="70%"/>
+</p></p>
+<p>On the other hand, let <span class="arithmatex">\(w=d\pmb{x}_q (v)\)</span>, where <span class="arithmatex">\(v\in \mathbb{E}^2\)</span>, which is the velocity vector of the curve <span class="arithmatex">\(\gamma: (-\varepsilon, +\varepsilon) \rightarrow U\)</span> given by </p>
+<div class="arithmatex">\[
+\gamma(t)=tv+q, \quad t\in (-\varepsilon, +\varepsilon).
+\]</div>
+<p>by <a href="#Definition of a differential of a map">Definition of a differential of a map</a>, we have <span class="arithmatex">\(d\pmb{x}_p(v)=\alpha'(0)\)</span>, with <span class="arithmatex">\(\alpha=\pmb{x}\circ \gamma\)</span>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>From the above definition, the plane <span class="arithmatex">\(d\pmb{x}_q (\mathbb{E}^2)\)</span> which passes <span class="arithmatex">\(\pmb{x}(q)=p\)</span>, does not depend on the parametrization <span class="arithmatex">\(\pmb{x}\)</span>. This plane is called the <strong>tangent plane</strong> to <span class="arithmatex">\(S\)</span> at <span class="arithmatex">\(p\)</span>, denoted by <span class="arithmatex">\(T_p (S)\)</span>.</p>
+<p>Write its bases as follows</p>
+<div class="arithmatex">\[
+\pmb{x}_u:=\frac{\partial \pmb{x}}{\partial u}, \quad \pmb{x}_v:=\frac{\partial \pmb{x}}{\partial v}.
+\]</div>
+<p>Then the parametrization of vector <span class="arithmatex">\(w\in T_p(S)\)</span> are determined by</p>
+<div class="arithmatex">\[
+w=\alpha'(0)=\frac{d(\pmb{x}\circ \beta)}{dt}=\pmb{x}_u (q) u'(0)+\pmb{x}_v(q) v'(0). 
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Differential of a map between surfaces</p>
+<p>Let <span class="arithmatex">\(S_1, S_2\)</span> be two regular surfaces and <span class="arithmatex">\(\varphi: V\in S_1\rightarrow S_2\)</span> is a differentiable map of an open set <span class="arithmatex">\(V\)</span> of <span class="arithmatex">\(S_1\)</span> into <span class="arithmatex">\(S_2\)</span>. Given tangent vector <span class="arithmatex">\(w=\alpha'(0)\in T_p(S_1)\)</span>, let <span class="arithmatex">\(\beta:\varphi\circ \alpha\)</span> with <span class="arithmatex">\(\beta(0)=\varphi(p)\)</span>. Then <span class="arithmatex">\(\beta'(0)\)</span> does not depend on the choice of <span class="arithmatex">\(alpha\)</span>. The map <span class="arithmatex">\(d\varphi_p: T_p(S_1)\rightarrow T_{\varphi(p)}(S_2)\)</span> defined by <span class="arithmatex">\(d\varphi_p(w)=\beta'(0)\)</span> is linear.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="the-tangent-plane-proof_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="the-tangent-plane-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Take the partial derivatives and the proof is similar as we have in <a href="#Differential of a map is independent of choice of curves">Differential of a map is independent of choice of curves</a>.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<h2 id="the-first-fundamental-form">The first fundamental form<a class="headerlink" href="#the-first-fundamental-form" title="Permanent link">&para;</a></h2>
 
 
 
