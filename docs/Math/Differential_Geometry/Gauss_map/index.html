@@ -4823,9 +4823,9 @@
 <h1 id="gauss-map">Gauss map<a class="headerlink" href="#gauss-map" title="Permanent link">&para;</a></h1>
 <p>Given a parametrization <span class="arithmatex">\(\pmb{x}: U\subset\mathbb{E}^2\rightarrow S\)</span> of a regular surface at a point <span class="arithmatex">\(p\in S\)</span>, we could choose a unit normal vector at each point of <span class="arithmatex">\(\pmb{x}(U)\)</span> by</p>
 <div class="arithmatex">\[
-N(q)= \frac{\pmb{x}_u\times \pmb{x}_v}{|\pmb{x}_u||\pmb{x}_v|} (q), quad q\in \pmb{x}(U).
+N(p)= \frac{\pmb{x}_u\times \pmb{x}_v}{|\pmb{x}_u||\pmb{x}_v|} (p), \quad p\in \pmb{x}(U).
 \]</div>
-<p>Thus we have a differentiable map <span class="arithmatex">\(N: U\subset \mathbb{E}^2\rightarrow \mathbb{R}^3\)</span>. More generally, if <span class="arithmatex">\(V\in S\)</span> is an open set in <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(N: V\rightarrow \mathbb{R}^3\)</span> is a differentiable map which associates to each <span class="arithmatex">\(q\in V\)</span> a unit normal vector at <span class="arithmatex">\(q\)</span>, we say that <span class="arithmatex">\(N\)</span> is a <strong>differentiable field of unit normal vectors</strong> on <span class="arithmatex">\(V\)</span>.</p>
+<p>Thus we have a differentiable map <span class="arithmatex">\(N: U\subset \mathbb{E}^2\rightarrow \mathbb{R}^3\)</span>. More generally, if <span class="arithmatex">\(V\in S\)</span> is an open set in <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(N: V\rightarrow \mathbb{R}^3\)</span> is a differentiable map which associates to each <span class="arithmatex">\(p\in V\)</span> a unit normal vector at <span class="arithmatex">\(p\)</span>, we say that <span class="arithmatex">\(N\)</span> is a <strong>differentiable field of unit normal vectors</strong> on <span class="arithmatex">\(V\)</span>.</p>
 <p>Not all surfaces admit a differentiable field of unit vectors defined on the whole surface. For instance, the Mobius strip.</p>
 <div class="admonition info">
 <p class="admonition-title">definition of Gauss map</p>
@@ -4838,8 +4838,65 @@ S^2 =\{(x,y,z): x^2+y^2+z^2=1\}
 <p>Gauss map is differentiable. The differential <span class="arithmatex">\(dN_p\)</span> of <span class="arithmatex">\(N\)</span> at <span class="arithmatex">\(p\in S\)</span> is a linear map from <span class="arithmatex">\(T_p(S)\)</span> to <span class="arithmatex">\(T_{N(p)}(S^2)\)</span>. Since the two are the same space, <span class="arithmatex">\(dN_p\)</span> could be looked upon as a linear map on <span class="arithmatex">\(T_p(S)\)</span>.</p>
 <div class="question">
 <p><strong>Example</strong>. check the differential of <span class="arithmatex">\(N\)</span> of each surfaces.</p>
-<p>(i) <strong>Plane</strong>. Norm vector is a constant, so <span class="arithmatex">\(dN_p=\equiv 0\)</span>.</p>
+<p>(i) <strong>Plane</strong>. Norm vector is a constant, so <span class="arithmatex">\(dN_p\equiv 0\)</span>.</p>
+<p>(ii) <strong>Unit Sphere</strong>. Norm vector <span class="arithmatex">\(N=(x,y,z)\)</span> and <span class="arithmatex">\(dN_p (v)=v\)</span>.</p>
+<p>(iii) <strong>Cylender</strong>, i.e. <span class="arithmatex">\(x^2+y^2=1\)</span>. Norm vector <span class="arithmatex">\(N=(x,y,0)\)</span>, and </p>
+<div class="arithmatex">\[
+dN_p(v)=\begin{cases}\theta, \quad v=(0,0,z)\\
+v,\quad v = (x,y,0).
+\end{cases}
+\]</div>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="gauss-map-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="gauss-map-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Considering a curve in the surface.</p>
+</div>
+</div>
+</div>
+<p>The following is a fact about the differential of Gauss map.</p>
+<div class="admonition success">
+<p class="admonition-title">Self-adjoint map of the differential map of Guass map</p>
+<p>The differential <span class="arithmatex">\(d N_p: T_p (S)\rightarrow T_{p}(S)\)</span> of the Guass map at point <span class="arithmatex">\(p\in S\)</span> is a self-adjoint linear map. </p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="gauss-map-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="gauss-map-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>We shall show that <span class="arithmatex">\(\langle dN_p (w_1), w_2\rangle = \langle w_1, dN_p (w_2)\rangle\)</span>.</p>
+<p>Now we assume <span class="arithmatex">\(\pmb{x}(u,v)\)</span> be a parametrization of <span class="arithmatex">\(S\)</span> at <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(\{\pmb{x}_u, \pmb{x}_v\}\)</span> is the associated basis of <span class="arithmatex">\(T_p(S)\)</span>. If <span class="arithmatex">\(\alpha (t)=\pmb{x}(u(t), v(t))\)</span> is a curve in <span class="arithmatex">\(S\)</span>, with <span class="arithmatex">\(\alpha (0)=p\)</span>, then </p>
+<div class="arithmatex">\[
+dN_p (\alpha'(0))= N_u u'(0) + N_v v'(0).
+\]</div>
+<p>where <span class="arithmatex">\(N_u=dN_p(\pmb{x}_u)\)</span> for <span class="arithmatex">\(u\)</span> line, and <span class="arithmatex">\(N_v=dN_p (\pmb{x}_v)\)</span> for <span class="arithmatex">\(v\)</span> line. So we only need to show that <span class="arithmatex">\(\langle dN_p (\pmb{x}_u), \pmb{x}_v\rangle = \langle \pmb{x}_u, dN_p (\pmb{x}_v)\rangle\)</span>.</p>
+<p>Notice that <span class="arithmatex">\(\langle N, \pmb{x}_u \rangle =0\)</span>, so taking its derivatives w.r.t <span class="arithmatex">\(v\)</span> gives </p>
+<div class="arithmatex">\[
+\langle N_v, \pmb{x}_u\rangle + \langle N, \pmb{x}_{uv}\rangle = 0.
+\]</div>
+<p>taking derivatives of <span class="arithmatex">\(\langle N, \pmb{x}_v \rangle =0\)</span> w.r.t <span class="arithmatex">\(u\)</span> gives <span class="arithmatex">\(\langle N_u, \pmb{x}_v\rangle + \langle N, \pmb{x}_{vu}\rangle = 0\)</span>.</p>
+<p>And we are done.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>Given the above fact, we could associate to <span class="arithmatex">\(dN_p\)</span> a quadratic form <span class="arithmatex">\(Q\)</span> in <span class="arithmatex">\(T_p(S)\)</span>, namely <span class="arithmatex">\(Q(v)=\langle dN_p(v), v \rangle\)</span> (according to bilinear form <span class="arithmatex">\(B(v,w)=\langle dN_p(v), w\rangle\)</span> and <span class="arithmatex">\(Q(v)=B(v,v)\)</span>).</p>
+<div class="admonition info">
+<p class="admonition-title">Second fundamental form</p>
+<p>The quadratic form <span class="arithmatex">\(Ⅱ_p\)</span>, defined in <span class="arithmatex">\(T_p(S)\)</span> by </p>
+<div class="arithmatex">\[
+Ⅱ_p (v)=-\langle dN_p(v), v\rangle
+\]</div>
+<p>is called the second fundamental form of <span class="arithmatex">\(S\)</span> at <span class="arithmatex">\(p\)</span>.</p>
+</div>
+<p>We give a geometric interpretation of the above second fundamental form using the <strong>normal curvature</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition of Normal curvature</p>
+<p>Let <span class="arithmatex">\(C\)</span> be a regular curve in <span class="arithmatex">\(S\)</span> passing through <span class="arithmatex">\(p\in S\)</span>, <span class="arithmatex">\(k\)</span> the curvature of <span class="arithmatex">\(C\)</span> at <span class="arithmatex">\(p\)</span>, with <span class="arithmatex">\(\cos \theta=\langle n, N\rangle\)</span> where <span class="arithmatex">\(n\)</span> is the normal vector to <span class="arithmatex">\(C\)</span> and <span class="arithmatex">\(N\)</span> is the normal vector to <span class="arithmatex">\(S\)</span> at <span class="arithmatex">\(p\)</span>. Then the number <span class="arithmatex">\(k_n=k\cos \theta\)</span> is called the <strong>normal curvature</strong> of <span class="arithmatex">\(C\subset S\)</span> at <span class="arithmatex">\(p\)</span>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Meusnier: geometric interpretation of the second fundamental form</p>
+<p>All curves lying on <span class="arithmatex">\(S\)</span> and having at a given point <span class="arithmatex">\(p\in S\)</span> the same tangent vector share the same normal curvature.</p>
+</div>
+<p>The above proposition allows us to speak of the normal curvature along a given direction at <span class="arithmatex">\(p\)</span>.</p>
 
 
 
