@@ -1468,6 +1468,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quadratic form
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4902,6 +4911,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quadratic-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quadratic form
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4968,6 +4986,64 @@ v \mapsto \beta (v,u),\quad v\mapsto \beta (u,v)
 <p class="admonition-title">change-of-basis formula</p>
 </div>
 <h2 id="symmetric-bilinear-form">Symmetric bilinear form<a class="headerlink" href="#symmetric-bilinear-form" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Definition of Symmetric bilinear form</p>
+<p>A bilinear form <span class="arithmatex">\(\rho \in V^{(2)}\)</span> is called symmetric if</p>
+<div class="arithmatex">\[
+\rho (u,w) = \rho (w.u)
+\]</div>
+<p>for all <span class="arithmatex">\(u,w \in V\)</span>. The set of symmetric bilinear form on <span class="arithmatex">\(V\)</span> is denoted by <span class="arithmatex">\(V_{sym}^{(2)}\)</span>.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. </p>
+<p>(i) Suppose <span class="arithmatex">\(V\)</span> is a real inner product space, then </p>
+<div class="arithmatex">\[
+\rho(u,w) = \langle u, Tw\rangle 
+\]</div>
+<p>is symmetric bilinear form iff <span class="arithmatex">\(T\)</span> is self-adjoint.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Alternating bilinear form(交错双线性型)</p>
+<p>A bilinear form <span class="arithmatex">\(\alpha\)</span> on <span class="arithmatex">\(V\)</span> is call alternating, if</p>
+<div class="arithmatex">\[
+\alpha(v,v)=0, \quad \forall v\in V.
+\]</div>
+<p>The set of all alternating bilinear form is denoted by <span class="arithmatex">\(V^{(2)}_{alt}\)</span>.</p>
+</div>
+<div class="question">
+<p><strong>Example</strong>. </p>
+<p>(i) Suppose <span class="arithmatex">\(n\geq 3\)</span> and then <span class="arithmatex">\(\alpha:\mathbb{F}^n \times \mathbb{F}^n \rightarrow \mathbb{F}\)</span> defined by </p>
+<div class="arithmatex">\[
+\alpha ((x_1, \cdots, x_n), (y_1, \cdots, y_n))=x_1 y_2-x_2y_1 + x_1y_3-y_1x_3
+\]</div>
+<p>is alternating.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Characterization of alternating bilinear form</p>
+<p>A bilinear form <span class="arithmatex">\(\alpha\)</span> on <span class="arithmatex">\(V\)</span> is alternating, iff</p>
+<div class="arithmatex">\[
+\alpha(u,w) = -\alpha (w,u), \quad \forall u,w\in V.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="symmetric-bilinear-form-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="symmetric-bilinear-form-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>Now the following theorem describes the composition of <span class="arithmatex">\(V^{(2)}\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem</p>
+<p>The set <span class="arithmatex">\(V^{(2)}_{sym}\)</span> and <span class="arithmatex">\(V^{(2)}_{alt}\)</span> are subsets of <span class="arithmatex">\(V^{(2)}\)</span>. Furthermore, </p>
+<div class="arithmatex">\[
+V^{(2)} = V^{(2)}_{alt} \oplus V^{(2)}_{sym}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="symmetric-bilinear-form-proof_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="symmetric-bilinear-form-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="quadratic-form">Quadratic form<a class="headerlink" href="#quadratic-form" title="Permanent link">&para;</a></h2>
 
 
 
