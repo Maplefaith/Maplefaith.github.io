@@ -1168,6 +1168,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Preliminaries
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1177,6 +1188,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maps-on-euclidean-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maps on Euclidean Space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverse-function-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Function Theorem
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4924,6 +4972,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maps-on-euclidean-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maps on Euclidean Space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inverse-function-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inverse Function Theorem
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4938,6 +5012,112 @@
 
 
 <h1 id="preliminaries">Preliminaries<a class="headerlink" href="#preliminaries" title="Permanent link">&para;</a></h1>
+<h2 id="maps-on-euclidean-space">Maps on Euclidean Space<a class="headerlink" href="#maps-on-euclidean-space" title="Permanent link">&para;</a></h2>
+<p>Suppose <span class="arithmatex">\(U \subset \mathbb{R}^n\)</span> is an open set, <span class="arithmatex">\(F: U\rightarrow \mathbb{R}^m\)</span>, defined by <span class="arithmatex">\(F(x)=y\)</span>, where <span class="arithmatex">\(x=(x^1, \cdots, x^n)\)</span>, <span class="arithmatex">\(y=(y^1, \cdots, y^m)\)</span>. Use <span class="arithmatex">\(\pi^\alpha: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> to be the projection to the <span class="arithmatex">\(\alpha\)</span>-th coordinate, i.e. <span class="arithmatex">\(\pi^\alpha (x^1, \cdots, x^n)=x^\alpha\)</span>. Then <span class="arithmatex">\(y=F(x)\)</span> could be represented as</p>
+<div class="arithmatex">\[
+y=F(x)=(f^1(x), \cdots, f^n(x)),\quad x\in U
+\]</div>
+<p>where <span class="arithmatex">\(f^\alpha=\pi^\alpha \circ F: U\rightarrow \mathbb{R}\)</span>, which is called the component function.</p>
+<p>If each component function of <span class="arithmatex">\(F\)</span> is differentiable (<span class="arithmatex">\(C^k, C^\infty, C^\omega\)</span>) at <span class="arithmatex">\(a \in U\)</span>, then we call <span class="arithmatex">\(F\)</span> is differentiable (<span class="arithmatex">\(C^k, C^\infty, C^\omega\)</span>) at <span class="arithmatex">\(a \in U\)</span>.</p>
+<p>If <span class="arithmatex">\(F\)</span> is differentiable on <span class="arithmatex">\(U\)</span>, then </p>
+<div class="arithmatex">\[
+\frac{\partial (f^1, \cdots, f^m)}{\partial (x^1, \cdots, x^n)}=
+\left[
+\begin{array}{ccc}
+\frac{\partial f^1}{\partial x^1}&amp; \cdots &amp; \frac{\partial f^1}{\partial x^n}\\
+\vdots &amp; \ddots &amp; \vdots\\
+\frac{\partial f^m}{\partial x^1} &amp; \cdots &amp; \frac{\partial f^m}{\partial x^n}
+\end{array}
+\right]
+\]</div>
+<p>whose each element is a function on <span class="arithmatex">\(U\)</span>. We call the above matrix <strong>Jacobi matrix</strong>, denoted <span class="arithmatex">\(DF\)</span>. When <span class="arithmatex">\(F\)</span> is <span class="arithmatex">\(C^k\)</span>, <span class="arithmatex">\(DF\)</span> is <span class="arithmatex">\(C^{k-1}\)</span>.</p>
+<p>The following theorem is parallel to that in one-variable function.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem</p>
+<p>Suppose <span class="arithmatex">\(U \subset \mathbb{R}^n\)</span> is an open set, map <span class="arithmatex">\(F: U\rightarrow \mathbb{R}^m\)</span> is differentiable, iff there exsits a linear map <span class="arithmatex">\(A: \mathbb{R}^n\rightarrow \mathbb{R}^m\)</span> and <span class="arithmatex">\(R(x, a)=(r^1(x,a), \cdots, r^m(x,a))\)</span> such that </p>
+<div class="arithmatex">\[
+F(x)=F(a) + A(x-a) + \|x-a\| R(x,a),\quad \lim_{x\rightarrow a}\|R(x,a)\|=0.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="maps-on-euclidean-space-proof" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="maps-on-euclidean-space-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>From the proof, we could know that the above <span class="arithmatex">\(A\)</span> could be denoted by <span class="arithmatex">\(DF(a)\)</span>.</p>
+<p>Suppose <span class="arithmatex">\(U,V\)</span> are open subsets of <span class="arithmatex">\(\mathbb{R}^n\)</span>, <span class="arithmatex">\(\mathbb{R}^m\)</span>, maps <span class="arithmatex">\(F: U\rightarrow V\)</span>, <span class="arithmatex">\(G:V\rightarrow \mathbb{R}^p\)</span>, then the map <span class="arithmatex">\(H=G\circ F: U\rightarrow \mathbb{R}^p\)</span> is called the composition of <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(G\)</span>. Parallel to the composition of one-variable functions, we have the following chain rules.</p>
+<div class="admonition success">
+<p class="admonition-title">Chain rules</p>
+<p>Suppose <span class="arithmatex">\(F, G, H\)</span> are defined as above. If <span class="arithmatex">\(F\)</span> is differentiable at <span class="arithmatex">\(a\in U\)</span>, and <span class="arithmatex">\(G\)</span> is differentiable at <span class="arithmatex">\(F(a)\in V\)</span>, then <span class="arithmatex">\(H\)</span> is differentiable at <span class="arithmatex">\(a\)</span> and holds the following equation.</p>
+<div class="arithmatex">\[
+GH (a)=DG(F(a)) \cdots DF(a).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="maps-on-euclidean-space-proof_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="maps-on-euclidean-space-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>By definitions.</p>
+</div>
+</div>
+</div>
+<p>Readers could prove that if <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(G\)</span> are <span class="arithmatex">\(C^k\)</span> maps, then <span class="arithmatex">\(H=G\circ F\)</span> is also a <span class="arithmatex">\(C^k\)</span> map.</p>
+<h2 id="inverse-function-theorem">Inverse Function Theorem<a class="headerlink" href="#inverse-function-theorem" title="Permanent link">&para;</a></h2>
+<div class="question">
+<p><strong>Example</strong>. Suppose <span class="arithmatex">\(F:\mathbb{R}^m\rightarrow \mathbb{R}^m\)</span> is a homogeneous linear transformation, i.e. </p>
+<div class="arithmatex">\[
+F(x)=A\cdot x,\quad x\in \mathbb{R}^m
+\]</div>
+<p>or</p>
+<div class="arithmatex">\[
+f^i = \sum_{j=1}^m a^i_j x^j.
+\]</div>
+<p>Easy to show that <span class="arithmatex">\(DF(x)=A\)</span>. If <span class="arithmatex">\(A\)</span> is inversible, then <span class="arithmatex">\(F\)</span> is a diffeomorphism.</p>
+</div>
+<p><a id="Inverse function theorem"></a></p>
+<div class="admonition success">
+<p class="admonition-title">Inverse function theorem</p>
+<p>Suppose <span class="arithmatex">\(U\subset \mathbb{R}^m\)</span> is an open set, <span class="arithmatex">\(F: U\rightarrow \mathbb{R}^m\)</span> is a <span class="arithmatex">\(C^k\)</span> map. If for <span class="arithmatex">\(a\in U\)</span>, <span class="arithmatex">\(DF(a)\)</span> is inversible, then there exists an open neighborhood <span class="arithmatex">\(W\in U\)</span>, such that <span class="arithmatex">\(F: W\rightarrow F(W)=V\)</span> is a <span class="arithmatex">\(C^k\)</span> diffeomorphism. Furthermore, if <span class="arithmatex">\(x\in W\)</span>, <span class="arithmatex">\(y=F(x)\)</span>, then the differential of <span class="arithmatex">\(F^{-1}\)</span> at <span class="arithmatex">\(y\)</span> is </p>
+<div class="arithmatex">\[
+DF^{-1}(y)=(DF(x))^{-1}.
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="inverse-function-theorem-proof" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="inverse-function-theorem-proof">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<p>We have the following corollaries.</p>
+<div class="admonition success">
+<p class="admonition-title">Implicite function theorem</p>
+<p>Suppose <span class="arithmatex">\(U,V\)</span> are open subsets of <span class="arithmatex">\(\mathbb{R}^m\)</span> and <span class="arithmatex">\(\mathbb{R}^n\)</span>. The map <span class="arithmatex">\(F:U\times V\rightarrow \mathbb{R}^n\)</span> is <span class="arithmatex">\(C^k\)</span>. If for <span class="arithmatex">\(x_0\in U\)</span>, <span class="arithmatex">\(y_0 \in V\)</span>, and map <span class="arithmatex">\(y\mapsto f(x_0,y)\)</span> whose differential at <span class="arithmatex">\(y_0\)</span>, i.e <span class="arithmatex">\(D_2 f(x_0,y_0)\)</span> is inversible, then there exists a neighborhood <span class="arithmatex">\(U_0\subset U\)</span> of <span class="arithmatex">\(x_0\)</span>, and a uniquely determined <span class="arithmatex">\(C^k\)</span> map <span class="arithmatex">\(g: U_0\rightarrow \mathbb{R}^n\)</span>, such that <span class="arithmatex">\(g(x_0)=y_0\)</span>. Furthermore, for each <span class="arithmatex">\(x\in U_0\)</span>, we have</p>
+<div class="arithmatex">\[
+f(x,g(x))= f(x_0,y_0).
+\]</div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="inverse-function-theorem-proof_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="inverse-function-theorem-proof_1">Proof</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Similar to what we have in Differential geometry, we consider a higher dimensional map <span class="arithmatex">\(F: U\times V\rightarrow \mathbb{R}^m\times \mathbb{R}^n\)</span>, <span class="arithmatex">\((x,y)\rightarrow (x, f(x,y))\)</span>, then </p>
+<div class="arithmatex">\[
+DF(x_0,y_0)=\left[\begin{array}{cc}
+I &amp; 0\\
+D_1 f(x_0,y_0)&amp; D_2 f(x_0,y_0)
+\end{array}\right],
+\]</div>
+<p>since <span class="arithmatex">\(D_2 f(x_0,y_0)\)</span> is inversible, <span class="arithmatex">\(DF(x_0,y_0)\)</span> is inversible. Then by <a href="#Inverse function theorem">Inverse function theorem</a>, there exists a small neighborhood <span class="arithmatex">\(U_0\times V_0\)</span> of <span class="arithmatex">\((x_0,y_0)\)</span> such that <span class="arithmatex">\(F\)</span> is its unique inverse map. Define projection <span class="arithmatex">\(\pi: \mathbb{R}^m\times \mathbb{R}^n\rightarrow\mathbb{R}^n\)</span>, <span class="arithmatex">\((x,y)\mapsto y\)</span>, and let</p>
+<div class="arithmatex">\[
+g(x)=\pi \circ F(x, f(x_0,y_0)), \quad x_0\in U_0
+\]</div>
+<p>so <span class="arithmatex">\(g\)</span> is the desired map.</p>
+<p><p align="right"><span class="arithmatex">\(\square\)</span></p></p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Rank Theorem</p>
+</div>
 
 
 
